@@ -34,6 +34,13 @@
             "show_gift_card_recipient": false
           }
         },
+        "preorder_note": {
+          "type": "text",
+          "settings": {
+            "text": "PRE-ORDER — ships in about one month. We will notify you by email when your set is on its way.",
+            "text_style": "subtitle"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {}
@@ -62,6 +69,7 @@
         "price",
         "variant_picker",
         "buy_buttons",
+        "preorder_note",
         "description",
         "specs",
         "shipping"
