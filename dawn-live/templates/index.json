@@ -44,14 +44,14 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/suiji-hero-clasp.png",
-        "image_overlay_opacity": 40,
+        "image": "shopify://shop_images/suiji-hero-light.png",
+        "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "image_behavior": "none",
         "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
