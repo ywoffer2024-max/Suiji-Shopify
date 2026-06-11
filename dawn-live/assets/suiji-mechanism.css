@@ -32,3 +32,12 @@
 @media (prefers-reduced-motion: reduce) {
   .suiji-mech__charm.is-snapping { animation: none; }
 }
+
+/* --- onboarding --- */
+.suiji-mech__how { list-style: none; display: flex; gap: 2.4rem; margin: 0 0 2rem; padding: 0; flex-wrap: wrap; }
+.suiji-mech__how li { font-size: 1.3rem; letter-spacing: 0.04em; color: rgba(var(--color-foreground), 0.75); display: flex; align-items: center; gap: 0.8rem; }
+.suiji-mech__how li span { display: inline-flex; align-items: center; justify-content: center; width: 2.2rem; height: 2.2rem; border: 1px solid rgba(var(--color-foreground), 0.4); font-size: 1.1rem; }
+.suiji-mech__try { margin: 0.4rem 0 1.2rem; font-size: 1.3rem; color: rgba(var(--color-foreground), 0.6); min-height: 1.8rem; }
+@keyframes suiji-coax { 0%,100% { transform: translate(-50%, -50%) scale(1); } 50% { transform: translate(-50%, -50%) scale(1.05); } }
+.suiji-mech__charm.is-coax { animation: suiji-coax 1.8s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .suiji-mech__charm.is-coax { animation: none; } }

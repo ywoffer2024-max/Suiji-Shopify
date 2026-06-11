@@ -40,6 +40,8 @@
     });
 
     var currentSet = sets[0];
+    var tryHint = document.getElementById('suiji-try-hint');
+    var coaxed = false;
     var selected = null; /* panel whose charm is picked (tap/keyboard flow) */
 
     function track(name, params) {
@@ -77,6 +79,14 @@
         panels[f].charm = set.charms[i] || null;
         renderPanel(panels[f], false);
       });
+      if (tryHint && set.charms[0]) {
+        tryHint.textContent = 'Try it: drag the ' + set.charms[0].name.toLowerCase() + ' from the ring to the pendant \u2192';
+      }
+      if (!coaxed) {
+        FORMS.forEach(function (f) {
+          if (panels[f] && panels[f].charm) panels[f].charmEl.classList.add('is-coax');
+        });
+      }
       if (cta) {
         cta.hidden = false;
         cta.querySelector('.suiji-mech__cta-name').textContent = set.name;
@@ -162,6 +172,11 @@
         if (!p.charm) return;
         dragFrom = p;
         dragMoved = false;
+        if (!coaxed) {
+          coaxed = true;
+          if (tryHint) tryHint.textContent = '';
+          Object.keys(panels).forEach(function (f) { panels[f].charmEl.classList.remove('is-coax'); });
+        }
         ghost = document.createElement('img');
         ghost.className = 'suiji-mech__drag-ghost';
         ghost.src = p.charm.overlay;

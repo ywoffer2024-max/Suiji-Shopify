@@ -54,7 +54,14 @@
     <h2 class="suiji-mech__heading">{{ section.settings.heading }}</h2>
     <p class="suiji-mech__sub">{{ section.settings.subheading }}</p>
 
+    <ol class="suiji-mech__how" aria-label="How it works">
+      <li><span>1</span> Pick a set</li>
+      <li><span>2</span> Drag a charm to another base</li>
+      <li><span>3</span> Click — it locks</li>
+    </ol>
+
     <div class="suiji-mech__tabs" id="suiji-set-tabs" role="tablist" aria-label="Choose a set"></div>
+    <p class="suiji-mech__try" id="suiji-try-hint" aria-hidden="true"></p>
 
     <div class="suiji-mech__scene" id="suiji-scene"
       data-anchors='{ "ring": [{{ section.settings.ring_x }}, {{ section.settings.ring_y }}, {{ section.settings.ring_scale }}],
