@@ -7,3 +7,4 @@ node_modules/
 .feishu-credentials
 .admin-token
 .admin-credentials
+assets-staging/
