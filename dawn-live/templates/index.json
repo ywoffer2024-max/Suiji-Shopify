@@ -70,14 +70,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "A flower unclips from your earring and locks onto a ring base — in 10 seconds.",
+            "heading": "A charm unclips from one base and locks onto another — in 10 seconds.",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Rings, pendants and earrings share one quick-release titanium clasp. One charm, every form.</p>"
+            "text": "<p>Flower, star or pure geometry — every charm fits every ring, pendant and earring base via one quick-release titanium clasp.</p>"
           }
         },
         "button": {
@@ -112,7 +112,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
+        "collection": "sets",
         "products_to_show": 8,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
