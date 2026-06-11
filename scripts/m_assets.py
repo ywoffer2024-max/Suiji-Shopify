@@ -20,11 +20,13 @@ os.makedirs(STAGING, exist_ok=True)
 KEY = open(os.path.join(ROOT, ".image-api-key")).read().strip()
 
 STYLE = (
-    "Photorealistic luxury jewelry product photography. Matte brushed grade-5 titanium, "
-    "cool neutral gray palette, hard directional side light with deep chiaroscuro shadow, "
-    "raw travertine stone surface, architectural minimalism, generous negative space, "
-    "museum-grade restraint. Strictly NO yellow gold, NO warm color cast, NO glossy mirror "
-    "finish, NO people, NO text or logos."
+    "Bright high-key luxury e-commerce jewelry photography. Pale warm-white travertine "
+    "stone surface, soft even daylight with one gentle directional accent, shadows soft "
+    "and pale gray (never black), airy luminous white negative space. Jewelry in LIGHT "
+    "silver-gray matte brushed grade-5 titanium — bright metal, never dark. Photorealistic, "
+    "museum-clean, premium online-store look. Strictly NO dark or moody tones, NO black "
+    "metal, NO charcoal, NO gunmetal, NO heavy vignette, NO yellow gold, NO warm orange "
+    "cast, NO glossy mirror finish, NO people, NO text or logos."
 )
 
 JOBS = [
