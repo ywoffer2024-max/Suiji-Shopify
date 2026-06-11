@@ -1,0 +1,91 @@
+{%- comment -%}
+  SUIJI · Welcome popup (native, no apps)
+  Quiet card, bottom-left. Shows once per visitor (localStorage, 7-day snooze),
+  8s after load. Native customer form subscribes the email; on success the
+  WELCOME10 code is revealed. Design rules: radius 0, hairline, no shadow.
+{%- endcomment -%}
+
+{%- if section.settings.enabled -%}
+<div class="suiji-popup color-scheme-1" id="suiji-popup" hidden
+  data-delay="{{ section.settings.delay | times: 1000 }}"
+  data-posted="{% if form.posted_successfully? %}true{% else %}false{% endif %}">
+  <button class="suiji-popup__close" type="button" aria-label="Close">&times;</button>
+  <p class="suiji-eyebrow">{{ section.settings.eyebrow }}</p>
+
+  {%- form 'customer', class: 'suiji-popup__form' -%}
+    {%- if form.posted_successfully? -%}
+      <h3 class="suiji-popup__heading">Locked in.</h3>
+      <p class="suiji-popup__text">Your code for {{ section.settings.discount_text }}:</p>
+      <p class="suiji-popup__code">{{ section.settings.discount_code }}</p>
+    {%- else -%}
+      <h3 class="suiji-popup__heading">{{ section.settings.heading }}</h3>
+      <p class="suiji-popup__text">{{ section.settings.text }}</p>
+      <input type="hidden" name="contact[tags]" value="newsletter,popup">
+      <div class="suiji-popup__row">
+        <label class="visually-hidden" for="suiji-popup-email">Email</label>
+        <input id="suiji-popup-email" type="email" name="contact[email]" required
+          placeholder="Email" autocomplete="email" class="suiji-popup__input">
+        <button type="submit" class="button suiji-popup__btn">{{ section.settings.button_label }}</button>
+      </div>
+      <p class="suiji-popup__legal">By subscribing you agree to receive SUIJI emails. Unsubscribe anytime.</p>
+    {%- endif -%}
+  {%- endform -%}
+</div>
+
+<script>
+(function () {
+  var el = document.getElementById('suiji-popup');
+  if (!el) return;
+  var KEY = 'suiji-popup-snooze';
+  var posted = el.dataset.posted === 'true';
+  var snoozed = false;
+  try { snoozed = Date.now() < Number(localStorage.getItem(KEY) || 0); } catch (e) {}
+  function show() { el.hidden = false; }
+  function close() {
+    el.hidden = true;
+    try { localStorage.setItem(KEY, String(Date.now() + 7 * 864e5)); } catch (e) {}
+  }
+  el.querySelector('.suiji-popup__close').addEventListener('click', close);
+  if (posted) { show(); return; } /* show the code right away after submit */
+  if (snoozed) return;
+  setTimeout(show, Number(el.dataset.delay) || 8000);
+})();
+</script>
+
+{% style %}
+  .suiji-popup { position: fixed; left: 2rem; bottom: 2rem; z-index: 50; width: min(36rem, calc(100vw - 4rem));
+    background: rgb(var(--color-background)); border: 1px solid rgba(var(--color-foreground), 0.25);
+    padding: 2rem 2.4rem 2.4rem; }
+  .suiji-popup__close { position: absolute; top: 0.6rem; right: 0.8rem; appearance: none; background: none; border: 0;
+    font-size: 2rem; line-height: 1; cursor: pointer; color: rgba(var(--color-foreground), 0.6); }
+  .suiji-popup__heading { margin: 0.8rem 0 0; font-size: 2rem; }
+  .suiji-popup__text { margin: 0.6rem 0 1.2rem; font-size: 1.4rem; line-height: 1.5; color: rgba(var(--color-foreground), 0.75); }
+  .suiji-popup__row { display: flex; gap: 0; }
+  .suiji-popup__input { flex: 1; min-width: 0; border: 1px solid rgba(var(--color-foreground), 0.4); border-right: 0;
+    background: transparent; padding: 1.1rem 1.2rem; font-size: 1.4rem; border-radius: 0; }
+  .suiji-popup__input:focus-visible { outline: none; border-color: rgb(var(--color-foreground)); }
+  .suiji-popup__btn { border-radius: 0; }
+  .suiji-popup__legal { margin: 1rem 0 0; font-size: 1.1rem; color: rgba(var(--color-foreground), 0.55); }
+  .suiji-popup__code { margin: 0.4rem 0 0; font-size: 2.4rem; font-weight: 600; letter-spacing: 0.16em; }
+  @media screen and (max-width: 749px) { .suiji-popup { left: 1rem; bottom: 1rem; width: calc(100vw - 2rem); } }
+{% endstyle %}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "SUIJI · Welcome popup",
+  "tag": "aside",
+  "settings": [
+    { "type": "checkbox", "id": "enabled", "label": "Enabled", "default": true },
+    { "type": "range", "id": "delay", "min": 2, "max": 30, "step": 1, "unit": "s", "label": "Delay before showing", "default": 8 },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Join the studio" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "10% off your first order" },
+    { "type": "text", "id": "text", "label": "Text", "default": "Subscribe for early access, member voting and your welcome code." },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Subscribe" },
+    { "type": "text", "id": "discount_code", "label": "Discount code", "default": "WELCOME10" },
+    { "type": "text", "id": "discount_text", "label": "Discount description", "default": "10% off your first order" }
+  ],
+  "enabled_on": { "groups": ["footer"] },
+  "presets": [{ "name": "SUIJI · Welcome popup" }]
+}
+{% endschema %}

@@ -11,6 +11,19 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "welcome_popup": {
+      "type": "suiji-popup",
+      "settings": {
+        "enabled": true,
+        "delay": 8,
+        "eyebrow": "Join the studio",
+        "heading": "10% off your first order",
+        "text": "Subscribe for early access, member voting and your welcome code.",
+        "button_label": "Subscribe",
+        "discount_code": "WELCOME10",
+        "discount_text": "10% off your first order"
+      }
+    },
     "footer": {
       "type": "footer",
       "settings": {
@@ -30,6 +43,7 @@
     }
   },
   "order": [
+    "welcome_popup",
     "footer"
   ]
 }
