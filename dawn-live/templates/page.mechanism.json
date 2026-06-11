@@ -22,7 +22,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "One quick-release titanium clasp. Every charm, every base, ten seconds.",
+            "text": "One quick-release titanium clasp. Switch your form in ten seconds.",
             "text_style": "body"
           }
         }
@@ -165,9 +165,9 @@
         "q1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Does every charm fit every base?",
+            "heading": "Which charms fit which bases?",
             "icon": "none",
-            "row_content": "<p>Yes. Every SUIJI charm uses the same quick-release clasp, so any charm locks onto any ring, pendant or earring base — across all sets.</p>",
+            "row_content": "<p>Each set is a complete system: every charm in it locks onto every base in it via the same quick-release clasp. Standalone charms and cross-set play are on our roadmap.</p>",
             "page": ""
           }
         },
@@ -221,7 +221,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "One set. Twenty-four ways.",
+            "heading": "One set. Every form.",
             "heading_size": "h2"
           }
         },

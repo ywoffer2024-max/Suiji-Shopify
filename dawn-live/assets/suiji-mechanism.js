@@ -12,7 +12,7 @@
 
     var charms;
     try { charms = JSON.parse(dataEl.textContent); } catch (e) { return; }
-    charms = charms.filter(function (c) { return c.overlay; });
+    charms = charms.filter(function (c) { return c.overlay && c.setName; });
     if (!charms.length) return;
 
     var anchors = JSON.parse(stage.dataset.anchors);
