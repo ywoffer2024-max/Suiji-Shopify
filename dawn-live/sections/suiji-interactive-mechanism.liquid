@@ -1,44 +1,49 @@
 {%- comment -%}
-  SUIJI · Interactive mechanism (tier B)
-  Drag a charm from the tray onto the base stage — it snaps to the anchor
-  with the brand "click". Tap/keyboard fallback included.
-  Data: charm metaobjects (overlay PNG, set link); stage images per form
-  come from section settings so the editor stays in control.
+  SUIJI · Interactive mechanism (v2 — scene mode)
+  All three bases of a set share one stage; the set's charms start mounted.
+  Drag a charm from one base to another (move or swap) — snap + brand click.
+  Closed-set system: tabs switch between sets; only that set's charms appear.
 {%- endcomment -%}
 
 {{ 'suiji-mechanism.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'suiji-mechanism.js' | asset_url }}" defer></script>
 
-{%- capture charms_json -%}
+{%- capture sets_json -%}
 [
-  {%- for c in shop.metaobjects.charm.values -%}
+  {%- assign first_set = true -%}
+  {%- for s in shop.metaobjects.jewelry_set.values -%}
     {%- liquid
-      assign overlay = blank
-      if c.image_overlay_png.value != blank
-        assign overlay = c.image_overlay_png.value | image_url: width: 480
-      elsif c.image_main.value != blank
-        assign overlay = c.image_main.value | image_url: width: 480
-      endif
-      assign set_name = ''
       assign set_url = ''
       assign set_price = ''
-      if c.set_ref.value != blank
-        assign set_name = c.set_ref.value.name.value
-        if c.set_ref.value.product_ref.value != blank
-          assign set_url = c.set_ref.value.product_ref.value.url
-          assign set_price = c.set_ref.value.product_ref.value.price | money
-        endif
+      if s.product_ref.value != blank
+        assign set_url = s.product_ref.value.url
+        assign set_price = s.product_ref.value.price | money
       endif
     -%}
+    {%- unless first_set -%},{%- endunless -%}{%- assign first_set = false -%}
     {
-      "handle": {{ c.system.handle | json }},
-      "name": {{ c.name.value | json }},
-      "color": {{ c.color.value | default: '' | json }},
-      "overlay": {{ overlay | json }},
-      "setName": {{ set_name | json }},
-      "setUrl": {{ set_url | json }},
-      "setPrice": {{ set_price | strip_html | json }}
-    }{%- unless forloop.last -%},{%- endunless -%}
+      "handle": {{ s.system.handle | json }},
+      "name": {{ s.name.value | json }},
+      "url": {{ set_url | json }},
+      "price": {{ set_price | strip_html | json }},
+      "charms": [
+        {%- assign first_charm = true -%}
+        {%- for c in s.charms.value -%}
+          {%- liquid
+            assign overlay = blank
+            if c.image_overlay_png.value != blank
+              assign overlay = c.image_overlay_png.value | image_url: width: 480
+            elsif c.image_main.value != blank
+              assign overlay = c.image_main.value | image_url: width: 480
+            endif
+          -%}
+          {%- if overlay != blank -%}
+            {%- unless first_charm -%},{%- endunless -%}{%- assign first_charm = false -%}
+            { "handle": {{ c.system.handle | json }}, "name": {{ c.name.value | json }}, "overlay": {{ overlay | json }} }
+          {%- endif -%}
+        {%- endfor -%}
+      ]
+    }
   {%- endfor -%}
 ]
 {%- endcapture -%}
@@ -49,50 +54,47 @@
     <h2 class="suiji-mech__heading">{{ section.settings.heading }}</h2>
     <p class="suiji-mech__sub">{{ section.settings.subheading }}</p>
 
-    <div class="suiji-mech__layout">
-      <div class="suiji-mech__stagewrap">
-        <div class="suiji-mech__tabs" role="tablist" aria-label="Base form">
-          {%- assign forms = 'ring,necklace,earring' | split: ',' -%}
-          {%- for f in forms -%}
-            <button class="suiji-mech__tab{% if forloop.first %} is-active{% endif %}" role="tab"
-              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" data-form="{{ f }}">{{ f | capitalize }}</button>
-          {%- endfor -%}
-        </div>
+    <div class="suiji-mech__tabs" id="suiji-set-tabs" role="tablist" aria-label="Choose a set"></div>
 
-        <div class="suiji-mech__stage" id="suiji-stage"
-          data-anchors='{ "ring": [{{ section.settings.ring_x }}, {{ section.settings.ring_y }}, {{ section.settings.ring_scale }}],
-                          "necklace": [{{ section.settings.necklace_x }}, {{ section.settings.necklace_y }}, {{ section.settings.necklace_scale }}],
-                          "earring": [{{ section.settings.earring_x }}, {{ section.settings.earring_y }}, {{ section.settings.earring_scale }}] }'>
-          {%- if section.settings.stage_ring != blank -%}
-            <img class="suiji-mech__stage-img" data-form="ring" src="{{ section.settings.stage_ring | image_url: width: 1200 }}" alt="Ring base" loading="lazy">
-          {%- endif -%}
-          {%- if section.settings.stage_necklace != blank -%}
-            <img class="suiji-mech__stage-img" data-form="necklace" src="{{ section.settings.stage_necklace | image_url: width: 1200 }}" alt="Necklace base" loading="lazy" hidden>
-          {%- endif -%}
-          {%- if section.settings.stage_earring != blank -%}
-            <img class="suiji-mech__stage-img" data-form="earring" src="{{ section.settings.stage_earring | image_url: width: 1200 }}" alt="Earring base" loading="lazy" hidden>
+    <div class="suiji-mech__scene" id="suiji-scene"
+      data-anchors='{ "ring": [{{ section.settings.ring_x }}, {{ section.settings.ring_y }}, {{ section.settings.ring_scale }}],
+                      "necklace": [{{ section.settings.necklace_x }}, {{ section.settings.necklace_y }}, {{ section.settings.necklace_scale }}],
+                      "earring": [{{ section.settings.earring_x }}, {{ section.settings.earring_y }}, {{ section.settings.earring_scale }}] }'>
+      {%- assign forms = 'ring,necklace,earring' | split: ',' -%}
+      {%- assign labels = 'Ring,Pendant,Earring' | split: ',' -%}
+      {%- for f in forms -%}
+        {%- assign idx = forloop.index0 -%}
+        <div class="suiji-mech__panel" data-form="{{ f }}">
+          {%- liquid
+            assign stage = blank
+            case f
+              when 'ring'
+                assign stage = section.settings.stage_ring
+              when 'necklace'
+                assign stage = section.settings.stage_necklace
+              when 'earring'
+                assign stage = section.settings.stage_earring
+            endcase
+          -%}
+          {%- if stage != blank -%}
+            <img class="suiji-mech__panel-img" src="{{ stage | image_url: width: 800 }}" alt="{{ labels[idx] }} base" loading="lazy">
           {%- endif -%}
           <div class="suiji-mech__anchor" aria-hidden="true"></div>
-          <img class="suiji-mech__charm" alt="" aria-hidden="true" hidden>
-          <p class="suiji-mech__hint">{{ section.settings.hint }}</p>
+          <img class="suiji-mech__charm" alt="" hidden tabindex="0" role="button">
+          <p class="suiji-mech__panel-label">{{ labels[idx] }}</p>
         </div>
-
-        <div class="suiji-mech__cta" hidden>
-          <p class="suiji-mech__cta-line"><span class="suiji-mech__cta-name"></span> · <span class="suiji-mech__cta-set"></span></p>
-          <a class="button" href="#">View the set — <span class="suiji-mech__cta-price"></span></a>
-        </div>
-        <p class="suiji-mech__live visually-hidden" role="status" aria-live="polite"></p>
-      </div>
-
-      <div class="suiji-mech__traywrap">
-        <h3 class="suiji-mech__tray-title">Charms</h3>
-        <div class="suiji-mech__tray" role="listbox" aria-label="Choose a charm" id="suiji-tray"></div>
-      </div>
+      {%- endfor -%}
     </div>
+
+    <div class="suiji-mech__cta" hidden>
+      <p class="suiji-mech__cta-line"><span class="suiji-mech__cta-name"></span></p>
+      <a class="button" href="#">View the set — <span class="suiji-mech__cta-price"></span></a>
+    </div>
+    <p class="suiji-mech__live visually-hidden" role="status" aria-live="polite"></p>
   </div>
 </div>
 
-<script type="application/json" id="suiji-mech-data">{{ charms_json | strip }}</script>
+<script type="application/json" id="suiji-mech-data">{{ sets_json | strip }}</script>
 
 {% schema %}
 {
@@ -103,24 +105,23 @@
     { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Try it yourself" },
     { "type": "text", "id": "heading", "label": "Heading", "default": "Build your form" },
-    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Drag a charm onto the base. Feel the click." },
-    { "type": "text", "id": "hint", "label": "Stage hint", "default": "Drag a charm here" },
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Drag a charm from one base to another. Feel the click." },
     { "type": "header", "content": "Stage images" },
     { "type": "image_picker", "id": "stage_ring", "label": "Ring base image" },
     { "type": "image_picker", "id": "stage_necklace", "label": "Necklace base image" },
     { "type": "image_picker", "id": "stage_earring", "label": "Earring base image" },
-    { "type": "header", "content": "Anchors (percent of stage, and scale %)" },
+    { "type": "header", "content": "Anchors (percent of panel, and scale %)" },
     { "type": "range", "id": "ring_x", "min": 0, "max": 100, "step": 1, "label": "Ring anchor X", "default": 50 },
-    { "type": "range", "id": "ring_y", "min": 0, "max": 100, "step": 1, "label": "Ring anchor Y", "default": 38 },
-    { "type": "range", "id": "ring_scale", "min": 8, "max": 60, "step": 1, "label": "Ring charm scale", "default": 26 },
+    { "type": "range", "id": "ring_y", "min": 0, "max": 100, "step": 1, "label": "Ring anchor Y", "default": 36 },
+    { "type": "range", "id": "ring_scale", "min": 8, "max": 60, "step": 1, "label": "Ring charm scale", "default": 17 },
     { "type": "range", "id": "necklace_x", "min": 0, "max": 100, "step": 1, "label": "Necklace anchor X", "default": 50 },
-    { "type": "range", "id": "necklace_y", "min": 0, "max": 100, "step": 1, "label": "Necklace anchor Y", "default": 55 },
-    { "type": "range", "id": "necklace_scale", "min": 8, "max": 60, "step": 1, "label": "Necklace charm scale", "default": 22 },
-    { "type": "range", "id": "earring_x", "min": 0, "max": 100, "step": 1, "label": "Earring anchor X", "default": 50 },
-    { "type": "range", "id": "earring_y", "min": 0, "max": 100, "step": 1, "label": "Earring anchor Y", "default": 60 },
-    { "type": "range", "id": "earring_scale", "min": 8, "max": 60, "step": 1, "label": "Earring charm scale", "default": 20 },
+    { "type": "range", "id": "necklace_y", "min": 0, "max": 100, "step": 1, "label": "Necklace anchor Y", "default": 79 },
+    { "type": "range", "id": "necklace_scale", "min": 8, "max": 60, "step": 1, "label": "Necklace charm scale", "default": 16 },
+    { "type": "range", "id": "earring_x", "min": 0, "max": 100, "step": 1, "label": "Earring anchor X", "default": 46 },
+    { "type": "range", "id": "earring_y", "min": 0, "max": 100, "step": 1, "label": "Earring anchor Y", "default": 76 },
+    { "type": "range", "id": "earring_scale", "min": 8, "max": 60, "step": 1, "label": "Earring charm scale", "default": 16 },
     { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Padding top", "default": 64 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Padding bottom", "default": 64 }
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Padding bottom", "default": 80 }
   ],
   "presets": [{ "name": "SUIJI · Mechanism game" }]
 }
