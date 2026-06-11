@@ -1,0 +1,249 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Mechanism",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "One quick-release titanium clasp. Every charm, every base, ten seconds.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
+      "settings": {
+        "image": "shopify://shop_images/suiji-hero-light.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "bottom-left",
+        "show_text_box": false,
+        "image_behavior": "none",
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "steps": {
+      "type": "multicolumn",
+      "blocks": {
+        "s1": {
+          "type": "column",
+          "settings": {
+            "title": "01 — Unlock",
+            "text": "<p>Press the clasp release on the base you are wearing.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "s2": {
+          "type": "column",
+          "settings": {
+            "title": "02 — Release",
+            "text": "<p>The charm unclips. No tools, no force, no wear.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "s3": {
+          "type": "column",
+          "settings": {
+            "title": "03 — Align",
+            "text": "<p>Seat the charm on any other SUIJI base — ring, pendant or earring.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "s4": {
+          "type": "column",
+          "settings": {
+            "title": "04 — Click",
+            "text": "<p>The titanium clasp locks with a precise, audible click. Done.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["s1", "s2", "s3", "s4"],
+      "settings": {
+        "title": "Four moves. Ten seconds.",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": true,
+        "columns_mobile": "1",
+        "color_scheme": "scheme-1",
+        "padding_top": 80,
+        "padding_bottom": 64
+      }
+    },
+    "game": {
+      "type": "suiji-interactive-mechanism",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "eyebrow": "Try it yourself",
+        "heading": "Build your form",
+        "subheading": "Drag a charm onto the base. Feel the click.",
+        "hint": "Drag a charm here",
+        "stage_ring": "shopify://shop_images/stage-ring.png",
+        "stage_necklace": "shopify://shop_images/stage-necklace.png",
+        "stage_earring": "shopify://shop_images/stage-earring.png",
+        "ring_x": 50,
+        "ring_y": 38,
+        "ring_scale": 26,
+        "necklace_x": 50,
+        "necklace_y": 55,
+        "necklace_scale": 22,
+        "earring_x": 50,
+        "earring_y": 60,
+        "earring_scale": 20,
+        "padding_top": 64,
+        "padding_bottom": 80
+      }
+    },
+    "engineering": {
+      "type": "rich-text",
+      "blocks": {
+        "caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "Engineered to last",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Grade 5 titanium. Tested for ten thousand clicks.",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The clasp is machined from grade 5 titanium — the alloy used in aerospace joints. Hypoallergenic, feather-light, and engineered so the lock stays precise open after open. The structure is the decoration.</p>"
+          }
+        }
+      },
+      "block_order": ["caption", "heading", "text"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "faq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "q1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does every charm fit every base?",
+            "icon": "none",
+            "row_content": "<p>Yes. Every SUIJI charm uses the same quick-release clasp, so any charm locks onto any ring, pendant or earring base — across all sets.</p>",
+            "page": ""
+          }
+        },
+        "q2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will the clasp loosen over time?",
+            "icon": "none",
+            "row_content": "<p>The lock is machined from grade 5 titanium and tested for ten thousand open-close cycles without measurable wear.</p>",
+            "page": ""
+          }
+        },
+        "q3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is it safe for sensitive skin?",
+            "icon": "none",
+            "row_content": "<p>Yes. Titanium is hypoallergenic and nickel-free — the same material used for medical implants.</p>",
+            "page": ""
+          }
+        },
+        "q4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need tools to switch?",
+            "icon": "none",
+            "row_content": "<p>No tools, ever. Press, release, align, click — about ten seconds by hand.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": ["q1", "q2", "q3", "q4"],
+      "settings": {
+        "caption": "",
+        "heading": "Questions",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "container_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "left",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "cta": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "One set. Twenty-four ways.",
+            "heading_size": "h2"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop sets",
+            "button_link": "shopify://collections/sets",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": ["heading", "button"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 64,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": ["hero", "steps", "game", "engineering", "faq", "cta"]
+}

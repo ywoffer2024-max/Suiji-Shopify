@@ -1,0 +1,109 @@
+{%- comment -%}
+  SUIJI · What's in the set
+  Finds the jewelry_set metaobject whose product_ref matches this product,
+  then renders the 4 charms + 4 bases and the combo count.
+  Design rules: docs/design-system.md (hairlines, radius 0, no shadows).
+{%- endcomment -%}
+
+{%- liquid
+  assign set_mo = blank
+  for s in shop.metaobjects.jewelry_set.values
+    if s.product_ref.value.id == product.id
+      assign set_mo = s
+      break
+    endif
+  endfor
+-%}
+
+{%- if set_mo != blank -%}
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width suiji-set" style="padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;">
+    <p class="suiji-eyebrow">{{ 'WHAT&rsquo;S IN THE SET' }}</p>
+    <h2 class="suiji-set__heading">{{ set_mo.name.value }}</h2>
+    {%- if set_mo.theme_story.value != blank -%}
+      <p class="suiji-set__story">{{ set_mo.theme_story.value }}</p>
+    {%- endif -%}
+
+    <div class="suiji-set__group">
+      <h3 class="suiji-set__group-title">Charms</h3>
+      <ul class="suiji-set__grid" role="list">
+        {%- for c in set_mo.charms.value -%}
+          <li class="suiji-set__item">
+            <div class="suiji-set__media">
+              {%- if c.image_main.value != blank -%}
+                {{ c.image_main.value | image_url: width: 480 | image_tag: loading: 'lazy', alt: c.name.value }}
+              {%- else -%}
+                <span class="suiji-set__placeholder" aria-hidden="true">{{ c.name.value | slice: 0, 1 }}</span>
+              {%- endif -%}
+            </div>
+            <p class="suiji-set__name">{{ c.name.value }}</p>
+            {%- if c.color.value != blank -%}<p class="suiji-set__meta">{{ c.color.value }}</p>{%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+
+    <div class="suiji-set__group">
+      <h3 class="suiji-set__group-title">Bases</h3>
+      <ul class="suiji-set__grid" role="list">
+        {%- for b in set_mo.bases.value -%}
+          <li class="suiji-set__item">
+            <div class="suiji-set__media">
+              {%- if b.image_empty.value != blank -%}
+                {{ b.image_empty.value | image_url: width: 480 | image_tag: loading: 'lazy', alt: b.name.value }}
+              {%- else -%}
+                <span class="suiji-set__placeholder" aria-hidden="true">{{ b.form.value | slice: 0, 1 | upcase }}</span>
+              {%- endif -%}
+            </div>
+            <p class="suiji-set__name">{{ b.name.value }}</p>
+            <p class="suiji-set__meta">{{ b.form.value | capitalize }}</p>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+
+    <div class="suiji-set__combo">
+      <p class="suiji-set__combo-line">
+        {{ set_mo.charms.value.size }} charms &times; {{ set_mo.bases.value.size }} bases
+        — <strong>{{ set_mo.combo_count.value | default: 24 }} ways to wear.</strong>
+      </p>
+      <a class="button button--secondary" href="{{ section.settings.mechanism_link }}">{{ section.settings.mechanism_label }}</a>
+    </div>
+  </div>
+</div>
+
+{% style %}
+  .suiji-set { max-width: 110rem; }
+  .suiji-set__heading { margin: 0.6rem 0 0; font-size: calc(var(--font-heading-scale) * 3.2rem); }
+  .suiji-set__story { max-width: 72rem; color: rgba(var(--color-foreground), 0.75); margin: 0.8rem 0 0; }
+  .suiji-set__group { margin-top: 3.2rem; }
+  .suiji-set__group-title { font-size: 1.4rem; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 1.2rem; }
+  .suiji-set__grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem; }
+  @media screen and (max-width: 749px) { .suiji-set__grid { grid-template-columns: repeat(2, 1fr); } }
+  .suiji-set__item { border: 1px solid rgba(var(--color-foreground), 0.1); background: rgb(var(--color-background)); padding: 0; }
+  .suiji-set__media { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; background: #ECECE7; overflow: hidden; }
+  .suiji-set__media img { width: 100%; height: 100%; object-fit: cover; }
+  .suiji-set__placeholder { font-size: 2.4rem; letter-spacing: 0.16em; color: #A0A0A0; }
+  .suiji-set__name { margin: 1rem 1.2rem 0.2rem; font-size: 1.4rem; font-weight: 500; }
+  .suiji-set__meta { margin: 0 1.2rem 1.2rem; font-size: 1.2rem; color: rgba(var(--color-foreground), 0.6); }
+  .suiji-set__combo { margin-top: 3.2rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; border-top: 1px solid rgba(var(--color-foreground), 0.1); padding-top: 2.4rem; flex-wrap: wrap; }
+  .suiji-set__combo-line { font-size: 1.6rem; margin: 0; }
+{% endstyle %}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "SUIJI · Set contents",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
+    { "type": "url", "id": "mechanism_link", "label": "Mechanism link" },
+    { "type": "text", "id": "mechanism_label", "label": "Mechanism button label", "default": "Play the mechanism" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Padding top", "default": 64 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Padding bottom", "default": 64 }
+  ],
+  "templates": ["product"],
+  "presets": [{ "name": "SUIJI · Set contents" }]
+}
+{% endschema %}

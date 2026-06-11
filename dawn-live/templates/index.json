@@ -33,7 +33,7 @@
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
             "button_label_2": "Explore the mechanism",
-            "button_link_2": "shopify://collections/all",
+            "button_link_2": "/pages/the-mechanism",
             "button_style_secondary_2": true
           }
         }
@@ -85,7 +85,7 @@
           "type": "button",
           "settings": {
             "button_label": "Build your form",
-            "button_link": "shopify://collections/all",
+            "button_link": "/pages/the-mechanism",
             "button_style_secondary": true
           }
         }
