@@ -2,11 +2,13 @@
 
 | 文档信息 | |
 |---|---|
-| 版本 | v3.0（资深 PM 重写版，2026-06-11） |
+| 版本 | v3.1（实施修订版，2026-06-12） |
 | 决策人 | 王玥 ｜ 执行 | Claude（开发/数据/素材/文案）+ 王玥（账号/商务/拍板） |
 | 配套 | `design-system.md`（怎么长）· `roadmap.md`（何时做） |
 | 平台 | Shopify Dawn + 自定义 sections ｜ 市场 EU（主攻法国）｜ EN 主 + FR ｜ **USD $ 默认 + 多货币自动转换**（2026-06-12 改）｜ 价位 $189–399 |
 | 阅读约定 | **❓决策**=等你拍板 ｜ **📌提案**=我先定了，可推翻 ｜ ✅原生 / 🔧动态数据 / 🛠️自定义开发 =实现成本 |
+
+> **v3.1 变更记录（2026-06-12）**：① 真实 SKU + 封闭套装（不跨套/暂不单卖）② 材质 Titanium $399 / Silver 原价 × 欧码 48–60 ③ 全线预售（约 1 个月，邮件通知）④ 支付 = Shopify Payments + PayPal（中国主体可加 Airwallex/钱海等三方）⑤ 默认货币 USD + 多币转换 ⑥ **弃用 Flow 与 Klaviyo → 全 Shopify 原生会员栈** ⑦ 小游戏改场景模式（花饰预装、跨底座拖拽/互换）+ 新手引导 ⑧ WELCOME10 欢迎弹窗 ⑨ 内容页群/页脚四栏/种子评价上线 ⑩ FR 翻译已 API 注册（待市场开启法语生效）
 
 ---
 
@@ -151,7 +153,7 @@ Footer：Shop/About/Support/法务(Privacy·T&C·Cookie·Sustainability)/订阅/
 **US2.1** 作为访客，我能拖一枚花饰到底座上，看到吸附+咔哒锁定，并能直接买这个组合。
 
 **交互规格**：
-- 舞台 = 底座空座图（1:1）；底部花饰托盘（横滑，仅含各套装内花饰——封闭系统）；顶部形态 tab（Ring / Necklace / Earring）。
+- **场景模式（v3.1 实现）**：一个舞台同屏三个底座面板（Ring/Pendant/Earring），所选套装的花饰**预装在底座上**；拖到另一底座=移动，对方有花饰=**互换**；顶部 tab 切换套装（封闭系统）。引导=三步说明条+动态 Try-it 提示+首次接触前轻脉动。
 - 拖拽（Pointer Events）：花饰进入锚点半径 48px → 磁吸过渡到锚点（transform 240ms）→ 咔哒回弹（scale 1→1.04→0.98→1, 180ms）→ 状态"已锁定"。
 - 锁定后：展示组合完成图 + 价格条 `THIS COMBO — €XX`（花饰+底座合计）+ `ADD COMBO`（Cart AJAX 同时加两件）+ `IN SET CAMELLIA — €189` 套装跳转（如果该组合属于某套装，**优先推套装**）。
 - 换装：再拖新花饰=替换（旧花饰飞回托盘）；切形态 tab=底座切换、已选花饰保留并重新吸附。
@@ -176,7 +178,7 @@ Footer：Shop/About/Support/法务(Privacy·T&C·Cookie·Sustainability)/订阅/
 **验收**：移动购买区 sticky；变体/库存/€/FR 正确；测试订单全流程跑通（支付→邮件→退款）。
 
 ### E4 会员与共创
-**流程**：弹窗注册（进站 8s 或滚动 50%，每会话最多 1 次，关闭后 7 天不再弹）→ Klaviyo 发一次性 10% 码 → 购买套装 → **Shopify Flow 自动打 tag `member`** + 欢迎邮件 → 会员中心解锁。
+**流程（v3.1 原生无 App）**：弹窗注册（8s 延迟，关闭 7 天勿扰）→ 当场亮码 **WELCOME10**（10%，每客一次，已创建）→ 购买套装 → **会员 = 订单含 Set 商品（Liquid 实时判定，零打标、零 Flow）** → 会员中心解锁。
 
 **会员中心三态**（`page.members.json` 🛠️）：
 | 状态 | 内容 |
@@ -185,8 +187,8 @@ Footer：Shop/About/Support/法务(Privacy·T&C·Cookie·Sustainability)/订阅/
 | 已登录非会员 | "Buy any set to unlock the studio" + 套装入口 |
 | 会员 | ① 预售产品区（tag `pre-sale` 轮播）② 测品投票 ③ 我的 waitlist ④ 专属内容 |
 
-**测品投票（MVP 轻方案）**：候选=metaobject `vote_item`；点击投票= Klaviyo 事件 `vote`（绑定账号防重投）；**票数不实时公开 ✅已定**（显示 "Voting open"），你在 Klaviyo 后台看统计；投产后该卡变 "In production →" 链接（闭环）。
-**Waitlist**：占位类目/售罄品/预售品上的 `JOIN WAITLIST` → Klaviyo list（按产品分）+ customer metafield 记录；投产/到货自动邮件。
+**测品投票（v3.1 原生）**：候选=metaobject `vote_item`(status=open)；投票=原生联系表单（主题 `VOTE — 名称`，进店铺邮箱可统计）；**票数不公开 ✅**；投产后置 status=in_production 闭环展示。
+**Waitlist（v3.1 原生）**：会员中心 `JOIN WAITLIST` → 原生 customer 表单为客户打 `waitlist` 标签；到货/投产用 Shopify Email 按标签分群通知。
 
 **边界情况**：
 | 情况 | 处理 |
@@ -228,8 +230,8 @@ Footer：Shop/About/Support/法务(Privacy·T&C·Cookie·Sustainability)/订阅/
 | gift | 手动 tag `gift` |
 | interchangeable-collection | tag `interchangeable` |
 
-### 7.4 Klaviyo（邮件&事件）
-Lists/Segments：订阅者 / member / waitlist-{handle}；Flows：欢迎+10% 码 / 会员欢迎 / waitlist 通知 / 弃购；Events：`vote`、`waitlist_join`。
+### 7.4 邮件与事件（v3.1：全 Shopify 原生，无 Klaviyo）
+订阅者 = Shopify Customers（营销同意）+ 标签 `newsletter/popup/waitlist`；自动化 = **Shopify Email**（欢迎+WELCOME10、到货通知按标签分群）；投票 → 店铺邮箱（联系表单）；行为事件 → GA4。
 
 ---
 
@@ -237,8 +239,8 @@ Lists/Segments：订阅者 / member / waitlist-{handle}；Flows：欢迎+10% 码
 
 ```
 Shopify 核心（商品/订单/客户/结账/Markets EN-FR-€）
-├─ 免费 App：Flow（自动打tag）/ Search & Discovery（筛选+排除预售）/ Translate & Adapt（FR）
-├─ Klaviyo（订阅/flows/投票&waitlist事件）
+├─ 免费 App（可选）：Search & Discovery（筛选）/ Translate & Adapt（FR 可视化管理；核心翻译已 API 注入）
+├─ Shopify Email（原生自动化：欢迎/WELCOME10/到货通知）
 ├─ GA4（事件埋点，§9）
 └─ 主题层（Dawn + suiji-* 自定义）：
      sections: suiji-interactive-mechanism / suiji-set-contents / suiji-combo-matrix /
@@ -246,7 +248,7 @@ Shopify 核心（商品/订单/客户/结账/Markets EN-FR-€）
      assets:   suiji-global.css / suiji-mechanism.{js,css} / suiji-members.js
      约定：不改 Dawn 原文件；JS 总量 <60KB；全部走 git
 ```
-**明确不引入**：自建服务器/外部数据库/bundle 付费 app/评价 app（二期）。
+**明确不引入**：自建服务器/外部数据库/bundle 付费 app/评价 app（二期）；**Flow 与 Klaviyo 均不使用**（2026-06-12 用户决定，原生方案替代）。
 **密钥管理**：`.theme-token`（主题推送）/ `.image-api-key`（gpt-image-2）/ `.feishu-credentials`（飞书）——均 0600+gitignored；**Admin API token 待你创建**（见 §14 分工）。
 
 ---
