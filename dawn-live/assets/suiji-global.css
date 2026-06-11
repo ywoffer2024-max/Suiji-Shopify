@@ -1,0 +1,100 @@
+/* ============================================================
+   SUIJI 随己 · Global brand layer
+   Source of truth: docs/design-system.md (v2)
+   Scope: signature typography, serif accents, text measure,
+          focus visibility, click micro-interaction.
+   Do not add shadows, gradients or radii here — forbidden.
+   ============================================================ */
+
+/* --- Industrial-order signature: uppercase + wide tracking --- */
+.header__menu-item,
+.button,
+.shopify-challenge__button,
+.customer button {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Eyebrow utility (labels above headings) */
+.suiji-eyebrow {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* --- Serif accents only: quotes, brand-story, journal articles --- */
+blockquote,
+.suiji-serif,
+.template-article .rte {
+  font-family: "Cormorant Garamond", "EB Garamond", "Noto Serif SC", Georgia, serif;
+}
+blockquote,
+.suiji-serif {
+  font-size: 1.75em;
+  line-height: 1.45;
+  font-weight: 500;
+}
+.template-article .rte {
+  font-size: 2rem;
+  line-height: 1.7;
+}
+
+/* --- Comfortable reading measure inside the 1400 canvas --- */
+.rte,
+.article-content,
+.product__description {
+  max-width: 72rem; /* ≈720px */
+}
+
+/* --- CJK fallbacks --- */
+:lang(zh) {
+  font-family: "Noto Sans SC", sans-serif;
+}
+:lang(zh) blockquote,
+:lang(zh) .suiji-serif {
+  font-family: "Noto Serif SC", serif;
+}
+
+/* --- Focus visibility (gallery-dark schemes invert the ring) --- */
+:focus-visible {
+  outline: 2px solid #1c1d21;
+  outline-offset: 2px;
+  border-radius: 0;
+}
+.color-scheme-3 :focus-visible,
+.color-scheme-4 :focus-visible,
+.color-scheme-5 :focus-visible {
+  outline-color: #f5f5f0;
+}
+
+/* --- Button hover: opacity shift only, no motion, no shadow --- */
+.button:not([disabled]):hover {
+  opacity: 0.88;
+}
+
+/* --- “Click” micro-interaction (the brand’s audible logo, visualised).
+       Applied via .suiji-click-snap by JS on add-to-cart / variant select. --- */
+@keyframes suiji-click {
+  0%   { transform: scale(1); }
+  45%  { transform: scale(1.04); }
+  75%  { transform: scale(0.98); }
+  100% { transform: scale(1); }
+}
+.suiji-click-snap {
+  animation: suiji-click 180ms ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .suiji-click-snap {
+    animation: none;
+  }
+}
+
+/* --- Error semantics (cold oxide red, text + border only, never fills) --- */
+.form__message--error,
+.errors,
+input[aria-invalid="true"],
+select[aria-invalid="true"] {
+  color: #8c3b3b;
+  border-color: #8c3b3b;
+}

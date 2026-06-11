@@ -3,3 +3,6 @@
 *.token
 .DS_Store
 node_modules/
+.image-api-key
+.feishu-credentials
+.admin-token
