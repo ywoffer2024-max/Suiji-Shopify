@@ -47,13 +47,13 @@
         "image": "shopify://shop_images/suiji-hero-rings.png",
         "image_overlay_opacity": 20,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
         "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
+        "show_text_box": false,
         "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
         "show_text_below": false
       }
     },
@@ -108,20 +108,19 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
+        "collection": "sets",
+        "products_to_show": 3,
         "title": "The Convertible System",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "sets",
-        "products_to_show": 3,
         "columns_desktop": 3,
-        "color_scheme": "scheme-1",
+        "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "outline",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -129,6 +128,7 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 64
       }
@@ -136,24 +136,52 @@
     "testimonials": {
       "type": "multicolumn",
       "blocks": {
-        "q1": { "type": "column", "settings": { "title": "“One set, one weekend, two worlds.”", "text": "<p>I wore the same set to a client meeting and a wedding — nobody guessed it was one piece.</p><p>— L.M., early wearer, Paris</p>", "link_label": "", "link": "" } },
-        "q2": { "type": "column", "settings": { "title": "“The click is weirdly satisfying.”", "text": "<p>My ring becomes a pendant while I wait for my coffee.</p><p>— S.K., beta tester, Toronto</p>", "link_label": "", "link": "" } },
-        "q3": { "type": "column", "settings": { "title": "“A system, not a drawer.”", "text": "<p>Finally jewellery that works like a system, not a drawer of one-offs.</p><p>— A.W., early wearer, Shanghai</p>", "link_label": "", "link": "" } }
+        "q1": {
+          "type": "column",
+          "settings": {
+            "title": "“One set, one weekend, two worlds.”",
+            "text": "<p>I wore the same set to a client meeting and a wedding — nobody guessed it was one piece.</p><p>— L.M., early wearer, Paris</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "q2": {
+          "type": "column",
+          "settings": {
+            "title": "“The click is weirdly satisfying.”",
+            "text": "<p>My ring becomes a pendant while I wait for my coffee.</p><p>— S.K., beta tester, Toronto</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "q3": {
+          "type": "column",
+          "settings": {
+            "title": "“A system, not a drawer.”",
+            "text": "<p>Finally jewellery that works like a system, not a drawer of one-offs.</p><p>— A.W., early wearer, Shanghai</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
       },
-      "block_order": ["q1", "q2", "q3"],
+      "block_order": [
+        "q1",
+        "q2",
+        "q3"
+      ],
       "settings": {
         "title": "Early wearers",
         "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": true,
-        "columns_mobile": "1",
         "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
         "padding_top": 64,
         "padding_bottom": 48
       }
@@ -170,9 +198,7 @@
         },
         "paragraph": {
           "type": "paragraph",
-          "settings": {
-            "paragraph": "<p>10% off your first order. A vote on what we engineer next.</p>"
-          }
+          "settings": {}
         },
         "email_form": {
           "type": "email_form",
