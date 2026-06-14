@@ -1,43 +1,45 @@
-/* SUIJI · Interactive mechanism (scene mode) — radius 0, no shadows, hairlines */
+/* SUIJI · Interactive mechanism (v3 line-art configurator) — radius 0, hairlines */
 .suiji-mech__heading { margin: 0.6rem 0 0; font-size: calc(var(--font-heading-scale) * 3.2rem); }
-.suiji-mech__sub { color: rgba(var(--color-foreground), 0.7); margin: 0.8rem 0 2.4rem; }
+.suiji-mech__sub { color: rgba(var(--color-foreground), 0.7); margin: 0.8rem 0 2rem; max-width: 64rem; }
 
-.suiji-mech__tabs { display: flex; gap: 0; border: 1px solid rgba(var(--color-foreground), 0.2); width: max-content; margin-bottom: 1.6rem; }
+.suiji-mech__how { list-style: none; display: flex; gap: 2.4rem; margin: 0 0 1.6rem; padding: 0; flex-wrap: wrap; }
+.suiji-mech__how li { font-size: 1.3rem; letter-spacing: 0.04em; color: rgba(var(--color-foreground), 0.75); display: flex; align-items: center; gap: 0.8rem; }
+.suiji-mech__how li span { display: inline-flex; align-items: center; justify-content: center; width: 2.2rem; height: 2.2rem; border: 1px solid rgba(var(--color-foreground), 0.4); font-size: 1.1rem; }
+
+.suiji-mech__tabs { display: flex; gap: 0; border: 1px solid rgba(var(--color-foreground), 0.2); width: max-content; margin-bottom: 1rem; }
 .suiji-mech__tab { appearance: none; background: transparent; border: 0; border-right: 1px solid rgba(var(--color-foreground), 0.2); padding: 1rem 1.8rem; font-size: 1.3rem; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; color: rgb(var(--color-foreground)); }
 .suiji-mech__tab:last-child { border-right: 0; }
 .suiji-mech__tab.is-active { background: rgb(var(--color-foreground)); color: rgb(var(--color-background)); }
+.suiji-mech__try { margin: 0 0 1.6rem; font-size: 1.3rem; color: rgba(var(--color-foreground), 0.6); min-height: 1.8rem; }
 
-.suiji-mech__scene { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
-.suiji-mech__panel { position: relative; aspect-ratio: 1; background: #ECECE7; border: 1px solid rgba(var(--color-foreground), 0.1); overflow: hidden; touch-action: none; transition: border-color 160ms ease-out; }
+.suiji-mech__scene { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.suiji-mech__panel { position: relative; aspect-ratio: 1; background: #FFFFFF; border: 1px solid rgba(var(--color-foreground), 0.12); overflow: hidden; touch-action: none; transition: border-color 160ms ease-out; }
 .suiji-mech__panel.is-target { border-color: rgb(var(--color-foreground)); }
-.suiji-mech__panel-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.suiji-mech__panel-label { position: absolute; left: 1rem; bottom: 0.8rem; margin: 0; font-size: 1.1rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(28, 29, 33, 0.55); background: rgba(245, 245, 240, 0.85); padding: 0.3rem 0.8rem; }
+.suiji-mech__panel.is-target::after { content: ""; position: absolute; inset: 0; background: rgba(28,29,33,0.03); pointer-events: none; }
 
-.suiji-mech__anchor { position: absolute; aspect-ratio: 1; border: 1px dashed rgba(28, 29, 33, 0); border-radius: 50%; transform: translate(-50%, -50%); pointer-events: none; transition: border-color 160ms ease-out; }
-.suiji-mech__anchor.is-empty { border-color: rgba(28, 29, 33, 0.35); }
-.suiji-mech__panel.is-target .suiji-mech__anchor { border-color: rgba(28, 29, 33, 0.9); }
+.suiji-mech__art { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.suiji-mech__art path, .suiji-mech__art ellipse, .suiji-mech__art circle, .suiji-mech__art line {
+  fill: none; stroke: rgb(var(--color-foreground)); stroke-width: 1.4; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; opacity: 0.85; }
 
-.suiji-mech__charm { position: absolute; transform: translate(-50%, -50%); cursor: grab; z-index: 2; }
+/* fixed mount box — charm always lands here, perfectly */
+.suiji-mech__charm { position: absolute; left: 50%; top: 21%; width: 34%; height: 48%; transform: translateX(-50%);
+  object-fit: contain; object-position: top center; z-index: 2; cursor: grab; }
 .suiji-mech__charm:active { cursor: grabbing; }
-.suiji-mech__charm.is-lifted { opacity: 0.35; }
-.suiji-mech__charm.is-selected { outline: 2px solid rgb(var(--color-foreground)); outline-offset: 3px; }
-.suiji-mech__charm.is-snapping { animation: suiji-click 180ms ease-out; }
+.suiji-mech__charm.is-lifted { opacity: 0.3; }
+.suiji-mech__charm.is-selected { outline: 2px solid rgb(var(--color-foreground)); outline-offset: 4px; }
+.suiji-mech__charm.is-snapping { animation: suiji-click 200ms ease-out; transform-origin: 50% 0; }
+
+.suiji-mech__mount { position: absolute; left: 50%; top: 25%; width: 16%; aspect-ratio: 1; transform: translateX(-50%);
+  border: 1.5px dashed rgba(28,29,33,0.3); border-radius: 50%; display: none; }
+.suiji-mech__panel.is-empty .suiji-mech__mount { display: block; }
+
+.suiji-mech__panel-label { position: absolute; left: 1rem; bottom: 0.8rem; margin: 0; font-size: 1.1rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(28,29,33,0.5); }
 
 .suiji-mech__cta { margin-top: 1.6rem; display: flex; align-items: center; justify-content: space-between; gap: 1.6rem; border: 1px solid rgba(var(--color-foreground), 0.15); padding: 1.2rem 1.6rem; flex-wrap: wrap; }
 .suiji-mech__cta-line { margin: 0; font-size: 1.4rem; }
 .suiji-mech__cta-name { font-weight: 600; }
-
 .suiji-mech__drag-ghost { position: fixed; pointer-events: none; z-index: 60; transform: translate(-50%, -50%); opacity: 0.92; }
 
-@media (prefers-reduced-motion: reduce) {
-  .suiji-mech__charm.is-snapping { animation: none; }
-}
-
-/* --- onboarding --- */
-.suiji-mech__how { list-style: none; display: flex; gap: 2.4rem; margin: 0 0 2rem; padding: 0; flex-wrap: wrap; }
-.suiji-mech__how li { font-size: 1.3rem; letter-spacing: 0.04em; color: rgba(var(--color-foreground), 0.75); display: flex; align-items: center; gap: 0.8rem; }
-.suiji-mech__how li span { display: inline-flex; align-items: center; justify-content: center; width: 2.2rem; height: 2.2rem; border: 1px solid rgba(var(--color-foreground), 0.4); font-size: 1.1rem; }
-.suiji-mech__try { margin: 0.4rem 0 1.2rem; font-size: 1.3rem; color: rgba(var(--color-foreground), 0.6); min-height: 1.8rem; }
-@keyframes suiji-coax { 0%,100% { transform: translate(-50%, -50%) scale(1); } 50% { transform: translate(-50%, -50%) scale(1.05); } }
-.suiji-mech__charm.is-coax { animation: suiji-coax 1.8s ease-in-out infinite; }
-@media (prefers-reduced-motion: reduce) { .suiji-mech__charm.is-coax { animation: none; } }
+@keyframes suiji-click { 0% { transform: translateX(-50%) scale(1); } 45% { transform: translateX(-50%) scale(1.05); } 75% { transform: translateX(-50%) scale(0.98); } 100% { transform: translateX(-50%) scale(1); } }
+@media (prefers-reduced-motion: reduce) { .suiji-mech__charm.is-snapping { animation: none; } }
+@media screen and (max-width: 749px) { .suiji-mech__scene { gap: 0.6rem; } .suiji-mech__panel-label { font-size: 1rem; } }
