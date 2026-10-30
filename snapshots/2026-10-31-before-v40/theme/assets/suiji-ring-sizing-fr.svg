@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297" lang="fr">
+<title>SUIJI · Baguier de référence</title>
+<rect width="210" height="297" fill="#fff"/>
+<g font-family="Arial, sans-serif" fill="#202226">
+<text x="16" y="16" font-size="5">SUIJI · Baguier de référence</text>
+<text x="16" y="26" font-size="3">Imprimez à 100 % / taille réelle. Désactivez « ajuster à la page ».</text>
+<text x="16" y="34" font-size="3">Vérifiez que cette ligne mesure exactement 50 mm avant utilisation.</text>
+<path data-calibration="50" d="M20 46H70M20 43V49M70 43V49" fill="none" stroke="#202226" stroke-width=".25" stroke-linecap="butt"/>
+<text x="40" y="53" font-size="3">50 mm</text>
+<text x="16" y="64" font-size="2.7">Alignez le bord INTÉRIEUR de votre bague avec le bord EXTÉRIEUR d’un cercle imprimé.</text>
+<text x="16" y="70" font-size="2.7">Les nombres indiquent le tour intérieur en mm. Le bleu repère les tailles actuelles 54 et 57 mm.</text>
+<circle data-circumference="41" cx="26.0" cy="92" r="6.425352667" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="26.0" y="108" font-size="3.7" text-anchor="middle" fill="#202226">41 mm</text>
+<circle data-circumference="42" cx="65.5" cy="92" r="6.584507610" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="65.5" y="108" font-size="3.7" text-anchor="middle" fill="#202226">42 mm</text>
+<circle data-circumference="43" cx="105.0" cy="92" r="6.743662553" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="105.0" y="108" font-size="3.7" text-anchor="middle" fill="#202226">43 mm</text>
+<circle data-circumference="44" cx="144.5" cy="92" r="6.902817496" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="144.5" y="108" font-size="3.7" text-anchor="middle" fill="#202226">44 mm</text>
+<circle data-circumference="45" cx="184.0" cy="92" r="7.061972439" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="184.0" y="108" font-size="3.7" text-anchor="middle" fill="#202226">45 mm</text>
+<circle data-circumference="46" cx="26.0" cy="128" r="7.221127382" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="26.0" y="144" font-size="3.7" text-anchor="middle" fill="#202226">46 mm</text>
+<circle data-circumference="47" cx="65.5" cy="128" r="7.380282325" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="65.5" y="144" font-size="3.7" text-anchor="middle" fill="#202226">47 mm</text>
+<circle data-circumference="48" cx="105.0" cy="128" r="7.539437268" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="105.0" y="144" font-size="3.7" text-anchor="middle" fill="#202226">48 mm</text>
+<circle data-circumference="49" cx="144.5" cy="128" r="7.698592212" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="144.5" y="144" font-size="3.7" text-anchor="middle" fill="#202226">49 mm</text>
+<circle data-circumference="50" cx="184.0" cy="128" r="7.857747155" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="184.0" y="144" font-size="3.7" text-anchor="middle" fill="#202226">50 mm</text>
+<circle data-circumference="51" cx="26.0" cy="164" r="8.016902098" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="26.0" y="180" font-size="3.7" text-anchor="middle" fill="#202226">51 mm</text>
+<circle data-circumference="52" cx="65.5" cy="164" r="8.176057041" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="65.5" y="180" font-size="3.7" text-anchor="middle" fill="#202226">52 mm</text>
+<circle data-circumference="53" cx="105.0" cy="164" r="8.335211984" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="105.0" y="180" font-size="3.7" text-anchor="middle" fill="#202226">53 mm</text>
+<circle data-circumference="54" cx="144.5" cy="164" r="8.494366927" fill="none" stroke="#315a73" stroke-width="0.2"/>
+<text x="144.5" y="180" font-size="3.7" text-anchor="middle" fill="#315a73">54 mm</text>
+<circle data-circumference="55" cx="184.0" cy="164" r="8.653521870" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="184.0" y="180" font-size="3.7" text-anchor="middle" fill="#202226">55 mm</text>
+<circle data-circumference="56" cx="26.0" cy="200" r="8.812676813" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="26.0" y="216" font-size="3.7" text-anchor="middle" fill="#202226">56 mm</text>
+<circle data-circumference="57" cx="65.5" cy="200" r="8.971831756" fill="none" stroke="#315a73" stroke-width="0.2"/>
+<text x="65.5" y="216" font-size="3.7" text-anchor="middle" fill="#315a73">57 mm</text>
+<circle data-circumference="58" cx="105.0" cy="200" r="9.130986699" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="105.0" y="216" font-size="3.7" text-anchor="middle" fill="#202226">58 mm</text>
+<circle data-circumference="59" cx="144.5" cy="200" r="9.290141642" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="144.5" y="216" font-size="3.7" text-anchor="middle" fill="#202226">59 mm</text>
+<circle data-circumference="60" cx="184.0" cy="200" r="9.449296586" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="184.0" y="216" font-size="3.7" text-anchor="middle" fill="#202226">60 mm</text>
+<circle data-circumference="61" cx="26.0" cy="236" r="9.608451529" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="26.0" y="252" font-size="3.7" text-anchor="middle" fill="#202226">61 mm</text>
+<circle data-circumference="62" cx="65.5" cy="236" r="9.767606472" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="65.5" y="252" font-size="3.7" text-anchor="middle" fill="#202226">62 mm</text>
+<circle data-circumference="63" cx="105.0" cy="236" r="9.926761415" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="105.0" y="252" font-size="3.7" text-anchor="middle" fill="#202226">63 mm</text>
+<circle data-circumference="64" cx="144.5" cy="236" r="10.085916358" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="144.5" y="252" font-size="3.7" text-anchor="middle" fill="#202226">64 mm</text>
+<circle data-circumference="65" cx="184.0" cy="236" r="10.245071301" fill="none" stroke="#202226" stroke-width="0.2"/>
+<text x="184.0" y="252" font-size="3.7" text-anchor="middle" fill="#202226">65 mm</text>
+<text x="16" y="278" font-size="2.8">L’échelle d’impression peut varier. En cas de doute, faites vérifier la taille par un bijoutier.</text>
+<text x="16" y="286" font-size="2.5">SUIJI · 41–65 mm · A4 · 210 × 297 mm</text>
+</g></svg>

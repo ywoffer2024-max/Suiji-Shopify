@@ -1,0 +1,53 @@
+{% doc %}
+  Render one approved wearing category and its source-defined subcategories.
+  @param {string} category_key - Canonical translated category key.
+  @param {string} display - card or detail.
+{% enddoc %}
+{%- liquid
+  assign collection_handle = category_key
+  assign child_keys = ''
+  case category_key
+    when 'necklaces'
+      assign child_keys = 'chains,beaded_necklaces,chokers,pendant_necklaces'
+    when 'bracelets_bangles'
+      assign collection_handle = 'bracelets'
+      assign child_keys = 'chain_beaded_bracelets,bangles'
+    when 'earrings'
+      assign child_keys = 'stud_earrings,hoop_earrings'
+    when 'accessories'
+      assign collection_handle = 'extras'
+      assign child_keys = 'multi_use_connectors,decorative_add_ons'
+  endcase
+  assign category_url = '/collections/' | append: collection_handle
+  assign title_key = 'suiji_navigation.labels.' | append: category_key
+  assign description_key = 'suiji_catalog.descriptions.' | append: category_key
+  assign children = child_keys | split: ','
+-%}
+{%- if display == 'card' -%}
+<section data-shop-category="{{ category_key | escape }}">
+  <h2><a href="{% render 'suiji-localized-menu-url', url: category_url %}">{{ title_key | t }} →</a></h2>
+  <p>{{ description_key | t }}</p>
+  {%- if child_keys != blank -%}
+  <ul>
+    {%- for child in children -%}
+      {%- assign child_title_key = 'suiji_navigation.labels.' | append: child -%}
+      {%- assign child_anchor = child | replace: '_', '-' -%}
+      {%- assign child_url = category_url | append: '#' | append: child_anchor -%}
+      <li><a href="{% render 'suiji-localized-menu-url', url: child_url %}">{{ child_title_key | t }}</a></li>
+    {%- endfor -%}
+  </ul>
+  {%- endif -%}
+</section>
+{%- elsif child_keys != blank -%}
+<div class="suiji-info__base-grid{% if category_key == 'earrings' %} suiji-catalog-earrings{% endif %}">
+  {%- for child in children -%}
+    {%- assign child_title_key = 'suiji_navigation.labels.' | append: child -%}
+    {%- assign child_description_key = 'suiji_catalog.descriptions.' | append: child -%}
+    <section id="{{ child | replace: '_', '-' }}" data-shop-subcategory>
+      <h2>{{ child_title_key | t }}</h2>
+      <p>{{ child_description_key | t }}</p>
+      {%- if category_key == 'earrings' and child == 'hoop_earrings' -%}{% render 'suiji-hoop-readonly' %}{%- endif -%}
+    </section>
+  {%- endfor -%}
+</div>
+{%- endif -%}

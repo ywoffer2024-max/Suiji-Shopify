@@ -1,0 +1,20 @@
+{% doc %}
+  Read-only presentation of the human-selected H01 image. The actual single SKU remains Draft.
+  Never resolves a draft product or creates a native product, cart or checkout action.
+{% enddoc %}
+{{ 'suiji-hoop-readonly.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign hoop_photo = images['h01-blue-hoop-314abc45f474.png']
+  assign hoop_detail_url = '/collections/earrings?view=suiji-h01'
+  if request.locale.iso_code == 'fr'
+    assign hoop_title = 'H01 Créole bleue'
+    assign hoop_description = 'Une créole bleue à la silhouette rectangulaire arrondie.'
+  else
+    assign hoop_title = 'H01 Blue Hoop'
+    assign hoop_description = 'A blue hoop with a rounded rectangular silhouette.'
+  endif
+-%}
+<article class="suiji-hoop-readonly" data-hoop-readonly aria-labelledby="suiji-hoop-readonly-title">
+  <div class="suiji-hoop-readonly__image"><a href="{% render 'suiji-localized-menu-url', url: hoop_detail_url %}" aria-label="{{ 'products.product.view_full_details' | t | escape }} · {{ hoop_title | escape }}">{{ hoop_photo | image_url: width: 900 | image_tag: widths: '300, 450, 600, 900', sizes: '(min-width: 990px) 36vw, 90vw', loading: 'lazy', decoding: 'async', alt: hoop_title }}</a></div>
+  <div class="suiji-hoop-readonly__content"><p class="suiji-hoop-readonly__code">{{ 'suiji_display.reference' | t }} · H01-BLUE</p><h3 id="suiji-hoop-readonly-title"><a href="{% render 'suiji-localized-menu-url', url: hoop_detail_url %}">{{ hoop_title }}</a></h3><p>{{ hoop_description }}</p><p class="suiji-hoop-readonly__status">{{ 'suiji_display.coming_soon' | t }}</p><p>{{ 'suiji_display.notice' | t }}</p><a class="suiji-hoop-readonly__details" href="{% render 'suiji-localized-menu-url', url: hoop_detail_url %}">{{ 'products.product.view_full_details' | t }} <span aria-hidden="true">→</span></a></div>
+</article>

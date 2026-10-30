@@ -1,0 +1,8 @@
+{%- doc -%}Six category image navigation explicitly requested by the human. Existing category and child URLs are retained.{%- enddoc -%}
+{%- for category_link in links -%}
+  {%- assign category_visual_key = category_link.url | split: '?' | first | split: '#' | first | split: '/' | last -%}
+  <li class="suiji-mega-menu__group">
+    <a id="HeaderMenuCategory-{{ parent_handle }}-{{ category_link.handle }}" href="{% render 'suiji-localized-menu-url', url: category_link.url %}" class="suiji-mega-menu__category"><span class="suiji-mega-menu__visual suiji-mega-menu__visual--{{ category_visual_key | escape }}" aria-hidden="true">{% render 'suiji-category-visual', category_url: category_link.url, visual_context: 'shop-all' %}</span><span class="suiji-mega-menu__name">{% render 'suiji-localized-menu-title', title: category_link.title %}</span></a>
+    {%- if category_link.links != blank -%}<ul class="suiji-mega-menu__children" role="list">{%- for category_child in category_link.links -%}<li><a id="HeaderMenu-{{ parent_handle }}-{{ category_link.handle }}-{{ category_child.handle }}" href="{% render 'suiji-localized-menu-url', url: category_child.url %}">{% render 'suiji-localized-menu-title', title: category_child.title %}</a></li>{%- endfor -%}</ul>{%- endif -%}
+  </li>
+{%- endfor -%}

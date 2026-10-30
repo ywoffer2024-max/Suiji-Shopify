@@ -1,0 +1,23 @@
+{% doc %}
+  Load SUIJI's approved display and interface fonts from theme assets.
+  Both Latin subsets include the French accented letters, OE ligature and euro.
+  The accompanying font license asset retains the upstream OFL notices.
+{% enddoc %}
+<link rel="preload" as="font" href="{{ 'suiji-manrope-latin-variable.woff2' | asset_url }}" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="{{ 'suiji-newsreader-latin-regular.woff2' | asset_url }}" type="font/woff2" crossorigin>
+{% style %}
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url('{{ 'suiji-manrope-latin-variable.woff2' | asset_url }}') format('woff2');
+  }
+  @font-face {
+    font-family: 'Newsreader';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('{{ 'suiji-newsreader-latin-regular.woff2' | asset_url }}') format('woff2');
+  }
+{% endstyle %}

@@ -1,0 +1,105 @@
+.suiji-about {
+  --about-surface: var(--suiji-surface, #eaf1f5);
+  --about-ink: var(--suiji-ink, #202226);
+  --about-muted: var(--suiji-muted, #626466);
+  --about-accent: var(--suiji-accent, #315a73);
+  --about-line: var(--suiji-line-soft, #e5ebef);
+  padding-top: clamp(4.8rem, 6vw, 8rem);
+  padding-bottom: clamp(6.4rem, 8vw, 11.2rem);
+  color: var(--about-ink);
+  font-family: var(--font-body-family, Manrope, sans-serif);
+  overflow-wrap: break-word;
+}
+.suiji-about *, .suiji-about *::before, .suiji-about *::after { box-sizing: border-box; }
+.suiji-about h1, .suiji-about h2 {
+  margin: 0;
+  color: var(--about-ink);
+  font-family: var(--suiji-display-family, Newsreader, Georgia, serif);
+  font-weight: 400;
+  letter-spacing: -.025em;
+  text-wrap: balance;
+}
+.suiji-about p { margin: 0 0 1.8rem; font-size: 1.6rem; line-height: 1.75; letter-spacing: 0; }
+.suiji-about p:last-child { margin-bottom: 0; }
+.suiji-about__hero {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  align-items: end;
+  gap: 2.4rem clamp(4rem, 6vw, 8rem);
+  margin-bottom: clamp(4.8rem, 6vw, 8rem);
+}
+.suiji-about__eyebrow {
+  grid-column: 1 / -1;
+  color: var(--about-muted);
+  font-size: 1.2rem !important;
+  font-weight: 500;
+  letter-spacing: .12em !important;
+  text-transform: uppercase;
+}
+.suiji-about h1 { max-width: 15ch; font-size: clamp(4rem, 5.4vw, 7.2rem); line-height: 1.06; }
+.suiji-about__lead { max-width: 48ch; padding-bottom: .5rem; }
+.suiji-about__lead p { font-size: clamp(1.6rem, 1.45vw, 1.8rem); line-height: 1.7; }
+.suiji-about__chapter {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  gap: 3.2rem clamp(4.8rem, 8vw, 11.2rem);
+  padding: clamp(4rem, 5vw, 6.4rem) 0;
+  border-bottom: 1px solid var(--about-line);
+}
+.suiji-about h2 { max-width: 18ch; font-size: clamp(2.8rem, 3.1vw, 4rem); line-height: 1.18; }
+.suiji-about__copy { min-width: 0; max-width: 62ch; }
+.suiji-about__chapter--origin, .suiji-about__chapter--future {
+  padding: clamp(2.4rem, 4vw, 5.6rem);
+  background: var(--about-surface);
+  border: 0;
+}
+.suiji-about__chapter--origin { margin-bottom: 1.6rem; }
+.suiji-about__chapter--origin .suiji-about__copy p { font-size: clamp(1.8rem, 1.8vw, 2.2rem); line-height: 1.65; }
+.suiji-about__people {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(3.2rem, 7vw, 9.6rem);
+  padding: clamp(4rem, 5vw, 6.4rem) 0;
+  border-bottom: 1px solid var(--about-line);
+}
+.suiji-about__people .suiji-about__chapter { display: block; padding: 0; border: 0; }
+.suiji-about__people h2 { margin-bottom: 2.4rem; }
+.suiji-about__chapter--future { margin-top: clamp(4rem, 5vw, 6.4rem); }
+.suiji-about__copy > p:last-child:has(a) { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 2.4rem; font-size: 0; margin-top: 2.8rem; }
+.suiji-about__copy a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4.8rem;
+  padding: 1.2rem 0;
+  color: var(--about-accent);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-underline-offset: .4rem;
+}
+.suiji-about__copy a:first-child {
+  padding: 1.4rem 2.4rem;
+  background: var(--about-accent);
+  color: #fff;
+  text-decoration: none;
+}
+.suiji-about__copy a:first-child:hover { background: var(--suiji-accent-dark, #23465c); }
+.suiji-about__copy a:focus-visible { outline: 2px solid var(--about-accent); outline-offset: 4px; }
+.suiji-about__fallback { max-width: 68rem; margin: 0 auto; }
+.suiji-about__hero--fallback { display: block; }
+.suiji-about__fallback h2 { margin: 4rem 0 2rem; }
+@media (max-width: 989px) {
+  .suiji-about__hero { grid-template-columns: 1fr; gap: 2.4rem; }
+  .suiji-about h1 { max-width: 19ch; font-size: clamp(4rem, 7vw, 6rem); }
+  .suiji-about__lead { max-width: 62ch; }
+  .suiji-about__chapter { grid-template-columns: 1fr; gap: 2.4rem; }
+  .suiji-about__people { grid-template-columns: 1fr; gap: 4rem; }
+}
+@media (prefers-reduced-motion: reduce) { .suiji-about a { transition: none; } }
+
+.suiji-mvp-root .suiji-about h1, .suiji-mvp-root .suiji-about h2 {
+  font-family: var(--suiji-display-family, Newsreader, Georgia, serif);
+  font-weight: 400;
+}

@@ -1,0 +1,149 @@
+{%- liquid
+  assign is_fr = false
+  if request.locale.iso_code contains 'fr'
+    assign is_fr = true
+  endif
+  assign waitlist_url = routes.root_url | append: '/pages/first-edition' | replace: '//', '/'
+-%}
+
+<article class="suiji-article">
+  <header class="suiji-article__header">
+    <div class="suiji-shell">
+      <a class="suiji-article__back" href="{{ blog.url }}">
+        {%- if is_fr -%}Retour au journal{%- else -%}Back to the journal{%- endif -%}
+      </a>
+      <h1 class="suiji-article__title">{{ article.title | escape }}</h1>
+      {%- if article.excerpt != blank -%}
+        <p class="suiji-article__deck">{{ article.excerpt | strip_html }}</p>
+      {%- endif -%}
+      <div class="suiji-article__meta">
+        <span>{%- if is_fr -%}Publié le{%- else -%}Published{%- endif -%} {{ article.published_at | time_tag: format: 'date' }}</span>
+        {%- if article.updated_at != article.published_at -%}
+          <span>{%- if is_fr -%}Mis à jour le{%- else -%}Updated{%- endif -%} {{ article.updated_at | time_tag: format: 'date' }}</span>
+        {%- endif -%}
+        {%- if article.author != blank -%}
+          <span>{%- if is_fr -%}Par{%- else -%}By{%- endif -%} {{ article.author | escape }}</span>
+        {%- endif -%}
+      </div>
+    </div>
+  </header>
+
+  <div class="suiji-shell">
+    <div class="suiji-article__media">
+      {%- if article.image -%}
+        {{
+          article.image
+          | image_url: width: 1800
+          | image_tag:
+            class: 'suiji-article__image',
+            loading: 'eager',
+            fetchpriority: 'high',
+            widths: '480, 720, 960, 1200, 1600, 1800',
+            sizes: '(min-width: 1440px) 1312px, 100vw',
+            alt: article.image.alt
+        }}
+      {%- else -%}
+        <img
+          class="suiji-article__image"
+          src="{{ 'suiji-lightness-study-wide.jpg' | asset_url }}"
+          width="1536"
+          height="1024"
+          loading="eager"
+          fetchpriority="high"
+          alt="{% if is_fr %}Étude éditoriale abstraite de matières légères{% else %}Abstract editorial study of lightweight materials{% endif %}"
+        >
+      {%- endif -%}
+    </div>
+
+    <div class="suiji-article__body-layout">
+      <aside class="suiji-article__aside">
+        <p class="suiji-article__aside-label">{%- if is_fr -%}Réponse directe{%- else -%}Direct answer{%- endif -%}</p>
+        <p class="suiji-article__aside-text">
+          {%- if article.excerpt != blank -%}
+            {{ article.excerpt | strip_html | truncatewords: 42 }}
+          {%- elsif is_fr -%}
+            L'essentiel se trouve dans le premier paragraphe, puis chaque critère est expliqué avec ses limites.
+          {%- else -%}
+            The key answer is in the opening paragraph, followed by each criterion and its limits.
+          {%- endif -%}
+        </p>
+      </aside>
+
+      <div class="suiji-article__content rte">
+        {{ article.content }}
+      </div>
+    </div>
+  </div>
+
+  <footer class="suiji-article__footer">
+    <div class="suiji-shell">
+      <h2 class="suiji-subtitle">{%- if is_fr -%}À lire ensuite{%- else -%}Read next{%- endif -%}</h2>
+      <div class="suiji-related__grid">
+        {%- assign related_count = 0 -%}
+        {%- for related_article in blog.articles -%}
+          {%- if related_article.id != article.id and related_count < 3 -%}
+            <a
+              class="suiji-related__item"
+              href="{{ related_article.url }}"
+              data-suiji-related-article
+              data-source-article="{{ article.handle | escape }}"
+              data-target-article="{{ related_article.handle | escape }}"
+            >
+              <h3 class="suiji-related__title">{{ related_article.title | escape }}</h3>
+              <span class="suiji-related__meta">{%- if is_fr -%}Lire le guide{%- else -%}Read the guide{%- endif -%}</span>
+            </a>
+            {%- assign related_count = related_count | plus: 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
+        {%- if related_count == 0 -%}
+          <div class="suiji-blog-empty">
+            <p class="suiji-copy">{%- if is_fr -%}D'autres guides seront bientôt publiés.{%- else -%}More guides will be published soon.{%- endif -%}</p>
+            <p><a class="suiji-link" href="{{ blog.url }}">{%- if is_fr -%}Retour au journal{%- else -%}Back to the journal{%- endif -%}</a></p>
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="suiji-article-cta" id="suiji-article-cta">
+        <div class="suiji-article-cta__heading">
+          <p class="suiji-article-cta__label">
+            {%- if is_fr -%}Première Édition{%- else -%}First Edition{%- endif -%}
+          </p>
+          <h2 class="suiji-article-cta__title">
+            {%- if is_fr -%}Suivez la Première Édition SUIJI.{%- else -%}Follow the SUIJI First Edition.{%- endif -%}
+          </h2>
+        </div>
+        <div class="suiji-article-cta__action">
+          <p class="suiji-article-cta__copy">
+            {%- if is_fr -%}
+              Recevez les prochains guides et les nouvelles de la Première Édition, sans compte à rebours ni remise promise.
+            {%- else -%}
+              Receive new guides and First Edition updates, with no countdowns or promised discounts.
+            {%- endif -%}
+          </p>
+          <a
+            class="suiji-button suiji-button--primary"
+            href="{{ waitlist_url }}"
+            data-suiji-article-cta
+            data-article-handle="{{ article.handle | escape }}"
+            data-topic="{% if article.tags.size > 0 %}{{ article.tags.first | handleize }}{% endif %}"
+          >
+            {%- if is_fr -%}Rejoindre la liste{%- else -%}Join the waitlist{%- endif -%}
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</article>
+
+<script type="application/ld+json">
+  {{ article | structured_data }}
+</script>
+
+{% schema %}
+{
+  "name": "SUIJI article",
+  "tag": "section",
+  "class": "section",
+  "settings": []
+}
+{% endschema %}

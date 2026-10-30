@@ -1,0 +1,59 @@
+{% doc %}
+  Responsive homepage image from a Shopify image picker/Files object or this release's theme image asset.
+  @param {image} image - Image object, or the exact allowlisted theme asset filename.
+  @param {string} alt - Localized description.
+  @param {string} [sizes] - Responsive slot sizes.
+  @param {string} [loading] - eager only for the hero.
+{% enddoc %}
+{%- liquid
+  assign image_loading = loading | default: 'lazy'
+  assign image_sizes = sizes | default: '100vw'
+-%}
+{%- if image != blank -%}
+  {%- if image.width != blank -%}
+    {%- if image_loading == 'eager' -%}
+      {{ image | image_url: width: 1920 | image_tag: widths: '390, 600, 900, 1200, 1536, 1920', sizes: image_sizes, loading: 'eager', fetchpriority: 'high', decoding: 'async', alt: alt }}
+    {%- else -%}
+      {{ image | image_url: width: 1600 | image_tag: widths: '240, 390, 600, 800, 1200, 1600', sizes: image_sizes, loading: 'lazy', decoding: 'async', alt: alt }}
+    {%- endif -%}
+  {%- else -%}
+    {%- liquid
+      case image
+        when 'suiji-home-hero-85db3ef4.png'
+          assign intrinsic_width = 1672
+          assign intrinsic_height = 941
+        when 'suiji-home-modular-85db3ef4.png'
+          assign intrinsic_width = 1605
+          assign intrinsic_height = 980
+        when 'suiji-home-about-85db3ef4.png'
+          assign intrinsic_width = 1605
+          assign intrinsic_height = 980
+        when 'suiji-home-look-85db3ef4.png'
+          assign intrinsic_width = 1122
+          assign intrinsic_height = 1402
+        when 'suiji-home-necklace-85db3ef4.png'
+          assign intrinsic_width = 1254
+          assign intrinsic_height = 1254
+        when 'suiji-home-bracelet-85db3ef4.png'
+          assign intrinsic_width = 1254
+          assign intrinsic_height = 1254
+      endcase
+      assign max_width = intrinsic_width | at_most: 1600
+      assign max_size = max_width | append: 'x'
+      assign initial_width = intrinsic_width | at_most: 1200
+      assign initial_size = initial_width | append: 'x'
+      assign responsive_widths = '240,390,600,900,1200' | split: ','
+    -%}
+    {%- capture image_srcset -%}
+      {%- for target_width in responsive_widths -%}
+        {%- assign target_number = target_width | plus: 0 -%}
+        {%- if target_number < max_width -%}
+          {%- assign target_size = target_width | append: 'x' -%}
+          {{ image | asset_img_url: target_size }} {{ target_width }}w,
+        {%- endif -%}
+      {%- endfor -%}
+      {{ image | asset_img_url: max_size }} {{ max_width }}w
+    {%- endcapture -%}
+    <img src="{{ image | asset_img_url: initial_size }}" srcset="{{ image_srcset | strip | escape }}" sizes="{{ image_sizes | escape }}" width="{{ intrinsic_width }}" height="{{ intrinsic_height }}" alt="{{ alt | escape }}" loading="{{ image_loading }}"{% if image_loading == 'eager' %} fetchpriority="high"{% endif %} decoding="async">
+  {%- endif -%}
+{%- endif -%}

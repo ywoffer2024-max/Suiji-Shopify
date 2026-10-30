@@ -1,0 +1,12 @@
+{% doc %}
+Renders the SUIJI demonstration catalogue, product or bag using the public fact allowlist.
+@param {string} [view] - catalogue, product, cart or search
+@param {string} [category] - Known wearing category
+{% enddoc %}
+{%- assign commerce_locale = request.locale.iso_code | split: '-' | first -%}
+<div class="suiji-commerce" data-suiji-commerce data-view="{{ view | default: 'catalogue' }}" data-category="{{ category | default: 'all' }}" data-locale="{{ commerce_locale }}" data-catalogue-src="{{ 'suiji-commerce-catalogue.json' | asset_url }}">
+  <div class="sc-loading" role="status">{{ 'suiji_commerce.loading' | t }}</div>
+  <div hidden data-commerce-guide>{% render 'suiji-size-guide', guide_id: 'commerce-size-guide', in_dialog: true %}</div>
+  <noscript><p>{{ 'suiji_commerce.enable_js' | t }}</p><a href="{% render 'suiji-localized-menu-url', url: '/pages/contact' %}">{{ 'suiji_commerce.contact' | t }}</a></noscript>
+</div>
+<script src="{{ 'suiji-commerce.js' | asset_url }}" defer="defer"></script>

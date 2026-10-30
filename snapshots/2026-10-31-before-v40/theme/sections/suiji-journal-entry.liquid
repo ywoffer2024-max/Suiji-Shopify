@@ -1,0 +1,36 @@
+{{ 'suiji-journal-v2.css' | asset_url | stylesheet_tag }}
+{% assign sj_id = section.settings.article_id | plus: 0 %}{% assign sj_lang = 'en' %}{% if request.locale.iso_code contains 'fr' %}{% assign sj_lang = 'fr' %}{% endif %}
+{% assign sj_number = sj_id | prepend: '0' | slice: -2, 2 %}
+{% capture sj_title %}{% render 'suiji-journal-copy', key: sj_id, field: 'title' %}{% endcapture %}
+{% capture sj_summary %}{% render 'suiji-journal-copy', key: sj_id, field: 'summary' %}{% endcapture %}
+{% capture sj_direction %}{% render 'suiji-journal-copy', key: sj_id, field: 'direction' %}{% endcapture %}
+{% assign sj_image = 'sj-' | append: sj_number | append: '-' | append: sj_lang | append: '.svg' %}
+{% assign sj_root = routes.root_url | append: '/blogs/journal' | replace: '//', '/' %}
+<article class="sj-entry" data-sj-entry="{{ sj_id }}" lang="{{ sj_lang }}">
+  <header class="sj-entry-head"><div class="sj-shell"><a href="{{ sj_root }}">{% if sj_lang == 'fr' %}Retour au Journal{% else %}Back to Journal{% endif %} &larr;</a><p class="sj-eyebrow">{{ sj_direction | strip }}</p><h1>{{ sj_title | strip }}</h1><p class="sj-deck">{{ sj_summary | strip }}</p><p class="sj-byline">SUIJI Journal · <time datetime="2026-10-30">{% if sj_lang == 'fr' %}30 octobre 2026{% else %}October 30, 2026{% endif %}</time></p></div></header>
+  <div class="sj-shell sj-reading-layout"><aside class="sj-reader-note"><p class="sj-eyebrow">{% if sj_lang == 'fr' %}À emporter{% else %}Take it with you{% endif %}</p><p>{% if sj_lang == 'fr' %}Un choix concret, des informations à vérifier et une prochaine étape adaptée à votre situation.{% else %}A concrete choice, the information to check and a next step suited to your situation.{% endif %}</p><a href="{{ sj_root }}#journal-themes">{% if sj_lang == 'fr' %}Explorer les six thèmes{% else %}Explore the six themes{% endif %} →</a></aside><div class="sj-entry-body"><figure class="sj-decision-map"><img src="{{ sj_image | asset_url }}" width="1200" height="800" loading="eager" fetchpriority="high" alt="{{ sj_title | strip | escape }} — {% if sj_lang == 'fr' %}repère de décision en trois étapes{% else %}three-step decision map{% endif %}"><figcaption>{% if sj_lang == 'fr' %}Illustration éditoriale : une méthode de choix, pas un schéma de produit ni une certification.{% else %}Editorial illustration: a decision framework, not a product drawing or certification.{% endif %}</figcaption></figure>
+{% case sj_id %}
+{% when 1 %}{% if sj_lang == 'fr' %}{% render 'sj-01-fr' %}{% else %}{% render 'sj-01-en' %}{% endif %}
+{% when 2 %}{% if sj_lang == 'fr' %}{% render 'sj-02-fr' %}{% else %}{% render 'sj-02-en' %}{% endif %}
+{% when 3 %}{% if sj_lang == 'fr' %}{% render 'sj-03-fr' %}{% else %}{% render 'sj-03-en' %}{% endif %}
+{% when 4 %}{% if sj_lang == 'fr' %}{% render 'sj-04-fr' %}{% else %}{% render 'sj-04-en' %}{% endif %}
+{% when 5 %}{% if sj_lang == 'fr' %}{% render 'sj-05-fr' %}{% else %}{% render 'sj-05-en' %}{% endif %}
+{% when 6 %}{% if sj_lang == 'fr' %}{% render 'sj-06-fr' %}{% else %}{% render 'sj-06-en' %}{% endif %}
+{% when 7 %}{% if sj_lang == 'fr' %}{% render 'sj-07-fr' %}{% else %}{% render 'sj-07-en' %}{% endif %}
+{% when 8 %}{% if sj_lang == 'fr' %}{% render 'sj-08-fr' %}{% else %}{% render 'sj-08-en' %}{% endif %}
+{% when 9 %}{% if sj_lang == 'fr' %}{% render 'sj-09-fr' %}{% else %}{% render 'sj-09-en' %}{% endif %}
+{% when 10 %}{% if sj_lang == 'fr' %}{% render 'sj-10-fr' %}{% else %}{% render 'sj-10-en' %}{% endif %}
+{% when 11 %}{% if sj_lang == 'fr' %}{% render 'sj-11-fr' %}{% else %}{% render 'sj-11-en' %}{% endif %}
+{% when 12 %}{% if sj_lang == 'fr' %}{% render 'sj-12-fr' %}{% else %}{% render 'sj-12-en' %}{% endif %}
+{% when 13 %}{% if sj_lang == 'fr' %}{% render 'sj-13-fr' %}{% else %}{% render 'sj-13-en' %}{% endif %}
+{% when 14 %}{% if sj_lang == 'fr' %}{% render 'sj-14-fr' %}{% else %}{% render 'sj-14-en' %}{% endif %}
+{% when 15 %}{% if sj_lang == 'fr' %}{% render 'sj-15-fr' %}{% else %}{% render 'sj-15-en' %}{% endif %}
+{% when 16 %}{% if sj_lang == 'fr' %}{% render 'sj-16-fr' %}{% else %}{% render 'sj-16-en' %}{% endif %}
+{% when 17 %}{% if sj_lang == 'fr' %}{% render 'sj-17-fr' %}{% else %}{% render 'sj-17-en' %}{% endif %}
+{% when 18 %}{% if sj_lang == 'fr' %}{% render 'sj-18-fr' %}{% else %}{% render 'sj-18-en' %}{% endif %}
+{% when 19 %}{% if sj_lang == 'fr' %}{% render 'sj-19-fr' %}{% else %}{% render 'sj-19-en' %}{% endif %}
+{% when 20 %}{% if sj_lang == 'fr' %}{% render 'sj-20-fr' %}{% else %}{% render 'sj-20-en' %}{% endif %}
+{% endcase %}</div></div></article>
+{% capture sj_canonical %}{{ request.origin }}{{ sj_root }}?view=suiji-j{{ sj_number }}{% endcapture %}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":{{ sj_title | strip | strip_html | json }},"description":{{ sj_summary | strip | strip_html | json }},"inLanguage":{{ sj_lang | json }},"datePublished":"2026-10-30","dateModified":"2026-10-30","mainEntityOfPage":{{ sj_canonical | strip | json }},"author":{"@type":"Organization","name":"SUIJI Journal"},"publisher":{"@type":"Organization","name":"SUIJI"}}</script>
+{% schema %}{"name":"SUIJI Journal guide","settings":[{"type":"range","id":"article_id","label":"Article","min":1,"max":20,"step":1,"default":1}]}{% endschema %}

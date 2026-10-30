@@ -1,0 +1,31 @@
+{%- doc -%}
+  Preserve the current storefront language for relative navigation URLs.
+  @param {string} url - Native menu link URL.
+{%- enddoc -%}
+{%- liquid
+  assign url = url | strip
+  case url
+    when '/pages/editions#stud-earring-styling-set', '/en/pages/editions#stud-earring-styling-set', '/fr/pages/editions#stud-earring-styling-set'
+      assign url = '/collections/sets?view=suiji-product&product=set01-stud-earring-set'
+    when '/pages/editions#choker-charm-set', '/en/pages/editions#choker-charm-set', '/fr/pages/editions#choker-charm-set'
+      assign url = '/collections/sets?view=suiji-product&product=set02-choker-set'
+    when '/pages/editions#ring-two-charms-set', '/en/pages/editions#ring-two-charms-set', '/fr/pages/editions#ring-two-charms-set'
+      assign url = '/collections/sets?view=suiji-product&product=set03-ring-set'
+    when '/pages/editions#hoop-necklace-styling-set', '/en/pages/editions#hoop-necklace-styling-set', '/fr/pages/editions#hoop-necklace-styling-set'
+      assign url = '/collections/sets?view=suiji-product&product=set04-hoop-earring-necklace-set'
+    when '/pages/editions#stud-ring-styling-set', '/en/pages/editions#stud-ring-styling-set', '/fr/pages/editions#stud-ring-styling-set'
+      assign url = '/collections/sets?view=suiji-product&product=set05-stud-earring-ring-set'
+    when '/pages/editions#hoop-necklace-ring-styling-set', '/en/pages/editions#hoop-necklace-ring-styling-set', '/fr/pages/editions#hoop-necklace-ring-styling-set'
+      assign url = '/collections/sets?view=suiji-product&product=set06-hoop-earring-necklace-ring-set'
+  endcase
+  assign first_char = url | slice: 0, 1
+  assign first_two = url | slice: 0, 2
+  assign root_prefix = routes.root_url | append: '/'
+  assign existing_prefix = url | slice: 0, root_prefix.size
+  if routes.root_url == '/' or url == routes.root_url or first_char != '/' or first_two == '//' or existing_prefix == root_prefix
+    echo url | escape
+  else
+    echo routes.root_url
+    echo url | escape
+  endif
+-%}

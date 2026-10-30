@@ -1,0 +1,217 @@
+{{ 'suiji-home-editorial.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'suiji-home-editorial.js' | asset_url }}" defer></script>
+{%- liquid
+  assign is_fr = false
+  if request.locale.iso_code contains 'fr'
+    assign is_fr = true
+  endif
+  assign hero_image = section.settings.hero_image | default: 'suiji-home-hero-85db3ef4.png'
+  assign modular_image = section.settings.modular_image | default: 'suiji-home-modular-85db3ef4.png'
+  assign about_image = section.settings.about_image | default: 'suiji-home-about-85db3ef4.png'
+  assign look_image = section.settings.look_image | default: 'suiji-home-look-85db3ef4.png'
+  assign necklace_image = section.settings.necklace_image | default: 'suiji-home-necklace-85db3ef4.png'
+  assign bracelet_image = section.settings.bracelet_image | default: 'suiji-home-bracelet-85db3ef4.png'
+  assign ring_image = images['r01-blue-front-area17-559667e818a1ea03.png']
+  assign hoop_image = images['h01-blue-hoop-314abc45f474.png']
+  assign flower_a = images['mf-f01-front-f337b8015d3d1e41.png']
+  assign flower_b = images['mf-f02-front-7866b0cf3fed3922.png']
+  if is_fr
+    assign hero_title = 'Un détail change. Tout s’exprime.'
+    assign hero_cta = 'Découvrir les bagues'
+    assign shop_title = 'À explorer'
+    assign story_title = 'Des bijoux à votre rythme'
+    assign story_lead = 'Votre style prend forme.'
+    assign story_body = 'SUIJI est né en 2014 d’une envie simple : créer des bijoux qui vous ressemblent. Cette envie prend forme dans nos pièces faites à la main, où bases sculpturales, ornements interchangeables et fermoir Core-Lock vous laissent composer avec les couleurs, les formes et les façons de les porter. Au fil de vos associations, chaque pièce devient un peu plus personnelle. Nous voulons prolonger cette liberté, pour que chacun puisse un jour porter des bijoux qu’il a lui-même imaginés et dessinés, avec un caractère et une histoire qui lui sont propres.'
+    assign story_cta = 'Découvrir le système SUIJI'
+    assign studio_note = 'Concept d’atelier créé avec l’IA'
+    assign about_title = 'À propos de nous.'
+    assign about_lead = 'Des bijoux qui vous ressemblent.'
+    assign about_body = 'SUIJI explore la rencontre entre lignes affirmées, couleurs et liberté de composition. Des pièces à regarder de près, à porter à votre façon et à redécouvrir, détail après détail.'
+    assign about_cta = 'L’histoire de SUIJI'
+    assign size_title = 'Trouvez votre taille'
+    assign size_body = 'Consultez notre guide et les correspondances internationales.'
+    assign mechanism_title = 'Découvrez Core-Lock'
+    assign mechanism_body = 'Explorez le principe d’assemblage et les compatibilités.'
+    assign preview_title = 'Composez votre bijou'
+    assign preview_body = 'Essayez une base et vos ornements dans l’aperçu interactif.'
+    assign look_title = 'À vous de composer.'
+    assign look_kicker = 'Votre composition'
+    assign look_cta = 'Explorer la composition'
+    assign newsletter_title = 'Un peu de SUIJI, de temps en temps.'
+    assign newsletter_subtitle = 'Gardons le lien'
+    assign newsletter_body = 'Nouvelles pièces, idées de composition et nouvelles de SUIJI.'
+    assign email_label = 'Votre adresse e-mail'
+    assign subscribe = 'S’inscrire'
+    assign consent = 'J’accepte de recevoir les e-mails SUIJI. Je peux me désinscrire à tout moment.'
+    assign privacy_label = 'Politique de confidentialité'
+    assign subscribed = 'Merci. Votre inscription est bien enregistrée.'
+    assign editorial_title = 'Les détails font la différence.'
+    assign editorial_body = 'Des idées, des matières et des façons de porter nos bijoux. Entrez dans le journal SUIJI.'
+    assign editorial_cta = 'Lire le journal'
+    assign campaign_note = 'Visuels de campagne provisoires créés avec l’IA. Retrouvez les images disponibles dans l’aperçu produit.'
+    assign hero_alt = 'Visuel de campagne : bague bleue et créole, sur une chemise blanche'
+    assign modular_alt = 'Composition de bagues et d’ornements ovales dans des tons bleus et titane naturel'
+    assign about_alt = 'Visuel de campagne : recherche de formes et de couleurs à une table de création'
+    assign look_alt = 'Visuel de composition : bague bleue portée et ornement gris fumé'
+  else
+    assign hero_title = 'A little change. A whole new look.'
+    assign hero_cta = 'Explore the rings'
+    assign shop_title = 'Shop by'
+    assign story_title = 'Jewelry that moves to your rhythm'
+    assign story_lead = 'Your style, taking shape.'
+    assign story_body = 'SUIJI began in 2014 with a simple desire: to make jewelry that feels like you. That desire takes shape in our handmade pieces, where sculptural bases, interchangeable charms and our Core-Lock clasp give you the freedom to explore colour, form and different ways to wear a piece. Each combination makes it a little more personal. We want to take that freedom further, towards a future where everyone can wear jewelry they’ve designed themselves, with a character and a story entirely their own.'
+    assign story_cta = 'Explore the SUIJI system'
+    assign studio_note = 'AI studio concept'
+    assign about_title = 'About us.'
+    assign about_lead = 'Jewelry that feels like you.'
+    assign about_body = 'SUIJI explores the meeting of considered shapes, expressive colour and the freedom to combine. Pieces to look at closely, wear your own way and rediscover, one detail at a time.'
+    assign about_cta = 'The story of SUIJI'
+    assign size_title = 'Find your size'
+    assign size_body = 'Explore our ring size guide and international conversions.'
+    assign mechanism_title = 'Meet Core-Lock'
+    assign mechanism_body = 'Discover how the system works and what fits together.'
+    assign preview_title = 'Make your combination'
+    assign preview_body = 'Try a ring base and your charms in the interactive preview.'
+    assign look_title = 'Make it your own.'
+    assign look_kicker = 'Shop the look'
+    assign look_cta = 'Explore this look'
+    assign newsletter_title = 'A little SUIJI, now and then.'
+    assign newsletter_subtitle = 'Stay in the loop'
+    assign newsletter_body = 'New pieces, ways to wear them and notes from SUIJI.'
+    assign email_label = 'Your email address'
+    assign subscribe = 'Subscribe'
+    assign consent = 'I agree to receive SUIJI emails. I can unsubscribe at any time.'
+    assign privacy_label = 'Privacy policy'
+    assign subscribed = 'Thank you. Your subscription is recorded.'
+    assign editorial_title = 'It’s all in the details.'
+    assign editorial_body = 'Ideas, materials and ways to wear our jewelry. Step inside the SUIJI journal.'
+    assign editorial_cta = 'Read the journal'
+    assign campaign_note = 'Temporary campaign visuals created with AI. See the product preview for the available images.'
+    assign hero_alt = 'Campaign concept: a blue ring and hoop earring against a white shirt'
+    assign modular_alt = 'A composition of blue and natural-titanium rings with oval charms'
+    assign about_alt = 'Campaign concept: exploring jewelry shapes and colours at a design table'
+    assign look_alt = 'Styling concept: a blue ring worn on a hand with a separate smoky oval charm'
+  endif
+  assign home_id = 'SuijiHome-' | append: section.id
+  assign form_id = 'SuijiHomeNewsletter-' | append: section.id
+-%}
+<suiji-home-editorial class="suiji-home" id="{{ home_id }}">
+  <section class="suiji-home__hero" aria-labelledby="{{ home_id }}-hero">
+    <div class="suiji-home__hero-image">{% render 'suiji-home-image', image: hero_image, alt: hero_alt, loading: 'eager', sizes: '(max-width: 587px) 600px, 100vw' %}</div>
+    <div class="suiji-home__hero-copy"><h1 id="{{ home_id }}-hero">{{ hero_title }}</h1><a class="suiji-home__button" href="{% render 'suiji-localized-menu-url', url: '/collections/rings?view=suiji-product&product=r01-ring-base' %}">{{ hero_cta }}</a></div>
+  </section>
+
+  <section class="suiji-home__categories" aria-labelledby="{{ home_id }}-shop">
+    <h2 id="{{ home_id }}-shop">{{ shop_title }}</h2>
+    <div class="suiji-home__category-rail" role="group" aria-labelledby="{{ home_id }}-shop">
+      {%- assign category_order = 'necklaces,bracelets_bangles,earrings,rings,charms,accessories' | split: ',' -%}
+      {%- for category in category_order -%}
+        {%- liquid
+          assign collection_handle = category
+          assign category_image = modular_image
+          case category
+            when 'necklaces'
+              assign category_image = necklace_image
+            when 'bracelets_bangles'
+              assign collection_handle = 'bracelets'
+              assign category_image = bracelet_image
+            when 'earrings'
+              assign category_image = hoop_image
+            when 'rings'
+              assign category_image = ring_image
+            when 'charms'
+              assign category_image = flower_b
+            when 'accessories'
+              assign collection_handle = 'extras'
+          endcase
+          assign category_url = '/collections/' | append: collection_handle
+          assign category_key = 'suiji_navigation.labels.' | append: category
+          assign category_label = category_key | t
+        -%}
+        <a class="suiji-home__category{% if category == 'accessories' %} suiji-home__category--composition{% endif %}" href="{% render 'suiji-localized-menu-url', url: category_url %}"><div>{% render 'suiji-home-image', image: category_image, alt: category_label, sizes: '(min-width: 990px) 15vw, 40vw' %}</div><span>{{ category_label }}</span></a>
+      {%- endfor -%}
+    </div>
+  </section>
+
+  <section class="suiji-home__story" id="ways-to-wear" aria-labelledby="{{ home_id }}-story">
+    <div class="suiji-home__story-image">{% render 'suiji-home-image', image: modular_image, alt: modular_alt, sizes: '(max-width: 749px) 190vw, 100vw' %}</div>
+    <div class="suiji-home__story-copy"><h2 id="{{ home_id }}-story">{{ story_title }}</h2><p class="suiji-home__lead">{{ story_lead }}</p><p>{{ story_body }}</p><a class="suiji-home__button" href="{% render 'suiji-localized-menu-url', url: '/pages/the-mechanism' %}">{{ story_cta }} <span aria-hidden="true">→</span></a></div>
+  </section>
+
+  <section class="suiji-home__about" aria-labelledby="{{ home_id }}-about">
+    <div class="suiji-home__about-image">{% render 'suiji-home-image', image: about_image, alt: about_alt, sizes: '(max-width: 749px) 500px, 100vw' %}<span class="suiji-home__image-note">{{ studio_note }}</span></div>
+    <div class="suiji-home__about-copy"><h2 id="{{ home_id }}-about">{{ about_title }}</h2><p class="suiji-home__lead">{{ about_lead }}</p><p>{{ about_body }}</p><a class="suiji-home__button" href="{% render 'suiji-localized-menu-url', url: '/pages/about' %}">{{ about_cta }} <span aria-hidden="true">→</span></a></div>
+  </section>
+
+  <section class="suiji-home__guides" aria-label="{{ story_cta | escape }}">
+    <a href="{% render 'suiji-localized-menu-url', url: '/pages/bases#size-guide' %}"><span class="suiji-home__guide-number" aria-hidden="true">01</span><h2>{{ size_title }}</h2><p>{{ size_body }}</p></a>
+    <a href="{% render 'suiji-localized-menu-url', url: '/pages/the-mechanism' %}"><span class="suiji-home__guide-number" aria-hidden="true">02</span><h2>{{ mechanism_title }}</h2><p>{{ mechanism_body }}</p></a>
+    <a href="{% render 'suiji-localized-menu-url', url: '/collections/rings?view=suiji-product&product=r01-ring-base' %}"><span class="suiji-home__guide-number" aria-hidden="true">03</span><h2>{{ preview_title }}</h2><p>{{ preview_body }}</p></a>
+  </section>
+
+  <section class="suiji-home__look" aria-labelledby="{{ home_id }}-look">
+    <div class="suiji-home__look-visual">
+      {% render 'suiji-home-image', image: look_image, alt: look_alt, sizes: '(min-width: 750px) 50vw, 100vw' %}
+      <div class="suiji-home__hotspots"><button type="button" data-home-hotspot="0" aria-label="{{ 'suiji_preview.base_title' | t | escape }}" disabled><span aria-hidden="true">+</span></button><button type="button" data-home-hotspot="1" aria-label="{{ 'suiji_preview.charm_a' | t | escape }}" disabled><span aria-hidden="true">+</span></button></div>
+      <button type="button" class="suiji-home__button suiji-home__look-open" data-home-look-open disabled>{{ look_kicker }}</button>
+    </div>
+    <div class="suiji-home__look-panel"><div class="suiji-home__look-heading"><p class="suiji-home__kicker">{{ look_kicker }}</p><h2 id="{{ home_id }}-look">{{ look_title }}</h2></div><span data-home-look-marker></span>
+      <div class="suiji-home__look-items" data-home-look-items>
+        {%- for look_index in (0..2) -%}
+          {%- liquid
+            if look_index == 0
+              assign item_image = ring_image
+              assign item_title = 'suiji_preview.base_title' | t
+              assign item_colour = 'suiji_preview.metal_blue' | t
+              assign item_url = '/collections/rings?view=suiji-product&product=r01-ring-base'
+            elsif look_index == 1
+              assign item_image = flower_a
+              assign item_title = 'suiji_preview.charm_a' | t
+              assign item_colour = 'suiji_preview.stone_smoky' | t
+              assign item_url = '/collections/charms?view=suiji-product&product=oval-motif'
+            else
+              assign item_image = flower_b
+              assign item_title = 'suiji_preview.charm_b' | t
+              assign item_colour = 'suiji_preview.stone_aqua' | t
+              assign item_url = '/collections/charms?view=suiji-product&product=oval-motif'
+            endif
+          -%}
+          <article class="suiji-home__look-item" data-home-look-item="{{ look_index }}"><a href="{% render 'suiji-localized-menu-url', url: item_url %}"><div class="suiji-home__look-card-image">{% render 'suiji-home-image', image: item_image, alt: item_title, sizes: '(min-width: 990px) 26vw, 85vw' %}</div><div class="suiji-home__look-card-label"><h3>{{ item_title }}</h3><span>{{ item_colour }}</span><span class="suiji-home__look-card-action">{{ look_cta }} <span aria-hidden="true">→</span></span></div></a></article>
+        {%- endfor -%}
+      </div>
+    </div>
+    <dialog class="suiji-home__look-dialog" data-home-look-dialog aria-labelledby="{{ home_id }}-look-dialog-title"><div class="suiji-home__dialog-head"><h2 id="{{ home_id }}-look-dialog-title">{{ look_title }}</h2><button type="button" data-home-look-close aria-label="{{ 'suiji_pdp.close' | t | escape }}">×</button></div></dialog>
+  </section>
+
+  <section class="suiji-home__newsletter" aria-labelledby="{{ home_id }}-newsletter">
+    <div class="suiji-home__newsletter-image" aria-hidden="true">{% render 'suiji-home-image', image: modular_image, alt: '' %}</div>
+    <div class="suiji-home__newsletter-panel"><h2 id="{{ home_id }}-newsletter">{{ newsletter_title }}</h2><h3>{{ newsletter_subtitle }}</h3><p>{{ newsletter_body }}</p>
+      {%- form 'customer', id: form_id, class: 'suiji-home__form' -%}
+        <input type="hidden" name="contact[tags]" value="SUIJI_NEWSLETTER">
+        {%- if form.posted_successfully? -%}<p class="suiji-home__form-status" role="status" tabindex="-1">{{ subscribed }}</p>{%- endif -%}
+        {%- if form.errors -%}<div class="suiji-home__form-status" role="alert">{{ form.errors | default_errors }}</div>{%- endif -%}
+        <label class="visually-hidden" for="{{ form_id }}-email">{{ email_label }}</label><div class="suiji-home__email-row"><input id="{{ form_id }}-email" name="contact[email]" type="email" value="{{ form.email }}" autocomplete="email" autocapitalize="off" required aria-required="true" placeholder="{{ email_label | escape }}"{% if form.errors contains 'email' %} aria-invalid="true"{% endif %}><button class="suiji-home__button" type="submit">{{ subscribe }}</button></div>
+        <label class="suiji-home__consent"><input type="checkbox" name="contact[consent]" value="explicit" required><span>{{ consent }}{% if shop.privacy_policy != blank %} <a href="{% render 'suiji-localized-menu-url', url: shop.privacy_policy.url %}">{{ privacy_label }}</a>{% endif %}</span></label>
+      {%- endform -%}
+    </div>
+  </section>
+
+  <section class="suiji-home__editorial" aria-labelledby="{{ home_id }}-editorial"><div class="suiji-home__editorial-images"><div>{% render 'suiji-home-image', image: about_image, alt: about_alt, sizes: '(max-width: 749px) 650px, 45vw' %}</div><div>{% render 'suiji-home-image', image: look_image, alt: look_alt, sizes: '(min-width: 750px) 24vw, 45vw' %}</div></div><div class="suiji-home__editorial-copy"><h2 id="{{ home_id }}-editorial">{{ editorial_title }}</h2><p>{{ editorial_body }}</p><a class="suiji-home__button" href="{% render 'suiji-localized-menu-url', url: '/blogs/journal' %}">{{ editorial_cta }} <span aria-hidden="true">→</span></a></div></section>
+  <p class="suiji-home__campaign-note">{{ campaign_note }}</p>
+</suiji-home-editorial>
+{% schema %}
+{
+  "name": "SUIJI editorial home",
+  "tag": "section",
+  "class": "section suiji-home-section",
+  "settings": [
+    {"type":"image_picker","id":"hero_image","label":"Hero campaign image"},
+    {"type":"image_picker","id":"modular_image","label":"Modular jewelry composition"},
+    {"type":"image_picker","id":"about_image","label":"About campaign image"},
+    {"type":"image_picker","id":"look_image","label":"Shop the look campaign image"},
+    {"type":"image_picker","id":"necklace_image","label":"Necklace category image"},
+    {"type":"image_picker","id":"bracelet_image","label":"Bracelet category image"}
+  ],
+  "presets":[{"name":"SUIJI editorial home"}]
+}
+{% endschema %}

@@ -1,0 +1,6 @@
+{% doc %}
+  Select complete editorial metadata for the current storefront language.
+  @param {number} key - Journal guide number.
+  @param {string} field - title, description, summary, or direction.
+{% enddoc %}
+{% if request.locale.iso_code contains 'fr' %}{% render 'suiji-journal-copy-fr', key: key, field: field %}{% else %}{% render 'suiji-journal-copy-en', key: key, field: field %}{% endif %}
