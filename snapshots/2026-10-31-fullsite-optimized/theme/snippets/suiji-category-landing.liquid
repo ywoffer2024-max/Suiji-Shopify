@@ -12,7 +12,7 @@
 <svg class="sc-landing-art" viewBox="0 0 430 600" aria-hidden="true" focusable="false" fill="none"><g stroke="currentColor" stroke-width="2"><ellipse cx="330" cy="120" rx="68" ry="91" transform="rotate(32 330 120)"/><ellipse cx="330" cy="120" rx="47" ry="68" transform="rotate(32 330 120)"/><rect x="205" y="250" width="103" height="175" rx="51" transform="rotate(-28 255 335)"/><rect x="218" y="263" width="77" height="149" rx="38" transform="rotate(-28 255 335)"/><rect x="308" y="392" width="88" height="147" rx="44" transform="rotate(-28 350 465)"/><path d="M210 30l-25 45 25 45-25 45 25 45-25 45M35 510c12-80 110-80 122 0s-110 80-122 0Z"/></g></svg>
 <p class="sc-landing-eyebrow">SUIJI</p><h1>{{ 'suiji_modular.title' | t }}</h1>
 <p class="sc-landing-intro">{{ 'suiji_modular.intro' | t }}</p>
-<nav class="sc-landing-links" id="bases-and-charms" aria-label="{{ 'suiji_modular.parts_title' | t | escape }}">
+<nav class="sc-landing-links" id="bases-and-charms" aria-label="{{ 'suiji_modular.parts_title' | t | replace: '&amp;', '&' | escape }}">
 <a class="sc-landing-link" href="{% render 'suiji-localized-menu-url', url: '/pages/bases' %}"><span>{% render 'suiji-home-image', image: base_visual, alt: base_alt, sizes: '166px' %}</span><strong>{{ 'suiji_modular.bases' | t }}</strong></a>
 <a class="sc-landing-link" href="{% render 'suiji-localized-menu-url', url: '/collections/charms?role=charm&compatibility=direct' %}"><span>{% render 'suiji-home-image', image: charm_visual, alt: charm_alt, sizes: '166px' %}</span><strong>{{ 'suiji_modular.charms' | t }}</strong></a>
 </nav></header>

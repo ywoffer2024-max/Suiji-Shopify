@@ -50,6 +50,8 @@
             assign suiji_information_kind = 'sets'
           when 'the-mechanism'
             assign suiji_information_kind = 'core'
+          when 'about'
+            assign suiji_information_kind = 'about'
           when 'bases'
             assign suiji_information_kind = 'bases'
           when 'charms'
@@ -74,6 +76,9 @@
         when 'core'
           assign suiji_nav_seo_title = 'suiji_navigation.core.title' | t
           assign suiji_nav_seo_description = 'suiji_navigation.seo.core_description' | t
+        when 'about'
+          assign suiji_nav_seo_title = 'suiji_about.meta_title' | t
+          assign suiji_nav_seo_description = 'suiji_about.meta_description' | t
         when 'bases'
           assign suiji_nav_seo_title = 'suiji_navigation.components.bases_title' | t
           assign suiji_nav_seo_description = 'suiji_navigation.seo.bases_description' | t
@@ -151,6 +156,8 @@
     {%- endif -%}
     {% if suiji_commerce_product %}<meta name="robots" content="noindex,follow">{% endif %}
     {% if request.page_type == 'blog' and template.suffix contains 'suiji-j' and sj_resolved_path contains '?view=' %}{% else %}{% if request.page_type == 'blog' and template.suffix contains 'suiji-j' %}<meta name="robots" content="noindex,follow">{% endif %}{% endif %}
+    {%- assign suiji_nav_seo_title = suiji_nav_seo_title | replace: '&amp;', '&' -%}
+    {%- assign suiji_nav_seo_description = suiji_nav_seo_description | replace: '&amp;', '&' -%}
     <title>
       {{ suiji_nav_seo_title | escape }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}

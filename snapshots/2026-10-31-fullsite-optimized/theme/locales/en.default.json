@@ -665,7 +665,7 @@
       "catalog_description": "Explore SUIJI jewellery bases, interchangeable charms and six planned sets. View the contents and compatibility guidance while purchasing is paused."
     },
     "footer": {
-      "brand": "Jewellery bases and interchangeable charms, combined your way.",
+      "brand": "Handmade jewelry since 2014. Bases and interchangeable charms, designed to build on the pieces you already own.",
       "preparation": "Clear guidance on materials, weight and comfort while the First Edition is being prepared."
     }
   },
@@ -874,23 +874,23 @@
       "hero_title": "Defined by you.",
       "story_title": "Jewelry that moves to your rhythm",
       "story_lead": "One ornament. More ways to wear it.",
-      "story_body": "Since 2014, we’ve been making handmade jewelry that leaves room for your own ideas. SUIJI brings together interchangeable ornaments, titanium bases and our Core-Lock clasp, so a detail you love can take on a new form. Wear a little or make a statement; choose how it comes together. We’re working toward a future where everyone can wear jewelry they’ve had a hand in designing.",
+      "story_body": "Our handmade jewelry has evolved through conversations with customers since 2014. In our custom work, we often saw the same wish: a favorite detail carried across matching pieces, or a different charm for each occasion, without buying the same parts again. SUIJI grew from that idea. Our bases, interchangeable charms and Core-Lock connection let you build on what you already have and make the combinations your own. We’re working toward a future where everyone can wear jewelry they’ve had a hand in designing.",
       "ornament": "Ornament",
       "base": "Base",
       "composition": "Your composition",
       "compatibility": "Every SUIJI ornament fits every jewelry base equipped with the SUIJI multi-use clasp.",
       "about_title": "About SUIJI",
-      "about_lead": "The ideas. The hands. The people.",
-      "about_body": "Personal style and the way jewelry feels to wear guide our design. Meet Chunyu Wen, the designer behind SUIJI, and discover how ornaments and bases become pieces you make your own.",
+      "about_lead": "From custom work to personal combinations.",
+      "about_body": "Our designs have grown out of how people really want to wear them. Meet Chunyu Wen and discover how custom-jewelry experience led to a system of bases and charms, with personal choice at its heart.",
       "about_cta": "Meet the designer",
       "editorial_title": "Ways to wear. Things to know.",
       "editorial_body": "What is included? How do you check the fit? Find practical guides to choosing, combining and caring for your jewelry."
     },
     "about": {
-      "title": "Defined by you.",
-      "lead": "SUIJI makes jewelry to mix and match your way. The ornament creates the look; the base holds it in place. Your personal style and the way each piece feels to wear guide our design.",
+      "title": "Jewelry that changes with you.",
+      "lead": "Since 2014, our work in handmade jewelry has been shaped by conversations with the people who wear it. SUIJI grew from a wish we heard often: to keep a design you love and find more ways to wear it.",
       "structure_title": "An ornament. A base. Your expression.",
-      "structure_body": "Titanium bases carry the ornaments. Keep a detail you love and try it on a different base, or keep your base and choose another ornament. Every SUIJI ornament fits every base equipped with the SUIJI multi-use clasp.",
+      "structure_body": "In our custom work, some customers wanted a favorite charm to appear in matching earrings, a ring or a necklace. Others wanted to change a detail for a different outfit or occasion. Buying a whole new piece each time often meant buying the same parts again. That experience led us to a modular approach: keep the base you love, choose another compatible charm, or carry a favorite detail across different clasp-equipped bases. The pieces can work together without making you start again with every new idea.",
       "structure_cta": "Explore the SUIJI system",
       "style_title": "From minimal to bold",
       "style_body": "Clean shapes and considered details can stand alone or form a more expressive composition. Proportion, color and material connect the elements; you decide the finished look.",
@@ -901,11 +901,11 @@
       "designer_approach": "Her work begins with the relationship between an ornament and the structure that makes it wearable, leaving the final expression to the person who wears it.",
       "designer_alt": "Chunyu Wen, founder and designer at SUIJI",
       "wear_title": "Designed to be worn",
-      "wear_body": "We consider the surfaces that touch the skin, the balance and movement of the complete piece, and how it sits against the body or meets hair and clothing. Comfort and skin sensitivity vary with the wearer, materials, finishes and full design.",
+      "wear_body": "We use titanium alloy for the parts designed to sit against the skin. Other materials are chosen to suit the design and the way each piece is made, with lightness guiding every choice. We consider how the complete piece feels on the body, as well as how it looks.",
       "team_title": "Product, content and commerce",
       "team_body": "Chunyu leads the brand and product work. Yue Wang, Partner in AI Automation & Marketing, connects product information, content and commerce. Human review remains essential in design, production, quality control and publication.",
       "future_title": "A future shaped by you",
-      "future_body": "Our vision is for everyone to wear jewelry they have helped design, with SUIJI developing the structure that brings it to life.",
+      "future_body": "We are working toward a future where everyone can wear jewelry they have had a hand in designing. SUIJI provides the structure; your ideas, choices and personal connections give each composition its character.",
       "planned": "A service in preparation",
       "planned_body": "Share your style preferences and explore an ornament of your own. SUIJI would check structural fit and production feasibility before the design, price and timing are confirmed. This personal-design service is planned; it is not an ordering tool on this site.",
       "collection_cta": "Explore the collection",
@@ -917,9 +917,9 @@
     },
     "meta": {
       "home_title": "SUIJI | Jewelry to Mix and Match Your Way",
-      "home_description": "Explore SUIJI jewelry: interchangeable ornaments, titanium bases and combinations shaped by your style. From minimal to bold, your choice.",
-      "about_title": "About SUIJI | Defined by You",
-      "about_description": "Meet the people and ideas behind SUIJI: interchangeable ornaments, titanium bases and jewelry shaped by personal style."
+      "home_description": "Handmade SUIJI jewelry with interchangeable charms and bases. Discover the modular system and create combinations shaped by your style.",
+      "about_title": "About SUIJI | Handmade Jewelry Since 2014",
+      "about_description": "From bespoke jewelry to modular bases and charms: discover SUIJI, Chunyu Wen and the idea of keeping the pieces you love in use."
     },
     "journal": {
       "updated": "Reviewed",
@@ -938,7 +938,7 @@
     "breadcrumb": "Breadcrumb",
     "included": "Included with this piece",
     "material": "Material",
-    "metal": "TC4 titanium metalwork",
+    "metal": "TC4 titanium components",
     "connection": "How it comes together",
     "options": "Your choices",
     "choose": "Choose your combination",
@@ -964,6 +964,8 @@
     "purchase": {
       "title": "Before you add",
       "compatible": "Core-Lock compatible",
+      "material_components": "TC4 titanium components",
+      "material_policy": "Skin-contact components use titanium alloy. Other materials are selected by design and process, with lightness as a priority. Individual sensitivities can vary.",
       "separate": "Sold separately",
       "charm_extra": "A compatible SUIJI base with Core-Lock. The base is not included with this ornament.",
       "base_extra": "Interchangeable ornaments. Choose them separately to change the look.",
@@ -1503,7 +1505,9 @@
   },
   "suiji_about": {
     "wearing_title": "Designed to be worn.",
-    "wearing_text": "Customers often tell us our pieces look even better worn than on display. We design with the body in mind, so that lines and colour find their expression through its contours and everyday movement."
+    "wearing_text": "Customers often tell us our pieces look even better worn than on display. We design with the body in mind, so that lines and colour find their expression through its contours and everyday movement.",
+    "meta_title": "About SUIJI | Handmade Jewelry Since 2014",
+    "meta_description": "From bespoke jewelry to modular bases and charms: discover SUIJI, Chunyu Wen and the idea of keeping the pieces you love in use."
   },
   "suiji_modular": {
     "title": "Core-Lock & Modular System",
@@ -1521,7 +1525,7 @@
     "step3_title": "Change the combination",
     "step3_text": "Move a compatible charm to another clasp-equipped base. The same charm is worn in one position at a time.",
     "connection_title": "The connection is Core-Lock",
-    "connection_text": "The base gives a piece its form. The charm gives it a different expression. Core-Lock is the SUIJI multi-use clasp that brings compatible elements together.",
+    "connection_text": "The base gives a piece its form; the charm changes its expression. In our custom work, customers asked to keep a favorite design while changing how they wore it. Core-Lock grew from that idea: a SUIJI multi-use clasp for compatible elements.",
     "check_title": "Check the pieces before you choose",
     "check_text": "A base equipped with Core-Lock and a bare hoop are different starting points. Some pieces need an additional attachment; each product page explains the connection and what is supplied.",
     "sets_cta": "Start with a complete set",

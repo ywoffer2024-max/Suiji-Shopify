@@ -10,7 +10,7 @@
     {%- assign about_hero = about_parts[1] | split: '</h2>' -%}
     <header class="suiji-about__hero">
       <p class="suiji-about__eyebrow">{{ page.title | escape }} · SUIJI</p>
-      <h1>{{ about_hero[0] | strip_html | escape }}</h1>
+      <h1>{{ about_hero[0] | strip_html | escape_once }}</h1>
       <div class="suiji-about__lead">{{ about_hero[1] }}</div>
     </header>
     {%- for about_part in about_parts offset: 2 -%}
@@ -23,7 +23,7 @@
       {%- endif -%}
       {%- if forloop.index == 4 -%}<div class="suiji-about__people">{%- endif -%}
       <section class="suiji-about__chapter{% if forloop.first %} suiji-about__chapter--origin{% elsif forloop.last %} suiji-about__chapter--future{% endif %}" aria-labelledby="About-{{ section.id }}-{{ forloop.index }}">
-        <h2 id="About-{{ section.id }}-{{ forloop.index }}">{{ about_fields[0] | strip_html | escape }}</h2>
+        <h2 id="About-{{ section.id }}-{{ forloop.index }}">{{ about_fields[0] | strip_html | escape_once }}</h2>
         {%- if forloop.index == 4 -%}
           <figure class="suiji-about__portrait" id="designer"><img src="{{ 'suiji-designer-chunyu-wen-v40.jpeg' | asset_img_url: '640x' }}" srcset="{{ 'suiji-designer-chunyu-wen-v40.jpeg' | asset_img_url: '400x' }} 400w, {{ 'suiji-designer-chunyu-wen-v40.jpeg' | asset_img_url: '640x' }} 640w, {{ 'suiji-designer-chunyu-wen-v40.jpeg' | asset_img_url: '960x' }} 960w" sizes="(min-width: 990px) 320px, calc(100vw - 40px)" width="1230" height="1672" loading="lazy" decoding="async" alt="{{ 'suiji_v40.about.designer_alt' | t | escape }}"></figure>
         {%- endif -%}
