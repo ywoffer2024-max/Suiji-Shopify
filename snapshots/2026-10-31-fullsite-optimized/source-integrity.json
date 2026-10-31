@@ -1,6 +1,6 @@
 {
-  "state": "Two published French bodies point to Sets, Core-Lock and shipping; other48unchanged",
-  "utc": "2026-10-31T08:11:30.158209+00:00",
+  "state": "Actual one-file French shipping/warranty link correction; no policy field changes",
+  "utc": "2026-10-31T08:11:30.168781+00:00",
   "files": [
     {
       "path": "MAINTENANCE.md",
@@ -380,9 +380,9 @@
     },
     {
       "path": "release-status.json",
-      "bytes": 1126,
-      "sha256": "dbab38d4b1c56e7237eb231ea1f53d168ac806ef7ab5ae14f59424988b8d0996",
-      "git_sha": "c0330f23e31bb217d2f3de8ff8e75ee7a87286c8"
+      "bytes": 1124,
+      "sha256": "f300e1d35f6ab82d8f3480aaeb3e2ef50e6b63d8bbb7cf7a961cc889d3841e68",
+      "git_sha": "33fe2e40011f5c75e451bba0a943aecde5a6d28a"
     },
     {
       "path": "theme/assets/animations.js",
@@ -3491,10 +3491,9 @@
     },
     {
       "path": "theme/sections/main-page.liquid",
-      "bytes": 1859,
-      "sha256": "284a3b0d4a4f2070691eeeeffa1c296eb95f81ad8755c1cb2ec01c6e4828e7a8",
-      "git_sha": "ff1b87bbb186b86a95a0b3d84eb4cb6cf5ac6bff",
-      "known_existing_git_blob": true
+      "bytes": 2604,
+      "sha256": "15cac3f47228269506184b8cf2b478b8336eee4de98533dd54ec7f8614db1c94",
+      "git_sha": "9ad84ede8c5df2813dde7d8c7f3ffce12c1d2683"
     },
     {
       "path": "theme/sections/main-password-footer.liquid",

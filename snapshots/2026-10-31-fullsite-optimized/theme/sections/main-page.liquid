@@ -24,7 +24,16 @@
     {{ page.title | escape }}
   </h1>
   <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    {{ page.content }}
+    {%- assign suiji_service_content = page.content -%}
+    {%- if request.locale.iso_code contains 'fr' -%}
+      {%- if page.handle == 'shipping-returns' or page.handle == 'warranty' -%}
+        {%- assign suiji_service_page_prefix = routes.root_url | append: '/pages/' | replace: '//', '/' -%}
+        {%- capture suiji_contact_href -%}href="{{ suiji_service_page_prefix }}contact"{%- endcapture -%}
+        {%- capture suiji_warranty_href -%}href="{{ suiji_service_page_prefix }}warranty"{%- endcapture -%}
+        {%- assign suiji_service_content = suiji_service_content | replace: 'href="/fr/pages/contact"', suiji_contact_href | replace: 'href="/fr/pages/warranty"', suiji_warranty_href -%}
+      {%- endif -%}
+    {%- endif -%}
+    {{ suiji_service_content }}
   </div>
 </div>
 
