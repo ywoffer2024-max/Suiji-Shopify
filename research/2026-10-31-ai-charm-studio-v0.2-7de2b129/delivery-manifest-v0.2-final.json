@@ -1,0 +1,74 @@
+{
+  "version": "v0.2",
+  "utc": "2026-10-31T09:40:30.187852+00:00",
+  "root": "/Volumes/T7/Suiji/SUIJI_AI花饰共创_PRD调研_20261031T085400Z_7de2b129/v0.2-user-review-email",
+  "parent_git_commit": "0423248279eb5ec43bb280ab7dfba4ccff1d26ea",
+  "branch": "codex/ai-charm-prd-20261031-v02",
+  "repository_path": "research/2026-10-31-ai-charm-studio-v0.2-7de2b129",
+  "backup_allowlist": [
+    {
+      "file": "PRD-SUIJI-AI-Charm-Studio-v0.2-final.md",
+      "bytes": 34313,
+      "sha256": "35253fc04798fc145b2cbe4a9567ba170f60226819d5d6408ae1223cdeef9b2b",
+      "git_blob_sha": "649eff981a3471285ae0a151345d41e869b6eabc",
+      "binary": false
+    },
+    {
+      "file": "customer-experience-v0.2.md",
+      "bytes": 3571,
+      "sha256": "ff87583b4bbfa0f8d9962cdb7eac7de4b711474fb32cc0455511d61f89fe5101",
+      "git_blob_sha": "30c431612d9859eb9ff253ec208a528c7cb4042c",
+      "binary": false
+    },
+    {
+      "file": "review-and-email-v0.2-final.md",
+      "bytes": 7678,
+      "sha256": "a799f384d089061420ea72cbf603185be5d9ea93b9f9478361165e3af46a006e",
+      "git_blob_sha": "2d3a574f8a9a88f8469d0c514faa0a8e61c56346",
+      "binary": false
+    },
+    {
+      "file": "SUIJI-AI-Charm-Studio-v0.2.html",
+      "bytes": 61528,
+      "sha256": "12866164c0bd0e96ced35ddde8b11fbfd706d51ac5ae73696788675c30152d86",
+      "git_blob_sha": "62e265d3b6e3649de675521b1291047b980262e6",
+      "binary": false
+    },
+    {
+      "file": "change-record-v0.2-final.json",
+      "bytes": 1870,
+      "sha256": "fe753e020d40fa04027f86e66c28320ef68e69c3125b0d9eec3b05f53b6da7ce",
+      "git_blob_sha": "42ed039f949b9af74f98c956eb81b0efd1aa07e3",
+      "binary": false
+    },
+    {
+      "file": "document-QA-v0.2.json",
+      "bytes": 709,
+      "sha256": "d532e0c8bc8ef3d33648918e01294f24d93f572c06f2c2f7b2a1e149e80c906b",
+      "git_blob_sha": "040d323993a1ea0a5285fa653140d242f8242536",
+      "binary": false
+    },
+    {
+      "file": "browser-review-v0.2.json",
+      "bytes": 543,
+      "sha256": "70f1241a20964c86e697b3fc1b3d43d4d232f05fe9d06c41646f7f605a57c558",
+      "git_blob_sha": "c14f1bf6e765f90d039c26232957091f340a5e47",
+      "binary": false
+    },
+    {
+      "file": "review-reader-v0.2.png",
+      "bytes": 49712,
+      "sha256": "502ce4d41a1f21e4d6cd7a8ea460a12e5b6340503b379d09943d3c479b7b23ae",
+      "git_blob_sha": "6a4089274228fcea909ae75a3bfb8cb956043d06",
+      "binary": true
+    }
+  ],
+  "status": "PRD only. Customer feature/API review/email delivery not implemented or launched.",
+  "superseded_local_drafts_excluded": [
+    "PRD-SUIJI-AI-Charm-Studio-v0.2.md",
+    "review-and-email-v0.2.md",
+    "change-record-v0.2.json",
+    "delivery-manifest-v0.2.json"
+  ],
+  "T7_deletions_or_overwrites": 0
+}

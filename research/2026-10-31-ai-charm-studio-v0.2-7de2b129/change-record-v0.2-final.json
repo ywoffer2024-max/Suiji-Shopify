@@ -1,0 +1,35 @@
+{
+  "version": "v0.2",
+  "utc": "2026-10-31T09:33:56.606984+00:00",
+  "source_PRD_SHA256": "4fdfbeb771ae91033804804b7e20af2b9636c0920a40718d209a2672507e3dfa",
+  "source_git_commit": "0423248279eb5ec43bb280ab7dfba4ccff1d26ea",
+  "direct_human_requirement": "prd给我加上，放在网站上的这个AI辅助设计的功能是面向用户，不要展示其他不相关的信息和功能。另外用户提交自己的设计之后，会由我们先进行审核，有AI审核和人工审核，如果比较简单的工艺和结构我们可以用AI直接审批是否可做，如果AI审批过后不行会提交给设计师审核并通过邮件联系确定和沟通需求",
+  "interpretation": [
+    "Customer-facing feature only; unrelated internal/admin information stays private",
+    "AI may auto-approve simple designs within prequalified structure/process scope; no per-order mandatory human review for those",
+    "AI non-pass/uncertain/complex and post-approval infeasibility all escalate to designer",
+    "Designer uses service email to clarify, revise and confirm requirements",
+    "Feasibility approval separate from manufacturing qualification; resin and metal independently qualified"
+  ],
+  "not_executed": [
+    "AI feature deployment",
+    "AI generation or review API call",
+    "Actual email sending or mailbox/DNS setup",
+    "Model/print production"
+  ],
+  "files": [
+    {
+      "file": "PRD-SUIJI-AI-Charm-Studio-v0.2-final.md",
+      "sha256": "35253fc04798fc145b2cbe4a9567ba170f60226819d5d6408ae1223cdeef9b2b"
+    },
+    {
+      "file": "customer-experience-v0.2.md",
+      "sha256": "ff87583b4bbfa0f8d9962cdb7eac7de4b711474fb32cc0455511d61f89fe5101"
+    },
+    {
+      "file": "review-and-email-v0.2-final.md",
+      "sha256": "a799f384d089061420ea72cbf603185be5d9ea93b9f9478361165e3af46a006e"
+    }
+  ],
+  "local_superseded_drafts_preserved": true
+}

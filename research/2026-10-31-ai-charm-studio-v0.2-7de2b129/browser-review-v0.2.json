@@ -1,0 +1,29 @@
+{
+  "scope": "Read-only document interface check; no actual AI feature or email operation",
+  "cases": [
+    {
+      "overflow": false,
+      "selected": "完整 PRD v0.2",
+      "visiblePanels": [
+        "prd"
+      ],
+      "width": 1084
+    },
+    {
+      "overflow": false,
+      "selected": "审核与邮件",
+      "visiblePanels": [
+        "review"
+      ],
+      "width": 1084
+    },
+    {
+      "overflow": false,
+      "selected": "顾客页面",
+      "visiblePanels": [
+        "customer"
+      ],
+      "width": 1084
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-31T09:35:43.646818+00:00",
+  "scope": "Document consistency only; no implementation/AI/email/manufacturing tests",
+  "PRD_major_sections": 8,
+  "requirements": 16,
+  "acceptance_scenarios": 22,
+  "HTML_panels": 3,
+  "duplicate_IDs": 0,
+  "broken_internal_anchors": 0,
+  "uneven_tables": 0,
+  "human_requirements_covered": [
+    "Customer-only feature surface",
+    "AI direct simple-design feasibility approval",
+    "Escalation on AI non-pass/uncertainty and later infeasibility",
+    "Designer email clarification and customer confirmation"
+  ],
+  "superseded_local_drafts": [
+    "PRD-SUIJI-AI-Charm-Studio-v0.2.md",
+    "review-and-email-v0.2.md"
+  ],
+  "source_v0.1_preserved": true
+}
