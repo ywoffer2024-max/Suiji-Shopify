@@ -1,6 +1,6 @@
 {
-  "state": "Actual base role filter; same-document navigation followup remains separate",
-  "utc": "2026-10-31T08:11:30.146692+00:00",
+  "state": "Two published French bodies point to Sets, Core-Lock and shipping; other48unchanged",
+  "utc": "2026-10-31T08:11:30.158209+00:00",
   "files": [
     {
       "path": "MAINTENANCE.md",
@@ -228,10 +228,9 @@
     },
     {
       "path": "journal/fr/choosing-jewelry-gift.html",
-      "bytes": 12166,
-      "sha256": "673bcddc0a84eb28653253ea9f17b1ec39c4292619b8fbfcf71abc764033580a",
-      "git_sha": "a4dbc775bc1a117634016e4219865bcc34847a4f",
-      "known_existing_git_blob": true
+      "bytes": 12292,
+      "sha256": "3cbf191a2dbb9b883f359ef69f98da97db4f17163a3c4f69a5d4a9d6a9277cfd",
+      "git_sha": "27e80a81c1883870b96da862f3e08c15d6e8c3d7"
     },
     {
       "path": "journal/fr/earring-ornament-necklace.html",
@@ -270,10 +269,9 @@
     },
     {
       "path": "journal/fr/interchangeable-or-fixed-jewelry.html",
-      "bytes": 12295,
-      "sha256": "276ab1096bff1f6ba922838b2d3e274578febb222c5382d0d823ed9d52291e45",
-      "git_sha": "97b6af3316e5fde1c5a1e91188964849c122cbcf",
-      "known_existing_git_blob": true
+      "bytes": 12421,
+      "sha256": "009053ec5de91bddd54aec8df9e144907028a432451daae41e3a833af2054297",
+      "git_sha": "54c49eabb95d67938e50405dcc8c988f021e0552"
     },
     {
       "path": "journal/fr/jewelry-clasps-easier-handling.html",
@@ -382,9 +380,9 @@
     },
     {
       "path": "release-status.json",
-      "bytes": 1118,
-      "sha256": "7735774ef736316859d4c43a5e743b51b16bc7a2f34ef75f0024e15f0d76f7cb",
-      "git_sha": "d128593267eb7357acb127a62d164f674f5bbaaf"
+      "bytes": 1126,
+      "sha256": "dbab38d4b1c56e7237eb231ea1f53d168ac806ef7ab5ae14f59424988b8d0996",
+      "git_sha": "c0330f23e31bb217d2f3de8ff8e75ee7a87286c8"
     },
     {
       "path": "theme/assets/animations.js",
