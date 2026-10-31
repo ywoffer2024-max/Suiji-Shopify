@@ -304,6 +304,7 @@
       throw new Error('unknown-product');
     }else{
       listing();
+      window.addEventListener('hashchange',()=>{listPage=1;listing();});
     }
     root.dataset.interfaceStatus='ready';
     document.dispatchEvent(new CustomEvent('suiji:catalogue-ready'));

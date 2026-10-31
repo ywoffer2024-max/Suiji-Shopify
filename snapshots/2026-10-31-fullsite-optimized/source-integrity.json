@@ -1,6 +1,6 @@
 {
-  "state": "Actual one-file French shipping/warranty link correction; no policy field changes",
-  "utc": "2026-10-31T08:11:30.168781+00:00",
+  "state": "published_historical_incremental_revision",
+  "utc": "2026-10-31T08:17:56.492598+00:00",
   "files": [
     {
       "path": "MAINTENANCE.md",
@@ -380,9 +380,9 @@
     },
     {
       "path": "release-status.json",
-      "bytes": 1124,
-      "sha256": "f300e1d35f6ab82d8f3480aaeb3e2ef50e6b63d8bbb7cf7a961cc889d3841e68",
-      "git_sha": "33fe2e40011f5c75e451bba0a943aecde5a6d28a"
+      "bytes": 2073,
+      "sha256": "94131975fdebe02bdcd60924d3f313e54ad062b056db9a15ce4e1a52def30633",
+      "git_sha": "56c053da51591c60f37f1d0bdc78a42472abcc95"
     },
     {
       "path": "theme/assets/animations.js",
@@ -1996,9 +1996,9 @@
     },
     {
       "path": "theme/assets/suiji-commerce.js",
-      "bytes": 63162,
-      "sha256": "e60e520baf34a95d2b86e8317395209e1ef76bc2ba53bce8756d7cd01f7afd49",
-      "git_sha": "1c1f97942b0622f3bca0b5d2d3578eb9e43ce3a0"
+      "bytes": 63235,
+      "sha256": "c28745314ab2658ce01cd8eb39697bb8cd1427c31bbebb6fa14f8ea1e680fe3c",
+      "git_sha": "e62066d73922f329cd0bed682c59d561ebf94bb2"
     },
     {
       "path": "theme/assets/suiji-designer-chunyu-wen-v40.jpeg",
