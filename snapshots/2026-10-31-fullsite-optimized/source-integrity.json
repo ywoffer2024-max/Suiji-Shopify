@@ -1,18 +1,18 @@
 {
-  "state": "published_final_bounded_acceptance",
-  "utc": "2026-10-31T08:17:56.522577+00:00",
+  "state": "published_native_Atom_supplement_primary_XML_pending",
+  "utc": "2026-10-31T08:53:53.821167+00:00",
   "files": [
     {
       "path": "MAINTENANCE.md",
-      "bytes": 6361,
-      "sha256": "aca59876f502cfcfa1fcbec97a4f4d29c01966033b96409646a4241076d10027",
-      "git_sha": "6db9394d18ae6f5d9ce72aac7caf6397d71ed213"
+      "bytes": 7078,
+      "sha256": "c7fd4e2286e62eb95455aaf39750b6caa5054bb3b06440801ac30355e191df2e",
+      "git_sha": "ec447198ff9de160e72aac46308e293b53bf6422"
     },
     {
       "path": "README.md",
-      "bytes": 3275,
-      "sha256": "24ac005d5079c3e28f61ce00cb1993201c6f5391e8e78f37f1df44d576d4575d",
-      "git_sha": "80602660d291c81fac25bcaf6ec1aee74f05812c"
+      "bytes": 3825,
+      "sha256": "74287359e578cf444d114ede327165caf61408e3252982e73764b97408d2e7b4",
+      "git_sha": "2b153010b177cc6d609736311e5fdd20a2c1d927"
     },
     {
       "path": "catalogue/products.json",
@@ -378,9 +378,9 @@
     },
     {
       "path": "release-status.json",
-      "bytes": 2133,
-      "sha256": "f7849948c0e41ad79f9d9fafe22cb9e0981f417c8a17cd610949644d4c06d594",
-      "git_sha": "c60f82d14376a3538c486c5c27ca6720a35c2edd"
+      "bytes": 1580,
+      "sha256": "e8496e3826b6d2f5c37319a5f5679f288e5284b26fc658769c9ac4568c81f605",
+      "git_sha": "6cd728fee0c6dd872d6921f812cb2fa88c447bdc"
     },
     {
       "path": "theme/assets/animations.js",
@@ -5212,6 +5212,12 @@
       "sha256": "1bded92be323ce09ecc8caa73a74c95f985be4915b7de4bd1fac514889932a6f",
       "git_sha": "a6940e70fdd57cddb23a072af08225e8c60d1572",
       "known_existing_git_blob": true
+    },
+    {
+      "path": "theme/templates/robots.txt.liquid",
+      "bytes": 3859,
+      "sha256": "9f774b2cc5f07f89b587ee6a7ec6eb0adfbacad8bbd9948cd1051ea311c14c27",
+      "git_sha": "b2c2d9da0add577442c071f7e1f9ae37ef9d8826"
     },
     {
       "path": "theme/templates/search.json",
