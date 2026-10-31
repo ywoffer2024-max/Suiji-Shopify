@@ -1,20 +1,18 @@
 {
-  "state": "published_historical_incremental_revision",
-  "utc": "2026-10-31T08:17:56.509686+00:00",
+  "state": "published_final_bounded_acceptance",
+  "utc": "2026-10-31T08:17:56.522577+00:00",
   "files": [
     {
       "path": "MAINTENANCE.md",
-      "bytes": 4749,
-      "sha256": "85e0b148996ea5f4a6cc318b1fa671feb73a380c38de92a80f8cf2a8d4a8ea9e",
-      "git_sha": "a8b49de0e849d9585b3af512c4f27bb19478e121",
-      "known_existing_git_blob": false
+      "bytes": 6361,
+      "sha256": "aca59876f502cfcfa1fcbec97a4f4d29c01966033b96409646a4241076d10027",
+      "git_sha": "6db9394d18ae6f5d9ce72aac7caf6397d71ed213"
     },
     {
       "path": "README.md",
-      "bytes": 2783,
-      "sha256": "ac6d017faac38740afa03398321f48fb1a18e72fcd6c693ff65fe563ce1e7114",
-      "git_sha": "27898831b60a1684a35a2c27bd3e6f9b17fb8410",
-      "known_existing_git_blob": false
+      "bytes": 3275,
+      "sha256": "24ac005d5079c3e28f61ce00cb1993201c6f5391e8e78f37f1df44d576d4575d",
+      "git_sha": "80602660d291c81fac25bcaf6ec1aee74f05812c"
     },
     {
       "path": "catalogue/products.json",
@@ -380,9 +378,9 @@
     },
     {
       "path": "release-status.json",
-      "bytes": 2083,
-      "sha256": "86dc6648959eb94b14d7c0579d3e51f3449ce88691e693fc2ccd657f74fa5704",
-      "git_sha": "1b2746e453563b7c9adce1f6b1aa7e226a8d6d30"
+      "bytes": 2133,
+      "sha256": "f7849948c0e41ad79f9d9fafe22cb9e0981f417c8a17cd610949644d4c06d594",
+      "git_sha": "c60f82d14376a3538c486c5c27ca6720a35c2edd"
     },
     {
       "path": "theme/assets/animations.js",

@@ -2,11 +2,11 @@
 
 The theme uses Shopify Liquid for initial content and small shared JavaScript modules for the interactive demonstration. The catalogue source is `catalogue/products.json`. Keep stable product keys and reuse the merchant's existing Product and Variant identities; these preview keys do not create native Shopify products.
 
-Run the generator from this folder:
+Run the generator from the snapshot root:
 
 ```sh
-python3 maintenance/build_storefront.py --theme ../theme
-python3 maintenance/build_storefront.py --theme ../theme --check
+python3 maintenance/build_storefront.py --theme theme
+python3 maintenance/build_storefront.py --theme theme --check
 ```
 
 The second command must report zero differences. There is no fixed 54-product ceiling. Every new record needs English and French titles and descriptions, actual options and SKU identities, component role, material facts, sale unit, included parts, and explicit connection information. A missing or unconfirmed fact must not become an affirmative compatibility claim. Featured companion SKU identifiers must exist among that product's variants.
@@ -28,3 +28,11 @@ Public product presentations remain explicitly labelled demonstrations with illu
 Regression checks cover real option/SKU selection, exact companion additions, ring sizing, supplied parts, image dialogs, language persistence, bag quantity/removal, gift notes and demo completion. Use 360, 390, 768, 1024, 1280 and 1440 viewport widths for affected templates. Initial HTML checks do not replace interaction checks or certify physical devices, Safari, Core Web Vitals, search ranking or commercial checkout.
 
 Keep the existing Google & YouTube GA4 integration as the single installation source. A page view is not evidence of ecommerce measurement. Demonstration actions must not send `purchase`, and free text, email and address values must not enter analytics. Real order tracking and Search Console submission have their own verified commercial/resource gates.
+
+Native Article handle matching must account for Shopify Liquid’s blog/handle form. Normalize with `article.handle | split: '/' | last` before comparing an Admin short handle. Explicit native `global.title_tag` remains first; scoped complete-title fallbacks must be verified in actual title/OpenGraph/Twitter output. Keep failed attempts as history rather than marking them successful.
+
+For same-document category navigation, update the list only for known category hashes, close the existing Dawn header drawer through its native method, preserve focus-trap cleanup and aria-expanded, and leave sizing-guide anchors alone. Test actual menu clicks, including the current category; a direct full-page reload cannot verify this behaviour. Wait for the native drawer close animation before reopening in automation.
+
+All25native topics are publicly readable, but the final current sitemap read includes only the old five in both languages. Preserve this discovery limitation until a later actual platform read changes it; do not invent a cache cause, assume indexing, or keep requesting identical sitemaps. A200page, an entry in sitemap and a Google-indexed result are separate evidence.
+
+Journal work follows one consumer need and one main intent. Give a direct answer with practical checks, comparisons/conditions, units, parts and sources, followed by one useful next step. Keep evidence cards outside public content. English and French should be written naturally. Do not transfer historical category-keyword volume to long article headlines, add synonym/country doorway pages, or promise AI-search inclusion.
