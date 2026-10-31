@@ -1,6 +1,6 @@
 {
-  "state": "Published core with three prepared UI followup source files; native Journal publication in progress",
-  "utc": "2026-10-31T07:35:55.011560+00:00",
+  "state": "Published core and UI refinements with one prepared native-title fallback; native Journal old-five French updates in progress",
+  "utc": "2026-10-31T07:45:05.353122+00:00",
   "files": [
     {
       "path": "MAINTENANCE.md",
@@ -328,9 +328,9 @@
     },
     {
       "path": "release-status.json",
-      "bytes": 2164,
-      "sha256": "f59ecca82c5fe69a98ff76f0f0aa98c8cd9a983e33bf480716ae20072a5d7b70",
-      "git_sha": "e37ddabda3b9e89d1ab8f644bc966b7466d193bc"
+      "bytes": 2557,
+      "sha256": "6ddf14be53d91c1b3c0f318d60b4cac367c74718f3e0c6dbaae904b2a59c3f19",
+      "git_sha": "c6818b385455da77345339bf8ae03261e4319928"
     },
     {
       "path": "theme/assets/animations.js",
@@ -2458,9 +2458,9 @@
     },
     {
       "path": "theme/layout/theme.liquid",
-      "bytes": 34401,
-      "sha256": "4c77fdaf62c3725cc9397f0179ca2805df2cddc717ff1769f14834d201e63b12",
-      "git_sha": "78c43f61d52fae3444b582564cad2b38da821bdd"
+      "bytes": 35813,
+      "sha256": "5edd929dc3eb94a441a95d6f3390531abeb2971a3da925f2a0fb0374719fa093",
+      "git_sha": "b1d20b1dd97a1c05d035a90b2b1770cebeba3baa"
     },
     {
       "path": "theme/locales/bg.json",
