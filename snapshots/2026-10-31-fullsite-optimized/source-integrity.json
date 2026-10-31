@@ -1,6 +1,6 @@
 {
-  "state": "published_theme_core_with_native_journal_in_progress",
-  "utc": "2026-10-31T07:21:06.946458+00:00",
+  "state": "Published core with three prepared UI followup source files; native Journal publication in progress",
+  "utc": "2026-10-31T07:35:55.011560+00:00",
   "files": [
     {
       "path": "MAINTENANCE.md",
@@ -328,9 +328,9 @@
     },
     {
       "path": "release-status.json",
-      "bytes": 1902,
-      "sha256": "0c685ee2cc3fad72f2b1bca52cb4e971ff0b3c23d7ddfbf0858d8480f48f377f",
-      "git_sha": "5b83cd36d54b6b55746af4fcf8b0dd77b9c76486"
+      "bytes": 2164,
+      "sha256": "f59ecca82c5fe69a98ff76f0f0aa98c8cd9a983e33bf480716ae20072a5d7b70",
+      "git_sha": "e37ddabda3b9e89d1ab8f644bc966b7466d193bc"
     },
     {
       "path": "theme/assets/animations.js",
@@ -2944,9 +2944,9 @@
     },
     {
       "path": "theme/sections/main-blog-suiji.liquid",
-      "bytes": 22495,
-      "sha256": "5745dd0c52787c3cccd060fe672ed7419c49f5890a023d9c01c64a3edbf8f083",
-      "git_sha": "2096f852cd44d10175bdf7367fc99149ba8147bf"
+      "bytes": 22895,
+      "sha256": "7d52384f92a8509ffbb9907387c990776776fdacc3f8785742ef55c27e2a8963",
+      "git_sha": "91fa4788bbc9d2f4eba67c5dc5236cb732a87264"
     },
     {
       "path": "theme/sections/main-blog.liquid",
@@ -3136,9 +3136,9 @@
     },
     {
       "path": "theme/sections/suiji-home-editorial.liquid",
-      "bytes": 15452,
-      "sha256": "8ca9dab135200607b796a56607aabb7a63e454a5a80b6d1c4e0765ca57506a22",
-      "git_sha": "c844edd8e3d6366a59b99afbecf490b594914dfd"
+      "bytes": 15499,
+      "sha256": "268b73d85dc6559130c7ae0813e0eaa4fd0eaa1294f6a675dd34118750a6a2e2",
+      "git_sha": "fe7ee5f482268f88babcffa57c2c6d033d091550"
     },
     {
       "path": "theme/sections/suiji-hoop-detail.liquid",
@@ -3784,9 +3784,9 @@
     },
     {
       "path": "theme/snippets/suiji-native-journal.liquid",
-      "bytes": 2609,
-      "sha256": "78d0f64ee323dd1f0b5ccd40d42759d40f31f72e42ed37f4d0134a3ed54e2cf6",
-      "git_sha": "a81b354a4c2f11623204890e809b4d07f34c862f"
+      "bytes": 2803,
+      "sha256": "307f5aad8de2e7ac6b3ad835bbaa62d2ac4f35e5d22ed0064c67a3b1125d936d",
+      "git_sha": "07666b653975a82da68eff6e8a311ff4d3b6c635"
     },
     {
       "path": "theme/snippets/suiji-native-product-panels.liquid",

@@ -154,17 +154,17 @@
               assign item_image = ring_image
               assign item_title = 'suiji_preview.base_title' | t
               assign item_colour = 'suiji_preview.metal_blue' | t
-              assign item_url = '/collections/rings?view=suiji-p-r01-ring-base'
+              assign item_url = '/collections/rings?view=suiji-p-r01-ring-base&sku=R01-B-B-B-54'
             elsif look_index == 1
               assign item_image = flower_a
               assign item_title = 'suiji_preview.charm_a' | t
               assign item_colour = 'suiji_preview.stone_smoky' | t
-              assign item_url = '/collections/charms?view=suiji-p-oval-motif'
+              assign item_url = '/collections/charms?view=suiji-p-oval-motif&sku=OV-SM-SQ-G'
             else
               assign item_image = flower_b
               assign item_title = 'suiji_preview.charm_b' | t
               assign item_colour = 'suiji_preview.stone_aqua' | t
-              assign item_url = '/collections/charms?view=suiji-p-oval-motif'
+              assign item_url = '/collections/charms?view=suiji-p-oval-motif&sku=OV-HA-AQ-S'
             endif
           -%}
           <article class="suiji-home__look-item" data-home-look-item="{{ look_index }}"><a href="{% render 'suiji-localized-menu-url', url: item_url %}"><div class="suiji-home__look-card-image">{% render 'suiji-home-image', image: item_image, alt: item_title, sizes: '(min-width: 990px) 26vw, 85vw' %}</div><div class="suiji-home__look-card-label"><h3>{{ item_title }}</h3><span>{{ item_colour }}</span><span class="suiji-home__look-card-action">{{ look_cta }} <span aria-hidden="true">→</span></span></div></a></article>
