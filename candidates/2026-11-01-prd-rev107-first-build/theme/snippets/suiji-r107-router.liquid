@@ -1,0 +1,114 @@
+{%- liquid
+ assign r107_product_key = ''
+ if template.suffix contains 'suiji-p-'
+  assign r107_product_key = template.suffix | remove_first: 'suiji-p-'
+ endif
+-%}
+{%- if r107_product_key != blank -%}
+{%- case r107_product_key -%}
+{% when 'r01-ring-base' %}{% render 'suiji-r107-p-r01-ring-base' %}
+{% when 'r01-iridescent-ring-base' %}{% render 'suiji-r107-p-r01-iridescent-ring-base' %}
+{% when 'r02-ring-base' %}{% render 'suiji-r107-p-r02-ring-base' %}
+{% when 'double-arm-ring-base' %}{% render 'suiji-r107-p-double-arm-ring-base' %}
+{% when 'h01-hoops' %}{% render 'suiji-r107-p-h01-hoops' %}
+{% when 'h02-hoop' %}{% render 'suiji-r107-p-h02-hoop' %}
+{% when 'a02-drop' %}{% render 'suiji-r107-p-a02-drop' %}
+{% when 'a03-drop' %}{% render 'suiji-r107-p-a03-drop' %}
+{% when 'collar-7' %}{% render 'suiji-r107-p-collar-7' %}
+{% when 'collar-7-drops-1' %}{% render 'suiji-r107-p-collar-7-drops-1' %}
+{% when 'collar-7-drops-3' %}{% render 'suiji-r107-p-collar-7-drops-3' %}
+{% when 'collar-7-drops-5' %}{% render 'suiji-r107-p-collar-7-drops-5' %}
+{% when 'collar-9' %}{% render 'suiji-r107-p-collar-9' %}
+{% when 'collar-9-drops-1' %}{% render 'suiji-r107-p-collar-9-drops-1' %}
+{% when 'collar-9-drops-3' %}{% render 'suiji-r107-p-collar-9-drops-3' %}
+{% when 'collar-9-drops-5' %}{% render 'suiji-r107-p-collar-9-drops-5' %}
+{% when 'cross-chain' %}{% render 'suiji-r107-p-cross-chain' %}
+{% when 'cross-chain-core-lock' %}{% render 'suiji-r107-p-cross-chain-core-lock' %}
+{% when 'chain-l01' %}{% render 'suiji-r107-p-chain-l01' %}
+{% when 'chain-l02' %}{% render 'suiji-r107-p-chain-l02' %}
+{% when 'chain-l03' %}{% render 'suiji-r107-p-chain-l03' %}
+{% when 'chain-l04' %}{% render 'suiji-r107-p-chain-l04' %}
+{% when 'chain-l05' %}{% render 'suiji-r107-p-chain-l05' %}
+{% when 'bracelet-b3' %}{% render 'suiji-r107-p-bracelet-b3' %}
+{% when 'bracelet-b4' %}{% render 'suiji-r107-p-bracelet-b4' %}
+{% when 'bracelet-b5' %}{% render 'suiji-r107-p-bracelet-b5' %}
+{% when 'core-lock-pendant-base' %}{% render 'suiji-r107-p-core-lock-pendant-base' %}
+{% when 'core-lock-stud-base' %}{% render 'suiji-r107-p-core-lock-stud-base' %}
+{% when 'core-lock-stud-metal-back' %}{% render 'suiji-r107-p-core-lock-stud-metal-back' %}
+{% when 'pearl-back-stud' %}{% render 'suiji-r107-p-pearl-back-stud' %}
+{% when 'h03-connector' %}{% render 'suiji-r107-p-h03-connector' %}
+{% when 'h03-core-lock' %}{% render 'suiji-r107-p-h03-core-lock' %}
+{% when 'metal-ear-backs' %}{% render 'suiji-r107-p-metal-ear-backs' %}
+{% when 'pearl-effect-ear-back' %}{% render 'suiji-r107-p-pearl-effect-ear-back' %}
+{% when 'pearl-effect-stud' %}{% render 'suiji-r107-p-pearl-effect-stud' %}
+{% when 'oval-motif' %}{% render 'suiji-r107-p-oval-motif' %}
+{% when 'logo-square' %}{% render 'suiji-r107-p-logo-square' %}
+{% when 'logo-round' %}{% render 'suiji-r107-p-logo-round' %}
+{% when 'design-f03' %}{% render 'suiji-r107-p-design-f03' %}
+{% when 'design-f04' %}{% render 'suiji-r107-p-design-f04' %}
+{% when 'design-f05' %}{% render 'suiji-r107-p-design-f05' %}
+{% when 'design-f06' %}{% render 'suiji-r107-p-design-f06' %}
+{% when 'design-f07' %}{% render 'suiji-r107-p-design-f07' %}
+{% when 'design-f08' %}{% render 'suiji-r107-p-design-f08' %}
+{% when 'design-f08b' %}{% render 'suiji-r107-p-design-f08b' %}
+{% when 'design-f09' %}{% render 'suiji-r107-p-design-f09' %}
+{% when 'design-t01' %}{% render 'suiji-r107-p-design-t01' %}
+{% when 'design-new-round-0926' %}{% render 'suiji-r107-p-design-new-round-0926' %}
+{% when 'set01-stud-earring-set' %}{% render 'suiji-r107-p-set01-stud-earring-set' %}
+{% when 'set02-choker-set' %}{% render 'suiji-r107-p-set02-choker-set' %}
+{% when 'set03-ring-set' %}{% render 'suiji-r107-p-set03-ring-set' %}
+{% when 'set04-hoop-earring-necklace-set' %}{% render 'suiji-r107-p-set04-hoop-earring-necklace-set' %}
+{% when 'set05-stud-earring-ring-set' %}{% render 'suiji-r107-p-set05-stud-earring-ring-set' %}
+{% when 'set06-hoop-earring-necklace-ring-set' %}{% render 'suiji-r107-p-set06-hoop-earring-necklace-ring-set' %}
+{%- endcase -%}
+{%- elsif request.page_type == 'index' -%}{% render 'suiji-r107-home' %}
+{%- elsif request.page_type == 'collection' -%}
+{% case collection.handle %}
+{% when 'all' %}{% render 'suiji-r107-collection-all' %}
+{% when 'earrings' %}{% render 'suiji-r107-collection-earrings' %}
+{% when 'rings' %}{% render 'suiji-r107-collection-rings' %}
+{% when 'necklaces' %}{% render 'suiji-r107-collection-necklaces' %}
+{% when 'bracelets' %}{% render 'suiji-r107-collection-bracelets' %}
+{% when 'charms' %}{% render 'suiji-r107-collection-charms' %}
+{% when 'extras' %}{% render 'suiji-r107-collection-extras' %}
+{% when 'sets' %}{% render 'suiji-r107-collection-sets' %}
+{% when 'accessories' %}{% render 'suiji-r107-collection-extras' %}
+{% when 'motifs' %}{% render 'suiji-r107-collection-charms' %}
+{% when 'the-edits', 'gift-sets', 'gifts' %}{% render 'suiji-r107-collection-sets' %}
+{% when 'core-lock', 'locks-chains' %}{% render 'suiji-r107-collection-all' %}
+{% endcase %}
+{%- elsif request.page_type == 'page' -%}{% case page.handle %}
+{% when 'study-triangle' %}{% render 'suiji-r107-public-study-triangle' %}
+{% when 'study-gate' %}{% render 'suiji-r107-public-study-gate' %}
+{% when 'study-pink-orbit' %}{% render 'suiji-r107-public-study-pink-orbit' %}
+{% when 'study-aurora' %}{% render 'suiji-r107-public-study-aurora' %}
+{% when 'about' %}{% render 'suiji-r107-about' %}
+{% when 'bases' %}{% render 'suiji-r107-bases' %}
+{% when 'care-guide' %}{% render 'suiji-r107-care' %}
+{% when 'contact' %}{% render 'suiji-r107-contact' %}
+{% when 'editions' %}{% render 'suiji-r107-editions' %}
+{% when 'faq' %}{% render 'suiji-r107-faq' %}
+{% when 'the-mechanism' %}{% render 'suiji-r107-mechanism' %}
+{% when 'members' %}{% render 'suiji-r107-members' %}
+{% when 'shipping-returns' %}{% render 'suiji-r107-shipping' %}
+{% when 'warranty' %}{% render 'suiji-r107-warranty' %}
+{% when 'charms' %}{% render 'suiji-r107-charms-help' %}
+{% when 'design-studio' %}{% render 'suiji-r107-studio-intro' %}
+{% when 'co-create' %}{% render 'suiji-r107-co-create' %}
+{% when 'studio-workspace' %}{% render 'suiji-r107-studio-workspace' %}
+{% when 'my-design' %}{% render 'suiji-r107-design-private' %}
+{% when 'designers' %}{% render 'suiji-r107-designer' %}
+{% when 'charm-exchange' %}{% render 'suiji-r107-exchange' %}
+{% when 'checkout-preview' %}{% render 'suiji-r107-checkout' %}
+{% when 'gifts' %}{% render 'suiji-r107-gifts' %}
+{% when 'creator-partnerships' %}{% render 'suiji-r107-creator' %}
+{% when 'creator-guide' %}{% render 'suiji-r107-creator-guide' %}
+{% when 'shopping-preview' %}{% render 'suiji-r107-shopping-preview' %}
+{% when 'sets' %}{% render 'suiji-r107-collection-sets' %}
+{% endcase %}
+{%- elsif request.page_type == 'article' -%}{% render 'suiji-r107-article' %}
+{%- elsif request.page_type == 'blog' -%}{% render 'suiji-r107-journal' %}
+{% comment %}Native cart and checkout remain Shopify-managed. The separate shopping-preview Page holds local demo selections.{% endcomment %}
+{%- elsif request.page_type == 'search' -%}{% render 'suiji-r107-search' %}
+{%- elsif request.page_type == '404' -%}{% render 'suiji-r107-utility' %}
+{%- endif -%}

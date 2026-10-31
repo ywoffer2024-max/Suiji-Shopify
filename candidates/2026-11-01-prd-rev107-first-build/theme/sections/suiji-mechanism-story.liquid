@@ -1,0 +1,68 @@
+{{ 'suiji-mechanism.css' | asset_url | stylesheet_tag }}
+
+<section class="suiji-mechanism-story" aria-labelledby="SuijiMechanism-{{ section.id }}">
+  <div class="suiji-mechanism-story__hero">
+    <div class="suiji-mechanism-story__copy">
+      {%- if section.settings.eyebrow != blank -%}<p class="suiji-mechanism-story__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      <h1 id="SuijiMechanism-{{ section.id }}">{{ section.settings.heading | escape }}</h1>
+      <p class="suiji-mechanism-story__lead">{{ section.settings.lead | escape }}</p>
+      {%- if section.settings.cta_label != blank -%}
+        <a class="suiji-editorial__button" href="{{ section.settings.cta_link }}">{{ section.settings.cta_label | escape }}</a>
+      {%- endif -%}
+    </div>
+    <figure class="suiji-mechanism-story__hero-media">
+      <div class="suiji-mechanism-placeholder suiji-mechanism-placeholder--hero" role="img" aria-label="Visuel du mécanisme SUIJI en cours de validation">
+        {% render 'suiji-logo-badge' %}
+        <span>VISUEL EN COURS DE VALIDATION</span>
+      </div>
+    </figure>
+  </div>
+
+  <div class="suiji-mechanism-story__sequence">
+    <header>
+      <h2>{{ section.settings.sequence_heading | escape }}</h2>
+      <p>{{ section.settings.sequence_text | escape }}</p>
+    </header>
+    <ol class="suiji-mechanism-story__steps">
+      <li>
+        <div class="suiji-mechanism-placeholder" role="img" aria-label="Étape un du mécanisme en cours de validation"><strong>01</strong><span>VISUEL À VENIR</span></div>
+        <h3>Appuyer</h3>
+        <p>Le point de pression et le geste exact seront montrés après validation du prototype.</p>
+      </li>
+      <li>
+        <div class="suiji-mechanism-placeholder" role="img" aria-label="Étape deux du mécanisme en cours de validation"><strong>02</strong><span>VISUEL À VENIR</span></div>
+        <h3>Déplacer</h3>
+        <p>Le retrait et l'alignement seront documentés avec la version réellement testée.</p>
+      </li>
+      <li>
+        <div class="suiji-mechanism-placeholder" role="img" aria-label="Étape trois du mécanisme en cours de validation"><strong>03</strong><span>VISUEL À VENIR</span></div>
+        <h3>Verrouiller</h3>
+        <p>La position finale et son contrôle seront publiés une fois les essais terminés.</p>
+      </li>
+    </ol>
+  </div>
+
+  <div class="suiji-mechanism-story__closing">
+    <p>{{ section.settings.closing_text | escape }}</p>
+    <a class="suiji-editorial__link" href="{{ section.settings.cta_link }}">{{ section.settings.closing_link_label | escape }}</a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "SUIJI mechanism story",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "LE MÉCANISME" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Changez la forme. Gardez la pièce." },
+    { "type": "textarea", "id": "lead", "label": "Lead", "default": "Le mécanisme et son geste final sont encore en cours de validation." },
+    { "type": "text", "id": "cta_label", "label": "CTA label", "default": "DÉCOUVRIR LE JOURNAL" },
+    { "type": "url", "id": "cta_link", "label": "CTA link" },
+    { "type": "text", "id": "sequence_heading", "label": "Sequence heading", "default": "Trois étapes à valider." },
+    { "type": "textarea", "id": "sequence_text", "label": "Sequence text", "default": "Les visuels définitifs montreront uniquement le prototype testé et approuvé." },
+    { "type": "textarea", "id": "closing_text", "label": "Closing text", "default": "Une démonstration exacte remplacera ces repères après validation." },
+    { "type": "text", "id": "closing_link_label", "label": "Closing link label", "default": "LIRE LE JOURNAL" }
+  ],
+  "presets": [{ "name": "SUIJI mechanism story" }]
+}
+{% endschema %}

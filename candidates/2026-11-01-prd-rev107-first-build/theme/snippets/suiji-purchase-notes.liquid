@@ -1,0 +1,30 @@
+{% doc %}
+  Clarify known separately supplied parts and returning-customer paths.
+  @param {string} product_key - Approved public catalogue key.
+  @param {string} role - Approved component role.
+  @param {string} compatibility - direct, adapter_required, or not_applicable.
+  @param {boolean} core_included - Whether Core-Lock is supplied.
+{% enddoc %}
+{%- liquid
+  assign purchase_kind = ''
+  if role == 'charm' and compatibility == 'direct'
+    assign purchase_kind = 'charm'
+  elsif compatibility == 'adapter_required'
+    assign purchase_kind = 'adapter'
+  elsif core_included and role contains '_base'
+    assign purchase_kind = 'base'
+  elsif role == 'set'
+    assign purchase_kind = 'set'
+  endif
+-%}
+{%- if purchase_kind != blank -%}
+<aside class="sc-purchase-notes" data-purchase-notes data-purchase-key="{{ product_key | escape }}" aria-label="{{ 'suiji_storefront.purchase.title' | t | escape }}">
+  {%- unless purchase_kind == 'set' -%}<p><strong>{{ 'suiji_storefront.purchase.separate' | t }}</strong><br>{% case purchase_kind %}{% when 'charm' %}{{ 'suiji_storefront.purchase.charm_extra' | t }}{% when 'adapter' %}{{ 'suiji_storefront.purchase.adapter_extra' | t }}{% when 'base' %}{{ 'suiji_storefront.purchase.base_extra' | t }}{% endcase %}</p>{%- endunless -%}
+  {%- if purchase_kind == 'charm' -%}
+  <p class="sc-purchase-notes__lead">{{ 'suiji_storefront.purchase.choose_base' | t }}</p>
+  <div class="sc-purchase-notes__links"><a href="{% render 'suiji-localized-menu-url', url: '/collections/rings?role=ring_base&system=core-lock' %}">{{ 'suiji_storefront.purchase.rings' | t }}</a><a href="{% render 'suiji-localized-menu-url', url: '/collections/earrings?view=suiji-p-core-lock-stud-base' %}">{{ 'suiji_storefront.purchase.stud' | t }}</a><a href="{% render 'suiji-localized-menu-url', url: '/collections/extras?view=suiji-p-core-lock-pendant-base' %}">{{ 'suiji_storefront.purchase.pendant' | t }}</a></div>
+  {%- elsif purchase_kind == 'adapter' -%}<p><a href="{% render 'suiji-localized-menu-url', url: '/collections/sets' %}">{{ 'suiji_storefront.purchase.complete' | t }} →</a></p>
+  {%- else -%}<p>{{ 'suiji_storefront.purchase.existing' | t }}<br><a href="{% render 'suiji-localized-menu-url', url: '/collections/charms?role=charm&compatibility=direct' %}">{{ 'suiji_storefront.purchase.browse' | t }} →</a></p>{%- endif -%}
+  <a class="sc-purchase-notes__measurements" href="{% render 'suiji-localized-menu-url', url: '/pages/contact' %}">{{ 'suiji_storefront.purchase.measurements' | t }} →</a>
+</aside>
+{%- endif -%}

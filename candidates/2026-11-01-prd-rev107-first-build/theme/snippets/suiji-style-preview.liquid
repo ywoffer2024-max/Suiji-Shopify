@@ -1,0 +1,104 @@
+{%- doc -%}
+  SUIJI shopping preview. Approved studio images, options, size guide, separate charms and session bag.
+{%- enddoc -%}
+<suiji-look-preview class="suiji-preview suiji-pdp" id="build-your-look">
+  <nav class="suiji-pdp__breadcrumbs" aria-label="{{ 'suiji_pdp.breadcrumbs' | t | escape }}">
+    <a href="{{ routes.root_url }}">{{ 'suiji_pdp.home' | t }}</a><span aria-hidden="true">/</span><a href="{% render 'suiji-localized-menu-url', url: '/collections/rings' %}">{{ 'suiji_navigation.labels.rings' | t }}</a><span aria-hidden="true">/</span><span aria-current="page">{{ 'suiji_preview.base_title' | t }}</span>
+  </nav>
+  <div class="suiji-pdp__layout">
+    <section class="suiji-pdp__gallery" aria-label="{{ 'suiji_pdp.gallery' | t | escape }}">
+      <div class="suiji-pdp__stage" data-base-illustration>
+        {%- for photo_colour in (1..2) -%}
+          {%- liquid
+            if photo_colour == 1
+              assign ring_photo_metal = 'blue'
+              assign ring_photo = images['r01-blue-front-area17-559667e818a1ea03.png']
+              assign ring_photo_alt = 'suiji_preview.home_hero_alt' | t
+              assign photo_loading = 'eager'
+            else
+              assign ring_photo_metal = 'gold'
+              assign ring_photo = images['r01-gold-front-area17-f7026a47c290d05b.png']
+              assign ring_photo_alt = 'suiji_preview.home_method_alt' | t
+              assign photo_loading = 'lazy'
+            endif
+          -%}
+          {%- if ring_photo != blank -%}<div class="suiji-pdp__photo" data-base-photo="{{ ring_photo_metal }}"{% unless ring_photo_metal == 'blue' %} hidden{% endunless %}>{{ ring_photo | image_url: width: 1200 | image_tag: widths: '360, 540, 750, 960, 1200', sizes: '(min-width: 990px) 50vw, 100vw', loading: photo_loading, decoding: 'async', alt: ring_photo_alt }}</div>{%- endif -%}
+        {%- endfor -%}
+        <div class="suiji-pdp__drawing" data-base-drawing hidden><p>{{ 'suiji_pdp.colour_photo_pending' | t }}</p></div>
+        <button type="button" class="suiji-pdp__zoom" data-preview-zoom disabled aria-label="{{ 'suiji_pdp.enlarge' | t | escape }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button>
+      </div>
+      <div class="suiji-pdp__thumbnails" role="group" aria-label="{{ 'suiji_pdp.gallery' | t | escape }}">
+        {%- for photo_colour in (1..2) -%}
+          {%- liquid
+            if photo_colour == 1
+              assign thumb_metal = 'blue'
+              assign thumb_photo = images['r01-blue-front-area17-559667e818a1ea03.png']
+              assign thumb_label = 'suiji_pdp.photo_blue' | t
+            else
+              assign thumb_metal = 'gold'
+              assign thumb_photo = images['r01-gold-front-area17-f7026a47c290d05b.png']
+              assign thumb_label = 'suiji_pdp.photo_gold' | t
+            endif
+          -%}
+          {%- if thumb_photo != blank -%}<button type="button" data-photo-select="{{ thumb_metal }}" aria-label="{{ thumb_label | escape }}" aria-pressed="{% if thumb_metal == 'blue' %}true{% else %}false{% endif %}">{{ thumb_photo | image_url: width: 160 | image_tag: widths: '80, 160', sizes: '64px', loading: 'lazy', alt: '' }}</button>{%- endif -%}
+        {%- endfor -%}
+      </div><p class="suiji-pdp__image-note">{{ 'suiji_pdp.gallery_note' | t }}</p>
+    </section>
+    <div class="suiji-pdp__details">
+      <p class="suiji-preview__eyebrow">{{ 'suiji_pdp.product_code' | t }}</p>
+      <div class="suiji-pdp__title-row"><h1>{{ 'suiji_preview.base_title' | t }}</h1><button type="button" class="suiji-pdp__save" data-save-ring aria-pressed="false" aria-label="{{ 'suiji_pdp.save' | t | escape }}" disabled><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></button></div>
+      <p class="suiji-pdp__price">{{ 'suiji_pdp.price_pending' | t }}</p><p class="suiji-pdp__lead">{{ 'suiji_pdp.lead' | t }}</p>
+      <fieldset class="suiji-pdp__option suiji-pdp__finishes"><legend>{{ 'suiji_pdp.finish' | t }}<span data-selected-metal>{{ 'suiji_preview.metal_blue' | t }}</span></legend><div class="suiji-pdp__choices">
+        {%- assign ring_colours = 'blue,gold,silver' | split: ',' -%}{%- for ring_colour in ring_colours -%}{%- assign colour_key = 'suiji_preview.metal_' | append: ring_colour -%}<label class="suiji-pdp__swatch" style="--swatch:{% case ring_colour %}{% when 'blue' %}#317ca5{% when 'gold' %}#b69a58{% else %}#a9b0b3{% endcase %}"><input type="radio" name="preview-ring-metal" data-base-metal value="{{ ring_colour }}"{% if ring_colour == 'blue' %} checked{% endif %}><span aria-hidden="true"></span><span class="visually-hidden">{{ colour_key | t }}</span></label>{%- endfor -%}
+      </div></fieldset>
+      <fieldset class="suiji-pdp__option suiji-pdp__sizes"><legend>{{ 'suiji_pdp.size' | t }}<span data-selected-ring>54 mm</span></legend><button type="button" class="suiji-preview__text-button suiji-pdp__guide-link" data-open-size-guide disabled>{{ 'suiji_pdp.size_guide' | t }}</button><div class="suiji-pdp__choices"><label><input type="radio" name="preview-ring-size" value="54" checked><span>54</span></label><label><input type="radio" name="preview-ring-size" value="57"><span>57</span></label></div><p class="suiji-pdp__size-unit">{{ 'suiji_pdp.size_unit' | t }}</p></fieldset>
+      <div class="suiji-pdp__purchase"><label class="suiji-pdp__quantity">{{ 'suiji_preview.quantity' | t }}<select data-base-quantity>{%- for quantity in (1..9) -%}<option value="{{ quantity }}">{{ quantity }}</option>{%- endfor -%}</select></label><button type="button" class="suiji-preview__button suiji-pdp__add" data-add-base disabled>{{ 'suiji_pdp.add' | t }}</button></div>
+      <p class="suiji-pdp__preview-note">{{ 'suiji_pdp.preview_note' | t }}</p>
+      <section class="suiji-preview__recommendations suiji-pdp__complete-look suiji-pdp__complete-look--cards" data-charm-options aria-labelledby="preview-complete-title">
+<h2 id="preview-complete-title">{{ 'suiji_preview.complete_look' | t }}</h2>
+
+<div class="suiji-preview__charms" data-charm-strip>{%- for charm_index in (1..2) -%}
+{%- liquid
+  if charm_index == 1
+    assign charm_id = 'a'
+    assign charm_label = 'suiji_preview.charm_a' | t
+    assign charm_photo = images['mf-f01-front-f337b8015d3d1e41.png']
+  else
+    assign charm_id = 'b'
+    assign charm_label = 'suiji_preview.charm_b' | t
+    assign charm_photo = images['mf-f02-front-7866b0cf3fed3922.png']
+  endif
+-%}
+<article class="suiji-preview__charm" data-charm-card="{{ charm_id }}">
+<div class="suiji-charm-card__media">
+<button type="button" class="suiji-charm-card__image" data-open-charm aria-haspopup="dialog" aria-label="{{ 'suiji_pdp.enlarge' | t | escape }} · {{ charm_label | escape }}" disabled>{{ charm_photo | image_url: width: 800 | image_tag: widths: '240, 360, 540, 800', sizes: '(min-width: 990px) 22vw, (min-width: 600px) 42vw, 78vw', loading: 'lazy', decoding: 'async', alt: charm_label }}</button>
+<button type="button" class="suiji-charm-card__plus" data-add-charm="{{ charm_id }}" aria-label="{{ 'suiji_preview.add_charm' | t | escape }} · {{ charm_label | escape }}" aria-describedby="PreviewCharmSelection-{{ charm_id }}" disabled><svg viewBox="0 0 24 24" aria-hidden="true" width="24" height="24"><path d="M12 4v16M4 12h16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+</div>
+<h3><button type="button" data-open-charm aria-haspopup="dialog"  disabled>{{ charm_label }}</button></h3>
+<p class="suiji-charm-card__selection" id="PreviewCharmSelection-{{ charm_id }}" data-charm-selection>{% if charm_index == 1 %}{{ 'suiji_preview.stone_smoky' | t }} · {{ 'suiji_preview.metal_gold' | t }}{% else %}{{ 'suiji_preview.stone_aqua' | t }} · {{ 'suiji_preview.metal_silver' | t }}{% endif %}</p>
+</article>
+{%- endfor -%}</div>
+<div class="suiji-charm-slider" aria-label="{{ 'suiji_preview.complete_look' | t | escape }}"><button type="button" data-charm-previous aria-label="{{ 'general.slider.previous_slide' | t | escape }}" disabled><svg viewBox="0 0 24 24" aria-hidden="true" width="24" height="24"><path d="M19 12H5m6-6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button><div class="suiji-charm-slider__dots"><button type="button" data-charm-page="0" aria-label="{{ 'suiji_preview.charm_a' | t | escape }}" aria-pressed="true" disabled><span></span></button><button type="button" data-charm-page="1" aria-label="{{ 'suiji_preview.charm_b' | t | escape }}" aria-pressed="false" disabled><span></span></button></div><button type="button" data-charm-next aria-label="{{ 'general.slider.next_slide' | t | escape }}" disabled><svg viewBox="0 0 24 24" aria-hidden="true" width="24" height="24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button></div>
+<p class="suiji-preview__notice">{{ 'suiji_preview.rotation_note' | t }}</p>
+</section>
+      <div class="suiji-pdp__quick-links"><a href="#preview-bag">{{ 'suiji_preview.view_bag' | t }} (<span data-suiji-preview-count>0</span>)</a><a href="#preview-complete-title" data-charm-options-link>{{ 'suiji_pdp.charm_jump' | t }} ↓</a></div>
+      <p class="suiji-preview__status" role="status" aria-live="polite" data-preview-status></p>
+      <div class="suiji-pdp__tabs"><div role="tablist" aria-label="{{ 'suiji_preview.base_title' | t | escape }}">{%- assign detail_tabs = 'description,notes,shipping' | split: ',' -%}{%- for detail_tab in detail_tabs -%}{%- assign tab_key = 'suiji_pdp.tab_' | append: detail_tab -%}<button type="button" id="pdp-tab-{{ detail_tab }}" role="tab" aria-controls="pdp-panel-{{ detail_tab }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" tabindex="{% if forloop.first %}0{% else %}-1{% endif %}" data-pdp-tab="{{ detail_tab }}">{{ tab_key | t }}</button>{%- endfor -%}</div>
+        {%- for detail_tab in detail_tabs -%}{%- assign detail_key = 'suiji_pdp.' | append: detail_tab -%}<section id="pdp-panel-{{ detail_tab }}" role="tabpanel" aria-labelledby="pdp-tab-{{ detail_tab }}" tabindex="0" data-pdp-panel="{{ detail_tab }}"><p>{{ detail_key | t }}</p></section>{%- endfor -%}
+      </div>
+    </div>
+  </div>
+  
+  <section class="suiji-preview__bag" id="preview-bag" aria-labelledby="preview-bag-title"><h2 id="preview-bag-title">{{ 'suiji_preview.bag_title' | t }} (<span data-suiji-preview-count>0</span>)</h2><p data-preview-empty>{{ 'suiji_preview.empty' | t }}</p><ul class="suiji-preview__bag-list" role="list" data-preview-lines></ul><div class="suiji-preview__bag-actions"><button type="button" class="suiji-preview__text-button" data-preview-clear hidden>{{ 'suiji_preview.clear' | t }}</button><button type="button" class="suiji-preview__button" disabled>{{ 'suiji_preview.checkout_paused' | t }}</button></div><p class="suiji-preview__notice">{{ 'suiji_preview.purchase_notice' | t }}</p></section>
+  <dialog class="suiji-pdp__dialog" data-size-dialog aria-labelledby="pdp-size-dialog-title"><div class="suiji-pdp__dialog-head"><h2 id="pdp-size-dialog-title">{{ 'suiji_pdp.size_guide' | t }}</h2><button type="button" class="suiji-pdp__close" data-close-dialog aria-label="{{ 'suiji_pdp.close' | t | escape }}">×</button></div>{% render 'suiji-size-guide', guide_id: 'pdp-guide', in_dialog: true %}</dialog>
+  <dialog class="suiji-pdp__dialog suiji-pdp__dialog--image" data-image-dialog aria-label="{{ 'suiji_pdp.enlarge' | t | escape }}"><button type="button" class="suiji-pdp__close" data-close-dialog aria-label="{{ 'suiji_pdp.close' | t | escape }}">×</button><img data-full-image alt="" width="1200" height="1500"></dialog>
+  <noscript><p>{{ 'suiji_preview.no_js' | t }}</p><a href="#size-guide">{{ 'suiji_pdp.size_guide' | t }}</a></noscript>
+  <script type="application/json" data-preview-labels>{
+    "base_title": {{ 'suiji_preview.base_title' | t | json }}, "charm_a": {{ 'suiji_preview.charm_a' | t | json }}, "charm_b": {{ 'suiji_preview.charm_b' | t | json }},
+    "metal_gold": {{ 'suiji_preview.metal_gold' | t | json }}, "metal_silver": {{ 'suiji_preview.metal_silver' | t | json }}, "metal_blue": {{ 'suiji_preview.metal_blue' | t | json }},
+    "stone_smoky": {{ 'suiji_preview.stone_smoky' | t | json }}, "stone_aqua": {{ 'suiji_preview.stone_aqua' | t | json }},
+    "stone_rose": {{ 'suiji_preview.stone_rose' | t | json }}, "stone_blue": {{ 'suiji_preview.stone_blue' | t | json }},
+    "quantity": {{ 'suiji_preview.quantity' | t | json }}, "remove": {{ 'suiji_preview.remove' | t | json }}, "empty": {{ 'suiji_preview.empty' | t | json }},
+    "added": {{ 'suiji_preview.added' | t | json }}, "updated": {{ 'suiji_preview.updated' | t | json }}, "removed": {{ 'suiji_preview.removed' | t | json }}, "saved": {{ 'suiji_pdp.saved' | t | json }}, "unsaved": {{ 'suiji_pdp.unsaved' | t | json }}, "limit": {{ 'suiji_pdp.limit' | t | json }}
+  }</script>
+</suiji-look-preview>
