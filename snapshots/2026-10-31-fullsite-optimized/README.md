@@ -1,6 +1,6 @@
 # SUIJI storefront — published optimization,31October2026
 
-This snapshot contains693theme files, the editable bilingual catalogue, the portable generator and25complete English/French native Journal topic pairs. The scoped theme core and all recorded followups are actually published. About retains the previous eight-chapter body and only the original Chunyu Wen portrait; Home uses SUIJI’s2014/handmade story. White/ice-blue, Newsreader/Manrope, five navigation entries and six sets remain.
+This snapshot contains693theme files, the editable bilingual catalogue, the portable generator and25complete English/French native Journal topic pairs. The scoped theme core and all recorded followups are actually published. About retains the previous eight-part editorial body and the original Chunyu Wen portrait, plus the human-approved short wearing-design paragraph inside the existing structure chapter; Home uses SUIJI’s2014/handmade story. White/ice-blue, Newsreader/Manrope, five navigation entries and six sets remain.
 
 The public storefront is a labelled demonstration:54presentations,321selectable configurations, illustrativeEUR99, a session bag and local demo completion. It creates no real order or payment. Product presentations remain noindex/follow until native commercial identities, imagery, prices, stock and payment/market settings are separately verified.
 
@@ -21,3 +21,5 @@ Generation checks must report zero differences. There is no fixed54product ceili
 Every source release is separately committed and Git-blob-read back. Earlier569file live and746file candidate backups remain on their branches. Only website code and intended public editorial bodies are exported: no credentials, private pricing/payment research, customer/order data or unpublished full brand PDF.
 
 Sitemap followup: both native French and English Journal Atom feeds contain the exact25approved topics each. Two supplementary Sitemap lines now advertise these feeds in robots.txt, retaining all3,700original managed bytes/rules exactly. The primary XML still exposes10/50Journal language URLs. One bounded2-save native tag refresh preserved all original Article fields and did not improve it; no mass replay was made. Official support has been contacted with human authorization, but platform regeneration/Google indexing are not claimed complete.
+
+About followup: only one English/French paragraph was added under Why structure / Pourquoi la structure. Seven chapter headings plus the originalH1, all original body text and the portrait were verified unchanged. The two native locale values precede the one snippet insertion; no native About page field or CSS was rewritten. Four actual cases at1280/390px in bothlanguages had no horizontaloverflow.

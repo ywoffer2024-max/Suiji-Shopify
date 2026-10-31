@@ -1,6 +1,6 @@
 {
-  "state": "published_native_Atom_supplement_primary_XML_pending",
-  "utc": "2026-10-31T08:53:53.821167+00:00",
+  "state": "published_About_minimal_human_copy_and_native_Atom_supplement",
+  "utc": "2026-10-31T08:53:53.841617+00:00",
   "files": [
     {
       "path": "MAINTENANCE.md",
@@ -10,9 +10,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 3825,
-      "sha256": "74287359e578cf444d114ede327165caf61408e3252982e73764b97408d2e7b4",
-      "git_sha": "2b153010b177cc6d609736311e5fdd20a2c1d927"
+      "bytes": 4324,
+      "sha256": "42b6ee8e4f998281c726f1ce81ba56bbd6a5e27822821b46db06136a4b71f08d",
+      "git_sha": "be8764d445cc414476e31980fe62b7822e9e60e9"
     },
     {
       "path": "catalogue/products.json",
@@ -378,9 +378,9 @@
     },
     {
       "path": "release-status.json",
-      "bytes": 1580,
-      "sha256": "e8496e3826b6d2f5c37319a5f5679f288e5284b26fc658769c9ac4568c81f605",
-      "git_sha": "6cd728fee0c6dd872d6921f812cb2fa88c447bdc"
+      "bytes": 1582,
+      "sha256": "85e6ddbd17d8f70008046811b88aa28ffd04b500d6528c6fce980ce7c8fa4dd7",
+      "git_sha": "d19f718da75320b87042ac5e005ad8d95452dcbc"
     },
     {
       "path": "theme/assets/animations.js",
@@ -2923,10 +2923,9 @@
     },
     {
       "path": "theme/locales/en.default.json",
-      "bytes": 89911,
-      "sha256": "8adaf5f3081fa681c64ce11465e6f24c4b9f4550e4d24881215a2a929b26aa8d",
-      "git_sha": "a6f4e5760a3603023d555687614a55b33fd40ab5",
-      "known_existing_git_blob": true
+      "bytes": 90200,
+      "sha256": "b25d0631fc1babe7a82d8e72d93d36ff4e5a7b8d58e76519d8564c621ebb64d7",
+      "git_sha": "fb3be6e1ef1a83d4cc49407f5b31c0eeb05651a5"
     },
     {
       "path": "theme/locales/en.default.schema.json",
@@ -2965,10 +2964,9 @@
     },
     {
       "path": "theme/locales/fr.json",
-      "bytes": 100493,
-      "sha256": "82416f5f4e67849409615b8cd25e2420a674c46a265d7018d417daacdef2fb89",
-      "git_sha": "1eba799abb568df8e07dcb00b7383d09d1c0242b",
-      "known_existing_git_blob": true
+      "bytes": 100848,
+      "sha256": "bb775f7b292ef4cf2570a89c610fef92c525222feeaaf95a7a3dd6720748f7e0",
+      "git_sha": "5abc44d935b1d41371a25ad7b4d0775011cd0ca7"
     },
     {
       "path": "theme/locales/fr.schema.json",
@@ -4271,10 +4269,9 @@
     },
     {
       "path": "theme/snippets/suiji-about.liquid",
-      "bytes": 3204,
-      "sha256": "5e48180fb5f257e7e1754fd3a019e977d671e01bf88508dcc3bef43f63455a55",
-      "git_sha": "d3f212683ae67bb32f35b59fe7400a7bb0cf740c",
-      "known_existing_git_blob": true
+      "bytes": 3420,
+      "sha256": "b4e60676bc6ac998de16bb2a939ff95db86f2dd1f8d5b5d8c4b517c77d178b40",
+      "git_sha": "ed7a23f757781ecaa8ea87f1585d22c908f1f28f"
     },
     {
       "path": "theme/snippets/suiji-brand-fonts.liquid",

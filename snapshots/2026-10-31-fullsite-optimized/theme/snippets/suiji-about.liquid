@@ -27,7 +27,11 @@
         {%- if forloop.index == 4 -%}
           <figure class="suiji-about__portrait" id="designer"><img src="{{ 'suiji-designer-chunyu-wen-v40.jpeg' | asset_img_url: '640x' }}" srcset="{{ 'suiji-designer-chunyu-wen-v40.jpeg' | asset_img_url: '400x' }} 400w, {{ 'suiji-designer-chunyu-wen-v40.jpeg' | asset_img_url: '640x' }} 640w, {{ 'suiji-designer-chunyu-wen-v40.jpeg' | asset_img_url: '960x' }} 960w" sizes="(min-width: 990px) 320px, calc(100vw - 40px)" width="1230" height="1672" loading="lazy" decoding="async" alt="{{ 'suiji_v40.about.designer_alt' | t | escape }}"></figure>
         {%- endif -%}
-        <div class="suiji-about__copy">{{ about_body }}</div>
+        <div class="suiji-about__copy">{{ about_body }}
+          {%- if forloop.index == 2 -%}
+            <p class="suiji-about__wearing"><strong>{{ 'suiji_about.wearing_title' | t }}</strong><br>{{ 'suiji_about.wearing_text' | t }}</p>
+          {%- endif -%}
+        </div>
       </section>
       {%- if forloop.index == 5 -%}</div>{%- endif -%}
     {%- endfor -%}
