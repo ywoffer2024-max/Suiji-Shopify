@@ -1,9 +1,9 @@
 {
-  "utc": "2026-10-31T20:31:16.214452+00:00",
+  "utc": "2026-10-31T20:36:22.860373+00:00",
   "snapshot_type": "Public website code and public content candidate; no automatic deployment",
   "prd_revision": 107,
   "files": 854,
-  "bytes": 23039231,
+  "bytes": 23032616,
   "entries": [
     {
       "path": "theme/assets/animations.js",
@@ -5107,9 +5107,9 @@
     },
     {
       "path": "content/page-candidates.json",
-      "bytes": 136467,
-      "sha256": "1314b939296a27809cc93539834cfbdaf27bcf71a5fc4ae0218c9ee7c7821e16",
-      "git_blob_sha": "27a7ea2a8492e3945e3136753ccb4b980aa28774"
+      "bytes": 129852,
+      "sha256": "2fe72f5c3ea1c1aeb1e25aa715b2b7527bb94c50cbb4c68dfb3287cf026b145c",
+      "git_blob_sha": "f595db3a02871dde74105fd1b0d7e283da047271"
     },
     {
       "path": "downloads/SUIJI_Creator_Collaboration_Guide_EN.pdf",
@@ -5137,5 +5137,6 @@
     "Credentials and environment files",
     "Customer/account/order/payment data",
     "Build caches and runtime dependencies"
-  ]
+  ],
+  "Page_content": "25 complete English/French semantic content candidates; private/backend functions remain closed"
 }
