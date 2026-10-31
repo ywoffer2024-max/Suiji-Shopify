@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-31",
+  "status": "PRD and research only; no feature deployment or manufacturing validation",
+  "human_requirements": [
+    {
+      "id": "H1",
+      "source": "direct human conversation",
+      "requirement": "网站增加 AI 辅助设计花饰并与底托搭配，先做 PRD，未来接 Tripo3D API",
+      "covered_by": [
+        "PRD sections 1,7,8"
+      ]
+    },
+    {
+      "id": "H2",
+      "source": "direct human conversation",
+      "requirement": "先查成功 AI 珠宝方法或 skill",
+      "covered_by": [
+        "AI-jewelry-methods-and-skills-v1.md",
+        "skill-vetting-v1.md"
+      ]
+    },
+    {
+      "id": "H3",
+      "source": "direct human conversation",
+      "requirement": "最终必须可 3D 打印且投入生产，要求相对准确并提供打印格式",
+      "covered_by": [
+        "PRD 4,7.5–7.10",
+        "factory-process-intake-v1.md"
+      ]
+    },
+    {
+      "id": "H4",
+      "source": "direct human async reply",
+      "question": "花饰最终准备怎样生产？",
+      "answer": "可能是1和2",
+      "mapping": {
+        "1": "先树脂打样，再由工厂确认正式工艺",
+        "2": "直接用钛等金属3D打印"
+      },
+      "interpretation": "Keep both possible process profiles independent; not proof either has been selected or qualified",
+      "covered_by": [
+        "PRD 7.6",
+        "factory-process-intake-v1.md"
+      ]
+    },
+    {
+      "id": "H5",
+      "source": "earlier direct human conversation",
+      "requirement": "一个版本上传一个版本到 GitHub",
+      "covered_by": [
+        "versioned delivery; website owner backup handoff"
+      ]
+    },
+    {
+      "id": "H6",
+      "source": "earlier direct human conversation",
+      "requirement": "工作台表面静态照片使用最终展示角度之一",
+      "covered_by": [
+        "PRD 7.1,7.3 R05"
+      ]
+    }
+  ],
+  "constraints": {
+    "immutable_T7": true,
+    "unique_native_owner": true,
+    "no_paid_generation": true,
+    "no_new_skill_installation": true,
+    "no_Blender_or_GPU_launch": true,
+    "no_customer_or_mail_credentials_in_artifacts": true
+  },
+  "unresolved_dependencies": [
+    "Approved native base/interface geometry and critical dimensions",
+    "Factory-signed resin and/or metal process profile",
+    "Pilot ornament templates and approved materials/stones",
+    "Customization quote, lead time and manufacturing-download policy"
+  ]
+}

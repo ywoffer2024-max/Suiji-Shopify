@@ -1,0 +1,65 @@
+{
+  "version": "v0.1",
+  "date": "2026-10-31",
+  "type": "AI ornament research and PRD documentation",
+  "root": "/Volumes/T7/Suiji/SUIJI_AI花饰共创_PRD调研_20261031T085400Z_7de2b129",
+  "status": "Research/PRD reviewed; no AI feature deployed or model/print approval",
+  "backup_allowlist": [
+    {
+      "file": "AI-jewelry-methods-and-skills-v1.md",
+      "bytes": 13014,
+      "sha256": "ab6426a4adb41fc6cf6486fa3b08071e834fd4d411abce16c10942c9015ffe59"
+    },
+    {
+      "file": "PRD-SUIJI-AI-Charm-Studio-v0.1.md",
+      "bytes": 25743,
+      "sha256": "4fdfbeb771ae91033804804b7e20af2b9636c0920a40718d209a2672507e3dfa"
+    },
+    {
+      "file": "skill-vetting-v1.md",
+      "bytes": 7108,
+      "sha256": "22ce4e3bcdc0b1f792b935d1018240c230150ba4435fe49b5ee08cc0c433d6c5"
+    },
+    {
+      "file": "factory-process-intake-v1.md",
+      "bytes": 3700,
+      "sha256": "9a7248d2bbdbd06eae4a3858c6a607c40c51b2d765d6aa45cfe217bb3631bfbd"
+    },
+    {
+      "file": "SUIJI-AI-Charm-Studio-v0.1.html",
+      "bytes": 67343,
+      "sha256": "e7b624102f5dab08fde5ff1aea678480385edc7ccfff4ae52d45639494abecd0"
+    },
+    {
+      "file": "source-evidence-v1.json",
+      "bytes": 5177,
+      "sha256": "bb250350d0e494156146464b52c3d92c3a1388c35e48e7ba6130b294b93863c6"
+    },
+    {
+      "file": "requirements-traceability-v1.json",
+      "bytes": 2438,
+      "sha256": "cbc8dd91d99e41ce67d6eca0147d7c4727067172d95ef1537ae392e170005c9f"
+    },
+    {
+      "file": "skills-cli-discovery-v1.json",
+      "bytes": 8435,
+      "sha256": "e2c74d484440c7642101e5da3e3e91ef17dbb2197f34a9eb121ed477e3b7f5ec"
+    },
+    {
+      "file": "document-review-receipt-v1.json",
+      "bytes": 1394,
+      "sha256": "6b004f9d72cf1a0b2bc7a456e4825c90c34a74cfe6ee1e7d220017f7bc2b9ca9"
+    },
+    {
+      "file": "review-desktop-v1.png",
+      "bytes": 45046,
+      "sha256": "81c2e503f808ccfdf1379c31b3372f7536a97b26903804ced3650dfbb3e9bc37"
+    }
+  ],
+  "excluded_from_Git": [
+    "Pinned untrusted skill source audit files retained only on T7",
+    "Customer uploads, credentials, paid generated models: none produced"
+  ],
+  "backup_request": "Upload this document version to GitHub and read back commit and all allowlisted blobs",
+  "protected_T7": "new files only; no deletion/overwrite"
+}

@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-31",
+  "commands": [
+    "npx --yes skills find tripo",
+    "npx --yes skills find jewelry",
+    "npx --yes skills find '3d configurator'",
+    "npx --yes skills find cadquery",
+    "npx --yes skills find freecad"
+  ],
+  "results": [
+    {
+      "query": "tripo",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "fb8b47",
+          "wall_time_seconds": 5.917e-06,
+          "exit_code": 0,
+          "original_token_count": 250,
+          "output": "\n\u001b[38;5;102mInstall with\u001b[0m npx skills add <owner/repo@skill>\n\n\u001b[38;5;145mmajidmanzarpour/threejs-game-skills@threejs-3d-generator\u001b[0m \u001b[36m3.6K installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/majidmanzarpour/threejs-game-skills/threejs-3d-generator\u001b[0m\n\n\u001b[38;5;145mscenario-labs/skills@scenario-3d-worlds\u001b[0m \u001b[36m469 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/scenario-labs/skills/scenario-3d-worlds\u001b[0m\n\n\u001b[38;5;145mscenario-labs/skills@scenario-godot-3d-world\u001b[0m \u001b[36m181 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/scenario-labs/skills/scenario-godot-3d-world\u001b[0m\n\n\u001b[38;5;145mcalesthio/generative-media-skills@tripo-3d\u001b[0m \u001b[36m126 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/calesthio/generative-media-skills/tripo-3d\u001b[0m\n\n\u001b[38;5;145mhtlin222/dotfiles@tripod-check\u001b[0m \u001b[36m20 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/htlin222/dotfiles/tripod-check\u001b[0m\n\n\u001b[38;5;145mokou-ai/okou-skills@tripo\u001b[0m \u001b[36m17 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/okou-ai/okou-skills/tripo\u001b[0m\n\n"
+        }
+      },
+      "note": "Discovery only; no skills add/installation."
+    },
+    {
+      "query": "jewelry",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "08e6c2",
+          "wall_time_seconds": 2.375e-06,
+          "exit_code": 0,
+          "original_token_count": 284,
+          "output": "\n\u001b[38;5;102mInstall with\u001b[0m npx skills add <owner/repo@skill>\n\n\u001b[38;5;145msamuraigpt/generative-media-skills@muapi-jewelry-product-video\u001b[0m \u001b[36m664 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/samuraigpt/generative-media-skills/muapi-jewelry-product-video\u001b[0m\n\n\u001b[38;5;145mskills.volces.com@jewelry-ad-video-spoken\u001b[0m \u001b[36m18 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/skills.volces.com/jewelry-ad-video-spoken\u001b[0m\n\n\u001b[38;5;145maiunlocked1412/claude-skill-unlock@jewelry-designer\u001b[0m \u001b[36m11 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/aiunlocked1412/claude-skill-unlock/jewelry-designer\u001b[0m\n\n\u001b[38;5;145mai-hub-admin/craftsman-agent@jewelry-designer\u001b[0m \u001b[36m5 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/ai-hub-admin/craftsman-agent/jewelry-designer\u001b[0m\n\n\u001b[38;5;145mapimageorg/apimage-skills@jewelry-reflective-products\u001b[0m \u001b[36m4 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/apimageorg/apimage-skills/jewelry-reflective-products\u001b[0m\n\n\u001b[38;5;145mdnh33/webshop-ux-expert@jewelry-dropshipping-intelligence\u001b[0m \u001b[36m3 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/dnh33/webshop-ux-expert/jewelry-dropshipping-intelligence\u001b[0m\n\n"
+        }
+      },
+      "note": "Discovery only; no skills add/installation."
+    },
+    {
+      "query": "3d configurator",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "6c34a3",
+          "wall_time_seconds": 5.583e-06,
+          "exit_code": 0,
+          "original_token_count": 260,
+          "output": "\n\u001b[38;5;102mInstall with\u001b[0m npx skills add <owner/repo@skill>\n\n\u001b[38;5;145mfreshtechbro/claudedesignskills@threejs-webgl\u001b[0m \u001b[36m4.7K installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/freshtechbro/claudedesignskills/threejs-webgl\u001b[0m\n\n\u001b[38;5;145mfreshtechbro/claudedesignskills@react-three-fiber\u001b[0m \u001b[36m3.9K installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/freshtechbro/claudedesignskills/react-three-fiber\u001b[0m\n\n\u001b[38;5;145mdavila7/claude-code-templates@3d-web-experience\u001b[0m \u001b[36m1.3K installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/davila7/claude-code-templates/3d-web-experience\u001b[0m\n\n\u001b[38;5;145mmrgoonie/claudekit-skills@threejs\u001b[0m \u001b[36m1.3K installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/mrgoonie/claudekit-skills/threejs\u001b[0m\n\n\u001b[38;5;145msamhvw8/dot-claude@3d-graphics\u001b[0m \u001b[36m86 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/samhvw8/dot-claude/3d-graphics\u001b[0m\n\n\u001b[38;5;145momer-metin/skills-for-antigravity@3d-web-experience\u001b[0m \u001b[36m55 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/omer-metin/skills-for-antigravity/3d-web-experience\u001b[0m\n\n"
+        }
+      },
+      "note": "Discovery only; no skills add/installation."
+    },
+    {
+      "query": "cadquery",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "9a89fb",
+          "wall_time_seconds": 1.3083e-05,
+          "exit_code": 0,
+          "original_token_count": 268,
+          "output": "\n\u001b[38;5;102mInstall with\u001b[0m npx skills add <owner/repo@skill>\n\n\u001b[38;5;145mflowful-ai/cad-skill@parametric-3d-printing\u001b[0m \u001b[36m242 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/flowful-ai/cad-skill/parametric-3d-printing\u001b[0m\n\n\u001b[38;5;145mtangency-labs/solidcraft@solidcraft-checking\u001b[0m \u001b[36m34 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/tangency-labs/solidcraft/solidcraft-checking\u001b[0m\n\n\u001b[38;5;145mfandhe-ai/agent-reference-skills@cadquery\u001b[0m \u001b[36m25 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/fandhe-ai/agent-reference-skills/cadquery\u001b[0m\n\n\u001b[38;5;145manson2251/cad-drawing-to-model-skill@cad-drawing-to-model\u001b[0m \u001b[36m9 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/anson2251/cad-drawing-to-model-skill/cad-drawing-to-model\u001b[0m\n\n\u001b[38;5;145mlukeoishi/engineering-agent-skills@hardware-cad-pipeline\u001b[0m \u001b[36m9 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/lukeoishi/engineering-agent-skills/hardware-cad-pipeline\u001b[0m\n\n\u001b[38;5;145mbrentvatne/design-3d-prints@cadquery\u001b[0m \u001b[36m8 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/brentvatne/design-3d-prints/cadquery\u001b[0m\n\n"
+        }
+      },
+      "note": "Discovery only; no skills add/installation."
+    },
+    {
+      "query": "freecad",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "f92ec0",
+          "wall_time_seconds": 5.625e-06,
+          "exit_code": 0,
+          "original_token_count": 249,
+          "output": "\n\u001b[38;5;102mInstall with\u001b[0m npx skills add <owner/repo@skill>\n\n\u001b[38;5;145mgithub/awesome-copilot@freecad-scripts\u001b[0m \u001b[36m1.2K installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/github/awesome-copilot/freecad-scripts\u001b[0m\n\n\u001b[38;5;145mhkuds/cli-anything@cli-anything-freecad\u001b[0m \u001b[36m665 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/hkuds/cli-anything/cli-anything-freecad\u001b[0m\n\n\u001b[38;5;145mjablonkai/skills@freecad\u001b[0m \u001b[36m63 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/jablonkai/skills/freecad\u001b[0m\n\n\u001b[38;5;145mcai-aa/freecad-automation-skill@freecad-automation\u001b[0m \u001b[36m9 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/cai-aa/freecad-automation-skill/freecad-automation\u001b[0m\n\n\u001b[38;5;145mqwenlm/qwen-mm-plugins@qwen-mm-plugins-freecad\u001b[0m \u001b[36m9 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/qwenlm/qwen-mm-plugins/qwen-mm-plugins-freecad\u001b[0m\n\n\u001b[38;5;145mbradsjm/freecad-embedded-mcp@freecad-mcp\u001b[0m \u001b[36m7 installs\u001b[0m\n\u001b[38;5;102m└ https://skills.sh/bradsjm/freecad-embedded-mcp/freecad-mcp\u001b[0m\n\n"
+        }
+      },
+      "note": "Discovery only; no skills add/installation."
+    }
+  ],
+  "plugin_catalogue_search": {
+    "query": "Tripo",
+    "plugins": [],
+    "actual_package_vetting": "not available; not audited"
+  }
+}

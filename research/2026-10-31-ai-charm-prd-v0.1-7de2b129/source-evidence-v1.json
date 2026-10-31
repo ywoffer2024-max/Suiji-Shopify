@@ -1,0 +1,126 @@
+{
+  "date": "2026-10-31",
+  "sources": [
+    {
+      "id": "CASE-JEVAR",
+      "url": "https://altr.nyc/blogs/corporate/can-generative-ai-help-online-retailers-design-better-products",
+      "type": "brand-official republication of first-hand interview",
+      "supports": "Brand adoption and human-led design; no independently verified yield/revenue metrics"
+    },
+    {
+      "id": "CASE-DELMAR",
+      "url": "https://www.jewellerybusiness.com/features/a-case-study-in-ai-jewellery-design/",
+      "type": "first-hand design-director interview",
+      "supports": "AI creative details followed by manual 3D design; final images explicitly manually rendered"
+    },
+    {
+      "id": "CASE-GIA",
+      "url": "https://www.gia.edu/gems-gemology/fall-2024-artificial-intelligence-in-jewelry-design",
+      "type": "primary academic article",
+      "supports": "Real-source ideation workflow and manufacturing limitations; 2024 comparisons not current benchmarks"
+    },
+    {
+      "id": "CASE-KINEMATICS",
+      "url": "https://n-e-r-v-o-u-s.com/projects/kinematics/kinematics-jewelry/",
+      "type": "creator official project",
+      "supports": "Actual SLS nylon articulated jewelry, not generative AI or titanium"
+    },
+    {
+      "id": "CASE-KINEMATICS-UI",
+      "url": "https://n-e-r-v-o-u-s.com/kinematics/?t=2",
+      "type": "creator official configurator",
+      "supports": "Bounded parameter customization"
+    },
+    {
+      "id": "PRODUCT-JEWELER-STUDIO",
+      "url": "https://jewelerstudio.ai/",
+      "type": "vendor official product",
+      "supports": "Image design, website embedding and leads; vendor performance claims unverified"
+    },
+    {
+      "id": "CASE-JEWELBENCH",
+      "url": "https://www.ideas2it.com/case-studies/ai-cad-modeling-jewelry",
+      "type": "vendor case study",
+      "supports": "Multi-stage generation and processing architecture; production precision claim not independently verified"
+    },
+    {
+      "id": "NOT-ENOUGH-JULER",
+      "url": "https://juler.ai/",
+      "type": "official landing page",
+      "supports": "Insufficient current public product/output specification"
+    },
+    {
+      "id": "TRIPO-INTRO",
+      "url": "https://developers.tripo3d.ai/en/docs/introduction",
+      "type": "official technical documentation",
+      "supports": "v3 international API routes and async statuses"
+    },
+    {
+      "id": "TRIPO-SDK",
+      "url": "https://developers.tripo3d.com/en/docs/sdk",
+      "type": "official technical documentation",
+      "supports": "v2 planned sunset date, v3 SDK versions and region handling"
+    },
+    {
+      "id": "TRIPO-CHANGELOG",
+      "url": "https://github.com/Tripo-Developer/tripo-python-sdk/blob/master/CHANGELOG.md",
+      "type": "official SDK source",
+      "supports": "v1.0.0 API v3 migration and retired capabilities",
+      "git_blob_sha": "25655e8e72143f43bfaa66fb8d98cdd5372d4b52"
+    },
+    {
+      "id": "TRIPO-CONVERT",
+      "url": "https://developers.tripo3d.com/en/docs/models-convert",
+      "type": "official technical documentation",
+      "supports": "STL/3MF conversion options; internal color contradiction noted, not resolved by assumption"
+    },
+    {
+      "id": "TRIPO-WEBHOOKS",
+      "url": "https://developers.tripo3d.com/en/docs/webhooks",
+      "type": "official technical documentation",
+      "supports": "HMAC signed callbacks and delivery deduplication"
+    },
+    {
+      "id": "TRIPO-CLI",
+      "url": "https://developers.tripo3d.com/en/docs/cli",
+      "type": "official technical documentation",
+      "supports": "CLI vs website/API use; not installed"
+    },
+    {
+      "id": "TRIPO-CODEX",
+      "url": "https://developers.tripo3d.com/en/docs/codex-plugin",
+      "type": "official product guide",
+      "supports": "Official plugin described; live catalogue search no match; actual install package not audited"
+    },
+    {
+      "id": "TRIPO-JEWELRY",
+      "url": "https://www.tripo3d.ai/blog/jewelry-3d-generator",
+      "type": "vendor official jewelry workflow",
+      "supports": "Candidate mesh workflow and manufacturing checks, not CAD guarantee"
+    },
+    {
+      "id": "FORMAT-3MF",
+      "url": "https://github.com/3MFConsortium/spec_core/blob/master/3MF%20Core%20Specification.md",
+      "type": "official format specification",
+      "supports": "Explicit unit field and default millimeter"
+    },
+    {
+      "id": "FORMAT-CADQUERY",
+      "url": "https://cadquery.readthedocs.io/en/latest/importexport.html",
+      "type": "official technical documentation",
+      "supports": "STEP/STL/3MF exports, units and parametric source limits"
+    },
+    {
+      "id": "FORMAT-PRUSA",
+      "url": "https://help.prusa3d.com/article/supported-file-formats_1772",
+      "type": "official slicer documentation",
+      "supports": "Supported formats and STEP triangulation; no claim that all factories accept them"
+    },
+    {
+      "id": "PROCESS-FORMLABS",
+      "url": "https://formlabs.com/support/Using-Castable-Wax-Resin/?language=en_US",
+      "type": "manufacturer official material guidance",
+      "supports": "Prototype/fitting use distinct from final functional parts; settings material-specific"
+    }
+  ]
+}

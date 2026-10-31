@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-10-31T09:17:44.402195+00:00",
+  "kind": "Documentation consistency and read-only browser review, not independent engineering approval",
+  "html": "SUIJI-AI-Charm-Studio-v0.1.html",
+  "source_documents": 4,
+  "unique_dom_ids": 50,
+  "broken_internal_anchors": [],
+  "tables": 20,
+  "uneven_table_rows": 0,
+  "local_file_links": 7,
+  "missing_local_files": 0,
+  "browser": {
+    "type": "iab",
+    "tab": "18",
+    "viewport": {
+      "width": 1084,
+      "height": 610
+    },
+    "tabs_verified": [
+      "research",
+      "prd",
+      "factory",
+      "skills"
+    ],
+    "all_tab_switches_passed": true,
+    "document_horizontal_overflow": false,
+    "mobile_render": "not executed",
+    "screenshot": "review-desktop-v1.png"
+  },
+  "manufacturing_tests_executed": false,
+  "API_generation_tests_executed": false,
+  "known_dependencies": [
+    "Approved base/interface native source",
+    "Factory process profiles and tolerances",
+    "Physical resin sample and/or metal first article"
+  ],
+  "skills": {
+    "remote_files_git_blob_SHA_and_SHA256_verified": 16,
+    "source_manifest_SHA256": "4ba2f7eb139a12260b157cdc96b7fa1bf555b589bcc84533131645b309b3895e",
+    "installed": []
+  },
+  "local_preview_server": {
+    "bind": "127.0.0.1",
+    "port": 55441,
+    "owner": "this task",
+    "session_id": 49790,
+    "purpose": "user-facing read-only document preview"
+  }
+}
