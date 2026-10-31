@@ -159,3 +159,6 @@
   outline: 2px solid var(--suiji-accent, #315a73);
   outline-offset: 2px;
 }
+
+/* Full system name; wrap deliberately instead of squeezing the other entrances. */
+@media(min-width:990px){.header__inline-menu #HeaderMenu-core-lock,.header__inline-menu #HeaderMenu-the-mechanism{max-inline-size:17rem;line-height:1.3;text-wrap:balance}}

@@ -14,3 +14,15 @@
 .suiji-info__sizes span{font-size:1.2rem;line-height:1.4;overflow-wrap:anywhere}
 .suiji-info__sizes .suiji-info__size--initial{border:2px solid rgb(var(--color-foreground));color:rgb(var(--color-foreground))}
 .suiji-info__filters button{min-height:44px}.suiji-info__intro,.suiji-info__set,.suiji-info__detail-grid>div{min-width:0;overflow-wrap:break-word}
+
+.suiji-wear-media{max-width:1240px;padding-block:0 64px;color:rgb(var(--color-foreground))}
+.suiji-wear-media__section{margin-block:0 64px;min-width:0}
+.suiji-wear-media__section header{max-width:70ch;margin-block-end:24px}
+.suiji-wear-media__section h2{font-size:clamp(2.8rem,3.5vw,4.4rem);line-height:1.2;margin:0 0 16px}
+.suiji-wear-media__section p{font-size:1.6rem;line-height:1.7}
+.suiji-wear-media figure{margin:0;min-width:0}
+.suiji-wear-media img,.suiji-wear-media video{display:block;width:100%;height:auto;max-height:80vh;object-fit:contain;background:#fff}
+.suiji-wear-media figcaption{font-size:1.3rem;line-height:1.6;margin-block:12px 0}
+.suiji-wear-media a{display:inline-flex;align-items:center;min-height:44px;color:inherit;text-underline-offset:4px;margin-block-start:12px}
+.suiji-wear-media a:focus-visible{outline:2px solid #315a73;outline-offset:4px}
+@media(max-width:599px){.suiji-wear-media{padding-block-end:32px}.suiji-wear-media__section{margin-block-end:40px}}

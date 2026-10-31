@@ -244,3 +244,13 @@ body.suiji-mvp-root.template-page #MainContent h1{font-family:var(--suiji-displa
 .sc-context-guide{margin-block:1.6rem}.sc-context-guide a{text-underline-offset:.4rem}
 .sc-load-error{font-size:1.4rem;line-height:1.65;padding:1.6rem;background:#eaf1f5}
 @media(max-width:599px){.sc-component-summary{padding:1.5rem 0}.sc-component-summary ul,.sc-component-summary p{font-size:1.4rem}.sc-ssr-product .sc-pdp-story{margin-top:2.4rem}}
+
+/* Clear purchase boundaries, without adding option controls. */
+.sc-purchase-notes{margin-block:1.6rem;padding:1.6rem;background:#eaf1f5;font-size:1.4rem;line-height:1.65;min-width:0}
+.sc-purchase-notes p{margin:0 0 1.2rem;font-size:inherit;line-height:inherit}
+.sc-purchase-notes__links{display:flex;flex-wrap:wrap;gap:.8rem 1.6rem;margin-block:.4rem 1.2rem}
+.sc-purchase-notes a{color:inherit;text-underline-offset:.3rem;overflow-wrap:break-word}
+.sc-purchase-notes__links a{display:inline-flex;align-items:center;min-height:4.4rem}
+.sc-purchase-notes__measurements{display:inline-flex;align-items:center;min-height:4.4rem}
+.sc-purchase-notes a:focus-visible{outline:2px solid #315a73;outline-offset:3px}
+.sc-ssr-product .sc-purchase-notes{font-size:1.4rem}

@@ -538,8 +538,8 @@
   },
   "suiji_navigation": {
     "labels": {
-      "core_lock": "Core-Lock",
-      "discover_core_lock": "Discover Core-Lock",
+      "core_lock": "Core-Lock & Modular System",
+      "discover_core_lock": "Explore the modular system",
       "how_it_works": "How It Works",
       "jewelry_bases": "Jewelry Bases",
       "pendant_bases": "Pendant Bases",
@@ -627,7 +627,7 @@
       "s06_limit": "The four possible charm positions share two charms. This set does not fully decorate both ears, the necklace and the ring simultaneously. The two pendant bases are also reused."
     },
     "core": {
-      "title": "Discover Core-Lock",
+      "title": "Core-Lock & Modular System",
       "intro": "A starting point for combining jewellery bases and interchangeable charms. Choose the base for where you want to wear it, then a charm designed for that base.",
       "how_title": "How it works",
       "step1_title": "Choose a base",
@@ -659,7 +659,7 @@
     },
     "seo": {
       "sets_description": "Explore six SUIJI sets with complete piece lists, individual piece counts and ways to reuse the same charms across compatible bases.",
-      "core_description": "Discover SUIJI Core-Lock: choose a jewellery base, select a compatible charm and reuse the same pieces in different compositions.",
+      "core_description": "Discover the SUIJI Core-Lock modular system. Choose a jewelry base, add a compatible charm and check the parts you need for each composition.",
       "bases_description": "Explore SUIJI pendant, stud earring and ring bases. Check what is included and read the ring size guide in millimetres.",
       "charms_description": "Explore SUIJI interchangeable charms, stone and frame colour choices, included quantities and compatibility with specific jewellery bases.",
       "catalog_description": "Explore SUIJI jewellery bases, interchangeable charms and six planned sets. View the contents and compatibility guidance while purchasing is paused."
@@ -961,6 +961,33 @@
     "counts": "pieces",
     "more": "View piece",
     "stone": "Moissanite",
+    "purchase": {
+      "title": "Before you add",
+      "compatible": "Core-Lock compatible",
+      "separate": "Sold separately",
+      "charm_extra": "A compatible SUIJI base with Core-Lock. The base is not included with this ornament.",
+      "base_extra": "Interchangeable ornaments. Choose them separately to change the look.",
+      "adapter_extra": "Core-Lock is not included. An additional attachment is needed for an interchangeable composition.",
+      "existing": "Already have a Core-Lock base?",
+      "browse": "Explore compatible ornaments",
+      "choose_base": "Choose a base for this ornament",
+      "rings": "Ring bases",
+      "stud": "Stud base",
+      "pendant": "Pendant base",
+      "complete": "Explore complete sets",
+      "measurements": "Ask about dimensions or weight",
+      "two_title": "One piece, another way to wear it",
+      "two_alt": "A comparison of two SUIJI arrangements",
+      "cross_title": "An ornament that follows your style",
+      "cross_alt": "SUIJI ornament and compatible wearing arrangements",
+      "video_title": "See how it comes together",
+      "poster_alt": "Core-Lock operation reference",
+      "material_title": "A closer look at the details",
+      "material_alt": "SUIJI material and surface detail",
+      "illustrative": "Illustrative styling reference. Check each piece and the parts supplied.",
+      "shared": "Move the same ornaments between arrangements; the included pieces are listed on each set page.",
+      "steps": "Read the step-by-step guide"
+    },
     "categories": {
       "all": "Shop all",
       "rings": "Rings",
@@ -1477,5 +1504,28 @@
   "suiji_about": {
     "wearing_title": "Designed to be worn.",
     "wearing_text": "Customers often tell us our pieces look even better worn than on display. We design with the body in mind, so that lines and colour find their expression through its contours and everyday movement."
+  },
+  "suiji_modular": {
+    "title": "Core-Lock & Modular System",
+    "intro": "Start with a base. Choose a charm. Make the combination your own.",
+    "parts_title": "Bases & Charms",
+    "bases": "Bases",
+    "charms": "Charms",
+    "base_alt": "Illustrative SUIJI modular jewelry composition",
+    "charm_alt": "Illustrative SUIJI necklace and charm composition",
+    "how_title": "Build your own combination",
+    "step1_title": "Start with a base",
+    "step1_text": "Choose where you want to wear it: on your hand, at your ear or as a pendant.",
+    "step2_title": "Choose a charm",
+    "step2_text": "Find a colour, surface or symbol you love. Check the base and the pieces listed with it.",
+    "step3_title": "Change the combination",
+    "step3_text": "Move a compatible charm to another clasp-equipped base. The same charm is worn in one position at a time.",
+    "connection_title": "The connection is Core-Lock",
+    "connection_text": "The base gives a piece its form. The charm gives it a different expression. Core-Lock is the SUIJI multi-use clasp that brings compatible elements together.",
+    "check_title": "Check the pieces before you choose",
+    "check_text": "A base equipped with Core-Lock and a bare hoop are different starting points. Some pieces need an additional attachment; each product page explains the connection and what is supplied.",
+    "sets_cta": "Start with a complete set",
+    "size_cta": "Find your ring size",
+    "seo": "Discover the SUIJI Core-Lock modular system. Choose a jewelry base, add a compatible charm and check the parts you need for each composition."
   }
 }

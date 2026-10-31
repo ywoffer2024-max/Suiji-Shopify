@@ -550,8 +550,8 @@
   },
   "suiji_navigation": {
     "labels": {
-      "core_lock": "Core-Lock",
-      "discover_core_lock": "Découvrir Core-Lock",
+      "core_lock": "Core-Lock et système modulaire",
+      "discover_core_lock": "Découvrir le système modulaire",
       "how_it_works": "Comment ça marche",
       "jewelry_bases": "Bases de bijoux",
       "pendant_bases": "Supports de pendentif",
@@ -639,7 +639,7 @@
       "s06_limit": "Les quatre positions possibles se partagent deux ornements. Cet ensemble ne permet pas de garnir simultanément les deux oreilles, le collier et la bague. Les deux supports sont également réutilisés."
     },
     "core": {
-      "title": "Découvrir Core-Lock",
+      "title": "Core-Lock et système modulaire",
       "intro": "Un point de départ pour associer des bases de bijoux et des ornements interchangeables. Choisissez une base selon l’usage, puis un ornement prévu pour cette base.",
       "how_title": "Comment ça marche",
       "step1_title": "Choisir une base",
@@ -671,7 +671,7 @@
     },
     "seo": {
       "sets_description": "Découvrez six ensembles SUIJI, leurs listes complètes de pièces, leurs quantités et les façons de réutiliser les mêmes ornements sur des bases compatibles.",
-      "core_description": "Découvrez Core-Lock de SUIJI : choisissez une base de bijou et un ornement compatible, puis réutilisez les mêmes pièces dans différentes compositions.",
+      "core_description": "Découvrez le système modulaire Core-Lock de SUIJI. Choisissez une base, ajoutez un ornement compatible et vérifiez les pièces nécessaires à votre composition.",
       "bases_description": "Découvrez les supports de pendentif et les bases de puces et de bagues SUIJI. Consultez leur composition et le guide des tailles en millimètres.",
       "charms_description": "Découvrez les ornements interchangeables SUIJI, leurs couleurs de pierre et de contour, les quantités incluses et les associations compatibles.",
       "catalog_description": "Découvrez les bases de bijoux, les ornements interchangeables et les six ensembles prévus par SUIJI. Consultez les compositions pendant la suspension des achats."
@@ -973,6 +973,33 @@
     "counts": "pièces",
     "more": "Voir la pièce",
     "stone": "Moissanite",
+    "purchase": {
+      "title": "Avant d’ajouter au panier",
+      "compatible": "Compatibles Core-Lock",
+      "separate": "Vendus séparément",
+      "charm_extra": "Un support SUIJI compatible équipé de Core-Lock. Le support n’est pas inclus avec cet ornement.",
+      "base_extra": "Les ornements interchangeables. Choisissez-les séparément pour changer de composition.",
+      "adapter_extra": "Core-Lock n’est pas inclus. Une attache supplémentaire est nécessaire pour une composition interchangeable.",
+      "existing": "Vous avez déjà un support Core-Lock ?",
+      "browse": "Découvrir les ornements compatibles",
+      "choose_base": "Choisir un support pour cet ornement",
+      "rings": "Supports de bague",
+      "stud": "Support de puce",
+      "pendant": "Support de pendentif",
+      "complete": "Découvrir les ensembles complets",
+      "measurements": "Une question sur les dimensions ou le poids",
+      "two_title": "Une pièce, une autre façon de la porter",
+      "two_alt": "Deux compositions SUIJI présentées côte à côte",
+      "cross_title": "Un ornement qui suit votre style",
+      "cross_alt": "Un ornement SUIJI et ses compositions compatibles",
+      "video_title": "Voir comment les pièces se composent",
+      "poster_alt": "Repère visuel du fonctionnement de Core-Lock",
+      "material_title": "Les détails de plus près",
+      "material_alt": "Détail de la matière et de la surface SUIJI",
+      "illustrative": "Suggestion de composition illustrative. Vérifiez chaque pièce et les éléments fournis.",
+      "shared": "Déplacez les mêmes ornements entre les compositions ; les pièces incluses figurent sur la page de chaque ensemble.",
+      "steps": "Lire les étapes"
+    },
     "categories": {
       "all": "Tous les bijoux",
       "rings": "Bagues",
@@ -1489,5 +1516,28 @@
   "suiji_about": {
     "wearing_title": "Pensés pour être portés.",
     "wearing_text": "Nos clientes et clients nous disent souvent que nos bijoux sont encore plus beaux portés que présentés seuls. Nous créons en pensant au corps, pour que les lignes et les couleurs s’expriment au contact de ses contours et de ses mouvements quotidiens."
+  },
+  "suiji_modular": {
+    "title": "Core-Lock et système modulaire",
+    "intro": "Une base. Un ornement. Une composition qui vous ressemble.",
+    "parts_title": "Bases et ornements",
+    "bases": "Bases",
+    "charms": "Ornements",
+    "base_alt": "Composition de bijoux modulaires SUIJI, visuel illustratif",
+    "charm_alt": "Composition SUIJI avec collier et ornement, visuel illustratif",
+    "how_title": "Composez à votre façon",
+    "step1_title": "Commencez par une base",
+    "step1_text": "Choisissez où porter votre bijou : à la main, à l’oreille ou en pendentif.",
+    "step2_title": "Choisissez un ornement",
+    "step2_text": "Trouvez une couleur, une surface ou un symbole qui vous plaît. Vérifiez la base et les pièces qui l’accompagnent.",
+    "step3_title": "Changez de composition",
+    "step3_text": "Déplacez un ornement compatible vers une autre base équipée du fermoir. Le même ornement se porte à une seule position à la fois.",
+    "connection_title": "Le lien, c’est Core-Lock",
+    "connection_text": "La base donne sa forme au bijou. L’ornement lui apporte une autre expression. Core-Lock est le fermoir multi-usage SUIJI qui réunit les éléments compatibles.",
+    "check_title": "Vérifiez les pièces avant de choisir",
+    "check_text": "Une base équipée de Core-Lock et une créole seule sont deux points de départ différents. Certaines pièces nécessitent une attache supplémentaire ; chaque fiche explique la connexion et les éléments fournis.",
+    "sets_cta": "Commencer par un ensemble complet",
+    "size_cta": "Trouver votre taille de bague",
+    "seo": "Découvrez le système modulaire Core-Lock de SUIJI. Choisissez une base, ajoutez un ornement compatible et vérifiez les pièces nécessaires à votre composition."
   }
 }
