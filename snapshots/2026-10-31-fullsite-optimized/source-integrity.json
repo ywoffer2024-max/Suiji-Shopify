@@ -1,18 +1,18 @@
 {
-  "state": "published_About_minimal_human_copy_and_native_Atom_supplement",
-  "utc": "2026-10-31T08:53:53.841617+00:00",
+  "state": "published_native_Contact_email_About_wearing_and_Atom_supplement",
+  "utc": "2026-10-31T09:03:38.902937+00:00",
   "files": [
     {
       "path": "MAINTENANCE.md",
-      "bytes": 7078,
-      "sha256": "c7fd4e2286e62eb95455aaf39750b6caa5054bb3b06440801ac30355e191df2e",
-      "git_sha": "ec447198ff9de160e72aac46308e293b53bf6422"
+      "bytes": 7455,
+      "sha256": "0314db0e1cb26166a4bebcc1f6c64ef1b4c2ce1b98332dbab5471eed00fa6b8d",
+      "git_sha": "76043ac88dbbccb74baf144cc5ffef4c15ac30cb"
     },
     {
       "path": "README.md",
-      "bytes": 4324,
-      "sha256": "42b6ee8e4f998281c726f1ce81ba56bbd6a5e27822821b46db06136a4b71f08d",
-      "git_sha": "be8764d445cc414476e31980fe62b7822e9e60e9"
+      "bytes": 4787,
+      "sha256": "947fd95141a6307f85facf6c659b2392e223db8a80881893cc7b56018c0aa982",
+      "git_sha": "20aff6c31ebd3c962f11de2462f2a759e592e809"
     },
     {
       "path": "catalogue/products.json",
@@ -377,10 +377,22 @@
       "known_existing_git_blob": false
     },
     {
+      "path": "pages/en/contact.html",
+      "bytes": 286,
+      "sha256": "32dfeb8c55af8c9a71358958f19529df28b93adc35f506c4e1d5df5f531cc85c",
+      "git_sha": "395786759449d2542db5335bedf4843974e8d112"
+    },
+    {
+      "path": "pages/fr/contact.html",
+      "bytes": 297,
+      "sha256": "8c558e72ccc581cc31b64ec3ad21cf7881b18f89228553c8b6f744a3f9047539",
+      "git_sha": "09bf947da786cce1f413cb62619f83c4d12d23db"
+    },
+    {
       "path": "release-status.json",
-      "bytes": 1582,
-      "sha256": "85e6ddbd17d8f70008046811b88aa28ffd04b500d6528c6fce980ce7c8fa4dd7",
-      "git_sha": "d19f718da75320b87042ac5e005ad8d95452dcbc"
+      "bytes": 2452,
+      "sha256": "36fa9b589b118af65907de31c13ab7600088a6d88b56731bb4b687ea82aaefd1",
+      "git_sha": "7a062ea090912a3ca1f8c7426701ca68630c9c56"
     },
     {
       "path": "theme/assets/animations.js",

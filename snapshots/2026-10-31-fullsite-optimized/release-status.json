@@ -1,6 +1,6 @@
 {
-  "utc": "2026-10-31T08:53:53.841617+00:00",
-  "state": "published_About_minimal_human_copy_and_native_Atom_supplement",
+  "utc": "2026-10-31T09:03:38.902937+00:00",
+  "state": "published_native_Contact_email_About_wearing_and_Atom_supplement",
   "theme_files": 693,
   "touched_theme_sources_matched": 262,
   "actual_source_index_sha256": "d98a0c687bf342f42a63b7458d99a5b5017b2c48f1542d06896a43f45c0a6baf",
@@ -18,10 +18,31 @@
   ],
   "robots_future_managed_rule_review_required": true,
   "single_native_Article_refresh": "Exactly2saves, originaltags/publishedAt/body/SEO/author/ID/URL preserved; no sitemap improvement; no bulk repeat",
-  "support": "Explicitlyauthorized officialsupport request sent; no completed case/regeneration claim",
+  "support": "Human advisor consulted; no manual regeneration available to support. Recheck native XML after 2026-11-01 07:33 UTC; escalate if still missing. No completed native XML repair/indexing claim.",
   "About": "Originalbody/portraitplusoneapprovedwearingparagraph",
   "commerce": "Labelled demo; illustrativeEUR99; no real order/payment",
   "validation": "Existing204URLs/50articlebodies; narrowcurrentpublicrobots/source andAbout checks; no GSC/Safari/CWV/commercialcertification",
   "ThemeCheck": "ActiveENFR/code0errors; retainedotherlocaleissues/136warnings in latestAbout context",
-  "export_scope": "Intendedpublicsourceandbodiesonly; nocredentials/privatepricing/customer/orderdata ormailaccountsecrets"
+  "export_scope": "Intendedpublicsourceandbodiesonly; nocredentials/privatepricing/customer/orderdata ormailaccountsecrets",
+  "customer_care_email": "contact@suijijewelry.com",
+  "Contact": {
+    "native_page_id": "708296474964",
+    "native_handle": "contact",
+    "EN_FR_body_only_expected_email_transform": true,
+    "public_form_fields_and_routes_preserved": true,
+    "real_email_delivery_verified": false,
+    "mailbox_sender_DNS_changes_in_this_release": false
+  },
+  "official_support": {
+    "human_contact_completed": true,
+    "separate_case_number_issued": false,
+    "reference": "Chat conversation",
+    "manual_native_sitemap_regeneration_available_to_advisor": false,
+    "advisor_recommended_first_recheck_UTC": "2026-11-01T07:33:00Z",
+    "advisor_reported_usual_window_hours": [
+      24,
+      48
+    ],
+    "platform_job_internals_independently_verified": false
+  }
 }
