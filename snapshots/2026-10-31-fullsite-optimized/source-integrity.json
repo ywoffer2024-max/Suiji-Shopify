@@ -1,6 +1,6 @@
 {
-  "state": "Actual native SEO title v2, after matching Shopify blog/handle form",
-  "utc": "2026-10-31T08:11:30.134610+00:00",
+  "state": "Actual base role filter; same-document navigation followup remains separate",
+  "utc": "2026-10-31T08:11:30.146692+00:00",
   "files": [
     {
       "path": "MAINTENANCE.md",
@@ -382,9 +382,9 @@
     },
     {
       "path": "release-status.json",
-      "bytes": 1110,
-      "sha256": "79c3391108061b9ff40840e7588d279528175a2afb0655006653c7e558ca03fe",
-      "git_sha": "4c973662979cf4e02ccf759efa2ef5df55d2d2c3"
+      "bytes": 1118,
+      "sha256": "7735774ef736316859d4c43a5e743b51b16bc7a2f34ef75f0024e15f0d76f7cb",
+      "git_sha": "d128593267eb7357acb127a62d164f674f5bbaaf"
     },
     {
       "path": "theme/assets/animations.js",
@@ -1998,10 +1998,9 @@
     },
     {
       "path": "theme/assets/suiji-commerce.js",
-      "bytes": 62941,
-      "sha256": "0a4cc5fae97232e80184a93efb44cf47bafe0ab168b72605258fe5736e15b5b3",
-      "git_sha": "191ec7e6d78697af9c7bb7af46fbb22f00dfed12",
-      "known_existing_git_blob": false
+      "bytes": 63162,
+      "sha256": "e60e520baf34a95d2b86e8317395209e1ef76bc2ba53bce8756d7cd01f7afd49",
+      "git_sha": "1c1f97942b0622f3bca0b5d2d3578eb9e43ce3a0"
     },
     {
       "path": "theme/assets/suiji-designer-chunyu-wen-v40.jpeg",
