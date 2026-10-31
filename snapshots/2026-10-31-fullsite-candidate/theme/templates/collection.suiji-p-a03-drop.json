@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "suiji-commerce-product",
+      "settings": {
+        "product_key": "a03-drop"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,23 @@
+<section class="suiji-section suiji-paths">
+  <div class="suiji-shell">
+    <div class="suiji-paths__header"><h2 class="suiji-title">{{ 'suiji_navigation.core.how_title' | t }}</h2></div>
+    <div class="suiji-paths__grid">
+      <a class="suiji-path" href="{% render 'suiji-localized-menu-url', url: '/pages/bases' %}"><h3 class="suiji-path__title">{{ 'suiji_navigation.core.step1_title' | t }}</h3><p class="suiji-path__text">{{ 'suiji_navigation.core.step1_text' | t }}</p><span class="suiji-path__arrow" aria-hidden="true">↗</span></a>
+      <a class="suiji-path" href="{% render 'suiji-localized-menu-url', url: '/pages/charms' %}"><h3 class="suiji-path__title">{{ 'suiji_navigation.core.step2_title' | t }}</h3><p class="suiji-path__text">{{ 'suiji_navigation.core.step2_text' | t }}</p><span class="suiji-path__arrow" aria-hidden="true">↗</span></a>
+      <a class="suiji-path" href="{% render 'suiji-localized-menu-url', url: '/pages/editions' %}"><h3 class="suiji-path__title">{{ 'suiji_navigation.core.step3_title' | t }}</h3><p class="suiji-path__text">{{ 'suiji_navigation.core.step3_text' | t }}</p><span class="suiji-path__arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "SUIJI need paths",
+  "tag": "section",
+  "class": "section",
+  "presets": [
+    {
+      "name": "SUIJI need paths"
+    }
+  ]
+}
+{% endschema %}
+

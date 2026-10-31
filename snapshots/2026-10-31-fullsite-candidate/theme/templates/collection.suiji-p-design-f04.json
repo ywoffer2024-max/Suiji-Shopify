@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "suiji-commerce-product",
+      "settings": {
+        "product_key": "design-f04"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

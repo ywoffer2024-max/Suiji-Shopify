@@ -1,0 +1,21 @@
+{% doc %}
+Progressive public demo with server-rendered core content and on-demand product details.
+@param {string} [view] - catalogue, product, cart or search.
+@param {string} [category] - Existing wearing category.
+@param {string} [product_key] - Fixed key provided by an alternate template.
+{% enddoc %}
+{%- assign commerce_category = category | default: 'all' -%}
+{%- assign commerce_locale = request.locale.iso_code | split: '-' | first -%}
+{%- assign commerce_detail_file = 'suiji-item-' | append: product_key | append: '.json' -%}
+<div class="suiji-commerce{% if product_key != blank %} sc-pdp{% endif %}" data-suiji-commerce data-catalogue-version="2" data-view="{{ view | default: 'catalogue' }}" data-category="{{ category | default: 'all' }}" data-locale="{{ commerce_locale }}" data-product-key="{{ product_key | escape }}" data-product-src="{% if product_key != blank %}{{ commerce_detail_file | asset_url }}{% endif %}" data-catalogue-src="{{ 'suiji-commerce-index.json' | asset_url }}">
+  {% if product_key != blank %}
+    {% render 'suiji-product-static', product_key: product_key %}
+  {% elsif view == 'catalogue' or view == 'search' %}
+    {% render 'suiji-catalogue-static', category: commerce_category %}
+  {% else %}
+    <div data-server-content><header class="sc-list-head"><h1>{{ 'suiji_storefront.browse' | t }}</h1><p>{{ 'suiji_storefront.demo' | t }}</p></header><p><a href="{% render 'suiji-localized-menu-url', url: '/collections/all' %}">{{ 'suiji_storefront.browse' | t }} →</a></p><p class="sc-loading" role="status">{{ 'suiji_commerce.loading' | t }}</p></div>
+  {% endif %}
+  <div hidden data-commerce-guide>{% render 'suiji-size-guide', guide_id: 'commerce-size-guide', in_dialog: true %}</div>
+  <noscript><p>{{ 'suiji_storefront.no_js' | t }}</p><a href="{% render 'suiji-localized-menu-url', url: '/pages/contact' %}">{{ 'suiji_commerce.contact' | t }}</a></noscript>
+</div>
+<script src="{{ 'suiji-commerce.js' | asset_url }}" defer="defer"></script>

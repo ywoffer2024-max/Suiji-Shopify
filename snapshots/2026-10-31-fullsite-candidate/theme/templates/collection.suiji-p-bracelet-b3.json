@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "suiji-commerce-product",
+      "settings": {
+        "product_key": "bracelet-b3"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

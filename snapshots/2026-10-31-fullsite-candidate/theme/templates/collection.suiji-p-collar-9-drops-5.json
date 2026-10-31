@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "suiji-commerce-product",
+      "settings": {
+        "product_key": "collar-9-drops-5"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

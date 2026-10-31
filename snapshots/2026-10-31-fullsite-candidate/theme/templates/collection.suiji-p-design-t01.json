@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "suiji-commerce-product",
+      "settings": {
+        "product_key": "design-t01"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "suiji-commerce-product",
+      "settings": {
+        "product_key": "set02-choker-set"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

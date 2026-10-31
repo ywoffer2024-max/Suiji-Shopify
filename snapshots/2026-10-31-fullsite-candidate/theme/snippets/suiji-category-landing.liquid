@@ -1,0 +1,10 @@
+{% doc %}SUIJI Core-Lock collection entrance. Own approved EN/FR copy and media; reference structure only.{% enddoc %}
+{%- assign landing_locale = request.locale.iso_code | split: '-' | first -%}
+<header class="sc-landing sc-landing--standalone">
+<svg class="sc-landing-art" viewBox="0 0 430 600" aria-hidden="true" focusable="false" fill="none"><g stroke="currentColor" stroke-width="2"><ellipse cx="330" cy="120" rx="68" ry="91" transform="rotate(32 330 120)"/><ellipse cx="330" cy="120" rx="47" ry="68" transform="rotate(32 330 120)"/><rect x="205" y="250" width="103" height="175" rx="51" transform="rotate(-28 255 335)"/><rect x="218" y="263" width="77" height="149" rx="38" transform="rotate(-28 255 335)"/><rect x="308" y="392" width="88" height="147" rx="44" transform="rotate(-28 350 465)"/><path d="M210 30l-25 45 25 45-25 45 25 45-25 45M35 510c12-80 110-80 122 0s-110 80-122 0Z"/></g></svg>
+<p class="sc-landing-eyebrow">SUIJI</p><h1>{% if landing_locale == 'fr' %}Core-Lock et chaînes{% else %}Core-Lock &amp; Chains{% endif %}</h1>
+<p class="sc-landing-intro">{% if landing_locale == 'fr' %}Choisissez un support. Ajoutez un ornement compatible. Explorez les pièces en titane qui donnent forme à votre composition.{% else %}Choose a base. Add a compatible charm. Explore the titanium pieces that give your composition its shape.{% endif %}</p>
+<nav class="sc-landing-links" aria-label="{% if landing_locale == 'fr' %}Explorer les pièces{% else %}Explore the pieces{% endif %}">
+<a class="sc-landing-link" href="{% render 'suiji-localized-menu-url', url: '/collections/extras?system=core-lock' %}"><span>{% render 'suiji-home-image', image: 'suiji-home-modular-85db3ef4.png', alt: '', sizes: '166px' %}</span><strong>Core-Lock</strong></a>
+<a class="sc-landing-link" href="{% render 'suiji-localized-menu-url', url: '/collections/necklaces' %}"><span>{% render 'suiji-home-image', image: 'suiji-home-necklace-85db3ef4.png', alt: '', sizes: '166px' %}</span><strong>{% if landing_locale == 'fr' %}Chaînes{% else %}Chains{% endif %}</strong></a>
+</nav></header>

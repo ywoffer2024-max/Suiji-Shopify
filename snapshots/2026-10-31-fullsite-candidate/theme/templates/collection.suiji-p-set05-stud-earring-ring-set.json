@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "suiji-commerce-product",
+      "settings": {
+        "product_key": "set05-stud-earring-ring-set"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
