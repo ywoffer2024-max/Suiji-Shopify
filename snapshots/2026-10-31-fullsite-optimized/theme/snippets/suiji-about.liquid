@@ -1,0 +1,38 @@
+{% doc %}
+  Reflow the existing translated About page content using the SUIJI editorial grid.
+{% enddoc %}
+{{ 'suiji-about.css' | asset_url | stylesheet_tag }}
+{%- assign about_parts = page.content | prepend: 'SUIJI_ABOUT_START' | split: '<h2>' -%}
+{%- assign about_preamble = about_parts[0] | remove_first: 'SUIJI_ABOUT_START' | strip -%}
+<figure class="sc-about-campaign"><img src="{{ 'suiji-home-about-85db3ef4.png' | asset_img_url: '1600x' }}" width="1605" height="980" loading="eager" alt="{{ 'suiji_commerce.about_visual' | t | escape }}"><figcaption>{{ 'suiji_commerce.about_caption' | t }}</figcaption></figure>
+<article class="suiji-about page-width">
+  {%- if about_parts.size == 9 and about_preamble == blank -%}
+    {%- assign about_hero = about_parts[1] | split: '</h2>' -%}
+    <header class="suiji-about__hero">
+      <p class="suiji-about__eyebrow">{{ page.title | escape }} · SUIJI</p>
+      <h1>{{ about_hero[0] | strip_html | escape }}</h1>
+      <div class="suiji-about__lead">{{ about_hero[1] }}</div>
+    </header>
+    {%- for about_part in about_parts offset: 2 -%}
+      {%- assign about_fields = about_part | split: '</h2>' -%}
+      {%- assign about_body = about_fields[1] -%}
+      {%- if forloop.last -%}
+        {%- capture about_sets_url -%}{% render 'suiji-localized-menu-url', url: '/pages/editions' %}{%- endcapture -%}
+        {%- capture about_mechanism_url -%}{% render 'suiji-localized-menu-url', url: '/pages/the-mechanism' %}{%- endcapture -%}
+        {%- assign about_body = about_body | replace: '/en/collections/sets', about_sets_url | replace: '/fr/collections/sets', about_sets_url | replace: '/collections/sets', about_sets_url | replace: '/en/pages/the-mechanism', about_mechanism_url | replace: '/fr/pages/the-mechanism', about_mechanism_url -%}
+      {%- endif -%}
+      {%- if forloop.index == 4 -%}<div class="suiji-about__people">{%- endif -%}
+      <section class="suiji-about__chapter{% if forloop.first %} suiji-about__chapter--origin{% elsif forloop.last %} suiji-about__chapter--future{% endif %}" aria-labelledby="About-{{ section.id }}-{{ forloop.index }}">
+        <h2 id="About-{{ section.id }}-{{ forloop.index }}">{{ about_fields[0] | strip_html | escape }}</h2>
+        {%- if forloop.index == 4 -%}
+          <figure class="suiji-about__portrait" id="designer"><img src="{{ 'suiji-designer-chunyu-wen-v40.jpeg' | asset_img_url: '640x' }}" srcset="{{ 'suiji-designer-chunyu-wen-v40.jpeg' | asset_img_url: '400x' }} 400w, {{ 'suiji-designer-chunyu-wen-v40.jpeg' | asset_img_url: '640x' }} 640w, {{ 'suiji-designer-chunyu-wen-v40.jpeg' | asset_img_url: '960x' }} 960w" sizes="(min-width: 990px) 320px, calc(100vw - 40px)" width="1230" height="1672" loading="lazy" decoding="async" alt="{{ 'suiji_v40.about.designer_alt' | t | escape }}"></figure>
+        {%- endif -%}
+        <div class="suiji-about__copy">{{ about_body }}</div>
+      </section>
+      {%- if forloop.index == 5 -%}</div>{%- endif -%}
+    {%- endfor -%}
+  {%- else -%}
+    <header class="suiji-about__hero suiji-about__hero--fallback"><h1>{{ page.title | escape }}</h1></header>
+    <div class="suiji-about__fallback rte">{{ page.content }}</div>
+  {%- endif -%}
+</article>

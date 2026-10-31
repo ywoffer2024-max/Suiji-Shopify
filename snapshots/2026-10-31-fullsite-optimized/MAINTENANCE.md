@@ -1,0 +1,30 @@
+# Maintaining the SUIJI storefront
+
+The theme uses Shopify Liquid for initial content and small shared JavaScript modules for the interactive demonstration. The catalogue source is `catalogue/products.json`. Keep stable product keys and reuse the merchant's existing Product and Variant identities; these preview keys do not create native Shopify products.
+
+Run the generator from this folder:
+
+```sh
+python3 maintenance/build_storefront.py --theme ../theme
+python3 maintenance/build_storefront.py --theme ../theme --check
+```
+
+The second command must report zero differences. There is no fixed 54-product ceiling. Every new record needs English and French titles and descriptions, actual options and SKU identities, component role, material facts, sale unit, included parts, and explicit connection information. A missing or unconfirmed fact must not become an affirmative compatibility claim. Featured companion SKU identifiers must exist among that product's variants.
+
+Shopify adds a generated-editor comment banner to JSON templates. The check compares their complete parsed objects, including every section setting, rather than demanding identical comment formatting. Other generated files retain exact-content comparison. An actual source snapshot keeps Shopify's returned template bytes and records that provenance separately.
+
+The build writes a small discovery index, one detail asset per product, fixed alternate collection templates, translated initial product content and ordinary links. Product controls fetch only the selected detail; the bag loads only its own details with bounded concurrency. Do not restore a full variant catalogue download on every collection or product page. Keep collection pagination and deferred image loading as the catalogue grows.
+
+Use Shopify-hosted image sources with intrinsic dimensions, responsive widths and useful localized alt text. Keep the first meaningful image eager and other media deferred. Campaign concepts and illustrative product views remain labelled. Supply genuine additional views before adding them to a gallery. Video uses controls, `playsinline` and `preload="none"`; do not introduce automatic downloads for a grid of videos.
+
+For this release's six compressed campaign files, use the exact theme `asset_url`. Applying `asset_img_url` sizing to these WebP filename strings returned Shopify's No image GIF even though HTTP loading and `naturalWidth` succeeded. Image-picker objects continue to use responsive `image_url` widths. Check the actual `currentSrc` and a screenshot, not only a successful load. The public CDN can negotiate another image encoding, so stored-file byte reduction is not a measured network speedup.
+
+Publish a section schema before JSON templates that refer to a new setting in it. Shopify can accept an upload while discarding a setting it does not recognize. Read back the JSON setting itself after publication, as well as the file status. Then publish assets, helpers and entrypoints in dependency order. Compare the actual current file hash before each replacement; restore the exact prior payload to roll back a modified file.
+
+Journal content uses native Shopify Articles with English source and French translations. Reuse a known handle/ID before creating an article. Preserve actual authors and publication dates. Compare the complete public text, headings, links, summary and SEO fields in each language. The compatibility route keeps an old query page usable until its native Article is actually available; it is not a claimed server-side redirect.
+
+Public product presentations remain explicitly labelled demonstrations with illustrative prices, a session bag and local demo completion. They do not submit orders or take payments. Their `noindex,follow` status remains until real product identities, imagery, manufacturing facts, prices, inventory and commercial settings are approved and verified. Do not publish a purchasable zero-price product as a substitute.
+
+Regression checks cover real option/SKU selection, exact companion additions, ring sizing, supplied parts, image dialogs, language persistence, bag quantity/removal, gift notes and demo completion. Use 360, 390, 768, 1024, 1280 and 1440 viewport widths for affected templates. Initial HTML checks do not replace interaction checks or certify physical devices, Safari, Core Web Vitals, search ranking or commercial checkout.
+
+Keep the existing Google & YouTube GA4 integration as the single installation source. A page view is not evidence of ecommerce measurement. Demonstration actions must not send `purchase`, and free text, email and address values must not enter analytics. Real order tracking and Search Console submission have their own verified commercial/resource gates.

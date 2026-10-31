@@ -1,0 +1,57 @@
+{% doc %}
+  Render the localized Core-Lock explanation and legacy editorial navigation content.
+  @param {string} page_kind - editions, sets, core, the-mechanism, bases, or charms.
+{% enddoc %}
+{{ 'suiji-information.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'suiji-information.js' | asset_url }}" defer></script>
+{%- assign info_kind = page_kind | default: page.handle -%}
+{%- if info_kind == 'core' or info_kind == 'the-mechanism' -%}{% render 'suiji-category-landing' %}{%- endif -%}
+<div class="suiji-info page-width" data-suiji-information>
+{%- if info_kind == 'editions' or info_kind == 'sets' -%}
+<header class="suiji-info__intro" id="sets-start"><h1>{{ 'suiji_navigation.sets.title' | t }}</h1><p>{{ 'suiji_navigation.sets.intro' | t }}</p><p class="suiji-info__status">{{ 'suiji_navigation.sets.availability' | t }}</p></header>
+<div class="suiji-info__filters" role="group" aria-label="{{ 'suiji_navigation.labels.filter_label' | t | escape }}">
+<button type="button" data-set-filter="all" aria-pressed="true">{{ 'suiji_navigation.labels.filter_all' | t }}</button>
+<button type="button" data-set-filter="ears" aria-pressed="false">{{ 'suiji_navigation.labels.filter_ears' | t }}</button>
+<button type="button" data-set-filter="neck" aria-pressed="false">{{ 'suiji_navigation.labels.filter_neck' | t }}</button>
+<button type="button" data-set-filter="rings" aria-pressed="false">{{ 'suiji_navigation.labels.filter_rings' | t }}</button>
+</div><p class="suiji-info__results" aria-live="polite" data-set-results data-label="{{ 'suiji_navigation.labels.sets_shown' | t | escape }}">{{ 'suiji_navigation.labels.sets_shown' | t | replace: '__COUNT__', '6' }}</p>
+<ul class="suiji-info__cards" role="list"><li class="suiji-info__card" data-set-card data-tags="ears"><a href="#stud-earring-styling-set"><p class="suiji-info__count">8 {{ 'suiji_navigation.labels.pieces' | t }}</p><h2>{{ 'suiji_navigation.sets.s01_name' | t }}</h2><span>{{ 'suiji_navigation.labels.explore_set' | t }} →</span></a></li>
+<li class="suiji-info__card" data-set-card data-tags="neck"><a href="#choker-charm-set"><p class="suiji-info__count">3 {{ 'suiji_navigation.labels.pieces' | t }}</p><h2>{{ 'suiji_navigation.sets.s02_name' | t }}</h2><span>{{ 'suiji_navigation.labels.explore_set' | t }} →</span></a></li>
+<li class="suiji-info__card" data-set-card data-tags="rings"><a href="#ring-two-charms-set"><p class="suiji-info__count">3 {{ 'suiji_navigation.labels.pieces' | t }}</p><h2>{{ 'suiji_navigation.sets.s03_name' | t }}</h2><span>{{ 'suiji_navigation.labels.explore_set' | t }} →</span></a></li>
+<li class="suiji-info__card" data-set-card data-tags="ears neck"><a href="#hoop-necklace-styling-set"><p class="suiji-info__count">7 {{ 'suiji_navigation.labels.pieces' | t }}</p><h2>{{ 'suiji_navigation.sets.s04_name' | t }}</h2><span>{{ 'suiji_navigation.labels.explore_set' | t }} →</span></a></li>
+<li class="suiji-info__card" data-set-card data-tags="ears rings"><a href="#stud-ring-styling-set"><p class="suiji-info__count">9 {{ 'suiji_navigation.labels.pieces' | t }}</p><h2>{{ 'suiji_navigation.sets.s05_name' | t }}</h2><span>{{ 'suiji_navigation.labels.explore_set' | t }} →</span></a></li>
+<li class="suiji-info__card" data-set-card data-tags="ears neck rings"><a href="#hoop-necklace-ring-styling-set"><p class="suiji-info__count">8 {{ 'suiji_navigation.labels.pieces' | t }}</p><h2>{{ 'suiji_navigation.sets.s06_name' | t }}</h2><span>{{ 'suiji_navigation.labels.explore_set' | t }} →</span></a></li></ul>
+<p class="suiji-info__piece-note">{{ 'suiji_navigation.sets.piece_note' | t }}</p>
+<aside class="suiji-info__gift" id="gift-sets"><h2>{{ 'suiji_navigation.sets.gift_title' | t }}</h2><p>{{ 'suiji_navigation.sets.gift_text' | t }}</p></aside>
+<article class="suiji-info__set" id="stud-earring-styling-set" data-set-detail data-tags="ears"><header><p class="suiji-info__count">8 {{ 'suiji_navigation.labels.pieces' | t }}</p><h2>{{ 'suiji_navigation.sets.s01_name' | t }}</h2></header><div class="suiji-info__detail-grid"><div><h3>{{ 'suiji_navigation.labels.included' | t }}</h3>{{ 'suiji_navigation.sets.s01_contents_html' | t }}</div><div><h3>{{ 'suiji_navigation.labels.styling' | t }}</h3>{{ 'suiji_navigation.sets.s01_modes_html' | t }}</div></div><p class="suiji-info__limit">{{ 'suiji_navigation.sets.s01_limit' | t }}</p><a class="suiji-info__back" href="#sets-start">{{ 'suiji_navigation.labels.back_to_sets' | t }} ↑</a></article>
+<article class="suiji-info__set" id="choker-charm-set" data-set-detail data-tags="neck"><header><p class="suiji-info__count">3 {{ 'suiji_navigation.labels.pieces' | t }}</p><h2>{{ 'suiji_navigation.sets.s02_name' | t }}</h2></header><div class="suiji-info__detail-grid"><div><h3>{{ 'suiji_navigation.labels.included' | t }}</h3>{{ 'suiji_navigation.sets.s02_contents_html' | t }}</div><div><h3>{{ 'suiji_navigation.labels.styling' | t }}</h3>{{ 'suiji_navigation.sets.s02_modes_html' | t }}</div></div><p class="suiji-info__limit">{{ 'suiji_navigation.sets.s02_limit' | t }}</p><a class="suiji-info__back" href="#sets-start">{{ 'suiji_navigation.labels.back_to_sets' | t }} ↑</a></article>
+<article class="suiji-info__set" id="ring-two-charms-set" data-set-detail data-tags="rings"><header><p class="suiji-info__count">3 {{ 'suiji_navigation.labels.pieces' | t }}</p><h2>{{ 'suiji_navigation.sets.s03_name' | t }}</h2></header><div class="suiji-info__detail-grid"><div><h3>{{ 'suiji_navigation.labels.included' | t }}</h3>{{ 'suiji_navigation.sets.s03_contents_html' | t }}</div><div><h3>{{ 'suiji_navigation.labels.styling' | t }}</h3>{{ 'suiji_navigation.sets.s03_modes_html' | t }}</div></div><p class="suiji-info__limit">{{ 'suiji_navigation.sets.s03_limit' | t }}</p><p><a href="{% render 'suiji-localized-menu-url', url: '/pages/bases#size-guide' %}">{{ 'suiji_navigation.labels.size_guide' | t }} →</a></p><a class="suiji-info__back" href="#sets-start">{{ 'suiji_navigation.labels.back_to_sets' | t }} ↑</a></article>
+<article class="suiji-info__set" id="hoop-necklace-styling-set" data-set-detail data-tags="ears neck"><header><p class="suiji-info__count">7 {{ 'suiji_navigation.labels.pieces' | t }}</p><h2>{{ 'suiji_navigation.sets.s04_name' | t }}</h2></header><div class="suiji-info__detail-grid"><div><h3>{{ 'suiji_navigation.labels.included' | t }}</h3>{{ 'suiji_navigation.sets.s04_contents_html' | t }}</div><div><h3>{{ 'suiji_navigation.labels.styling' | t }}</h3>{{ 'suiji_navigation.sets.s04_modes_html' | t }}</div></div><p class="suiji-info__limit">{{ 'suiji_navigation.sets.s04_limit' | t }}</p><a class="suiji-info__back" href="#sets-start">{{ 'suiji_navigation.labels.back_to_sets' | t }} ↑</a></article>
+<article class="suiji-info__set" id="stud-ring-styling-set" data-set-detail data-tags="ears rings"><header><p class="suiji-info__count">9 {{ 'suiji_navigation.labels.pieces' | t }}</p><h2>{{ 'suiji_navigation.sets.s05_name' | t }}</h2></header><div class="suiji-info__detail-grid"><div><h3>{{ 'suiji_navigation.labels.included' | t }}</h3>{{ 'suiji_navigation.sets.s05_contents_html' | t }}</div><div><h3>{{ 'suiji_navigation.labels.styling' | t }}</h3>{{ 'suiji_navigation.sets.s05_modes_html' | t }}</div></div><p class="suiji-info__limit">{{ 'suiji_navigation.sets.s05_limit' | t }}</p><p><a href="{% render 'suiji-localized-menu-url', url: '/pages/bases#size-guide' %}">{{ 'suiji_navigation.labels.size_guide' | t }} →</a></p><a class="suiji-info__back" href="#sets-start">{{ 'suiji_navigation.labels.back_to_sets' | t }} ↑</a></article>
+<article class="suiji-info__set" id="hoop-necklace-ring-styling-set" data-set-detail data-tags="ears neck rings"><header><p class="suiji-info__count">8 {{ 'suiji_navigation.labels.pieces' | t }}</p><h2>{{ 'suiji_navigation.sets.s06_name' | t }}</h2></header><div class="suiji-info__detail-grid"><div><h3>{{ 'suiji_navigation.labels.included' | t }}</h3>{{ 'suiji_navigation.sets.s06_contents_html' | t }}</div><div><h3>{{ 'suiji_navigation.labels.styling' | t }}</h3>{{ 'suiji_navigation.sets.s06_modes_html' | t }}</div></div><p class="suiji-info__limit">{{ 'suiji_navigation.sets.s06_limit' | t }}</p><p><a href="{% render 'suiji-localized-menu-url', url: '/pages/bases#size-guide' %}">{{ 'suiji_navigation.labels.size_guide' | t }} →</a></p><a class="suiji-info__back" href="#sets-start">{{ 'suiji_navigation.labels.back_to_sets' | t }} ↑</a></article>
+{%- elsif info_kind == 'core' or info_kind == 'the-mechanism' -%}
+
+<section id="how-it-works"><h2>{{ 'suiji_navigation.core.how_title' | t }}</h2><ol class="suiji-info__steps" role="list">
+<li><h3>{{ 'suiji_navigation.core.step1_title' | t }}</h3><p>{{ 'suiji_navigation.core.step1_text' | t }}</p></li>
+<li><h3>{{ 'suiji_navigation.core.step2_title' | t }}</h3><p>{{ 'suiji_navigation.core.step2_text' | t }}</p></li>
+<li><h3>{{ 'suiji_navigation.core.step3_title' | t }}</h3><p>{{ 'suiji_navigation.core.step3_text' | t }}</p></li>
+</ol></section>
+<section class="suiji-info__gift" id="design-and-compatibility"><h2>{{ 'suiji_navigation.core.compatibility_title' | t }}</h2><p>{{ 'suiji_v40.core.compatibility_text' | t }}</p></section>
+<div class="suiji-info__links"><a href="{% render 'suiji-localized-menu-url', url: '/pages/bases' %}">{{ 'suiji_navigation.labels.jewelry_bases' | t }} →</a><a href="{% render 'suiji-localized-menu-url', url: '/collections/charms' %}">{{ 'suiji_navigation.labels.charms' | t }} →</a><a href="{% render 'suiji-localized-menu-url', url: '/collections/sets' %}">{{ 'suiji_navigation.labels.sets' | t }} →</a></div>
+{%- elsif info_kind == 'catalog' -%}
+{% render 'suiji-shop-catalog', category_key: 'all' %}
+{%- elsif info_kind == 'category' -%}
+{% render 'suiji-shop-catalog', category_key: collection.handle %}
+{%- elsif info_kind == 'bases' -%}
+{% render 'suiji-style-preview' %}
+<div class="suiji-info__base-grid suiji-info__base-grid--after-pdp">
+<section id="pendant-bases"><h2>{{ 'suiji_navigation.labels.pendant_bases' | t }}</h2><p>{{ 'suiji_navigation.components.pendant_text' | t }}</p></section>
+<section id="stud-bases"><h2>{{ 'suiji_navigation.labels.stud_earring_bases' | t }}</h2><p>{{ 'suiji_navigation.components.stud_text' | t }}</p></section>
+<section id="ring-bases"><h2>{{ 'suiji_navigation.labels.ring_bases' | t }}</h2><p>{{ 'suiji_navigation.components.ring_text' | t }}</p><p><a href="#build-your-look">{{ 'suiji_preview.try_link' | t }} →</a></p><a href="#size-guide">{{ 'suiji_navigation.labels.size_guide' | t }} →</a></section>
+</div>{% render 'suiji-size-guide' %}<a href="{{ routes.root_url }}{% unless routes.root_url == '/' %}/{% endunless %}pages/editions">{{ 'suiji_navigation.labels.sets' | t }} →</a>
+{%- elsif info_kind == 'charms' -%}
+<header class="suiji-info__intro"><h1>{{ 'suiji_navigation.components.charms_title' | t }}</h1><p>{{ 'suiji_navigation.components.charms_intro' | t }}</p></header>
+<p class="suiji-info__piece-note">{{ 'suiji_navigation.components.charms_note' | t }}</p><p><a href="{% render 'suiji-localized-menu-url', url: '/pages/bases#build-your-look' %}">{{ 'suiji_preview.try_link' | t }} →</a></p>
+<a href="{{ routes.root_url }}{% unless routes.root_url == '/' %}/{% endunless %}pages/editions">{{ 'suiji_navigation.labels.sets' | t }} →</a>
+{%- endif -%}
+</div>

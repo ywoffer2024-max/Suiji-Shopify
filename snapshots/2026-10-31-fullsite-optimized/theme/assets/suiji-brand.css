@@ -1,0 +1,144 @@
+/* SUIJI: the approved white / ice-blue palette and editorial type pairing. */
+:root {
+  --font-body-family: 'Manrope', Arial, sans-serif;
+  --font-body-style: normal;
+  --font-body-weight: 400;
+  --font-body-weight-bold: 600;
+  --font-heading-family: 'Manrope', Arial, sans-serif;
+  --font-heading-style: normal;
+  --font-heading-weight: 500;
+  --suiji-display-family: 'Newsreader', Georgia, serif;
+  --suiji-paper: #ffffff;
+  --suiji-canvas: #ffffff;
+  --suiji-white: #ffffff;
+  --suiji-surface: #eaf1f5;
+  --suiji-surface-soft: #eaf1f5;
+  --suiji-ink: #202226;
+  --suiji-muted: #626466;
+  --suiji-line: #d5dfe5;
+  --suiji-line-soft: #e5ebef;
+  --suiji-accent: #315a73;
+  --suiji-accent-dark: #23465c;
+  --suiji-focus: 0 0 0 0.3rem rgba(49, 90, 115, 0.24);
+}
+
+.suiji-mvp-root {
+  --color-background: 255, 255, 255;
+  --gradient-background: #ffffff;
+  --color-foreground: 32, 34, 38;
+  --color-button: 49, 90, 115;
+  --color-button-text: 255, 255, 255;
+  --color-link: 49, 90, 115;
+  background: var(--suiji-paper);
+  color: var(--suiji-ink);
+  font-family: var(--font-body-family);
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+}
+
+.suiji-mvp-root :is(.color-scheme-1, .color-scheme-2) {
+  --color-background: 255, 255, 255;
+  --gradient-background: #ffffff;
+  --color-foreground: 32, 34, 38;
+  --color-button: 49, 90, 115;
+  --color-button-text: 255, 255, 255;
+  --color-link: 49, 90, 115;
+}
+
+.suiji-mvp-root .header-wrapper,
+.suiji-mvp-root .header,
+.suiji-mvp-root .menu-drawer,
+.suiji-mvp-root .menu-drawer__submenu,
+.suiji-mvp-root .header__submenu {
+  background: var(--suiji-paper);
+}
+
+.suiji-mvp-root .footer,
+.suiji-mvp-root .utility-bar,
+.suiji-mvp-root .menu-drawer__utility-links {
+  background: var(--suiji-surface);
+}
+
+.suiji-mvp-root :is(h1, h2, h3, h4, h5, h6, .h0, .h1, .h2, .h3, .h4, .h5) {
+  font-family: var(--font-heading-family);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.suiji-mvp-root :is(.suiji-display, .suiji-title, .suiji-intro-band__statement, .suiji-waitlist__title, .suiji-article__title, .suiji-article-cta__title, .suiji-blog-hero h1, .suiji-info__intro > h1, .main-page-title, .suiji-editorial__hero h1, .suiji-manifesto h2) {
+  font-family: var(--suiji-display-family);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.suiji-mvp-root .suiji-display {
+  font-size: clamp(4.4rem, 6vw, 8rem);
+  max-width: 13ch;
+}
+
+.suiji-mvp-root .suiji-title {
+  font-size: clamp(3.6rem, 4.5vw, 6.4rem);
+  max-width: 20ch;
+}
+
+.suiji-mvp-root :is(.suiji-subtitle, .suiji-preview h2, .suiji-preview h3, .suiji-preview h4, .suiji-info__card h2, .suiji-info__set > header h2, .product__title h1, .card__heading) {
+  font-family: var(--font-body-family);
+  font-weight: 500;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.suiji-mvp-root :is(.header__menu-item, .menu-drawer__menu-item, .footer-block__heading, .suiji-button, .suiji-link, .button, .suiji-preview__button, .suiji-preview__field, .suiji-form__label) {
+  font-family: var(--font-body-family);
+  font-weight: 500;
+  text-transform: none;
+}
+
+.suiji-mvp-root .header__menu-item { font-size: 1.4rem; }
+.suiji-mvp-root .suiji-header-wordmark { font-weight: 600; }
+.suiji-mvp-root .suiji-copy { line-height: 1.6; }
+
+.suiji-mvp-root .suiji-intro-band,
+.suiji-mvp-root .suiji-method,
+.suiji-mvp-root .suiji-guides,
+.suiji-mvp-root .suiji-method__content,
+.suiji-mvp-root .suiji-preview__art,
+.suiji-mvp-root .suiji-info__limit {
+  background: var(--suiji-surface);
+}
+
+.suiji-mvp-root .suiji-hero__media,
+.suiji-mvp-root .suiji-method__media,
+.suiji-mvp-root .suiji-preview__charm,
+.suiji-mvp-root .suiji-preview__bag {
+  background: var(--suiji-paper);
+}
+
+.suiji-mvp-root :is(.suiji-preview__charm, .suiji-preview__bag, .suiji-info__card, .suiji-info__steps li, .suiji-info__base-grid section) {
+  border-color: var(--suiji-line);
+}
+
+.suiji-mvp-root .suiji-button--primary,
+.suiji-mvp-root .suiji-button--primary:hover { color: var(--suiji-white); }
+
+.suiji-mvp-root :is(input, select, textarea) { font-family: var(--font-body-family); }
+
+@media (max-width: 749px) {
+  .suiji-mvp-root .suiji-display { font-size: clamp(3.6rem, 9.5vw, 4.8rem); line-height: 1.4; }
+  .suiji-mvp-root .suiji-title { font-size: clamp(3.2rem, 8vw, 4rem); line-height: 1.4; }
+  .suiji-mvp-root :is(.suiji-display, .suiji-title, .suiji-article__title, .suiji-info__intro > h1) { line-height: 1.4; }
+  .suiji-mvp-root :is(input, select, textarea),
+  .suiji-mvp-root .suiji-preview :is(input, select, textarea),
+  .suiji-mvp-root :is(.field__input, .select__select) { font-size: 1.6rem; }
+}
+
+/* Keep article copy upright while retaining explicit emphasis. */
+.suiji-mvp-root.template-article .rte {
+  font-family: var(--font-body-family);
+  font-style: normal;
+}

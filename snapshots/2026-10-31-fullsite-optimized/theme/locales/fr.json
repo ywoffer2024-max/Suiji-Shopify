@@ -1,0 +1,1489 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "general": {
+    "password_page": {
+      "login_form_heading": "Accéder à la boutique à l'aide d'un mot de passe :",
+      "login_password_button": "Saisir avec un mot de passe",
+      "login_form_password_label": "Mot de passe",
+      "login_form_password_placeholder": "Votre mot de passe",
+      "login_form_error": "Mot de passe incorrect !",
+      "login_form_submit": "Saisir",
+      "admin_link_html": "La boutique vous appartient-elle ? <a href=\"/admin\" class=\"link underlined-link\">Se connecter ici</a>",
+      "powered_by_shopify_html": "Cette boutique sera propulsée par {{ shopify }}"
+    },
+    "social": {
+      "alt_text": {
+        "share_on_facebook": "Partager sur Facebook",
+        "share_on_twitter": "Partager sur X",
+        "share_on_pinterest": "Épingler sur Pinterest"
+      },
+      "links": {
+        "twitter": "X (Twitter)",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "continue_shopping": "Continuer les achats",
+    "pagination": {
+      "label": "Pagination",
+      "page": "Page {{ number }}",
+      "next": "Page suivante",
+      "previous": "Page précédente"
+    },
+    "search": {
+      "search": "Recherche",
+      "reset": "Effacer le terme de recherche"
+    },
+    "cart": {
+      "view": "Voir le panier ({{ count }})",
+      "item_added": "Article ajouté au panier",
+      "view_empty_cart": "Voir le panier"
+    },
+    "share": {
+      "copy_to_clipboard": "Copier le lien",
+      "share_url": "Lien",
+      "success_message": "Lien copié dans le presse-papiers",
+      "close": "Fermer le partage"
+    },
+    "slider": {
+      "of": "de",
+      "next_slide": "Faire glisser vers la droite",
+      "previous_slide": "Faire glisser vers la gauche",
+      "name": "Carrousel"
+    }
+  },
+  "newsletter": {
+    "label": "E-mail",
+    "success": "Merci de votre inscription",
+    "button_label": "S'inscrire"
+  },
+  "accessibility": {
+    "skip_to_text": "Ignorer et passer au contenu",
+    "close": "Fermer",
+    "unit_price_separator": "par",
+    "vendor": "Fournisseur :",
+    "error": "Erreur",
+    "refresh_page": "Le choix d'une sélection entraîne l'actualisation de la page entière.",
+    "link_messages": {
+      "new_window": "S'ouvre dans une nouvelle fenêtre.",
+      "external": "Ouvre un site web externe."
+    },
+    "loading": "Chargement en cours...",
+    "skip_to_product_info": "Passer aux informations produits",
+    "total_reviews": "total des critiques",
+    "star_reviews_info": "{{ rating_value }} sur {{ rating_max }} étoiles",
+    "collapsible_content_title": "Contenu réductible",
+    "complementary_products": "Produits complémentaires"
+  },
+  "blogs": {
+    "article": {
+      "blog": "Blog",
+      "read_more_title": "Lire la suite : {{ title }}",
+      "comments": {
+        "one": "{{ count }} commentaire",
+        "other": "{{ count }} commentaires",
+        "many": "{{ count }} commentaires"
+      },
+      "moderated": "Veuillez noter que les commentaires doivent être approuvés avant d'être publiés.",
+      "comment_form_title": "Laisser un commentaire",
+      "name": "Nom",
+      "email": "E-mail",
+      "message": "Commentaire",
+      "post": "Publier le commentaire",
+      "back_to_blog": "Retour au blog",
+      "share": "Partager cet article",
+      "success": "Votre commentaire a bien été publié ! Merci !",
+      "success_moderated": "Votre commentaire a bien été publié. Nous le publierons sous peu, conformément au processus de modération de notre blog."
+    }
+  },
+  "onboarding": {
+    "product_title": "Titre du produit",
+    "collection_title": "Le nom de votre collection"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Ajouter au panier",
+      "description": "Description",
+      "on_sale": "Promotion",
+      "product_variants": "Variantes de produits",
+      "quantity": {
+        "label": "Quantité",
+        "input_label": "Quantité pour {{ product }}",
+        "increase": "Augmenter la quantité de {{ product }}",
+        "decrease": "Réduire la quantité de {{ product }}",
+        "minimum_of": "Minimum de {{ quantity }}",
+        "maximum_of": "Maximum de {{ quantity }}",
+        "multiples_of": "Incréments de {{ quantity }}",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> dans le panier",
+        "note": "Voir les règles de quantité",
+        "min_of": "Min. {{ quantity }}",
+        "max_of": "Max. {{ quantity }}",
+        "in_cart_aria_label": "Quantité ({{ quantity }} dans le panier)"
+      },
+      "price": {
+        "from_price_html": "À partir de {{ price }}",
+        "regular_price": "Prix habituel",
+        "sale_price": "Prix promotionnel",
+        "unit_price": "Prix unitaire"
+      },
+      "share": "Partager ce produit",
+      "sold_out": "Épuisé",
+      "unavailable": "Non disponible(s)",
+      "vendor": "Fournisseur",
+      "video_exit_message": "{{ title }} ouvre la vidéo en plein écran dans la même fenêtre.",
+      "xr_button": "Afficher dans son espace",
+      "xr_button_label": "Affichage dans votre espace, charge l'article dans une fenêtre de réalité augmentée",
+      "pickup_availability": {
+        "view_store_info": "Afficher les informations de la boutique",
+        "check_other_stores": "Vérifier la disponibilité dans d'autres boutiques",
+        "pick_up_available": "Service de retrait disponible",
+        "pick_up_available_at_html": "Service de retrait disponible à <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Service de retrait non disponible actuellement à <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "Impossible de charger la disponibilité du service de retrait",
+        "refresh": "Actualiser"
+      },
+      "media": {
+        "open_media": "Ouvrir le média {{ index }} dans une fenêtre modale",
+        "play_model": "Lire la visionneuse 3D",
+        "play_video": "Lire la vidéo",
+        "gallery_viewer": "Visionneuse de la galerie",
+        "load_image": "Charger l'image {{ index }} dans la galerie",
+        "load_model": "Charger le modèle 3D {{ index }} dans la galerie",
+        "load_video": "Lire la vidéo {{ index }} dans la galerie",
+        "image_available": "L'image {{ index }} est maintenant disponible dans la galerie"
+      },
+      "nested_label": "{{ title }} pour {{ parent_title }}",
+      "view_full_details": "Afficher tous les détails",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Frais d'expédition</a> calculés à l'étape de paiement.",
+      "choose_options": "Choisir des options",
+      "choose_product_options": "Choisir des options pour {{ product_name }}",
+      "value_unavailable": "{{ option_value }} – indisponible",
+      "variant_sold_out_or_unavailable": "Variante épuisée ou indisponible",
+      "inventory_in_stock": "En stock",
+      "inventory_in_stock_show_count": "{{ quantity }} en stock",
+      "inventory_low_stock": "Stock bas",
+      "inventory_low_stock_show_count": "Stock bas : {{ quantity }} restant(s)",
+      "sku": "SKU",
+      "inventory_out_of_stock": "En rupture de stock",
+      "inventory_out_of_stock_continue_selling": "En stock",
+      "volume_pricing": {
+        "title": "Tarification basée sur le volume",
+        "note": "La tarification basée sur le volume est disponible",
+        "minimum": "{{ quantity }} ou plus",
+        "price_range": "{{ minimum }} - {{ maximum }}",
+        "price_at_each_html": "à {{ price }}/pièce"
+      },
+      "taxes_included": "Taxes incluses.",
+      "duties_included": "Frais de douane inclus.",
+      "duties_and_taxes_included": "Frais de douane et taxes inclus."
+    },
+    "modal": {
+      "label": "Galerie de supports multimédias"
+    },
+    "facets": {
+      "apply": "Appliquer",
+      "clear": "Effacer",
+      "clear_all": "Tout supprimer",
+      "from": "De",
+      "filter_and_sort": "Filtrer et trier",
+      "filter_by_label": "Filtre :",
+      "filter_button": "Filtrer",
+      "filters_selected": {
+        "one": "{{ count }} sélectionné",
+        "other": "{{ count }} sélectionnés",
+        "many": "{{ count }} sélectionnés"
+      },
+      "max_price": "Le prix le plus élevé est de {{ price }}",
+      "product_count": {
+        "one": "{{ product_count }} produit sur {{ count }}",
+        "other": "{{ product_count }} produits sur {{ count }}",
+        "many": "{{ product_count }} produits sur {{ count }}"
+      },
+      "product_count_simple": {
+        "one": "{{ count }} produit",
+        "other": "{{ count }} produits",
+        "many": "{{ count }} produits"
+      },
+      "reset": "Réinitialiser",
+      "sort_button": "Trier",
+      "sort_by_label": "Trier par :",
+      "to": "Destination",
+      "clear_filter": "Supprimer le filtre",
+      "filter_selected_accessibility": "{{ type }} ({{ count }} filtres sélectionnés)",
+      "show_more": "Afficher plus",
+      "show_less": "Afficher moins",
+      "filter_and_operator_subtitle": "Tout associer"
+    }
+  },
+  "templates": {
+    "search": {
+      "no_results": "Aucun résultat trouvé pour « {{ terms }} ». Vérifiez l'orthographe ou utilisez un autre mot ou une autre expression.",
+      "results_with_count": {
+        "one": "{{ count }} résultat",
+        "other": "{{ count }} résultats",
+        "many": "{{ count }} résultats"
+      },
+      "title": "Résultats de la recherche",
+      "page": "Page",
+      "products": "Produits",
+      "search_for": "Rechercher « {{ terms }} »",
+      "results_with_count_and_term": {
+        "one": "{{ count }} résultat trouvé pour « {{ terms }} »",
+        "other": "{{ count }} résultats trouvés pour « {{ terms }} »",
+        "many": "{{ count }} résultats trouvés pour « {{ terms }} »"
+      },
+      "results_pages_with_count": {
+        "one": "Page {{ count }}",
+        "other": "Pages {{ count }}",
+        "many": "Pages {{ count }}"
+      },
+      "results_suggestions_with_count": {
+        "one": "{{ count }} suggestion",
+        "other": "{{ count }} suggestions",
+        "many": "{{ count }} suggestions"
+      },
+      "results_products_with_count": {
+        "one": "Produit {{ count }}",
+        "other": "Produits {{ count }}",
+        "many": "Produits {{ count }}"
+      },
+      "suggestions": "Suggestions",
+      "pages": "Pages"
+    },
+    "cart": {
+      "cart": "Panier"
+    },
+    "contact": {
+      "form": {
+        "name": "Nom",
+        "email": "E-mail",
+        "phone": "Numéro de téléphone",
+        "comment": "Commentaire",
+        "send": "Envoyer",
+        "post_success": "Merci de nous avoir contactés. Nous vous répondrons dès que possible.",
+        "error_heading": "Veuillez ajuster les éléments suivants :",
+        "title": "Formulaire de contact"
+      }
+    },
+    "404": {
+      "title": "Page non trouvée",
+      "subtext": "404"
+    }
+  },
+  "sections": {
+    "header": {
+      "announcement": "Annonce",
+      "menu": "Menu",
+      "cart_count": {
+        "one": "{{ count }} article",
+        "other": "{{ count }} articles",
+        "many": "{{ count }} articles"
+      }
+    },
+    "cart": {
+      "title": "Votre panier",
+      "caption": "Articles du panier",
+      "remove_title": "Supprimer {{ title }}",
+      "note": "Instructions spéciales concernant la commande",
+      "checkout": "Procéder au paiement",
+      "empty": "Votre panier est vide",
+      "cart_error": "Une erreur est survenue lors de l’actualisation de votre panier. Veuillez réessayer.",
+      "cart_quantity_error_html": "Vous ne pouvez pas ajouter plus de {{ quantity }} de ce produit à votre panier.",
+      "headings": {
+        "product": "Produit",
+        "price": "Prix",
+        "total": "Total",
+        "quantity": "Quantité",
+        "image": "Image de produit"
+      },
+      "update": "Mise à jour",
+      "login": {
+        "title": "Vous possédez un compte ?",
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Connectez-vous</a> pour payer plus vite."
+      },
+      "estimated_total": "Total estimé",
+      "new_estimated_total": "Nouveau total estimé",
+      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Frais de douane et taxes inclus. Réductions et <a href=\"{{ link }}\">frais d’expédition</a> calculés à l’étape du paiement.",
+      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Frais de douane et taxes inclus. Réductions et frais d’expédition calculés à l’étape du paiement.",
+      "taxes_included_shipping_at_checkout_with_policy_html": "Taxes incluses. Réductions et <a href=\"{{ link }}\">frais d’expédition</a> calculés à l’étape du paiement.",
+      "taxes_included_shipping_at_checkout_without_policy": "Taxes incluses. Réductions et frais d’expédition calculés à l’étape du paiement.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Frais de douane inclus. Taxes, réductions et <a href=\"{{ link }}\">frais d’expédition</a> calculés à l’étape du paiement.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Frais de douane inclus. Taxes, réductions et frais d’expédition calculés à l’étape du paiement.",
+      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Taxes, réductions et <a href=\"{{ link }}\">frais d’expédition</a> calculés à l’étape du paiement.",
+      "taxes_at_checkout_shipping_at_checkout_without_policy": "Taxes, réductions et frais d’expédition calculés à l’étape du paiement."
+    },
+    "footer": {
+      "payment": "Moyens de paiement"
+    },
+    "featured_blog": {
+      "view_all": "Tout afficher",
+      "onboarding_title": "Article de blog",
+      "onboarding_content": "Donnez à vos clients un résumé de votre article de blog"
+    },
+    "featured_collection": {
+      "view_all": "Tout afficher",
+      "view_all_label": "Afficher tous les produits de la collection {{ collection_name }}"
+    },
+    "collection_list": {
+      "view_all": "Tout afficher"
+    },
+    "collection_template": {
+      "title": "Collection",
+      "empty": "Aucun produit trouvé",
+      "use_fewer_filters_html": "Utiliser moins de filtres ou <a class=\"{{ class }}\" href=\"{{ link }}\">tout supprimer</a>"
+    },
+    "video": {
+      "load_video": "Charger la vidéo : {{ description }}"
+    },
+    "slideshow": {
+      "load_slide": "Charger la diapositive",
+      "previous_slideshow": "Diapositive précédente",
+      "next_slideshow": "Diapositive suivante",
+      "pause_slideshow": "Interrompre le diaporama",
+      "play_slideshow": "Lire le diaporama",
+      "carousel": "Carrousel",
+      "slide": "Diapositive"
+    },
+    "page": {
+      "title": "Titre de la page"
+    },
+    "announcements": {
+      "previous_announcement": "Annonce précédente",
+      "next_announcement": "Annonce suivante",
+      "carousel": "Carrousel",
+      "announcement": "Annonce",
+      "announcement_bar": "Barre d’annonces"
+    },
+    "quick_order_list": {
+      "product_total": "Sous-total des produits",
+      "view_cart": "Voir le panier",
+      "each": "{{ money }}/pièce",
+      "product": "Produit",
+      "variant": "Variante",
+      "variant_total": "Total des variantes",
+      "items_added": {
+        "one": "{{ quantity }} article ajouté",
+        "other": "{{ quantity }} articles ajoutés",
+        "many": "{{ quantity }} articles ajoutés"
+      },
+      "items_removed": {
+        "one": "{{ quantity }} article retiré",
+        "other": "{{ quantity }} articles retirés",
+        "many": "{{ quantity }} articles retirés"
+      },
+      "product_variants": "Variantes de produits",
+      "total_items": "Total des articles",
+      "remove_all_items_confirmation": "Retirer les {{ quantity }} articles de votre panier ?",
+      "remove_all": "Tout retirer",
+      "cancel": "Annuler",
+      "remove_all_single_item_confirmation": "Supprimer 1 article de votre panier ?",
+      "min_error": "Cet article a un minimum de {{ min }}",
+      "max_error": "Cet article a un maximum de {{ max }}",
+      "step_error": "Vous pouvez ajouter cet article uniquement par incréments de {{ step }}"
+    }
+  },
+  "localization": {
+    "country_label": "Pays/région",
+    "language_label": "Langue",
+    "update_language": "Mettre à jour la langue",
+    "update_country": "Mettre à jour le pays/la région",
+    "search": "Rechercher",
+    "popular_countries_regions": "Pays/régions populaires",
+    "country_results_count": "{{ count }} pays/régions trouvés"
+  },
+  "customer": {
+    "account": {
+      "title": "Compte",
+      "details": "Détails du compte",
+      "view_addresses": "Voir les adresses",
+      "return": "Retour aux détails du compte"
+    },
+    "account_fallback": "Compte",
+    "activate_account": {
+      "title": "Activer le compte",
+      "subtext": "Créez votre mot de passe pour activer le compte.",
+      "password": "Mot de passe",
+      "password_confirm": "Confirmer le mot de passe",
+      "submit": "Activer le compte",
+      "cancel": "Décliner l'invitation"
+    },
+    "addresses": {
+      "title": "Adresses",
+      "default": "Par défaut",
+      "add_new": "Ajouter une nouvelle adresse",
+      "edit_address": "Modifier l'adresse",
+      "first_name": "Prénom",
+      "last_name": "Nom de famille",
+      "company": "Entreprise",
+      "address1": "Adresse 1",
+      "address2": "Adresse 2",
+      "city": "Ville",
+      "country": "Pays/région",
+      "province": "Province",
+      "zip": "Code postal",
+      "phone": "Téléphone",
+      "set_default": "Définir comme adresse par défaut",
+      "add": "Ajouter l'adresse",
+      "update": "Mettre à jour l'adresse",
+      "cancel": "Annuler",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "delete_confirm": "Êtes-vous certain(e) de vouloir supprimer cette adresse ?"
+    },
+    "log_in": "Connexion",
+    "log_out": "Déconnexion",
+    "login_page": {
+      "cancel": "Annuler",
+      "create_account": "Créer un compte",
+      "email": "E-mail",
+      "forgot_password": "Mot de passe oublié ?",
+      "guest_continue": "Continuer",
+      "guest_title": "Continuer en tant qu'invité(e)",
+      "password": "Mot de passe",
+      "title": "Connexion",
+      "sign_in": "Connexion",
+      "submit": "Envoyer",
+      "alternate_provider_separator": "ou"
+    },
+    "orders": {
+      "title": "Historique des commandes",
+      "order_number": "Commande",
+      "order_number_link": "Numéro de commande {{ number }}",
+      "date": "Date",
+      "payment_status": "Statut des paiements",
+      "fulfillment_status": "Statut du traitement de la commande",
+      "total": "Total",
+      "none": "Vous n'avez encore passé aucune commande."
+    },
+    "recover_password": {
+      "title": "Réinitialiser son mot de passe",
+      "subtext": "Nous vous ferons parvenir un e-mail pour réinitialiser votre mot de passe",
+      "success": "Nous vous avons envoyé un e-mail contenant un lien pour mettre à jour votre mot de passe."
+    },
+    "register": {
+      "title": "Créer un compte",
+      "first_name": "Prénom",
+      "last_name": "Nom de famille",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "submit": "Créer"
+    },
+    "reset_password": {
+      "title": "Réinitialiser le mot de passe du compte",
+      "subtext": "Saisissez un nouveau mot de passe",
+      "password": "Mot de passe",
+      "password_confirm": "Confirmer le mot de passe",
+      "submit": "Réinitialiser le mot de passe"
+    },
+    "order": {
+      "title": "Commande {{ name }}",
+      "date_html": "Passée le {{ date }}",
+      "cancelled_html": "Commande annulée le {{ date }}",
+      "cancelled_reason": "Motif : {{ reason }}",
+      "billing_address": "Adresse de facturation",
+      "payment_status": "Statut de paiement",
+      "shipping_address": "Adresse d'expédition",
+      "fulfillment_status": "Statut du traitement de la commande",
+      "discount": "Réduction",
+      "shipping": "Expédition",
+      "tax": "Taxes",
+      "product": "Produit",
+      "sku": "SKU",
+      "price": "Prix",
+      "quantity": "Quantité",
+      "total": "Total",
+      "fulfilled_at_html": "Traitée le {{ date }}",
+      "track_shipment": "Suivre l'envoi",
+      "tracking_url": "Lien de suivi",
+      "tracking_company": "Transporteur",
+      "tracking_number": "Numéro de suivi",
+      "subtotal": "Sous-total",
+      "total_duties": "Frais de douane",
+      "total_refunded": "Remboursé"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Voici le solde de votre carte‑cadeau {{ shop }} d'une valeur de {{ value }} !",
+      "subtext": "Votre carte-cadeau",
+      "gift_card_code": "Code de la carte-cadeau",
+      "shop_link": "Visiter la boutique en ligne",
+      "add_to_apple_wallet": "Ajouter à Apple Wallet",
+      "qr_image_alt": "Code QR : scannez-le pour utiliser votre carte-cadeau",
+      "copy_code": "Copier le code de la carte‑cadeau",
+      "expired": "Expiré",
+      "copy_code_success": "Le code a bien été copié",
+      "how_to_use_gift_card": "Utiliser le code de la carte‑cadeau en ligne ou le code QR en boutique",
+      "expiration_date": "Expire le {{ expires_on }}"
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "Je veux envoyer ce produit comme cadeau",
+      "email_label": "E‑mail du destinataire",
+      "email": "E‑mail",
+      "name_label": "Nom du destinataire (facultatif)",
+      "name": "Nom",
+      "message_label": "Message (facultatif)",
+      "message": "Message",
+      "max_characters": "{{ max_chars }} caractères au maximum",
+      "email_label_optional_for_no_js_behavior": "E‑mail du destinataire (facultatif)",
+      "send_on": "AAAA-MM-JJ",
+      "send_on_label": "Envoyer le (facultatif)",
+      "expanded": "Formulaire de destinataire de carte-cadeau agrandi",
+      "collapsed": "Formulaire de destinataire de carte-cadeau réduit"
+    }
+  },
+  "suiji_navigation": {
+    "labels": {
+      "core_lock": "Core-Lock",
+      "discover_core_lock": "Découvrir Core-Lock",
+      "how_it_works": "Comment ça marche",
+      "jewelry_bases": "Bases de bijoux",
+      "pendant_bases": "Supports de pendentif",
+      "stud_earring_bases": "Bases pour puces d’oreilles",
+      "ring_bases": "Bases de bagues",
+      "charms": "Ornements interchangeables",
+      "shop_all": "Tous les bijoux",
+      "necklaces": "Colliers",
+      "chains": "Chaînes",
+      "beaded_necklaces": "Colliers de perles",
+      "chokers": "Ras-de-cou",
+      "pendant_necklaces": "Colliers avec pendentif",
+      "bracelets_bangles": "Bracelets",
+      "chain_beaded_bracelets": "Bracelets souples",
+      "bangles": "Joncs",
+      "earrings": "Boucles d’oreilles",
+      "stud_earrings": "Puces d’oreilles",
+      "hoop_earrings": "Créoles",
+      "rings": "Bagues",
+      "accessories": "Accessoires",
+      "multi_use_connectors": "Connecteurs polyvalents",
+      "decorative_add_ons": "Accessoires décoratifs",
+      "sets": "Ensembles",
+      "shop_all_sets": "Voir tous les ensembles",
+      "gifts": "Cadeaux",
+      "gift_sets": "Ensembles à offrir",
+      "about_suiji": "À propos de SUIJI",
+      "our_story": "Notre histoire",
+      "design_craft": "Design et savoir-faire",
+      "contact_us": "Nous contacter",
+      "submenu": "sous-menu",
+      "pieces": "pièces",
+      "included": "Pièces comprises",
+      "styling": "Idées de composition",
+      "explore_set": "Voir la composition",
+      "back_to_sets": "Tous les ensembles",
+      "filter_all": "Tous les ensembles",
+      "filter_ears": "Oreilles",
+      "filter_neck": "Cou",
+      "filter_rings": "Bagues",
+      "sets_shown": "Ensembles affichés : __COUNT__",
+      "size_guide": "Guide des tailles",
+      "faq": "Questions fréquentes",
+      "care_guide": "Conseils d’entretien",
+      "shipping_returns": "Livraison et retours",
+      "explore": "Découvrir",
+      "support": "Aide",
+      "journal": "Journal",
+      "warranty": "Garantie",
+      "extension_chain": "Chaîne d’extension",
+      "studio": "SUIJI Studio",
+      "hero_alt": "Étude éditoriale monochrome de surfaces métalliques et de verre",
+      "filter_label": "Filtrer les ensembles par zone de port"
+    },
+    "sets": {
+      "title": "Ensembles",
+      "intro": "Les mêmes ornements, différentes façons de les porter. Découvrez les pièces de chaque ensemble, puis leurs possibilités de réutilisation.",
+      "availability": "Ces ensembles sont en préparation. Cette page présente leur composition prévue et des idées de port.",
+      "piece_note": "Les pièces sont comptées à l’unité. Deux boucles d’oreilles forment une paire ; les composants internes d’une pièce assemblée n’augmentent pas ce total.",
+      "gift_title": "Des ensembles à offrir",
+      "gift_text": "Choisissez selon les envies de port : puces, créoles, collier ou bague. Les différentes compositions réutilisent les mêmes pièces.",
+      "s01_name": "Ensemble de puces d’oreilles modulables",
+      "s01_contents_html": "<ul class=\"suiji-info__bom\"><li><strong>2</strong><span>Bases pour puces d’oreilles</span></li><li><strong>2</strong><span>Fermoirs de boucles d’oreilles en métal</span></li><li><strong>2</strong><span>Fermoirs de boucles d’oreilles avec perle</span></li><li><strong>2</strong><span>Ornements interchangeables avec pierre</span></li></ul>",
+      "s01_modes_html": "<ol class=\"suiji-info__modes\"><li><h4>Composition A · Fermoirs en métal</h4><p>Fixez un ornement sur chaque base de puce, puis utilisez les deux fermoirs en métal. Gardez les fermoirs avec perle de côté.</p></li><li><h4>Composition B · Fermoirs avec perle</h4><p>Conservez les deux ornements à l’avant et remplacez les fermoirs en métal par ceux avec perle. Utilisez un seul fermoir par puce.</p></li><li><h4>Composition C · Gauche et droite</h4><p>Intervertissez les deux ornements entre les oreilles. Deux couleurs de pierre différentes peuvent former une paire asymétrique ; aucun ornement supplémentaire n’est inclus.</p></li></ol>",
+      "s01_limit": "Portez une paire de puces à la fois. Les fermoirs en métal et ceux avec perle s’utilisent en alternance.",
+      "s02_name": "Ensemble ras-de-cou et ornement",
+      "s02_contents_html": "<ul class=\"suiji-info__bom\"><li><strong>1</strong><span>Ras-de-cou</span></li><li><strong>1</strong><span>Ornement interchangeable avec pierre</span></li><li><strong>1</strong><span>Support de pendentif</span></li></ul>",
+      "s02_modes_html": "<ol class=\"suiji-info__modes\"><li><h4>Composition A · Version pendentif</h4><p>Fixez l’ornement sur le support de pendentif, puis reliez celui-ci au ras-de-cou par la connexion prévue pour ce modèle.</p></li><li><h4>Composition B · Ras-de-cou seul</h4><p>Retirez le pendentif assemblé et portez le ras-de-cou seul, si ce modèle se ferme correctement sans le pendentif.</p></li></ol>",
+      "s02_limit": "Un seul ornement est inclus. Cet ensemble ne contient ni bases de puces ni base de bague.",
+      "s03_name": "Ensemble bague et deux ornements",
+      "s03_contents_html": "<ul class=\"suiji-info__bom\"><li><strong>1</strong><span>Base de bague</span></li><li><strong>2</strong><span>Ornements interchangeables avec pierre</span></li></ul>",
+      "s03_modes_html": "<ol class=\"suiji-info__modes\"><li><h4>Composition A · Premier ornement</h4><p>Portez la base de bague avec le premier ornement. Gardez le second de côté.</p></li><li><h4>Composition B · Second ornement</h4><p>Retirez le premier ornement et fixez le second sur la même base de bague. La bague et sa taille restent identiques.</p></li></ol>",
+      "s03_limit": "Une base de bague accueille un seul ornement à la fois. Il ne s’agit pas d’un ensemble de deux bagues.",
+      "s04_name": "Ensemble créoles et collier modulables",
+      "s04_contents_html": "<ul class=\"suiji-info__bom\"><li><strong>2</strong><span>Créoles</span></li><li><strong>2</strong><span>Supports de pendentif</span></li><li><strong>2</strong><span>Ornements interchangeables avec pierre</span></li><li><strong>1</strong><span>Collier</span></li></ul>",
+      "s04_modes_html": "<ol class=\"suiji-info__modes\"><li><h4>Composition A · Paire de créoles à pendentif</h4><p>Fixez un ornement sur chaque support, puis suspendez un pendentif assemblé à chaque créole. Les deux ornements sont utilisés pour les boucles d’oreilles.</p></li><li><h4>Composition B · Collier avec pendentif</h4><p>Déplacez l’un des pendentifs assemblés d’une créole vers le collier. Gardez l’autre de côté, ou utilisez-le uniquement dans une composition sur une seule oreille dont la compatibilité est vérifiée.</p></li><li><h4>Composition C · Changer de pendentif</h4><p>Remplacez le pendentif assemblé du collier par l’autre pour créer une seconde version avec la même chaîne.</p></li></ol>",
+      "s04_limit": "Une paire de créoles avec ornements et un collier avec ornement ne peuvent pas être portés simultanément avec cet ensemble : il faudrait trois ornements.",
+      "s05_name": "Ensemble puces d’oreilles et bague modulables",
+      "s05_contents_html": "<ul class=\"suiji-info__bom\"><li><strong>2</strong><span>Bases pour puces d’oreilles</span></li><li><strong>2</strong><span>Fermoirs de boucles d’oreilles en métal</span></li><li><strong>2</strong><span>Fermoirs de boucles d’oreilles avec perle</span></li><li><strong>2</strong><span>Ornements interchangeables avec pierre</span></li><li><strong>1</strong><span>Base de bague</span></li></ul>",
+      "s05_modes_html": "<ol class=\"suiji-info__modes\"><li><h4>Composition A · Paire de puces</h4><p>Utilisez les deux ornements sur la paire de puces, avec les fermoirs en métal ou ceux avec perle. Gardez la base de bague de côté.</p></li><li><h4>Composition B · Première version bague</h4><p>Déplacez un ornement d’une puce vers la base de bague. Gardez l’autre de côté, ou utilisez-le uniquement dans une composition sur une seule oreille dont la compatibilité est vérifiée.</p></li><li><h4>Composition C · Seconde version bague</h4><p>Remplacez l’ornement de la bague par le second. Pour retrouver la paire de puces avec ornements, replacez les deux ornements sur les puces.</p></li></ol>",
+      "s05_limit": "Une paire de puces avec ornements et une bague avec ornement nécessiteraient trois ornements. Cet ensemble en contient deux.",
+      "s06_name": "Ensemble créoles, collier et bague modulables",
+      "s06_contents_html": "<ul class=\"suiji-info__bom\"><li><strong>2</strong><span>Créoles</span></li><li><strong>2</strong><span>Supports de pendentif</span></li><li><strong>2</strong><span>Ornements interchangeables avec pierre</span></li><li><strong>1</strong><span>Collier</span></li><li><strong>1</strong><span>Base de bague</span></li></ul>",
+      "s06_modes_html": "<ol class=\"suiji-info__modes\"><li><h4>Composition A · Paire de créoles à pendentif</h4><p>Utilisez les deux supports et les deux ornements avec la paire de créoles. Gardez le collier et la base de bague de côté.</p></li><li><h4>Composition B · Collier et bague</h4><p>Utilisez un ornement sur un support pour le collier. Retirez l’autre ornement de son support et fixez-le sur la base de bague. Chaque ornement occupe une seule position.</p></li><li><h4>Composition C · Intervertir les ornements</h4><p>Intervertissez les deux ornements entre le support du collier et la base de bague, en réutilisant le même collier et la même bague.</p></li></ol>",
+      "s06_limit": "Les quatre positions possibles se partagent deux ornements. Cet ensemble ne permet pas de garnir simultanément les deux oreilles, le collier et la bague. Les deux supports sont également réutilisés."
+    },
+    "core": {
+      "title": "Découvrir Core-Lock",
+      "intro": "Un point de départ pour associer des bases de bijoux et des ornements interchangeables. Choisissez une base selon l’usage, puis un ornement prévu pour cette base.",
+      "how_title": "Comment ça marche",
+      "step1_title": "Choisir une base",
+      "step1_text": "Commencez par une base de bague, une base de puce ou un support de pendentif selon l’usage souhaité.",
+      "step2_title": "Choisir un ornement compatible",
+      "step2_text": "Vérifiez l’association précise entre la base et l’ornement. Un même nom de catégorie ne signifie pas que toutes les pièces sont compatibles.",
+      "step3_title": "Réutiliser les mêmes pièces",
+      "step3_text": "Appuyez-vous sur la liste des pièces pour composer chaque version. Un ornement occupe une seule position à la fois.",
+      "compatibility_title": "Design et compatibilité",
+      "compatibility_text": "La base, la connexion et l’ornement ont chacun leur rôle. Vérifiez le contenu, l’association prévue et les consignes propres au modèle avant de modifier une composition."
+    },
+    "components": {
+      "bases_title": "Bases de bijoux",
+      "bases_intro": "Les pièces de départ selon la zone de port. Une base ne comprend ni ornement amovible ni chaîne, sauf indication dans sa composition.",
+      "pendant_text": "Accueille un ornement compatible dans une composition pendentif. Vérifiez si le collier est compris.",
+      "stud_text": "Forme l’avant d’une puce avec l’ornement compatible. Les fermoirs sont indiqués séparément ; les versions métal et perle s’utilisent en alternance.",
+      "ring_text": "Une base de bague accueille un ornement à la fois. La taille correspond à la circonférence intérieure en millimètres ; les tailles initialement prévues sont 54 et 57 mm.",
+      "charms_title": "Ornements interchangeables",
+      "charms_intro": "Choisissez un ornement compatible, puis sa couleur de pierre et de contour lorsqu’elles sont proposées. Le nombre d’ornements compris figure dans la composition de l’ensemble.",
+      "charms_note": "Un ornement se déplace avec la composition ; chaque position de port n’ajoute pas une pièce. Les noms des pierres et les matériaux sont précisés lorsqu’ils sont confirmés."
+    },
+    "size_guide": {
+      "title": "Guide des tailles de bagues",
+      "intro": "La taille de bague correspond à la circonférence intérieure en millimètres, et non au diamètre. La plage de référence ci-dessous va de 41 à 65 mm, par pas de 1 mm.",
+      "release_note": "Les tailles 54 et 57 mm sont prévues pour le premier lancement. Les autres tailles sont actuellement indisponibles. Les achats sont suspendus ; ce guide ne réserve aucune taille et ne crée aucune commande.",
+      "initial": "Premier lancement · achats suspendus",
+      "unavailable": "Actuellement indisponible",
+      "shipping": "Pour les précommandes, l’expédition est prévue dans les trois mois suivant le paiement."
+    },
+    "seo": {
+      "sets_description": "Découvrez six ensembles SUIJI, leurs listes complètes de pièces, leurs quantités et les façons de réutiliser les mêmes ornements sur des bases compatibles.",
+      "core_description": "Découvrez Core-Lock de SUIJI : choisissez une base de bijou et un ornement compatible, puis réutilisez les mêmes pièces dans différentes compositions.",
+      "bases_description": "Découvrez les supports de pendentif et les bases de puces et de bagues SUIJI. Consultez leur composition et le guide des tailles en millimètres.",
+      "charms_description": "Découvrez les ornements interchangeables SUIJI, leurs couleurs de pierre et de contour, les quantités incluses et les associations compatibles.",
+      "catalog_description": "Découvrez les bases de bijoux, les ornements interchangeables et les six ensembles prévus par SUIJI. Consultez les compositions pendant la suspension des achats."
+    },
+    "footer": {
+      "brand": "Des bases de bijoux et des ornements interchangeables à composer à votre façon.",
+      "preparation": "Des repères clairs sur les matières, le poids et le confort pendant la préparation de la Première Édition."
+    }
+  },
+  "suiji_preview": {
+    "eyebrow": "Aperçu interactif",
+    "title": "Composez votre bijou",
+    "intro": "Choisissez la taille et la couleur de la bague, puis ajoutez chaque ornement séparément. Seules les photos du studio sélectionnées, bleue et dorée, sont affichées ; les autres images suivront.",
+    "purchase_notice": "Ce panier sert uniquement à l’aperçu. Les achats sont suspendus ; aucune commande ni aucun paiement ne sont créés.",
+    "illustration": "Illustration · aperçu uniquement",
+    "base_title": "Base de bague",
+    "ring_size": "Taille de bague · circonférence intérieure (mm)",
+    "colour": "Couleur de la bague",
+    "metal_gold": "Doré",
+    "metal_silver": "titane naturel",
+    "metal_blue": "Bleu",
+    "stone_rose": "Rose",
+    "stone_blue": "Bleu",
+    "add_base": "Ajouter la bague au panier d’aperçu",
+    "view_bag": "Panier",
+    "complete_look": "Complétez votre composition",
+    "charm_intro": "Choisissez un ornement, sa couleur de pierre et son contour. Chaque bouton ajoute uniquement l’ornement sélectionné ; la taille de votre bague reste identique.",
+    "charm_a": "Ornement A",
+    "charm_b": "Ornement B",
+    "stone_colour": "Exemple de couleur de pierre",
+    "frame_colour": "Couleur du contour",
+    "add_charm": "Ajouter cet ornement",
+    "rotation_note": "Une bague accueille un seul ornement à la fois. Les deux ornements se portent en alternance ; les ajouter tous les deux ne crée pas une seconde bague.",
+    "bag_title": "Votre panier d’aperçu",
+    "empty": "Votre panier d’aperçu est vide. Commencez par une base ou un ornement.",
+    "clear": "Vider le panier d’aperçu",
+    "checkout_paused": "Les achats sont actuellement suspendus",
+    "quantity": "Quantité",
+    "remove": "Retirer",
+    "added": "Ajout au panier d’aperçu : __ITEM__.",
+    "updated": "Quantité de l’aperçu mise à jour.",
+    "removed": "Article retiré du panier d’aperçu.",
+    "no_js": "Activez JavaScript pour essayer l’aperçu interactif. Le guide des tailles et la composition des ensembles restent accessibles ci-dessous.",
+    "try_link": "Essayer une composition",
+    "home_hero_alt": "Bague bleue à fermoir rond, vue en studio.",
+    "home_method_alt": "Bague dorée à fermoir rond, vue en studio.",
+    "home_image_pending": "Image du studio",
+    "home_preview_label": "Dans le studio SUIJI",
+    "entry_cta": "Choisir la taille et ajouter",
+    "entry_description": "Explorez les tailles 54 et 57 mm, les couleurs de bague et deux ornements optionnels.",
+    "studio_preview": "Image du studio · aperçu uniquement",
+    "stone_smoky": "Gris fumé",
+    "stone_aqua": "Bleu aqua"
+  },
+  "suiji_catalog": {
+    "intro": "Choisissez selon la façon de porter vos bijoux, puis explorez chaque catégorie.",
+    "availability": "Ces collections sont en préparation. Les achats sont actuellement suspendus.",
+    "browse_categories": "Explorer les catégories",
+    "back_shop_all": "Retour à tous les bijoux",
+    "explore_category": "Explorer la catégorie",
+    "try_combination": "Essayer une composition",
+    "descriptions": {
+      "necklaces": "Chaînes, colliers de perles, ras-de-cou et colliers complets avec pendentif.",
+      "chains": "Découvrez les chaînes et vérifiez la longueur, la fermeture et les pièces comprises pour chaque modèle.",
+      "beaded_necklaces": "Découvrez les colliers de perles. La matière des perles et les pièces comprises sont précisées pour chaque modèle.",
+      "chokers": "Des colliers courts portés près du cou. Les modèles rigides sont précisés dans leur fiche.",
+      "pendant_necklaces": "Des colliers complets comprenant une chaîne et un pendentif. Un support de pendentif vendu seul figure dans Core-Lock.",
+      "bracelets_bangles": "Bracelets souples et joncs rigides, regroupés selon leur structure.",
+      "chain_beaded_bracelets": "Des modèles souples en chaîne ou en perles. Vérifiez la taille et la fermeture indiquées pour chaque modèle.",
+      "bangles": "Des modèles rigides pour le poignet. Vérifiez les dimensions intérieures et les détails d’ouverture de chaque modèle.",
+      "earrings": "Puces et créoles. Chaque fiche précise si elle comprend une pièce ou une paire.",
+      "stud_earrings": "Découvrez les puces. Vérifiez si la fiche comprend une pièce ou une paire, ainsi que les fermoirs inclus.",
+      "hoop_earrings": "Découvrez les créoles. La quantité et les éventuels pendentifs ou ornements séparés sont précisés pour chaque modèle.",
+      "rings": "Des bagues, dont des modèles à ornements interchangeables. Vérifiez la taille et les pièces comprises pour chaque modèle.",
+      "charms": "Des ornements interchangeables pour les bases compatibles. Vérifiez la forme et les options de pierre et de contour de chaque modèle.",
+      "accessories": "Connecteurs et accessoires décoratifs, regroupés par usage. Vérifiez leur compatibilité avec la base prévue.",
+      "multi_use_connectors": "Des pièces de connexion pour la base ou la composition prévue. La compatibilité est précisée pour chaque pièce.",
+      "decorative_add_ons": "Pompons, perles et autres accessoires décoratifs. La fixation et la compatibilité sont précisées pour chaque modèle."
+    }
+  },
+  "suiji_pdp": {
+    "breadcrumbs": "Fil d’Ariane",
+    "home": "Accueil",
+    "gallery": "Images de la bague",
+    "product_code": "R01 · Dans le studio SUIJI",
+    "price_pending": "Prix communiqué au lancement",
+    "lead": "Commencez par une bague. Composez la vôtre avec un ornement interchangeable.",
+    "finish": "Couleur",
+    "size": "Taille de bague",
+    "size_unit": "Circonférence intérieure en millimètres",
+    "size_guide": "Guide des tailles de bague",
+    "saved": "Enregistrée pour cet aperçu",
+    "save": "Enregistrer cette bague pour cet aperçu",
+    "enlarge": "Agrandir l’image",
+    "close": "Fermer",
+    "gallery_note": "Photos du studio sélectionnées : bleu et doré. Les autres images suivront.",
+    "preview_note": "Aperçu interactif. Aucune commande ni aucun paiement ne sont créés.",
+    "charm_jump": "Choisir vos ornements",
+    "add": "Ajouter au panier d’aperçu",
+    "tab_description": "Description",
+    "tab_notes": "Nos conseils",
+    "tab_shipping": "Livraison",
+    "description": "Une base de bague pour composer votre bijou. Choisissez une couleur et une taille de 54 ou 57 mm, puis découvrez les deux ornements optionnels ci-dessous. Chaque ornement s’ajoute séparément.",
+    "notes": "Une bague accueille un seul ornement à la fois. Choisissez les deux pour les porter en alternance ; un deuxième ornement n’inclut pas une deuxième bague. Les photos de la finition titane naturel et des ornements suivront.",
+    "shipping": "Pour les précommandes, l’expédition est prévue dans les trois mois suivant le paiement. Les achats sont actuellement suspendus ; cet aperçu ne réserve ni stock ni date de livraison.",
+    "photo_blue": "Bague bleue · image du studio",
+    "photo_gold": "Bague dorée · image du studio",
+    "photo_silver": "Bague titane naturel · illustration",
+    "guide_intro": "Comparez les tailles internationales à partir de la circonférence intérieure. Les équivalences sont indicatives et peuvent varier selon les marques.",
+    "guide_measure": "Mesurez une bague qui convient au même doigt, d’un bord intérieur à l’autre. Pour une bague circulaire, circonférence = diamètre intérieur × π. Un bijoutier peut vérifier l’ajustement, notamment pour un anneau large.",
+    "guide_range": "54 et 57 mm sont les deux tailles de cet aperçu. Les autres lignes servent de référence et ne sont pas des options de produit disponibles.",
+    "circumference": "SUIJI / FR / EU · circonférence intérieure (mm)",
+    "diameter": "Diamètre intérieur (mm)",
+    "guide_us": "États-Unis / Canada",
+    "guide_uk": "Royaume-Uni / Australie / NZ / Irlande",
+    "guide_jp": "Japon",
+    "guide_cn": "Chine / Hong Kong*",
+    "guide_india": "Inde*",
+    "guide_italy": "Italie / Espagne / Pays-Bas / Suisse*",
+    "guide_selected": "Tailles de l’aperçu",
+    "guide_all": "Tableau international des tailles",
+    "guide_scroll": "Faites glisser le tableau pour comparer tous les systèmes.",
+    "guide_source": "Références de tailles",
+    "guide_dash": "— indique qu’aucune équivalence n’a été vérifiée dans ce tableau. Les mesures en millimètres restent la base des tailles SUIJI.",
+    "guide_regional": "* Les systèmes locaux varient, notamment en Chine, à Hong Kong, en Inde et en Italie. Ces équivalences sont indicatives. Vérifiez le système de votre bijoutier. Pour l’Inde, la circonférence la plus proche du tableau Tanishq est utilisée.",
+    "guide_reference": "Référence uniquement",
+    "guide_available": "Option de l’aperçu",
+    "nav_illustration": "Illustration de catégorie",
+    "unsaved": "Retirée des favoris de cet aperçu.",
+    "limit": "Cet aperçu permet jusqu’à 9 exemplaires par sélection.",
+    "nav_single_hoop": "Créole seule · image du studio",
+    "colour_photo_pending": "Photo de cette couleur à venir. Choisissez bleu ou doré pour voir une photo du studio.",
+    "optional_charm_controls": "Ornements optionnels · aperçu",
+    "native_details_fallback": "Contactez SUIJI pour en savoir plus sur ce modèle.",
+    "native_notes_fallback": "Vérifiez la taille, les options et les pièces incluses de ce modèle avant de passer commande.",
+    "native_shipping_fallback": "Contactez SUIJI pour connaître les modalités de livraison.",
+    "native_guide_title": "Tailles de bague SUIJI",
+    "native_guide_range": "Consultez les options du produit pour connaître les tailles proposées pour ce modèle. Ce tableau sert de référence et n’indique pas la disponibilité en stock.",
+    "native_size_reference": "Taille de référence SUIJI",
+    "native_save": "Enregistrer ce modèle pour cette visite"
+  },
+  "suiji_display": {
+    "colour": "Couleur",
+    "blue": "Bleu",
+    "reference": "Référence",
+    "pricing_pending": "Prix communiqué au lancement",
+    "coming_soon": "Bientôt disponible",
+    "notice": "Découvrez cette pièce. Les commandes ne sont pas encore ouvertes."
+  },
+  "suiji_commerce": {
+    "loading": "Découvrez votre collection SUIJI…",
+    "enable_js": "Activez JavaScript pour choisir vos pièces et utiliser le panier de démonstration.",
+    "contact": "Contactez-nous",
+    "demo_bar": "DÉMONSTRATION SUIJI · Prix et visuels illustratifs · Aucune commande ni aucun paiement",
+    "material": "Titane TC4",
+    "about_visual": "Concept de campagne : atelier de création SUIJI",
+    "about_caption": "Concept d’atelier créé avec l’IA",
+    "care": "Prenez soin de vos bijoux",
+    "personal": "À vous de composer",
+    "personal_note": "Découvrez le système Core-Lock.",
+    "help": "À votre écoute",
+    "help_note": "Une question sur votre composition ? Contactez SUIJI."
+  },
+  "suiji_sizing": {
+    "title": "Guide des tailles et des mesures",
+    "ring_title": "Trouvez votre taille de bague",
+    "intro": "Les tailles SUIJI indiquent la circonférence intérieure en millimètres. Partez d’une mesure fiable.",
+    "current": "Nos tailles de bague actuelles",
+    "current_note": "Les tailles 54 et 57 mm sont proposées. Le tableau de 41 à 65 mm ci-dessous est indicatif ; les autres tailles sont indisponibles pour le moment.",
+    "size": "Taille SUIJI",
+    "inner_diameter": "Diamètre intérieur",
+    "approx": "Env.",
+    "diagram_note": "Les illustrations ne sont pas à l’échelle réelle. Utilisez une règle ou le baguier imprimable étalonné.",
+    "measure_title": "Deux façons de mesurer",
+    "method_ring": "Avec une bague qui vous va",
+    "method_ring_text": "Choisissez une bague adaptée au même doigt. Mesurez son diamètre intérieur d’un bord à l’autre, sans inclure le métal. Saisissez cette mesure ci-dessous.",
+    "method_finger": "Mesurez votre doigt",
+    "method_finger_text": "Entourez le doigt d’une fine bande de papier sans serrer. Marquez le point de rencontre, puis mesurez la bande en millimètres. Vérifiez aussi le passage de l’articulation.",
+    "calculator_title": "Convertissez votre mesure",
+    "measurement_type": "Type de mesure",
+    "diameter_option": "Diamètre intérieur de la bague (mm)",
+    "circumference_option": "Tour du doigt (mm)",
+    "measurement": "Votre mesure en mm",
+    "calculate": "Convertir",
+    "result": "Circonférence intérieure estimée : {{ measure }} mm",
+    "result_diameter": "Diamètre intérieur équivalent : {{ measure }} mm",
+    "result_idle": "Saisissez une mesure pour voir son équivalent.",
+    "result_error": "Vérifiez la mesure en millimètres. Diamètre : 5–35 mm ; circonférence : 20–120 mm.",
+    "calculator_note": "Ce calcul convertit une mesure sans choisir une taille de produit. Entre deux tailles ou pour un anneau large, demandez-nous conseil avant de choisir.",
+    "print_title": "Vous préférez un baguier à imprimer ?",
+    "print_text": "Ouvrez le baguier et imprimez à 100 % / taille réelle. Vérifiez la ligne de contrôle de 50 mm avec une règle avant de comparer votre bague. Ne mesurez jamais à l’écran.",
+    "print_link": "Ouvrir le baguier à imprimer",
+    "all_chart": "Tableau international complet · 41–65 mm",
+    "fit_title": "Avant de choisir",
+    "fit_text": "Mesurez plusieurs fois le doigt concerné. Un anneau large peut se porter différemment d’un anneau fin. Si votre mesure se situe entre 54 et 57 mm, ne choisissez pas simplement la taille disponible la plus proche.",
+    "contact": "Demander un conseil de taille",
+    "category_nav": "Choisissez votre type de bijou",
+    "rings": "Bagues",
+    "bracelets": "Bracelets",
+    "necklaces": "Colliers",
+    "earrings": "Boucles d’oreilles",
+    "other_title": "Mesurer les autres bijoux",
+    "bracelet_text": "Mesurez votre poignet à l’endroit où reposera le bijou, avec un ruban souple. Pour une chaîne, comparez la longueur portée ; pour un bracelet rigide, la largeur intérieure, la profondeur et l’ouverture.",
+    "necklace_text": "Utilisez un ruban souple pour choisir la hauteur souhaitée. Vérifiez la longueur totale portée, fermoir compris, et la retombée du pendentif. Un collier rigide se porte différemment d’une chaîne souple.",
+    "earring_text": "Comparez la hauteur et la largeur intérieures d’une créole, ou la hauteur totale d’une boucle pendante. Vérifiez le fermoir et l’espace sous le perçage. La dimension extérieure n’est pas l’espace libre intérieur.",
+    "other_note": "L’ajustement dépend du modèle. Consultez les mesures du produit ou contactez-nous pour les dimensions de la pièce qui vous intéresse.",
+    "full_guide": "Tous les conseils de taille",
+    "formula": "Pour une bague circulaire : circonférence intérieure = diamètre intérieur × π."
+  },
+  "suiji_v40": {
+    "home": {
+      "hero_title": "Des bijoux à votre image.",
+      "story_title": "Des bijoux à votre rythme",
+      "story_lead": "Un ornement. Plusieurs façons de le porter.",
+      "story_body": "Depuis 2014, nous créons à la main des bijoux qui laissent place à vos envies. SUIJI réunit des ornements interchangeables, des bases en titane et notre fermoir Core-Lock, pour qu’un détail que vous aimez puisse prendre une nouvelle forme. Tout en discrétion ou avec plus de présence, à vous de composer. Nous avançons vers un avenir où chacun pourra porter des bijoux qu’il aura contribué à dessiner.",
+      "ornament": "Ornement",
+      "base": "Base",
+      "composition": "Votre composition",
+      "compatibility": "Chaque ornement SUIJI s’adapte à toutes les bases équipées du fermoir multi-usage SUIJI.",
+      "about_title": "À propos de SUIJI",
+      "about_lead": "Les idées. Le geste. Les personnes.",
+      "about_body": "Votre style et le plaisir de porter chaque pièce guident notre création. Rencontrez Chunyu Wen, la créatrice de SUIJI, et découvrez comment ornements et bases deviennent des bijoux à votre image.",
+      "about_cta": "Rencontrer la créatrice",
+      "editorial_title": "À porter. À découvrir.",
+      "editorial_body": "Que comprend l’ensemble ? Comment vérifier la taille ? Des guides concrets pour choisir, composer et entretenir vos bijoux."
+    },
+    "about": {
+      "title": "Des bijoux à votre image.",
+      "lead": "SUIJI crée des bijoux à composer à votre façon. L’ornement donne son allure au bijou ; la base le maintient en place. Votre style et le plaisir de porter chaque pièce guident notre création.",
+      "structure_title": "Un ornement. Une base. Votre expression.",
+      "structure_body": "Les bases en titane portent les ornements. Gardez un détail que vous aimez et essayez-le sur une autre base, ou conservez votre base et choisissez un nouvel ornement. Chaque ornement SUIJI s’adapte à toutes les bases équipées du fermoir multi-usage SUIJI.",
+      "structure_cta": "Découvrir le système SUIJI",
+      "style_title": "Du discret à l’affirmé",
+      "style_body": "Des formes épurées et des détails soignés se portent seuls ou s’associent dans une composition plus expressive. Proportions, couleurs et matières relient les éléments ; vous décidez de l’allure finale.",
+      "designer_title": "Rencontrez la créatrice",
+      "designer_name": "Chunyu Wen",
+      "designer_role": "Fondatrice · Direction de la marque et du produit",
+      "designer_bio": "Chunyu met son expérience en joaillerie sur mesure au service de la marque SUIJI, de ses produits, du développement des structures, du design et de la chaîne de production. Elle a étudié la communication visuelle à l’Académie des arts et du design de l’université Tsinghua, puis le management de marque à l’INSEEC, en France.",
+      "designer_approach": "Son travail part du lien entre l’ornement et la structure qui permet de le porter, pour laisser l’expression finale à la personne qui choisit le bijou.",
+      "designer_alt": "Chunyu Wen, fondatrice et responsable de la marque et des produits SUIJI",
+      "wear_title": "Pensés pour être portés",
+      "wear_body": "Nous considérons les surfaces au contact de la peau, l’équilibre et le mouvement du bijou entier, sa position sur le corps et ses interactions avec les cheveux et les vêtements. Le confort et la sensibilité varient selon la personne, les matériaux, les finitions et la conception complète.",
+      "team_title": "Du produit au contenu",
+      "team_body": "Chunyu dirige le travail de marque et de produit. Yue Wang, associée en automatisation par l’IA et marketing, relie les informations produit, le contenu et le commerce. La validation humaine reste essentielle au design, à la production, au contrôle qualité et à la publication.",
+      "future_title": "Un avenir à votre image",
+      "future_body": "Notre ambition : que chacun puisse porter un bijou qu’il a contribué à dessiner, avec une structure développée par SUIJI pour lui donner vie.",
+      "planned": "Un service en préparation",
+      "planned_body": "Partager vos préférences, puis imaginer un ornement qui vous ressemble. SUIJI vérifierait l’adaptation à la structure et la faisabilité avant de confirmer le dessin, le prix et le délai. Ce service de création personnelle est en préparation ; ce site ne propose pas encore d’outil de commande sur mesure.",
+      "collection_cta": "Découvrir la collection",
+      "sets_cta": "Trouver votre point de départ",
+      "contact_cta": "Contacter SUIJI"
+    },
+    "core": {
+      "compatibility_text": "Chaque ornement SUIJI s’adapte à toutes les bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces incluses : une créole seule, une attache et une base complète avec fermoir ont des rôles différents. La fiche indique les attaches supplémentaires nécessaires."
+    },
+    "meta": {
+      "home_title": "SUIJI | Des bijoux à composer à votre image",
+      "home_description": "Découvrez les bijoux SUIJI : ornements interchangeables, bases en titane et compositions à votre image. Du plus discret au plus affirmé.",
+      "about_title": "À propos de SUIJI | Des bijoux à votre image",
+      "about_description": "Découvrez les personnes et les idées derrière SUIJI : ornements interchangeables, bases en titane et bijoux à composer selon votre style."
+    },
+    "journal": {
+      "updated": "Informations vérifiées",
+      "review_date": "31 octobre 2026",
+      "check_label": "Trois composants à vérifier",
+      "base": "Votre base",
+      "base_text": "Le fermoir multi-usage SUIJI est-il inclus ?",
+      "ornament": "Votre ornement",
+      "ornament_text": "Une pièce ou une paire ? Comptez le contenu.",
+      "extra": "Pièces supplémentaires",
+      "extra_text": "Vérifiez les bases et les attaches distinctes."
+    }
+  },
+  "suiji_storefront": {
+    "home": "Accueil",
+    "breadcrumb": "Fil d’Ariane",
+    "included": "Les pièces incluses",
+    "material": "Matière",
+    "metal": "Parties métalliques en titane TC4",
+    "connection": "Comment les pièces se composent",
+    "options": "Vos choix",
+    "choose": "Choisissez votre composition",
+    "loading": "Les options se chargent. Les informations sur la pièce sont déjà disponibles ci-dessous.",
+    "retry": "Réessayer de charger les options",
+    "contact": "Une question sur cette pièce",
+    "browse": "Découvrir tous les bijoux",
+    "illustrative": "Visuel produit illustratif",
+    "demo": "Parcours de démonstration. Prix et images illustratifs ; aucune commande réelle ni aucun paiement.",
+    "pair": "Vendu par paire",
+    "ring_guide": "Guide des tailles de bague et conversions internationales",
+    "care": "Entretien et rangement",
+    "system": "Comprendre Core-Lock",
+    "shared": "Les deux ornements se partagent entre les compositions ; ils ne se multiplient pas quand vous changez de position.",
+    "related": "Complétez votre composition",
+    "journal": "Un guide pour vous aider à choisir",
+    "category_intro": "Découvrez les pièces, leur contenu et les façons de les intégrer à vos propres compositions.",
+    "catalogue_loading": "Les filtres et options se chargent. Les pièces et leurs informations restent accessibles.",
+    "no_js": "Les pièces et leurs informations restent accessibles. Activez JavaScript pour essayer le panier de démonstration.",
+    "counts": "pièces",
+    "more": "Voir la pièce",
+    "stone": "Moissanite",
+    "categories": {
+      "all": "Tous les bijoux",
+      "rings": "Bagues",
+      "earrings": "Boucles d’oreilles",
+      "necklaces": "Colliers",
+      "bracelets": "Bracelets",
+      "charms": "Ornements",
+      "extras": "Accessoires",
+      "sets": "Ensembles",
+      "bases": "Supports de bijoux"
+    },
+    "roles": {
+      "ring_base": "Support de bague",
+      "earring_base": "Support de boucle",
+      "pendant_base": "Support de pendentif",
+      "necklace_base": "Support de collier",
+      "bracelet_base": "Support de bracelet",
+      "charm": "Ornement",
+      "connector": "Connecteur",
+      "ear_back": "Fermoir d’oreille",
+      "assembled_jewelry": "Bijou",
+      "set": "Ensemble"
+    }
+  },
+  "suiji_products": {
+    "r01_ring_base": {
+      "title": "Support de bague brossé",
+      "description": "Un travail du titane TC4 fait à la main, avec un anneau sculptural et le fermoir Core-Lock. Portez le support seul ou choisissez un ornement interchangeable.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>1 support de bague avec Core-Lock ; ornement vendu séparément.</li></ul>",
+      "options_html": "<ul><li><strong>Finition de l’anneau:</strong> Bleu, Titane naturel, Champagne</li><li><strong>Fermoir / boutons:</strong> Bleu / Bleu, Bleu / Titane naturel, Bleu / Champagne, Titane naturel / Bleu, Titane naturel / Titane naturel, Titane naturel / Champagne, Champagne / Bleu, Champagne / Titane naturel, Champagne / Champagne</li><li><strong>Taille de bague:</strong> 54, 57</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "r01_iridescent_ring_base": {
+      "title": "Support de bague brossé irisé",
+      "description": "Le support de bague R01 brossé dans sa finition bleu irisé, avec un travail du titane TC4 et le fermoir Core-Lock. Cette finition est propre à R01.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>1 support de bague avec Core-Lock ; ornement vendu séparément.</li></ul>",
+      "options_html": "<ul><li><strong>Taille de bague:</strong> 54, 57</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "r02_ring_base": {
+      "title": "Support de bague texturé",
+      "description": "Un travail du titane TC4 fait à la main, avec un anneau sculptural et le fermoir Core-Lock. Portez le support seul ou choisissez un ornement interchangeable.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>1 support de bague avec Core-Lock ; ornement vendu séparément.</li></ul>",
+      "options_html": "<ul><li><strong>Finition de l’anneau:</strong> Bleu, Titane naturel, Champagne</li><li><strong>Fermoir / boutons:</strong> Bleu / Bleu, Bleu / Titane naturel, Bleu / Champagne, Titane naturel / Bleu, Titane naturel / Titane naturel, Titane naturel / Champagne, Champagne / Bleu, Champagne / Titane naturel, Champagne / Champagne</li><li><strong>Taille de bague:</strong> 54, 57</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "double_arm_ring_base": {
+      "title": "Support de bague à double anneau",
+      "description": "Un travail du titane TC4 fait à la main, avec un anneau sculptural et le fermoir Core-Lock. Portez le support seul ou choisissez un ornement interchangeable.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>1 support de bague avec Core-Lock ; ornement vendu séparément.</li></ul>",
+      "options_html": "<ul><li><strong>Finition de l’anneau:</strong> Bleu, Titane naturel, Champagne</li><li><strong>Fermoir / boutons:</strong> Bleu / Bleu, Bleu / Titane naturel, Bleu / Champagne, Titane naturel / Bleu, Titane naturel / Titane naturel, Titane naturel / Champagne, Champagne / Bleu, Champagne / Titane naturel, Champagne / Champagne</li><li><strong>Taille de bague:</strong> 54, 57</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "h01_hoops": {
+      "title": "Créoles rectangulaires arrondies",
+      "description": "Des lignes épurées, une silhouette rectangulaire arrondie et un travail du titane TC4. Vendues par paire. L’image de détail présente une créole.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Cette pièce ne comprend pas Core-Lock. Une attache supplémentaire est nécessaire pour une composition interchangeable ; vérifiez toutes les pièces.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "h02_hoop": {
+      "title": "Créole ronde",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Cette pièce ne comprend pas Core-Lock. Une attache supplémentaire est nécessaire pour une composition interchangeable ; vérifiez toutes les pièces.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "a02_drop": {
+      "title": "Créole rectangulaire et pendentif Core-Lock",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>Créole H01 + connecteur H03 + fermoir Core-Lock. L’ornement se choisit séparément.</li></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "a03_drop": {
+      "title": "Créole ronde et pendentif Core-Lock",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>Créole H02 + connecteur H03 + fermoir Core-Lock. L’ornement se choisit séparément.</li></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "collar_7": {
+      "title": "Collier rigide à 7 maillons",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>7 longs maillons fixes, attache arrière et 1 fermoir Core-Lock.</li></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "collar_7_drops_1": {
+      "title": "Collier à 7 maillons · 1 pendentif",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>Collier à 7 maillons avec 1 connecteurs H03 et 2 fermoirs Core-Lock dans la composition documentée.</li></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "collar_7_drops_3": {
+      "title": "Collier à 7 maillons · 3 pendentifs",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>Collier à 7 maillons avec 3 connecteurs H03 et 4 fermoirs Core-Lock dans la composition documentée.</li></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "collar_7_drops_5": {
+      "title": "Collier à 7 maillons · 5 pendentifs",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>Collier à 7 maillons avec 5 connecteurs H03 et 6 fermoirs Core-Lock dans la composition documentée.</li></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "collar_9": {
+      "title": "Collier rigide à 9 maillons",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>9 longs maillons fixes, attache arrière et 1 fermoir Core-Lock.</li></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "collar_9_drops_1": {
+      "title": "Collier à 9 maillons · 1 pendentif",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>Collier à 9 maillons avec 1 connecteurs H03 et 2 fermoirs Core-Lock dans la composition documentée.</li></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "collar_9_drops_3": {
+      "title": "Collier à 9 maillons · 3 pendentifs",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>Collier à 9 maillons avec 3 connecteurs H03 et 4 fermoirs Core-Lock dans la composition documentée.</li></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "collar_9_drops_5": {
+      "title": "Collier à 9 maillons · 5 pendentifs",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>Collier à 9 maillons avec 5 connecteurs H03 et 6 fermoirs Core-Lock dans la composition documentée.</li></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "cross_chain": {
+      "title": "Chaîne à maillons croisés",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Cette pièce ne comprend pas Core-Lock. Une attache supplémentaire est nécessaire pour une composition interchangeable ; vérifiez toutes les pièces.",
+      "included_html": "<ul><li>Corps de chaîne de 550 mm ; les anneaux d’extrémité s’ajoutent à cette longueur.</li></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "cross_chain_core_lock": {
+      "title": "Chaîne à maillons croisés avec Core-Lock",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>Corps de chaîne de 550 mm ; les anneaux d’extrémité s’ajoutent à cette longueur.</li></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "chain_l01": {
+      "title": "Chaîne à larges maillons ovales",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "chain_l02": {
+      "title": "Chaîne à maillons allongés",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "chain_l03": {
+      "title": "Chaîne à maillons compacts",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "chain_l04": {
+      "title": "Chaîne à perles plates",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Entretenir vos pièces"
+    },
+    "chain_l05": {
+      "title": "Chaîne à maillons rectangulaires plats",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Entretenir vos pièces"
+    },
+    "bracelet_b3": {
+      "title": "Support de bracelet Figaro",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Cette pièce se porte selon la composition indiquée. Elle ne comprend pas le fermoir multi-usage SUIJI.",
+      "included_html": "<ul><li>Modèle à chaîne ; l’attache S7 est distincte de Core-Lock.</li></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Entretenir vos pièces"
+    },
+    "bracelet_b4": {
+      "title": "Bracelet à maillons moyens",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Cette pièce se porte selon la composition indiquée. Elle ne comprend pas le fermoir multi-usage SUIJI.",
+      "included_html": "<ul><li>Modèle à chaîne ; l’attache S7 est distincte de Core-Lock.</li></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Entretenir vos pièces"
+    },
+    "bracelet_b5": {
+      "title": "Bracelet à larges maillons",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Cette pièce se porte selon la composition indiquée. Elle ne comprend pas le fermoir multi-usage SUIJI.",
+      "included_html": "<ul><li>Modèle à chaîne ; l’attache S7 est distincte de Core-Lock.</li></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Entretenir vos pièces"
+    },
+    "core_lock_pendant_base": {
+      "title": "Support de pendentif Core-Lock",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "core_lock_stud_base": {
+      "title": "Support de puce Core-Lock",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "core_lock_stud_metal_back": {
+      "title": "Puce Core-Lock avec fermoir métallique",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "pearl_back_stud": {
+      "title": "Puce Core-Lock avec dos effet perle",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "h03_connector": {
+      "title": "Connecteur H03",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Cette pièce ne comprend pas Core-Lock. Une attache supplémentaire est nécessaire pour une composition interchangeable ; vérifiez toutes les pièces.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "h03_core_lock": {
+      "title": "Connecteur H03 et Core-Lock",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "metal_ear_backs": {
+      "title": "Fermoirs d’oreilles métalliques",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Cette pièce se porte selon la composition indiquée. Elle ne comprend pas le fermoir multi-usage SUIJI.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Entretenir vos pièces"
+    },
+    "pearl_effect_ear_back": {
+      "title": "Dos de boucle effet perle",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Cette pièce se porte selon la composition indiquée. Elle ne comprend pas le fermoir multi-usage SUIJI.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Entretenir vos pièces",
+      "material": "Perle d’imitation / résine"
+    },
+    "pearl_effect_stud": {
+      "title": "Puce effet perle",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Cette pièce se porte selon la composition indiquée. Elle ne comprend pas le fermoir multi-usage SUIJI.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Choisir une créole"
+    },
+    "oval_motif": {
+      "title": "Ornement ovale cabochon",
+      "description": "Un ornement cabochon ovale au cadre en titane TC4, lisse ou martelé, avec huit pierres de la palette SUIJI. Choisissez une pierre et une finition, puis associez-le à un support Core-Lock.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "L’ornement est l’élément décoratif. Choisissez séparément une base équipée du fermoir multi-usage SUIJI pour le porter.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Surface:</strong> Lisse, Martelé</li><li><strong>Pierre:</strong> Améthyste, Citrine, Aigue-marine, Quartz rose, Préhnite, Morganite, Quartz fumé, Kunzite</li><li><strong>Finition du cadre:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "logo_square": {
+      "title": "Ornement Logo carré",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "L’ornement est l’élément décoratif. Choisissez séparément une base équipée du fermoir multi-usage SUIJI pour le porter.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "logo_round": {
+      "title": "Ornement Logo rond",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "L’ornement est l’élément décoratif. Choisissez séparément une base équipée du fermoir multi-usage SUIJI pour le porter.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finition:</strong> Bleu, Titane naturel, Champagne</li></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "design_f03": {
+      "title": "Ornement ovale bleu profond",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "design_f04": {
+      "title": "Ornement ovale rose",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "design_f05": {
+      "title": "Ornement coussin",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "design_f06": {
+      "title": "Ornement couronne facettée",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "design_f07": {
+      "title": "Ornement effet perle",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "design_f08": {
+      "title": "Ornement sculptural à pierre claire",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "design_f08b": {
+      "title": "Ornement sculptural bleu gris",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "design_f09": {
+      "title": "Ornement disque texturé",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "design_t01": {
+      "title": "Ornement triangle ajouré",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "design_new_round_0926": {
+      "title": "Ornement rond cabochon",
+      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
+      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Vérifier la base et l’ornement"
+    },
+    "set01_stud_earring_set": {
+      "title": "Ensemble de puces d’oreilles",
+      "description": "Un point de départ pour des boucles d’oreilles, avec les bases, ornements interchangeables et fermoirs indiqués ci-dessous.",
+      "notes": "Les ornements et supports se partagent entre les pièces de cet ensemble. La composition indiquée ne prévoit pas un ornement distinct pour chaque position portée simultanément.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>2 × Supports de puces</li><li>2 × Fermoirs métalliques</li><li>2 × Dos effet perle</li><li>2 × Ornements interchangeables</li></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Une base, deux ornements"
+    },
+    "set02_choker_set": {
+      "title": "Ensemble ras-de-cou",
+      "description": "Une base de collier et deux ornements interchangeables, pour varier le style avec la même base.",
+      "notes": "Les ornements et supports se partagent entre les pièces de cet ensemble. La composition indiquée ne prévoit pas un ornement distinct pour chaque position portée simultanément.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>1 × COLLAR</li><li>1 × Ornements interchangeables</li><li>1 × Supports de pendentif</li></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Une base, deux ornements"
+    },
+    "set03_ring_set": {
+      "title": "Ensemble bague",
+      "description": "Une base de bague et deux ornements interchangeables. Choisissez votre look du jour, puis gardez l’autre ornement pour une prochaine composition.",
+      "notes": "Les ornements et supports se partagent entre les pièces de cet ensemble. La composition indiquée ne prévoit pas un ornement distinct pour chaque position portée simultanément.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>1 × Support de bague</li><li>2 × Ornements interchangeables</li></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Une base, deux ornements"
+    },
+    "set04_hoop_earring_necklace_set": {
+      "title": "Ensemble créoles et collier",
+      "description": "Des créoles, des supports de pendentif, un collier et deux ornements partagés. Explorez une composition aux oreilles ou sur le collier.",
+      "notes": "Les ornements et supports se partagent entre les pièces de cet ensemble. La composition indiquée ne prévoit pas un ornement distinct pour chaque position portée simultanément.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>2 × Créoles</li><li>2 × Supports de pendentif</li><li>2 × Ornements interchangeables</li><li>1 × Collier</li></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Une base, deux ornements"
+    },
+    "set05_stud_earring_ring_set": {
+      "title": "Ensemble puces d’oreilles et bague",
+      "description": "Des bases de boucles d’oreilles, une base de bague et deux ornements partagés, avec les fermoirs indiqués ci-dessous.",
+      "notes": "Les ornements et supports se partagent entre les pièces de cet ensemble. La composition indiquée ne prévoit pas un ornement distinct pour chaque position portée simultanément.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>2 × Supports de puces</li><li>2 × Fermoirs métalliques</li><li>2 × Dos effet perle</li><li>2 × Ornements interchangeables</li><li>1 × Support de bague</li></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Une base, deux ornements"
+    },
+    "set06_hoop_earring_necklace_ring_set": {
+      "title": "Ensemble créoles, collier et bague",
+      "description": "Des créoles, des supports de pendentif, un collier, une base de bague et deux ornements partagés. Choisissez la place de chaque ornement dans votre composition.",
+      "notes": "Les ornements et supports se partagent entre les pièces de cet ensemble. La composition indiquée ne prévoit pas un ornement distinct pour chaque position portée simultanément.",
+      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
+      "included_html": "<ul><li>2 × Créoles</li><li>2 × Supports de pendentif</li><li>2 × Ornements interchangeables</li><li>1 × Collier</li><li>1 × Support de bague</li></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Une base, deux ornements"
+    }
+  }
+}

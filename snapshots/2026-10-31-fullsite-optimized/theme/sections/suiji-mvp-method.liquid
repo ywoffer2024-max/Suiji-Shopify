@@ -1,0 +1,69 @@
+{%- liquid
+  assign suiji_home_image = section.settings.image | default: images['r01-gold-front-area17-f7026a47c290d05b.png']
+  assign suiji_home_alt = 'suiji_preview.home_method_alt' | t
+-%}
+{%- liquid
+  assign is_fr = false
+  if request.locale.iso_code contains 'fr'
+    assign is_fr = true
+  endif
+  assign about_url = routes.root_url | append: '/pages/about' | replace: '//', '/'
+-%}
+
+<section class="suiji-section suiji-method">
+  <div class="suiji-shell">
+    <div class="suiji-method__layout">
+      <div class="suiji-method__media">
+        {%- if suiji_home_image != blank -%}
+          {{ suiji_home_image | image_url: width: 1600 | image_tag:
+            class: 'suiji-method__image',
+            widths: '360, 540, 750, 960, 1200, 1600',
+            sizes: '(min-width: 990px) 50vw, 100vw',
+            loading: 'lazy',
+            decoding: 'async',
+            alt: suiji_home_alt
+          }}
+        {%- else -%}<span>{{ 'suiji_preview.home_image_pending' | t }}</span>{%- endif -%}
+      </div>
+      <div class="suiji-method__content">
+        <h2 class="suiji-subtitle">
+          {%- if is_fr -%}Des réponses utiles, avec leurs limites.{%- else -%}Useful answers, with their limits.{%- endif -%}
+        </h2>
+        <p class="suiji-copy">
+          {%- if is_fr -%}
+            Nos guides distinguent les faits vérifiables, les conseils pratiques et les informations produit encore à confirmer.
+          {%- else -%}
+            Our guides separate checkable facts, practical guidance and product information still awaiting confirmation.
+          {%- endif -%}
+        </p>
+        <ul class="suiji-method__list">
+          <li class="suiji-method__item">{%- if is_fr -%}Sources lisibles et datées{%- else -%}Readable, dated sources{%- endif -%}</li>
+          <li class="suiji-method__item">{%- if is_fr -%}Relecture humaine en français et en anglais{%- else -%}Human review in French and English{%- endif -%}</li>
+          <li class="suiji-method__item">{%- if is_fr -%}Mises à jour indiquées sur la page{%- else -%}Updates shown on the page{%- endif -%}</li>
+        </ul>
+        <p><a class="suiji-link" href="{{ about_url }}">{%- if is_fr -%}Notre méthode éditoriale{%- else -%}Our editorial method{%- endif -%}</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "SUIJI editorial method",
+  "tag": "section",
+  "class": "section",
+  "presets": [
+    {
+      "name": "SUIJI editorial method"
+    }
+  ],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-banner.settings.image.label"
+    }
+  ]
+}
+{% endschema %}
+

@@ -1,0 +1,135 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_liquid_X3paBd": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% comment %}SUIJI 2026-10-29. Display-only sizes; no new SKUs or stock. Only true 54/57 mm variants can be selected. Scope: a Ring Size option, or Size on a Ring product.{% endcomment %}\n{% liquid\n  assign suiji_size_position = 0\n  assign suiji_product_type = product.type | downcase\n  for suiji_option in product.options_with_values\n    assign suiji_option_name = suiji_option.name | downcase | strip\n    if suiji_option_name == 'ring size' or suiji_option_name == '戒围'\n      assign suiji_size_position = suiji_option.position\n    elsif suiji_option_name == 'size'\n      if suiji_product_type contains 'ring'\n        assign suiji_size_position = suiji_option.position\n      endif\n    endif\n  endfor\n  assign suiji_size_index = suiji_size_position | minus: 1\n  assign suiji_size_label = 'Ring size — inner circumference (mm)'\n  assign suiji_size_available = 'Available for pre-order'\n  assign suiji_size_unavailable = 'Currently unavailable'\n  assign suiji_size_choose = 'Choose your ring size'\n  assign suiji_size_note = 'Choose an available size. Other sizes are currently unavailable. Expected to ship within 3 months of payment.'\n  if request.locale.iso_code == 'fr'\n    assign suiji_size_label = 'Taille de bague — circonférence intérieure (mm)'\n    assign suiji_size_available = 'Disponible en précommande'\n    assign suiji_size_unavailable = 'Actuellement indisponible'\n    assign suiji_size_choose = 'Choisir votre taille de bague'\n    assign suiji_size_note = 'Choisissez une taille disponible. Les autres tailles sont actuellement indisponibles. Expédition prévue dans les 3 mois suivant le paiement.'\n  elsif request.locale.iso_code contains 'zh'\n    assign suiji_size_label = '戒围 — 内周长（毫米）'\n    assign suiji_size_available = '可预售'\n    assign suiji_size_unavailable = '暂不可售'\n    assign suiji_size_choose = '请选择戒围'\n    assign suiji_size_note = '请选择标记为可预售的尺寸；其他尺寸暂不可售。付款后预计三个月内发货。'\n  endif\n%}\n{% if suiji_size_position > 0 %}\n<div class=\"suiji-ring-size-policy\" data-suiji-ring-size-policy data-section=\"{{ section.id }}\" data-position=\"{{ suiji_size_position }}\" hidden>\n  <label for=\"SuijiRingSize-{{ section.id }}\">{{ suiji_size_label }}</label>\n  <select id=\"SuijiRingSize-{{ section.id }}\" aria-describedby=\"SuijiRingSizeNote-{{ section.id }}\" autocomplete=\"off\">\n    <option value=\"\" disabled>{{ suiji_size_choose }}</option>\n    {% for suiji_mm in (41..65) %}\n      <option value=\"{{ suiji_mm }}\" disabled>{{ suiji_mm }} mm — {{ suiji_size_unavailable }}</option>\n    {% endfor %}\n  </select>\n  <p id=\"SuijiRingSizeNote-{{ section.id }}\">{{ suiji_size_note }}</p>\n  <p data-size-status role=\"status\" aria-live=\"polite\"></p>\n  <script type=\"application/json\" data-size-variants>{{ product.variants | json }}</script>\n  <script type=\"application/json\" data-size-labels>{\"available\":{{ suiji_size_available | json }},\"unavailable\":{{ suiji_size_unavailable | json }}}</script>\n</div>\n<style>\n.suiji-ring-size-policy{margin:1.5rem 0;max-width:44rem}\n.suiji-ring-size-policy[hidden],.suiji-native-ring-size[hidden]{display:none!important}\n.suiji-ring-size-policy label{display:block;font-size:1.3rem;line-height:1.5;margin-bottom:.7rem}\n.suiji-ring-size-policy select{width:100%;min-height:4.5rem;padding:1rem 3.2rem 1rem 1.2rem;border:1px solid rgba(var(--color-foreground),.4);border-radius:0;background:rgb(var(--color-background));color:rgb(var(--color-foreground));font:inherit;font-size:1.4rem}\n.suiji-ring-size-policy select:focus-visible{outline:2px solid currentColor;outline-offset:3px}\n.suiji-ring-size-policy option:disabled{color:#777}\n.suiji-ring-size-policy p{font-size:1.2rem;line-height:1.6;margin:.6rem 0}\n.suiji-ring-size-policy [data-size-status]:empty{display:none}\n</style>\n<script>\n(function(){\n  const boot = () => document.querySelectorAll('[data-suiji-ring-size-policy]').forEach(root => {\n    if(root.dataset.ready) return;\n    const scope = document.getElementById('ProductInfo-'+root.dataset.section) || root.closest('product-info');\n    if(!scope) return;\n    const variants = JSON.parse(root.querySelector('[data-size-variants]').textContent);\n    const words = JSON.parse(root.querySelector('[data-size-labels]').textContent);\n    const pos = Number(root.dataset.position)-1;\n    const control = root.querySelector('select');\n    const status = root.querySelector('[data-size-status]');\n    const mm = value => Number(String(value).replace(/mm/ig,'').trim());\n    const allowed = value => [54,57].includes(mm(value));\n    let pending = false;\n    function controls(){\n      const picker = scope.querySelector('variant-selects');\n      if(!picker) return null;\n      const groups = Array.from(picker.querySelectorAll('fieldset, .product-form__input--dropdown'));\n      if(!groups[pos]) return null;\n      return {picker,groups,size:groups[pos]};\n    }\n    function valueOf(group){return group.querySelector('input:checked')?.value || group.querySelector('select')?.value || '';}\n    function current(){\n      const id = scope.querySelector('product-form form input[name=\"id\"]')?.value;\n      return variants.find(v=>String(v.id)===String(id));\n    }\n    function valid(){const v=current();return !!(v && v.available && allowed(v.options[pos]));}\n    function sync(){\n      const c=controls(); if(!c) return;\n      const chosen=c.groups.map(valueOf);\n      for(const option of control.options){\n        if(!option.value)continue;\n        const n=Number(option.value);\n        const available=[54,57].includes(n) && variants.some(v=>v.available && mm(v.options[pos])===n && v.options.every((value,i)=>i===pos || value===chosen[i]));\n        const label=n+' mm — '+(available?words.available:words.unavailable);\n        if(option.disabled===available) option.disabled=!available;\n        if(option.textContent!==label) option.textContent=label;\n      }\n      const selected=mm(chosen[pos]);\n      const next=[54,57].includes(selected) && !Array.from(control.options).find(o=>Number(o.value)===selected)?.disabled ? String(selected) : '';\n      if(control.value!==next) control.value=next;\n      c.size.classList.add('suiji-native-ring-size');\n      if(!c.size.hidden)c.size.hidden=true;\n      if(root.previousElementSibling!==c.picker)c.picker.after(root);\n      if(root.hidden)root.hidden=false;\n      const ok=valid();\n      const text=ok ? '' : words.unavailable;\n      if(status.textContent!==text)status.textContent=text;\n      scope.querySelectorAll('product-form button[type=\"submit\"]').forEach(button=>{\n        if(!ok && !button.disabled){button.dataset.suijiSizeBlocked='1';button.disabled=true;}\n        else if(ok && button.dataset.suijiSizeBlocked){delete button.dataset.suijiSizeBlocked;button.disabled=false;}\n      });\n      const accelerated=scope.querySelector('.shopify-payment-button');\n      if(accelerated){\n        if(!ok && !accelerated.hidden){accelerated.dataset.suijiSizeBlocked='1';accelerated.hidden=true;}\n        else if(ok && accelerated.dataset.suijiSizeBlocked){delete accelerated.dataset.suijiSizeBlocked;accelerated.hidden=false;}\n      }\n    }\n    function schedule(){if(pending)return;pending=true;requestAnimationFrame(()=>{pending=false;sync();});}\n    control.addEventListener('change',event=>{\n      event.stopPropagation();\n      if(![54,57].includes(Number(control.value)))return;\n      const c=controls();if(!c)return;\n      const radio=Array.from(c.size.querySelectorAll('input[type=\"radio\"]')).find(input=>mm(input.value)===Number(control.value));\n      if(radio)radio.click();\n      else{const select=c.size.querySelector('select');const option=select && Array.from(select.options).find(o=>mm(o.value)===Number(control.value));if(option){select.value=option.value;select.dispatchEvent(new Event('change',{bubbles:true}));}}\n      schedule();\n    });\n    scope.addEventListener('change',schedule);\n    scope.addEventListener('submit',event=>{if(!valid()){event.preventDefault();event.stopImmediatePropagation();status.textContent=words.unavailable;}},true);\n    new MutationObserver(schedule).observe(scope,{subtree:true,childList:true,attributes:true,attributeFilter:['value','checked','disabled']});\n    root.dataset.ready='1';sync();\n  });\n  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();\n  document.addEventListener('shopify:section:load',boot);\n})();\n</script>\n{% endif %}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "preorder_note": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "PRE-ORDER — ships in about one month. We will notify you by email when your set is on its way.",
+            "text_style": "subtitle"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "specs": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Materials & care",
+            "icon": "none",
+            "content": "<p>Grade 5 titanium. Matte, brushed, hypoallergenic. Wipe with a soft dry cloth; store charms on their bases.</p>",
+            "page": ""
+          }
+        },
+        "shipping": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & returns",
+            "icon": "none",
+            "content": "<p>EU shipping. 30-day returns on unworn pieces. Details on our policies pages.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_liquid_X3paBd",
+        "title",
+        "price",
+        "variant_picker",
+        "buy_buttons",
+        "preorder_note",
+        "description",
+        "specs",
+        "shipping"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "set_contents": {
+      "type": "suiji-set-contents",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "mechanism_link": "/pages/the-mechanism",
+        "mechanism_label": "Play the mechanism",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "set_contents",
+    "related-products"
+  ]
+}
