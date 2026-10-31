@@ -27,3 +27,5 @@ python3 maintenance/build_storefront.py --theme theme --check
 The generator must report zero differences; it does not publish. ThemeCheck has zero active English/French and code errors, with retained inactive-language findings and 140 warnings. See MAINTENANCE.md for source leases, dependencies, compatibility and regression checks.
 
 Each source release is separately committed and all prefix Git blob SHAs/modes are read back. Export only intended public source and content; no credentials, private pricing/payment research, customer/order data or unpublished full brand PDF.
+
+Latest Core UI followup: the entrance now uses a white editorial composition, a restrained heading and the original two circular pictures at a larger display size. Ice blue is confined to the steps. Wide desktop navigation keeps its labels on one line; the existing native drawer handles widths below1280px. English/French public mobile/desktop cases and actual French1024px drawer open/close/scroll locking passed. These three theme paths were separately leased and byte-read back. Optional placeholder media remain in the separate local preview and were not published.

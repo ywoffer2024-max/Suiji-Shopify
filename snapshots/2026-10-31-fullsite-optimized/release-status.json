@@ -1,9 +1,9 @@
 {
-  "utc": "2026-10-31T10:00:45.171135+00:00",
-  "state": "published_customer_origin_materials_craft_about_and_entity_correction",
+  "utc": "2026-10-31T10:03:00.630803+00:00",
+  "state": "published_restrained_Core_UI_and_readable_adaptive_navigation",
   "theme_files": 697,
   "touched_theme_sources_matched": 268,
-  "actual_source_index_sha256": "8c18254129d50291fbab590bcd67707fa39d39fd4cc73581476c4770da96d3e0",
+  "actual_source_index_sha256": "52c702e81a14ba915f67a9e96fcc654a8bfc8973a48f5c083e22691b982e782f",
   "public_products": 54,
   "demo_configurations": 321,
   "native_Journal_topics": 25,
@@ -205,5 +205,23 @@
     ],
     "scope": "Actual public ENFR About, home, Core-Lock metadata/aria and initial PDP material labels. Separate responsive browser QA; no physical-device, real-commerce or medical certification.",
     "assertion_correction": "About SEO titles already contain SUIJI, so Shopify correctly omits another brand suffix. Corrected the original duplicate-suffix expectation using the saved actual public HTML; no storefront change or repeated HTTP fetch."
-  }
+  },
+  "Core_UI": {
+    "white_hero": true,
+    "original_two_circle_assets_preserved": true,
+    "larger_circle_max_px": 280,
+    "desktop_title_max_px": 58,
+    "native_drawer_used_below_1280": true,
+    "header_country_selection_available_in_footer_when_hidden": "1280–1359.98px; full header selector at1360+; existing mobile/drawer controls preserved",
+    "actual_ENFR_widths": [
+      390,
+      1024,
+      1280
+    ],
+    "root_responsive_cases": 5,
+    "all_no_horizontal_overflow": true,
+    "FR_1024_drawer_open_close_and_scroll_lock_passed": true,
+    "placeholder_media_uploaded": false
+  },
+  "separate_media_preview": "Prepared and tested locally. Not in this live-source backup; no placeholder images or preview-only overlays uploaded to Shopify."
 }

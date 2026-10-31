@@ -15,4 +15,25 @@
 .suiji-system__connection aside p+p{margin-block-start:20px}
 .suiji-system__connection .suiji-system__connection-lead{font-size:1.8rem;line-height:1.75;margin-bottom:24px}
 .suiji-system a:focus-visible{outline:2px solid #315a73;outline-offset:4px}
+/* Quiet editorial entrance: two original pictures, with the products carrying the page. */
+.suiji-system .sc-landing--standalone{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center;gap:clamp(32px,4vw,64px);max-width:1320px;margin-inline:auto;padding:64px clamp(20px,4vw,60px);background:#fff;text-align:start}
+.suiji-system .sc-landing-art{display:none}
+.suiji-system .sc-landing-copy{min-width:0}
+.suiji-system .sc-landing-eyebrow{margin-bottom:20px;color:var(--suiji-muted,#626466)}
+.suiji-mvp-root .suiji-system .sc-landing h1{font:400 clamp(40px,4.1vw,58px)/1.08 var(--suiji-display-family,Newsreader,Georgia,serif);letter-spacing:-.025em;max-width:19ch;margin:0 0 24px;text-wrap:balance}
+.suiji-system .sc-landing-intro{font-size:16px;line-height:1.6;max-width:39ch;margin:0;text-wrap:pretty}
+.suiji-system .sc-landing-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;align-items:start;min-width:0}
+.suiji-system .sc-landing-link{width:100%;max-width:none;gap:20px;text-align:center}
+.suiji-system .sc-landing--standalone .sc-landing-link>span{width:min(100%,280px);border-color:#e5ebef}
+.suiji-system .sc-landing-link strong{display:flex;align-items:center;justify-content:center;gap:12px;font:400 26px/1.25 var(--suiji-display-family,Newsreader,Georgia,serif);max-width:none}
+.suiji-system .sc-landing-link i{font:400 17px/1 var(--font-body-family,Manrope,sans-serif);color:#315a73}
+.suiji-system .sc-landing-link:hover>span{border-color:#8ca8ba}
+.suiji-system__how{padding-block:48px}
+.suiji-mvp-root .suiji-system__how h2{font-size:clamp(28px,2.8vw,36px);margin-bottom:32px;text-wrap:balance}
+.suiji-system__step-number{font-size:26px}
+.suiji-mvp-root .suiji-system__steps h3{font-size:18px;line-height:1.4;margin:16px 0 10px}
+.suiji-system__steps p{font-size:15px;line-height:1.6;max-width:36ch}
+.suiji-system__connection .suiji-system__connection-lead{font-size:16px;line-height:1.7;max-width:60ch}
+@media(max-width:989px){.suiji-system .sc-landing--standalone{grid-template-columns:1fr;gap:36px;padding-block:40px}.suiji-system .sc-landing-copy{max-width:680px}.suiji-system .sc-landing h1{max-width:22ch}.suiji-system .sc-landing-links{width:min(100%,600px);justify-self:center}.suiji-system .sc-landing-intro{max-width:54ch}}
+@media(max-width:599px){.suiji-mvp-root .suiji-system .sc-landing h1{font-size:36px;max-width:18ch;margin-bottom:20px}.suiji-system .sc-landing-links{gap:24px}.suiji-system .sc-landing-link{gap:16px}.suiji-system .sc-landing-link strong{font-size:24px}.suiji-system .sc-landing-intro{font-size:16px}.suiji-system__how{padding-block:36px}.suiji-system__steps{gap:28px}}
 @media(max-width:749px){.suiji-system__steps,.suiji-system__connection{grid-template-columns:1fr;gap:36px}.suiji-system__how{padding-block:44px}.suiji-system__connection{padding-block:44px}.suiji-system__connection aside{padding:24px}.suiji-system__steps li{max-width:60ch}}

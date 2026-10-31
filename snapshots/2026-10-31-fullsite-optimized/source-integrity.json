@@ -1,18 +1,18 @@
 {
-  "state": "published_customer_origin_materials_craft_about_and_entity_correction",
-  "utc": "2026-10-31T10:00:45.171135+00:00",
+  "state": "published_restrained_Core_UI_and_readable_adaptive_navigation",
+  "utc": "2026-10-31T10:03:00.630803+00:00",
   "files": [
     {
       "path": "MAINTENANCE.md",
-      "bytes": 8842,
-      "sha256": "da3e70afee7753692b1485551effc672a711d7e0ee893c49b2a20f0eedf048f4",
-      "git_sha": "4a6ef64bd9904fc188d8aefd3e9dc251a79e949e"
+      "bytes": 9339,
+      "sha256": "04ed2fd95b0efa179e83fd4534735034992cd7d43fc0ee75ceea2b3e23872e11",
+      "git_sha": "339e37e567b345cb31d736e0f574f4a1b08a048c"
     },
     {
       "path": "README.md",
-      "bytes": 4317,
-      "sha256": "fd18e99d00e11ae4fb81b68d052496276d89cc6fe71e0b0ae456f9135fe6c812",
-      "git_sha": "11e272f0bf2a56a715ca40c908409d098e4f3bbf"
+      "bytes": 4889,
+      "sha256": "7290456f78305bf03d70b51a5e8e309ac06e6ed272f239411a2c1545ac1716b1",
+      "git_sha": "2ec40a337b96b4ea1a0ef93e7f32c25ffc149e65"
     },
     {
       "path": "catalogue/products.json",
@@ -401,9 +401,9 @@
     },
     {
       "path": "release-status.json",
-      "bytes": 9203,
-      "sha256": "bc480166dad29318682cf6f64302c551e4572560aef51f78433d16c75a86dc1e",
-      "git_sha": "90bd499786f65e91939f645a9c684ca8ba4e0d47"
+      "bytes": 9957,
+      "sha256": "b054606d58bf9267f7ec59add16724c331dcaea533b4f7a5c159b160d27a3971",
+      "git_sha": "415cfd7abc4a074890ebef865cc3ac02acb3466c"
     },
     {
       "path": "theme/assets/animations.js",
@@ -2566,9 +2566,9 @@
     },
     {
       "path": "theme/assets/suiji-modular-system.css",
-      "bytes": 1913,
-      "sha256": "7fffd032168306fe4e8fc89304e419cf2759855c6fffdd09d9a5a98baf4673fa",
-      "git_sha": "fc8fd981a58896d0335ef6041d053fa270bcb3e3"
+      "bytes": 4581,
+      "sha256": "b19ed0514f0ab4889af06adf6c24777393918e677503104437a962c4bf6e6a80",
+      "git_sha": "be09f87b4343dcfdded51e120e7a2f262dd14117"
     },
     {
       "path": "theme/assets/suiji-mvp.css",
@@ -2600,9 +2600,9 @@
     },
     {
       "path": "theme/assets/suiji-navigation.css",
-      "bytes": 8508,
-      "sha256": "3247ca7a2873245043410e82ed3f361eb88388b02452f349b07763c4b6d8e007",
-      "git_sha": "2f146b2e4eefc25db8a042bce7b851179e0a1549"
+      "bytes": 9350,
+      "sha256": "de8792e4a68066e1f68b09ad4469a02436118c335fdfaec35ebaae58c3c26ef9",
+      "git_sha": "6a00ba158dbb5861677721a02b35b0227b7bc43b"
     },
     {
       "path": "theme/assets/suiji-newsreader-latin-regular.woff2",
@@ -4161,9 +4161,9 @@
     },
     {
       "path": "theme/snippets/suiji-category-landing.liquid",
-      "bytes": 2025,
-      "sha256": "16029d94f4b1af82e5a939ee9c2adc985b048208cad262e4c9288dfcd33cf9ac",
-      "git_sha": "cdf9b5d11e550717cca16c84c1b98b5772859338"
+      "bytes": 2261,
+      "sha256": "52ccf62fcf12a94c9b4888c0fa909fc105685d93e28882af175eeace50f757ab",
+      "git_sha": "4e5e1419820b9cc81a310a5b255fb6551e98a950"
     },
     {
       "path": "theme/snippets/suiji-category-visual.liquid",
