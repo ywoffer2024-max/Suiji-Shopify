@@ -1,33 +1,17 @@
 {
-  "utc": "2026-10-31T07:45:05.353122+00:00",
-  "state": "published_theme_core_with_native_journal_in_progress",
+  "utc": "2026-10-31T08:11:30.134610+00:00",
+  "state": "Published incremental source revision; later revisions are separate commits",
+  "revision": "Actual native SEO title v2, after matching Shopify blog/handle form",
   "theme_files": 692,
-  "tracked_current_theme_sources": 260,
-  "tracked_exact_source_hashes_matched": 259,
-  "native_JSON_templates": 54,
-  "native_JSON_acceptance": "Full object equality including product_key; Shopify adds a generated editor banner. This snapshot retains the actual returned bytes.",
   "public_product_presentations": 54,
   "selectable_demo_configurations": 321,
-  "journal_topic_pairs_prepared": 25,
-  "journal_public_HTML_bodies": 50,
-  "all_native_Articles_published": false,
-  "actual_themed_release_receipt_hashes": {
-    "six_interaction_files": "5203adbe0d7a51214888b5b9ef4ffd002b4beb8b0acbbd3a4aead5b8213c9163",
-    "two_metadata_files": "f0d1a8dc9be1cb55bc205fbfec687b2fd5865594e860a66af51bff70273cc064",
-    "one_image_helper": "38382da356965f69391dbb3cf165ad0af596a5fea293315e124ae92ae18feee0",
-    "current_tracked_source_index": "705e98a8a979c0c5c29584a4c1a303d8409c2ccda92ba9dd73c7f6acd3f787d9",
-    "home_exact_selections": "f72b2183a5460f023d8e8ea4e1e16e3bebde0c67af62e83b48a14db3fa5e2252",
-    "journal_reading": "a96f5e50935c243cc5e7824c593d2c0d910986df9dcaf379027dc0c73b83d1a1"
-  },
-  "validation": "JS syntax; zero portable generation differences (JSON object comparison for native template banners); zero ThemeCheck code/activeENFR errors. Inactive-language findings and135warnings retained. Real ring/ornament choices, bag quantity/note/locale/removal and local demo completion tested; selected templates checked at six viewport widths.",
-  "limitations": "No real order/payment, physical-device/Safari or Core Web Vitals certification. Native Article publication/readback still in progress. The complete theme source combines the verified original capture with per-file actual change provenance, rather than a fresh simultaneous reread of all692 files.",
-  "export_scope": "Website source and intended public article bodies only. No credentials, customer/order data, private pricing/payment research or full unpublished brand PDF.",
-  "prepared_followups": {
-    "native_Journal_title_fallback": "One prepared layout file; exact20 new native handles and one existing FR fallback. Explicit global.title_tag remains first."
-  },
-  "prepared_theme_paths_awaiting_publication": [
-    "layout/theme.liquid"
-  ],
-  "new20_native_publication_verified": true,
-  "new20_public_body_readback": "40/40 anonymous HTTP200 and full semantic bodies. Six FR title fallbacks require the prepared layout correction."
+  "native_Journal_topics_published": 25,
+  "native_Journal_language_pages": 50,
+  "existing_five_author_and_publication_date_preserved": true,
+  "native_JSON_acceptance": "Full object equality including product_key. Shopify-generated banner bytes retained.",
+  "commerce": "Labelled demonstration; illustrativeEUR99; no real order/payment",
+  "source_scope": "Verified original capture plus exact published per-file changes; not a simultaneous recapture of all692files. This commit is one historical incremental stage.",
+  "final_whole_site_acceptance": "Pending final assembly and next revision; inspect later commits for final state.",
+  "About": "Previous eight-chapter body retained; only original Chunyu portrait added.",
+  "secrets_and_private_business_research_exported": false
 }

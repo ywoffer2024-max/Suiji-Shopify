@@ -114,13 +114,14 @@
         assign suiji_nav_seo_description = suiji_display_copy.description | default: page_description
       endif
       if request.page_type == 'article' and blog.handle == 'journal'
+        assign suiji_short_article_handle = article.handle | split: '/' | last
         assign suiji_article_full_title_handles = 'earrings-headphones|why-earrings-tilt-forward|statement-earrings-everyday|ornament-base-compatibility|one-base-two-ornaments|interchangeable-jewelry-routine|earring-ornament-necklace|necklace-bracelet-conversion|interchangeable-or-fixed-jewelry|jewelry-clasps-easier-handling|choosing-hoop-earrings|jewelry-discomfort-record|buy-jewelry-for-yourself|jewelry-you-no-longer-wear|choosing-jewelry-gift|meaningful-jewelry-collection|personal-jewelry-design-brief|review-jewelry-cad|jewelry-design-revisions|redesign-sentimental-jewelry' | split: '|'
-        if suiji_article_full_title_handles contains article.handle
+        if suiji_article_full_title_handles contains suiji_short_article_handle
           assign suiji_explicit_article_title = article.metafields.global.title_tag.value | default: article.metafields.global.title_tag
           if suiji_explicit_article_title == blank
             assign suiji_nav_seo_title = article.title
           endif
-        elsif article.handle == 'eviter-perdre-boucle-oreille' and request.locale.iso_code contains 'fr'
+        elsif suiji_short_article_handle == 'eviter-perdre-boucle-oreille' and request.locale.iso_code contains 'fr'
           assign suiji_explicit_article_title = article.metafields.global.title_tag.value | default: article.metafields.global.title_tag
           if suiji_explicit_article_title == blank
             assign suiji_nav_seo_title = 'Éviter de perdre une boucle d’oreille'
