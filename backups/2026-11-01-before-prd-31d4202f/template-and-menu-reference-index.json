@@ -1,0 +1,1267 @@
+{
+  "references": [
+    {
+      "theme_path": "locales/bg.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Меню",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/cs.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Nabídka",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/da.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Menu",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/de.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Menü",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/el.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Μενού",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/en.default.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Menu",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/en.default.json",
+      "pointer": "/suiji_navigation/labels/submenu",
+      "menu_handle_or_setting": "submenu",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/es.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Menú",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/fi.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Valikko",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/fr.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Menu",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/fr.json",
+      "pointer": "/suiji_navigation/labels/submenu",
+      "menu_handle_or_setting": "sous-menu",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/hr.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Izbornik",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/hu.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Menü",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/id.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Menu",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/it.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Menu",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/ja.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "メニュー",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/ko.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "메뉴",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/lt.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Meniu",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/nb.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Meny",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/nl.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Menu",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/pl.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Menu",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/pt-BR.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Menu",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/pt-PT.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Menu",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/ro.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Meniu",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/ru.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Меню",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/sk.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Ponuka",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/sl.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Meni",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/sv.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Meny",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/th.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "เมนู",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/tr.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Menü",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/vi.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "Menu",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/zh-CN.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "菜单",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/zh-CN.json",
+      "pointer": "/suiji_navigation/labels/submenu",
+      "menu_handle_or_setting": "子菜单",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "locales/zh-TW.json",
+      "pointer": "/sections/header/menu",
+      "menu_handle_or_setting": "選單",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "sections/footer-group.json",
+      "pointer": "/sections/footer/blocks/explore/settings/menu",
+      "menu_handle_or_setting": "footer",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "sections/footer-group.json",
+      "pointer": "/sections/footer/blocks/support/settings/menu",
+      "menu_handle_or_setting": "suiji-support-2026-10-29",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "sections/header-group.json",
+      "pointer": "/sections/header/settings/menu",
+      "menu_handle_or_setting": "suiji-navigation-2026-10-29",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "sections/header-group.json",
+      "pointer": "/sections/header/settings/menu_type_desktop",
+      "menu_handle_or_setting": "dropdown",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "sections/header-group.json",
+      "pointer": "/sections/header/settings/menu_color_scheme",
+      "menu_handle_or_setting": "scheme-1",
+      "kind": "theme_config_menu_reference"
+    },
+    {
+      "theme_path": "templates/404.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "main-404"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/article.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "main-article-suiji"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.json",
+      "order": [
+        "main",
+        "waitlist"
+      ],
+      "sections": {
+        "main": "main-blog-suiji",
+        "waitlist": "suiji-mvp-waitlist"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j01.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j02.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j03.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j04.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j05.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j06.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j07.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j08.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j09.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j10.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j11.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j12.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j13.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j14.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j15.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j16.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j17.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j18.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j19.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/blog.suiji-j20.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-journal-entry"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/cart.json",
+      "order": [
+        "cart-items",
+        "cart-footer"
+      ],
+      "sections": {
+        "cart-items": "main-cart-items",
+        "cart-footer": "main-cart-footer"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.json",
+      "order": [
+        "banner",
+        "product-grid"
+      ],
+      "sections": {
+        "banner": "main-collection-banner",
+        "product-grid": "main-collection-product-grid"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-h01.json",
+      "order": [
+        "hoop_preview"
+      ],
+      "sections": {
+        "hoop_preview": "suiji-hoop-detail"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-a02-drop.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-a03-drop.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-bracelet-b3.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-bracelet-b4.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-bracelet-b5.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-chain-l01.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-chain-l02.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-chain-l03.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-chain-l04.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-chain-l05.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-collar-7-drops-1.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-collar-7-drops-3.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-collar-7-drops-5.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-collar-7.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-collar-9-drops-1.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-collar-9-drops-3.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-collar-9-drops-5.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-collar-9.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-core-lock-pendant-base.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-core-lock-stud-base.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-core-lock-stud-metal-back.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-cross-chain-core-lock.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-cross-chain.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-design-f03.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-design-f04.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-design-f05.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-design-f06.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-design-f07.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-design-f08.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-design-f08b.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-design-f09.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-design-new-round-0926.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-design-t01.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-double-arm-ring-base.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-h01-hoops.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-h02-hoop.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-h03-connector.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-h03-core-lock.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-logo-round.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-logo-square.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-metal-ear-backs.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-oval-motif.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-pearl-back-stud.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-pearl-effect-ear-back.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-pearl-effect-stud.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-r01-iridescent-ring-base.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-r01-ring-base.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-r02-ring-base.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-set01-stud-earring-set.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-set02-choker-set.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-set03-ring-set.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-set04-hoop-earring-necklace-set.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-set05-stud-earring-ring-set.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-p-set06-hoop-earring-necklace-ring-set.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/collection.suiji-product.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-commerce-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/customers/account.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "main-account"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/customers/activate_account.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "main-activate-account"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/customers/addresses.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "main-addresses"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/customers/login.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "main-login"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/customers/order.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "main-order"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/customers/register.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "main-register"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/customers/reset_password.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "main-reset-password"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/index.json",
+      "order": [
+        "editorial_home"
+      ],
+      "sections": {
+        "editorial_home": "suiji-home-editorial"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/list-collections.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "main-list-collections"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/page.contact.json",
+      "order": [
+        "main",
+        "form"
+      ],
+      "sections": {
+        "main": "main-page",
+        "form": "contact-form"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/page.first-edition.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-mvp-waitlist"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/page.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "main-page"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/page.materials-and-comfort.json",
+      "order": [
+        "main",
+        "guides",
+        "waitlist"
+      ],
+      "sections": {
+        "main": "main-page",
+        "guides": "suiji-mvp-guides",
+        "waitlist": "suiji-mvp-waitlist"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/page.mechanism.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "suiji-core-lock-info"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/page.members.json",
+      "order": [
+        "members"
+      ],
+      "sections": {
+        "members": "suiji-members-area"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/password.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "email-signup-banner"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/product.json",
+      "order": [
+        "main",
+        "related-products"
+      ],
+      "sections": {
+        "main": "main-product",
+        "related-products": "related-products"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/product.set.json",
+      "order": [
+        "main",
+        "set_contents",
+        "related-products"
+      ],
+      "sections": {
+        "main": "main-product",
+        "set_contents": "suiji-set-contents",
+        "related-products": "related-products"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/product.suiji-display-only.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "main-product"
+      },
+      "kind": "theme_template_sections"
+    },
+    {
+      "theme_path": "templates/search.json",
+      "order": [
+        "main"
+      ],
+      "sections": {
+        "main": "main-search"
+      },
+      "kind": "theme_template_sections"
+    }
+  ],
+  "scope": "Exact current theme template/config bindings; native Menu resource trees/IDs and bindings of unexported native resources are not a complete Admin API snapshot."
+}

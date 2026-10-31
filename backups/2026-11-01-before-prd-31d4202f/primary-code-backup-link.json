@@ -1,0 +1,8 @@
+{
+  "primary_code_backup_branch": "codex/backup-before-prd-20261101-root-20c4ed80",
+  "commit": "f1e62a5317f9eeb4b68651922662b5078389e438",
+  "URL": "https://github.com/ywoffer2024-max/Suiji-Shopify/tree/codex/backup-before-prd-20261101-root-20c4ed80/snapshots/2026-10-31-fullsite-optimized",
+  "receipt_path": "/Volumes/T7/Suiji/PRD整站施工与GitHub备份_20261031T192724Z_20c4ed80/backup-verified-v1.json",
+  "receipt_SHA256": "c80c70106318b136713f0a5a148337e8cbfe4bf16b167b60858ef264d6ce5ff1",
+  "scope": "697 official API source payloads matched remote existing Git blobs; metadata/representation and non-theme restore boundaries remain separately recorded."
+}

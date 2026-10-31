@@ -1,0 +1,305 @@
+{
+  "schema": "suiji-native-pages-read-export/2",
+  "utc": "2026-10-31T17:18:47.733041+00:00",
+  "china_time": "2026-11-01T01:18:47.733041+08:00",
+  "read_only": true,
+  "scope": "4 native Pages /8 ENFR raw bodies and titles, metadata as explicitly observed; offline replacement proposals only",
+  "pages": [
+    {
+      "native_page_id": "708838162772",
+      "observed_resource_gid": "gid://shopify/OnlineStorePage/708838162772",
+      "handle": "care-guide",
+      "template": "care-v4",
+      "locales": {
+        "en": {
+          "title": "Care Guide",
+          "body_html": "<h2>Caring for titanium</h2><p>Titanium does not tarnish like silver, but it can still collect oils, dust, and surface marks. Wipe with a soft, dry cloth after wear. Avoid abrasive polish — the matte brushed surface is a finish, not a coating.</p>\n<h2>Caring for silver</h2><p>Silver may develop a natural patina over time. Store pieces in the SUIJI pouch, keep them dry, and polish gently with a silver cloth when needed. Remove jewellery before swimming and sport.</p>\n<h2>The clasp</h2><p>Keep the clasp area clean and dry. If an ornament feels loose, press it fully until it clicks. Do not oil, bend, or force the mechanism.</p>\n<h2>Storage</h2><p>Store ornaments attached to their bases or separately in the SUIJI pouch. Keep titanium colour finishes away from prolonged direct sunlight.</p>",
+          "body_html_file": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/care-guide-EN-body-ui-v1.html",
+          "body_html_sha256": "3c16ee8cca19280939fe6b31a7b1eb123da8e4797725b6338389c2f1d3fb2467",
+          "body_html_bytes": 798,
+          "seo": {
+            "title": "",
+            "description": "",
+            "status": "actual empty native UI field values"
+          },
+          "updatedAt": null,
+          "updatedAt_status": "exact backend updatedAt not exposed in native/T&A UI; available app lacks API read scopes",
+          "translation_digest": null,
+          "translation_digest_status": "not exposed in UI; read_translations unavailable; local SHA256 is file identity only",
+          "updatedAt_display": "7月6日 23:22",
+          "updatedAt_display_status": "native Page index 更新时间 column; no datetime/title semantic attribute exposed. Display string is not exact updatedAt."
+        },
+        "fr": {
+          "title": "Guide d'entretien",
+          "body_html": "<h2>Entretenir le titane</h2><p>Le titane ne ternit pas comme l'argent, mais il peut retenir des traces de doigts, de la poussière et des marques de surface. Essuyez avec un chiffon doux et sec après le port. Évitez les polissages abrasifs — le fini brossé mat est un fini, pas un revêtement.</p>\n<h2>Entretenir l'argent</h2><p>L'argent peut développer une patine naturelle avec le temps. Rangez les pièces dans la pochette SUIJI, gardez-les au sec et lustrez doucement avec un chiffon à argent si besoin. Retirez vos bijoux avant la baignade et le sport.</p>\n<h2>Le fermoir</h2><p>Gardez la zone du fermoir propre et sèche. Si un ornement semble lâche, pressez-le jusqu'au clic. N'huilez pas, ne pliez pas, ne forcez pas le mécanisme.</p>\n<h2>Rangement</h2><p>Rangez les ornements fixés à leurs bases ou séparément dans la pochette SUIJI. Gardez les finitions colorées du titane à l'abri d'une exposition prolongée au soleil.</p>",
+          "body_html_file": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/care-guide-FR-body-ui-v1.html",
+          "body_html_sha256": "abb8a85b35e1f5b63e41f402e6559c16fcb303351b0d9afc5c1fa5c38c74d6b2",
+          "body_html_bytes": 950,
+          "seo": {
+            "title": null,
+            "description": null,
+            "status": "not exposed in T&A; EN SEO source blank; do not infer stored FR empty"
+          },
+          "updatedAt": null,
+          "updatedAt_status": "exact backend updatedAt not exposed in native/T&A UI; available app lacks API read scopes",
+          "translation_digest": null,
+          "translation_digest_status": "not exposed in UI; read_translations unavailable; local SHA256 is file identity only"
+        }
+      },
+      "FR_handle_translation": "",
+      "EN_source_native_clipboard_equals_untouched_TandA_textarea": true,
+      "FR_raw_textarea_semantically_matches_rendered_editor": true,
+      "native_saves": 0
+    },
+    {
+      "native_page_id": "708838195540",
+      "observed_resource_gid": "gid://shopify/OnlineStorePage/708838195540",
+      "handle": "faq",
+      "template": "faq-v4",
+      "locales": {
+        "en": {
+          "title": "FAQ",
+          "body_html": "<h2>The mechanism</h2>\n<h3>Which charms fit which bases?</h3><p>All of them. Every SUIJI charm and base shares the same quick-release clasp, so any charm locks onto any base — across every set. Mix a charm from one set onto a base from another, freely.</p>\n<h3>Do I need tools to switch?</h3><p>No tools. Press, release, align, click — about ten seconds by hand. The clasp is designed for repeated open-close use.</p>\n<h3>Will the clasp loosen?</h3><p>The clasp is engineered for repeated movement. If an ornament ever feels loose, press it fully until it clicks. Keep the clasp clean and dry, and do not oil, bend, or force the mechanism.</p>\n<h2>Materials</h2>\n<h3>Silver or titanium?</h3><p>Each set is available in silver or Grade 5 titanium, depending on the selected variant. Titanium is selected for lightness, strength, and corrosion resistance; silver remains for its classic jewellery presence and softer warmth.</p>\n<h3>How do the materials wear?</h3><p>Titanium does not tarnish like silver, but it can still collect oils, dust, and surface marks. Silver may develop a natural patina over time. Both can be kept bright with gentle care.</p>\n<h2>Orders</h2>\n<h3>When will my set ship?</h3><p>All sets are made on pre-order and are expected to ship within three months after payment. You will receive tracking by email when your order leaves the studio.</p>\n<h3>Is anything sold individually?</h3><p>At launch, the one single-item we sell is the SUIJI Extension Chain — a low-key way to add length to jewellery you already own. Charms and bases are sold inside complete sets for now; individual releases open later through SUIJI Studio and editions.</p>\n<h3>What is SUIJI Studio?</h3><p>Set owners automatically unlock SUIJI Studio: edition previews, product voting, and first-in-line waitlists.</p>",
+          "body_html_file": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/faq-EN-body-ui-v1.html",
+          "body_html_sha256": "a900f69b364411b5e514306f9528c03c011b37daa0bc8b0f6e611523cd8beeba",
+          "body_html_bytes": 1815,
+          "seo": {
+            "title": "",
+            "description": "",
+            "status": "actual empty native UI field values"
+          },
+          "updatedAt": null,
+          "updatedAt_status": "exact backend updatedAt not exposed in native/T&A UI; available app lacks API read scopes",
+          "translation_digest": null,
+          "translation_digest_status": "not exposed in UI; read_translations unavailable; local SHA256 is file identity only",
+          "updatedAt_display": "星期四 12:06",
+          "updatedAt_display_status": "native Page index 更新时间 column; no datetime/title semantic attribute exposed. Display string is not exact updatedAt."
+        },
+        "fr": {
+          "title": "FAQ",
+          "body_html": "<h2>Le mécanisme</h2>\n<h3>Quels ornements vont sur quelles bases ?</h3><p>Tous. Chaque ornement et chaque base SUIJI partagent le même fermoir à dégagement rapide : n'importe quel ornement se verrouille sur n'importe quelle base — tous coffrets confondus. Associez librement l'ornement d'un coffret à la base d'un autre.</p>\n<h3>Faut-il des outils pour changer ?</h3><p>Aucun outil. Pressez, libérez, alignez, clic — environ dix secondes à la main. Le fermoir est conçu pour des ouvertures et fermetures répétées.</p>\n<h3>Le fermoir va-t-il se desserrer ?</h3><p>Le fermoir est conçu pour le mouvement répété. Si un ornement semble lâche, pressez-le jusqu'au clic. Gardez le fermoir propre et sec ; n'huilez pas, ne pliez pas, ne forcez pas.</p>\n<h2>Matières</h2>\n<h3>Argent ou titane ?</h3><p>Chaque coffret est disponible en argent ou en titane grade 5 selon la variante. Le titane est choisi pour sa légèreté, sa solidité et sa résistance à la corrosion ; l'argent demeure pour sa présence joaillière classique et sa chaleur.</p>\n<h3>Comment les matières vieillissent-elles ?</h3><p>Le titane ne ternit pas comme l'argent, mais il peut retenir des traces, de la poussière et des marques. L'argent peut développer une patine. Les deux se gardent éclatants avec un entretien doux.</p>\n<h2>Commandes</h2>\n<h3>Quand mon coffret sera-t-il expédié ?</h3><p>Tous les coffrets sont en précommande et expédiés sous environ quatre semaines. Vous recevrez un suivi par e-mail au départ de l'atelier.</p>\n<h3>Vendez-vous des pièces à l'unité ?</h3><p>Au lancement, la seule pièce vendue à l'unité est la chaîne de rallonge SUIJI — une façon discrète d'allonger un bijou que vous possédez déjà. Les ornements et bases sont pour l'instant vendus en coffrets complets ; les sorties à l'unité ouvriront via le Studio SUIJI et les éditions.</p>\n<h3>Qu'est-ce que le Studio SUIJI ?</h3><p>L'achat d'un coffret débloque automatiquement le Studio SUIJI : avant-premières, votes produits et listes d'attente prioritaires.</p>",
+          "body_html_file": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/faq-FR-body-ui-v1.html",
+          "body_html_sha256": "1b1ee53d740de828142964b31e3b277dab282f3c5c307898da334035919a828f",
+          "body_html_bytes": 2065,
+          "seo": {
+            "title": null,
+            "description": null,
+            "status": "not exposed in T&A; EN SEO source blank; do not infer stored FR empty"
+          },
+          "updatedAt": null,
+          "updatedAt_status": "exact backend updatedAt not exposed in native/T&A UI; available app lacks API read scopes",
+          "translation_digest": null,
+          "translation_digest_status": "not exposed in UI; read_translations unavailable; local SHA256 is file identity only"
+        }
+      },
+      "FR_handle_translation": "",
+      "EN_source_native_clipboard_equals_untouched_TandA_textarea": true,
+      "FR_raw_textarea_semantically_matches_rendered_editor": true,
+      "native_saves": 0
+    },
+    {
+      "native_page_id": "708838228308",
+      "observed_resource_gid": "gid://shopify/OnlineStorePage/708838228308",
+      "handle": "shipping-returns",
+      "locales": {
+        "en": {
+          "title": "Shipping & Returns",
+          "body_html": "<h2>Pre-order</h2><p>All sets are made on pre-order and are expected to ship within three months after payment. You will receive tracking by email when your order leaves the studio.</p><h2>Shipping</h2><p>We ship across the EU with tracked delivery. Shipping options, rates, and estimated delivery times are shown at checkout.</p><h2>Returns</h2><p>Unworn pieces may be returned within 30 days of delivery for a full refund. Contact us to start a return and we will share the return address and steps.</p><h2>Warranty</h2><p>The clasp mechanism is covered for two years. See the <a href=\"/pages/warranty\">Warranty</a> page for details.</p>",
+          "body_html_file": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/shipping-returns-EN-body-ui-v1.html",
+          "body_html_sha256": "cb05040cf996459434321a89b7602201d280100cb94202dece069510e6f396aa",
+          "body_html_bytes": 639,
+          "seo": {
+            "title": null,
+            "description": null,
+            "status": "not part of additional body/title request; not read"
+          },
+          "updatedAt": null,
+          "updatedAt_status": "exact ISO backend timestamp not exposed; native list display captured separately",
+          "translation_digest": null,
+          "translation_digest_status": "not exposed in UI; read_translations unavailable; local SHA256 is file identity only",
+          "updatedAt_display": "星期四 11:09",
+          "updatedAt_display_status": "native Page index 更新时间 column; no datetime/title semantic attribute exposed. Display string is not exact updatedAt."
+        },
+        "fr": {
+          "title": "Livraison et retours",
+          "body_html": "<h2>Précommande</h2><p>Tous les coffrets sont fabriqués en précommande et expédiés sous environ quatre semaines. Vous recevrez un suivi par e-mail au départ de l'atelier.</p><h2>Livraison</h2><p>Livraison suivie dans toute l'UE. Les options, tarifs et délais estimés sont affichés au paiement.</p><h2>Retours</h2><p>Les pièces non portées peuvent être retournées sous 30 jours pour remboursement intégral. Contactez-nous pour lancer un retour ; nous vous communiquerons l'adresse et la marche à suivre.</p><h2>Garantie</h2><p>Le fermoir est garanti deux ans. Voir la page <a href=\"/fr/pages/warranty\">Garantie</a>.</p>",
+          "body_html_file": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/shipping-returns-FR-body-ui-v1.html",
+          "body_html_sha256": "590e96174b4fb742643250300ca0185c60139c5773aec2ae64f1ec95586f7f74",
+          "body_html_bytes": 633,
+          "seo": {
+            "title": null,
+            "description": null,
+            "status": "not part of additional body/title request; not read"
+          },
+          "updatedAt": null,
+          "updatedAt_status": "exact ISO backend timestamp not exposed; native list display captured separately",
+          "translation_digest": null,
+          "translation_digest_status": "not exposed in UI; read_translations unavailable; local SHA256 is file identity only"
+        }
+      },
+      "FR_handle_translation": "",
+      "EN_acquisition": "fresh untouched T&A reference textarea.value, title/handle bound to observed native Page ID",
+      "FR_acquisition": "fresh untouched T&A editable textarea.value, no edits",
+      "FR_raw_textarea_semantically_matches_rendered_editor": true,
+      "native_saves": 0
+    },
+    {
+      "native_page_id": "708984013140",
+      "observed_resource_gid": "gid://shopify/OnlineStorePage/708984013140",
+      "handle": "warranty",
+      "locales": {
+        "en": {
+          "title": "Warranty",
+          "body_html": "<p>Every SUIJI clasp mechanism is covered for two years from delivery. If the clasp fails under normal wear, we will repair or replace it.</p><p>The warranty does not cover loss, accidental damage, or wear to surface finish from daily use. For any warranty question, contact us through the <a href=\"/pages/contact\">Contact</a> page.</p>",
+          "body_html_file": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/warranty-EN-body-ui-v1.html",
+          "body_html_sha256": "4e103800e3a0706b020589c2ec4678604b9b398ec30931eec5d8f3873b604d2a",
+          "body_html_bytes": 336,
+          "seo": {
+            "title": null,
+            "description": null,
+            "status": "not part of additional body/title request; not read"
+          },
+          "updatedAt": null,
+          "updatedAt_status": "exact ISO backend timestamp not exposed; native list display captured separately",
+          "translation_digest": null,
+          "translation_digest_status": "not exposed in UI; read_translations unavailable; local SHA256 is file identity only",
+          "updatedAt_display": "7月6日 23:22",
+          "updatedAt_display_status": "native Page index 更新时间 column; no datetime/title semantic attribute exposed. Display string is not exact updatedAt."
+        },
+        "fr": {
+          "title": "Garantie",
+          "body_html": "<p>Chaque fermoir SUIJI est garanti deux ans à compter de la livraison. En cas de défaillance du fermoir dans un usage normal, nous le réparons ou le remplaçons.</p><p>La garantie ne couvre pas la perte, les dommages accidentels ni l'usure de la finition de surface liée à l'usage quotidien. Pour toute question, contactez-nous via la page <a href=\"/fr/pages/contact\">Contact</a>.</p>",
+          "body_html_file": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/warranty-FR-body-ui-v1.html",
+          "body_html_sha256": "835d45849a56260442fca45332ec1696b8041e2507ce58b553e015c960e55eda",
+          "body_html_bytes": 390,
+          "seo": {
+            "title": null,
+            "description": null,
+            "status": "not part of additional body/title request; not read"
+          },
+          "updatedAt": null,
+          "updatedAt_status": "exact ISO backend timestamp not exposed; native list display captured separately",
+          "translation_digest": null,
+          "translation_digest_status": "not exposed in UI; read_translations unavailable; local SHA256 is file identity only"
+        }
+      },
+      "FR_handle_translation": "",
+      "EN_acquisition": "fresh untouched T&A reference textarea.value, title/handle bound to observed native Page ID",
+      "FR_acquisition": "fresh untouched T&A editable textarea.value, no edits",
+      "FR_raw_textarea_semantically_matches_rendered_editor": true,
+      "native_saves": 0
+    }
+  ],
+  "all4_raw_bodies_exported": true,
+  "known_metadata_gaps": [
+    "exact native/translation updatedAt",
+    "Shopify translatableContent.digest",
+    "FR SEO not exposed because EN SEO fields empty; no assumption about hidden server translation state"
+  ],
+  "no_account_or_credential_values_returned": true,
+  "mutations": {
+    "native_Page": 0,
+    "theme": 0,
+    "translation": 0,
+    "discount": 0,
+    "email_or_AI_or_payment": 0
+  },
+  "source_access_method": "native Page HTML editor select-all/copy; untouched T&A DOM textarea.value; native SEO form .value. API access-scope read only, no permission expansion.",
+  "files": [
+    {
+      "path": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/care-guide-EN-body-ui-v1.html",
+      "bytes": 798,
+      "sha256": "3c16ee8cca19280939fe6b31a7b1eb123da8e4797725b6338389c2f1d3fb2467"
+    },
+    {
+      "path": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/care-guide-FR-body-ui-v1.html",
+      "bytes": 950,
+      "sha256": "abb8a85b35e1f5b63e41f402e6559c16fcb303351b0d9afc5c1fa5c38c74d6b2"
+    },
+    {
+      "path": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/faq-EN-body-ui-v1.html",
+      "bytes": 1815,
+      "sha256": "a900f69b364411b5e514306f9528c03c011b37daa0bc8b0f6e611523cd8beeba"
+    },
+    {
+      "path": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/faq-FR-body-ui-v1.html",
+      "bytes": 2065,
+      "sha256": "1b1ee53d740de828142964b31e3b277dab282f3c5c307898da334035919a828f"
+    },
+    {
+      "path": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/care-guide-FR-rendered-editor-v1.html",
+      "bytes": 947,
+      "sha256": "c27931b454ac246cbf81ba83fd4f6c2bd986af883263984a2d57d0f1e286d810"
+    },
+    {
+      "path": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/faq-FR-rendered-editor-v1.html",
+      "bytes": 2055,
+      "sha256": "5cba8b52601ffb8a1639f8dd4c97688ed9a5cfc009d95e3dbcf2967d5e0eecbb"
+    },
+    {
+      "path": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/care-faq-ui-fields-v1.json",
+      "bytes": 1232,
+      "sha256": "1fcfb6b5b2f318a2c75a1a8b55008f0b0509adc4fcd5d652ecb8184e8a4fb0a5"
+    },
+    {
+      "path": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/care-faq-readonly-save-state-v1.json",
+      "bytes": 125,
+      "sha256": "3394d46624a8f799669554dc3771d1ee790ba0958acb657f712f52a1efb84dac"
+    },
+    {
+      "path": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/existing-app-read-capabilities-v1.json",
+      "bytes": 273,
+      "sha256": "3980c718153d2bfb3a9cdd55316e8fc58ccac4b39a0052d36c8b0a1a51429b23"
+    },
+    {
+      "path": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/shipping-returns-EN-body-ui-v1.html",
+      "bytes": 639,
+      "sha256": "cb05040cf996459434321a89b7602201d280100cb94202dece069510e6f396aa"
+    },
+    {
+      "path": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/shipping-returns-FR-body-ui-v1.html",
+      "bytes": 633,
+      "sha256": "590e96174b4fb742643250300ca0185c60139c5773aec2ae64f1ec95586f7f74"
+    },
+    {
+      "path": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/warranty-EN-body-ui-v1.html",
+      "bytes": 336,
+      "sha256": "4e103800e3a0706b020589c2ec4678604b9b398ec30931eec5d8f3873b604d2a"
+    },
+    {
+      "path": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/warranty-FR-body-ui-v1.html",
+      "bytes": 390,
+      "sha256": "835d45849a56260442fca45332ec1696b8041e2507ce58b553e015c960e55eda"
+    },
+    {
+      "path": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/shipping-returns-FR-rendered-editor-v1.html",
+      "bytes": 668,
+      "sha256": "7ce04be9670c551e06f81fed11b5242f7e1dd614b89f18f18dae742766f1a48e"
+    },
+    {
+      "path": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/warranty-FR-rendered-editor-v1.html",
+      "bytes": 424,
+      "sha256": "aded3ca4b1fd2382f48dedba3fd9a753fe1f5f6a4a4daacc0dee7042b5788ebf"
+    },
+    {
+      "path": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/shipping-warranty-ui-fields-v1.json",
+      "bytes": 910,
+      "sha256": "76fa23d1a03577eae0701f172738902242ac8f5df209531d42b49caac0928165"
+    },
+    {
+      "path": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/native-page-list-update-display-v1.json",
+      "bytes": 1364,
+      "sha256": "f4d6ad353a3e34cc231fb781f89b594905de9c3d373d95f719ebd3c5f8323d87"
+    }
+  ],
+  "first2_index": "/Volumes/T7/Suiji/SUIJI_Care_FAQ原生只读导出_20261031T171010Z_efca8bd5/care-faq-native-export-index-v1.json",
+  "first2_index_sha256": "76e9d2a0aef5bcf01b58657865b40df38934026a4243db38e8a489ae56b1e2d0",
+  "all8_raw_bodies_exported": true,
+  "native_page_count": 4,
+  "locale_body_count": 8,
+  "native_page_updatedAt_display_provided": true,
+  "critical_observations": [
+    "shipping-returns EN says within three months after payment; FR says environ quatre semaines. This is a current source mismatch.",
+    "shipping-returns EN/FR each retain30day unworn return wording; warranty EN/FR each retain2year clasp coverage from delivery. This export does not change or certify the terms."
+  ]
+}

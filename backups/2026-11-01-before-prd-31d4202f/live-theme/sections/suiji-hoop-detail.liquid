@@ -1,0 +1,21 @@
+{{ 'suiji-hoop-readonly.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign hoop_photo = images['h01-blue-hoop-314abc45f474.png']
+  if request.locale.iso_code contains 'fr'
+    assign hoop_title = 'H01 Créole bleue'
+    assign hoop_description = 'Une créole bleue à la silhouette rectangulaire arrondie.'
+    assign back_label = 'Retour aux créoles'
+  else
+    assign hoop_title = 'H01 Blue Hoop'
+    assign hoop_description = 'A blue hoop with a rounded rectangular silhouette.'
+    assign back_label = 'Back to hoop earrings'
+  endif
+-%}
+<article class="suiji-hoop-detail page-width" data-hoop-detail>
+  <nav class="suiji-hoop-detail__breadcrumbs" aria-label="{{ 'suiji_pdp.breadcrumbs' | t | escape }}"><a href="{{ routes.root_url }}">{{ 'suiji_pdp.home' | t }}</a><span aria-hidden="true">/</span><a href="{% render 'suiji-localized-menu-url', url: '/collections/earrings#hoop-earrings' %}">{{ 'suiji_navigation.labels.hoop_earrings' | t }}</a><span aria-hidden="true">/</span><span aria-current="page">{{ hoop_title }}</span></nav>
+  <div class="suiji-hoop-detail__layout"><div class="suiji-hoop-detail__gallery">{{ hoop_photo | image_url: width: 1200 | image_tag: widths: '390, 600, 900, 1200', sizes: '(min-width: 990px) 48vw, 94vw', loading: 'eager', fetchpriority: 'high', decoding: 'async', alt: hoop_title }}</div>
+  <div class="suiji-hoop-detail__content"><p class="suiji-hoop-readonly__code">{{ 'suiji_display.reference' | t }} · H01-BLUE</p><h1>{{ hoop_title }}</h1><p>{{ hoop_description }}</p><dl class="suiji-hoop-detail__colour"><dt>{{ 'suiji_display.colour' | t }}</dt><dd><span class="suiji-hoop-detail__swatch" aria-hidden="true"></span>{{ 'suiji_display.blue' | t }}</dd></dl><p class="suiji-hoop-readonly__status">{{ 'suiji_display.coming_soon' | t }}</p><p class="suiji-hoop-detail__notice">{{ 'suiji_display.notice' | t }}</p><a class="suiji-hoop-readonly__details" href="{% render 'suiji-localized-menu-url', url: '/collections/earrings#hoop-earrings' %}">← {{ back_label }}</a></div></div>
+</article>
+{% schema %}
+{"name":"SUIJI H01 preview","tag":"section","class":"section","settings":[]}
+{% endschema %}

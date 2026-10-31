@@ -1,0 +1,29 @@
+{% doc %}
+  Show the existing ring studio image and direct entry to the styling preview.
+  This theme preview is independent of unpublished Shopify products and checkout.
+  @param {string} [entry_loading] - Image loading mode; defaults to eager.
+{% enddoc %}
+{%- assign entry_loading = entry_loading | default: 'eager' -%}
+{%- assign entry_ring_image = images['r01-blue-front-area17-559667e818a1ea03.png'] -%}
+{%- assign entry_ring_alt = 'suiji_preview.home_hero_alt' | t -%}
+<section class="suiji-ring-entry" aria-labelledby="suiji-ring-entry-title">
+  <a class="suiji-ring-entry__media" href="{% render 'suiji-localized-menu-url', url: '/pages/bases#build-your-look' %}">
+    {%- if entry_ring_image != blank -%}
+      {{ entry_ring_image | image_url: width: 750 | image_tag:
+        widths: '360, 540, 750',
+        sizes: '(min-width: 750px) 42vw, 100vw',
+        loading: entry_loading,
+        decoding: 'async',
+        alt: entry_ring_alt
+      }}
+    {%- endif -%}
+  </a>
+  <div class="suiji-ring-entry__content">
+    <p class="suiji-preview__eyebrow">{{ 'suiji_preview.eyebrow' | t }}</p>
+    <h2 id="suiji-ring-entry-title">{{ 'suiji_preview.base_title' | t }}</h2>
+    <p>{{ 'suiji_preview.entry_description' | t }}</p>
+    <p class="suiji-ring-entry__sizes">54 mm / 57 mm</p>
+    <a class="suiji-button suiji-button--primary" href="{% render 'suiji-localized-menu-url', url: '/pages/bases#build-your-look' %}">{{ 'suiji_preview.entry_cta' | t }}</a>
+    <p class="suiji-preview__notice">{{ 'suiji_preview.purchase_notice' | t }}</p>
+  </div>
+</section>

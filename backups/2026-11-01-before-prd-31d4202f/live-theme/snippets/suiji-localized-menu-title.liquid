@@ -1,0 +1,64 @@
+{%- doc -%}
+  Render a source-approved navigation label in the current storefront language.
+  @param {string} title - Canonical merchant menu title.
+{%- enddoc -%}
+{%- assign menu_key = title | handleize -%}
+{%- case menu_key -%}
+  {%- when 'about' -%}{{- 'suiji_navigation.labels.about_suiji' | t -}}
+  {%- when 'about-suiji' -%}{{- 'suiji_navigation.labels.about_suiji' | t -}}
+  {%- when 'accessories' -%}{{- 'suiji_navigation.labels.accessories' | t -}}
+  {%- when 'bangles' -%}{{- 'suiji_navigation.labels.bangles' | t -}}
+  {%- when 'bases' -%}{{- 'suiji_navigation.labels.jewelry_bases' | t -}}
+  {%- when 'beaded-necklaces' -%}{{- 'suiji_navigation.labels.beaded_necklaces' | t -}}
+  {%- when 'bracelets-bangles' -%}{{- 'suiji_navigation.labels.bracelets_bangles' | t -}}
+  {%- when 'care-guide' -%}{{- 'suiji_navigation.labels.care_guide' | t -}}
+  {%- when 'chain-beaded-bracelets' -%}{{- 'suiji_navigation.labels.chain_beaded_bracelets' | t -}}
+  {%- when 'chains' -%}{{- 'suiji_navigation.labels.chains' | t -}}
+  {%- when 'charms' -%}{{- 'suiji_navigation.labels.charms' | t -}}
+  {%- when 'chokers' -%}{{- 'suiji_navigation.labels.chokers' | t -}}
+  {%- when 'contact' -%}{{- 'suiji_navigation.labels.contact_us' | t -}}
+  {%- when 'contact-us' -%}{{- 'suiji_navigation.labels.contact_us' | t -}}
+  {%- when 'core-lock' -%}{{- 'suiji_navigation.labels.core_lock' | t -}}
+  {%- when 'decorative-add-ons' -%}{{- 'suiji_navigation.labels.decorative_add_ons' | t -}}
+  {%- when 'design-craft' -%}{{- 'suiji_navigation.labels.design_craft' | t -}}
+  {%- when 'discover-core-lock' -%}{{- 'suiji_navigation.labels.discover_core_lock' | t -}}
+  {%- when 'earrings' -%}{{- 'suiji_navigation.labels.earrings' | t -}}
+  {%- when 'editions' -%}{{- 'suiji_navigation.labels.sets' | t -}}
+  {%- when 'explore' -%}{{- 'suiji_navigation.labels.explore' | t -}}
+  {%- when 'extension-chain' -%}{{- 'suiji_navigation.labels.extension_chain' | t -}}
+  {%- when 'faq' -%}{{- 'suiji_navigation.labels.faq' | t -}}
+  {%- when 'gift' -%}{{- 'suiji_navigation.labels.gifts' | t -}}
+  {%- when 'gift-sets' -%}{{- 'suiji_navigation.labels.gift_sets' | t -}}
+  {%- when 'gifts' -%}{{- 'suiji_navigation.labels.gifts' | t -}}
+  {%- when 'hoop-earrings' -%}{{- 'suiji_navigation.labels.hoop_earrings' | t -}}
+  {%- when 'how-it-works' -%}{{- 'suiji_navigation.labels.how_it_works' | t -}}
+  {%- when 'jewelry-bases' -%}{{- 'suiji_navigation.labels.jewelry_bases' | t -}}
+  {%- when 'journal' -%}{{- 'suiji_navigation.labels.journal' | t -}}
+  {%- when 'motifs' -%}{{- 'suiji_navigation.labels.charms' | t -}}
+  {%- when 'multi-use-connectors' -%}{{- 'suiji_navigation.labels.multi_use_connectors' | t -}}
+  {%- when 'necklaces' -%}{{- 'suiji_navigation.labels.necklaces' | t -}}
+  {%- when 'our-story' -%}{{- 'suiji_navigation.labels.our_story' | t -}}
+  {%- when 'pendant-bases' -%}{{- 'suiji_navigation.labels.pendant_bases' | t -}}
+  {%- when 'pendant-necklaces' -%}{{- 'suiji_navigation.labels.pendant_necklaces' | t -}}
+  {%- when 'ring-bases' -%}{{- 'suiji_navigation.labels.ring_bases' | t -}}
+  {%- when 'rings' -%}{{- 'suiji_navigation.labels.rings' | t -}}
+  {%- when 'sets' -%}{{- 'suiji_navigation.labels.sets' | t -}}
+  {%- when 'shipping-returns' -%}{{- 'suiji_navigation.labels.shipping_returns' | t -}}
+  {%- when 'shop' -%}{{- 'suiji_navigation.labels.shop_all' | t -}}
+  {%- when 'shop-all' -%}{{- 'suiji_navigation.labels.shop_all' | t -}}
+  {%- when 'shop-all-sets' -%}{{- 'suiji_navigation.labels.shop_all_sets' | t -}}
+  {%- when 'stud-earring-bases' -%}{{- 'suiji_navigation.labels.stud_earring_bases' | t -}}
+  {%- when 'stud-earrings' -%}{{- 'suiji_navigation.labels.stud_earrings' | t -}}
+  {%- when 'suiji-studio' -%}{{- 'suiji_navigation.labels.studio' | t -}}
+  {%- when 'support' -%}{{- 'suiji_navigation.labels.support' | t -}}
+  {%- when 'the-mechanism' -%}{{- 'suiji_navigation.labels.core_lock' | t -}}
+  {%- when 'warranty' -%}{{- 'suiji_navigation.labels.warranty' | t -}}
+  {%- when 'stud-earring-styling-set' -%}{{- 'suiji_navigation.sets.s01_name' | t -}}
+  {%- when 'choker-charm-set' -%}{{- 'suiji_navigation.sets.s02_name' | t -}}
+  {%- when 'ring-two-charms-set' -%}{{- 'suiji_navigation.sets.s03_name' | t -}}
+  {%- when 'hoop-earring-necklace-styling-set' -%}{{- 'suiji_navigation.sets.s04_name' | t -}}
+  {%- when 'stud-earring-ring-styling-set' -%}{{- 'suiji_navigation.sets.s05_name' | t -}}
+  {%- when 'hoop-earring-necklace-ring-styling-set' -%}{{- 'suiji_navigation.sets.s06_name' | t -}}
+  {%- when 'size-guide' -%}{{- 'suiji_navigation.labels.size_guide' | t -}}
+{%- else -%}{{- title | escape -}}
+{%- endcase -%}

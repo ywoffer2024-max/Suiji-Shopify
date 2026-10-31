@@ -1,0 +1,23 @@
+{%- doc -%}International guide adjacent to native ring options. Product variants remain Shopify's controls.{%- enddoc -%}
+{%- liquid
+  assign size_context = product.type | append: ' ' | append: product.title | downcase | replace: '-', ' ' | replace: '_', ' ' | prepend: ' ' | append: ' '
+  assign native_is_ring = false
+  if size_context contains ' ring ' or size_context contains ' rings ' or size_context contains ' ringbase ' or size_context contains ' ringbases ' or size_context contains ' bague ' or size_context contains ' bagues '
+    assign native_is_ring = true
+  endif
+  assign native_has_size = false
+  for option in product.options_with_values
+    assign option_name = option.name | downcase
+    if option_name contains 'size' or option_name contains 'taille' or option_name contains 'circumference'
+      assign native_has_size = true
+    endif
+    if option_name contains 'ring size' or option_name contains 'taille de bague'
+      assign native_is_ring = true
+    endif
+  endfor
+  assign native_guide_id = 'NativeRingGuide-' | append: section.id | append: '-' | append: product.id
+  assign native_chart_id = native_guide_id | append: '-chart'
+-%}
+{%- if native_is_ring and native_has_size -%}
+<suiji-native-product class="suiji-native-guide"><button type="button" class="suiji-native-guide__link" data-native-guide-open disabled aria-controls="{{ native_guide_id }}">{{ 'suiji_pdp.size_guide' | t }}</button><dialog class="suiji-pdp__dialog" id="{{ native_guide_id }}" aria-labelledby="{{ native_guide_id }}-title"><div class="suiji-pdp__dialog-head"><h2 id="{{ native_guide_id }}-title">{{ 'suiji_pdp.size_guide' | t }}</h2><button type="button" class="suiji-pdp__close" data-native-guide-close aria-label="{{ 'suiji_pdp.close' | t | escape }}">×</button></div>{% render 'suiji-size-guide', guide_id: native_chart_id, in_dialog: true, native_product: true %}</dialog><noscript><a href="{% render 'suiji-localized-menu-url', url: '/pages/bases#size-guide' %}">{{ 'suiji_pdp.size_guide' | t }}</a></noscript></suiji-native-product>
+{%- endif -%}

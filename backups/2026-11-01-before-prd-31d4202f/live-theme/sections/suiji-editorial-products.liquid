@@ -1,0 +1,98 @@
+{%- liquid
+  assign featured_collection = section.settings.collection
+  if featured_collection == blank
+    assign featured_collection = collections['sets']
+  endif
+-%}
+
+<section class="suiji-product-edit" aria-labelledby="SuijiProductEdit-{{ section.id }}">
+  <div class="suiji-product-edit__heading">
+    <div>
+      {%- if section.settings.eyebrow != blank -%}<span class="suiji-product-edit__eyebrow">{{ section.settings.eyebrow | escape }}</span>{%- endif -%}
+      <h2 id="SuijiProductEdit-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
+    </div>
+    {%- if section.settings.view_all_label != blank and featured_collection != blank -%}
+      <a class="suiji-editorial__link suiji-product-edit__view-all" href="{{ featured_collection.url }}">{{ section.settings.view_all_label | escape }}</a>
+    {%- endif -%}
+  </div>
+
+  <div class="suiji-product-edit__grid">
+    <a class="suiji-product-edit__card" href="{{ featured_collection.url | default: routes.collections_url }}">
+      <span class="suiji-product-edit__image">
+        <img
+          src="{{ 'suiji-studio-triangle-earrings.webp' | asset_url }}"
+          alt="Pair of SUIJI triangle drop earrings on a cool white background"
+          width="1440"
+          height="1805"
+          loading="lazy"
+        >
+      </span>
+      <span class="suiji-product-edit__meta">
+        <span class="suiji-product-edit__title">Triangle Drop</span>
+        <span class="suiji-product-edit__price">Earrings</span>
+      </span>
+    </a>
+
+    <a class="suiji-product-edit__card" href="{{ featured_collection.url | default: routes.collections_url }}">
+      <span class="suiji-product-edit__image">
+        <img
+          src="{{ 'suiji-studio-signet-ring.webp' | asset_url }}"
+          alt="SUIJI geometric signet ring on a cool white background"
+          width="1440"
+          height="1805"
+          loading="lazy"
+        >
+      </span>
+      <span class="suiji-product-edit__meta">
+        <span class="suiji-product-edit__title">Facet Signet</span>
+        <span class="suiji-product-edit__price">Ring</span>
+      </span>
+    </a>
+
+    <a class="suiji-product-edit__card" href="{{ featured_collection.url | default: routes.collections_url }}">
+      <span class="suiji-product-edit__image">
+        <img
+          src="{{ 'suiji-studio-gate-ring.webp' | asset_url }}"
+          alt="SUIJI open gate ring with square stones on a cool white background"
+          width="1440"
+          height="1805"
+          loading="lazy"
+        >
+      </span>
+      <span class="suiji-product-edit__meta">
+        <span class="suiji-product-edit__title">Gate Ring</span>
+        <span class="suiji-product-edit__price">Ring</span>
+      </span>
+    </a>
+
+    <a class="suiji-product-edit__card" href="{{ featured_collection.url | default: routes.collections_url }}">
+      <span class="suiji-product-edit__image">
+        <img
+          src="{{ 'suiji-studio-pink-earrings.webp' | asset_url }}"
+          alt="Pair of SUIJI pink cabochon drop earrings on a cool white background"
+          width="1440"
+          height="1805"
+          loading="lazy"
+        >
+      </span>
+      <span class="suiji-product-edit__meta">
+        <span class="suiji-product-edit__title">Orbit Drop</span>
+        <span class="suiji-product-edit__price">Earrings</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "SUIJI product edit",
+  "tag": "section",
+  "settings": [
+    { "type": "collection", "id": "collection", "label": "Collection" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "The first edit" },
+    { "type": "text", "id": "view_all_label", "label": "View all label", "default": "SHOP THE COLLECTION" }
+  ],
+  "presets": [{ "name": "SUIJI product edit" }]
+}
+{% endschema %}

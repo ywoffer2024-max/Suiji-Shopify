@@ -1,0 +1,123 @@
+{%- liquid
+  assign is_fr = false
+  if request.locale.iso_code contains 'fr'
+    assign is_fr = true
+  endif
+  assign journal_url = routes.root_url | append: '/blogs/journal' | replace: '//', '/'
+  assign selected_blog = section.settings.blog
+  if selected_blog == blank
+    assign selected_blog = blogs['journal']
+  endif
+-%}
+
+<section class="suiji-section suiji-guides">
+  <div class="suiji-shell">
+    <div class="suiji-guides__header">
+      <span class="suiji-kicker">
+        {%- if is_fr -%}Le journal SUIJI{%- else -%}Explore SUIJI{%- endif -%}
+      </span>
+      <h2 class="suiji-title">
+        {%- if is_fr -%}Les derniers guides.{%- else -%}Useful guides.{%- endif -%}
+      </h2>
+    </div>
+
+    {%- unless is_fr -%}
+      <div class="suiji-guides__layout">
+        <a class="suiji-guide-feature" href="{% render 'suiji-localized-menu-url', url: '/pages/the-mechanism#how-it-works' %}">
+          <div class="suiji-guide-feature__content">
+            <h3 class="suiji-guide-feature__title">How Core-Lock works</h3>
+          </div>
+        </a>
+        <div class="suiji-guide-list">
+          <a class="suiji-guide-row" href="{% render 'suiji-localized-menu-url', url: '/pages/bases#size-guide' %}">
+            <span class="suiji-guide-row__topic">Sizing</span>
+            <h3 class="suiji-guide-row__title">Find your ring size</h3>
+          </a>
+          <a class="suiji-guide-row" href="{% render 'suiji-localized-menu-url', url: '/pages/care-guide' %}">
+            <span class="suiji-guide-row__topic">Care</span>
+            <h3 class="suiji-guide-row__title">Looking after your jewellery</h3>
+          </a>
+          <a class="suiji-guide-row" href="{% render 'suiji-localized-menu-url', url: '/pages/faq' %}">
+            <span class="suiji-guide-row__topic">Questions</span>
+            <h3 class="suiji-guide-row__title">Answers before you choose</h3>
+          </a>
+        </div>
+      </div>
+    {%- else -%}
+    {%- if selected_blog != blank and selected_blog.articles_count > 0 -%}
+      <div class="suiji-guides__layout">
+        {%- for article in selected_blog.articles limit: 6 -%}
+          {%- if forloop.first -%}
+            <a class="suiji-guide-feature" href="{{ article.url }}">
+              
+              <div class="suiji-guide-feature__content">
+                <h3 class="suiji-guide-feature__title">{{ article.title | escape }}</h3>
+              </div>
+            </a>
+            <div class="suiji-guide-list">
+          {%- else -%}
+            <a class="suiji-guide-row" href="{{ article.url }}">
+              <span class="suiji-guide-row__topic">
+                {%- if article.tags.size > 0 -%}{{ article.tags.first | escape }}{%- else -%}Journal{%- endif -%}
+              </span>
+              <h3 class="suiji-guide-row__title">{{ article.title | escape }}</h3>
+            </a>
+          {%- endif -%}
+          {%- if forloop.last -%}</div>{%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- else -%}
+      <div class="suiji-guides__layout">
+        <a class="suiji-guide-feature" href="{{ journal_url }}">
+          
+          <div class="suiji-guide-feature__content">
+            <h3 class="suiji-guide-feature__title">
+              {%- if is_fr -%}Oreilles sensibles : comment choisir ses boucles{%- else -%}Sensitive ears: how to choose earrings{%- endif -%}
+            </h3>
+          </div>
+        </a>
+        <div class="suiji-guide-list">
+          <a class="suiji-guide-row" href="{{ journal_url }}">
+            <span class="suiji-guide-row__topic">{%- if is_fr -%}Confort{%- else -%}Comfort{%- endif -%}</span>
+            <h3 class="suiji-guide-row__title">
+              {%- if is_fr -%}Poids et dimensions : les repères utiles{%- else -%}Earring weight and dimensions: useful benchmarks{%- endif -%}
+            </h3>
+          </a>
+          <a class="suiji-guide-row" href="{{ journal_url }}">
+            <span class="suiji-guide-row__topic">{%- if is_fr -%}Légèreté{%- else -%}Lightness{%- endif -%}</span>
+            <h3 class="suiji-guide-row__title">
+              {%- if is_fr -%}Comment de grandes boucles peuvent rester légères{%- else -%}How large earrings can stay lightweight{%- endif -%}
+            </h3>
+          </a>
+          <a class="suiji-guide-row" href="{{ journal_url }}">
+            <span class="suiji-guide-row__topic">{%- if is_fr -%}Matières{%- else -%}Materials{%- endif -%}</span>
+            <h3 class="suiji-guide-row__title">
+              {%- if is_fr -%}Lire la composition d'une boucle d'oreille{%- else -%}How to read an earring's material list{%- endif -%}
+            </h3>
+          </a>
+        </div>
+      </div>
+    {%- endif -%}
+    {%- endunless -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "SUIJI featured guides",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "Journal blog"
+    }
+  ],
+  "presets": [
+    {
+      "name": "SUIJI featured guides"
+    }
+  ]
+}
+{% endschema %}

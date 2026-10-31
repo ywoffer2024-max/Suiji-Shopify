@@ -1,0 +1,30 @@
+[
+  {
+    "Git_path": "live-theme-source-index.json.gz",
+    "decompressed_path": "live-theme-source-index.json",
+    "decompressed_SHA256": "51ae214e5f4735010bdd16d05a0c01426ec3a31acec6d11bd7e24433129c4d42",
+    "decompressed_bytes": 585209,
+    "gzip_SHA256": "42c2ad9ef23a0e22b8854ad7c41897a35ae1d7f7d58f93e5f23fe1bd8640244f"
+  },
+  {
+    "Git_path": "official-theme-inventory.json.gz",
+    "decompressed_path": "official-theme-inventory.json",
+    "decompressed_SHA256": "84b8d05b4fda5365db1c6d71e84dc9dd98d607534f306dc335244b70e4c0dff1",
+    "decompressed_bytes": 81384,
+    "gzip_SHA256": "c34e72970836905310656cccb4936cb4631864f91a2e69dd6ba53f54be49d67f"
+  },
+  {
+    "Git_path": "journal-current-public-body-audit.json.gz",
+    "decompressed_path": "journal-current-public-body-audit.json",
+    "decompressed_SHA256": "7b58752351b1a9748c5479e5ad9f0d68802e0f079e6f686b575a390be6756338",
+    "decompressed_bytes": 1928182,
+    "gzip_SHA256": "c8f6e0f5123c978424448dd709a6d93290d2a3311bf9df97da3b92168f3381cc"
+  },
+  {
+    "Git_path": "unpublished-candidate/candidate-complete-source-index.json.gz",
+    "decompressed_path": "unpublished-candidate/candidate-complete-source-index.json",
+    "decompressed_SHA256": "7e6e08f9b1a9884a59da713e6831e4f3e5e9ba2963ed8937fcf3af91dff18fa7",
+    "decompressed_bytes": 520825,
+    "gzip_SHA256": "84778015b63cbbe3caa09084fc89e1a6c5769aafb61da1d1cedae17584255130"
+  }
+]

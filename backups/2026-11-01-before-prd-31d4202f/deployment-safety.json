@@ -1,0 +1,13 @@
+{
+  "parent_commit": "f1e62a5317f9eeb4b68651922662b5078389e438",
+  "parent_tree": "76592e61a12263a7caec0477e9b5a13e9a6701cd",
+  "parent_repository_recursive_tree_active_workflow_files": 0,
+  "GitHub_Pages_enabled": false,
+  "evidence": "Fresh GitHub repository JSON has_pages=false; complete f1e62a recursive tree has no .github/workflows entries.",
+  "branch": "codex/backup-before-prd-20261101-20261031t193423z-31d4202f",
+  "commit_message_will_include": "[skip ci]",
+  "default_branch_changes": 0,
+  "Shopify_push_or_publish": 0,
+  "root_deployment_config_added": false,
+  "unknown": "External unobserved webhook configurations are not audited; final actual Shopify theme role/checksum readback will verify no live change during backup."
+}
