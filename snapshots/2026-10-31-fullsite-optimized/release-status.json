@@ -1,7 +1,7 @@
 {
-  "utc": "2026-10-31T08:17:56.492598+00:00",
+  "utc": "2026-10-31T08:17:56.509686+00:00",
   "state": "published_historical_incremental_revision",
-  "revision": "Refresh category results after same-document hash navigation",
+  "revision": "Close mobile menu after category selection and preserve sizing anchors",
   "theme_files": 692,
   "tracked_touched_sources": 261,
   "tracked_source_verification": "Historical incremental stage; later commits hold final source",

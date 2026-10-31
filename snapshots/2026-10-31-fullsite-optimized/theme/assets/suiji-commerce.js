@@ -304,7 +304,9 @@
       throw new Error('unknown-product');
     }else{
       listing();
-      window.addEventListener('hashchange',()=>{listPage=1;listing();});
+      const categoryAnchors=['ring-bases','stud-bases','pendant-bases','hoop-earrings','stud-earrings','chains','chokers','beaded-necklaces','pendant-necklaces','chain-beaded-bracelets','bangles','multi-use-connectors','decorative-add-ons','gift-sets'];
+      window.addEventListener('hashchange',()=>{if(location.hash&&!categoryAnchors.includes(location.hash.slice(1)))return;listPage=1;listing();root.scrollIntoView({behavior:'auto',block:'start'});});
+      document.addEventListener('click',event=>{const link=event.target.closest('header-drawer a[href]');if(!link)return;const destination=new URL(link.href);if(destination.origin!==location.origin||destination.pathname!==location.pathname||destination.search!==location.search)return;const drawer=link.closest('header-drawer'),summary=drawer.querySelector('summary');drawer.closeMenuDrawer(event,summary);summary?.setAttribute('aria-expanded','false');});
     }
     root.dataset.interfaceStatus='ready';
     document.dispatchEvent(new CustomEvent('suiji:catalogue-ready'));
