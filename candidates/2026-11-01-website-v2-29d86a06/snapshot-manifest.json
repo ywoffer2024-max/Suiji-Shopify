@@ -1,14 +1,14 @@
 {
-  "version": "website-v2.1-cart-chrome-minimal-delta",
-  "created_utc": "2026-11-01T09:16:29.281309+00:00",
-  "reviewed_local_head": "d022f3c30f869079eed43cb2dc1a53d4b90bd6f5",
+  "version": "website-v2.2-contact-cms-copy-only",
+  "created_utc": "2026-11-01T09:33:06.839170+00:00",
+  "reviewed_local_head": "8b2ec122caaf03e7a08d480758d68ca03ad29eb2",
   "vetted_public_paths_including_this_manifest": 855,
   "theme_files": 799,
   "article_language_bodies": 50,
   "public_page_candidates": 25,
   "Rowan_article_bylines": 50,
   "files_excluding_this_manifest": 854,
-  "bytes_excluding_this_manifest": 24865145,
+  "bytes_excluding_this_manifest": 24865073,
   "entries": [
     {
       "path": "content/journal/en/boucles-oreilles-asymetriques-depareillees.html",
@@ -5112,9 +5112,9 @@
     },
     {
       "path": "content/page-candidates.json",
-      "bytes": 139671,
-      "sha256": "1cc9129391dc76a4591be77eb12c725e6138cc15346da0e9c8fcf012c338b611",
-      "git_blob_sha": "eee4637a1ee1be791cae6364f901859cbdb33957"
+      "bytes": 139599,
+      "sha256": "dde6805bfd4e9d2addddc32005ff4861bb8c8496750772c2a80ea275c20e8c52",
+      "git_blob_sha": "ee4bb2d106fa5e941c4f5ed79be716045e19d33b"
     },
     {
       "path": "downloads/SUIJI_Creator_Collaboration_Guide_EN.pdf",
@@ -5140,11 +5140,31 @@
   "base_theme_freeze_sha256": "b8dc4c37aad6bb642b90507958f93fc628c403231c6ddd766388c4ce06f77a8e",
   "source_delta_sha256": "ec4ffa54cccb6f1347ceadba494eb504d3e39d1d54716e6b787b4fb2f28505b2",
   "theme_delta_sha256": "588e76625b5cedc09a3c00dcb8aab9f293fa038819ec65810767ee0f390f1715",
-  "effective_source_manifest_sha256": "3360f8c6194f198ba37a848f746804708b0af82b32ae47302b505c2a101ec630",
+  "effective_source_manifest_sha256": "d7a34353ba4fd2fb3f87661ecd07f7729620c798a4599fd8de798ff2d021e5dc",
   "effective_theme_manifest_sha256": "277d2f80ca9c1de01886d61abc460df8bae1e65b36c065cba227122d9474de12",
   "cart_chrome_delta_public_theme_paths": [
     "theme/assets/suiji-r107.css",
     "theme/layout/theme.liquid",
     "theme/snippets/suiji-r107-header.liquid"
-  ]
+  ],
+  "source_delta_chain": [
+    {
+      "version": "v2.1-cart-chrome",
+      "sha256": "ec4ffa54cccb6f1347ceadba494eb504d3e39d1d54716e6b787b4fb2f28505b2"
+    },
+    {
+      "version": "v2.2-contact-cms",
+      "sha256": "d0466a6b1162617cfeac7757cd065d8392d68aa3addddfb42edc30376f4cd45e"
+    }
+  ],
+  "contact_cms_late_binding": {
+    "payload_sha256": "4c556e550af51aeb339dfa44dc1a18c2f9d9d4a90c3f7c3e2b67c5b01a97f16f",
+    "English_body_sha256": "63cea7a954f836e60e6a268ddf2bbe4cd0d90bd3b91ad4bd2426589c5cd6bb70",
+    "French_body_sha256": "0f5e226e78ac4c52e3dbcae6ea384b84986d4e2770c4ea5f132f66ac438d7adb",
+    "changed_fields": [
+      "contact English body_html",
+      "contact French body_html translation"
+    ],
+    "theme_files_unchanged": 799
+  }
 }
