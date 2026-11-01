@@ -1,4 +1,4 @@
-# SUIJI Design System · v6.1.1
+# SUIJI Design System · v6.1.2
 
 Updated 1 November 2026. Scope: the English and French rev107 storefront. This is the visual and interaction contract, not a deployment report. Publication receipts, QA results and historical versions belong in the release archive.
 
@@ -111,6 +111,8 @@ Journal solves a concrete consumer problem with an early usable answer, practica
 
 ### Native cart, forms and local previews
 
+R107-rendered content must use body class `r107-root` and must not also inherit `suiji-mvp-root`. The legacy `.suiji-mvp-root :is(h1,…,.h1)` selector has greater specificity than the shared display rule and changes Newsreader400 into the old heading family500. Keep this scope boundary in the shared Liquid shell; do not solve it with page-by-page font overrides. Native cart and legacy native product pages stay in their existing branch. Verify computed font family and weight against real Shopify CSS, not only the local preview or loaded-font list.
+
 The native Shopify cart uses the shared header/footer **while retaining Dawn's `10px` root/rem system, forms, line items, totals, scripts and section updates**. Its main wrapper must **not** acquire `.r-site`. Keep exactly one `#cart-icon-bubble` update target, its native SVG wrapper, badge and screen-reader text. Do not replace native commerce with the browser-local preview bag.
 
 The shopping preview is a separate, clearly labeled browser-local flow with no order/payment creation. Real contact uses Shopify's native `contact` form; newsletter uses `customer`, an unchecked required marketing-consent checkbox, and actual server success/error states. Do not display a fake sent/subscribed result. PDF buttons require a real configured URL or an honest unavailable state. Account endpoints remain native.
@@ -126,9 +128,9 @@ The shopping preview is a separate, clearly labeled browser-local flow with no o
 
 ## 7. Verification and release
 
-Run `python3 maintenance/rev107/check_design_contract.py` before compilation. It checks the locked stylesheet/font bytes, rejects page-specific style blocks or inline layout overrides (only factual swatch variables are allowed), and checks essential template contracts; it does not claim computed layout or usability. `build_theme.py` also enforces this check. Run portable generation checks and changed-file Theme Check after compilation.
+Run `python3 maintenance/rev107/check_design_contract.py` before compilation. It checks the locked stylesheet/font/shell bytes, rejects page-specific style blocks or inline layout overrides (only factual swatch variables are allowed), and checks essential template contracts; it does not claim computed layout or usability. `build_theme.py` also enforces this check. Run portable generation checks and changed-file Theme Check after compilation.
 
-For a layout or shared-style change, verify actual browser widths **360, 390, 768, 1024, 1280 and 1440px** in EN and FR, plus the changed component's breakpoint edges. Assert the actual viewport dimensions in the saved evidence; a mislabeled screenshot is not a pass. Check long translated strings, navigation, focus, form/error states, product configuration, guide, complete-the-look and cart behavior as applicable. At 200% zoom verify usable reflow and access to controls. No page overflow or hidden primary action is acceptable.
+For a layout or shared-style change, verify actual browser widths **360, 390, 768, 1024, 1280 and 1440px** in EN and FR, plus the changed component's breakpoint edges. Assert the actual viewport dimensions in the saved evidence; a mislabeled screenshot is not a pass. Assert actual Newsreader400 H1/display and Manrope body on the native storefront (native cart keeps its existing exception). Check long translated strings, navigation, focus, form/error states, product configuration, guide, complete-the-look and cart behavior as applicable. At 200% zoom verify usable reflow and access to controls. No page overflow or hidden primary action is acceptable.
 
 Publication requires the actual native theme/Page/translation readback and the sole Store writer's publish receipt. Record physical-device, Safari, zoom, video, delivery, payments or performance tests as unverified when they were not performed. Keep test evidence and live theme IDs outside this normative document. A release must not silently change this contract or copy its historical operational numbers into new claims.
 
@@ -138,11 +140,12 @@ This lock pins the reviewed visual implementation. Any mismatch stops compilatio
 
 ```json design-lock
 {
-  "version": "6.1.1",
+  "version": "6.1.2",
   "stylesheet": {
     "path": "theme/assets/suiji-r107.css",
     "sha256": "aa291d826931a6703210d898601239983f593bb9537f500fc81323ab6b9b9c00"
   },
+  "shell": {"path": "theme/layout/theme.liquid", "sha256": "92cb45c0d076f1676f09887e060cc271396f7498f1c7eb47e41fe94638eab7d8"},
   "fonts": [
     {"path": "theme/assets/suiji-newsreader-latin-regular.woff2", "sha256": "e71a3bea5993009ab159b89d52d88ba515efd57e8d9324a94c681bfc72c9ac0f"},
     {"path": "theme/assets/suiji-manrope-latin-variable.woff2", "sha256": "8bd97e6bbbc1f602a8f791530eed1064c9a357d5731bbc76e3fc587fb068728f"}

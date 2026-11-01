@@ -1,4 +1,11 @@
-# SUIJI website — frozen v3.1 ring selection candidate
+# SUIJI website — frozen v3.2 heading scope candidate
+
+## Heading scope revision v3.2
+
+This reviewed hotfix changes only `theme/layout/theme.liquid` in the 799-file theme. R107-rendered content receives `r107-root` instead of the legacy `suiji-mvp-root`, so existing legacy selectors no longer override the Newsreader 400 display headings. Native cart and legacy product branches keep their original scope. No stylesheet, script, font asset, CMS content, Journal, catalogue or native settings change is included.
+
+DESIGN.md v6.1.2 locks the reviewed shell and requires computed typography checks against real Shopify CSS. Standards and Spec reviews passed. The producer's 64 controlled EN/FR checks simulated the exact body-class change in the actual Shopify CSS environment; these are pre-implementation checks, not proof that the server hotfix is live. Native application and actual computed-font verification remain with the sole publisher. The private checker and complete build prerequisites remain excluded from this public snapshot.
+
 
 ## Ring selection revision v3.1
 

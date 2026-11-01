@@ -458,7 +458,7 @@
 {% if page.handle == 'studio-workspace' or page.handle == 'my-design' or page.handle == 'checkout-preview' or page.handle == 'shopping-preview' %}<meta name="robots" content="noindex,nofollow">{% endif %}
 </head>
 
-  <body class="gradient suiji-mvp-root template-{{ request.page_type }}{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <body class="gradient{% if suiji_r107_content contains 'data-r107-page' %} r107-root{% else %} suiji-mvp-root{% endif %} template-{{ request.page_type }}{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     {% comment %}R107 CANDIDATE START — same build-time renderer as the review site{% endcomment %}
     {% if suiji_r107_content contains 'data-r107-page' %}
       {% render 'suiji-r107-header' %}
