@@ -1,4 +1,11 @@
-# SUIJI website — frozen v2.1 cart chrome candidate
+# SUIJI website — frozen v3 brand and About candidate
+
+## Brand and About revision v3
+
+The reviewed increment updates the shared stylesheet plus the About, home and mechanism templates. The public Page projection changes only the English/French bodies of About and the mechanism page, preserving the other 23 Page records. [DESIGN.md](DESIGN.md) is the frozen public design contract; its bytes and stylesheet/font lock match the reviewed source.
+
+**This public snapshot is not a complete executable build environment.** The complete private source retains the internal IR/module plan, `pages/en/about.html`, `pages/fr/about.html`, shared renderer/compiler and `maintenance/rev107/check_design_contract.py`. The checker and its build prerequisites are intentionally kept together in that private archive. Build and guard execution require that complete source; this public snapshot contains the full Shopify theme candidate and curated public content for review and native deployment verification.
+
 
 ## Cart chrome delta v2.1
 

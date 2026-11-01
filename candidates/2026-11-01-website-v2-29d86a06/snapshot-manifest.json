@@ -1,14 +1,14 @@
 {
-  "version": "website-v2.2-contact-cms-copy-only",
-  "created_utc": "2026-11-01T09:33:06.839170+00:00",
-  "reviewed_local_head": "8b2ec122caaf03e7a08d480758d68ca03ad29eb2",
-  "vetted_public_paths_including_this_manifest": 855,
+  "version": "website-v3-brand-about-frozen",
+  "created_utc": "2026-11-01T11:31:33.349761+00:00",
+  "reviewed_local_head": "d27b0139b48cbb43f263d3b27a4c0374f3ca7cbc",
+  "vetted_public_paths_including_this_manifest": 856,
   "theme_files": 799,
   "article_language_bodies": 50,
   "public_page_candidates": 25,
   "Rowan_article_bylines": 50,
-  "files_excluding_this_manifest": 854,
-  "bytes_excluding_this_manifest": 24865073,
+  "files_excluding_this_manifest": 855,
+  "bytes_excluding_this_manifest": 24893234,
   "entries": [
     {
       "path": "content/journal/en/boucles-oreilles-asymetriques-depareillees.html",
@@ -2316,9 +2316,9 @@
     },
     {
       "path": "theme/assets/suiji-r107.css",
-      "bytes": 49782,
-      "sha256": "ebc153a34b900be86a9b0afc3c12fa2a0e7a6596d73612b4c747f7f35f4f8c4a",
-      "git_blob_sha": "c627f5156f40b367d920f688ff57faa81312b109"
+      "bytes": 49923,
+      "sha256": "59187c5c7d3c6ce8b4f08ecac40e32e55e62dcf44f798b3254fb880b88f1ead1",
+      "git_blob_sha": "db579a9df4ed094c09c69a4809d150bc78e97321"
     },
     {
       "path": "theme/assets/suiji-r107.js",
@@ -3828,9 +3828,9 @@
     },
     {
       "path": "theme/snippets/suiji-r107-about.liquid",
-      "bytes": 19351,
-      "sha256": "374c093a3631a6c6313320d73467784ebfa6cf8b4c762818beeddb84202441ba",
-      "git_blob_sha": "c54d7c17e7da51a522d918cd21ae180c7ccd0ff9"
+      "bytes": 22258,
+      "sha256": "d5270fd892e009baea6ba8cb9d2a91f1179114bdb84f75c0b6f0225a6e7d8822",
+      "git_blob_sha": "101431c9f6f89476fe61357701f69ce318dc57fe"
     },
     {
       "path": "theme/snippets/suiji-r107-article.liquid",
@@ -3996,9 +3996,9 @@
     },
     {
       "path": "theme/snippets/suiji-r107-home.liquid",
-      "bytes": 34612,
-      "sha256": "09cf1c21896c740e8fe1ef60649d9a67a25a1db32e23310a9be620c231ae9828",
-      "git_blob_sha": "fc324e25347cf3df944a0901c19244cada9db209"
+      "bytes": 34802,
+      "sha256": "e247e285c495b1308b59ac2ef4e16e1ca04a7b83994f573a15640c5149023521",
+      "git_blob_sha": "eb0c13e4e0c09040df2d1eceec76e61bfcde1ad8"
     },
     {
       "path": "theme/snippets/suiji-r107-journal.liquid",
@@ -4008,9 +4008,9 @@
     },
     {
       "path": "theme/snippets/suiji-r107-mechanism.liquid",
-      "bytes": 7323,
-      "sha256": "4c89a9c1541a9811d734f47d1020eb7bb83fa8b624175dc4b1397f81df931c60",
-      "git_blob_sha": "9273f7a68b29e5c27a7e75fd87ba7624b786eaa7"
+      "bytes": 8736,
+      "sha256": "d76c4d2cc29827186693aa38be393ec92d3e9c97a1a23d6194302ab5e25ad1e7",
+      "git_blob_sha": "ce707bcf16359b266750856413dbdc1907ab92d9"
     },
     {
       "path": "theme/snippets/suiji-r107-members.liquid",
@@ -5112,9 +5112,9 @@
     },
     {
       "path": "content/page-candidates.json",
-      "bytes": 139599,
-      "sha256": "dde6805bfd4e9d2addddc32005ff4861bb8c8496750772c2a80ea275c20e8c52",
-      "git_blob_sha": "ee4bb2d106fa5e941c4f5ed79be716045e19d33b"
+      "bytes": 143858,
+      "sha256": "7f160bb95956b1be0f8fb5361aea3ddb7e06cbe6c705245f5770eb51a962739e",
+      "git_blob_sha": "246cb1cd40fdde61e652597454a7d16903ef2a07"
     },
     {
       "path": "downloads/SUIJI_Creator_Collaboration_Guide_EN.pdf",
@@ -5130,18 +5130,24 @@
     },
     {
       "path": "README.md",
-      "bytes": 2873,
-      "sha256": "da931d9a0c071e27f4f59e314fc1f9b6eada332f9d18c4e2a091f3ff83f59ec9",
-      "git_blob_sha": "39d40f7175a0e5b5ae101942437b2fc1f230b2b0"
+      "bytes": 3819,
+      "sha256": "893f358e33a29c200ab1c7c72f49f8ce7d4c61c5b4e88f2a4c5b1b173a769cc1",
+      "git_blob_sha": "4a7fe9c9f51a82a4f85e18b385af4234784f3268"
+    },
+    {
+      "path": "DESIGN.md",
+      "bytes": 18305,
+      "sha256": "92e3ac98918fd94e3e1126438b2c55b44fcfc6e61fd9b714cff26ac8ac5cbc95",
+      "git_blob_sha": "a46d1a4e260ee8304d251db0b10e00c39a2a2e87"
     }
   ],
   "publication_state": "Candidate Git archive only; native publisher verifies release separately",
   "base_source_freeze_sha256": "15c84ac84e4f5b3036db38ae7bfa0c3766feb203b48a6fe2651727e488a48b5f",
   "base_theme_freeze_sha256": "b8dc4c37aad6bb642b90507958f93fc628c403231c6ddd766388c4ce06f77a8e",
-  "source_delta_sha256": "ec4ffa54cccb6f1347ceadba494eb504d3e39d1d54716e6b787b4fb2f28505b2",
-  "theme_delta_sha256": "588e76625b5cedc09a3c00dcb8aab9f293fa038819ec65810767ee0f390f1715",
-  "effective_source_manifest_sha256": "d7a34353ba4fd2fb3f87661ecd07f7729620c798a4599fd8de798ff2d021e5dc",
-  "effective_theme_manifest_sha256": "277d2f80ca9c1de01886d61abc460df8bae1e65b36c065cba227122d9474de12",
+  "source_delta_sha256": "0122120ec1a1f8c30c6cf2cfdb14a469d8384e9dcec0848ac71603ab120a0a0d",
+  "theme_delta_sha256": "35ded1bae4e9ba0418c0bb992056223501c8f2b78231824d21d04cff48c86d97",
+  "effective_source_manifest_sha256": "f3d12f213afb70bc3c9733baa5ad63bb400b998328b41ca253519db85c2e45b1",
+  "effective_theme_manifest_sha256": "be12f49e21374dfb9dee2d8d32d474c66c18655fd6be1118099dfe46308e13ac",
   "cart_chrome_delta_public_theme_paths": [
     "theme/assets/suiji-r107.css",
     "theme/layout/theme.liquid",
@@ -5155,6 +5161,10 @@
     {
       "version": "v2.2-contact-cms",
       "sha256": "d0466a6b1162617cfeac7757cd065d8392d68aa3addddfb42edc30376f4cd45e"
+    },
+    {
+      "version": "v3-brand-about",
+      "sha256": "0122120ec1a1f8c30c6cf2cfdb14a469d8384e9dcec0848ac71603ab120a0a0d"
     }
   ],
   "contact_cms_late_binding": {
@@ -5166,5 +5176,35 @@
       "contact French body_html translation"
     ],
     "theme_files_unchanged": 799
+  },
+  "full_private_source_v3_sha256": "23d96bea53f527eb65ae1e7ca7e0df17876829f7771107a215e9eb1a3a9365bb",
+  "theme_delta_chain": [
+    {
+      "version": "v2.1-cart-chrome",
+      "sha256": "588e76625b5cedc09a3c00dcb8aab9f293fa038819ec65810767ee0f390f1715"
+    },
+    {
+      "version": "v3-brand-about",
+      "sha256": "35ded1bae4e9ba0418c0bb992056223501c8f2b78231824d21d04cff48c86d97"
+    }
+  ],
+  "design_contract": {
+    "path": "DESIGN.md",
+    "sha256": "92e3ac98918fd94e3e1126438b2c55b44fcfc6e61fd9b714cff26ac8ac5cbc95",
+    "version": "6.1",
+    "public_build_environment_complete": false,
+    "build_guard_published": false
+  },
+  "v3_native_Page_projection": {
+    "handles": [
+      "about",
+      "the-mechanism"
+    ],
+    "fields": [
+      "body_html",
+      "body_html_fr"
+    ],
+    "payload_sha256": "a3d3d6ed428305bb78a05dcba016bb1ce3656b33d2fed8498365771ab5ffb853",
+    "other23_records_unchanged": true
   }
 }
