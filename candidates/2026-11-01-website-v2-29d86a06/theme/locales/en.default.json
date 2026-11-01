@@ -1,0 +1,1535 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "general": {
+    "password_page": {
+      "login_form_heading": "Enter store using password:",
+      "login_password_button": "Enter using password",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_error": "Wrong password!",
+      "login_form_submit": "Enter",
+      "admin_link_html": "Are you the store owner? <a href=\"/admin\" class=\"link underlined-link\">Log in here</a>",
+      "powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
+    },
+    "social": {
+      "alt_text": {
+        "share_on_facebook": "Share on Facebook",
+        "share_on_twitter": "Share on X",
+        "share_on_pinterest": "Pin on Pinterest"
+      },
+      "links": {
+        "twitter": "X (Twitter)",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "continue_shopping": "Continue shopping",
+    "pagination": {
+      "label": "Pagination",
+      "page": "Page {{ number }}",
+      "next": "Next page",
+      "previous": "Previous page"
+    },
+    "search": {
+      "search": "Search",
+      "reset": "Clear search term"
+    },
+    "cart": {
+      "view": "View cart ({{ count }})",
+      "view_empty_cart": "View cart",
+      "item_added": "Item added to your cart"
+    },
+    "share": {
+      "close": "Close share",
+      "copy_to_clipboard": "Copy link",
+      "share_url": "Link",
+      "success_message": "Link copied to clipboard"
+    },
+    "slider": {
+      "of": "of",
+      "next_slide": "Slide right",
+      "previous_slide": "Slide left",
+      "name": "Slider"
+    }
+  },
+  "newsletter": {
+    "label": "Email",
+    "success": "Thanks for subscribing",
+    "button_label": "Subscribe"
+  },
+  "accessibility": {
+    "skip_to_text": "Skip to content",
+    "skip_to_product_info": "Skip to product information",
+    "close": "Close",
+    "unit_price_separator": "per",
+    "vendor": "Vendor:",
+    "error": "Error",
+    "refresh_page": "Choosing a selection results in a full page refresh.",
+    "link_messages": {
+      "new_window": "Opens in a new window.",
+      "external": "Opens external website."
+    },
+    "loading": "Loading...",
+    "total_reviews": "total reviews",
+    "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars",
+    "collapsible_content_title": "Collapsible content",
+    "complementary_products": "Complementary products"
+  },
+  "blogs": {
+    "article": {
+      "blog": "Blog",
+      "read_more_title": "Read more: {{ title }}",
+      "comments": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      },
+      "moderated": "Please note, comments need to be approved before they are published.",
+      "comment_form_title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Comment",
+      "post": "Post comment",
+      "back_to_blog": "Back to blog",
+      "share": "Share this article",
+      "success": "Your comment was posted successfully! Thank you!",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated."
+    }
+  },
+  "onboarding": {
+    "product_title": "Example product title",
+    "collection_title": "Your collection's name"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to cart",
+      "choose_options": "Choose options",
+      "choose_product_options": "Choose options for {{ product_name }}",
+      "description": "Description",
+      "inventory_in_stock": "In stock",
+      "inventory_in_stock_show_count": "{{ quantity }} in stock",
+      "inventory_low_stock": "Low stock",
+      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
+      "inventory_out_of_stock": "Out of stock",
+      "inventory_out_of_stock_continue_selling": "In stock",
+      "sku": "SKU",
+      "on_sale": "Sale",
+      "product_variants": "Product variants",
+      "media": {
+        "gallery_viewer": "Gallery Viewer",
+        "load_image": "Load image {{ index }} in gallery view",
+        "load_model": "Load 3D Model {{ index }} in gallery view",
+        "load_video": "Play video {{ index }} in gallery view",
+        "image_available": "Image {{ index }} is now available in gallery view",
+        "open_media": "Open media {{ index }} in modal",
+        "play_model": "Play 3D Viewer",
+        "play_video": "Play video"
+      },
+      "nested_label": "{{ title }} for {{ parent_title }}",
+      "quantity": {
+        "label": "Quantity",
+        "input_label": "Quantity for {{ product }}",
+        "increase": "Increase quantity for {{ product }}",
+        "decrease": "Decrease quantity for {{ product }}",
+        "minimum_of": "Minimum of {{ quantity }}",
+        "maximum_of": "Maximum of {{ quantity }}",
+        "multiples_of": "Increments of {{ quantity }}",
+        "min_of": "Min {{ quantity }}",
+        "max_of": "Max {{ quantity }}",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> in cart",
+        "in_cart_aria_label": "Quantity ({{ quantity }} in cart)",
+        "note": "View quantity rules"
+      },
+      "volume_pricing": {
+        "title": "Volume Pricing",
+        "note": "Volume pricing available",
+        "minimum": "{{ quantity }}+",
+        "price_at_each_html": "at {{ price }}/ea",
+        "price_range": "{{ minimum }} - {{ maximum }}"
+      },
+      "pickup_availability": {
+        "view_store_info": "View store information",
+        "check_other_stores": "Check availability at other stores",
+        "pick_up_available": "Pickup available",
+        "pick_up_available_at_html": "Pickup available at <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "Couldn't load pickup availability",
+        "refresh": "Refresh"
+      },
+      "price": {
+        "from_price_html": "From {{ price }}",
+        "regular_price": "Regular price",
+        "sale_price": "Sale price",
+        "unit_price": "Unit price"
+      },
+      "share": "Share this product",
+      "sold_out": "Sold out",
+      "unavailable": "Unavailable",
+      "vendor": "Vendor",
+      "value_unavailable": "{{ option_value }} - Unavailable",
+      "variant_sold_out_or_unavailable": "Variant sold out or unavailable",
+      "video_exit_message": "{{ title }} opens full screen video in same window.",
+      "view_full_details": "View full details",
+      "xr_button": "View in your space",
+      "xr_button_label": "View in your space, loads item in augmented reality window",
+      "taxes_included": "Taxes included.",
+      "duties_included": "Duties included.",
+      "duties_and_taxes_included": "Duties and taxes included.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout."
+    },
+    "modal": {
+      "label": "Media gallery"
+    },
+    "facets": {
+      "filter_and_operator_subtitle": "Match all",
+      "apply": "Apply",
+      "clear": "Clear",
+      "clear_all": "Remove all",
+      "from": "From",
+      "filter_and_sort": "Filter and sort",
+      "filter_by_label": "Filter:",
+      "filter_button": "Filter",
+      "filters_selected": {
+        "one": "{{ count }} selected",
+        "other": "{{ count }} selected"
+      },
+      "filter_selected_accessibility": "{{ type }} ({{ count }} filters selected)",
+      "show_more": "Show more",
+      "show_less": "Show less",
+      "max_price": "The highest price is {{ price }}",
+      "product_count": {
+        "one": "{{ product_count }} of {{ count }} product",
+        "other": "{{ product_count }} of {{ count }} products"
+      },
+      "product_count_simple": {
+        "one": "{{ count }} product",
+        "other": "{{ count }} products"
+      },
+      "reset": "Reset",
+      "sort_button": "Sort",
+      "sort_by_label": "Sort by:",
+      "to": "To",
+      "clear_filter": "Remove filter"
+    }
+  },
+  "templates": {
+    "search": {
+      "no_results": "No results found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "page": "Page",
+      "products": "Products",
+      "results_pages_with_count": {
+        "one": "{{ count }} page",
+        "other": "{{ count }} pages"
+      },
+      "results_suggestions_with_count": {
+        "one": "{{ count }} suggestion",
+        "other": "{{ count }} suggestions"
+      },
+      "results_products_with_count": {
+        "one": "{{ count }} product",
+        "other": "{{ count }} products"
+      },
+      "results_with_count": {
+        "one": "{{ count }} result",
+        "other": "{{ count }} results"
+      },
+      "results_with_count_and_term": {
+        "one": "{{ count }} result found for “{{ terms }}”",
+        "other": "{{ count }} results found for “{{ terms }}”"
+      },
+      "title": "Search results",
+      "search_for": "Search for “{{ terms }}”",
+      "suggestions": "Suggestions",
+      "pages": "Pages"
+    },
+    "cart": {
+      "cart": "Cart"
+    },
+    "contact": {
+      "form": {
+        "title": "Contact form",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone number",
+        "comment": "Comment",
+        "send": "Send",
+        "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
+        "error_heading": "Please adjust the following:"
+      }
+    },
+    "404": {
+      "title": "Page not found",
+      "subtext": "404"
+    }
+  },
+  "sections": {
+    "announcements": {
+      "previous_announcement": "Previous announcement",
+      "next_announcement": "Next announcement",
+      "carousel": "Carousel",
+      "announcement": "Announcement",
+      "announcement_bar": "Announcement bar"
+    },
+    "header": {
+      "announcement": "Announcement",
+      "menu": "Menu",
+      "cart_count": {
+        "one": "{{ count }} item",
+        "other": "{{ count }} items"
+      }
+    },
+    "cart": {
+      "title": "Your cart",
+      "caption": "Cart items",
+      "remove_title": "Remove {{ title }}",
+      "estimated_total": "Estimated total",
+      "new_estimated_total": "New estimated total",
+      "note": "Order special instructions",
+      "checkout": "Check out",
+      "empty": "Your cart is empty",
+      "cart_error": "There was an error while updating your cart. Please try again.",
+      "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
+      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Duties and taxes included. Discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
+      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Duties and taxes included. Discounts and shipping calculated at checkout.",
+      "taxes_included_shipping_at_checkout_with_policy_html": "Taxes included. Discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
+      "taxes_included_shipping_at_checkout_without_policy": "Taxes included. Discounts and shipping calculated at checkout.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Duties included. Taxes, discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Duties included. Taxes, discounts and shipping calculated at checkout.",
+      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Taxes, discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
+      "taxes_at_checkout_shipping_at_checkout_without_policy": "Taxes, discounts and shipping calculated at checkout.",
+      "headings": {
+        "product": "Product",
+        "price": "Price",
+        "total": "Total",
+        "quantity": "Quantity",
+        "image": "Product image"
+      },
+      "update": "Update",
+      "login": {
+        "title": "Have an account?",
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in</a> to check out faster."
+      }
+    },
+    "footer": {
+      "payment": "Payment methods"
+    },
+    "featured_blog": {
+      "view_all": "View all",
+      "onboarding_title": "Blog post",
+      "onboarding_content": "Give your customers a summary of your blog post"
+    },
+    "featured_collection": {
+      "view_all": "View all",
+      "view_all_label": "View all products in the {{ collection_name }} collection"
+    },
+    "collection_list": {
+      "view_all": "View all"
+    },
+    "collection_template": {
+      "empty": "No products found",
+      "title": "Collection",
+      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all</a>"
+    },
+    "video": {
+      "load_video": "Load video: {{ description }}"
+    },
+    "slideshow": {
+      "load_slide": "Load slide",
+      "previous_slideshow": "Previous slide",
+      "next_slideshow": "Next slide",
+      "pause_slideshow": "Pause slideshow",
+      "play_slideshow": "Play slideshow",
+      "carousel": "Carousel",
+      "slide": "Slide"
+    },
+    "page": {
+      "title": "Page title"
+    },
+    "quick_order_list": {
+      "product_total": "Product subtotal",
+      "view_cart": "View cart",
+      "each": "{{ money }}/ea",
+      "product": "Product",
+      "variant": "Variant",
+      "variant_total": "Variant total",
+      "items_added": {
+        "one": "{{ quantity }} item added",
+        "other": "{{ quantity }} items added"
+      },
+      "items_removed": {
+        "one": "{{ quantity }} item removed",
+        "other": "{{ quantity }} items removed"
+      },
+      "product_variants": "Product variants",
+      "total_items": "Total items",
+      "remove_all_single_item_confirmation": "Remove 1 item from your cart?",
+      "remove_all_items_confirmation": "Remove all {{ quantity }} items from your cart?",
+      "remove_all": "Remove all",
+      "cancel": "Cancel",
+      "min_error": "This item has a minimum of {{ min }}",
+      "max_error": "This item has a maximum of {{ max }}",
+      "step_error": "You can only add this item in increments of {{ step }}"
+    }
+  },
+  "localization": {
+    "country_label": "Country/region",
+    "language_label": "Language",
+    "update_language": "Update language",
+    "update_country": "Update country/region",
+    "search": "Search",
+    "popular_countries_regions": "Popular countries/regions",
+    "country_results_count": "{{ count }} countries/regions found"
+  },
+  "customer": {
+    "account": {
+      "title": "Account",
+      "details": "Account details",
+      "view_addresses": "View addresses",
+      "return": "Return to Account details"
+    },
+    "account_fallback": "Account",
+    "activate_account": {
+      "title": "Activate account",
+      "subtext": "Create your password to activate your account.",
+      "password": "Password",
+      "password_confirm": "Confirm password",
+      "submit": "Activate account",
+      "cancel": "Decline invitation"
+    },
+    "addresses": {
+      "title": "Addresses",
+      "default": "Default",
+      "add_new": "Add a new address",
+      "edit_address": "Edit address",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "company": "Company",
+      "address1": "Address 1",
+      "address2": "Address 2",
+      "city": "City",
+      "country": "Country/region",
+      "province": "Province",
+      "zip": "Postal/ZIP code",
+      "phone": "Phone",
+      "set_default": "Set as default address",
+      "add": "Add address",
+      "update": "Update address",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "delete": "Delete",
+      "delete_confirm": "Are you sure you wish to delete this address?"
+    },
+    "log_in": "Log in",
+    "log_out": "Log out",
+    "login_page": {
+      "cancel": "Cancel",
+      "create_account": "Create account",
+      "email": "Email",
+      "forgot_password": "Forgot your password?",
+      "guest_continue": "Continue",
+      "guest_title": "Continue as a guest",
+      "password": "Password",
+      "title": "Login",
+      "sign_in": "Sign in",
+      "submit": "Submit",
+      "alternate_provider_separator": "or"
+    },
+    "order": {
+      "title": "Order {{ name }}",
+      "date_html": "Placed on {{ date }}",
+      "cancelled_html": "Order Cancelled on {{ date }}",
+      "cancelled_reason": "Reason: {{ reason }}",
+      "billing_address": "Billing Address",
+      "payment_status": "Payment Status",
+      "shipping_address": "Shipping Address",
+      "fulfillment_status": "Fulfillment Status",
+      "discount": "Discount",
+      "shipping": "Shipping",
+      "tax": "Tax",
+      "product": "Product",
+      "sku": "SKU",
+      "price": "Price",
+      "quantity": "Quantity",
+      "total": "Total",
+      "total_refunded": "Refunded",
+      "fulfilled_at_html": "Fulfilled {{ date }}",
+      "track_shipment": "Track shipment",
+      "tracking_url": "Tracking link",
+      "tracking_company": "Carrier",
+      "tracking_number": "Tracking number",
+      "subtotal": "Subtotal",
+      "total_duties": "Duties"
+    },
+    "orders": {
+      "title": "Order history",
+      "order_number": "Order",
+      "order_number_link": "Order number {{ number }}",
+      "date": "Date",
+      "payment_status": "Payment status",
+      "fulfillment_status": "Fulfillment status",
+      "total": "Total",
+      "none": "You haven't placed any orders yet."
+    },
+    "recover_password": {
+      "title": "Reset your password",
+      "subtext": "We will send you an email to reset your password",
+      "success": "We've sent you an email with a link to update your password."
+    },
+    "register": {
+      "title": "Create account",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Create"
+    },
+    "reset_password": {
+      "title": "Reset account password",
+      "subtext": "Enter a new password",
+      "password": "Password",
+      "password_confirm": "Confirm password",
+      "submit": "Reset password"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "how_to_use_gift_card": "Use the gift card code online or QR code in-store",
+      "title": "Here's your {{ value }} gift card balance for {{ shop }}!",
+      "subtext": "Your gift card",
+      "gift_card_code": "Gift card code",
+      "shop_link": "Visit online store",
+      "add_to_apple_wallet": "Add to Apple Wallet",
+      "qr_image_alt": "QR code — scan to redeem gift card",
+      "copy_code": "Copy gift card code",
+      "expiration_date": "Expires {{ expires_on }}",
+      "copy_code_success": "Code copied successfully",
+      "expired": "Expired"
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "I want to send this as a gift",
+      "expanded": "Gift card recipient form expanded",
+      "collapsed": "Gift card recipient form collapsed",
+      "email_label": "Recipient email",
+      "email_label_optional_for_no_js_behavior": "Recipient email (optional)",
+      "email": "Email",
+      "name_label": "Recipient name (optional)",
+      "name": "Name",
+      "message_label": "Message (optional)",
+      "message": "Message",
+      "max_characters": "{{ max_chars }} characters max",
+      "send_on": "YYYY-MM-DD",
+      "send_on_label": "Send on (optional)"
+    }
+  },
+  "suiji_navigation": {
+    "labels": {
+      "core_lock": "Core-Lock & Modular System",
+      "discover_core_lock": "Explore the modular system",
+      "how_it_works": "How It Works",
+      "jewelry_bases": "Jewelry Bases",
+      "pendant_bases": "Pendant Bases",
+      "stud_earring_bases": "Stud Earring Bases",
+      "ring_bases": "Ring Bases",
+      "charms": "Charms",
+      "shop_all": "Shop All",
+      "necklaces": "Necklaces",
+      "chains": "Chains",
+      "beaded_necklaces": "Beaded Necklaces",
+      "chokers": "Chokers",
+      "pendant_necklaces": "Pendant Necklaces",
+      "bracelets_bangles": "Bracelets & Bangles",
+      "chain_beaded_bracelets": "Chain & Beaded Bracelets",
+      "bangles": "Bangles",
+      "earrings": "Earrings",
+      "stud_earrings": "Stud Earrings",
+      "hoop_earrings": "Hoop Earrings",
+      "rings": "Rings",
+      "accessories": "Accessories",
+      "multi_use_connectors": "Multi-use Connectors",
+      "decorative_add_ons": "Decorative Add-ons",
+      "sets": "Sets",
+      "shop_all_sets": "Shop All Sets",
+      "gifts": "Gifts",
+      "gift_sets": "Gift sets",
+      "about_suiji": "About SUIJI",
+      "our_story": "Our Story",
+      "design_craft": "Design & Craft",
+      "contact_us": "Contact Us",
+      "submenu": "submenu",
+      "pieces": "pieces",
+      "included": "Included pieces",
+      "styling": "Ways to style",
+      "explore_set": "See the pieces",
+      "back_to_sets": "Back to all sets",
+      "filter_all": "All sets",
+      "filter_ears": "Ears",
+      "filter_neck": "Neck",
+      "filter_rings": "Rings",
+      "sets_shown": "Sets shown: __COUNT__",
+      "size_guide": "Size guide",
+      "faq": "FAQ",
+      "care_guide": "Care guide",
+      "shipping_returns": "Shipping & returns",
+      "explore": "Explore",
+      "support": "Support",
+      "journal": "Journal (in French)",
+      "warranty": "Warranty",
+      "extension_chain": "Extension chain",
+      "studio": "SUIJI Studio",
+      "hero_alt": "Monochrome editorial study of metal and glass surfaces",
+      "filter_label": "Filter sets by where they are worn"
+    },
+    "sets": {
+      "title": "Sets",
+      "intro": "The same charms, different ways to wear. Start with the pieces in each set, then explore how they can be reused.",
+      "availability": "These sets are being prepared. This page presents their planned contents and styling ideas.",
+      "piece_note": "Pieces are counted individually. Two earrings make one pair; the internal parts of an assembled piece do not add to the set count.",
+      "gift_title": "Sets to give",
+      "gift_text": "Choose by how they like to wear jewellery: studs, hoops, a necklace or a ring. The contents stay the same across the suggested looks.",
+      "s01_name": "Stud Earring Styling Set",
+      "s01_contents_html": "<ul class=\"suiji-info__bom\"><li><strong>2</strong><span>Stud Earring Bases</span></li><li><strong>2</strong><span>Metal Earring Backs</span></li><li><strong>2</strong><span>Pearl Earring Backs</span></li><li><strong>2</strong><span>Gemstone Charms</span></li></ul>",
+      "s01_modes_html": "<ol class=\"suiji-info__modes\"><li><h4>Look A · Metal backs</h4><p>Fit one charm to each stud base and secure each with a metal earring back. Keep the two pearl backs aside.</p></li><li><h4>Look B · Pearl backs</h4><p>Keep the two front charms and replace the metal backs with the pearl backs. Use one back on each stud.</p></li><li><h4>Look C · Left and right</h4><p>Swap the two charms between ears. Two different selected stone colours can form an asymmetric pair; no additional charms are included.</p></li></ol>",
+      "s01_limit": "Wear one pair of studs at a time. The metal and pearl backs are alternatives.",
+      "s02_name": "Choker & Charm Set",
+      "s02_contents_html": "<ul class=\"suiji-info__bom\"><li><strong>1</strong><span>Choker</span></li><li><strong>1</strong><span>Gemstone Charm</span></li><li><strong>1</strong><span>Pendant Base</span></li></ul>",
+      "s02_modes_html": "<ol class=\"suiji-info__modes\"><li><h4>Look A · Pendant composition</h4><p>Fit the charm to the pendant base, then attach the base to the choker using the connection designed for this model.</p></li><li><h4>Look B · Choker on its own</h4><p>Remove the assembled pendant and wear the choker on its own, provided this design closes securely without the pendant.</p></li></ol>",
+      "s02_limit": "One charm is included. This set does not include stud or ring bases.",
+      "s03_name": "Ring & Two Charms Set",
+      "s03_contents_html": "<ul class=\"suiji-info__bom\"><li><strong>1</strong><span>Ring Base</span></li><li><strong>2</strong><span>Gemstone Charms</span></li></ul>",
+      "s03_modes_html": "<ol class=\"suiji-info__modes\"><li><h4>Look A · First charm</h4><p>Wear the ring base with the first charm. Keep the second charm aside.</p></li><li><h4>Look B · Second charm</h4><p>Remove the first charm and fit the second to the same ring base. The ring and its size stay the same.</p></li></ol>",
+      "s03_limit": "One ring base takes one charm at a time. This is not a two-ring set.",
+      "s04_name": "Hoop Earring & Necklace Styling Set",
+      "s04_contents_html": "<ul class=\"suiji-info__bom\"><li><strong>2</strong><span>Hoop Earrings</span></li><li><strong>2</strong><span>Pendant Bases</span></li><li><strong>2</strong><span>Gemstone Charms</span></li><li><strong>1</strong><span>Necklace</span></li></ul>",
+      "s04_modes_html": "<ol class=\"suiji-info__modes\"><li><h4>Look A · Pair of pendant earrings</h4><p>Fit one charm to each pendant base and attach one assembled pendant to each hoop. Both charms are used for the earrings.</p></li><li><h4>Look B · Pendant necklace</h4><p>Move one assembled pendant from a hoop to the necklace. Keep the other aside, or use it only in a verified single-ear styling.</p></li><li><h4>Look C · Swap the pendant</h4><p>Swap the assembled pendant on the necklace for the other one to create a second necklace look using the same chain.</p></li></ol>",
+      "s04_limit": "A fully charmed pair of earrings and a charmed necklace cannot be worn together with this set: that would require three charms.",
+      "s05_name": "Stud Earring & Ring Styling Set",
+      "s05_contents_html": "<ul class=\"suiji-info__bom\"><li><strong>2</strong><span>Stud Earring Bases</span></li><li><strong>2</strong><span>Metal Earring Backs</span></li><li><strong>2</strong><span>Pearl Earring Backs</span></li><li><strong>2</strong><span>Gemstone Charms</span></li><li><strong>1</strong><span>Ring Base</span></li></ul>",
+      "s05_modes_html": "<ol class=\"suiji-info__modes\"><li><h4>Look A · Pair of studs</h4><p>Use both charms on the pair of studs, with either the metal backs or the pearl backs. Keep the ring base aside.</p></li><li><h4>Look B · First ring look</h4><p>Move one charm from a stud to the ring base. Keep the other aside, or use it only in a verified single-ear styling.</p></li><li><h4>Look C · Second ring look</h4><p>Change the ring to the second charm. To return to the pair of charmed studs, move both charms back to the studs.</p></li></ol>",
+      "s05_limit": "A fully charmed pair of studs plus a charmed ring would require three charms. This set contains two.",
+      "s06_name": "Hoop Earring, Necklace & Ring Styling Set",
+      "s06_contents_html": "<ul class=\"suiji-info__bom\"><li><strong>2</strong><span>Hoop Earrings</span></li><li><strong>2</strong><span>Pendant Bases</span></li><li><strong>2</strong><span>Gemstone Charms</span></li><li><strong>1</strong><span>Necklace</span></li><li><strong>1</strong><span>Ring Base</span></li></ul>",
+      "s06_modes_html": "<ol class=\"suiji-info__modes\"><li><h4>Look A · Pair of pendant earrings</h4><p>Use both pendant bases and both charms with the pair of hoops. Keep the necklace and ring base aside.</p></li><li><h4>Look B · Necklace and ring</h4><p>Use one charm on a pendant base for the necklace. Remove the other charm from its pendant base and fit it to the ring base. Each charm occupies one styling position.</p></li><li><h4>Look C · Swap the charms</h4><p>Swap the two charms between the necklace pendant base and the ring base, reusing the same necklace and ring.</p></li></ol>",
+      "s06_limit": "The four possible charm positions share two charms. This set does not fully decorate both ears, the necklace and the ring simultaneously. The two pendant bases are also reused."
+    },
+    "core": {
+      "title": "Core-Lock & Modular System",
+      "intro": "A starting point for combining jewellery bases and interchangeable charms. Choose the base for where you want to wear it, then a charm designed for that base.",
+      "how_title": "How it works",
+      "step1_title": "Choose a base",
+      "step1_text": "Begin with a ring base, a stud earring base or a pendant base, according to how you want to wear it.",
+      "step2_title": "Choose a compatible charm",
+      "step2_text": "Check the specific base and charm combination. A shared category name does not mean every part fits every base.",
+      "step3_title": "Reuse the same pieces",
+      "step3_text": "Use the set’s actual piece list to plan each look. One charm occupies one position at a time.",
+      "compatibility_title": "Design and compatibility",
+      "compatibility_text": "The base, the connection and the charm each have a role. Check what is included, the intended combination and the instructions for that model before changing a composition."
+    },
+    "components": {
+      "bases_title": "Jewelry bases",
+      "bases_intro": "The starting pieces for different wearing positions. A base does not include a detachable charm or chain unless its contents say so.",
+      "pendant_text": "Holds a compatible charm in a pendant composition. Check whether the necklace is included.",
+      "stud_text": "Forms the front of a stud earring with its compatible charm. Earring backs are listed separately; a metal back and a pearl back are alternatives.",
+      "ring_text": "A ring base takes one charm at a time. Ring size is the inner circumference in millimetres; the initial planned sizes are 54 and 57 mm.",
+      "charms_title": "Interchangeable charms",
+      "charms_intro": "Choose a compatible ornament, then its stone colour and frame colour where offered. The number of charms included is always shown in the set’s piece list.",
+      "charms_note": "A charm moves with the composition; it is not an extra piece for every wearing position. Stone names and materials are specified only when confirmed."
+    },
+    "size_guide": {
+      "title": "Ring size guide",
+      "intro": "Ring size means inner circumference in millimetres, not diameter. The reference range below runs from 41 to 65 mm in 1 mm steps.",
+      "release_note": "The first release is planned in 54 and 57 mm. All other sizes are currently unavailable. Purchasing is paused; this guide does not reserve a size or create an order.",
+      "initial": "First release · purchasing paused",
+      "unavailable": "Currently unavailable",
+      "shipping": "For pre-orders, shipment is expected within three months of payment."
+    },
+    "seo": {
+      "sets_description": "Explore six SUIJI sets with complete piece lists, individual piece counts and ways to reuse the same charms across compatible bases.",
+      "core_description": "Discover the SUIJI Core-Lock modular system. Choose a jewelry base, add a compatible charm and check the parts you need for each composition.",
+      "bases_description": "Explore SUIJI pendant, stud earring and ring bases. Check what is included and read the ring size guide in millimetres.",
+      "charms_description": "Explore SUIJI interchangeable charms, stone and frame colour choices, included quantities and compatibility with specific jewellery bases.",
+      "catalog_description": "Explore SUIJI jewellery bases, interchangeable charms and six planned sets. View the contents and compatibility guidance while purchasing is paused."
+    },
+    "footer": {
+      "brand": "Handmade jewelry since 2014. Bases and interchangeable charms, designed to build on the pieces you already own.",
+      "preparation": "Clear guidance on materials, weight and comfort while the First Edition is being prepared."
+    }
+  },
+  "suiji_preview": {
+    "eyebrow": "Interactive preview",
+    "title": "Build your look",
+    "intro": "Choose the ring size and colour, then add either charm separately. Only the selected blue and gold-tone studio photographs are shown; other product images will follow.",
+    "purchase_notice": "This is a preview bag. Purchasing is paused and no order or payment is created.",
+    "illustration": "Illustration · preview only",
+    "base_title": "Ring base",
+    "ring_size": "Ring size · inner circumference (mm)",
+    "colour": "Ring colour",
+    "metal_gold": "Gold-tone",
+    "metal_silver": "Natural titanium",
+    "metal_blue": "Blue",
+    "stone_rose": "Pink",
+    "stone_blue": "Blue",
+    "add_base": "Add ring to preview bag",
+    "view_bag": "Shopping bag",
+    "complete_look": "Complete the look",
+    "charm_intro": "Choose a charm and its stone and frame colours. Each button adds only that selected charm; your ring size stays the same.",
+    "charm_a": "Charm option A",
+    "charm_b": "Charm option B",
+    "stone_colour": "Example stone colour",
+    "frame_colour": "Frame colour",
+    "add_charm": "Add this charm",
+    "rotation_note": "One ring takes one charm at a time. The two charm choices are worn in turn; adding both does not add a second ring.",
+    "bag_title": "Your preview bag",
+    "empty": "Your preview bag is empty. Start with a base or a charm.",
+    "clear": "Clear preview bag",
+    "checkout_paused": "Checkout is currently paused",
+    "quantity": "Quantity",
+    "remove": "Remove",
+    "added": "__ITEM__ added to your preview bag.",
+    "updated": "Preview quantity updated.",
+    "removed": "Item removed from your preview bag.",
+    "no_js": "Enable JavaScript to try the interactive preview. The size guide and set contents remain available below.",
+    "try_link": "Try a combination",
+    "home_hero_alt": "Blue ring with a round clasp, studio view.",
+    "home_method_alt": "Gold-tone ring with a round clasp, studio view.",
+    "home_image_pending": "Studio image",
+    "home_preview_label": "From the SUIJI studio",
+    "entry_cta": "Choose size & add",
+    "entry_description": "Explore 54 and 57 mm, ring colours and two optional charms.",
+    "studio_preview": "Studio image · preview only",
+    "stone_smoky": "Smoky",
+    "stone_aqua": "Aqua"
+  },
+  "suiji_catalog": {
+    "intro": "Browse by how you wear it, then explore each category.",
+    "availability": "These collections are being prepared. Purchasing is currently paused.",
+    "browse_categories": "Browse categories",
+    "back_shop_all": "Back to Shop All",
+    "explore_category": "Explore category",
+    "try_combination": "Try a combination",
+    "descriptions": {
+      "necklaces": "Chains, beaded necklaces, chokers and complete pendant necklaces.",
+      "chains": "Explore chain styles and check each design’s length, fastening and included pieces.",
+      "beaded_necklaces": "Explore beaded necklaces. Product details distinguish gemstone beads from pearls and state what is included.",
+      "chokers": "Short necklaces worn close to the neck. Rigid styles are identified in the product details.",
+      "pendant_necklaces": "Complete necklaces that include both a chain and a pendant. A pendant base sold alone is listed under Core-Lock.",
+      "bracelets_bangles": "Flexible bracelets and rigid bangles, grouped by structure.",
+      "chain_beaded_bracelets": "Flexible chain or beaded styles. Check the stated size and fastening for each design.",
+      "bangles": "Rigid wrist styles. Check the inner dimensions and opening details for each design.",
+      "earrings": "Studs and hoops. Each listing states whether it includes a single piece or a pair.",
+      "stud_earrings": "Explore stud styles. Check whether each listing is a single piece or a pair, and which backs are included.",
+      "hoop_earrings": "Explore hoop styles. The quantity and any separate pendants or charms are stated for each design.",
+      "rings": "Ring designs, including styles with interchangeable charms. Check the size and the pieces included with each design.",
+      "charms": "Interchangeable ornaments for compatible bases. Check the shape, stone and frame options for each design.",
+      "accessories": "Connectors and decorative add-ons, grouped by use. Check compatibility with the intended base.",
+      "multi_use_connectors": "Connecting pieces for the intended base or composition. Compatibility is specified for each part.",
+      "decorative_add_ons": "Tassels, pearls and other decorative add-ons. Attachment and compatibility details are stated for each design."
+    }
+  },
+  "suiji_pdp": {
+    "breadcrumbs": "Breadcrumbs",
+    "home": "Home",
+    "gallery": "Ring images",
+    "product_code": "R01 · From the SUIJI studio",
+    "price_pending": "Pricing available at launch",
+    "lead": "Start with a ring. Make it yours with an interchangeable charm.",
+    "finish": "Colour",
+    "size": "Ring size",
+    "size_unit": "Inner circumference in millimetres",
+    "size_guide": "Ring size guide",
+    "saved": "Saved for this preview",
+    "save": "Save this ring for this preview",
+    "enlarge": "Enlarge image",
+    "close": "Close",
+    "gallery_note": "Selected blue and gold-tone studio images. Other product images will follow.",
+    "preview_note": "Interactive preview. No order or payment is created.",
+    "charm_jump": "Choose your charms",
+    "add": "Add to preview bag",
+    "tab_description": "Description",
+    "tab_notes": "Our notes",
+    "tab_shipping": "Shipping info",
+    "description": "A ring base for your own combinations. Choose a colour and either 54 or 57 mm, then explore the two optional charms below. Each charm is added separately.",
+    "notes": "One ring holds one charm at a time. Choose both charms to wear in turn; a second charm does not include a second ring. Photos for the natural titanium finish and charms will follow.",
+    "shipping": "For pre-orders, shipment is expected within three months of payment. Purchasing is currently paused; this preview does not reserve stock or a delivery date.",
+    "photo_blue": "Blue ring · studio image",
+    "photo_gold": "Gold-tone ring · studio image",
+    "photo_silver": "Natural titanium ring · illustration",
+    "guide_intro": "Compare international sizes using inner circumference as your starting point. Conversions are approximate and may differ between brands.",
+    "guide_measure": "Measure a ring that fits the same finger, from inner edge to inner edge. For a circular ring, circumference = inner diameter × π. A jeweller can check the fit, especially for a wide band.",
+    "guide_range": "54 and 57 mm are the two sizes in this preview. Other rows are sizing references, not available product options.",
+    "circumference": "SUIJI / FR / EU · inner circumference (mm)",
+    "diameter": "Inner diameter (mm)",
+    "guide_us": "US / Canada",
+    "guide_uk": "UK / Australia / NZ / Ireland",
+    "guide_jp": "Japan",
+    "guide_cn": "China / Hong Kong*",
+    "guide_india": "India*",
+    "guide_italy": "Italy / Spain / Netherlands / Switzerland*",
+    "guide_selected": "Preview sizes",
+    "guide_all": "International comparison table",
+    "guide_scroll": "Swipe the table to compare all standards.",
+    "guide_source": "Sizing references",
+    "guide_dash": "— means no verified comparison in this chart. Millimetre measurements remain the basis for SUIJI sizing.",
+    "guide_regional": "* Regional systems vary, including China, Hong Kong, India and Italy. These are reference conversions, not universal equivalents. Confirm the standard used by your jeweller. India uses the nearest circumference in Tanishq’s chart.",
+    "guide_reference": "Reference only",
+    "guide_available": "Preview option",
+    "nav_illustration": "Category illustration",
+    "unsaved": "Removed from your saved preview.",
+    "limit": "This preview allows up to 9 of each selection.",
+    "nav_single_hoop": "Single hoop · studio image",
+    "colour_photo_pending": "Image for this colour coming soon. Choose blue or gold-tone to view a studio photograph.",
+    "optional_charm_controls": "Optional charm add-ons · preview",
+    "native_details_fallback": "Please contact SUIJI for details about this design.",
+    "native_notes_fallback": "Check the size, options and included pieces listed for this design before placing an order.",
+    "native_shipping_fallback": "Please contact SUIJI for shipping details.",
+    "native_guide_title": "SUIJI ring sizing",
+    "native_guide_range": "Use the product options to see the sizes offered for this design. This table is a conversion reference and does not indicate stock availability.",
+    "native_size_reference": "SUIJI size reference",
+    "native_save": "Save this design for this visit"
+  },
+  "suiji_display": {
+    "colour": "Colour",
+    "blue": "Blue",
+    "reference": "Reference",
+    "pricing_pending": "Pricing available at launch",
+    "coming_soon": "Coming soon",
+    "notice": "This piece is on view. Ordering is not open yet."
+  },
+  "suiji_commerce": {
+    "loading": "Discovering your SUIJI collection…",
+    "enable_js": "Enable JavaScript to choose pieces and use the demonstration shopping bag.",
+    "contact": "Contact us",
+    "demo_bar": "SUIJI DEMONSTRATION · Illustrative prices and images · No orders or payments",
+    "material": "TC4 Titanium",
+    "about_visual": "SUIJI design studio campaign concept",
+    "about_caption": "AI studio concept",
+    "care": "Care for your pieces",
+    "personal": "Make it your own",
+    "personal_note": "Explore the Core-Lock system.",
+    "help": "Here to help",
+    "help_note": "A question about your combination? Contact SUIJI."
+  },
+  "suiji_sizing": {
+    "title": "Size & fit guide",
+    "ring_title": "Find your ring size",
+    "intro": "SUIJI ring sizes are the inner circumference in millimetres. Start with a measurement you trust.",
+    "current": "Our current ring sizes",
+    "current_note": "54 and 57 mm are currently selectable. The 41–65 mm chart below is a reference; other sizes are unavailable for now.",
+    "size": "SUIJI size",
+    "inner_diameter": "Inner diameter",
+    "approx": "Approx.",
+    "diagram_note": "Illustrations are not life-size. Use a ruler or the calibrated printable chart.",
+    "measure_title": "Two ways to measure",
+    "method_ring": "Use a ring that fits",
+    "method_ring_text": "Choose a ring that fits the same finger. Measure straight across the inside, from inner edge to inner edge, without the metal. Enter that diameter below.",
+    "method_finger": "Measure your finger",
+    "method_finger_text": "Wrap a narrow strip of paper around the finger without tightening it. Mark where the ends meet, then measure the strip in millimetres. Check that the ring can pass over your knuckle.",
+    "calculator_title": "Convert your measurement",
+    "measurement_type": "Measurement type",
+    "diameter_option": "Ring inner diameter (mm)",
+    "circumference_option": "Finger circumference (mm)",
+    "measurement": "Your measurement in mm",
+    "calculate": "Convert",
+    "result": "Estimated inner circumference: {{ measure }} mm",
+    "result_diameter": "Equivalent inner diameter: {{ measure }} mm",
+    "result_idle": "Enter a measurement to see its equivalent.",
+    "result_error": "Check the measurement in millimetres. Diameter: 5–35 mm; circumference: 20–120 mm.",
+    "calculator_note": "This converts a measurement; it does not select a product size. Between sizes or unsure about a wide band? Ask us before choosing.",
+    "print_title": "Prefer a printable ring chart?",
+    "print_text": "Open the chart and print at 100% / actual size. Check the 50 mm calibration line with a ruler before comparing your ring. Never measure against the screen.",
+    "print_link": "Open printable ring chart",
+    "all_chart": "Full international chart · 41–65 mm",
+    "fit_title": "Before you choose",
+    "fit_text": "Measure more than once on the finger you will wear it on. A broad band may feel different from a narrow one. If your measurement sits between 54 and 57 mm, do not simply choose the nearest available size.",
+    "contact": "Ask for sizing help",
+    "category_nav": "Choose your jewelry type",
+    "rings": "Rings",
+    "bracelets": "Bracelets",
+    "necklaces": "Necklaces",
+    "earrings": "Earrings",
+    "other_title": "Measuring other pieces",
+    "bracelet_text": "Measure your wrist where the piece will sit, with a flexible tape. For a chain, compare wearable length; for a rigid bracelet, compare inner width, depth and opening.",
+    "necklace_text": "Use a flexible tape to choose where the necklace should fall. Check its complete wearable length, closure included, and the pendant’s drop. A rigid collar fits differently from a flexible chain.",
+    "earring_text": "Compare a hoop’s inner height and width, or a hanging earring’s total drop. Check the closure and the space below your piercing. Outer dimensions are not the clear space inside.",
+    "other_note": "Fit depends on the design. Check the individual product measurements or contact us for the dimensions of the piece you are considering.",
+    "full_guide": "All jewelry sizing advice",
+    "formula": "For a circular ring: inner circumference = inner diameter × π."
+  },
+  "suiji_v40": {
+    "home": {
+      "hero_title": "Defined by you.",
+      "story_title": "Jewelry that moves to your rhythm",
+      "story_lead": "One ornament. More ways to wear it.",
+      "story_body": "Our handmade jewelry has evolved through conversations with customers since 2014. In our custom work, we often saw the same wish: a favorite detail carried across matching pieces, or a different charm for each occasion, without buying the same parts again. SUIJI grew from that idea. Our bases, interchangeable charms and Core-Lock connection let you build on what you already have and make the combinations your own. We’re working toward a future where everyone can wear jewelry they’ve had a hand in designing.",
+      "ornament": "Ornament",
+      "base": "Base",
+      "composition": "Your composition",
+      "compatibility": "Every SUIJI ornament fits every jewelry base equipped with the SUIJI multi-use clasp.",
+      "about_title": "About SUIJI",
+      "about_lead": "From custom work to personal combinations.",
+      "about_body": "Our designs have grown out of how people really want to wear them. Meet Chunyu Wen and discover how custom-jewelry experience led to a system of bases and charms, with personal choice at its heart.",
+      "about_cta": "Meet the designer",
+      "editorial_title": "Ways to wear. Things to know.",
+      "editorial_body": "What is included? How do you check the fit? Find practical guides to choosing, combining and caring for your jewelry."
+    },
+    "about": {
+      "title": "Jewelry that changes with you.",
+      "lead": "Since 2014, our work in handmade jewelry has been shaped by conversations with the people who wear it. SUIJI grew from a wish we heard often: to keep a design you love and find more ways to wear it.",
+      "structure_title": "An ornament. A base. Your expression.",
+      "structure_body": "In our custom work, some customers wanted a favorite charm to appear in matching earrings, a ring or a necklace. Others wanted to change a detail for a different outfit or occasion. Buying a whole new piece each time often meant buying the same parts again. That experience led us to a modular approach: keep the base you love, choose another compatible charm, or carry a favorite detail across different clasp-equipped bases. The pieces can work together without making you start again with every new idea.",
+      "structure_cta": "Explore the SUIJI system",
+      "style_title": "From minimal to bold",
+      "style_body": "Clean shapes and considered details can stand alone or form a more expressive composition. Proportion, color and material connect the elements; you decide the finished look.",
+      "designer_title": "Meet the designer",
+      "designer_name": "Chunyu Wen",
+      "designer_role": "Founder · Brand & Product Lead",
+      "designer_bio": "Chunyu brings her background in bespoke fine jewelry to SUIJI’s brand and product direction, structural development, design and supply chain. She studied Visual Communication at Tsinghua University’s Academy of Arts & Design and Brand Management at INSEEC in France.",
+      "designer_approach": "Her work begins with the relationship between an ornament and the structure that makes it wearable, leaving the final expression to the person who wears it.",
+      "designer_alt": "Chunyu Wen, founder and designer at SUIJI",
+      "wear_title": "Designed to be worn",
+      "wear_body": "We use titanium alloy for the parts designed to sit against the skin. Other materials are chosen to suit the design and the way each piece is made, with lightness guiding every choice. We consider how the complete piece feels on the body, as well as how it looks.",
+      "team_title": "Product, content and commerce",
+      "team_body": "Chunyu leads the brand and product work. Yue Wang, Partner in AI Automation & Marketing, connects product information, content and commerce. Human review remains essential in design, production, quality control and publication.",
+      "future_title": "A future shaped by you",
+      "future_body": "We are working toward a future where everyone can wear jewelry they have had a hand in designing. SUIJI provides the structure; your ideas, choices and personal connections give each composition its character.",
+      "planned": "A service in preparation",
+      "planned_body": "Share your style preferences and explore an ornament of your own. SUIJI would check structural fit and production feasibility before the design, price and timing are confirmed. This personal-design service is planned; it is not an ordering tool on this site.",
+      "collection_cta": "Explore the collection",
+      "sets_cta": "Find your starting point",
+      "contact_cta": "Contact SUIJI"
+    },
+    "core": {
+      "compatibility_text": "Every SUIJI ornament fits every jewelry base equipped with the SUIJI multi-use clasp. Check the included-parts list for your chosen piece: a bare hoop, a connector and a completed clasp-equipped base have different roles. The listing identifies any additional attachment required."
+    },
+    "meta": {
+      "home_title": "SUIJI | Jewelry to Mix and Match Your Way",
+      "home_description": "Handmade SUIJI jewelry with interchangeable charms and bases. Discover the modular system and create combinations shaped by your style.",
+      "about_title": "About SUIJI | Handmade Jewelry Since 2014",
+      "about_description": "From bespoke jewelry to modular bases and charms: discover SUIJI, Chunyu Wen and the idea of keeping the pieces you love in use."
+    },
+    "journal": {
+      "updated": "Reviewed",
+      "review_date": "October 31, 2026",
+      "check_label": "Three components to check",
+      "base": "Your base",
+      "base_text": "Is the SUIJI multi-use clasp included?",
+      "ornament": "Your ornament",
+      "ornament_text": "One element or a pair? Count what is included.",
+      "extra": "Additional parts",
+      "extra_text": "Check any separate base or attachment."
+    }
+  },
+  "suiji_storefront": {
+    "home": "Home",
+    "breadcrumb": "Breadcrumb",
+    "included": "Included with this piece",
+    "material": "Material",
+    "metal": "TC4 titanium components",
+    "connection": "How it comes together",
+    "options": "Your choices",
+    "choose": "Choose your combination",
+    "loading": "The selection controls are loading. You can already read the details below.",
+    "retry": "Try loading the options again",
+    "contact": "Ask about this piece",
+    "browse": "Explore all jewelry",
+    "illustrative": "Illustrative product visual",
+    "demo": "Shopping demonstration. Prices and images are illustrative; no real order or payment is created.",
+    "pair": "Sold as a pair",
+    "ring_guide": "Ring size guide and international conversions",
+    "care": "Care and storage",
+    "system": "How Core-Lock works",
+    "shared": "The two ornaments are shared between arrangements; they do not multiply when you change wearing position.",
+    "related": "Complete the look",
+    "journal": "A guide for this choice",
+    "category_intro": "Explore the pieces, their included parts and the ways they can fit your own compositions.",
+    "catalogue_loading": "Filters and selection controls are loading. The pieces and their details remain available.",
+    "no_js": "You can browse the pieces and read their details here. Enable JavaScript to try the demonstration bag.",
+    "counts": "pieces",
+    "more": "View piece",
+    "stone": "Moissanite",
+    "purchase": {
+      "title": "Before you add",
+      "compatible": "Core-Lock compatible",
+      "material_components": "TC4 titanium components",
+      "material_policy": "Skin-contact components use titanium alloy. Other materials are selected by design and process, with lightness as a priority. Individual sensitivities can vary.",
+      "separate": "Sold separately",
+      "charm_extra": "A compatible SUIJI base with Core-Lock. The base is not included with this ornament.",
+      "base_extra": "Interchangeable ornaments. Choose them separately to change the look.",
+      "adapter_extra": "Core-Lock is not included. An additional attachment is needed for an interchangeable composition.",
+      "existing": "Already have a Core-Lock base?",
+      "browse": "Explore compatible ornaments",
+      "choose_base": "Choose a base for this ornament",
+      "rings": "Ring bases",
+      "stud": "Stud base",
+      "pendant": "Pendant base",
+      "complete": "Explore complete sets",
+      "measurements": "Ask about dimensions or weight",
+      "two_title": "One piece, another way to wear it",
+      "two_alt": "A comparison of two SUIJI arrangements",
+      "cross_title": "An ornament that follows your style",
+      "cross_alt": "SUIJI ornament and compatible wearing arrangements",
+      "video_title": "See how it comes together",
+      "poster_alt": "Core-Lock operation reference",
+      "material_title": "A closer look at the details",
+      "material_alt": "SUIJI material and surface detail",
+      "illustrative": "Illustrative styling reference. Check each piece and the parts supplied.",
+      "shared": "Move the same ornaments between arrangements; the included pieces are listed on each set page.",
+      "steps": "Read the step-by-step guide"
+    },
+    "categories": {
+      "all": "Shop all",
+      "rings": "Rings",
+      "earrings": "Earrings",
+      "necklaces": "Necklaces",
+      "bracelets": "Bracelets & bangles",
+      "charms": "Charms",
+      "extras": "Accessories",
+      "sets": "Sets",
+      "bases": "Jewelry bases"
+    },
+    "roles": {
+      "ring_base": "Ring base",
+      "earring_base": "Earring base",
+      "pendant_base": "Pendant base",
+      "necklace_base": "Necklace base",
+      "bracelet_base": "Bracelet base",
+      "charm": "Ornament",
+      "connector": "Connector",
+      "ear_back": "Ear back",
+      "assembled_jewelry": "Jewelry",
+      "set": "Set"
+    }
+  },
+  "suiji_products": {
+    "r01_ring_base": {
+      "title": "Brushed Ring Base",
+      "description": "Handmade TC4 titanium metalwork with a sculptural band and the Core-Lock clasp. Wear the base on its own or choose an interchangeable charm.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>1 ring base with Core-Lock; charm sold separately.</li></ul>",
+      "options_html": "<ul><li><strong>Band finish:</strong> SUIJI Blue, Silver, Classic Gold</li><li><strong>Clasp / buttons:</strong> SUIJI Blue / SUIJI Blue, SUIJI Blue / Silver, SUIJI Blue / Classic Gold, Silver / SUIJI Blue, Silver / Silver, Silver / Classic Gold, Classic Gold / SUIJI Blue, Classic Gold / Silver, Classic Gold / Classic Gold</li><li><strong>Ring size:</strong> 54, 57</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "r01_iridescent_ring_base": {
+      "title": "Iridescent Brushed Ring Base",
+      "description": "The brushed R01 ring base in its iridescent-blue finish, with TC4 titanium metalwork and the Core-Lock clasp. This finish is specific to R01.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>1 ring base with Core-Lock; charm sold separately.</li></ul>",
+      "options_html": "<ul><li><strong>Ring size:</strong> 54, 57</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "r02_ring_base": {
+      "title": "Textured Ring Base",
+      "description": "Handmade TC4 titanium metalwork with a sculptural band and the Core-Lock clasp. Wear the base on its own or choose an interchangeable charm.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>1 ring base with Core-Lock; charm sold separately.</li></ul>",
+      "options_html": "<ul><li><strong>Band finish:</strong> SUIJI Blue, Silver, Classic Gold</li><li><strong>Clasp / buttons:</strong> SUIJI Blue / SUIJI Blue, SUIJI Blue / Silver, SUIJI Blue / Classic Gold, Silver / SUIJI Blue, Silver / Silver, Silver / Classic Gold, Classic Gold / SUIJI Blue, Classic Gold / Silver, Classic Gold / Classic Gold</li><li><strong>Ring size:</strong> 54, 57</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "double_arm_ring_base": {
+      "title": "Double-arm Ring Base",
+      "description": "Handmade TC4 titanium metalwork with a sculptural band and the Core-Lock clasp. Wear the base on its own or choose an interchangeable charm.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>1 ring base with Core-Lock; charm sold separately.</li></ul>",
+      "options_html": "<ul><li><strong>Band finish:</strong> SUIJI Blue, Silver, Classic Gold</li><li><strong>Clasp / buttons:</strong> SUIJI Blue / SUIJI Blue, SUIJI Blue / Silver, SUIJI Blue / Classic Gold, Silver / SUIJI Blue, Silver / Silver, Silver / Classic Gold, Classic Gold / SUIJI Blue, Classic Gold / Silver, Classic Gold / Classic Gold</li><li><strong>Ring size:</strong> 54, 57</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "h01_hoops": {
+      "title": "Rounded Rectangle Hoops",
+      "description": "Clean lines, a rounded rectangular silhouette and TC4 titanium metalwork. Sold as a pair. The detail image shows one hoop.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is not included in this piece. An additional attachment is needed for an interchangeable composition; check the complete set of parts.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "h02_hoop": {
+      "title": "Circular Hoop",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is not included in this piece. An additional attachment is needed for an interchangeable composition; check the complete set of parts.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "a02_drop": {
+      "title": "Rectangle Hoop & Core-Lock Drop",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>H01 hoop + H03 connector + Core-Lock clasp. Charm is a separate choice.</li></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "a03_drop": {
+      "title": "Circular Hoop & Core-Lock Drop",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>H02 hoop + H03 connector + Core-Lock clasp. Charm is a separate choice.</li></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "collar_7": {
+      "title": "7-Link Collar",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>7 fixed long links, rear fastening and 1 Core-Lock clasp.</li></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "collar_7_drops_1": {
+      "title": "7-Link Collar · 1 Drop",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>7-link collar with 1 H03 connectors and 2 Core-Lock clasps in the documented assembly.</li></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "collar_7_drops_3": {
+      "title": "7-Link Collar · 3 Drops",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>7-link collar with 3 H03 connectors and 4 Core-Lock clasps in the documented assembly.</li></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "collar_7_drops_5": {
+      "title": "7-Link Collar · 5 Drops",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>7-link collar with 5 H03 connectors and 6 Core-Lock clasps in the documented assembly.</li></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "collar_9": {
+      "title": "9-Link Collar",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>9 fixed long links, rear fastening and 1 Core-Lock clasp.</li></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "collar_9_drops_1": {
+      "title": "9-Link Collar · 1 Drop",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>9-link collar with 1 H03 connectors and 2 Core-Lock clasps in the documented assembly.</li></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "collar_9_drops_3": {
+      "title": "9-Link Collar · 3 Drops",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>9-link collar with 3 H03 connectors and 4 Core-Lock clasps in the documented assembly.</li></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "collar_9_drops_5": {
+      "title": "9-Link Collar · 5 Drops",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>9-link collar with 5 H03 connectors and 6 Core-Lock clasps in the documented assembly.</li></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "cross_chain": {
+      "title": "Cross-link Chain",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is not included in this piece. An additional attachment is needed for an interchangeable composition; check the complete set of parts.",
+      "included_html": "<ul><li>550 mm chain body; end rings are separate from the chain-body length.</li></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "cross_chain_core_lock": {
+      "title": "Cross-link Chain with Core-Lock",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>550 mm chain body; end rings are separate from the chain-body length.</li></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "chain_l01": {
+      "title": "Wide Oval Chain",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "chain_l02": {
+      "title": "Elongated Link Chain",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "chain_l03": {
+      "title": "Compact Link Chain",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "chain_l04": {
+      "title": "Disc-bead Chain",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Care for your pieces"
+    },
+    "chain_l05": {
+      "title": "Flat Rectangle Chain",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Care for your pieces"
+    },
+    "bracelet_b3": {
+      "title": "Figaro Bracelet Base",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "This piece is used in its own listed arrangement. It does not include the SUIJI multi-use clasp.",
+      "included_html": "<ul><li>Chain-body design; the S7 fastening is distinct from Core-Lock.</li></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Care for your pieces"
+    },
+    "bracelet_b4": {
+      "title": "Medium Link Bracelet",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "This piece is used in its own listed arrangement. It does not include the SUIJI multi-use clasp.",
+      "included_html": "<ul><li>Chain-body design; the S7 fastening is distinct from Core-Lock.</li></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Care for your pieces"
+    },
+    "bracelet_b5": {
+      "title": "Bold Link Bracelet",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "This piece is used in its own listed arrangement. It does not include the SUIJI multi-use clasp.",
+      "included_html": "<ul><li>Chain-body design; the S7 fastening is distinct from Core-Lock.</li></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Care for your pieces"
+    },
+    "core_lock_pendant_base": {
+      "title": "Core-Lock Pendant Base",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "core_lock_stud_base": {
+      "title": "Core-Lock Stud Base",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "core_lock_stud_metal_back": {
+      "title": "Core-Lock Stud with Metal Back",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "pearl_back_stud": {
+      "title": "Core-Lock Stud with Pearl-effect Back",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "h03_connector": {
+      "title": "H03 Connector",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is not included in this piece. An additional attachment is needed for an interchangeable composition; check the complete set of parts.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "h03_core_lock": {
+      "title": "H03 & Core-Lock Connector",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "metal_ear_backs": {
+      "title": "Metal Ear Backs",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "This piece is used in its own listed arrangement. It does not include the SUIJI multi-use clasp.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Care for your pieces"
+    },
+    "pearl_effect_ear_back": {
+      "title": "Pearl-effect Ear Back",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "This piece is used in its own listed arrangement. It does not include the SUIJI multi-use clasp.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Care for your pieces",
+      "material": "Imitation pearl / resin"
+    },
+    "pearl_effect_stud": {
+      "title": "Pearl-effect Stud",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "This piece is used in its own listed arrangement. It does not include the SUIJI multi-use clasp.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Choosing a hoop"
+    },
+    "oval_motif": {
+      "title": "Oval Cabochon Charm",
+      "description": "An oval cabochon charm with TC4 titanium metalwork, a choice of smooth or textured frame, and eight gemstones from the SUIJI colour palette. Choose a stone and finish, then pair it with a Core-Lock base.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "An ornament is the decorative element. Choose a separate base equipped with the SUIJI multi-use clasp to wear it.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Surface:</strong> Smooth, Textured</li><li><strong>Gemstone:</strong> Amethyst, Citrine, Aquamarine, Rose quartz, Prehnite, Morganite, Smoky quartz, Kunzite</li><li><strong>Frame finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "logo_square": {
+      "title": "Square Logo Charm",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "An ornament is the decorative element. Choose a separate base equipped with the SUIJI multi-use clasp to wear it.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "logo_round": {
+      "title": "Round Logo Charm",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "An ornament is the decorative element. Choose a separate base equipped with the SUIJI multi-use clasp to wear it.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "design_f03": {
+      "title": "Deep-blue Oval Charm",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "design_f04": {
+      "title": "Pink Oval Charm",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "design_f05": {
+      "title": "Cushion Charm",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "design_f06": {
+      "title": "Faceted Crown Charm",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "design_f07": {
+      "title": "Pearl-effect Charm",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "design_f08": {
+      "title": "Sculptural Pale-stone Charm",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "design_f08b": {
+      "title": "Sculptural Blue-grey Charm",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "design_f09": {
+      "title": "Textured Disc Charm",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "design_t01": {
+      "title": "Open Triangle Charm",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "design_new_round_0926": {
+      "title": "Round Cabochon Charm",
+      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
+      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
+      "included_html": "<ul></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "Check your base and ornament"
+    },
+    "set01_stud_earring_set": {
+      "title": "Stud Earring Set",
+      "description": "A stud-earring starting point with the bases, interchangeable ornaments and ear backs listed below.",
+      "notes": "Charms and bases can be rotated between the pieces in this set. The listed components do not promise a separate charm for every wearing position at the same time.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>2 × Stud bases</li><li>2 × Metal ear backs</li><li>2 × Pearl-effect backs</li><li>2 × Interchangeable charms</li></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "One base, two ornaments"
+    },
+    "set02_choker_set": {
+      "title": "Choker Set",
+      "description": "A choker base and two interchangeable ornaments, giving you a choice of looks with the same base.",
+      "notes": "Charms and bases can be rotated between the pieces in this set. The listed components do not promise a separate charm for every wearing position at the same time.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>1 × COLLAR</li><li>1 × Interchangeable charms</li><li>1 × Pendant bases</li></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "One base, two ornaments"
+    },
+    "set03_ring_set": {
+      "title": "Ring Set",
+      "description": "One ring base and two interchangeable ornaments. Choose the look you want to wear, then keep the other ornament for another day.",
+      "notes": "Charms and bases can be rotated between the pieces in this set. The listed components do not promise a separate charm for every wearing position at the same time.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>1 × Ring base</li><li>2 × Interchangeable charms</li></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "One base, two ornaments"
+    },
+    "set04_hoop_earring_necklace_set": {
+      "title": "Hoop Earring & Necklace Set",
+      "description": "Hoops, pendant bases, a necklace and two shared ornaments. Explore wearing the ornaments at the ears or on the necklace.",
+      "notes": "Charms and bases can be rotated between the pieces in this set. The listed components do not promise a separate charm for every wearing position at the same time.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>2 × Hoops</li><li>2 × Pendant bases</li><li>2 × Interchangeable charms</li><li>1 × Necklace</li></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "One base, two ornaments"
+    },
+    "set05_stud_earring_ring_set": {
+      "title": "Stud Earring & Ring Set",
+      "description": "Stud-earring bases, a ring base and two shared ornaments, with the ear backs listed below.",
+      "notes": "Charms and bases can be rotated between the pieces in this set. The listed components do not promise a separate charm for every wearing position at the same time.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>2 × Stud bases</li><li>2 × Metal ear backs</li><li>2 × Pearl-effect backs</li><li>2 × Interchangeable charms</li><li>1 × Ring base</li></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "One base, two ornaments"
+    },
+    "set06_hoop_earring_necklace_ring_set": {
+      "title": "Hoop Earring, Necklace & Ring Set",
+      "description": "Hoops, pendant bases, a necklace, a ring base and two shared ornaments. Choose where to place each ornament in your composition.",
+      "notes": "Charms and bases can be rotated between the pieces in this set. The listed components do not promise a separate charm for every wearing position at the same time.",
+      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
+      "included_html": "<ul><li>2 × Hoops</li><li>2 × Pendant bases</li><li>2 × Interchangeable charms</li><li>1 × Necklace</li><li>1 × Ring base</li></ul>",
+      "options_html": "<ul></ul>",
+      "guide_label": "One base, two ornaments"
+    }
+  },
+  "suiji_about": {
+    "wearing_title": "Designed to be worn.",
+    "wearing_text": "Customers often tell us our pieces look even better worn than on display. We design with the body in mind, so that lines and colour find their expression through its contours and everyday movement.",
+    "meta_title": "About SUIJI | Handmade Jewelry Since 2014",
+    "meta_description": "From bespoke jewelry to modular bases and charms: discover SUIJI, Chunyu Wen and the idea of keeping the pieces you love in use."
+  },
+  "suiji_modular": {
+    "title": "Core-Lock & Modular System",
+    "intro": "Start with a base. Choose a charm. Make the combination your own.",
+    "parts_title": "Bases & Charms",
+    "bases": "Bases",
+    "charms": "Charms",
+    "base_alt": "Illustrative SUIJI modular jewelry composition",
+    "charm_alt": "Illustrative SUIJI necklace and charm composition",
+    "how_title": "Build your own combination",
+    "step1_title": "Start with a base",
+    "step1_text": "Choose where you want to wear it: on your hand, at your ear or as a pendant.",
+    "step2_title": "Choose a charm",
+    "step2_text": "Find a colour, surface or symbol you love. Check the base and the pieces listed with it.",
+    "step3_title": "Change the combination",
+    "step3_text": "Move a compatible charm to another clasp-equipped base. The same charm is worn in one position at a time.",
+    "connection_title": "The connection is Core-Lock",
+    "connection_text": "The base gives a piece its form; the charm changes its expression. In our custom work, customers asked to keep a favorite design while changing how they wore it. Core-Lock grew from that idea: a SUIJI multi-use clasp for compatible elements.",
+    "check_title": "Check the pieces before you choose",
+    "check_text": "A base equipped with Core-Lock and a bare hoop are different starting points. Some pieces need an additional attachment; each product page explains the connection and what is supplied.",
+    "sets_cta": "Start with a complete set",
+    "size_cta": "Find your ring size",
+    "seo": "Discover the SUIJI Core-Lock modular system. Choose a jewelry base, add a compatible charm and check the parts you need for each composition."
+  }
+}

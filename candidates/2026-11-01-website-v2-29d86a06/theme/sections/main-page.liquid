@@ -1,0 +1,73 @@
+{% if page.handle == 'about' %}
+{% render 'suiji-about' %}
+{% elsif page.handle == 'editions' or page.handle == 'sets' or page.handle == 'bases' or page.handle == 'charms' or page.handle == 'the-mechanism' %}
+{% render 'suiji-information-page', page_kind: page.handle %}
+{% else %}
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="page-width page-width--narrow section-{{ section.id }}-padding">
+  <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    {{ page.title | escape }}
+  </h1>
+  <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    {%- assign suiji_service_content = page.content -%}
+    {%- if request.locale.iso_code contains 'fr' -%}
+      {%- if page.handle == 'shipping-returns' or page.handle == 'warranty' -%}
+        {%- assign suiji_service_page_prefix = routes.root_url | append: '/pages/' | replace: '//', '/' -%}
+        {%- capture suiji_contact_href -%}href="{{ suiji_service_page_prefix }}contact"{%- endcapture -%}
+        {%- capture suiji_warranty_href -%}href="{{ suiji_service_page_prefix }}warranty"{%- endcapture -%}
+        {%- assign suiji_service_content = suiji_service_content | replace: 'href="/fr/pages/contact"', suiji_contact_href | replace: 'href="/fr/pages/warranty"', suiji_warranty_href -%}
+      {%- endif -%}
+    {%- endif -%}
+    {{ suiji_service_content }}
+  </div>
+</div>
+
+{% endif %}
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}

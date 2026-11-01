@@ -1,0 +1,36 @@
+{% doc %}
+  Explicit Shop All category imagery only. Default callers retain the previous ring-only behaviour.
+  @param {string} category_url - Existing category collection URL.
+  @param {string} [visual_context] - shop-all to enable the six newly authorized category images.
+{% enddoc %}
+{%- if visual_context == 'shop-all' -%}
+  {%- liquid
+    assign visual_handle = category_url | split: '?' | first | split: '#' | first | split: '/' | last
+    assign category_photo = blank
+    case visual_handle
+      when 'necklaces'
+        assign category_photo = 'suiji-home-necklace-85db3ef4.png'
+      when 'bracelets', 'bracelets-bangles'
+        assign category_photo = 'suiji-home-bracelet-85db3ef4.png'
+      when 'earrings'
+        assign category_photo = images['h01-blue-hoop-314abc45f474.png']
+      when 'rings'
+        assign category_photo = images['r01-blue-front-area17-559667e818a1ea03.png']
+      when 'charms', 'motifs'
+        assign category_photo = images['mf-f02-front-7866b0cf3fed3922.png']
+      when 'extras', 'accessories'
+        assign category_photo = 'suiji-home-modular-85db3ef4.png'
+    endcase
+    assign category_slot = '184px'
+    if visual_handle == 'rings' or visual_handle == 'charms' or visual_handle == 'motifs'
+      assign category_slot = '280px'
+    endif
+  -%}
+  {% render 'suiji-home-image', image: category_photo, alt: '', sizes: category_slot %}
+{%- else -%}
+{%- if category_url contains '/rings' -%}
+  {%- assign category_photo = images['r01-blue-front-area17-559667e818a1ea03.png'] -%}
+  {%- if category_photo != blank -%}{{ category_photo | image_url: width: 360 | image_tag: widths: '160, 240, 360', sizes: '96px', loading: 'lazy', alt: '' }}{%- endif -%}
+{%- endif -%}
+
+{%- endif -%}
