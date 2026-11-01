@@ -1,6 +1,6 @@
-# SUIJI Design System · v6.1.2
+# SUIJI Design System · v6.1.3
 
-Updated 1 November 2026. Scope: the English and French rev107 storefront. This is the visual and interaction contract, not a deployment report. Publication receipts, QA results and historical versions belong in the release archive.
+Updated 2 November 2026. Scope: the English and French rev107 storefront. This is the visual and interaction contract, not a deployment report. Publication receipts, QA results and historical versions belong in the release archive.
 
 ## 1. Authority and change control
 
@@ -79,7 +79,7 @@ Other bounded queries are 1280–1399px for compact inline navigation, below 360
 - Main sections: `54px` vertical padding and the shared gutter; mobile `36px`. Introduction: `58px` top / `46px` bottom and maximum `1180px`; mobile `36px / 32px`.
 - Catalogue grid gaps: `38px 24px`, then `32px 20px` at intermediate widths, then `28px 14px` on mobile. Use the shared card; do not create bespoke card proportions for each page.
 - Product columns: gap `clamp(40px,6vw,100px)`, top `20px`, bottom `64px`; 750–989px gap `32px`; mobile top `10px` and gallery bottom gap `28px`. Neither gallery nor purchase column is sticky.
-- About chapters: ordinary chapter columns `.8fr / 1.2fr`, gap `60px`, vertical padding `36px`, shared page edges. Founder chapter uses `.55fr / .65fr / 1fr`, `32px` gap and a `360px`-high portrait. At 750–989px it uses `.7fr / 1.3fr`, its heading spans both columns and the portrait is `320px` high; at 749px it stacks. Mobile chapter gap `12px`, padding `28px`; founder gap `24px`, portrait maximum width `320px`, height `360px`. The mission module uses `50px` vertical padding, reduced to `32px` on mobile. Do not replace this with a new About layout.
+- About chapters: ordinary chapter columns `.8fr / 1.2fr`, gap `60px`, vertical padding `36px`, shared page edges. The designer chapter is the explicit exception requested on 2 November: a full-width heading above a portrait lead and a separate complete story. Its internal maximum is `1040px`; desktop lead columns are `minmax(240px,320px) / minmax(0,1fr)`, gap `clamp(32px,5vw,64px)`. The lead contains only the role and first two story paragraphs; all remaining paragraphs continue below in a centered `68ch` column measured at the `16px` story font, with `32px` top gap. At 750–989px the portrait column is `minmax(220px,280px)`, gap `32px`. At 749px the lead stacks with `24px` gap and the continuation starts after `24px`. The original image is at most `320px` wide, natural height, `object-fit:contain`; do not crop the face, hands or jewelry. Do not return to a permanent three-column story, add sticky positioning, truncate, fold or omit paragraphs. Ordinary mobile chapter gap `12px`, padding `28px`. The mission module uses `50px` vertical padding, reduced to `32px` on mobile. Do not replace this with a new About layout.
 - Controls remain rectangular. Do not add pill-shaped buttons/cards, decorative rounded containers or new ambient shadows. Circles are reserved for the two system entrances, category imagery and finish swatches.
 - Focus ring: `2px` accent with `4px` offset. Preserve visible hover, selected, disabled, invalid, pending and success states. A status change must be readable without relying on color alone.
 
@@ -105,7 +105,7 @@ The mechanism entrance keeps the two original circular images: `200px` diameter 
 
 Journal article layout uses a maximum `760px` reading column plus a `180–260px` aside, `60px` gap; at 750–989px the aside is `200px` and gap `32px`; at 749px both stack and the aside is no longer sticky.
 
-About retains exactly eight chapters in this order: introduction; meaning of SUIJI; why structure; Core-Lock/system/engineering; Chunyu's first-person story and original portrait; the studio; materials/continued use; mission. Keep the existing campaign, the founder portrait in chapter five and the existing chapter layout. Engineering copy and the patent reference are shared with the mechanism page, not separately paraphrased into inconsistent claims.
+About retains exactly eight chapters in this order: introduction; meaning of SUIJI; why structure; Core-Lock/system/engineering; Chunyu's first-person story and original portrait; the studio; materials/continued use; mission. Keep the existing campaign, the founder portrait in chapter five and the other chapter layouts. Only the designer chapter uses the portrait-lead plus centered-story exception specified above; preserve the full paragraph order in EN/FR. Engineering copy and the patent reference are shared with the mechanism page, not separately paraphrased into inconsistent claims.
 
 Journal solves a concrete consumer problem with an early usable answer, practical steps/comparisons, clear conditions/units, sources, related reading and one main next action. Keep the six need directions and all approved full EN/FR articles. Evidence/research cards stay internal. Article title, author and dates come from native Shopify data. Tables scroll within their own labeled region; document overflow is a failure.
 
@@ -140,10 +140,10 @@ This lock pins the reviewed visual implementation. Any mismatch stops compilatio
 
 ```json design-lock
 {
-  "version": "6.1.2",
+  "version": "6.1.3",
   "stylesheet": {
     "path": "theme/assets/suiji-r107.css",
-    "sha256": "aa291d826931a6703210d898601239983f593bb9537f500fc81323ab6b9b9c00"
+    "sha256": "2782d33c8468af5b7f2d52b2060e606b55fc7617554427677bf2aa29d6a9f34a"
   },
   "shell": {"path": "theme/layout/theme.liquid", "sha256": "92cb45c0d076f1676f09887e060cc271396f7498f1c7eb47e41fe94638eab7d8"},
   "fonts": [
@@ -167,6 +167,10 @@ This lock pins the reviewed visual implementation. Any mismatch stops compilatio
   "header_groups": 5,
   "footer_groups": 5,
   "about_chapters": 8,
+  "designer_intro_paragraphs": 2,
+  "designer_measure": "68ch",
+  "designer_max_width_px": 1040,
+  "designer_portrait_src": "suiji-designer-chunyu-wen-v40.jpeg",
   "ring_mm_range": [41, 65],
   "ring_enabled_mm": [54, 57],
   "ring_companion_skus": ["OV-SM-SQ-G", "OV-HA-AQ-S"]

@@ -1,4 +1,11 @@
-# SUIJI website — frozen v3.2 heading scope candidate
+# SUIJI website — frozen v3.3 designer story candidate
+
+## Designer story layout revision v3.3
+
+This reviewed increment changes the shared CSS and About template only. The designer heading sits above the introduction; the complete original portrait is paired with the role and first two story paragraphs. The following seven story paragraphs continue in a centered 68ch reading column. The English/French prose, paragraph order and portrait asset bytes are preserved. The public Page projection changes only the existing About English/French body fields, retaining the other 24 records and their metadata.
+
+DESIGN.md v6.1.3 locks the new stylesheet and the unchanged v3.2 shell and font bytes. Standards and Spec reviews passed, with source-side layout checks at six widths. Native application and post-application checks remain separate publisher evidence; this Git snapshot alone is not proof that the revised layout has been published. No JS, shell, native settings, product, price, inventory or payment change is included. Private renderer/checker/build prerequisites and the full source archive remain excluded from this public repository.
+
 
 ## Heading scope revision v3.2
 
