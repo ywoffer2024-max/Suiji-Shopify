@@ -1,4 +1,11 @@
-# SUIJI website — frozen v2 review candidate
+# SUIJI website — frozen v2.1 cart chrome candidate
+
+## Cart chrome delta v2.1
+
+This increment updates the shared cart chrome in `theme/layout/theme.liquid`, `theme/snippets/suiji-r107-header.liquid` and `theme/assets/suiji-r107.css`. It preserves the native Dawn cart form, items/footer sections, scripts, globals, rem sizing and `cart-icon-bubble` target. The remaining theme files retain the verified v2 base.
+
+The producer fixture using the unchanged native cart scripts passed quantity 1-to-2, counter/total/live-feedback refresh and removal-to-empty checks. Actual Shopify preview and release verification remain with the designated publisher. Shopify Files URL settings are a separate late binding, retained by that publisher.
+
 
 This candidate uses the reviewed website v2 source, retaining the previous vetted 855-path public scope. The complete internal source archive and internal build inputs are intentionally excluded from this public repository.
 

@@ -1,16 +1,14 @@
 {
-  "version": "website-v2-frozen-public-candidate",
-  "created_utc": "2026-11-01T08:44:47.441447+00:00",
-  "source_freeze_sha256": "15c84ac84e4f5b3036db38ae7bfa0c3766feb203b48a6fe2651727e488a48b5f",
-  "theme_freeze_sha256": "b8dc4c37aad6bb642b90507958f93fc628c403231c6ddd766388c4ce06f77a8e",
-  "reviewed_local_head": "0d8fbb1f301bc8db664052a46a5d5824bea60f15",
+  "version": "website-v2.1-cart-chrome-minimal-delta",
+  "created_utc": "2026-11-01T09:16:29.281309+00:00",
+  "reviewed_local_head": "d022f3c30f869079eed43cb2dc1a53d4b90bd6f5",
   "vetted_public_paths_including_this_manifest": 855,
   "theme_files": 799,
   "article_language_bodies": 50,
   "public_page_candidates": 25,
   "Rowan_article_bylines": 50,
   "files_excluding_this_manifest": 854,
-  "bytes_excluding_this_manifest": 24863586,
+  "bytes_excluding_this_manifest": 24865145,
   "entries": [
     {
       "path": "content/journal/en/boucles-oreilles-asymetriques-depareillees.html",
@@ -2318,9 +2316,9 @@
     },
     {
       "path": "theme/assets/suiji-r107.css",
-      "bytes": 49428,
-      "sha256": "0bd6d376ff23e91c00ee9b93883c90dfff1015d6dde1ec6aa191abe9097601ea",
-      "git_blob_sha": "cf523fe14cea35aa1ecb1b8bb333c4b4d3a7a24d"
+      "bytes": 49782,
+      "sha256": "ebc153a34b900be86a9b0afc3c12fa2a0e7a6596d73612b4c747f7f35f4f8c4a",
+      "git_blob_sha": "c627f5156f40b367d920f688ff57faa81312b109"
     },
     {
       "path": "theme/assets/suiji-r107.js",
@@ -2456,9 +2454,9 @@
     },
     {
       "path": "theme/layout/theme.liquid",
-      "bytes": 37371,
-      "sha256": "1451dca3b209a1dead8649f22b021ffd6e094c23b9992d2ae81b5f4506d00069",
-      "git_blob_sha": "ce0c74570155e09d20e1b62eaa0dca8fc9f5c561"
+      "bytes": 37842,
+      "sha256": "82efba85baad056568880804d22a6837f66cd7636cd29b555386fef417758c24",
+      "git_blob_sha": "88508301b75e8d9f5fe0c5462771d4c688237a9a"
     },
     {
       "path": "theme/locales/bg.json",
@@ -3992,9 +3990,9 @@
     },
     {
       "path": "theme/snippets/suiji-r107-header.liquid",
-      "bytes": 45086,
-      "sha256": "d3c851e72fcadc5aca1837cb50cdd6855519a74fafb94d205b45d4bdbbcb55ec",
-      "git_blob_sha": "97a59f68c25d0779bd77fed07e6112384a23c717"
+      "bytes": 45130,
+      "sha256": "6a6a30afda03a9abdc85269357a54dc8e14436276835461e551a39a11280934d",
+      "git_blob_sha": "5a3f6962625bf7098cda99075a3d57352ebbe42e"
     },
     {
       "path": "theme/snippets/suiji-r107-home.liquid",
@@ -5132,10 +5130,21 @@
     },
     {
       "path": "README.md",
-      "bytes": 2183,
-      "sha256": "6256532536cf55558b8d1654244cd829dd5f0b99359dfe979f8202c14d89fee7",
-      "git_blob_sha": "65c3a22449931d571c201bd045d76f9a33be1112"
+      "bytes": 2873,
+      "sha256": "da931d9a0c071e27f4f59e314fc1f9b6eada332f9d18c4e2a091f3ff83f59ec9",
+      "git_blob_sha": "39d40f7175a0e5b5ae101942437b2fc1f230b2b0"
     }
   ],
-  "publication_state": "Candidate Git archive only; native publisher verifies release separately"
+  "publication_state": "Candidate Git archive only; native publisher verifies release separately",
+  "base_source_freeze_sha256": "15c84ac84e4f5b3036db38ae7bfa0c3766feb203b48a6fe2651727e488a48b5f",
+  "base_theme_freeze_sha256": "b8dc4c37aad6bb642b90507958f93fc628c403231c6ddd766388c4ce06f77a8e",
+  "source_delta_sha256": "ec4ffa54cccb6f1347ceadba494eb504d3e39d1d54716e6b787b4fb2f28505b2",
+  "theme_delta_sha256": "588e76625b5cedc09a3c00dcb8aab9f293fa038819ec65810767ee0f390f1715",
+  "effective_source_manifest_sha256": "3360f8c6194f198ba37a848f746804708b0af82b32ae47302b505c2a101ec630",
+  "effective_theme_manifest_sha256": "277d2f80ca9c1de01886d61abc460df8bae1e65b36c065cba227122d9474de12",
+  "cart_chrome_delta_public_theme_paths": [
+    "theme/assets/suiji-r107.css",
+    "theme/layout/theme.liquid",
+    "theme/snippets/suiji-r107-header.liquid"
+  ]
 }
