@@ -1,4 +1,11 @@
-# SUIJI website — frozen v3 brand and About candidate
+# SUIJI website — frozen v3.1 ring selection candidate
+
+## Ring selection revision v3.1
+
+This reviewed increment updates the shared CSS/JS, Bases and 54 product-detail templates. The guide presents 41–65 mm with only the existing 54/57 mm preview choices enabled. Ring companions preserve their exact existing SKUs, OV-SM-SQ-G and OV-HA-AQ-S, through links and lazy quick configuration; their controls retain the parent ring selection. These are preview choices, not inventory, presale, order or payment claims.
+
+The producer's affected 36 layout cases and two EN/FR exact-companion preview-bag flows passed. Native release verification remains separate. The public Page projection changes only the English/French Bases bodies, preserving the other 24 records including v3 About and mechanism. The 321-configuration catalogue source, Journal and native Dawn sources remain unchanged. DESIGN.md is updated to v6.1.1; the private checker/compiler/renderer and complete build prerequisites remain in the private source archive.
+
 
 ## Brand and About revision v3
 

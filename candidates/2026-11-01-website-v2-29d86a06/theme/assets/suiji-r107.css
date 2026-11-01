@@ -59,3 +59,7 @@ body:has(.r-site){display:block}.r-set-comparison{display:grid;grid-template-col
 
 /* Dawn section updates replace the icon contents while retaining this native target. */
 .r-bag-icon>.svg-wrapper{display:inline-flex;align-items:center;justify-content:center;width:23px;height:23px}.r-bag-icon>.cart-count-bubble .visually-hidden{position:absolute}
+
+/* Locked ring-only companion pair and unavailable preview sizes. */
+.r-complete-look--ring .r-complete-look__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.r-choice--unavailable{opacity:.5;cursor:not-allowed}.r-choice--unavailable span{text-decoration:line-through}

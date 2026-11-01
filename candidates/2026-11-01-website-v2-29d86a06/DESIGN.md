@@ -1,4 +1,4 @@
-# SUIJI Design System · v6.1
+# SUIJI Design System · v6.1.1
 
 Updated 1 November 2026. Scope: the English and French rev107 storefront. This is the visual and interaction contract, not a deployment report. Publication receipts, QA results and historical versions belong in the release archive.
 
@@ -95,9 +95,9 @@ The footer order is **Shop → How it works → About SUIJI → Create with us �
 
 Keep image-led product columns, breadcrumb, reference, title, sale unit, material, applicable options, size guide, quantity and primary action in the shared order. Show only applicable choices; do not replace simple swatches with many dropdowns. Do not invent prices, stock, included components, compatibility or finish photographs.
 
-**Complete the look is inside the purchase column, after the product action/tags/contact link, before the full-width product details.** It is a compact three-card desktop strip; mobile is a scroll-snap rail with `46%` cards, `12px` gap and visible continuation. Keep image, name and honest price state. The plus target is `36 × 36px` at 1280px and above, `44 × 44px` below 1280px. The plus action lazily opens that companion's configuration; it must not duplicate or change the main form's selected options. Do not move this back into an oversized full-page block.
+**Complete the look is inside the purchase column, after the product action/tags/contact link, before the full-width product details.** Ring product pages must show exactly two controlled front-view oval companions: **OV-SM-SQ-G** (Smooth/F01) and **OV-HA-AQ-S** (Textured/F02). Image/name links and lazy quick forms preserve that exact existing SKU; quick-form defaults must not inherit the parent ring SKU. The ring pair uses two equal columns at every width. Other product pages retain their compact three-card desktop strip; mobile is a scroll-snap rail with `46%` cards, `12px` gap and visible continuation. Keep image, name and honest price state. The plus target is `36 × 36px` at 1280px and above, `44 × 44px` below 1280px. The plus action lazily opens that companion's configuration; it must not duplicate or change the main form's selected options. Do not move this back into an oversized full-page block.
 
-Quantity and purchase button are `52px` high; the row is `80px / 1fr` with `14px` gap, aligned to the bottom. A ring's guide opens a dialog and also exists on the standalone Bases & sizing page. Keep two measurement methods, an Enter-submittable calculator, live result/error, approximate international table, and highlights for 54 / 57. Table overflow stays inside its labeled region. Guide input and action are `48px` high and align; do not reproduce the previously misaligned input/button row. Quick configuration dialog maximum width is `880px`; the size guide is `1120px`; mobile horizontal inset `12px`, maximum height `92dvh`, with internal scroll and focus return.
+Quantity and purchase button are `52px` high; the row is `80px / 1fr` with `14px` gap, aligned to the bottom. A ring's guide opens a dialog and also exists on the standalone Bases & sizing page. All ring-size selectors, including set size requests, display **41–65mm**. Only existing **54 / 57mm** values are enabled; the other 23 are disabled, crossed out and labeled unavailable in this preview. This is not a stock or presale claim. The guide table uses the same 41–65mm range and preserves unverified regional equivalents as an em dash. Keep two measurement methods, an Enter-submittable calculator, live result/error, approximate international table, and highlights for 54 / 57. Table overflow stays inside its labeled region. Guide input and action are `48px` high and align; do not reproduce the previously misaligned input/button row. Quick configuration dialog maximum width is `880px`; the size guide is `1120px`; mobile horizontal inset `12px`, maximum height `92dvh`, with internal scroll and focus return.
 
 The mechanism entrance keeps the two original circular images: `200px` diameter and `50px` gap on desktop, `140px` diameter and `26px` gap on mobile. Labels use Newsreader `26px/1.4`, reduced to `24px` on mobile. Keep the Bases and Charms destinations.
 
@@ -138,10 +138,10 @@ This lock pins the reviewed visual implementation. Any mismatch stops compilatio
 
 ```json design-lock
 {
-  "version": "6.1",
+  "version": "6.1.1",
   "stylesheet": {
     "path": "theme/assets/suiji-r107.css",
-    "sha256": "59187c5c7d3c6ce8b4f08ecac40e32e55e62dcf44f798b3254fb880b88f1ead1"
+    "sha256": "aa291d826931a6703210d898601239983f593bb9537f500fc81323ab6b9b9c00"
   },
   "fonts": [
     {"path": "theme/assets/suiji-newsreader-latin-regular.woff2", "sha256": "e71a3bea5993009ab159b89d52d88ba515efd57e8d9324a94c681bfc72c9ac0f"},
@@ -163,6 +163,9 @@ This lock pins the reviewed visual implementation. Any mismatch stops compilatio
   "locales": ["en", "fr"],
   "header_groups": 5,
   "footer_groups": 5,
-  "about_chapters": 8
+  "about_chapters": 8,
+  "ring_mm_range": [41, 65],
+  "ring_enabled_mm": [54, 57],
+  "ring_companion_skus": ["OV-SM-SQ-G", "OV-HA-AQ-S"]
 }
 ```
