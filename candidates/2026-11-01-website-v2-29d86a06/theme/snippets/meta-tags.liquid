@@ -29,6 +29,14 @@
 {%- liquid
   assign r107_social_file = r107_social_file | strip
   assign r107_social_url = ''
+  assign r107_social_width = 1200
+  assign r107_social_height = 1200
+  assign r107_twitter_card = 'summary_large_image'
+  if r107_social_file == 'suiji-logo-mark.png'
+    assign r107_social_width = 512
+    assign r107_social_height = 511
+    assign r107_twitter_card = 'summary'
+  endif
   if r107_social_file != blank
     assign r107_social_url = r107_social_file | asset_url
     assign r107_social_prefix = r107_social_url | slice: 0, 2
@@ -40,8 +48,8 @@
 {%- if r107_social_url != blank -%}
   <meta property="og:image" content="{{ r107_social_url | escape }}">
   <meta property="og:image:secure_url" content="{{ r107_social_url | escape }}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="1200">
+  <meta property="og:image:width" content="{{ r107_social_width }}">
+  <meta property="og:image:height" content="{{ r107_social_height }}">
   <meta name="twitter:image" content="{{ r107_social_url | escape }}">
 {%- endif -%}
 
@@ -55,6 +63,6 @@
 {%- if settings.social_twitter_link != blank -%}
   <meta name="twitter:site" content="{{ settings.social_twitter_link | split: 'twitter.com/' | last | prepend: '@' }}">
 {%- endif -%}
-<meta name="twitter:card" content="{% if r107_social_url != blank %}summary_large_image{% else %}summary{% endif %}">
+<meta name="twitter:card" content="{% if r107_social_url != blank %}{{ r107_twitter_card }}{% else %}summary{% endif %}">
 <meta name="twitter:title" content="{{ og_title | escape }}">
 <meta name="twitter:description" content="{{ og_description | escape }}">

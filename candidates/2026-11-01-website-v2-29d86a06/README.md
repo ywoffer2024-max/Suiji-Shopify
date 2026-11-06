@@ -1,6 +1,15 @@
-# SUIJI website — frozen v3.5.1 source-bound social images
+# SUIJI website — frozen v3.5.2 neutral brand social fallback
 
-## Current revision v3.5.1
+## Current revision v3.5.2
+
+This narrow follow-up preserves all 34 known final2 image context mappings. Unmatched contexts now use the existing SUIJI logo as a neutral brand social image, with its actual 512 x 511 dimensions and a summary card. Known product imagery retains its approved image and large-image card. The helper differs from the v3.5.1 mapping only in its default. The publisher observed old image metadata alongside omitted social-image output on some real pages; this revision does not assert the mechanism that produced that additional metadata.
+
+Only meta-tags.liquid and the social-image helper change in the theme; DESIGN.md v6.1.9 and MAINTENANCE.md record the approved exception. The complete theme still has 891 files and the public snapshot still has 950. Visible content, CSS, fonts, layout shell, native Page/Article/Product data and native settings are unchanged. The separate private 117-image HTML review tool, new-product intake, generator and research remain excluded.
+
+This Git archive is not a native publication or social-preview acceptance receipt. The sole Shopify publisher applies and independently verifies the same frozen two-file patch. Earlier descriptions below remain historical; this v3.5.2 section and DESIGN.md v6.1.9 supersede the previous unmapped-context behavior.
+
+
+## Previous revision v3.5.1
 
 This narrow increment replaces the legacy page_image fallback in social metadata with an exact source-bound image for known contexts. It adds one social-image helper and changes snippets/meta-tags.liquid. Each study uses its own approved primary final2 image; unknown or image-free contexts omit the social image rather than borrowing an unrelated picture.
 

@@ -1,32 +1,32 @@
 {
-  "version": "website-v3.5.1-source-bound-social-frozen",
-  "created_utc": "2026-11-06T17:43:04.729528+00:00",
-  "reviewed_local_head": "1455d53e938b0697459920639dde4d0a7087647d",
+  "version": "website-v3.5.2-neutral-brand-social-frozen",
+  "created_utc": "2026-11-06T18:12:53.801552+00:00",
+  "reviewed_local_head": "2fc045357a900c5b8efc2b267f9b9f7d7d853c26",
   "vetted_public_paths_including_this_manifest": 950,
   "theme_files": 891,
   "article_language_bodies": 50,
   "public_page_candidates": 25,
   "Rowan_article_bylines": 50,
   "files_excluding_this_manifest": 949,
-  "bytes_excluding_this_manifest": 24829551,
+  "bytes_excluding_this_manifest": 24831903,
   "entries": [
     {
       "path": "DESIGN.md",
-      "bytes": 28691,
-      "sha256": "5c8d814cd30b4f2e4535d7918ecfe8fac5815c3757cd82f5cd4d258ca53116ee",
-      "git_blob_sha": "80d450590c3ae6024ce7af1b5de54f36b8279761"
+      "bytes": 29077,
+      "sha256": "a9d012aa206b6ad4d098f380926b9987aee3bc9cdc53a472bff518ddf568e25f",
+      "git_blob_sha": "0c2826ec77dee00c23c87cc603a10b028b96eaef"
     },
     {
       "path": "MAINTENANCE.md",
-      "bytes": 11007,
-      "sha256": "61af414690101bc1cc29f29b1f14a6ca1f6633ee21cd16f14e4bb050bbe11d32",
-      "git_blob_sha": "73baf48b5605d5797db9bbfe4797ce10172adb3c"
+      "bytes": 11302,
+      "sha256": "50a80d99dcddc4abcef73e9f977f2f68df481bf30355fe8301b7e2d2e1308378",
+      "git_blob_sha": "16670829efa756622e2a7b22df57aad4db11fd3c"
     },
     {
       "path": "README.md",
-      "bytes": 12452,
-      "sha256": "4f8c68c7d26d12d4b37494b6aaf1affbe70103dfb3757bef92f08a78bb3012f6",
-      "git_blob_sha": "08ae1ec5a51adf9061455d2bbbb2f5f46e85a8f4"
+      "bytes": 13774,
+      "sha256": "6488a9016b375ae4366bb3d52bc112cb37b9bd5ca3b0ac598d3070907744fade",
+      "git_blob_sha": "e911cc83fe90ee8eb7d990c6698d3e8f259416a5"
     },
     {
       "path": "content/journal/en/boucles-oreilles-asymetriques-depareillees.html",
@@ -3918,9 +3918,9 @@
     },
     {
       "path": "theme/snippets/meta-tags.liquid",
-      "bytes": 2749,
-      "sha256": "583ab09e1f6c2854104ea3904d7ce2e80e0744b7e6540d80af34319159a7e3c5",
-      "git_blob_sha": "3d91a65aa09f944bcdf2ba2b3e011e34457c90f4"
+      "bytes": 3079,
+      "sha256": "d5d0c8b675b9e8c0eb8ff1b0c24230a3799858899a7f9f8c8b772ba16df57029",
+      "git_blob_sha": "9e5433297a3de1411b2246a667872bb837590d4f"
     },
     {
       "path": "theme/snippets/pagination.liquid",
@@ -4992,9 +4992,9 @@
     },
     {
       "path": "theme/snippets/suiji-r107-social-image.liquid",
-      "bytes": 3412,
-      "sha256": "eb486895188fbd93a93baddeb829ccf5dc1c8dcba228e398d1db46b85ff1ee83",
-      "git_blob_sha": "7520847b18817dbaeeb2c1c04ea26b3da4fc989b"
+      "bytes": 3431,
+      "sha256": "79b68e3e7c37e73a561088c74f9d72bb6f8e7ad08852953ee8b6812080f68f02",
+      "git_blob_sha": "28ca3fa0d163bf174bbf87aa2950cc0223c9e41e"
     },
     {
       "path": "theme/snippets/suiji-r107-studio-intro.liquid",
@@ -5705,13 +5705,13 @@
       "git_blob_sha": "8b7e0f89baaa6ea662b38fa04e87b3e74dc8a34f"
     }
   ],
-  "publication_state": "Reviewed frozen Git archive; actual native social metadata publication and verification require separate publisher receipt",
+  "publication_state": "Reviewed frozen Git archive; native application and final social metadata verification require separate publisher receipt",
   "base_source_freeze_sha256": "15c84ac84e4f5b3036db38ae7bfa0c3766feb203b48a6fe2651727e488a48b5f",
   "base_theme_freeze_sha256": "b8dc4c37aad6bb642b90507958f93fc628c403231c6ddd766388c4ce06f77a8e",
-  "source_delta_sha256": "ef35d8c78bb16c9c21aa4a7d6956b16cfc5e5b0edc59004a02485545f461070a",
-  "theme_delta_sha256": "d15748f017df64e6e6736d16c46644896f024b9f64a83f07e583a6597a4c4f55",
-  "effective_source_manifest_sha256": "a13d1355dc739a045bb25150935465d1173f5e5dded0e396e62f30d071edce27",
-  "effective_theme_manifest_sha256": "27a0b0d83e96b5823f90c211bc9d5f5cf2dd2527c018b81e1d24a18b7ca3144c",
+  "source_delta_sha256": "a582333c0b46b5b10be83ba0716e7463983cf9641fdde4ecd2297e95dd34ce2c",
+  "theme_delta_sha256": "6296a741151f286f5e217feb0b38ad8545cad9233c74403841afa9911afef329",
+  "effective_source_manifest_sha256": "ed13e4a18fb64727e284bbf739de68a6403af2451bef99630c05227b76aa9a71",
+  "effective_theme_manifest_sha256": "796d0f10fbb1c40c1f4c8603748ff66c2a582e8c6eaf2ee82c03a92225080ac5",
   "cart_chrome_delta_public_theme_paths": [
     "theme/assets/suiji-r107.css",
     "theme/layout/theme.liquid",
@@ -5753,6 +5753,10 @@
     {
       "version": "v3.5.1-source-bound-social",
       "sha256": "ef35d8c78bb16c9c21aa4a7d6956b16cfc5e5b0edc59004a02485545f461070a"
+    },
+    {
+      "version": "v3.5.2-neutral-brand-social",
+      "sha256": "a582333c0b46b5b10be83ba0716e7463983cf9641fdde4ecd2297e95dd34ce2c"
     }
   ],
   "contact_cms_late_binding": {
@@ -5798,12 +5802,16 @@
     {
       "version": "v3.5.1-source-bound-social",
       "sha256": "d15748f017df64e6e6736d16c46644896f024b9f64a83f07e583a6597a4c4f55"
+    },
+    {
+      "version": "v3.5.2-neutral-brand-social",
+      "sha256": "6296a741151f286f5e217feb0b38ad8545cad9233c74403841afa9911afef329"
     }
   ],
   "design_contract": {
     "path": "DESIGN.md",
-    "sha256": "5c8d814cd30b4f2e4535d7918ecfe8fac5815c3757cd82f5cd4d258ca53116ee",
-    "version": "6.1.8",
+    "sha256": "a9d012aa206b6ad4d098f380926b9987aee3bc9cdc53a472bff518ddf568e25f",
+    "version": "6.1.9",
     "public_build_environment_complete": false,
     "build_guard_published": false
   },
@@ -5905,7 +5913,7 @@
     "receipt_errata_applied": "799 previous theme files: 3 modified, 796 unchanged; 7 added, total 806"
   },
   "full_private_source_v35_sha256": "c1496d805c537b854eb604bc5c0ba6115baf12785bd8f4009c20cf98b751dc79",
-  "effective_theme_lease_sha256": "12abddbc8f8b90bd1893208ff975f17502c98d62c4e8d06b3a047f7bbc45141b",
+  "effective_theme_lease_sha256": "312fad1a3c16147ac146cd5635a95d3640deca951322521ae4e9f57741b41124",
   "v35_white_imagery_shared_ui": {
     "theme_files": 890,
     "previous_theme_files_modified": 114,
@@ -5971,5 +5979,43 @@
     "CSS_fonts_visible_content_shell_unchanged": true,
     "post_v351_new117HTML_and_product_intake_included": false,
     "actual_native_readback": "Separate designated publisher receipt"
+  },
+  "full_private_source_v352_sha256": "81b910f928f2cfa7271902db27925358bff30679d6195fc381cba39b050c9345",
+  "v352_neutral_brand_social": {
+    "source_commit": "2fc045357a900c5b8efc2b267f9b9f7d7d853c26",
+    "baseline_source_commit": "1455d53e938b0697459920639dde4d0a7087647d",
+    "theme_paths": [
+      "snippets/meta-tags.liquid",
+      "snippets/suiji-r107-social-image.liquid"
+    ],
+    "known34_context_mappings_unchanged": true,
+    "unmapped_context_fallback": {
+      "asset": "suiji-logo-mark.png",
+      "width": 512,
+      "height": 511,
+      "card": "summary",
+      "asset_bytes_unchanged": true
+    },
+    "theme_files": 891,
+    "theme_modified": 2,
+    "theme_added": 0,
+    "theme_removed": 0,
+    "old_theme_files_unchanged": 889,
+    "review_proofs": [
+      {
+        "review_name": "code-spec-review-final-v5-social-v352-v1.json",
+        "sha256": "745e4e42998b3fb2e7e1406fa3cabb87ff03bde3462ba5a4c1239642f0dc28b9",
+        "scope_used": "Website metadata commit only"
+      },
+      {
+        "review_name": "code-standards-review-final-v5-social-v352-v1.json",
+        "sha256": "a5b4a3689eae8d389f227bbee710507eabd2cd35c946439255b62a5ae7ef401b",
+        "scope_used": "Website metadata commit only"
+      }
+    ],
+    "native_data_and_settings_mutations": false,
+    "later_image_HTML_or_product_intake_included": false,
+    "native_publication_readback": "Separate designated publisher receipt",
+    "old_additional_image_metadata_mechanism": "Not established by this source review or Git archive"
   }
 }

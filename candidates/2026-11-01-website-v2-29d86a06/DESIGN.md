@@ -1,4 +1,4 @@
-# SUIJI Design System · v6.1.8
+# SUIJI Design System · v6.1.9
 
 Updated 6 November 2026. Scope: the English and French rev107 storefront. This is the visual and interaction contract, not a deployment report. Publication receipts, QA results and historical versions belong in the release archive.
 
@@ -113,9 +113,9 @@ About retains exactly eight chapters in this order: introduction; meaning of SUI
 
 Journal solves a concrete consumer problem with an early usable answer, practical steps/comparisons, clear conditions/units, sources, related reading and one main next action. Keep the six need directions and all approved full EN/FR articles. Evidence/research cards stay internal. Article title, author and dates come from native Shopify data. Tables scroll within their own labeled region; document overflow is a failure.
 
-Journal uses the existing breadcrumb component for Home / The Journal / current article, with matching BreadcrumbList data. Native excerpts remain in list/SEO fields; detail pages preserve their approved body introduction without prepending the same summary again. Related reading uses up to two fixed, same-topic registry links, excluding the current article; when only one other approved guide exists in the topic, show that one rather than add an unrelated link; it does not depend on a random App. Keep one BlogPosting with the actual author and timezone-qualified publication date. A visible reviewed date and dateModified require the same explicitly recorded suiji.content_reviewed_at date/date_time field; otherwise omit both. Article handle comparisons first normalize blog/handle to the short handle. The scoped max-image-preview:large metadata permits larger existing images; it does not promise Discover or justify unrelated pictures. Native Journal tag archives repeat the full guide list, so they use noindex,follow; normal Journal and Article eligibility stays unchanged. This v6.1.8 addition changes shared Journal markup and these scoped shell metadata conditions; visual tokens, fonts and CSS remain unchanged.
+Journal uses the existing breadcrumb component for Home / The Journal / current article, with matching BreadcrumbList data. Native excerpts remain in list/SEO fields; detail pages preserve their approved body introduction without prepending the same summary again. Related reading uses up to two fixed, same-topic registry links, excluding the current article; when only one other approved guide exists in the topic, show that one rather than add an unrelated link; it does not depend on a random App. Keep one BlogPosting with the actual author and timezone-qualified publication date. A visible reviewed date and dateModified require the same explicitly recorded suiji.content_reviewed_at date/date_time field; otherwise omit both. Article handle comparisons first normalize blog/handle to the short handle. The scoped max-image-preview:large metadata permits larger existing images; it does not promise Discover or justify unrelated pictures. Native Journal tag archives repeat the full guide list, so they use noindex,follow; normal Journal and Article eligibility stays unchanged. This v6.1.9 addition changes shared Journal markup and these scoped shell metadata conditions; visual tokens, fonts and CSS remain unchanged.
 
-Social sharing images follow the same final2 whitelist. The shared social-image helper maps only known current page/product/category contexts to their approved1200px final2 file. Pages without an exact mapping, including image-free Journal articles, omit social image metadata. Never fall back to a legacy Page/settings image, mutate those native settings, or introduce unrelated imagery. This v6.1.8 fix changes metadata only; layout, CSS, fonts and visible content stay unchanged.
+Social sharing images follow the same final2 whitelist. The shared social-image helper maps only known current page/product/category contexts to their approved1200px final2 file. Pages without an exact mapping, including image-free Journal articles, use the existing SUIJI logo as neutral brand identification in social metadata; it is not an article feature image or a product photograph. Its actual512×511 dimensions and summary Twitter card are declared. Use an explicit brand image because live pages with an omitted image gained an additional old-image tag after the theme scripts. Verify the corrected live output rather than infer the injection mechanism. Never fall back to a legacy Page/settings image, mutate those native settings, or introduce unrelated imagery. This v6.1.9 fix changes metadata only; layout, CSS, fonts and visible content stay unchanged.
 
 ### Native cart, forms and local previews
 
@@ -168,7 +168,7 @@ This lock pins the reviewed visual implementation. Any mismatch stops compilatio
 
 ```json design-lock
 {
-  "version": "6.1.8",
+  "version": "6.1.9",
   "stylesheet": {
     "path": "theme/assets/suiji-r107.css",
     "sha256": "ef03d6ccf8fef4c9dfec3243765241958f741db1e4c29a4226f2aefad0e4ccb6"
