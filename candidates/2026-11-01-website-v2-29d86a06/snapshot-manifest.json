@@ -1,15 +1,27 @@
 {
-  "version": "website-v3.3-designer-story-frozen",
-  "created_utc": "2026-11-01T17:31:31.816693+00:00",
-  "reviewed_local_head": "311478d97cbfd8b196aac24871b31c6d8f0a137f",
-  "vetted_public_paths_including_this_manifest": 856,
-  "theme_files": 799,
+  "version": "website-v3.4-nonproduct-imagery-frozen",
+  "created_utc": "2026-11-06T06:08:13.472244+00:00",
+  "reviewed_local_head": "0cf993218d16c67322c3c0cc92bb8dd4c758e125",
+  "vetted_public_paths_including_this_manifest": 863,
+  "theme_files": 806,
   "article_language_bodies": 50,
   "public_page_candidates": 25,
   "Rowan_article_bylines": 50,
-  "files_excluding_this_manifest": 855,
-  "bytes_excluding_this_manifest": 25200102,
+  "files_excluding_this_manifest": 862,
+  "bytes_excluding_this_manifest": 25375194,
   "entries": [
+    {
+      "path": "DESIGN.md",
+      "bytes": 21270,
+      "sha256": "3481554f7f0842526a2913fa31d1d20bea9a1ae86a19af1c12b5a7adaa27363a",
+      "git_blob_sha": "2326fa98224ad15da644f227142b7662b6e60e8e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8596,
+      "sha256": "ba65fcaa92934a3c8a71e931c7333fe0a004e6a974fefa70473e4aafc8075c1b",
+      "git_blob_sha": "63baae418835c999826123fad6e0a2e57d7d7a0e"
+    },
     {
       "path": "content/journal/en/boucles-oreilles-asymetriques-depareillees.html",
       "bytes": 10959,
@@ -309,6 +321,30 @@
       "bytes": 10907,
       "sha256": "f91b2d66c786b7e9639d7d92c6409262a8d2617609ce7dc28c231c6d74acbd2b",
       "git_blob_sha": "54e6dff32609e93d4c6e5655d12f9141c26c707f"
+    },
+    {
+      "path": "content/journal/registry.json",
+      "bytes": 30125,
+      "sha256": "687b0d145cbccb95d2ed850a7da85cc388a0503ff44ead6351ba714985aa78cf",
+      "git_blob_sha": "0acd9ad56942d1fd96a17570b545766a88df6ea1"
+    },
+    {
+      "path": "content/page-candidates.json",
+      "bytes": 144590,
+      "sha256": "42ff44d6787e77ba0b4218faec37a1ca2e6bfdb074c70157445682d24dd9836b",
+      "git_blob_sha": "7414bf6c67c5ef6546a84358eb7165980d8e1acc"
+    },
+    {
+      "path": "downloads/SUIJI_Creator_Collaboration_Guide_EN.pdf",
+      "bytes": 120086,
+      "sha256": "7692569c0fc4d2e83606aa14c7155f90755bba7a45a4e70ce31a6525ad08f9a3",
+      "git_blob_sha": "e5f7c0d4b653365b144df8bdf160fac9dc8aa1f0"
+    },
+    {
+      "path": "downloads/SUIJI_Creator_Collaboration_Guide_FR.pdf",
+      "bytes": 119754,
+      "sha256": "e93f6aa75307e5411ffb23af62e2beb04114964442ff6536dda5a71686550080",
+      "git_blob_sha": "71776d9865404c4745aa898e1f37800ab00a7f14"
     },
     {
       "path": "theme/assets/animations.js",
@@ -1707,6 +1743,48 @@
       "bytes": 11136,
       "sha256": "d35ce16d3ceb3b0a27cb3e30e1d06b7042afe78b4ca4e1e41fb1cba5637bafe8",
       "git_blob_sha": "80fad7e98b4fe1e65cf62cac9cae6c178b06c202"
+    },
+    {
+      "path": "theme/assets/suiji-final2-blue-aquamarine-charm-600.webp",
+      "bytes": 11604,
+      "sha256": "06f81a41f1109309e334f49bbbb9d74b108192f35b6e84d69ae83351a25f11db",
+      "git_blob_sha": "151b60eecd36c500729d3cdd7ad069e9f3a8a411"
+    },
+    {
+      "path": "theme/assets/suiji-final2-blue-brushed-ring-600.webp",
+      "bytes": 16854,
+      "sha256": "8c2a6881d967ff1c97e070fd6442dc2edb3ebe10bd16f1a90262b787aa69470c",
+      "git_blob_sha": "aeddd6e034ebd9544ec822a51b6eb20d7f596805"
+    },
+    {
+      "path": "theme/assets/suiji-final2-blue-core-lock-connector-600.webp",
+      "bytes": 11768,
+      "sha256": "a45c936a603a96de6043e0059ed4ed037502cc379beebaf6fa01247750a9fd9b",
+      "git_blob_sha": "c76ce2bbe3ee188f44a14d38fdd803cf9df404eb"
+    },
+    {
+      "path": "theme/assets/suiji-final2-collar-aquamarine-600.webp",
+      "bytes": 12500,
+      "sha256": "9abe60dcce050da81ce36676c1352e46127f5b79c876a968287e2a9fecf01ee7",
+      "git_blob_sha": "4682ce3b2b0e27de6b8ba6f4417ac4656cad67ef"
+    },
+    {
+      "path": "theme/assets/suiji-final2-double-arm-ring-charms-1200.webp",
+      "bytes": 53664,
+      "sha256": "a6cb39ed0f797cbe3360a5d62cad1c0afc4d4571e369be87fdc983bf62d055ca",
+      "git_blob_sha": "7ab1c3fe9f5354c82c320ea3e5fd13b687db08ed"
+    },
+    {
+      "path": "theme/assets/suiji-final2-gold-hoop-charm-composition-1200.webp",
+      "bytes": 46818,
+      "sha256": "76daa44e4b04b81c158f606891a188ff15ada58f4a0ba5f014b75447ec186078",
+      "git_blob_sha": "f6e50b05896f96765d036483625373ca26b3e26e"
+    },
+    {
+      "path": "theme/assets/suiji-final2-rectangle-hoop-aquamarine-600.webp",
+      "bytes": 22446,
+      "sha256": "3e2298ea2451b7c6bf86c165b62931f004463e9e0e8ab2455acb75ad29c6543d",
+      "git_blob_sha": "06345fa53427422bb59e19da9bee0b1cd506e465"
     },
     {
       "path": "theme/assets/suiji-font-licenses.txt",
@@ -3990,15 +4068,15 @@
     },
     {
       "path": "theme/snippets/suiji-r107-header.liquid",
-      "bytes": 45130,
-      "sha256": "6a6a30afda03a9abdc85269357a54dc8e14436276835461e551a39a11280934d",
-      "git_blob_sha": "5a3f6962625bf7098cda99075a3d57352ebbe42e"
+      "bytes": 42924,
+      "sha256": "1fc8ab40a03bbb7b0805167875e07e21787130db0da0620e973ca525fec68992",
+      "git_blob_sha": "d30b23960ebf1ec8c84e59c9834f3e8402798dc7"
     },
     {
       "path": "theme/snippets/suiji-r107-home.liquid",
-      "bytes": 34802,
-      "sha256": "e247e285c495b1308b59ac2ef4e16e1ca04a7b83994f573a15640c5149023521",
-      "git_blob_sha": "eb0c13e4e0c09040df2d1eceec76e61bfcde1ad8"
+      "bytes": 34018,
+      "sha256": "9d3f9110cea08a1d223ef18de8369c3b542ab57fa0300550ca597ddf1b8d9aed",
+      "git_blob_sha": "1a99239ad33cf0d62006619142ea85fe9d25c426"
     },
     {
       "path": "theme/snippets/suiji-r107-journal.liquid",
@@ -4008,9 +4086,9 @@
     },
     {
       "path": "theme/snippets/suiji-r107-mechanism.liquid",
-      "bytes": 8736,
-      "sha256": "d76c4d2cc29827186693aa38be393ec92d3e9c97a1a23d6194302ab5e25ad1e7",
-      "git_blob_sha": "ce707bcf16359b266750856413dbdc1907ab92d9"
+      "bytes": 8987,
+      "sha256": "e8351365a698afa45a889f9671ea5e842c98e010d58106fb54d6be67f230c36c",
+      "git_blob_sha": "ea8cdc4ebbe003302df8535d57d1cb629b9aa992"
     },
     {
       "path": "theme/snippets/suiji-r107-members.liquid",
@@ -5103,51 +5181,15 @@
       "bytes": 951,
       "sha256": "9bf35954cf613bc914433d4f807cc99b1d9dfd87568470a576f805633405d162",
       "git_blob_sha": "8b7e0f89baaa6ea662b38fa04e87b3e74dc8a34f"
-    },
-    {
-      "path": "content/journal/registry.json",
-      "bytes": 30125,
-      "sha256": "687b0d145cbccb95d2ed850a7da85cc388a0503ff44ead6351ba714985aa78cf",
-      "git_blob_sha": "0acd9ad56942d1fd96a17570b545766a88df6ea1"
-    },
-    {
-      "path": "content/page-candidates.json",
-      "bytes": 144590,
-      "sha256": "42ff44d6787e77ba0b4218faec37a1ca2e6bfdb074c70157445682d24dd9836b",
-      "git_blob_sha": "7414bf6c67c5ef6546a84358eb7165980d8e1acc"
-    },
-    {
-      "path": "downloads/SUIJI_Creator_Collaboration_Guide_EN.pdf",
-      "bytes": 120086,
-      "sha256": "7692569c0fc4d2e83606aa14c7155f90755bba7a45a4e70ce31a6525ad08f9a3",
-      "git_blob_sha": "e5f7c0d4b653365b144df8bdf160fac9dc8aa1f0"
-    },
-    {
-      "path": "downloads/SUIJI_Creator_Collaboration_Guide_FR.pdf",
-      "bytes": 119754,
-      "sha256": "e93f6aa75307e5411ffb23af62e2beb04114964442ff6536dda5a71686550080",
-      "git_blob_sha": "71776d9865404c4745aa898e1f37800ab00a7f14"
-    },
-    {
-      "path": "README.md",
-      "bytes": 6871,
-      "sha256": "c2a93d3160f40ee8aa2451a8859144bf987eff13f8862721f2cc78b9c302ede5",
-      "git_blob_sha": "6784f1795f7c0fd005ab1eac96ffdfcb8caa3693"
-    },
-    {
-      "path": "DESIGN.md",
-      "bytes": 20818,
-      "sha256": "7069bd722b0522bc417d188413f9acefc70cc8877073f69d94eeec6445dad3fb",
-      "git_blob_sha": "4777c9537f6b9c7da70a51c8d943e3275ae15bc4"
     }
   ],
-  "publication_state": "Candidate Git archive only; native publisher verifies release separately",
+  "publication_state": "Candidate Git archive only; native non-product imagery application and verification pending separate publisher receipt",
   "base_source_freeze_sha256": "15c84ac84e4f5b3036db38ae7bfa0c3766feb203b48a6fe2651727e488a48b5f",
   "base_theme_freeze_sha256": "b8dc4c37aad6bb642b90507958f93fc628c403231c6ddd766388c4ce06f77a8e",
-  "source_delta_sha256": "79b85a9e9dd65312edfdb087f060d6730b0437fe7e8d43a0e61c560cfcbdff84",
-  "theme_delta_sha256": "a050822731ceeee3fe169a745507677cc62efe8a119d2d191542cb566dcd75ef",
-  "effective_source_manifest_sha256": "640203e29f6176907c7b84b4bf56dd4416740f7fc53403d8cebc66c7b2a42723",
-  "effective_theme_manifest_sha256": "6dafb4ce53da98adb964d19157d4db684afe3687f2477e97caabb9766bef9b19",
+  "source_delta_sha256": "15eab72d6693f1ed00f5f99d3cd2a2f0eebcbf3ad9690142df6bd64e2e39539d",
+  "theme_delta_sha256": "80c8fde163b413fb09d512ad1c80022930ab2b0ec32525d2b2bd2187267ab61a",
+  "effective_source_manifest_sha256": "f712da60f186779d10f673a31f6027c234007e4f4ed9c764636d484fa9791fb2",
+  "effective_theme_manifest_sha256": "2d524f71523afe07829c307339ed097a2f0de569d867352ce6780bbdf838afe1",
   "cart_chrome_delta_public_theme_paths": [
     "theme/assets/suiji-r107.css",
     "theme/layout/theme.liquid",
@@ -5177,6 +5219,10 @@
     {
       "version": "v3.3-designer-story",
       "sha256": "79b85a9e9dd65312edfdb087f060d6730b0437fe7e8d43a0e61c560cfcbdff84"
+    },
+    {
+      "version": "v3.4-nonproduct-imagery",
+      "sha256": "15eab72d6693f1ed00f5f99d3cd2a2f0eebcbf3ad9690142df6bd64e2e39539d"
     }
   ],
   "contact_cms_late_binding": {
@@ -5210,12 +5256,16 @@
     {
       "version": "v3.3-designer-story",
       "sha256": "a050822731ceeee3fe169a745507677cc62efe8a119d2d191542cb566dcd75ef"
+    },
+    {
+      "version": "v3.4-nonproduct-imagery",
+      "sha256": "80c8fde163b413fb09d512ad1c80022930ab2b0ec32525d2b2bd2187267ab61a"
     }
   ],
   "design_contract": {
     "path": "DESIGN.md",
-    "sha256": "7069bd722b0522bc417d188413f9acefc70cc8877073f69d94eeec6445dad3fb",
-    "version": "6.1.3",
+    "sha256": "3481554f7f0842526a2913fa31d1d20bea9a1ae86a19af1c12b5a7adaa27363a",
+    "version": "6.1.4",
     "public_build_environment_complete": false,
     "build_guard_published": false
   },
@@ -5263,5 +5313,57 @@
     "prose_and_paragraph_order_preserved": true,
     "portrait_source_bytes_unchanged": true,
     "native_application": "Separate publisher responsibility"
+  },
+  "full_private_source_v34_sha256": "c8474dfbc1fca8bcdbe920f467252839513c87ed5ebb7f1a30ed62f76d5cd0fe",
+  "v34_nonproduct_imagery": {
+    "theme_paths_modified": [
+      "snippets/suiji-r107-header.liquid",
+      "snippets/suiji-r107-home.liquid",
+      "snippets/suiji-r107-mechanism.liquid"
+    ],
+    "theme_assets_added": [
+      "assets/suiji-final2-blue-aquamarine-charm-600.webp",
+      "assets/suiji-final2-blue-brushed-ring-600.webp",
+      "assets/suiji-final2-blue-core-lock-connector-600.webp",
+      "assets/suiji-final2-collar-aquamarine-600.webp",
+      "assets/suiji-final2-double-arm-ring-charms-1200.webp",
+      "assets/suiji-final2-gold-hoop-charm-composition-1200.webp",
+      "assets/suiji-final2-rectangle-hoop-aquamarine-600.webp"
+    ],
+    "old_theme_files_unchanged": 796,
+    "theme_files_after": 806,
+    "surface_binding_count": 9,
+    "surfaces": {
+      "home-category-rail": [
+        "category-necklaces",
+        "category-earrings",
+        "category-rings",
+        "category-charms",
+        "category-extras"
+      ],
+      "Shop-All-desktop-and-mobile": [
+        "category-necklaces",
+        "category-earrings",
+        "category-rings",
+        "category-charms",
+        "category-extras"
+      ],
+      "home-brand-system-figure": [
+        "home-modular"
+      ],
+      "home-About-teaser-figure": [
+        "home-about"
+      ],
+      "mechanism-circular-entrances": [
+        "system-bases",
+        "system-charms"
+      ]
+    },
+    "product_body_render_byte_equality_checks_from_producer": 108,
+    "product_pages_and_product_media_changed": false,
+    "CSS_JS_shell_fonts_catalogue_Journal_CMS_native_settings_unchanged": true,
+    "native_application_and_rendered_verification": "Separate designated publisher receipt; not asserted by this archive",
+    "frozen_receipt_sha256": "66c9c3920e8ce62d153f438afa6292e03a50dc1360d44c541894b51909d7044a",
+    "receipt_errata_applied": "799 previous theme files: 3 modified, 796 unchanged; 7 added, total 806"
   }
 }

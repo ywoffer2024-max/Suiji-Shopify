@@ -1,4 +1,13 @@
-# SUIJI website — frozen v3.3 designer story candidate
+# SUIJI website — frozen v3.4 non-product imagery candidate
+
+## Non-product imagery revision v3.4
+
+This increment adds seven resized WebP images from the approved product-image archive and changes only the shared header, home and mechanism snippets. The images serve five category entrances reused on the home page and the desktop/mobile Shop All menu, two home editorial figures, and the Bases/Charms mechanism entrances. Existing labels, destinations and layout remain in place. The home About caption describes the product composition rather than a studio photograph.
+
+The theme now contains 806 files: 796 previous files remain byte-identical, three existing snippets change, and seven image assets are added. All 54 product-detail bodies in English and French (108 renders), the product catalogue, pricing, inventory, CSS, JS, shell, fonts, native settings, Journal and CMS content are outside this increment. The shared global navigation may appear on a product page; this does not change its product body or product media. No product publication or product-media write is authorized by this backup.
+
+DESIGN.md v6.1.4 records the narrow image-surface revision while preserving its palette, type, stylesheet, shell and font locks. The complete 880-file source archive, renderer, image-slot configuration and other private build inputs remain private. This public snapshot contains 863 files. Its backup status is complete only after the Git branch readback; native application, image loading, containment and EN/FR desktop/mobile verification require a separate receipt from the designated Shopify publisher. This archive is not a receipt that the new imagery is live or that checkout is open.
+
 
 ## Designer story layout revision v3.3
 
@@ -35,9 +44,9 @@ This increment updates the shared cart chrome in `theme/layout/theme.liquid`, `t
 The producer fixture using the unchanged native cart scripts passed quantity 1-to-2, counter/total/live-feedback refresh and removal-to-empty checks. Actual Shopify preview and release verification remain with the designated publisher. Shopify Files URL settings are a separate late binding, retained by that publisher.
 
 
-This candidate uses the reviewed website v2 source, retaining the previous vetted 855-path public scope. The complete internal source archive and internal build inputs are intentionally excluded from this public repository.
+This candidate extends the reviewed website v2 public scope with seven vetted non-product image assets, for 863 public files including this README, DESIGN.md and the snapshot manifest. The complete internal source archive and internal build inputs are intentionally excluded from this public repository.
 
-`theme/` is the complete 799-file Shopify theme candidate. `content/journal/` contains 25 existing article identities in English and French, with Rowan bylines and original publication dates. Update native identities and translations rather than creating duplicate articles. `content/page-candidates.json` contains 25 complete English/French Page content candidates, with native identities and language bindings to be verified by the designated Shopify publisher.
+`theme/` is the complete 806-file Shopify theme candidate. `content/journal/` contains 25 existing article identities in English and French, with Rowan bylines and original publication dates. Update native identities and translations rather than creating duplicate articles. `content/page-candidates.json` contains 25 complete English/French Page content candidates, with native identities and language bindings to be verified by the designated Shopify publisher.
 
 `downloads/` contains the public English/French creator guides. Their actual Shopify Files URLs must be obtained and bound to `suiji_creator_guide_en_url` and `suiji_creator_guide_fr_url`; do not guess a CDN URL.
 

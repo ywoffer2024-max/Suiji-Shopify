@@ -1,6 +1,6 @@
-# SUIJI Design System · v6.1.3
+# SUIJI Design System · v6.1.4
 
-Updated 2 November 2026. Scope: the English and French rev107 storefront. This is the visual and interaction contract, not a deployment report. Publication receipts, QA results and historical versions belong in the release archive.
+Updated 6 November 2026. Scope: the English and French rev107 storefront. This is the visual and interaction contract, not a deployment report. Publication receipts, QA results and historical versions belong in the release archive.
 
 ## 1. Authority and change control
 
@@ -99,7 +99,7 @@ Keep image-led product columns, breadcrumb, reference, title, sale unit, materia
 
 Quantity and purchase button are `52px` high; the row is `80px / 1fr` with `14px` gap, aligned to the bottom. A ring's guide opens a dialog and also exists on the standalone Bases & sizing page. All ring-size selectors, including set size requests, display **41–65mm**. Only existing **54 / 57mm** values are enabled; the other 23 are disabled, crossed out and labeled unavailable in this preview. This is not a stock or presale claim. The guide table uses the same 41–65mm range and preserves unverified regional equivalents as an em dash. Keep two measurement methods, an Enter-submittable calculator, live result/error, approximate international table, and highlights for 54 / 57. Table overflow stays inside its labeled region. Guide input and action are `48px` high and align; do not reproduce the previously misaligned input/button row. Quick configuration dialog maximum width is `880px`; the size guide is `1120px`; mobile horizontal inset `12px`, maximum height `92dvh`, with internal scroll and focus return.
 
-The mechanism entrance keeps the two original circular images: `200px` diameter and `50px` gap on desktop, `140px` diameter and `26px` gap on mobile. Labels use Newsreader `26px/1.4`, reduced to `24px` on mobile. Keep the Bases and Charms destinations.
+The mechanism entrance keeps the two circular image entrances: `200px` diameter and `50px` gap on desktop, `140px` diameter and `26px` gap on mobile. Labels use Newsreader `26px/1.4`, reduced to `24px` on mobile. Keep the Bases and Charms destinations.
 
 ### About and Journal
 
@@ -118,6 +118,9 @@ The native Shopify cart uses the shared header/footer **while retaining Dawn's `
 The shopping preview is a separate, clearly labeled browser-local flow with no order/payment creation. Real contact uses Shopify's native `contact` form; newsletter uses `customer`, an unchecked required marketing-consent checkbox, and actual server success/error states. Do not display a fake sent/subscribed result. PDF buttons require a real configured URL or an honest unavailable state. Account endpoints remain native.
 
 ## 6. Media, routing and architecture
+
+Navigation, category entrances, home editorial figures and the two system circles use explicit nonproduct-image-slots.json bindings for newly approved imagery. Product image data, pimg, card defaults and sale BOM remain independent. Match alt text and captions to the visible components; a complete charm assembly must not illustrate a bare base SKU. Preserve existing component geometry and image fit, and repeat the affected desktop/mobile checks.
+
 
 - Use one shared renderer and generated template per family, not a hand-built page per SKU. Preserve URLs, identities, native locale roots and query-selected configuration. Bind native internal URLs through `routes.root_url`; do not hardcode an assumed `/fr` root.
 - Reserve image dimensions. The first visible main image is eager/high priority; below-fold galleries/cards are lazy. Use existing optimized WebP and CDN derivatives. Do not ship every product gallery or a full private catalogue/IR to the browser.
@@ -140,7 +143,7 @@ This lock pins the reviewed visual implementation. Any mismatch stops compilatio
 
 ```json design-lock
 {
-  "version": "6.1.3",
+  "version": "6.1.4",
   "stylesheet": {
     "path": "theme/assets/suiji-r107.css",
     "sha256": "2782d33c8468af5b7f2d52b2060e606b55fc7617554427677bf2aa29d6a9f34a"
