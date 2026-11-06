@@ -1024,15 +1024,6 @@
       "options_html": "<ul><li><strong>Band finish:</strong> SUIJI Blue, Silver, Classic Gold</li><li><strong>Clasp / buttons:</strong> SUIJI Blue / SUIJI Blue, SUIJI Blue / Silver, SUIJI Blue / Classic Gold, Silver / SUIJI Blue, Silver / Silver, Silver / Classic Gold, Classic Gold / SUIJI Blue, Classic Gold / Silver, Classic Gold / Classic Gold</li><li><strong>Ring size:</strong> 54, 57</li></ul>",
       "guide_label": "Check your base and ornament"
     },
-    "r01_iridescent_ring_base": {
-      "title": "Iridescent Brushed Ring Base",
-      "description": "The brushed R01 ring base in its iridescent-blue finish, with TC4 titanium metalwork and the Core-Lock clasp. This finish is specific to R01.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
-      "included_html": "<ul><li>1 ring base with Core-Lock; charm sold separately.</li></ul>",
-      "options_html": "<ul><li><strong>Ring size:</strong> 54, 57</li></ul>",
-      "guide_label": "Check your base and ornament"
-    },
     "r02_ring_base": {
       "title": "Textured Ring Base",
       "description": "Handmade TC4 titanium metalwork with a sculptural band and the Core-Lock clasp. Wear the base on its own or choose an interchangeable charm.",
@@ -1049,24 +1040,6 @@
       "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
       "included_html": "<ul><li>1 ring base with Core-Lock; charm sold separately.</li></ul>",
       "options_html": "<ul><li><strong>Band finish:</strong> SUIJI Blue, Silver, Classic Gold</li><li><strong>Clasp / buttons:</strong> SUIJI Blue / SUIJI Blue, SUIJI Blue / Silver, SUIJI Blue / Classic Gold, Silver / SUIJI Blue, Silver / Silver, Silver / Classic Gold, Classic Gold / SUIJI Blue, Classic Gold / Silver, Classic Gold / Classic Gold</li><li><strong>Ring size:</strong> 54, 57</li></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "h01_hoops": {
-      "title": "Rounded Rectangle Hoops",
-      "description": "Clean lines, a rounded rectangular silhouette and TC4 titanium metalwork. Sold as a pair. The detail image shows one hoop.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "Core-Lock is not included in this piece. An additional attachment is needed for an interchangeable composition; check the complete set of parts.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "h02_hoop": {
-      "title": "Circular Hoop",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "Core-Lock is not included in this piece. An additional attachment is needed for an interchangeable composition; check the complete set of parts.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
       "guide_label": "Check your base and ornament"
     },
     "a02_drop": {
@@ -1105,165 +1078,12 @@
       "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
       "guide_label": "Check your base and ornament"
     },
-    "collar_7_drops_3": {
-      "title": "7-Link Collar · 3 Drops",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
-      "included_html": "<ul><li>7-link collar with 3 H03 connectors and 4 Core-Lock clasps in the documented assembly.</li></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "collar_7_drops_5": {
-      "title": "7-Link Collar · 5 Drops",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
-      "included_html": "<ul><li>7-link collar with 5 H03 connectors and 6 Core-Lock clasps in the documented assembly.</li></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "collar_9": {
-      "title": "9-Link Collar",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
-      "included_html": "<ul><li>9 fixed long links, rear fastening and 1 Core-Lock clasp.</li></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "collar_9_drops_1": {
-      "title": "9-Link Collar · 1 Drop",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
-      "included_html": "<ul><li>9-link collar with 1 H03 connectors and 2 Core-Lock clasps in the documented assembly.</li></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "collar_9_drops_3": {
-      "title": "9-Link Collar · 3 Drops",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
-      "included_html": "<ul><li>9-link collar with 3 H03 connectors and 4 Core-Lock clasps in the documented assembly.</li></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Check your base and ornament"
-    },
     "collar_9_drops_5": {
       "title": "9-Link Collar · 5 Drops",
       "description": "A sculptural SUIJI piece, made to become part of your own combination.",
       "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
       "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
       "included_html": "<ul><li>9-link collar with 5 H03 connectors and 6 Core-Lock clasps in the documented assembly.</li></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "cross_chain": {
-      "title": "Cross-link Chain",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "Core-Lock is not included in this piece. An additional attachment is needed for an interchangeable composition; check the complete set of parts.",
-      "included_html": "<ul><li>550 mm chain body; end rings are separate from the chain-body length.</li></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "cross_chain_core_lock": {
-      "title": "Cross-link Chain with Core-Lock",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
-      "included_html": "<ul><li>550 mm chain body; end rings are separate from the chain-body length.</li></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "chain_l01": {
-      "title": "Wide Oval Chain",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "chain_l02": {
-      "title": "Elongated Link Chain",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "chain_l03": {
-      "title": "Compact Link Chain",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "chain_l04": {
-      "title": "Disc-bead Chain",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Care for your pieces"
-    },
-    "chain_l05": {
-      "title": "Flat Rectangle Chain",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Care for your pieces"
-    },
-    "bracelet_b3": {
-      "title": "Figaro Bracelet Base",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "This piece is used in its own listed arrangement. It does not include the SUIJI multi-use clasp.",
-      "included_html": "<ul><li>Chain-body design; the S7 fastening is distinct from Core-Lock.</li></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Care for your pieces"
-    },
-    "bracelet_b4": {
-      "title": "Medium Link Bracelet",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "This piece is used in its own listed arrangement. It does not include the SUIJI multi-use clasp.",
-      "included_html": "<ul><li>Chain-body design; the S7 fastening is distinct from Core-Lock.</li></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Care for your pieces"
-    },
-    "bracelet_b5": {
-      "title": "Bold Link Bracelet",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "This piece is used in its own listed arrangement. It does not include the SUIJI multi-use clasp.",
-      "included_html": "<ul><li>Chain-body design; the S7 fastening is distinct from Core-Lock.</li></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Care for your pieces"
-    },
-    "core_lock_pendant_base": {
-      "title": "Core-Lock Pendant Base",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "core_lock_stud_base": {
-      "title": "Core-Lock Stud Base",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
-      "included_html": "<ul></ul>",
       "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
       "guide_label": "Check your base and ornament"
     },
@@ -1285,51 +1105,14 @@
       "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
       "guide_label": "Check your base and ornament"
     },
-    "h03_connector": {
-      "title": "H03 Connector",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "Core-Lock is not included in this piece. An additional attachment is needed for an interchangeable composition; check the complete set of parts.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Check your base and ornament"
-    },
     "h03_core_lock": {
-      "title": "H03 & Core-Lock Connector",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
+      "title": "Core-Lock Earring Base",
+      "description": "An earring base with the Core-Lock clasp, ready for a compatible charm chosen separately.",
       "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
       "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
       "included_html": "<ul></ul>",
       "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
       "guide_label": "Check your base and ornament"
-    },
-    "metal_ear_backs": {
-      "title": "Metal Ear Backs",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "This piece is used in its own listed arrangement. It does not include the SUIJI multi-use clasp.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Care for your pieces"
-    },
-    "pearl_effect_ear_back": {
-      "title": "Pearl-effect Ear Back",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "This piece is used in its own listed arrangement. It does not include the SUIJI multi-use clasp.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Care for your pieces",
-      "material": "Imitation pearl / resin"
-    },
-    "pearl_effect_stud": {
-      "title": "Pearl-effect Stud",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "This piece is used in its own listed arrangement. It does not include the SUIJI multi-use clasp.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Choosing a hoop"
     },
     "oval_motif": {
       "title": "Oval Cabochon Charm",
@@ -1339,168 +1122,6 @@
       "included_html": "<ul></ul>",
       "options_html": "<ul><li><strong>Surface:</strong> Smooth, Textured</li><li><strong>Gemstone:</strong> Amethyst, Citrine, Aquamarine, Rose quartz, Prehnite, Morganite, Smoky quartz, Kunzite</li><li><strong>Frame finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
       "guide_label": "Check your base and ornament"
-    },
-    "logo_square": {
-      "title": "Square Logo Charm",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "An ornament is the decorative element. Choose a separate base equipped with the SUIJI multi-use clasp to wear it.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "logo_round": {
-      "title": "Round Logo Charm",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "An ornament is the decorative element. Choose a separate base equipped with the SUIJI multi-use clasp to wear it.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finish:</strong> SUIJI Blue, Silver, Classic Gold</li></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "design_f03": {
-      "title": "Deep-blue Oval Charm",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "design_f04": {
-      "title": "Pink Oval Charm",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "design_f05": {
-      "title": "Cushion Charm",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "design_f06": {
-      "title": "Faceted Crown Charm",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "design_f07": {
-      "title": "Pearl-effect Charm",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "design_f08": {
-      "title": "Sculptural Pale-stone Charm",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "design_f08b": {
-      "title": "Sculptural Blue-grey Charm",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "design_f09": {
-      "title": "Textured Disc Charm",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "design_t01": {
-      "title": "Open Triangle Charm",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "design_new_round_0926": {
-      "title": "Round Cabochon Charm",
-      "description": "A sculptural SUIJI piece, made to become part of your own combination.",
-      "notes": "Explore colour, texture and the balance of each piece. Choose a finish, then make the combination your own.",
-      "connection": "A design preview. Ask us to confirm the exact piece and its required parts before choosing an interchangeable composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Check your base and ornament"
-    },
-    "set01_stud_earring_set": {
-      "title": "Stud Earring Set",
-      "description": "A stud-earring starting point with the bases, interchangeable ornaments and ear backs listed below.",
-      "notes": "Charms and bases can be rotated between the pieces in this set. The listed components do not promise a separate charm for every wearing position at the same time.",
-      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
-      "included_html": "<ul><li>2 × Stud bases</li><li>2 × Metal ear backs</li><li>2 × Pearl-effect backs</li><li>2 × Interchangeable charms</li></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "One base, two ornaments"
-    },
-    "set02_choker_set": {
-      "title": "Choker Set",
-      "description": "A choker base and two interchangeable ornaments, giving you a choice of looks with the same base.",
-      "notes": "Charms and bases can be rotated between the pieces in this set. The listed components do not promise a separate charm for every wearing position at the same time.",
-      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
-      "included_html": "<ul><li>1 × COLLAR</li><li>1 × Interchangeable charms</li><li>1 × Pendant bases</li></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "One base, two ornaments"
-    },
-    "set03_ring_set": {
-      "title": "Ring Set",
-      "description": "One ring base and two interchangeable ornaments. Choose the look you want to wear, then keep the other ornament for another day.",
-      "notes": "Charms and bases can be rotated between the pieces in this set. The listed components do not promise a separate charm for every wearing position at the same time.",
-      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
-      "included_html": "<ul><li>1 × Ring base</li><li>2 × Interchangeable charms</li></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "One base, two ornaments"
-    },
-    "set04_hoop_earring_necklace_set": {
-      "title": "Hoop Earring & Necklace Set",
-      "description": "Hoops, pendant bases, a necklace and two shared ornaments. Explore wearing the ornaments at the ears or on the necklace.",
-      "notes": "Charms and bases can be rotated between the pieces in this set. The listed components do not promise a separate charm for every wearing position at the same time.",
-      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
-      "included_html": "<ul><li>2 × Hoops</li><li>2 × Pendant bases</li><li>2 × Interchangeable charms</li><li>1 × Necklace</li></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "One base, two ornaments"
-    },
-    "set05_stud_earring_ring_set": {
-      "title": "Stud Earring & Ring Set",
-      "description": "Stud-earring bases, a ring base and two shared ornaments, with the ear backs listed below.",
-      "notes": "Charms and bases can be rotated between the pieces in this set. The listed components do not promise a separate charm for every wearing position at the same time.",
-      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
-      "included_html": "<ul><li>2 × Stud bases</li><li>2 × Metal ear backs</li><li>2 × Pearl-effect backs</li><li>2 × Interchangeable charms</li><li>1 × Ring base</li></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "One base, two ornaments"
-    },
-    "set06_hoop_earring_necklace_ring_set": {
-      "title": "Hoop Earring, Necklace & Ring Set",
-      "description": "Hoops, pendant bases, a necklace, a ring base and two shared ornaments. Choose where to place each ornament in your composition.",
-      "notes": "Charms and bases can be rotated between the pieces in this set. The listed components do not promise a separate charm for every wearing position at the same time.",
-      "connection": "Core-Lock is included. SUIJI ornaments fit bases equipped with the SUIJI multi-use clasp. Check the parts supplied for this composition.",
-      "included_html": "<ul><li>2 × Hoops</li><li>2 × Pendant bases</li><li>2 × Interchangeable charms</li><li>1 × Necklace</li><li>1 × Ring base</li></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "One base, two ornaments"
     }
   },
   "suiji_about": {

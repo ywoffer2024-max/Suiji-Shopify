@@ -1,4 +1,17 @@
-# SUIJI website — frozen v3.4 non-product imagery candidate
+# SUIJI website — frozen v3.5 white-image and shared-UI candidate
+
+## Current revision v3.5
+
+This snapshot matches the final reviewed v3.5 source commit and its complete 890-file Shopify theme. The theme adds 84 source-bound white-background WebP files; 114 previous theme files change and 692 retain their exact prior bytes. Only 12 photo-matched product presentations are visible; 42 missing-photo presentations remain hidden without deleting their canonical records. Chunyu's original portrait, brand identity assets and functional icons remain. H03-CORE is classified as an earring base while existing SKU identities, native Draft status and real-commerce controls remain protected.
+
+The shared UI update covers navigation, product galleries/options, sizing, saved selections, comparison and enquiry handoff. The founder note uses a continuous reading column beneath its portrait identity header. Engineering copy replaces actual patent identifiers with approved refinement language. Custom work beyond standard options carries the shared final-sale notice, preserving statutory faulty/nonconforming-goods rights. Journal rendering adds consistent breadcrumbs, related reading and structured-data maintenance without inventing images, review dates, analytics events or new Apps. Full approved Journal bodies, authors, handles and publication dates remain preserved.
+
+DESIGN.md v6.1.7 is the current visual/interaction contract. MAINTENANCE.md and the Journal publication checklist are included as approved public documentation. Internal renderer, compiler, policy/photo configuration, complete source, research, logs and private CMS exports are excluded. Commands referring to those internal files require the complete private build environment; this public snapshot is not a self-contained build environment.
+
+The previously vetted content/page-candidates.json is retained byte-identical as a historical public projection, not a current deployment payload. Native About/Mechanism changes must use the designated publisher's narrow, fresh-identity body/translation patches; never replace live CMS bodies with this historical projection or an internal renderer export. Previously public Journal bodies and registry bytes also remain unchanged.
+
+There are 949 public files, including the complete theme and the curated documentation/content. This Git backup does not authorize native product publication, product media, prices, inventory, orders, payments, account/policy settings or analytics changes. Native application and live English/French checks require the independent publisher's actual receipt. The source freeze alone is not proof of publication, checkout readiness, indexing or measured performance. Earlier sections below describe prior revisions and remain for history.
+
 
 ## Non-product imagery revision v3.4
 
@@ -44,9 +57,9 @@ This increment updates the shared cart chrome in `theme/layout/theme.liquid`, `t
 The producer fixture using the unchanged native cart scripts passed quantity 1-to-2, counter/total/live-feedback refresh and removal-to-empty checks. Actual Shopify preview and release verification remain with the designated publisher. Shopify Files URL settings are a separate late binding, retained by that publisher.
 
 
-This candidate extends the reviewed website v2 public scope with seven vetted non-product image assets, for 863 public files including this README, DESIGN.md and the snapshot manifest. The complete internal source archive and internal build inputs are intentionally excluded from this public repository.
+The current snapshot contains 949 curated public files. Earlier revision descriptions below are historical; the v3.5 section and DESIGN.md v6.1.7 describe the current candidate. The complete internal source archive and internal build inputs are intentionally excluded from this public repository.
 
-`theme/` is the complete 806-file Shopify theme candidate. `content/journal/` contains 25 existing article identities in English and French, with Rowan bylines and original publication dates. Update native identities and translations rather than creating duplicate articles. `content/page-candidates.json` contains 25 complete English/French Page content candidates, with native identities and language bindings to be verified by the designated Shopify publisher.
+`theme/` is the complete 890-file Shopify theme candidate. `content/journal/` contains 25 existing article identities in English and French, with Rowan bylines and original publication dates. Update native identities and translations rather than creating duplicate articles. `content/page-candidates.json` contains 25 complete English/French Page content candidates, with native identities and language bindings to be verified by the designated Shopify publisher.
 
 `downloads/` contains the public English/French creator guides. Their actual Shopify Files URLs must be obtained and bound to `suiji_creator_guide_en_url` and `suiji_creator_guide_fr_url`; do not guess a CDN URL.
 

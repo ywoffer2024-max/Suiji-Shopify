@@ -1036,15 +1036,6 @@
       "options_html": "<ul><li><strong>Finition de l’anneau:</strong> Bleu SUIJI, Argent, Or classique</li><li><strong>Fermoir / boutons:</strong> Bleu SUIJI / Bleu SUIJI, Bleu SUIJI / Argent, Bleu SUIJI / Or classique, Argent / Bleu SUIJI, Argent / Argent, Argent / Or classique, Or classique / Bleu SUIJI, Or classique / Argent, Or classique / Or classique</li><li><strong>Taille de bague:</strong> 54, 57</li></ul>",
       "guide_label": "Vérifier la base et l’ornement"
     },
-    "r01_iridescent_ring_base": {
-      "title": "Support de bague brossé irisé",
-      "description": "Le support de bague R01 brossé dans sa finition bleu irisé, avec un travail du titane TC4 et le fermoir Core-Lock. Cette finition est propre à R01.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
-      "included_html": "<ul><li>1 support de bague avec Core-Lock ; ornement vendu séparément.</li></ul>",
-      "options_html": "<ul><li><strong>Taille de bague:</strong> 54, 57</li></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
     "r02_ring_base": {
       "title": "Support de bague texturé",
       "description": "Un travail du titane TC4 fait à la main, avec un anneau sculptural et le fermoir Core-Lock. Portez le support seul ou choisissez un ornement interchangeable.",
@@ -1061,24 +1052,6 @@
       "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
       "included_html": "<ul><li>1 support de bague avec Core-Lock ; ornement vendu séparément.</li></ul>",
       "options_html": "<ul><li><strong>Finition de l’anneau:</strong> Bleu SUIJI, Argent, Or classique</li><li><strong>Fermoir / boutons:</strong> Bleu SUIJI / Bleu SUIJI, Bleu SUIJI / Argent, Bleu SUIJI / Or classique, Argent / Bleu SUIJI, Argent / Argent, Argent / Or classique, Or classique / Bleu SUIJI, Or classique / Argent, Or classique / Or classique</li><li><strong>Taille de bague:</strong> 54, 57</li></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "h01_hoops": {
-      "title": "Créoles rectangulaires arrondies",
-      "description": "Des lignes épurées, une silhouette rectangulaire arrondie et un travail du titane TC4. Vendues par paire. L’image de détail présente une créole.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Cette pièce ne comprend pas Core-Lock. Une attache supplémentaire est nécessaire pour une composition interchangeable ; vérifiez toutes les pièces.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "h02_hoop": {
-      "title": "Créole ronde",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Cette pièce ne comprend pas Core-Lock. Une attache supplémentaire est nécessaire pour une composition interchangeable ; vérifiez toutes les pièces.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
       "guide_label": "Vérifier la base et l’ornement"
     },
     "a02_drop": {
@@ -1117,165 +1090,12 @@
       "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
       "guide_label": "Vérifier la base et l’ornement"
     },
-    "collar_7_drops_3": {
-      "title": "Collier à 7 maillons · 3 pendentifs",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
-      "included_html": "<ul><li>Collier à 7 maillons avec 3 connecteurs H03 et 4 fermoirs Core-Lock dans la composition documentée.</li></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "collar_7_drops_5": {
-      "title": "Collier à 7 maillons · 5 pendentifs",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
-      "included_html": "<ul><li>Collier à 7 maillons avec 5 connecteurs H03 et 6 fermoirs Core-Lock dans la composition documentée.</li></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "collar_9": {
-      "title": "Collier rigide à 9 maillons",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
-      "included_html": "<ul><li>9 longs maillons fixes, attache arrière et 1 fermoir Core-Lock.</li></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "collar_9_drops_1": {
-      "title": "Collier à 9 maillons · 1 pendentif",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
-      "included_html": "<ul><li>Collier à 9 maillons avec 1 connecteurs H03 et 2 fermoirs Core-Lock dans la composition documentée.</li></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "collar_9_drops_3": {
-      "title": "Collier à 9 maillons · 3 pendentifs",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
-      "included_html": "<ul><li>Collier à 9 maillons avec 3 connecteurs H03 et 4 fermoirs Core-Lock dans la composition documentée.</li></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
     "collar_9_drops_5": {
       "title": "Collier à 9 maillons · 5 pendentifs",
       "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
       "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
       "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
       "included_html": "<ul><li>Collier à 9 maillons avec 5 connecteurs H03 et 6 fermoirs Core-Lock dans la composition documentée.</li></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "cross_chain": {
-      "title": "Chaîne à maillons croisés",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Cette pièce ne comprend pas Core-Lock. Une attache supplémentaire est nécessaire pour une composition interchangeable ; vérifiez toutes les pièces.",
-      "included_html": "<ul><li>Corps de chaîne de 550 mm ; les anneaux d’extrémité s’ajoutent à cette longueur.</li></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "cross_chain_core_lock": {
-      "title": "Chaîne à maillons croisés avec Core-Lock",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
-      "included_html": "<ul><li>Corps de chaîne de 550 mm ; les anneaux d’extrémité s’ajoutent à cette longueur.</li></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "chain_l01": {
-      "title": "Chaîne à larges maillons ovales",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "chain_l02": {
-      "title": "Chaîne à maillons allongés",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "chain_l03": {
-      "title": "Chaîne à maillons compacts",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "chain_l04": {
-      "title": "Chaîne à perles plates",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Entretenir vos pièces"
-    },
-    "chain_l05": {
-      "title": "Chaîne à maillons rectangulaires plats",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Entretenir vos pièces"
-    },
-    "bracelet_b3": {
-      "title": "Support de bracelet Figaro",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Cette pièce se porte selon la composition indiquée. Elle ne comprend pas le fermoir multi-usage SUIJI.",
-      "included_html": "<ul><li>Modèle à chaîne ; l’attache S7 est distincte de Core-Lock.</li></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Entretenir vos pièces"
-    },
-    "bracelet_b4": {
-      "title": "Bracelet à maillons moyens",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Cette pièce se porte selon la composition indiquée. Elle ne comprend pas le fermoir multi-usage SUIJI.",
-      "included_html": "<ul><li>Modèle à chaîne ; l’attache S7 est distincte de Core-Lock.</li></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Entretenir vos pièces"
-    },
-    "bracelet_b5": {
-      "title": "Bracelet à larges maillons",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Cette pièce se porte selon la composition indiquée. Elle ne comprend pas le fermoir multi-usage SUIJI.",
-      "included_html": "<ul><li>Modèle à chaîne ; l’attache S7 est distincte de Core-Lock.</li></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Entretenir vos pièces"
-    },
-    "core_lock_pendant_base": {
-      "title": "Support de pendentif Core-Lock",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "core_lock_stud_base": {
-      "title": "Support de puce Core-Lock",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
-      "included_html": "<ul></ul>",
       "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
       "guide_label": "Vérifier la base et l’ornement"
     },
@@ -1297,51 +1117,14 @@
       "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
       "guide_label": "Vérifier la base et l’ornement"
     },
-    "h03_connector": {
-      "title": "Connecteur H03",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Cette pièce ne comprend pas Core-Lock. Une attache supplémentaire est nécessaire pour une composition interchangeable ; vérifiez toutes les pièces.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
     "h03_core_lock": {
-      "title": "Connecteur H03 et Core-Lock",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
+      "title": "Base de boucle d’oreille Core-Lock",
+      "description": "Une base de boucle d’oreille avec fermoir Core-Lock, à associer à un ornement compatible choisi séparément.",
       "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
       "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
       "included_html": "<ul></ul>",
       "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
       "guide_label": "Vérifier la base et l’ornement"
-    },
-    "metal_ear_backs": {
-      "title": "Fermoirs d’oreilles métalliques",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Cette pièce se porte selon la composition indiquée. Elle ne comprend pas le fermoir multi-usage SUIJI.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Entretenir vos pièces"
-    },
-    "pearl_effect_ear_back": {
-      "title": "Dos de boucle effet perle",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Cette pièce se porte selon la composition indiquée. Elle ne comprend pas le fermoir multi-usage SUIJI.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Entretenir vos pièces",
-      "material": "Perle d’imitation / résine"
-    },
-    "pearl_effect_stud": {
-      "title": "Puce effet perle",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Cette pièce se porte selon la composition indiquée. Elle ne comprend pas le fermoir multi-usage SUIJI.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Choisir une créole"
     },
     "oval_motif": {
       "title": "Ornement ovale cabochon",
@@ -1351,168 +1134,6 @@
       "included_html": "<ul></ul>",
       "options_html": "<ul><li><strong>Surface:</strong> Lisse, Martelé</li><li><strong>Pierre:</strong> Améthyste, Citrine, Aigue-marine, Quartz rose, Préhnite, Morganite, Quartz fumé, Kunzite</li><li><strong>Finition du cadre:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
       "guide_label": "Vérifier la base et l’ornement"
-    },
-    "logo_square": {
-      "title": "Ornement Logo carré",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "L’ornement est l’élément décoratif. Choisissez séparément une base équipée du fermoir multi-usage SUIJI pour le porter.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "logo_round": {
-      "title": "Ornement Logo rond",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "L’ornement est l’élément décoratif. Choisissez séparément une base équipée du fermoir multi-usage SUIJI pour le porter.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul><li><strong>Finition:</strong> Bleu SUIJI, Argent, Or classique</li></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "design_f03": {
-      "title": "Ornement ovale bleu profond",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "design_f04": {
-      "title": "Ornement ovale rose",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "design_f05": {
-      "title": "Ornement coussin",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "design_f06": {
-      "title": "Ornement couronne facettée",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "design_f07": {
-      "title": "Ornement effet perle",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "design_f08": {
-      "title": "Ornement sculptural à pierre claire",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "design_f08b": {
-      "title": "Ornement sculptural bleu gris",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "design_f09": {
-      "title": "Ornement disque texturé",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "design_t01": {
-      "title": "Ornement triangle ajouré",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "design_new_round_0926": {
-      "title": "Ornement rond cabochon",
-      "description": "Une pièce sculpturale SUIJI, à intégrer à votre propre composition.",
-      "notes": "Explorez les couleurs, les textures et l’équilibre de chaque pièce. Choisissez une finition et composez à votre façon.",
-      "connection": "Un aperçu de création. Faites confirmer la pièce exacte et les éléments nécessaires avant de choisir une composition interchangeable.",
-      "included_html": "<ul></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Vérifier la base et l’ornement"
-    },
-    "set01_stud_earring_set": {
-      "title": "Ensemble de puces d’oreilles",
-      "description": "Un point de départ pour des boucles d’oreilles, avec les bases, ornements interchangeables et fermoirs indiqués ci-dessous.",
-      "notes": "Les ornements et supports se partagent entre les pièces de cet ensemble. La composition indiquée ne prévoit pas un ornement distinct pour chaque position portée simultanément.",
-      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
-      "included_html": "<ul><li>2 × Supports de puces</li><li>2 × Fermoirs métalliques</li><li>2 × Dos effet perle</li><li>2 × Ornements interchangeables</li></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Une base, deux ornements"
-    },
-    "set02_choker_set": {
-      "title": "Ensemble ras-de-cou",
-      "description": "Une base de collier et deux ornements interchangeables, pour varier le style avec la même base.",
-      "notes": "Les ornements et supports se partagent entre les pièces de cet ensemble. La composition indiquée ne prévoit pas un ornement distinct pour chaque position portée simultanément.",
-      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
-      "included_html": "<ul><li>1 × COLLAR</li><li>1 × Ornements interchangeables</li><li>1 × Supports de pendentif</li></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Une base, deux ornements"
-    },
-    "set03_ring_set": {
-      "title": "Ensemble bague",
-      "description": "Une base de bague et deux ornements interchangeables. Choisissez votre look du jour, puis gardez l’autre ornement pour une prochaine composition.",
-      "notes": "Les ornements et supports se partagent entre les pièces de cet ensemble. La composition indiquée ne prévoit pas un ornement distinct pour chaque position portée simultanément.",
-      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
-      "included_html": "<ul><li>1 × Support de bague</li><li>2 × Ornements interchangeables</li></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Une base, deux ornements"
-    },
-    "set04_hoop_earring_necklace_set": {
-      "title": "Ensemble créoles et collier",
-      "description": "Des créoles, des supports de pendentif, un collier et deux ornements partagés. Explorez une composition aux oreilles ou sur le collier.",
-      "notes": "Les ornements et supports se partagent entre les pièces de cet ensemble. La composition indiquée ne prévoit pas un ornement distinct pour chaque position portée simultanément.",
-      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
-      "included_html": "<ul><li>2 × Créoles</li><li>2 × Supports de pendentif</li><li>2 × Ornements interchangeables</li><li>1 × Collier</li></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Une base, deux ornements"
-    },
-    "set05_stud_earring_ring_set": {
-      "title": "Ensemble puces d’oreilles et bague",
-      "description": "Des bases de boucles d’oreilles, une base de bague et deux ornements partagés, avec les fermoirs indiqués ci-dessous.",
-      "notes": "Les ornements et supports se partagent entre les pièces de cet ensemble. La composition indiquée ne prévoit pas un ornement distinct pour chaque position portée simultanément.",
-      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
-      "included_html": "<ul><li>2 × Supports de puces</li><li>2 × Fermoirs métalliques</li><li>2 × Dos effet perle</li><li>2 × Ornements interchangeables</li><li>1 × Support de bague</li></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Une base, deux ornements"
-    },
-    "set06_hoop_earring_necklace_ring_set": {
-      "title": "Ensemble créoles, collier et bague",
-      "description": "Des créoles, des supports de pendentif, un collier, une base de bague et deux ornements partagés. Choisissez la place de chaque ornement dans votre composition.",
-      "notes": "Les ornements et supports se partagent entre les pièces de cet ensemble. La composition indiquée ne prévoit pas un ornement distinct pour chaque position portée simultanément.",
-      "connection": "Core-Lock est inclus. Les ornements SUIJI s’adaptent aux bases équipées du fermoir multi-usage SUIJI. Vérifiez les pièces fournies pour cette composition.",
-      "included_html": "<ul><li>2 × Créoles</li><li>2 × Supports de pendentif</li><li>2 × Ornements interchangeables</li><li>1 × Collier</li><li>1 × Support de bague</li></ul>",
-      "options_html": "<ul></ul>",
-      "guide_label": "Une base, deux ornements"
     }
   },
   "suiji_about": {

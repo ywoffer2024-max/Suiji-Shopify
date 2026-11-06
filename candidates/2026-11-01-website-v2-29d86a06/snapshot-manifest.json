@@ -1,26 +1,32 @@
 {
-  "version": "website-v3.4-nonproduct-imagery-frozen",
-  "created_utc": "2026-11-06T06:08:13.472244+00:00",
-  "reviewed_local_head": "0cf993218d16c67322c3c0cc92bb8dd4c758e125",
-  "vetted_public_paths_including_this_manifest": 863,
-  "theme_files": 806,
+  "version": "website-v3.5-white-imagery-shared-ui-frozen",
+  "created_utc": "2026-11-06T17:09:57.476025+00:00",
+  "reviewed_local_head": "c92e237cc24e5ffdaa0c8fcb52bc48cd34d82cee",
+  "vetted_public_paths_including_this_manifest": 949,
+  "theme_files": 890,
   "article_language_bodies": 50,
   "public_page_candidates": 25,
   "Rowan_article_bylines": 50,
-  "files_excluding_this_manifest": 862,
-  "bytes_excluding_this_manifest": 25375194,
+  "files_excluding_this_manifest": 948,
+  "bytes_excluding_this_manifest": 24823483,
   "entries": [
     {
       "path": "DESIGN.md",
-      "bytes": 21270,
-      "sha256": "3481554f7f0842526a2913fa31d1d20bea9a1ae86a19af1c12b5a7adaa27363a",
-      "git_blob_sha": "2326fa98224ad15da644f227142b7662b6e60e8e"
+      "bytes": 28207,
+      "sha256": "f93dea280a21bb75efddc3b0ec6948d1442bfdbde67a2d7a2ca54b826dadc3fa",
+      "git_blob_sha": "c66016ab81b0e30cd8162dce6b9a8f4a936af618"
+    },
+    {
+      "path": "MAINTENANCE.md",
+      "bytes": 10530,
+      "sha256": "561821adac6ca7584b8e40e2c558dd8a50644c96bb1af7fd9ef4439af8ac352c",
+      "git_blob_sha": "bbe6df35348a9e1182823c65a405c4bae195ba79"
     },
     {
       "path": "README.md",
-      "bytes": 8596,
-      "sha256": "ba65fcaa92934a3c8a71e931c7333fe0a004e6a974fefa70473e4aafc8075c1b",
-      "git_blob_sha": "63baae418835c999826123fad6e0a2e57d7d7a0e"
+      "bytes": 11316,
+      "sha256": "dcab84600c5bcf66775da43a78be9bfbac1fe5d1014076aabba2ba1bee916d5d",
+      "git_blob_sha": "7e47cbc632bcbb5ca02dfe6dca5baebe3fdca7d1"
     },
     {
       "path": "content/journal/en/boucles-oreilles-asymetriques-depareillees.html",
@@ -345,6 +351,12 @@
       "bytes": 119754,
       "sha256": "e93f6aa75307e5411ffb23af62e2beb04114964442ff6536dda5a71686550080",
       "git_blob_sha": "71776d9865404c4745aa898e1f37800ab00a7f14"
+    },
+    {
+      "path": "maintenance/rev107/journal-publish-checklist.md",
+      "bytes": 5709,
+      "sha256": "f6598263ec57a1634905bde83d38664c4147ad8dcac1be1705027bab26620c8a",
+      "git_blob_sha": "9bb5ec718877d8cc067fd7b10b5abc85657634fa"
     },
     {
       "path": "theme/assets/animations.js",
@@ -1710,15 +1722,15 @@
     },
     {
       "path": "theme/assets/suiji-commerce-catalogue.json",
-      "bytes": 132758,
-      "sha256": "dd73d895c3315780143e4bdd77054c3e2ce13dd5c2a3a0e9ee815d1a60f7481c",
-      "git_blob_sha": "88b91d24fadba60df6e289b68f4dfef23f0c51ac"
+      "bytes": 57955,
+      "sha256": "c30c5ffee6b22f3e1ff26199a8139499363a223d6792df84c80e45e4bc1725c6",
+      "git_blob_sha": "e019c76d74bc20ccfb4350e4c14e186b5f90d2ca"
     },
     {
       "path": "theme/assets/suiji-commerce-index.json",
-      "bytes": 48148,
-      "sha256": "c7ef37865f6867161f450f9582cf9c6c6957d02acb294696ce761dfd1d2b5add",
-      "git_blob_sha": "a9e612da4de43409eab5354a13660c1bb2519cdc"
+      "bytes": 10891,
+      "sha256": "5f3fbc34211dea3ddbe91b18cb7baaa192f3477b5d57c46656c5b4c60968b93e",
+      "git_blob_sha": "5a9337d2cb3ea6b7b82d8289e6c63b1ae5a4bf86"
     },
     {
       "path": "theme/assets/suiji-commerce.css",
@@ -1785,6 +1797,510 @@
       "bytes": 22446,
       "sha256": "3e2298ea2451b7c6bf86c165b62931f004463e9e0e8ab2455acb75ad29c6543d",
       "git_blob_sha": "06345fa53427422bb59e19da9bee0b1cd506e465"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A001-1200.webp",
+      "bytes": 36410,
+      "sha256": "826cf313ef4bad0045b0ace66ccef5b1d215152e9484788078316fbf3180530b",
+      "git_blob_sha": "43f6a55ebac92752b13f5d111b2cb099ed181372"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A001-600.webp",
+      "bytes": 10938,
+      "sha256": "2aa3138fdcc3dcda00319a253b86023b6cc390b36e1f5b6f7cb24e095a16b0a8",
+      "git_blob_sha": "f1dd79bdd651de2b54123262c8beaec5d4e6aa92"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A002-1200.webp",
+      "bytes": 68792,
+      "sha256": "a5cd946f0103b2e6144de6552dad4b7030dd76a1eb2967a6268da04708245f7f",
+      "git_blob_sha": "2a50d437e1907e63bd9b21c8a27501b57ba3cda1"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A002-600.webp",
+      "bytes": 24272,
+      "sha256": "e285175cde9d24092324ff983b8e591bd1503df17e85c7da957fdef16f9c7adc",
+      "git_blob_sha": "8836bbb27600d446eb2a9c0fcb94603a7cf9bda6"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A005-1200.webp",
+      "bytes": 29354,
+      "sha256": "f666265c81518c691ec55569ee2d127952a71dc5e28edf5120351caa4eea7b18",
+      "git_blob_sha": "1cf2991e898a321fc64e739bc4aabf3edf86a588"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A005-600.webp",
+      "bytes": 11646,
+      "sha256": "2d434175e8fc78f6bc60d02d624deda3ea9182208c2cee255bf0ecac67c9a603",
+      "git_blob_sha": "e6be6a78f1046b1c785a66e6a68b0dc4eee7002f"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A010-1200.webp",
+      "bytes": 34170,
+      "sha256": "9cccd7cba887b7c025fd9d98df50edf9a956bd3e8864f4c8b75b4dc09c726729",
+      "git_blob_sha": "335f43a374882bb8113d21fbd99b5d91e9c35faa"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A010-600.webp",
+      "bytes": 11994,
+      "sha256": "444ee62ae01dbdfd968ed7eb326b2c2263b48e79c089293814d0f62cd91a9367",
+      "git_blob_sha": "503d9bb9598bb926f7e8782906bff7d7666b9f15"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A013-1200.webp",
+      "bytes": 32868,
+      "sha256": "573cd547c103b313541c6a63b5d2c1432da679daa37fe498cafa9db760ab2f95",
+      "git_blob_sha": "53bcf634c9722c06753479e3ec8fe73920fcf75a"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A013-600.webp",
+      "bytes": 14246,
+      "sha256": "fcb72ae84dece5a0025df72f12d3958e2d190f93623882ea7e709ead0e9b086a",
+      "git_blob_sha": "ad96e0bdceb20b130f532bb395eaa6dc7b2b83f0"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A016-1200.webp",
+      "bytes": 27478,
+      "sha256": "59da9484a05bb251b2adba393d5945d6d731f9e9aa3c14b229b7d86032f1bc34",
+      "git_blob_sha": "03ae892348dfddab09f4d4dfe1535154b7477217"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A016-600.webp",
+      "bytes": 11872,
+      "sha256": "53d036d45bef876f65347eb7b7b23fd29fcfe504ae278b6985b1e720b2831062",
+      "git_blob_sha": "90fbbd490d2fd91f96378821c854cace4652b1cc"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A018-1200.webp",
+      "bytes": 24622,
+      "sha256": "41d2eb2183cde4e5d1dc0f81b73895471e38f1f666993f3907054e7855f78594",
+      "git_blob_sha": "bd24203ec413cb1f9c7a171cc39b0b4cf82cc86c"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A018-600.webp",
+      "bytes": 7728,
+      "sha256": "07a52472d8bf15ed7db366bbeb0f26324c0786cedb6a6f890997f550b44b22cc",
+      "git_blob_sha": "3635a6275e5f141a464277d8c6bc98984fcf0e9c"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A019-1200.webp",
+      "bytes": 48444,
+      "sha256": "7be6fc788ee718fc84cdd550f62ae5d551bf993d1e157a62a46a5dae7ae4d217",
+      "git_blob_sha": "5cc709a2f0c65565bfae8270cccf3a9691d31e3e"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A019-600.webp",
+      "bytes": 16970,
+      "sha256": "2ad4ee65d117a0e21c988ea4e34d9e7482423fa63e8df9476e6d17cca137d650",
+      "git_blob_sha": "7bb03b99d9e5ab2f3afe909bf4ce047568d088f1"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A020-1200.webp",
+      "bytes": 37886,
+      "sha256": "5086ea16f01b7dbb31f8235cc50dc21a6755838ab14bbab2e94ded6ddbf31668",
+      "git_blob_sha": "d562c4958bbca6db2932a84d474675716ad5e103"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A020-600.webp",
+      "bytes": 16770,
+      "sha256": "2f518d88badcea2849f223ca2f6857cb76afc9f760fd73687d8f02ba14284d88",
+      "git_blob_sha": "95b348eea27b1adee29d7eb6fed97a8749aad10c"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A025-1200.webp",
+      "bytes": 32058,
+      "sha256": "dfbddee48bdfdd696107efec8de06aa95414ada54f8bdaae2373b1073cd7837a",
+      "git_blob_sha": "5c3ae25375fbbb189369829a78d34893910e8c62"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A025-600.webp",
+      "bytes": 13464,
+      "sha256": "e7e5b114b3203b0d24ad0c426d7ff34995ab12d1c76c07f02a03f49a50bb707f",
+      "git_blob_sha": "648e71b11c33cee1a21714edc6d2d666513c3851"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A026-1200.webp",
+      "bytes": 26484,
+      "sha256": "bfcbc953ac24b0ffa6cab06cedde5415bb860b1ebb02df5dd85195f257f01900",
+      "git_blob_sha": "6b63f9bf704e42a5e7aa84cccb0ea4f4168c250f"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A026-600.webp",
+      "bytes": 11662,
+      "sha256": "51f7ead57ddd681dcfacd757e4b3935a1bd118a626fbd8b0c224eec6a8e87398",
+      "git_blob_sha": "7da8725be89cc8f3aafe990bdac12c35e230d26a"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A030-1200.webp",
+      "bytes": 31412,
+      "sha256": "7db2ae8b88075389fb188c26b26d6127857cb8ba82acdbe77847a1368f501807",
+      "git_blob_sha": "06d2cd8ed2de53cde49eac1af7fbef7be0f99ae8"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A030-600.webp",
+      "bytes": 13404,
+      "sha256": "8b13a6301ae4869f93dd04ef86169ea4a02f49ac76e71b3b81a3ef28d642a453",
+      "git_blob_sha": "0ced14baaf717a543fb3b220c945d88b2bfd866b"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A034-1200.webp",
+      "bytes": 48830,
+      "sha256": "5f0dcd500892af048e031e6e130df775dd2926d0071fa1534278450f45cfc08d",
+      "git_blob_sha": "e9700881cdfaa8fb7c4e1c3a179b63ab52a052ff"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A034-600.webp",
+      "bytes": 17920,
+      "sha256": "9b136205d6775ed8010c2b7297d2f524991664e5cfdc49688c4ab9efea3523a2",
+      "git_blob_sha": "e24deff9ab2b9cf508bc6407750a60121d4708a5"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A038-1200.webp",
+      "bytes": 34402,
+      "sha256": "83b53a27ad440f58d61eef1db58e334c2c70c9aed35779d1b63876d87c9e061a",
+      "git_blob_sha": "17bbeafbd9bbbfb45f9dcf4772d8051aca1dd8d7"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A038-600.webp",
+      "bytes": 11992,
+      "sha256": "231ee82b427815c311bca847879799bdf02d15019b31cfc8a8ae889751659f55",
+      "git_blob_sha": "48e5328b001da727ebe2317fc6c7887fbcdee7c7"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A048-1200.webp",
+      "bytes": 54674,
+      "sha256": "12f2a394c268a29675f194dc00fb7ab098cb7613c09e03868607e6a62920561d",
+      "git_blob_sha": "817cc790b8ab96a736d730d621bb1ea06b093d3c"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A048-600.webp",
+      "bytes": 19572,
+      "sha256": "d898600b80616d2f801a5bcefb4a624d049da95d119af77aa2ba1c0e075e6d87",
+      "git_blob_sha": "4ab0be53332d5696a54aa670f51d78d2183b980a"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A050-1200.webp",
+      "bytes": 49158,
+      "sha256": "53681e39cc649b66115d88ca0f7b423c31e37621897d0df498336995847d5062",
+      "git_blob_sha": "d8a29f03a77143d8c633bbfd8607ac96283ff068"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A050-600.webp",
+      "bytes": 20806,
+      "sha256": "04ed3dcc2c65b9fb3b2e4d3a1ecea26f9892b179d1977efa8e5707f59b698345",
+      "git_blob_sha": "6354af3c2dc9317a453f4fa18aedc888a233552e"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A051-1200.webp",
+      "bytes": 45418,
+      "sha256": "4cb48502b21be49ac1dd53ca25df6b2f8dbfc10c478137534378875b428e526b",
+      "git_blob_sha": "f764f201b099342f5f94c596d08b89955f0ef1ad"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A051-600.webp",
+      "bytes": 16158,
+      "sha256": "1252b78d6f8a5bdaaf5557326cf8fa38bf4cce9c15ab748f35eeed05057b38cb",
+      "git_blob_sha": "ec916fec12ed7f45e43790130065b3bb596d3459"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A052-1200.webp",
+      "bytes": 34760,
+      "sha256": "f8a298fd74571fcc81b6c9907c34e3c7c26fa05ece38ab2a8b1933fb1ee7f9a1",
+      "git_blob_sha": "83b52989e58a1e9459dfb9e88658232043413a6f"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A052-600.webp",
+      "bytes": 10932,
+      "sha256": "703a17abf77c10e2565dad0d40f3c4257413945f29320a2d19409f241a1cfe45",
+      "git_blob_sha": "ce77343d0a3dcfee807d4e1b992f1898501254fc"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A053-1200.webp",
+      "bytes": 43788,
+      "sha256": "5de385d94bb3c1f492616ff4dad4d725abcddab9d9e3f851e9ac194b5f285f1a",
+      "git_blob_sha": "f6b216090b51dcfa302b8493614396b213371b48"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A053-600.webp",
+      "bytes": 17750,
+      "sha256": "c4af6bf57fff1b20eb4121f3d0020a37ba2d704bee49b22d5ddbe9385efee4c3",
+      "git_blob_sha": "531645a13f7501409d0ea2fbf9e433c8b60dae27"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A056-1200.webp",
+      "bytes": 32656,
+      "sha256": "d26682e82e794e020b35bf1b40b979c3e6fe6fde516b73712cd82363a6b93cc5",
+      "git_blob_sha": "db92b94c4a63e9e0495888d3a4e4bdf90148a67c"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A056-600.webp",
+      "bytes": 9992,
+      "sha256": "9464ad3747582754aecfd6c49ef3aa8fab24b7d3447ed8adae5b0e328cd5c32a",
+      "git_blob_sha": "97c73cff6d4ed415e02a67e4ab24b4f05f8452c1"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A058-1200.webp",
+      "bytes": 32848,
+      "sha256": "207694775ce1f2318857d9c0a1a40aaa2f049b2d88636bdf0551a10bdf45d568",
+      "git_blob_sha": "82369eee31db5c4180a07a977f997ef7d307f9d9"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A058-600.webp",
+      "bytes": 13962,
+      "sha256": "a1abf5bb016f67cc55f59a357574fdba79af94f4f2fc0289dcaee39be5a3c87d",
+      "git_blob_sha": "0d0bbad5b7f2c3cce3f92930f6b9910479b7b865"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A059-1200.webp",
+      "bytes": 32254,
+      "sha256": "c74c8a735a1c02e0460833b598cbee83cf194f33b312c5c7228dcde51617834b",
+      "git_blob_sha": "44b2baaa29d0181988e7e97dad23c602d765c639"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A059-600.webp",
+      "bytes": 11538,
+      "sha256": "84598e1f98f252cc9eadebf4364045375eac1a04847ba7a78c91b5ff33083c50",
+      "git_blob_sha": "e3b19d4c841982d6bc022514f5180fae6c4484c3"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A060-1200.webp",
+      "bytes": 32456,
+      "sha256": "08defbb8b9d2795e37696ce1ea869b4a343594977a043d8ed9dda8922f9acab3",
+      "git_blob_sha": "e0e5d9ee51487e2d2fa28faca92e10711d6b159b"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A060-600.webp",
+      "bytes": 12832,
+      "sha256": "fb5c3571f1f906bd5c33002578192f81a1cd46bfd9bfc0cc017bd15c10252106",
+      "git_blob_sha": "b0fd2b7155d6ddbdd6680d669d6fb9eb8b460c12"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A062-1200.webp",
+      "bytes": 50382,
+      "sha256": "4f77a71e73490c38e471be1d1fb6e6543202e5552b2be98191701e756f1edc45",
+      "git_blob_sha": "6e63cffff09ba6816aa8b51aa6b5b3c7e7e74586"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A062-600.webp",
+      "bytes": 20584,
+      "sha256": "56b89042aa7b8d91358db3b88a3a41087d4b0dd19dcb0c19b44e7a1bbd447654",
+      "git_blob_sha": "ef595addc570a1cbc35d8a89426ae07819e145c1"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A066-1200.webp",
+      "bytes": 59096,
+      "sha256": "4ea28d6a7c97472c4e71d383e9f183398de29708ac01a19838c437e6c6ed026d",
+      "git_blob_sha": "ee1d026c63ba7fe83589065f34c54d01eedac9de"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A066-600.webp",
+      "bytes": 18880,
+      "sha256": "a7b84550eaddba5af041e2605f83f2033485e19e66714b113aa400576a74ef2f",
+      "git_blob_sha": "165bb079938a362fca7587f89b950b3890133fcf"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A067-1200.webp",
+      "bytes": 37896,
+      "sha256": "4c63597c4c97f43176fa2cf7335bfe0e7e5e52e3b46f3b90bd782e6888b7333b",
+      "git_blob_sha": "3e1b071f1f69cc00636eda59a336ed7a3787118f"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A067-600.webp",
+      "bytes": 14732,
+      "sha256": "d2c8797e5a650989efde806f78dd0fe871030e1eb53a5cfa67bd5978d80c4ea2",
+      "git_blob_sha": "4635845f58b6f48259754553689f7f86f2fd582d"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A069-1200.webp",
+      "bytes": 50622,
+      "sha256": "78271f4c37859ffdf328ce559f02c9ac16125413c9678411792c7d82f258d185",
+      "git_blob_sha": "1080fb41daa97aceb62311da779a4d6bc915b9fd"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A069-600.webp",
+      "bytes": 18526,
+      "sha256": "fccb780dd55bf9ae0eeda7b4240a2ec8c3ac717d5d341c6088619ffec31393ab",
+      "git_blob_sha": "05367cbc164f7235b7395f52e57c2574bacf0e86"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A073-1200.webp",
+      "bytes": 51466,
+      "sha256": "c2efdcff97233cd33d4ae4c1a22758e9bf93cb0fafa7b8747663ac3a01a21da7",
+      "git_blob_sha": "1ccbecec0f63b29585801b8656aaac3a28e94d20"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A073-600.webp",
+      "bytes": 16932,
+      "sha256": "ef21490c5351d13041e64cf543d37c7cea7380cc2a96a6b59ac27811832bba7c",
+      "git_blob_sha": "f8cc928b707147f7866e2ee28177dbaf53b6bf34"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A075-1200.webp",
+      "bytes": 37568,
+      "sha256": "74e55fc5e92707db11ea3ca7974cdefe36b5b9708deab6a803d5e4cb01cc1ed5",
+      "git_blob_sha": "80606e05b5d40796c72d90b8db33194f98379b03"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A075-600.webp",
+      "bytes": 14344,
+      "sha256": "8beefafce79d8a4c28b914711c9cefe404bf579aec8189f3516cde2dcf942cd7",
+      "git_blob_sha": "37f1fc37817f37d29d803c3cba2520ca9f6d3f60"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A076-1200.webp",
+      "bytes": 23266,
+      "sha256": "5f5636de066627d58136b84bb38c9e40bdc703bb5a9a5dc62c93f65ea1f7ebde",
+      "git_blob_sha": "1ee6992b5e716528677e30027f3abb2594e67b9a"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A076-600.webp",
+      "bytes": 9418,
+      "sha256": "ae8b47517b1103b21dc3ba10cbc60730f50359ea859128214f98f7de99e9663d",
+      "git_blob_sha": "545761d39eb066042408863e224fb39dd9d9a3ff"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A081-1200.webp",
+      "bytes": 32146,
+      "sha256": "41aab0a3a37874798974f72d12e5de85033155b7f5de6bca9511bb84631813f9",
+      "git_blob_sha": "c4fbd7faa1e05de24625def17410acc4e7790109"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A081-600.webp",
+      "bytes": 13864,
+      "sha256": "601ffde4371570b4435ca7477b0581e289e69f6355b7123a452717f7f960b740",
+      "git_blob_sha": "2b17fb00416eb1624294b4631051bf22c8a5462b"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A088-1200.webp",
+      "bytes": 44680,
+      "sha256": "9610338f6d3bac9b1f422fe8229cce41627c0bdf50636a26e5162d0eb6e7b309",
+      "git_blob_sha": "02d68cdb2536d21c9cba604f87fb1904e15e04ec"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A088-600.webp",
+      "bytes": 18418,
+      "sha256": "8802aba8f5efd36d75c4568ac5038d5b9115ef6d0e482bc0a32db63fec82953a",
+      "git_blob_sha": "94d4f3a1dd55d0e7fe558b303b63fdbeb6f42a26"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A089-1200.webp",
+      "bytes": 38112,
+      "sha256": "d915d18781704cb59214526bd99bd61718b91f3c7ac254f5d05aec55723c19a7",
+      "git_blob_sha": "e47c5dbbe20f6b87e2ee87d07c3c3f497da597fc"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A089-600.webp",
+      "bytes": 14746,
+      "sha256": "2a97199b24eb25a61101d1d1b898b5787baa7c1452d01ae3a47e21eeea29b918",
+      "git_blob_sha": "d4ea9a7fa5d5cae2b1be0d5c53946fee20f84e68"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A091-1200.webp",
+      "bytes": 88186,
+      "sha256": "212b300162f6792c1677aa56fbcdddf1bdf4467098fba6f9d0c106342e85b043",
+      "git_blob_sha": "c666ca7360b6c46b57a3794ffa34cd76a42186d4"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A091-600.webp",
+      "bytes": 28530,
+      "sha256": "d07b0db3ba2f3f5b53d8c96336cbcf6e61d4e53ae9dff9b149d51b3381d61a4e",
+      "git_blob_sha": "eabbbb610ebf2411309edb55e048480576d76984"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A099-1200.webp",
+      "bytes": 45072,
+      "sha256": "258ee3d81d8b2ca4b12d68a34c8f1eb8ee42e6a2a907b50773e5607ee162edcf",
+      "git_blob_sha": "500565ebc752ef37cd398e4d850f0eafeba2a0b9"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A099-600.webp",
+      "bytes": 18616,
+      "sha256": "e994bdd5edc592cc9840b39850d2d045b67a221f9f25a1e5cc2b270653a281b5",
+      "git_blob_sha": "6af308695488685668ff03299174629055e7f0db"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A102-1200.webp",
+      "bytes": 32900,
+      "sha256": "7f05d4fb256c60cfc42bcccf30615e34f8a8a1c01e730953613d83e3fb0220d6",
+      "git_blob_sha": "5b19f98fd17168a4b16d206007f1d676b926bc6c"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A102-600.webp",
+      "bytes": 13452,
+      "sha256": "35175397ae206b9e2f11906f7b58dff5fbd514fbd8df0e4c1109712cf078d8b6",
+      "git_blob_sha": "688806c0042787fc5d6ace46675f11ad38281eab"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A103-1200.webp",
+      "bytes": 44486,
+      "sha256": "1651d4d2d01a7dcb3dc78a7214c95cb271a9a4c2d323beaec3e912505560b128",
+      "git_blob_sha": "7bfec27f4a79d37e901cf0e1b707fbe668830fba"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A103-600.webp",
+      "bytes": 15620,
+      "sha256": "aa2fb1912a9c0746e3400069e8ef2b0c86be683027e88bb3361c3d4e08c49b22",
+      "git_blob_sha": "b2a8a6137e6c0697d3fd45b4f1eb08d4d76f26fb"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A106-1200.webp",
+      "bytes": 36424,
+      "sha256": "c79f2fdc614d0d82c4203b325de7eb00476a23edecd8580db762f17a35530726",
+      "git_blob_sha": "d09924b0b1680675ab32d7f22756befbaf2ff8ef"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A106-600.webp",
+      "bytes": 15102,
+      "sha256": "0eab05c8b9dcb3186cd6967db7d888e5a96e7b8a1bfad9eb1e54f9aea3f98515",
+      "git_blob_sha": "f23fc7045ac5d0d48b3d81d8bbdb979553356116"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A107-1200.webp",
+      "bytes": 26264,
+      "sha256": "4966e1d9596fe3b7cdea8e33c241de691e0ffecef75c56c5d85aebfd2a886da1",
+      "git_blob_sha": "e327604e767866d30721cea806183b2f8bd7e23b"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A107-600.webp",
+      "bytes": 11158,
+      "sha256": "7785633d2f71cabcc4a2762896f30af16b0743a68092fb9c43e901b20a28b2e0",
+      "git_blob_sha": "6507c2f3b04f5142006c00eceef92f879d355dd2"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A108-1200.webp",
+      "bytes": 31676,
+      "sha256": "62c1977a0447f3d0a291c8cc01e2b398ced481edeba98cc8704d7e091c470d3a",
+      "git_blob_sha": "5e3b7a1a6b3c3c7c61a3006f39f0ea6692301faf"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A108-600.webp",
+      "bytes": 12816,
+      "sha256": "f49ab8a5176b563ec673c2512838c0020e9174ff838a63485d182a460665fd08",
+      "git_blob_sha": "7909db82405db849e03556db07b698f0e3efed10"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A114-1200.webp",
+      "bytes": 33410,
+      "sha256": "829de25206354360c43f9f17d4fa7efc3e86de22bf6d4bc027e4ab8e3d37216f",
+      "git_blob_sha": "45f31c803493b82c6957b2652c553cd6983f889e"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A114-600.webp",
+      "bytes": 13076,
+      "sha256": "3206a824d48274be3805fcdb111fb2a2a63d9ec6ce2d82659f8df75af58f758d",
+      "git_blob_sha": "cee5264890bb9fcf06153f0c0ae239994ecc3205"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A116-1200.webp",
+      "bytes": 51794,
+      "sha256": "f2f2f2ad72fee54f7f6a448ae4bf2773e6246cc33698293830a8867e5832f237",
+      "git_blob_sha": "3db75029e80046e4d591e945a7ad993229441b13"
+    },
+    {
+      "path": "theme/assets/suiji-final2-white-A116-600.webp",
+      "bytes": 20796,
+      "sha256": "d83d7709f5e60430e824997e629bbff4e03ee8ea351318ca03d94c17c6f2f7dc",
+      "git_blob_sha": "304ec09d6cf8da1d5179d991f8ec12924f606b67"
     },
     {
       "path": "theme/assets/suiji-font-licenses.txt",
@@ -1926,15 +2442,15 @@
     },
     {
       "path": "theme/assets/suiji-item-a02-drop.json",
-      "bytes": 2682,
-      "sha256": "18aabe314c72fb1c3abfee628d8c90e4b76df6ea04108d95669f3ba348d77d0f",
-      "git_blob_sha": "167026fc77e23678634b3e32a4b6ca07c4d4e03c"
+      "bytes": 2515,
+      "sha256": "0746e1dde44bd02d139242ec6caf35eca450379312d1e8af68083769c013b756",
+      "git_blob_sha": "8a889fa23980c684ba92b0ab8c5206613824601f"
     },
     {
       "path": "theme/assets/suiji-item-a03-drop.json",
-      "bytes": 2673,
-      "sha256": "a474dc3c16ea03b320078d33dd066d4c86c3e8f464cd235572461ea90caa4ea4",
-      "git_blob_sha": "ee100417c127e29cfe337598a3a268ed09144a44"
+      "bytes": 2506,
+      "sha256": "6adb0f0866227d150b2ab724cf86b291f12af85aef561ed8fbcff2f7c9d4065d",
+      "git_blob_sha": "5370cfc60756694f95924bad99c9100a0ed58742"
     },
     {
       "path": "theme/assets/suiji-item-bracelet-b3.json",
@@ -1986,9 +2502,9 @@
     },
     {
       "path": "theme/assets/suiji-item-collar-7-drops-1.json",
-      "bytes": 2837,
-      "sha256": "75098997cc0a849c405b37ae9e5f52a62cb0b6ee13ea8b38c18cb957817c2946",
-      "git_blob_sha": "dd645e92b93b006af65458cdf8f8d57b5b875011"
+      "bytes": 2605,
+      "sha256": "ee36f71a4c3231c90fe745a54e0ede201ab275138f7d1b3524f86aeaa7478018",
+      "git_blob_sha": "41635029bf1401a4dab422b8c5714d0a2d4f4671"
     },
     {
       "path": "theme/assets/suiji-item-collar-7-drops-3.json",
@@ -2004,9 +2520,9 @@
     },
     {
       "path": "theme/assets/suiji-item-collar-7.json",
-      "bytes": 2719,
-      "sha256": "d878ac1d12c319da920ba286a361ee807c99a327b81f2c6ba38b7e729568a913",
-      "git_blob_sha": "e96c5b9dffbfa07dc5b7729b6233f82aca873d86"
+      "bytes": 2487,
+      "sha256": "5ef1b0e522864a62424078717386dfc7ded74da947472ac4bc30f659052f2312",
+      "git_blob_sha": "a299536bd48d0c84c22635d37fc6132811f5fe08"
     },
     {
       "path": "theme/assets/suiji-item-collar-9-drops-1.json",
@@ -2022,9 +2538,9 @@
     },
     {
       "path": "theme/assets/suiji-item-collar-9-drops-5.json",
-      "bytes": 2839,
-      "sha256": "e3f35dad9b3d8136f57cbb9e1cab7c5f7c357da9cadccc46b5c6bd367d9990ec",
-      "git_blob_sha": "86a4e5cce86f198f78266b16ad4de1bf684986cc"
+      "bytes": 2607,
+      "sha256": "88f803f4e7dded3e9ae64f07f1ac7ecb91e158b14cf60d8a130c6ed0eeea2241",
+      "git_blob_sha": "eefe9ff16011287234d578f23c44bc781d5c792e"
     },
     {
       "path": "theme/assets/suiji-item-collar-9.json",
@@ -2046,9 +2562,9 @@
     },
     {
       "path": "theme/assets/suiji-item-core-lock-stud-metal-back.json",
-      "bytes": 2577,
-      "sha256": "51aca8c9c631040adb9a1e9da565531d6279cb99842a34b6221f0b9fd78692e1",
-      "git_blob_sha": "082a5f6ad8ed7b4506821af4f05880b86b31cd97"
+      "bytes": 2410,
+      "sha256": "ad49ab066f08d87f0cf2880bbfc0daf49a3716a130b928664883966cf4241bd8",
+      "git_blob_sha": "1c2a3ae5f61f9c9fddd97a6fae3781a806b4a757"
     },
     {
       "path": "theme/assets/suiji-item-cross-chain-core-lock.json",
@@ -2124,9 +2640,9 @@
     },
     {
       "path": "theme/assets/suiji-item-double-arm-ring-base.json",
-      "bytes": 6899,
-      "sha256": "eb6fb9b6faeb18902ae3d5c8217d8571e389aae19dd77982fb9c6a4fb5848d25",
-      "git_blob_sha": "fbdf0def59f5cd7f8fc69454b65b48446a29882f"
+      "bytes": 6696,
+      "sha256": "a0f943dd067e8771b92bda25563793596a3a30a3c8fd85a417b2e7b46e92b070",
+      "git_blob_sha": "6e2044a5fa47b5c3c1d9c750d009334e11897750"
     },
     {
       "path": "theme/assets/suiji-item-h01-hoops.json",
@@ -2148,9 +2664,9 @@
     },
     {
       "path": "theme/assets/suiji-item-h03-core-lock.json",
-      "bytes": 2600,
-      "sha256": "c768207a76635f9dabe7d558b977b747cd8ce87d99b3570bf1b9dd95cbc53294",
-      "git_blob_sha": "56d3d12ef7bdce5475d0ad9a08a8d56013a495ad"
+      "bytes": 2442,
+      "sha256": "1c9ca2db9b503d34b75d0815964bfa237f94b5e334482f314679c522351b9305",
+      "git_blob_sha": "725e567b032c8462aaf8d38d508f1e0bcab3abd2"
     },
     {
       "path": "theme/assets/suiji-item-logo-round.json",
@@ -2172,15 +2688,15 @@
     },
     {
       "path": "theme/assets/suiji-item-oval-motif.json",
-      "bytes": 18071,
-      "sha256": "84279d67654ef832fd039911585bf8110124bfafe594cde134af5c4d288295cb",
-      "git_blob_sha": "217dba2368f2221f4d83971b29c7bacfc24091cd"
+      "bytes": 17875,
+      "sha256": "19bdc04f133819d7f74ac1ac77bdb7f9283d5e95908bfb06d6c03e56061dc278",
+      "git_blob_sha": "cf5de7138a71d936e913f41dcf0e406612a67811"
     },
     {
       "path": "theme/assets/suiji-item-pearl-back-stud.json",
-      "bytes": 2525,
-      "sha256": "a0bf2ea19eaef110bedbd793d3f71c65f2149db666e8040e72f1f356c30f841c",
-      "git_blob_sha": "87b859b85fed8f73dc02e481b717fb21cf2c87db"
+      "bytes": 2358,
+      "sha256": "a84ef26539561c93a8b7b371b1f981087299f1cb0bf776772e99c66f69eeabd4",
+      "git_blob_sha": "e17519ff470277ca8f231f0b86a362f1d23cdc39"
     },
     {
       "path": "theme/assets/suiji-item-pearl-effect-ear-back.json",
@@ -2202,15 +2718,15 @@
     },
     {
       "path": "theme/assets/suiji-item-r01-ring-base.json",
-      "bytes": 6876,
-      "sha256": "b93b9173df48f38fd6545152278f42c0acf36e81b89bda11f4762c7042431361",
-      "git_blob_sha": "ae0f61792c16aef6b1bdc2df0d951e6af79479d6"
+      "bytes": 6673,
+      "sha256": "278bc689e46c5c36618420170d95beda69724faa8b070ec677ef5380142411dc",
+      "git_blob_sha": "4d3f57b437bf4d34a7c549c6e56631b673546d51"
     },
     {
       "path": "theme/assets/suiji-item-r02-ring-base.json",
-      "bytes": 6878,
-      "sha256": "1ee1028d421a22028a73c26c5a928c1795783e1a70f5967387a680dc4a5ae9d4",
-      "git_blob_sha": "26781563a806e0a7e635d6e689e6790b45f790d8"
+      "bytes": 6675,
+      "sha256": "d89cc54479efeaba22ddcadcd54092575f54d09dd4e5c0eb502292b45b0855d6",
+      "git_blob_sha": "c6ac514925d39f58920ea1a8746b8fa5a0f47b6b"
     },
     {
       "path": "theme/assets/suiji-item-set01-stud-earring-set.json",
@@ -2394,15 +2910,15 @@
     },
     {
       "path": "theme/assets/suiji-r107.css",
-      "bytes": 51600,
-      "sha256": "2782d33c8468af5b7f2d52b2060e606b55fc7617554427677bf2aa29d6a9f34a",
-      "git_blob_sha": "82ba3a73cbc2a2d00b45f3707a329503ec0e141c"
+      "bytes": 55600,
+      "sha256": "ef03d6ccf8fef4c9dfec3243765241958f741db1e4c29a4226f2aefad0e4ccb6",
+      "git_blob_sha": "24f0b96f63573ac5520085deee198a8e1823ba83"
     },
     {
       "path": "theme/assets/suiji-r107.js",
-      "bytes": 35343,
-      "sha256": "3bb1211410d219356d42f1a49362eb337787a9b00d2f07dcdc58e2fdadedfe4f",
-      "git_blob_sha": "27dd0cc92bc41af47ccb18658907cae9c6833692"
+      "bytes": 40222,
+      "sha256": "498ffb0b7754f67e3d2840239ba2ac24095c0b2225678e14119662fe0a9d87aa",
+      "git_blob_sha": "852eb5c0fbb18ba2ae55066ce981d993d0136c97"
     },
     {
       "path": "theme/assets/suiji-ring-sizing-en.svg",
@@ -2532,9 +3048,9 @@
     },
     {
       "path": "theme/layout/theme.liquid",
-      "bytes": 37926,
-      "sha256": "92cb45c0d076f1676f09887e060cc271396f7498f1c7eb47e41fe94638eab7d8",
-      "git_blob_sha": "9efda3e8d441cf4f83dca6dbcf67993f20194e9a"
+      "bytes": 38187,
+      "sha256": "4bd2a00e9f9e00de89681ba00558e3e6777650537952d5597112c832e1c24603",
+      "git_blob_sha": "4b748437ba9be4e5d4d1e740b56bb06451122561"
     },
     {
       "path": "theme/locales/bg.json",
@@ -2586,9 +3102,9 @@
     },
     {
       "path": "theme/locales/en.default.json",
-      "bytes": 94544,
-      "sha256": "575e262de4b058b98b8df97fc2889a4c5b40a75c9fb0e2ae52a635d392b816ff",
-      "git_blob_sha": "3f1e453fe0218b16524454f92a003d1131443e51"
+      "bytes": 67224,
+      "sha256": "417c929f9469836f4c429b4ad49800a565b0f07d6fd199bb3b02a3064f7ee236",
+      "git_blob_sha": "fdf06c4060f8bf0e77aae6427ec24f380c2e8477"
     },
     {
       "path": "theme/locales/en.default.schema.json",
@@ -2622,9 +3138,9 @@
     },
     {
       "path": "theme/locales/fr.json",
-      "bytes": 105896,
-      "sha256": "dd28e75e73571d65f911a7e1d6fe56216eaf6e0769c4bcdcf73aea87c2e5577e",
-      "git_blob_sha": "ab3d860e6282109e876e655180cf209da8ce1d75"
+      "bytes": 76181,
+      "sha256": "d80542118f591aaa0462bcf2fb6f9163684e17f7964ccab1775a753c2c262daa",
+      "git_blob_sha": "34cc64eab2aa4829d8fc53d9cd3ad1ee25c3d4b9"
     },
     {
       "path": "theme/locales/fr.schema.json",
@@ -3036,9 +3552,9 @@
     },
     {
       "path": "theme/sections/main-cart-items.liquid",
-      "bytes": 24961,
-      "sha256": "2fdaa422650e1f211e542a5a4e274758a5610f4d48ceb312a15778d99ce11d00",
-      "git_blob_sha": "00be0f19ac913840afc82a01c5314a944ee58a78"
+      "bytes": 25478,
+      "sha256": "136808f504e012fcbc3034bcd307507447fab25fa2601e762451f6db621ec797",
+      "git_blob_sha": "c8107129db21f35cba035d3fd6c953856c51ac4f"
     },
     {
       "path": "theme/sections/main-collection-banner.liquid",
@@ -3762,9 +4278,9 @@
     },
     {
       "path": "theme/snippets/suiji-catalogue-static.liquid",
-      "bytes": 13732,
-      "sha256": "89b634443d1b9d8bdf52393dfe74ad48b1f875f55c83bd5af5a6e18a62d55bae",
-      "git_blob_sha": "75fecbed18c34b068b04ee441199514c29565561"
+      "bytes": 4633,
+      "sha256": "a5df8f21f59e29ed09c118a5754aa4436e0cd56137a8584e9393fda6288f871b",
+      "git_blob_sha": "9b190148db7db79dd22b497012a491ebfe19160c"
     },
     {
       "path": "theme/snippets/suiji-category-landing.liquid",
@@ -3882,21 +4398,21 @@
     },
     {
       "path": "theme/snippets/suiji-product-card-static.liquid",
-      "bytes": 40562,
-      "sha256": "41a2625ff160beb4061818b32eeed570386c71d653fd69bcd4d0c3e4e6a381ab",
-      "git_blob_sha": "d46859b89ea84ba0ccb70e9eb86b02a45d15877a"
+      "bytes": 8342,
+      "sha256": "07bc5eb2e138321fa37d4afcb644dffebdf25c53593d2c8125eb087dd7f3794e",
+      "git_blob_sha": "c4b838a7ac8ac95886681d1b6fd7d4849fafdc5d"
     },
     {
       "path": "theme/snippets/suiji-product-metadata.liquid",
-      "bytes": 17185,
-      "sha256": "bbee7629698e047357867fd60585dc41bff6067f4abef775ae7246fea0881c9e",
-      "git_blob_sha": "6bba0f0c4217d1efedf1e3339e6a5970a1d46de9"
+      "bytes": 4005,
+      "sha256": "bee259a1de45e0c25ff943728bd403afb474c9c67954a7bd386f3974888af888",
+      "git_blob_sha": "58625c79f0778ce1f171748a67d82dd7fc8064cd"
     },
     {
       "path": "theme/snippets/suiji-product-static.liquid",
-      "bytes": 148081,
-      "sha256": "7794b9e634a1166188c35a3aebc2d50cdedc74f11c8c6b5cf470be7a874db635",
-      "git_blob_sha": "fd8e372a882e5d592c9d7395da02aa9e35551575"
+      "bytes": 31740,
+      "sha256": "4ade7d11e99bb94f523e8ba26deef2cd966572d09363adc5dc227f11e702aab0",
+      "git_blob_sha": "64b09089d3b547406deb12e491162d2d4d08d054"
     },
     {
       "path": "theme/snippets/suiji-purchase-notes.liquid",
@@ -3906,33 +4422,33 @@
     },
     {
       "path": "theme/snippets/suiji-r107-about.liquid",
-      "bytes": 22492,
-      "sha256": "49b0cfef2e6ce23504f380e890bc2d2c35268006494e0955252646bd69994e13",
-      "git_blob_sha": "f5aeb78fd3ff929397e8caa2420c23b04eb70c7e"
+      "bytes": 23631,
+      "sha256": "02ecb380abee32d7cc3b36df267f6aa5b9990993876c4fbe4c1e817c3beaa541",
+      "git_blob_sha": "80c842b4e6707b7fc7c6bdcef3ef72be3ceef9ca"
     },
     {
       "path": "theme/snippets/suiji-r107-article.liquid",
-      "bytes": 13296,
-      "sha256": "8f2ec05ca06148c420ad60358dfd1bc23f3c2d4e396be44bbbb95f39b9cec242",
-      "git_blob_sha": "16cd4209d713546346434bfc5c623556fd3c7840"
+      "bytes": 48316,
+      "sha256": "b249463e3b93280cbf2b674e40a36a57ba31c92deb94167bae13e166ab229bb5",
+      "git_blob_sha": "5e027f79196b021beeec04bf86f1424b7ae0d12e"
     },
     {
       "path": "theme/snippets/suiji-r107-bases.liquid",
-      "bytes": 19854,
-      "sha256": "384e0834c586503e9ab429d977f8283da16b9a686c43c364d2cf24613a906d28",
-      "git_blob_sha": "60e0c2bf5c4275eb98ffd7030898fdaa1c5b7e6b"
+      "bytes": 18883,
+      "sha256": "826adc2a8ab399c90ea3514a57244ae08ebafe78d81252b407154005f439d866",
+      "git_blob_sha": "56d1a6e6c6f1a45c7817d5674792c141316aa6ab"
     },
     {
       "path": "theme/snippets/suiji-r107-care.liquid",
-      "bytes": 7046,
-      "sha256": "81d7235021130f9d5bf4e534396da742a877ce2359bc4926acb3ba76ef9cf665",
-      "git_blob_sha": "86a70efbe7b2c8b668858664061b5ad2fedb0fcc"
+      "bytes": 8232,
+      "sha256": "b79e43ca53db3784a521f2274e98195829a09db14a3a4540a7208ea23343d90e",
+      "git_blob_sha": "dfd81c027bd4dab9042f36666f26ac3386faf46f"
     },
     {
       "path": "theme/snippets/suiji-r107-cart.liquid",
-      "bytes": 2755,
-      "sha256": "74a061716bc8273bd2733c8e858f6e8381f42b31c3c0c2b5300cbab67ed7c3d7",
-      "git_blob_sha": "315f7953cb6a4f1e4d236fed3b53863bd11946a2"
+      "bytes": 2982,
+      "sha256": "03ef55d6d44e40969c8c8cfc86837872f3185dfb34b0c8135acf40e3a523976d",
+      "git_blob_sha": "798191d0c9026c7e674651d1b133ffab49637b3b"
     },
     {
       "path": "theme/snippets/suiji-r107-charms-help.liquid",
@@ -3942,75 +4458,75 @@
     },
     {
       "path": "theme/snippets/suiji-r107-checkout.liquid",
-      "bytes": 3187,
-      "sha256": "870094207fb58bf1f8d6500aaa34fb3073b84991b861bb7b1324099ac7141f94",
-      "git_blob_sha": "d633fcf62ffe681e79338c9139eed76c9dd73577"
+      "bytes": 3320,
+      "sha256": "5932a224fd8c3ba9ddf447a1a492ef046cd2f7ff7229faa0f8ed6234cdd9b93c",
+      "git_blob_sha": "1ae096e95646e105c01d054e7655efe1bdf51f37"
     },
     {
       "path": "theme/snippets/suiji-r107-co-create.liquid",
-      "bytes": 6854,
-      "sha256": "3e24489d7e7525673715f6fac21e34f06b027cc0aa928c71f53bbbea2ffa2b94",
-      "git_blob_sha": "ce3a56e0c5584175ed75e696bb3f72f59adf985c"
+      "bytes": 8953,
+      "sha256": "66cc7c73fd046c8d617433e91242a53517d23b531b2401b5b57a7ad378f51e1b",
+      "git_blob_sha": "fc2c7d9ddbc1dc65370bf05caf5cee643d31b6b4"
     },
     {
       "path": "theme/snippets/suiji-r107-collection-all.liquid",
-      "bytes": 104067,
-      "sha256": "4c5905a21f0218e351375ed6ac4c4f1c5c2157880385c50bcee30153b83a3801",
-      "git_blob_sha": "1c021e535f6ccf919413e39ad9dec228ae666fc8"
+      "bytes": 24621,
+      "sha256": "4be7694c71d5abd128232c589d6c1e801d43445d9519933261c7092bb8712be1",
+      "git_blob_sha": "33d732b140faa589ae72deafa0888822ba7f4617"
     },
     {
       "path": "theme/snippets/suiji-r107-collection-bracelets.liquid",
-      "bytes": 8773,
-      "sha256": "a042a282e0ae2984cef7a3bc16701c1af64674802ce34bb137363150a114d20d",
-      "git_blob_sha": "c06eb47a34d1906662c4e8b981f60eb7ae558f37"
+      "bytes": 4139,
+      "sha256": "601d8f440bcda2ea86cccb6ebb6f3e83bb1cb9f797c102a1c5c4e9ba90fdc132",
+      "git_blob_sha": "0eeed37c0c311ba5c8413a1fcc78b0055b795b9b"
     },
     {
       "path": "theme/snippets/suiji-r107-collection-charms.liquid",
-      "bytes": 31851,
-      "sha256": "fb169595615ede3d1673019d5c5d7134c3357490250daa171155c572cddd751b",
-      "git_blob_sha": "6f7a9cd4492e48390765fa231187f7b04bee2d78"
+      "bytes": 5805,
+      "sha256": "15d974e164fbd2460d14846f593ee79273b39e4aa8f62cd929a7a9ab907ba7ad",
+      "git_blob_sha": "0f7ed8027202b3c996874b82c7b6e58b5da4639e"
     },
     {
       "path": "theme/snippets/suiji-r107-collection-earrings.liquid",
-      "bytes": 22416,
-      "sha256": "4b0a901b65de74fb72c7d84412c115ddee181202400bb3e433709e41ad1b2c39",
-      "git_blob_sha": "298bac077dab769729cba33fb2b1ffef4cf29ceb"
+      "bytes": 13430,
+      "sha256": "2afe1a48da522b9484e4a3551b660b74a451b4aeeb1d1124da037e47ce98b704",
+      "git_blob_sha": "5ce993a6041f367aa4ac79a571b80c48dc875157"
     },
     {
       "path": "theme/snippets/suiji-r107-collection-extras.liquid",
-      "bytes": 12158,
-      "sha256": "af4d8a4a63ca1e2e32c288aacf52c234a06c50cc1e740800a9a6bdaade3a98d8",
-      "git_blob_sha": "c9bf68772d3027e6f4e842a54da38ee0c4e666b6"
+      "bytes": 4162,
+      "sha256": "ec557728f249fd92144f88c85aeac3f5224f670538ad91f30534bfbb0c2dc714",
+      "git_blob_sha": "c449c4920e6a3f48402ff365496d8fdf38a8078f"
     },
     {
       "path": "theme/snippets/suiji-r107-collection-necklaces.liquid",
-      "bytes": 27590,
-      "sha256": "69f77bef39364a0e1fcaac99ee73e7501025500fea562a9e351f682e60bf4bf3",
-      "git_blob_sha": "172f66ea8fed855973c1177219e7d8187de3d0fa"
+      "bytes": 9466,
+      "sha256": "fa2f7dbc2ff97a2a17aaba9f9fe0879896a14717005da0e0280b8ddad9926e1b",
+      "git_blob_sha": "ebff7287bb983dd5b83c2094e1aa486df468931d"
     },
     {
       "path": "theme/snippets/suiji-r107-collection-rings.liquid",
-      "bytes": 13030,
-      "sha256": "f5c048c1d43f63eb8cafe69ca690f7b326fbc3174de4ee7b93a07131b316dd29",
-      "git_blob_sha": "e18443eb4199d91634ff624d94a734acbb85b96f"
+      "bytes": 9039,
+      "sha256": "d1ab45591f4f721dec18c7b4a97a3e7b01bd3f241b3502c69fc06eeec4ca5b6e",
+      "git_blob_sha": "81668bdfed8a2ccf53e5315532afff337ccfa15c"
     },
     {
       "path": "theme/snippets/suiji-r107-collection-sets.liquid",
-      "bytes": 13264,
-      "sha256": "be817e2f0f058cd2300ad5eef259cbe1bee4390ee5361e967dcaca624dd8058e",
-      "git_blob_sha": "c5ef98615eb300eaef89e5eb364d94e3edda440b"
+      "bytes": 4223,
+      "sha256": "fbbdde59cdb7b5be77d84b213225c446141e61cd63b73fe52f58ebae23061b1e",
+      "git_blob_sha": "0ed6194292aa0da8dbaa994239f240378193326f"
     },
     {
       "path": "theme/snippets/suiji-r107-config.liquid",
-      "bytes": 63297,
-      "sha256": "f551e893863f1821724b77bf991c76d31875affb8c7967e3e806fd6033a1f9e0",
-      "git_blob_sha": "3a13750178966b5134108a388efa2a85c04138df"
+      "bytes": 43846,
+      "sha256": "fc0e7825822d1ea9d00acc03962fd9c9c7ba6237270285d8278ccd82978724ba",
+      "git_blob_sha": "9d08abb920c1512fcee6c898c11e70bbbc61d276"
     },
     {
       "path": "theme/snippets/suiji-r107-contact.liquid",
-      "bytes": 3384,
-      "sha256": "e5e268d51d44dd9e7badc7d9d1ef669472f237057c4747a4805a4b50bd5377b6",
-      "git_blob_sha": "bda8b879f539e9ce8d15ccbfadfd53e5800b1424"
+      "bytes": 4674,
+      "sha256": "3b87b7f4f9b31dcbe9820038c525aff4c216288c46b9b8e05171fec9a9bae784",
+      "git_blob_sha": "96a52e040c9ee6eb54bbb833154dc75acd488b94"
     },
     {
       "path": "theme/snippets/suiji-r107-creator-guide.liquid",
@@ -4026,21 +4542,21 @@
     },
     {
       "path": "theme/snippets/suiji-r107-design-private.liquid",
-      "bytes": 3175,
-      "sha256": "a576eca7c6a651b2f14339854a0477400668d57a74fe7f0344ccfd34d471d2ff",
-      "git_blob_sha": "275a1933d09c21f867d6d02d085c51234cfd4213"
+      "bytes": 5103,
+      "sha256": "4727abf506b57474cc7af26c2463b5f6a392c1d9e3fa3c61a29f4402450586a4",
+      "git_blob_sha": "3eb7eb913ad420248f181e097d077aa5e05a091f"
     },
     {
       "path": "theme/snippets/suiji-r107-designer.liquid",
-      "bytes": 4958,
-      "sha256": "77adae17201ffa9152bf32c4b9cdf1c26bf20a4f27626b4dd69556c261f9ef5e",
-      "git_blob_sha": "4c2cbb93d1035a7971c577e7750213cee6e78c1d"
+      "bytes": 6188,
+      "sha256": "8de96a0a9b913618d5d30a3fe5b0e94479714307bf768d12c814293861be45a5",
+      "git_blob_sha": "434d9e070871d6e17cbe06de5d06310e744091e3"
     },
     {
       "path": "theme/snippets/suiji-r107-editions.liquid",
-      "bytes": 17323,
-      "sha256": "658277117d646b6fe6b52f3a3ac390b92337a7b5cb12401756d88c97cd2f4b0e",
-      "git_blob_sha": "990424eb2471bf3ed8885c94a65fc6c4e24c6950"
+      "bytes": 8984,
+      "sha256": "6204024223f3e2108831a4455963a59ff9864fa05b553ed40d91c09e3549b43f",
+      "git_blob_sha": "08d2beb562af193adfaf6701fa1d249e4e2ac81a"
     },
     {
       "path": "theme/snippets/suiji-r107-exchange.liquid",
@@ -4050,33 +4566,33 @@
     },
     {
       "path": "theme/snippets/suiji-r107-faq.liquid",
-      "bytes": 5700,
-      "sha256": "f5f8ed6dd6ac7ae06f86fd87e7c2335fa7c89fae31f65411e884d11b55d46548",
-      "git_blob_sha": "223b083df1b9091a302c5227c13e3c79ebc176b3"
+      "bytes": 7202,
+      "sha256": "877b136a95725999c4cc5585be1838e28f2d2193b50186966046233c59b15f65",
+      "git_blob_sha": "6e5072d7dbdcc573a1b92f81452adf853736ca1d"
     },
     {
       "path": "theme/snippets/suiji-r107-footer.liquid",
-      "bytes": 9750,
-      "sha256": "bf442abc39ed2d342aef9875cf68b83ba34b01e218f0cfab82ce4add77e3a8e2",
-      "git_blob_sha": "856e3b6bd60ecb9f7a6ba7ba6057ad55e05a05de"
+      "bytes": 9821,
+      "sha256": "596cd70bc42017d3c540b8cccd04bb02761066aaa95da3269fce393f672c4530",
+      "git_blob_sha": "ba9e9a776c65f3f11cbaf914200c68e34610b67b"
     },
     {
       "path": "theme/snippets/suiji-r107-gifts.liquid",
-      "bytes": 8553,
-      "sha256": "213512aa128572eec2923a9ea3f7a6026669a6779c3feb7661bfe6d02e97b915",
-      "git_blob_sha": "1db829c7360c17d86a25df65c2ef973c82fcfa98"
+      "bytes": 7777,
+      "sha256": "d96a4dce9557e2e4fcf5b71823497fb4a0077af0ed315cecd2c61975cf18f65b",
+      "git_blob_sha": "a0f633c1d0a8e57b820903eda243b3a886297084"
     },
     {
       "path": "theme/snippets/suiji-r107-header.liquid",
-      "bytes": 42924,
-      "sha256": "1fc8ab40a03bbb7b0805167875e07e21787130db0da0620e973ca525fec68992",
-      "git_blob_sha": "d30b23960ebf1ec8c84e59c9834f3e8402798dc7"
+      "bytes": 30838,
+      "sha256": "58f20aa75a85ec435be1a98d992484ff4ef5bb572c28c24131acc39da7f0f4bd",
+      "git_blob_sha": "df5edeb773d433c69fcd948284ff7b4364e5836d"
     },
     {
       "path": "theme/snippets/suiji-r107-home.liquid",
-      "bytes": 34018,
-      "sha256": "9d3f9110cea08a1d223ef18de8369c3b542ab57fa0300550ca597ddf1b8d9aed",
-      "git_blob_sha": "1a99239ad33cf0d62006619142ea85fe9d25c426"
+      "bytes": 21911,
+      "sha256": "c8bfffb37b8b1ce4947a8964dd22d7b76973970155e7b151313fe993552e689c",
+      "git_blob_sha": "64e8b30a34b7627893814162acde46264f193352"
     },
     {
       "path": "theme/snippets/suiji-r107-journal.liquid",
@@ -4086,339 +4602,339 @@
     },
     {
       "path": "theme/snippets/suiji-r107-mechanism.liquid",
-      "bytes": 8987,
-      "sha256": "e8351365a698afa45a889f9671ea5e842c98e010d58106fb54d6be67f230c36c",
-      "git_blob_sha": "ea8cdc4ebbe003302df8535d57d1cb629b9aa992"
+      "bytes": 8694,
+      "sha256": "8a8e0347f5e4334d893e8dd14163f29ecf9b34d678a6ee0ea60342216c0efafb",
+      "git_blob_sha": "9cd0d92a9f278bd03801423b54825d4c360ef29a"
     },
     {
       "path": "theme/snippets/suiji-r107-members.liquid",
-      "bytes": 6505,
-      "sha256": "e856e30904406a391cf1085264e0a9cef9c685da1cda9715d1c0cba807e6cda9",
-      "git_blob_sha": "4e5d23a9a6f7c08f5a3aded57cd695dd5d5f9566"
+      "bytes": 7835,
+      "sha256": "e7f3cef0fcb414fb0adb141ca8fd5ae1e9933d823f61e04723fcfcecfa8dbe6e",
+      "git_blob_sha": "4b6706a2b5e3189fa1fec0923c7ce23483ba6e70"
     },
     {
       "path": "theme/snippets/suiji-r107-p-a02-drop.liquid",
-      "bytes": 51536,
-      "sha256": "3d5e6343dacc07f632eba870042ccc15cfdc031b9cd677556374d0fcf44262bb",
-      "git_blob_sha": "3606b55c42112085095a9e935424aea83c846ff6"
+      "bytes": 38977,
+      "sha256": "d7694c8ea86b784fc7544f6ebd2b22877156227f4382251e997b3b3910e5a79d",
+      "git_blob_sha": "9068d2fead0f43bc2baac06e3bdb226eca829612"
     },
     {
       "path": "theme/snippets/suiji-r107-p-a03-drop.liquid",
-      "bytes": 51508,
-      "sha256": "c8ae63611338955aa18b5a0add48cdac57fed89c9a4b506f9a6fb9ed55f24484",
-      "git_blob_sha": "67115d18d6e7522be0c17ddbef0b01bdf3d9209e"
+      "bytes": 38913,
+      "sha256": "7565f90f94ad4152899243e5f45768fec5426656d6b39d42161d36a898461886",
+      "git_blob_sha": "a5b1addb9648392685e44a5aebbb5ac33a4b03a7"
     },
     {
       "path": "theme/snippets/suiji-r107-p-bracelet-b3.liquid",
-      "bytes": 63655,
-      "sha256": "5a2080744a4f00ad484067e41bbe5459ea83d875b4ee25b86dea60e48bfb06f8",
-      "git_blob_sha": "1be329e6ac366dd7aa8c6b15e97e8f1cb1d8a33d"
+      "bytes": 1522,
+      "sha256": "1290a89d78f9e0da2e16cbf2854888382280fde26058879bf7f3bc46a0118c8f",
+      "git_blob_sha": "80f7b36551c7d2a69a3e58fe9bab3d6996155174"
     },
     {
       "path": "theme/snippets/suiji-r107-p-bracelet-b4.liquid",
-      "bytes": 63660,
-      "sha256": "5379627187cc086933353a9e9d3eb131a5fa9b9ad6b51bdbbf17b28028544f7d",
-      "git_blob_sha": "50994614bb9d1e75b1812d0e371ca5bd11a8fee1"
+      "bytes": 1523,
+      "sha256": "34567f64ff9d00d160c7284cf693e93fa38eafa507e7f332f3c1ac8eaca6a4a9",
+      "git_blob_sha": "b7c93d2dea499214a5b8db1f20a8298aa7637b4b"
     },
     {
       "path": "theme/snippets/suiji-r107-p-bracelet-b5.liquid",
-      "bytes": 63650,
-      "sha256": "dcaa3eeb65f48f4937ce34c33f58cd1b8c7e1bdf3321f388499578eaec4a9405",
-      "git_blob_sha": "c6a6ab1386b2ef6431b8e10c29d75b96a402ba75"
+      "bytes": 1521,
+      "sha256": "b4af5bbc4ff2094a1018b361fc1cc8ecd4725072e0ef69b2e9c80b1105e2ae52",
+      "git_blob_sha": "b23b7447a6acbc9f8d825002741d34c20514e202"
     },
     {
       "path": "theme/snippets/suiji-r107-p-chain-l01.liquid",
-      "bytes": 50233,
-      "sha256": "66717c97dcbd435e9af1d947af8eea65cbe706afa58cf55b2467369a1ca880e1",
-      "git_blob_sha": "549857cbd5977650b86991e674d101993e166463"
+      "bytes": 1524,
+      "sha256": "13ea1092d73d89ec9e1336338f700d0606f8776be68336fa801a2ebc565f7897",
+      "git_blob_sha": "04ab19a9b8ae314ec8fd2774eaaf0ebef0bb97b6"
     },
     {
       "path": "theme/snippets/suiji-r107-p-chain-l02.liquid",
-      "bytes": 50238,
-      "sha256": "b178eea2b8060c8aee925d8084964186fce1df9d71a503eb8e4a982150c917a3",
-      "git_blob_sha": "a97607a3106c0312e6264afbd6ba63a2ecac60ba"
+      "bytes": 1525,
+      "sha256": "9464d9219658c28a63f3f9d4595c5b5b1789da25e54ce4118e031468bf255a93",
+      "git_blob_sha": "4a031e0f80ce622a45a395dc511bcff57a1d79e6"
     },
     {
       "path": "theme/snippets/suiji-r107-p-chain-l03.liquid",
-      "bytes": 50223,
-      "sha256": "fa29e7ec43ff3de2757da7781833e416927c6cb3ad2714198dc62af91fe71193",
-      "git_blob_sha": "4c046f07a5a0299bdb53bf85965dfd9fca8acac6"
+      "bytes": 1522,
+      "sha256": "8e1bec1870ed3353fda0dfb558786af8bb9b7a1e2a06c67049380fcd5905379e",
+      "git_blob_sha": "54832cbddcb7bead1e08eafebf0d8f98ce1457c1"
     },
     {
       "path": "theme/snippets/suiji-r107-p-chain-l04.liquid",
-      "bytes": 63471,
-      "sha256": "70ffd6831ebe4842fb5e7db6bc57d2eaecd7957e760b6c408a81d256bad32ec9",
-      "git_blob_sha": "93154063f906a548a4b4fac363914d8bc96793a4"
+      "bytes": 1515,
+      "sha256": "cbe91c3d74d1860c59bb69adcd4feeec3ac3a129f05c1f3673d700b69403f91d",
+      "git_blob_sha": "11df523486f8c1241548f668f4aa99ff216cdc95"
     },
     {
       "path": "theme/snippets/suiji-r107-p-chain-l05.liquid",
-      "bytes": 63576,
-      "sha256": "ca8163fe5dbbb49f28b6275c1407e11ff0bdd58b1b7755dd2c055c630092b18c",
-      "git_blob_sha": "fcb9d1bd67e04482769f5fb6865f86ba4399e050"
+      "bytes": 1536,
+      "sha256": "8c781507a825fee06e41d98caab83035ec7660591171945349657b19c404f8bc",
+      "git_blob_sha": "b7dc06351b0fb1a2d5d861cbc0a6fb2e336362a1"
     },
     {
       "path": "theme/snippets/suiji-r107-p-collar-7-drops-1.liquid",
-      "bytes": 50616,
-      "sha256": "1e6e30de9c28eadff12ecd0d00889daaed7ba073b5488e1b9020a63d015f34db",
-      "git_blob_sha": "bcd45e937e6edb00f17396da966892684f3942d6"
+      "bytes": 39321,
+      "sha256": "6631799c9cf6f867f5b27dbe06f3929e0bb075f6116bc0b650faa8d0f528bd48",
+      "git_blob_sha": "0fcfc4ac135fd483576aa8adbc5418ab5333d9ad"
     },
     {
       "path": "theme/snippets/suiji-r107-p-collar-7-drops-3.liquid",
-      "bytes": 50626,
-      "sha256": "87dfb93b8444852ac44578ad02b35726594b4050103ef7792bfdf892ef005879",
-      "git_blob_sha": "ecc2782adcf454db266e7543de28a4002adf282f"
+      "bytes": 1537,
+      "sha256": "15a2a58552679684dc714b7f14b26b99bb255f2639ebb547281058d341361f45",
+      "git_blob_sha": "12306fdd6d2598f906065bf628adf94b22d4e39b"
     },
     {
       "path": "theme/snippets/suiji-r107-p-collar-7-drops-5.liquid",
-      "bytes": 50626,
-      "sha256": "b6191af6df44f3f9f3c4db79b88ddb67d02c1945764de39e50097424b31b33fc",
-      "git_blob_sha": "f5cab360ead570686b58bb64923bb1e0478c6119"
+      "bytes": 1537,
+      "sha256": "493debc23d5c55d50c9821549e248e5e7f9503c27cbffb69d19100e95182dadd",
+      "git_blob_sha": "0ee87942af59f570987c2b55e7c099f6a8e153ec"
     },
     {
       "path": "theme/snippets/suiji-r107-p-collar-7.liquid",
-      "bytes": 50361,
-      "sha256": "14dc1c1ed48b21b7c9b3a65fd2100abbe68b22d6e473973950371dec4b4f4a66",
-      "git_blob_sha": "9f5664fbc1dedff1d7b16a51d4e4fcb82c0cb73f"
+      "bytes": 38166,
+      "sha256": "ed439ad5d37f7677dc30c2ad218ff42a09b1f05b010de36e5b64d5709cd34074",
+      "git_blob_sha": "2951bbff05a1d7fbc8d75e1705202402c3b2703a"
     },
     {
       "path": "theme/snippets/suiji-r107-p-collar-9-drops-1.liquid",
-      "bytes": 50616,
-      "sha256": "ad1efa2f913a8586083b8c59d4f4f2614ccb6f2ab81d14884927afb8e7333f41",
-      "git_blob_sha": "c07e756679e965129bd64277f729bcb1da5ee97e"
+      "bytes": 1535,
+      "sha256": "040e8fbf1be730bd46b5f6f3a98102c4b50cc546dfc067b806a605c521dcf116",
+      "git_blob_sha": "432f569dc1ebf4f1ba4f9b30d4c3b7c6735e5fcb"
     },
     {
       "path": "theme/snippets/suiji-r107-p-collar-9-drops-3.liquid",
-      "bytes": 50626,
-      "sha256": "33fab36e8e3baa915c78c4329bd989b4643b5175919e98a141f89dc032663742",
-      "git_blob_sha": "5797bededa4c7c1e62febc40fa42f05e2899b460"
+      "bytes": 1537,
+      "sha256": "5206feb9d04d5273b924bf9eaf30789561c30016e729cffb429bee6c1b0a907e",
+      "git_blob_sha": "32b060de56f1a14dfa718476655e0f92535aed06"
     },
     {
       "path": "theme/snippets/suiji-r107-p-collar-9-drops-5.liquid",
-      "bytes": 50626,
-      "sha256": "e46a028ddbceaa5cbd0547279224eb81da67bedf2901423a6d44944546012b70",
-      "git_blob_sha": "fe496dc3149ee63acb93378a3cd5ce5b6e349a35"
+      "bytes": 37679,
+      "sha256": "a2f71c0c9ad5c077945d3b81227c8d312730bd32dec00a7c75e79ddfb599f2a5",
+      "git_blob_sha": "7e71587892fca7fb84f12e5fbc7abb1a49d2d564"
     },
     {
       "path": "theme/snippets/suiji-r107-p-collar-9.liquid",
-      "bytes": 50361,
-      "sha256": "4b79736a54bc895897cc32512c5e628da4220898c0ea7c5e435322c24cf0438a",
-      "git_blob_sha": "25bc02f049e97ecbb044f86eb52a42ff42982aed"
+      "bytes": 1517,
+      "sha256": "ee8c92247144ca9a30b9c13324752ce3fde04c0a690bc6e4923d09dfcb5f8d89",
+      "git_blob_sha": "76db9041dbe2ea77ea5f7704c0e5611c81f300d4"
     },
     {
       "path": "theme/snippets/suiji-r107-p-core-lock-pendant-base.liquid",
-      "bytes": 50366,
-      "sha256": "5643631029bee2b72b409f2557106377753cae8b1b4a6454633c5d0df3b2ceff",
-      "git_blob_sha": "98d74c5be0367f7b15fe02b7cb69df72d10636ff"
+      "bytes": 1528,
+      "sha256": "b06483a34717174a9338f23b0ff7d7ff49f3852909215cf64bd05dc853cb6a61",
+      "git_blob_sha": "c2e52d7d9f48e422413e029a819e159bbc412d9a"
     },
     {
       "path": "theme/snippets/suiji-r107-p-core-lock-stud-base.liquid",
-      "bytes": 50811,
-      "sha256": "f03c9fb5fe3e3a4a05f5f4899560a8020457032f53a15a2a74b587c3d90f927d",
-      "git_blob_sha": "8352c608e534abc74e9010bb02cd6ccffda34a00"
+      "bytes": 1520,
+      "sha256": "8331af78ac09489bddc9fcf757fd2092b04ade9a231744c8589a214c97fbfdc2",
+      "git_blob_sha": "c8140bfd6cb9eae31182549a3ac7929638d7bec2"
     },
     {
       "path": "theme/snippets/suiji-r107-p-core-lock-stud-metal-back.liquid",
-      "bytes": 51474,
-      "sha256": "53b8d73f91d9e30aef1b75d322ffbd7c8bdc896abf4be3f91860dd14e8bfa5fa",
-      "git_blob_sha": "09896d11f2f50397fc52b10bc928ac2752194ddb"
+      "bytes": 38875,
+      "sha256": "493e52bfc1306be7e3126ffaed67ce32709a2ab8c2d0904fae3733182a97a380",
+      "git_blob_sha": "70722847ba528b1f46026d7661e70002d1945ef1"
     },
     {
       "path": "theme/snippets/suiji-r107-p-cross-chain-core-lock.liquid",
-      "bytes": 50682,
-      "sha256": "290c79f9c78ff4f76a80afe80bfdf5a38d4922f45ae523a364dcff3e41549f81",
-      "git_blob_sha": "4f939cad6c8ded8e1cab98154c7ddde8cba157dd"
+      "bytes": 1550,
+      "sha256": "176c44ca1b0fc975c986c8988ea75e5a888f328784131cc9369d5680a5c19485",
+      "git_blob_sha": "51cf7a2ca4cd8cfd56ed4316ae50b755a60bebf9"
     },
     {
       "path": "theme/snippets/suiji-r107-p-cross-chain.liquid",
-      "bytes": 63703,
-      "sha256": "f4a7a3570e674049861a94c0d93784e554dea5ca0d1ceb36767543279b973522",
-      "git_blob_sha": "bba3b6f252ed0f0b7744d7b87ac2db60771734f8"
+      "bytes": 1520,
+      "sha256": "f94841b6c912d0e133390f0512df55420f52d407170a26378b533f98f6abbb7d",
+      "git_blob_sha": "6fd02ba3f95998fff18b829383890cc6281d596a"
     },
     {
       "path": "theme/snippets/suiji-r107-p-design-f03.liquid",
-      "bytes": 57675,
-      "sha256": "0fd0e4d89a2897d7d7737009472d9f23f16ca247d240e2c9eaaae50b1d0f57e3",
-      "git_blob_sha": "88a384d9ea475455d457102cf27386f53e82b7e3"
+      "bytes": 1523,
+      "sha256": "d6ad5429184651b708f8662ad92ddb5fbfe3cf587c6281bcb46dccff2d5d5c15",
+      "git_blob_sha": "0e3b056650b6236ab2c24d190ec283f5913a5260"
     },
     {
       "path": "theme/snippets/suiji-r107-p-design-f04.liquid",
-      "bytes": 57610,
-      "sha256": "95272b7a0074e73ae8b39a918dbb919032b1c497e2ae009c8c3f7ca59e7be4e7",
-      "git_blob_sha": "dcf2234015d6dd90c7c0571e0d046b5756a57317"
+      "bytes": 1510,
+      "sha256": "87e1994528baac488a8e9fff2c72dcad29c5a048e5567daa03072d99a84230ef",
+      "git_blob_sha": "343e1d0fea7d91372f05c4dea7e7fcf55ab6ca16"
     },
     {
       "path": "theme/snippets/suiji-r107-p-design-f05.liquid",
-      "bytes": 57585,
-      "sha256": "e40bc504be75af270696f1550ffa0936882ea45f1beb37139d2b7ffe673b4ea2",
-      "git_blob_sha": "83bac88b93b2429739c1af73919edd4eac8b4090"
+      "bytes": 1505,
+      "sha256": "ad1d162599c4ea4690f22d68f37ef265acc4c772b6e5b63e130bc596a77b6384",
+      "git_blob_sha": "502530ad195d32e827d37d1216385c1a0e2c25e1"
     },
     {
       "path": "theme/snippets/suiji-r107-p-design-f06.liquid",
-      "bytes": 57670,
-      "sha256": "e7d2e9a29501067b665b04d983f8e68f1f5b02a17344cf468de0851ebae96c26",
-      "git_blob_sha": "929eb12f0754f26097c6b372e122a252e4805529"
+      "bytes": 1522,
+      "sha256": "3a03870f5882e3c25396ea54ce201934f3ab23c92890d3d4f0252c0865dd5ca8",
+      "git_blob_sha": "222d37410ad6a34afd4cafd7a10bbb5187cb8b78"
     },
     {
       "path": "theme/snippets/suiji-r107-p-design-f07.liquid",
-      "bytes": 57630,
-      "sha256": "c1caf731276a94ecb528ea929f1affa504fa6c2b1bc4fdec5987ea21d701e38c",
-      "git_blob_sha": "50018bca4c8191683c61a94ee4f11593b2edbca9"
+      "bytes": 1514,
+      "sha256": "d1cd977b025cd25290d66391b98c48480a46078b259619a7f2601ecbfb9d3304",
+      "git_blob_sha": "8eaca660b45f092a49eece6fae951c1fbc05a8b7"
     },
     {
       "path": "theme/snippets/suiji-r107-p-design-f08.liquid",
-      "bytes": 57755,
-      "sha256": "ff1f5262236e080d7dd42806eaf4a9bad139c3cae9728a856045f8c39cf08c22",
-      "git_blob_sha": "9980f22ad9d6caa7e69f9c4c34c581fe809a49d0"
+      "bytes": 1539,
+      "sha256": "1f431982d6e36c24e2d758ce74ef5c573928739d34ee62b67989d64cf49c7ebc",
+      "git_blob_sha": "461d73b0641990b1d6a5f7ec7b125a14ff2b8f91"
     },
     {
       "path": "theme/snippets/suiji-r107-p-design-f08b.liquid",
-      "bytes": 57727,
-      "sha256": "b1655c22d89f3caff8baf260e2c0927a5655947de78dad73c0c2669b269274a5",
-      "git_blob_sha": "15a836e2977bb49e064c49aa8cf6d1a24cbf129c"
+      "bytes": 1531,
+      "sha256": "d6693512624bd98c2bf34e543da42a19b1790dd2795be5316b5435f298ecdf23",
+      "git_blob_sha": "874bc516fb350c648a3a494293468e671946cfb9"
     },
     {
       "path": "theme/snippets/suiji-r107-p-design-f09.liquid",
-      "bytes": 57655,
-      "sha256": "30f888f4c8be5968dccafeacac6fbb5f32b09a66b71bf74dadd8bcf5490efaee",
-      "git_blob_sha": "05d6e01c386e9f77ae1b912bc64f66d370c4b0ed"
+      "bytes": 1519,
+      "sha256": "d3ed7f6ab3c8974cb4082525a7a231e1ff771ae5c7c0a2526be757eb476b2028",
+      "git_blob_sha": "703f266f5b386006b2a4ef7129be99b6ec8ddf66"
     },
     {
       "path": "theme/snippets/suiji-r107-p-design-new-round-0926.liquid",
-      "bytes": 57782,
-      "sha256": "07709dc0e7ce0caf544250e3f11a0d9b0a297cdd3c6abe8762aa26785e73b9ad",
-      "git_blob_sha": "6bc53ee4f8bc09fa3637f2cca82b870a4587879c"
+      "bytes": 1518,
+      "sha256": "0e6f2c626f69a67316b374a65b43afcf174ad0705189262bc5fc542da2443161",
+      "git_blob_sha": "58c9fc8079b7392fe7ea7d628c8efe899a2c5f34"
     },
     {
       "path": "theme/snippets/suiji-r107-p-design-t01.liquid",
-      "bytes": 57660,
-      "sha256": "718d9c1222d9487771ff151ec5e0175dc9f70d08ec18eb19c139fa7eecc69a86",
-      "git_blob_sha": "17aae99f279e69e3f95822d34208c56132728803"
+      "bytes": 1520,
+      "sha256": "7e80923b90bfa0d2628cf5c2214f08ce40444171df8980c5d498e8d3c4d5b868",
+      "git_blob_sha": "661fd767f330938dd37eff6710180ecf96541195"
     },
     {
       "path": "theme/snippets/suiji-r107-p-double-arm-ring-base.liquid",
-      "bytes": 71235,
-      "sha256": "38c9c7919e6c1caf16f1716f62cc8ca8efce2d9f9c0d5234f3f60018e34fdddf",
-      "git_blob_sha": "42766b22e2c2105e761ee29a0d1cfc63ebd35223"
+      "bytes": 69481,
+      "sha256": "70cbc007934cf5557489adfacd45cd927a18a8562c14c0f5934e12e15bc76d45",
+      "git_blob_sha": "973f3f3969e535fa72dd92db9a349b6e16635bc1"
     },
     {
       "path": "theme/snippets/suiji-r107-p-h01-hoops.liquid",
-      "bytes": 49664,
-      "sha256": "690f829a4d6d3ec93335623b70ac03089f634b2ca91a79b827ff094854ebb79d",
-      "git_blob_sha": "61a774d5a089762687e43d4878961ffae6283ded"
+      "bytes": 1532,
+      "sha256": "985834ab01fa8bdeb566a7b29a73e006eb20891085e77437b9753d9d0785dd25",
+      "git_blob_sha": "5648882b4f0831ff86afeab1b6572f621d1d6ec9"
     },
     {
       "path": "theme/snippets/suiji-r107-p-h02-hoop.liquid",
-      "bytes": 49337,
-      "sha256": "366e5475bece8387bcc8c2616f76729ace0eb5e0d020c8bd8611bfe4e700c766",
-      "git_blob_sha": "37fc1bbf5309d2df68efbc711ae0dadf879c3f7d"
+      "bytes": 1502,
+      "sha256": "f1d08e02994723697c92d3f3fc2eec06f00b2579d578885c8ce3899591dbdea7",
+      "git_blob_sha": "967b6dff725dc29c901a5cd2d09b0a17c2afd818"
     },
     {
       "path": "theme/snippets/suiji-r107-p-h03-connector.liquid",
-      "bytes": 63392,
-      "sha256": "240910ec88f0d7bac08daa345ea7c98dec3368318d923463054b0f67a811e0d3",
-      "git_blob_sha": "5b7880b0d63065339aacca5ff5b2bbc392c3b3e6"
+      "bytes": 1503,
+      "sha256": "222bcd1d2c170da7682df7e5ab34dcac7db2f3e3d66b9ea8d364248c974af23d",
+      "git_blob_sha": "c76647c1afb95fb682a2535c70e454c79100e208"
     },
     {
       "path": "theme/snippets/suiji-r107-p-h03-core-lock.liquid",
-      "bytes": 50309,
-      "sha256": "8f0955d31f9181799c89420f3944e0a50f209376a5edf4d1667594c821f41896",
-      "git_blob_sha": "8bf5dda5d8d2f5272a1adb34422f364df0667881"
+      "bytes": 39939,
+      "sha256": "5e05405a7415a3471fa73b9c3edb1c4aa9649f909049ca1483eefba52666e643",
+      "git_blob_sha": "8efdb7142f54e7cddefe1174d55d53a0b7563ea5"
     },
     {
       "path": "theme/snippets/suiji-r107-p-logo-round.liquid",
-      "bytes": 59569,
-      "sha256": "836b08ec9bec52c31c55f8e0539af4ac0346aa3812dfbf69fed6536b188c43cb",
-      "git_blob_sha": "906ca9f63ba4b5376bf9c4557d0719ff68aff553"
+      "bytes": 1510,
+      "sha256": "d57c56c8d7145876cadda06e5c75f8e479fb88de33ae1cfa995629e838bba1fc",
+      "git_blob_sha": "5ab347400db5018cfe9bc395434417002317528a"
     },
     {
       "path": "theme/snippets/suiji-r107-p-logo-square.liquid",
-      "bytes": 59600,
-      "sha256": "d9ff2adf5a0c5b453d2468cd268a7c8e7ff0d42c86b11a16b35e02a70896266b",
-      "git_blob_sha": "9c4b9fc2162a1546d955a07a60a601dbd8758a5a"
+      "bytes": 1513,
+      "sha256": "c883f3147ba0535ce99b4e0ddcedb313f88c53eeb12e65330e9569d779f685a4",
+      "git_blob_sha": "787f0e9bd56aa3571b43f5b457e3af080528aac6"
     },
     {
       "path": "theme/snippets/suiji-r107-p-metal-ear-backs.liquid",
-      "bytes": 61628,
-      "sha256": "c685f68b010638941b183067a2412d46c7ae68b5ef31b158250569cc7734e1d4",
-      "git_blob_sha": "8bc725ae42ed086744dfdb071858ab065d27d41b"
+      "bytes": 1525,
+      "sha256": "8eb5347a2cf5bc57bcc0987daaa19a92201826f1831e5292d7b9e846fea320c8",
+      "git_blob_sha": "4205675ac0f82eba6195121a28762ddcad8923d1"
     },
     {
       "path": "theme/snippets/suiji-r107-p-oval-motif.liquid",
-      "bytes": 93275,
-      "sha256": "e1d07db1c18a7e6fcfdb62fd170a514345c4dfcf14c3aa90383c8bcc19e68365",
-      "git_blob_sha": "2da04aaca7799ad2cb242229e66ca41416d600c9"
+      "bytes": 83523,
+      "sha256": "02cd75360675ec474ad888b5257b32f5f4939ac3a0f6d29e6856eb8ebd289030",
+      "git_blob_sha": "87e9eb92e27760aa32457bd6f4dc3203cba4a4c5"
     },
     {
       "path": "theme/snippets/suiji-r107-p-pearl-back-stud.liquid",
-      "bytes": 50911,
-      "sha256": "e69156e3bfd9ea8948c73fb14cb2e23de1ed0309acd94b49f014cb68d85bfdb1",
-      "git_blob_sha": "2cff798d56b044acd8e57c0a8d1d69af08bd7377"
+      "bytes": 38324,
+      "sha256": "d305724923ece74d568f085cee3a0e3a6935cf22b1d63fc23569beaacb96c9c9",
+      "git_blob_sha": "7c0df31d169e113a5ceb5d5e641bc4f453c4cd10"
     },
     {
       "path": "theme/snippets/suiji-r107-p-pearl-effect-ear-back.liquid",
-      "bytes": 61686,
-      "sha256": "c9b115f242fa99667999fdf75baa58e608f5452b36a2d7290c00a3783a84777d",
-      "git_blob_sha": "81228232bb44fd7386718784406250c752c133c6"
+      "bytes": 1522,
+      "sha256": "86a678ca1a353cabb114067f0e312c2cf9f86e8d6671db36c5aa62d5579756c3",
+      "git_blob_sha": "0327d8fc105679de6145916390f2d06096bbf6f2"
     },
     {
       "path": "theme/snippets/suiji-r107-p-pearl-effect-stud.liquid",
-      "bytes": 62112,
-      "sha256": "672e8c4c93cc92db2bbff94f21779e7b8a5f50de642790e4e29283be8343dc60",
-      "git_blob_sha": "5bfaf4ea83b2980a129571ebc65fdc4ccf1222c3"
+      "bytes": 1509,
+      "sha256": "92f6bcc337e9e40d5a63faa84467b940211c4eb421ea3b3d780b82ef07b197e7",
+      "git_blob_sha": "d98836fb0f3cf310524c8a1addcf0564c3f12895"
     },
     {
       "path": "theme/snippets/suiji-r107-p-r01-iridescent-ring-base.liquid",
-      "bytes": 57515,
-      "sha256": "4fe7deb622ce3e76425c70cdc4cb848e21cdc960bb70653f358fcafa071dbc25",
-      "git_blob_sha": "12a7e8e79844975d2946a85692bb1cc7febff3ad"
+      "bytes": 1535,
+      "sha256": "36f2812f278832d7f9bc1ee23c7a9048e861273856c7daf9e0261c5e8197667f",
+      "git_blob_sha": "5e1d087459b0e09782520a7ece30bcb4aedc3dfa"
     },
     {
       "path": "theme/snippets/suiji-r107-p-r01-ring-base.liquid",
-      "bytes": 71108,
-      "sha256": "2b507ec159617c3b3ac722cdf9d38952f6b52431aaa04a91e1671787b239cb23",
-      "git_blob_sha": "6d0ca5ba77d542992e70ee228f8bb66a529c6b2e"
+      "bytes": 69282,
+      "sha256": "faea78f63ff91d3e31c8c36bab372b0594d4b903ed09d2004b50eb00b5e4974d",
+      "git_blob_sha": "3dba6fd32f35c42a828d9bea193dbdc6786c7987"
     },
     {
       "path": "theme/snippets/suiji-r107-p-r02-ring-base.liquid",
-      "bytes": 71117,
-      "sha256": "4a7e260480d9d89f37f989647d73abd25863c239d2d10bc3376bbe13ae927106",
-      "git_blob_sha": "615414265f22ddb63fef578f7ed0da543b71b4a1"
+      "bytes": 68507,
+      "sha256": "bf81e1991b621ffe415c72b51c7a37eaeea4255ac9f344855e88e7357745ca31",
+      "git_blob_sha": "6ff64e99f98dba1da5afabd7c99999828ca1f34a"
     },
     {
       "path": "theme/snippets/suiji-r107-p-set01-stud-earring-set.liquid",
-      "bytes": 49741,
-      "sha256": "12997269e86d91ad95e79e512bd32dd8d78a9e85e1ce1a3aacea876924514d08",
-      "git_blob_sha": "b57b5450620a6cec6874da9532594880cb73afad"
+      "bytes": 1522,
+      "sha256": "1fbeb9915218e5688b7089c6f60decb2e698318852cbc0a28a3285fd33aadc3d",
+      "git_blob_sha": "7f38c0540ef7f78a6e082c66e60b59b9487d07b3"
     },
     {
       "path": "theme/snippets/suiji-r107-p-set02-choker-set.liquid",
-      "bytes": 48995,
-      "sha256": "d06ef0859b1d807cc3b3df70b501a3df63a124d3b3ec928e8e11638316bd5f76",
-      "git_blob_sha": "03cd0ce5970cdaa46121b46691225d8c2a9a88ea"
+      "bytes": 1505,
+      "sha256": "1e8c6206f1417e7485fecd677830a6c2f79fbc15c1c79b879f20827c9bf8f75e",
+      "git_blob_sha": "72bcb02fa0967ed64f0d296cdb81b90243fefe0b"
     },
     {
       "path": "theme/snippets/suiji-r107-p-set03-ring-set.liquid",
-      "bytes": 59747,
-      "sha256": "1b925a7d943e0500585a4de31692f38034c316e2c61ff3577c75baeefbd8a046",
-      "git_blob_sha": "e95f6675134aba11c594fb71c2599a20ec123cbc"
+      "bytes": 1498,
+      "sha256": "57aabd07bd1f53ba888073711fc6a6ae6bd0d0c47d2beba6f2b3929465ea3cac",
+      "git_blob_sha": "7346c1dde65ad4d8208a3aa3ae0b756365ec20e7"
     },
     {
       "path": "theme/snippets/suiji-r107-p-set04-hoop-earring-necklace-set.liquid",
-      "bytes": 49377,
-      "sha256": "7fd0be52b865543196b5fc917b38c564d7d371c31040a5b16cee4bc8d9f667da",
-      "git_blob_sha": "2c7a57803fa6078d8e80fb59dbc6ff7fef5876b3"
+      "bytes": 1535,
+      "sha256": "bd2606b46a391ba5062047c69c1345332a306ab3aed1c1b8abcf02fb8f1a599b",
+      "git_blob_sha": "4ae5c270f164192742b886ab249ef19031f7decf"
     },
     {
       "path": "theme/snippets/suiji-r107-p-set05-stud-earring-ring-set.liquid",
-      "bytes": 59858,
-      "sha256": "9b66fe383ccf46ea1d918347e997143c43fec8814a631a1a3986f25756295975",
-      "git_blob_sha": "3be106175fd33f35debb37019a28007906ba6ce4"
+      "bytes": 1539,
+      "sha256": "d7065786a5d2c72030b4bc37b3ad2d762fad898cb367208228f95ca344490cd9",
+      "git_blob_sha": "266d54bad16434af16ac0248e866a60e60aae323"
     },
     {
       "path": "theme/snippets/suiji-r107-p-set06-hoop-earring-necklace-ring-set.liquid",
-      "bytes": 60467,
-      "sha256": "3aa4ec52ec2fc40fba169709f3444902b8360255dab925df2e21eca1aafdb6d3",
-      "git_blob_sha": "a8509930c2da84782bc2a962340a2a1569f6a6d2"
+      "bytes": 1548,
+      "sha256": "fd543304e1dfc217b641098d1a94aac958e2cd88dbf53cb4d1396abec98f7a7d",
+      "git_blob_sha": "dd7f497138ee2fa282902b3bd30a0d5538337236"
     },
     {
       "path": "theme/snippets/suiji-r107-policies.liquid",
@@ -4428,33 +4944,33 @@
     },
     {
       "path": "theme/snippets/suiji-r107-public-study-aurora.liquid",
-      "bytes": 4352,
-      "sha256": "553a6f12d90c287be73d4b71330d848c4bfc4dc08e1e372b24cd9d51325c148f",
-      "git_blob_sha": "4a669408faa36bb3b169162d8490e55e00b650b4"
+      "bytes": 5848,
+      "sha256": "6555e1fc904130e7ef0445149319979cdafcbdb6460c6980fcceaae87d0d387f",
+      "git_blob_sha": "978bb4d667b0e2fefd21a9860b5da4128a20321b"
     },
     {
       "path": "theme/snippets/suiji-r107-public-study-gate.liquid",
-      "bytes": 4327,
-      "sha256": "5bda30b884e3ae6804d5f79ee8d93c98f2c18356df223ca7c68b95fcb67c86c5",
-      "git_blob_sha": "3b1ca0a77f9f6918d428664840731b867dd05b63"
+      "bytes": 5816,
+      "sha256": "67210151c4fc491687605dfd16c1edc4ce324fb24b9b7b21e49ba3821f44c09d",
+      "git_blob_sha": "4a5691cbf2075350839c1eb0ee7eb24c11c903ef"
     },
     {
       "path": "theme/snippets/suiji-r107-public-study-pink-orbit.liquid",
-      "bytes": 4401,
-      "sha256": "7cf8f8da6d2042486e8fc5e8767c45dcf913f20ddf2ccc6c44a5adf770482f0b",
-      "git_blob_sha": "dd1cfd73810c3635dae4f1163ba39e5321efe9f4"
+      "bytes": 5884,
+      "sha256": "d80b1cc2672dcca088f8c8c7b7ce53d37ed9f7f0c4a334ebf0814658d018ab25",
+      "git_blob_sha": "a7b1219951d5cd5c3abac5d5b0fda709c2358a03"
     },
     {
       "path": "theme/snippets/suiji-r107-public-study-triangle.liquid",
-      "bytes": 4443,
-      "sha256": "dc23225d72010d3a553f1389ec3e3a0b1c7e6616086c7e51abaee8a62ebba657",
-      "git_blob_sha": "dbbd1a1141d4f3e4b54fcee593ef4afd1fd2b6f6"
+      "bytes": 5816,
+      "sha256": "05e361a7cad77cd0dab35757db6212d8be809d27acbdf0e3ab422271ea0ecd1b",
+      "git_blob_sha": "83268a314feb18e508d88d3dc2605e220b59de91"
     },
     {
       "path": "theme/snippets/suiji-r107-router.liquid",
-      "bytes": 7217,
-      "sha256": "3b2128c40d1f0b96a1d1c80a109cf118f320a1bba02ca9f53d951bbf5bf9ee24",
-      "git_blob_sha": "57754a32251e633a7910ba34911720237d49182d"
+      "bytes": 7153,
+      "sha256": "062bdcb35b0c4ad41831d37e19d7ae936889751c7774c428bc3ba32321c3092d",
+      "git_blob_sha": "84cc95332a30ebdd68a634099009f4b37aa6b526"
     },
     {
       "path": "theme/snippets/suiji-r107-search.liquid",
@@ -4464,27 +4980,27 @@
     },
     {
       "path": "theme/snippets/suiji-r107-shipping.liquid",
-      "bytes": 2639,
-      "sha256": "442f5dc99f8a486d825fb6cb739945f71dd031a23abcc775eb6bc5ccb07f09e5",
-      "git_blob_sha": "c720f49ddd5c442eba10218c48b8f0bb072e167a"
+      "bytes": 3804,
+      "sha256": "0bc0ed7f4ed139f45a3bba2ddd6c77529fdb846e0fdaf3cfcabf16ffa8896621",
+      "git_blob_sha": "76424fa55ca805b34315d2361c4c88abb0e0fc6b"
     },
     {
       "path": "theme/snippets/suiji-r107-shopping-preview.liquid",
-      "bytes": 2755,
-      "sha256": "74a061716bc8273bd2733c8e858f6e8381f42b31c3c0c2b5300cbab67ed7c3d7",
-      "git_blob_sha": "315f7953cb6a4f1e4d236fed3b53863bd11946a2"
+      "bytes": 2982,
+      "sha256": "03ef55d6d44e40969c8c8cfc86837872f3185dfb34b0c8135acf40e3a523976d",
+      "git_blob_sha": "798191d0c9026c7e674651d1b133ffab49637b3b"
     },
     {
       "path": "theme/snippets/suiji-r107-studio-intro.liquid",
-      "bytes": 7674,
-      "sha256": "c2fb6c500e4f75af0381370728666863d22387be0e79f45b8870098c02860dbc",
-      "git_blob_sha": "c9056dac6fb89cc3a1d74579957f3a8b68a4dc13"
+      "bytes": 9885,
+      "sha256": "3cf845a3caa9420b5a5eefa10c481a5a66e61e852ed8fc37d04c2959f52e95b4",
+      "git_blob_sha": "349b7db8369d77999c6bb216a2c49345167cf184"
     },
     {
       "path": "theme/snippets/suiji-r107-studio-workspace.liquid",
-      "bytes": 12393,
-      "sha256": "b159af3d8226953a44c700e95b768c93f34f75696a3529f97b2786fb6366034a",
-      "git_blob_sha": "cf0ffddd1a09ca4baf8ef591a9c58ebd6dd2319a"
+      "bytes": 14126,
+      "sha256": "5890e8d11ea46b24602d9a3187dcdca5f8be0fbf216fe58dd76a13255a440fa3",
+      "git_blob_sha": "69f1fedeb4445ae3769e91b7a0786fc35c6cbaf0"
     },
     {
       "path": "theme/snippets/suiji-r107-utility.liquid",
@@ -5183,12 +5699,12 @@
       "git_blob_sha": "8b7e0f89baaa6ea662b38fa04e87b3e74dc8a34f"
     }
   ],
-  "publication_state": "Candidate Git archive only; native non-product imagery application and verification pending separate publisher receipt",
+  "publication_state": "Reviewed frozen Git candidate; actual native publication and acceptance require a separate publisher receipt",
   "base_source_freeze_sha256": "15c84ac84e4f5b3036db38ae7bfa0c3766feb203b48a6fe2651727e488a48b5f",
   "base_theme_freeze_sha256": "b8dc4c37aad6bb642b90507958f93fc628c403231c6ddd766388c4ce06f77a8e",
-  "source_delta_sha256": "15eab72d6693f1ed00f5f99d3cd2a2f0eebcbf3ad9690142df6bd64e2e39539d",
-  "theme_delta_sha256": "80c8fde163b413fb09d512ad1c80022930ab2b0ec32525d2b2bd2187267ab61a",
-  "effective_source_manifest_sha256": "f712da60f186779d10f673a31f6027c234007e4f4ed9c764636d484fa9791fb2",
+  "source_delta_sha256": "b59d2be7d76b7c3a3c7c63299111d2f872c9e05c4f01395715751221fd2b4486",
+  "theme_delta_sha256": "34ad044aec23927f1de0fc2e357cc221b29cfb23cb4114b7e35b83864626777f",
+  "effective_source_manifest_sha256": "3f40ddb9e75e78e7ba87ad4929c6143de51253d23619231e333283a362734695",
   "effective_theme_manifest_sha256": "2d524f71523afe07829c307339ed097a2f0de569d867352ce6780bbdf838afe1",
   "cart_chrome_delta_public_theme_paths": [
     "theme/assets/suiji-r107.css",
@@ -5223,6 +5739,10 @@
     {
       "version": "v3.4-nonproduct-imagery",
       "sha256": "15eab72d6693f1ed00f5f99d3cd2a2f0eebcbf3ad9690142df6bd64e2e39539d"
+    },
+    {
+      "version": "v3.5-white-imagery-shared-ui",
+      "sha256": "b59d2be7d76b7c3a3c7c63299111d2f872c9e05c4f01395715751221fd2b4486"
     }
   ],
   "contact_cms_late_binding": {
@@ -5260,12 +5780,16 @@
     {
       "version": "v3.4-nonproduct-imagery",
       "sha256": "80c8fde163b413fb09d512ad1c80022930ab2b0ec32525d2b2bd2187267ab61a"
+    },
+    {
+      "version": "v3.5-white-imagery-shared-ui",
+      "sha256": "34ad044aec23927f1de0fc2e357cc221b29cfb23cb4114b7e35b83864626777f"
     }
   ],
   "design_contract": {
     "path": "DESIGN.md",
-    "sha256": "3481554f7f0842526a2913fa31d1d20bea9a1ae86a19af1c12b5a7adaa27363a",
-    "version": "6.1.4",
+    "sha256": "f93dea280a21bb75efddc3b0ec6948d1442bfdbde67a2d7a2ca54b826dadc3fa",
+    "version": "6.1.7",
     "public_build_environment_complete": false,
     "build_guard_published": false
   },
@@ -5365,5 +5889,45 @@
     "native_application_and_rendered_verification": "Separate designated publisher receipt; not asserted by this archive",
     "frozen_receipt_sha256": "66c9c3920e8ce62d153f438afa6292e03a50dc1360d44c541894b51909d7044a",
     "receipt_errata_applied": "799 previous theme files: 3 modified, 796 unchanged; 7 added, total 806"
+  },
+  "full_private_source_v35_sha256": "c1496d805c537b854eb604bc5c0ba6115baf12785bd8f4009c20cf98b751dc79",
+  "effective_theme_lease_sha256": "6aabe7dac839ba16c64b76a2c2fc1423d8e63ab8047512b511638b1fe1a0c29f",
+  "v35_white_imagery_shared_ui": {
+    "theme_files": 890,
+    "previous_theme_files_modified": 114,
+    "previous_theme_files_unchanged": 692,
+    "new_white_WebP_files": 84,
+    "visible_photo_matched_presentations": 12,
+    "hidden_missing_photo_presentations": 42,
+    "canonical_records_deleted": 0,
+    "reviewed_authored_commit": "2031ef25f90602c67917055b50c064dd04546816",
+    "final_source_commit": "c92e237cc24e5ffdaa0c8fcb52bc48cd34d82cee",
+    "final_reviews": [
+      {
+        "relative_path": "qa/code-spec-review-final-v4.json",
+        "sha256": "9a25f02a0e2decf95301ef6fa82f693516cbb95bf71bab90f51250d37d394d62"
+      },
+      {
+        "relative_path": "qa/code-standards-review-final-v4.json",
+        "sha256": "96cebbfcee145ccdf5cf7f103e74a158fde2fa9f20481cc1860153eabcd47074"
+      },
+      {
+        "relative_path": "white-background-final-acceptance-v1.json",
+        "sha256": "22633bd5f1b976f73ed78c5d8d9c9f71286754d2ca215be13025f2ff6ec477a0"
+      }
+    ],
+    "postreview_generated_label_sync_sha256": "774dbf62e756e6ad9a98ca52cbad70c431945e2e34e7565c2b781715f6235811",
+    "native_product_status_required": "83 DRAFT; zero ACTIVE",
+    "native_product_changes_permitted_to_designated_publisher": "Exact H03 earring-base descriptive metadata only; preserve SKU/options/media/status/prices/inventory",
+    "native_CMS_patch_scope": "Fresh-identity narrow About/Mechanism approved paragraph/link changes; no wholesale renderer export",
+    "native_settings_overridden_by_this_Git_task": false,
+    "new_Apps_or_analytics_installations": false,
+    "native_application_and_visual_acceptance": "Separate publisher receipt"
+  },
+  "historical_public_page_projection": {
+    "path": "content/page-candidates.json",
+    "current_increment_changed": false,
+    "role": "Previously vetted historical projection; not the current native CMS deployment payload",
+    "new_private_CMS_exports_published": false
   }
 }

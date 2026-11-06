@@ -156,6 +156,8 @@
       {%- assign suiji_nav_seo_description = suiji_fixed_description | strip | strip_html | replace: '&amp;', '&' -%}
     {%- endif -%}
     {% if suiji_commerce_product %}<meta name="robots" content="noindex,follow">{% endif %}
+    {% if request.page_type == 'article' %}<meta name="robots" content="max-image-preview:large">{% endif %}
+    {% if request.page_type == 'blog' and blog.handle == 'journal' and current_tags != blank %}<meta name="robots" content="noindex,follow">{% endif %}
     {% if request.page_type == 'blog' and template.suffix contains 'suiji-j' and sj_resolved_path contains '?view=' %}{% else %}{% if request.page_type == 'blog' and template.suffix contains 'suiji-j' %}<meta name="robots" content="noindex,follow">{% endif %}{% endif %}
     {%- assign suiji_nav_seo_title = suiji_nav_seo_title | replace: '&amp;', '&' -%}
     {%- assign suiji_nav_seo_description = suiji_nav_seo_description | replace: '&amp;', '&' -%}
