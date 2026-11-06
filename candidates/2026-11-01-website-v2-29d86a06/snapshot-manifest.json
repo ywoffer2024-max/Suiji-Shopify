@@ -1,32 +1,32 @@
 {
-  "version": "website-v3.5-white-imagery-shared-ui-frozen",
-  "created_utc": "2026-11-06T17:09:57.476025+00:00",
-  "reviewed_local_head": "c92e237cc24e5ffdaa0c8fcb52bc48cd34d82cee",
-  "vetted_public_paths_including_this_manifest": 949,
-  "theme_files": 890,
+  "version": "website-v3.5.1-source-bound-social-frozen",
+  "created_utc": "2026-11-06T17:43:04.729528+00:00",
+  "reviewed_local_head": "1455d53e938b0697459920639dde4d0a7087647d",
+  "vetted_public_paths_including_this_manifest": 950,
+  "theme_files": 891,
   "article_language_bodies": 50,
   "public_page_candidates": 25,
   "Rowan_article_bylines": 50,
-  "files_excluding_this_manifest": 948,
-  "bytes_excluding_this_manifest": 24823483,
+  "files_excluding_this_manifest": 949,
+  "bytes_excluding_this_manifest": 24829551,
   "entries": [
     {
       "path": "DESIGN.md",
-      "bytes": 28207,
-      "sha256": "f93dea280a21bb75efddc3b0ec6948d1442bfdbde67a2d7a2ca54b826dadc3fa",
-      "git_blob_sha": "c66016ab81b0e30cd8162dce6b9a8f4a936af618"
+      "bytes": 28691,
+      "sha256": "5c8d814cd30b4f2e4535d7918ecfe8fac5815c3757cd82f5cd4d258ca53116ee",
+      "git_blob_sha": "80d450590c3ae6024ce7af1b5de54f36b8279761"
     },
     {
       "path": "MAINTENANCE.md",
-      "bytes": 10530,
-      "sha256": "561821adac6ca7584b8e40e2c558dd8a50644c96bb1af7fd9ef4439af8ac352c",
-      "git_blob_sha": "bbe6df35348a9e1182823c65a405c4bae195ba79"
+      "bytes": 11007,
+      "sha256": "61af414690101bc1cc29f29b1f14a6ca1f6633ee21cd16f14e4bb050bbe11d32",
+      "git_blob_sha": "73baf48b5605d5797db9bbfe4797ce10172adb3c"
     },
     {
       "path": "README.md",
-      "bytes": 11316,
-      "sha256": "dcab84600c5bcf66775da43a78be9bfbac1fe5d1014076aabba2ba1bee916d5d",
-      "git_blob_sha": "7e47cbc632bcbb5ca02dfe6dca5baebe3fdca7d1"
+      "bytes": 12452,
+      "sha256": "4f8c68c7d26d12d4b37494b6aaf1affbe70103dfb3757bef92f08a78bb3012f6",
+      "git_blob_sha": "08ae1ec5a51adf9061455d2bbbb2f5f46e85a8f4"
     },
     {
       "path": "content/journal/en/boucles-oreilles-asymetriques-depareillees.html",
@@ -3918,9 +3918,9 @@
     },
     {
       "path": "theme/snippets/meta-tags.liquid",
-      "bytes": 2190,
-      "sha256": "0ec314ff008dfc26753356c268d9eae977d17b8224fdd7baf6a2e0281fcea487",
-      "git_blob_sha": "aaa42c7a4b01ca2afb81c2ff15bf9950ccc8328a"
+      "bytes": 2749,
+      "sha256": "583ab09e1f6c2854104ea3904d7ce2e80e0744b7e6540d80af34319159a7e3c5",
+      "git_blob_sha": "3d91a65aa09f944bcdf2ba2b3e011e34457c90f4"
     },
     {
       "path": "theme/snippets/pagination.liquid",
@@ -4991,6 +4991,12 @@
       "git_blob_sha": "798191d0c9026c7e674651d1b133ffab49637b3b"
     },
     {
+      "path": "theme/snippets/suiji-r107-social-image.liquid",
+      "bytes": 3412,
+      "sha256": "eb486895188fbd93a93baddeb829ccf5dc1c8dcba228e398d1db46b85ff1ee83",
+      "git_blob_sha": "7520847b18817dbaeeb2c1c04ea26b3da4fc989b"
+    },
+    {
       "path": "theme/snippets/suiji-r107-studio-intro.liquid",
       "bytes": 9885,
       "sha256": "3cf845a3caa9420b5a5eefa10c481a5a66e61e852ed8fc37d04c2959f52e95b4",
@@ -5699,13 +5705,13 @@
       "git_blob_sha": "8b7e0f89baaa6ea662b38fa04e87b3e74dc8a34f"
     }
   ],
-  "publication_state": "Reviewed frozen Git candidate; actual native publication and acceptance require a separate publisher receipt",
+  "publication_state": "Reviewed frozen Git archive; actual native social metadata publication and verification require separate publisher receipt",
   "base_source_freeze_sha256": "15c84ac84e4f5b3036db38ae7bfa0c3766feb203b48a6fe2651727e488a48b5f",
   "base_theme_freeze_sha256": "b8dc4c37aad6bb642b90507958f93fc628c403231c6ddd766388c4ce06f77a8e",
-  "source_delta_sha256": "b59d2be7d76b7c3a3c7c63299111d2f872c9e05c4f01395715751221fd2b4486",
-  "theme_delta_sha256": "34ad044aec23927f1de0fc2e357cc221b29cfb23cb4114b7e35b83864626777f",
-  "effective_source_manifest_sha256": "3f40ddb9e75e78e7ba87ad4929c6143de51253d23619231e333283a362734695",
-  "effective_theme_manifest_sha256": "2d524f71523afe07829c307339ed097a2f0de569d867352ce6780bbdf838afe1",
+  "source_delta_sha256": "ef35d8c78bb16c9c21aa4a7d6956b16cfc5e5b0edc59004a02485545f461070a",
+  "theme_delta_sha256": "d15748f017df64e6e6736d16c46644896f024b9f64a83f07e583a6597a4c4f55",
+  "effective_source_manifest_sha256": "a13d1355dc739a045bb25150935465d1173f5e5dded0e396e62f30d071edce27",
+  "effective_theme_manifest_sha256": "27a0b0d83e96b5823f90c211bc9d5f5cf2dd2527c018b81e1d24a18b7ca3144c",
   "cart_chrome_delta_public_theme_paths": [
     "theme/assets/suiji-r107.css",
     "theme/layout/theme.liquid",
@@ -5743,6 +5749,10 @@
     {
       "version": "v3.5-white-imagery-shared-ui",
       "sha256": "b59d2be7d76b7c3a3c7c63299111d2f872c9e05c4f01395715751221fd2b4486"
+    },
+    {
+      "version": "v3.5.1-source-bound-social",
+      "sha256": "ef35d8c78bb16c9c21aa4a7d6956b16cfc5e5b0edc59004a02485545f461070a"
     }
   ],
   "contact_cms_late_binding": {
@@ -5784,12 +5794,16 @@
     {
       "version": "v3.5-white-imagery-shared-ui",
       "sha256": "34ad044aec23927f1de0fc2e357cc221b29cfb23cb4114b7e35b83864626777f"
+    },
+    {
+      "version": "v3.5.1-source-bound-social",
+      "sha256": "d15748f017df64e6e6736d16c46644896f024b9f64a83f07e583a6597a4c4f55"
     }
   ],
   "design_contract": {
     "path": "DESIGN.md",
-    "sha256": "f93dea280a21bb75efddc3b0ec6948d1442bfdbde67a2d7a2ca54b826dadc3fa",
-    "version": "6.1.7",
+    "sha256": "5c8d814cd30b4f2e4535d7918ecfe8fac5815c3757cd82f5cd4d258ca53116ee",
+    "version": "6.1.8",
     "public_build_environment_complete": false,
     "build_guard_published": false
   },
@@ -5891,7 +5905,7 @@
     "receipt_errata_applied": "799 previous theme files: 3 modified, 796 unchanged; 7 added, total 806"
   },
   "full_private_source_v35_sha256": "c1496d805c537b854eb604bc5c0ba6115baf12785bd8f4009c20cf98b751dc79",
-  "effective_theme_lease_sha256": "6aabe7dac839ba16c64b76a2c2fc1423d8e63ab8047512b511638b1fe1a0c29f",
+  "effective_theme_lease_sha256": "12abddbc8f8b90bd1893208ff975f17502c98d62c4e8d06b3a047f7bbc45141b",
   "v35_white_imagery_shared_ui": {
     "theme_files": 890,
     "previous_theme_files_modified": 114,
@@ -5929,5 +5943,33 @@
     "current_increment_changed": false,
     "role": "Previously vetted historical projection; not the current native CMS deployment payload",
     "new_private_CMS_exports_published": false
+  },
+  "full_private_source_v351_sha256": "8a7dcbfb6ca0458c94d34b094f916e354a6fc28756236d9c06fceb98015a6a30",
+  "effective_theme_lease_encoding": "Canonical JSON of the two freeze-receipt theme_leases",
+  "v351_source_bound_social": {
+    "theme_paths": [
+      "snippets/meta-tags.liquid",
+      "snippets/suiji-r107-social-image.liquid"
+    ],
+    "source_commit": "1455d53e938b0697459920639dde4d0a7087647d",
+    "baseline_source_commit": "c92e237cc24e5ffdaa0c8fcb52bc48cd34d82cee",
+    "theme_files": 891,
+    "old_theme_files_unchanged": 889,
+    "theme_modified": 1,
+    "theme_added": 1,
+    "review_proofs": [
+      {
+        "relative_path": "qa/code-spec-review-social-v351-v2.json",
+        "sha256": "ca463176cf7fde68525514d40bb56915ef2367fb11020e7a77373187c7e41951"
+      },
+      {
+        "relative_path": "qa/code-standards-review-social-v351-v2.json",
+        "sha256": "3fac664c4488c709c0f5a18a348bb4bb52dded230c0bba6794f107c99912eddb"
+      }
+    ],
+    "native_Page_Article_Product_settings_mutations": false,
+    "CSS_fonts_visible_content_shell_unchanged": true,
+    "post_v351_new117HTML_and_product_intake_included": false,
+    "actual_native_readback": "Separate designated publisher receipt"
   }
 }

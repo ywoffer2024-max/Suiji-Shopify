@@ -1,6 +1,15 @@
-# SUIJI website — frozen v3.5 white-image and shared-UI candidate
+# SUIJI website — frozen v3.5.1 source-bound social images
 
-## Current revision v3.5
+## Current revision v3.5.1
+
+This narrow increment replaces the legacy page_image fallback in social metadata with an exact source-bound image for known contexts. It adds one social-image helper and changes snippets/meta-tags.liquid. Each study uses its own approved primary final2 image; unknown or image-free contexts omit the social image rather than borrowing an unrelated picture.
+
+DESIGN.md v6.1.8 and MAINTENANCE.md record the same rule. The stylesheet, fonts, layout shell, visible content, native Page/Article/Product data and native settings retain their frozen v3.5 bytes. The complete theme now has 891 files and this public snapshot has 950. The private generator, native exports, research and subsequent new-image/product intake remain excluded.
+
+This is a reviewed Git archive. Actual native application and social-tag readback require a separate publisher receipt. No Store write, product publication, payment activation, native Page/settings update or new product-intake work is authorized by this backup. Earlier descriptions below remain historical; the v3.5.1 section and DESIGN.md v6.1.8 describe the current candidate.
+
+
+## Previous revision v3.5
 
 This snapshot matches the final reviewed v3.5 source commit and its complete 890-file Shopify theme. The theme adds 84 source-bound white-background WebP files; 114 previous theme files change and 692 retain their exact prior bytes. Only 12 photo-matched product presentations are visible; 42 missing-photo presentations remain hidden without deleting their canonical records. Chunyu's original portrait, brand identity assets and functional icons remain. H03-CORE is classified as an earring base while existing SKU identities, native Draft status and real-commerce controls remain protected.
 
