@@ -1,4 +1,4 @@
-# SUIJI Design System · v6.1.12
+# SUIJI Design System · v6.1.13
 
 Updated 6 November 2026. Scope: the English and French rev107 storefront. This is the visual and interaction contract, not a deployment report. Publication receipts, QA results and historical versions belong in the release archive.
 
@@ -176,10 +176,10 @@ This lock pins the reviewed visual implementation. Any mismatch stops compilatio
 
 ```json design-lock
 {
-  "version": "6.1.12",
+  "version": "6.1.13",
   "stylesheet": {
     "path": "theme/assets/suiji-r107.css",
-    "sha256": "ad02e591602fd38d3ed8e93c4474ba5b5f572c21a5175e52a776502e5a7beed5"
+    "sha256": "f8608b49a51958be77f2e5cc1fc0864fb52bc9a0c88fa14eff2488afb5af8b0a"
   },
   "shell": {
     "path": "theme/layout/theme.liquid",

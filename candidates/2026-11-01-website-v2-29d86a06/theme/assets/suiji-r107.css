@@ -147,3 +147,8 @@ dialog.r-filters,
 .r-size-dialog {
   overscroll-behavior: contain;
 }
+
+/* Keep the monogram white inside the transparent brand mark. */
+.r-header .r-logo-mark {
+  background-image: radial-gradient(circle closest-side, #fff 66%, transparent 67%);
+}
