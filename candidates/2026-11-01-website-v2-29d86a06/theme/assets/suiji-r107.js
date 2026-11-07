@@ -37,7 +37,7 @@
   $$('[data-nav-item] .r-nav-label>a').forEach(a=>{if(new URL(a.href,location.href).pathname.replace(/\/$/,'')===location.pathname.replace(/\/$/,''))a.setAttribute('aria-current','page');});
   function closeNavItem(n){n.classList.remove('is-open');$('[data-nav-menu]',n).setAttribute('aria-expanded','false');}
   function closeNav(except){navItems.forEach(n=>{if(n!==except)closeNavItem(n);});}
-  navItems.forEach(n=>{const b=$('[data-nav-menu]',n);const open=()=>{if(innerWidth<1280)return;closeNav(n);n.classList.add('is-open');b.setAttribute('aria-expanded','true');};n.addEventListener('pointerenter',()=>{n.dataset.hoverJustOpened=String(!n.classList.contains('is-open'));open();});n.addEventListener('pointerleave',()=>{n.dataset.hoverJustOpened='false';if(!n.contains(document.activeElement))closeNavItem(n);});b.addEventListener('click',ev=>{if(ev.detail>0&&n.dataset.hoverJustOpened==='true'){n.dataset.hoverJustOpened='false';open();return;}n.dataset.hoverJustOpened='false';if(n.classList.contains('is-open'))closeNav();else open();});n.addEventListener('focusout',()=>{setTimeout(()=>{if(!n.contains(document.activeElement))closeNavItem(n);},0);});});
+  navItems.forEach(n=>{const b=$('[data-nav-menu]',n);const open=()=>{if(innerWidth<1280)return;closeNav(n);n.classList.add('is-open');b.setAttribute('aria-expanded','true');};n.addEventListener('pointerenter',event=>{if(event.pointerType!=='mouse')return;n.dataset.hoverJustOpened=String(!n.classList.contains('is-open'));open();});n.addEventListener('pointerleave',()=>{n.dataset.hoverJustOpened='false';if(!n.contains(document.activeElement))closeNavItem(n);});b.addEventListener('click',ev=>{if(ev.detail>0&&n.dataset.hoverJustOpened==='true'){n.dataset.hoverJustOpened='false';open();return;}n.dataset.hoverJustOpened='false';if(n.classList.contains('is-open'))closeNav();else open();});n.addEventListener('focusout',()=>{setTimeout(()=>{if(!n.contains(document.activeElement))closeNavItem(n);},0);});});
   document.addEventListener('keydown',ev=>{if(ev.key==='Escape'){const current=navItems.find(n=>n.classList.contains('is-open'));closeNav();if(current)$('[data-nav-menu]',current).focus();$('.r-filters.is-open')?.classList.remove('is-open');}});
   $('[data-market-menu]')?.addEventListener('click',ev=>{const panel=$('.r-market-panel');panel.hidden=!panel.hidden;ev.currentTarget.setAttribute('aria-expanded',String(!panel.hidden));});
   $$('[data-market-select]').forEach(select=>select.addEventListener('change',ev=>{const b=$('[data-market-menu]');if(b)b.textContent=ev.target.selectedOptions[0].textContent+' ⌄';$$('[data-market-select]').forEach(other=>other.value=ev.target.value);toast(T('Destination selected for this preview. Order pricing and delivery still need confirmation.','Destination choisie pour cet aperçu. Le prix et la livraison restent à confirmer.'));}));
@@ -70,7 +70,7 @@
   $$('[data-size-calculator]').forEach(form=>{const diameterInput=$('[data-size-diameter]',form);diameterInput.addEventListener('input',()=>{$('[data-size-result]',form).textContent='';});form.addEventListener('submit',event=>{event.preventDefault();const input=$('[data-size-diameter]',form),result=$('[data-size-result]',form);if(!form.reportValidity())return;const diameter=Number(input.value);result.textContent=diameter>=10&&diameter<=30?T('Approximate inner circumference: ','Circonférence intérieure approximative : ')+(Math.PI*diameter).toFixed(1)+' mm. '+T('Compare this with the table below.','Comparez cette mesure au tableau ci-dessous.'):T('Enter an inner diameter between 10 and 30 mm.','Saisissez un diamètre intérieur entre 10 et 30 mm.');});});
   $$('[data-journal-filter]').forEach(b=>b.addEventListener('click',()=>{const key=b.dataset.journalFilter;$$('[data-article-cluster]').forEach(a=>a.hidden=key!=='all'&&a.dataset.articleCluster!==key);$$('[data-journal-filter]').forEach(a=>a.setAttribute('aria-pressed',String(a.dataset.journalFilter===key)));$('[data-journal]')?.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}));
   $$('[data-product-gallery]').forEach(gallery=>{const buttons=$$('[data-gallery-source]',gallery),main=$('[data-gallery-main]',gallery),counter=$('[data-gallery-counter]',gallery);buttons.forEach((button,index)=>{button.addEventListener('click',()=>{main.src=button.dataset.gallerySource;main.alt=button.dataset.galleryAlt;buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));counter.textContent=(index+1)+' / '+buttons.length;});button.addEventListener('keydown',event=>{let next;if(event.key==='ArrowRight')next=(index+1)%buttons.length;else if(event.key==='ArrowLeft')next=(index-1+buttons.length)%buttons.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=buttons.length-1;else return;event.preventDefault();buttons[next].focus();buttons[next].click();});});});
-  $$('[data-gallery-stage]').forEach(b=>b.addEventListener('click',()=>{$$('[data-gallery-stage]').forEach(a=>a.setAttribute('aria-selected',String(a===b)));$$('[data-gallery-panel]').forEach(p=>p.hidden=p.dataset.galleryPanel!==b.dataset.galleryStage);}));
+  $$('[data-gallery-stage]').forEach(b=>b.addEventListener('click',()=>{$$('[data-gallery-stage]').forEach(a=>a.setAttribute('aria-pressed',String(a===b)));$$('[data-gallery-panel]').forEach(p=>p.hidden=p.dataset.galleryPanel!==b.dataset.galleryStage);}));
   $$('[data-email-draft]').forEach(f=>f.addEventListener('submit',ev=>{ev.preventDefault();if(!f.reportValidity())return;const fields=[...new FormData(f)].map(([k,v])=>k+': '+v).join('\n\n');const subject=T('SUIJI enquiry','Demande SUIJI');$('[data-email-result]',f).innerHTML='<p>'+T('Your draft is ready. It has not been sent.','Votre brouillon est prêt. Il n’a pas été envoyé.')+'</p><a class="r-link" href="mailto:contact@suijijewelry.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(fields)+'">'+T('Open in my email app','Ouvrir dans ma messagerie')+' ↗</a><button class="r-link" type="button" data-copy-email>'+T('Copy email text','Copier le texte')+'</button><p class="r-caption">contact@suijijewelry.com</p>';$('[data-copy-email]',f).addEventListener('click',()=>copyText(fields));}));
   const ref=$('[data-contact-reference]');if(ref)ref.value=new URLSearchParams(location.search).get('piece')||'';
   async function copyText(value){try{await navigator.clipboard.writeText(value);toast(T('Copied.','Copié.'));}catch{toast(T('Copy is unavailable in this browser. Select the text instead.','La copie n’est pas disponible. Sélectionnez le texte.'));}}
@@ -83,11 +83,27 @@
     }
   }
   // Search contains only public pieces, guides and public study records. No private drafts or queries are tracked.
-  const search=$('[data-search]');if(search){let kind='all';const input=$('input[name=q]',search),normal=v=>v.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const result=$('[data-search-results]',search);function run(){const q=input.value.trim().slice(0,160);const words=normal(q).split(/\s+/).filter(Boolean);result.innerHTML='';if(!words.length){$('[data-search-status]').textContent=T('Try a piece, a component or a wearing question.','Essayez un bijou, un élément ou une question de port.');return;}const match=v=>words.every(w=>normal(v).includes(w));let count=0;const groups=[['pieces',T('Pieces','Bijoux'),config.products.filter(p=>match(p.search_text||p.title+' '+p.role+' '+p.category)).map(p=>({title:p.title,url:p.url}))],['guides',T('Guides & help','Guides et aide'),config.articles.filter(a=>match(a.title+' '+a.deck))],['design',T('Design examples','Exemples de création'),config.studies.filter(a=>match(a.name+' '+a.intent)).map(a=>({title:a.name,url:a.url}))]];for(const[k,title,items]of groups){if(kind!=='all'&&kind!==k)continue;count+=items.length;if(items.length)result.innerHTML+='<section class="r-search-result-group"><h2>'+title+'</h2><ul>'+items.map(a=>'<li><a class="r-link" href="'+esc(a.url)+'">'+esc(a.title)+' ↗</a></li>').join('')+'</ul></section>';}$('[data-search-status]').textContent=count?count+' '+T('public results.','résultats publics.'):T('No public results. Try a wearing position or contact SUIJI.','Aucun résultat public. Essayez un emplacement ou contactez SUIJI.');if(!count){result.innerHTML='<div class="r-empty"><p>'+T('Try another word or browse the photographed pieces.','Essayez un autre mot ou découvrez les pièces photographiées.')+'</p><button type="button" class="r-button r-button--line" data-clear-search>'+T('Clear search','Effacer la recherche')+'</button><a class="r-button" href="'+esc(routes.all)+'">'+T('Browse pieces','Voir les bijoux')+'</a><a class="r-link" href="'+esc(routes.contact)+'">'+T('Contact SUIJI','Contacter SUIJI')+' ↗</a></div>';$('[data-clear-search]',result).addEventListener('click',()=>{input.value='';run();input.focus();});};}input.value=new URLSearchParams(location.search).get('q')||'';$('[data-search-form]',search).addEventListener('submit',ev=>{ev.preventDefault();run();});$$('[data-search-kind]',search).forEach(b=>b.addEventListener('click',()=>{kind=b.dataset.searchKind;$$('[data-search-kind]',search).forEach(a=>a.setAttribute('aria-pressed',String(a===b)));run();}));if(input.value)run();}
+  const search=$('[data-search]');if(search){let kind='all';const input=$('input[name=q]',search),normal=v=>v.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const result=$('[data-search-results]',search);function run(){const q=input.value.trim().slice(0,160);const words=normal(q).split(/\s+/).filter(Boolean);result.innerHTML='';if(!words.length){$('[data-search-status]').textContent=T('Try a piece, a component or a wearing question.','Essayez un bijou, un élément ou une question de port.');return;}const match=v=>words.every(w=>normal(v).includes(w));let count=0;const groups=[['pieces',T('Pieces','Bijoux'),config.products.filter(p=>match(p.search_text||p.title+' '+p.role+' '+p.category)).map(p=>({title:p.title,url:p.url}))],['guides',T('Guides & help','Guides et aide'),config.articles.filter(a=>match(a.title+' '+a.deck))],['design',T('Design examples','Exemples de création'),config.studies.filter(a=>match(a.name+' '+a.intent)).map(a=>({title:a.name,url:a.url}))]];for(const[k,title,items]of groups){if(kind!=='all'&&kind!==k)continue;count+=items.length;if(items.length)result.innerHTML+='<section class="r-search-result-group"><h2>'+title+'</h2><ul>'+items.map(a=>'<li><a class="r-link" href="'+esc(a.url)+'">'+esc(a.title)+' ↗</a></li>').join('')+'</ul></section>';}$('[data-search-status]').textContent=count===1?T('1 public result.','1 résultat public.'):count?count+' '+T('public results.','résultats publics.'):T('No public results. Try a wearing position or contact SUIJI.','Aucun résultat public. Essayez un emplacement ou contactez SUIJI.');if(!count){result.innerHTML='<div class="r-empty"><p>'+T('Try another word or browse the photographed pieces.','Essayez un autre mot ou découvrez les pièces photographiées.')+'</p><button type="button" class="r-button r-button--line" data-clear-search>'+T('Clear search','Effacer la recherche')+'</button><a class="r-button" href="'+esc(routes.all)+'">'+T('Browse pieces','Voir les bijoux')+'</a><a class="r-link" href="'+esc(routes.contact)+'">'+T('Contact SUIJI','Contacter SUIJI')+' ↗</a></div>';$('[data-clear-search]',result).addEventListener('click',()=>{input.value='';run();input.focus();});};}input.value=new URLSearchParams(location.search).get('q')||'';$('[data-search-form]',search).addEventListener('submit',ev=>{ev.preventDefault();run();});$$('[data-search-kind]',search).forEach(b=>b.addEventListener('click',()=>{kind=b.dataset.searchKind;$$('[data-search-kind]',search).forEach(a=>a.setAttribute('aria-pressed',String(a===b)));run();}));if(input.value)run();}
   // Local Studio: saved briefs reference existing public studies, never fabricated AI output.
   const workspace=$('[data-workspace]');
-  const draftRows=()=>{const v=get(DRAFTS);return Array.isArray(v)?v.filter(a=>a&&typeof a.id==='string'&&studies.has(a.study)&&typeof a.title==='string'):[];};
-  function draftDescription(v){return T('Local draft','Brouillon local')+' · '+new Date(v.updated).toLocaleString(config.locale)+' · '+(studies.get(v.study)?.name||'');}
+  function allDraftRows(){
+    const records=get(DRAFTS);
+    return Array.isArray(records)?records:[];
+  }
+  function canDisplayDraft(draft){
+    return draft&&typeof draft.id==='string'&&typeof draft.study==='string'&&typeof draft.title==='string';
+  }
+  const draftRows=()=>allDraftRows().filter(canDisplayDraft);
+  function persistDraftRows(rows){
+    const preserved=allDraftRows().filter(draft=>!canDisplayDraft(draft));
+    return put(DRAFTS,[...rows,...preserved]);
+  }
+  const missingExample=()=>T('Original example unavailable','Exemple d’origine indisponible');
+  function draftDescription(draft){
+    const updated=new Date(draft.updated);
+    const date=Number.isFinite(draft.updated)&&!Number.isNaN(updated.valueOf())?new Intl.DateTimeFormat(config.locale,{dateStyle:'medium',timeStyle:'short'}).format(updated):null;
+    return [T('Local draft','Brouillon local'),date,studies.get(draft.study)?.name||missingExample()].filter(Boolean).join(' · ');
+  }
   function renderLocalDesigns(){
     const n=$('[data-local-design-list]');if(!n)return;const rows=draftRows();
     $$('[data-requires-local],[data-has-local-new]').forEach(el=>el.hidden=!rows.length);
@@ -95,53 +111,186 @@
   }
   renderLocalDesigns();
   if(workspace){
-    let mode='words',currentStudy=config.studies[0].id,base='earrings',file=null,fileUrl=null,fileHash=null,currentVersion=null;
+    let mode='words',currentStudy=config.studies[0].id,base='earrings',file=null,fileUrl=null,fileHash=null,currentVersion=null,chooseNewExample=false,referenceGeneration=0;
     const form=$('[data-studio-brief]',workspace),idea=$('[name=idea]',form),priority=$('[name=priority]',form),fileInput=$('[name=reference]',form),status=$('[data-studio-status]');
     const initialParams=new URLSearchParams(location.search);
     if(studies.has(initialParams.get('study')))currentStudy=initialParams.get('study');
-    function setMode(value){mode=value;$$('[data-input-mode]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.inputMode===mode)));$('[data-word-field]').hidden=mode==='image';$('[data-image-field]').hidden=mode==='words';idea.required=mode!=='image';$('[data-brief-status]').textContent='';}
+    function setMode(value){mode=value;$$('[data-input-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.inputMode===mode)));$('[data-word-field]').hidden=mode==='image';$('[data-image-field]').hidden=mode==='words';idea.required=mode!=='image';$('[data-brief-status]').textContent='';}
     $$('[data-input-mode]').forEach(b=>b.addEventListener('click',()=>setMode(b.dataset.inputMode)));setMode(mode);
-    async function clearReference(){if(fileUrl)URL.revokeObjectURL(fileUrl);file=null;fileUrl=null;fileHash=null;fileInput.value='';$('[data-reference-preview]').replaceChildren();$('[data-remove-reference]').hidden=true;}
+    function clearReference(){referenceGeneration++;if(fileUrl)URL.revokeObjectURL(fileUrl);file=null;fileUrl=null;fileHash=null;fileInput.value='';$('[data-reference-preview]').replaceChildren();$('[data-remove-reference]').hidden=true;}
     function fileError(message){$('[data-brief-status]').textContent=message;}
-    async function acceptFile(candidate){await clearReference();if(!candidate)return;const allowed=['image/jpeg','image/png','image/webp'];if(!allowed.includes(candidate.type)){fileError(T('Choose a JPEG, PNG or WebP image.','Choisissez une image JPEG, PNG ou WebP.'));return;}if(!candidate.size||candidate.size>10*1024*1024){fileError(T('The image must be no larger than 10 MB.','L’image ne doit pas dépasser 10 Mo.'));return;}try{const bytes=new Uint8Array(await candidate.arrayBuffer());const jpeg=bytes[0]===255&&bytes[1]===216&&bytes[2]===255;const png=bytes[0]===137&&bytes[1]===80&&bytes[2]===78&&bytes[3]===71;const webp=String.fromCharCode(...bytes.slice(0,4))==='RIFF'&&String.fromCharCode(...bytes.slice(8,12))==='WEBP';if(!(candidate.type==='image/jpeg'&&jpeg||candidate.type==='image/png'&&png||candidate.type==='image/webp'&&webp))throw Error('format');const bitmap=await createImageBitmap(candidate);bitmap.close();file=candidate;fileUrl=URL.createObjectURL(candidate);fileHash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(v=>v.toString(16).padStart(2,'0')).join('');const image=new Image();image.src=fileUrl;image.alt=T('Your local reference image','Votre image de référence locale');$('[data-reference-preview]').replaceChildren(image);$('[data-remove-reference]').hidden=false;fileError(T('Image ready in this browser. It has not been uploaded.','Image prête dans ce navigateur. Elle n’a pas été envoyée.'));}catch{await clearReference();fileError(T('This image could not be read. Try a valid JPEG, PNG or WebP.','Cette image est illisible. Essayez un fichier JPEG, PNG ou WebP valide.'));}}
+    async function acceptFile(candidate){
+      clearReference();
+      const request=referenceGeneration;
+      if(!candidate)return;
+      const allowed=['image/jpeg','image/png','image/webp'];
+      if(!allowed.includes(candidate.type)){
+        fileError(T('Choose a JPEG, PNG or WebP image.','Choisissez une image JPEG, PNG ou WebP.'));
+        return;
+      }
+      if(!candidate.size||candidate.size>10*1024*1024){
+        fileError(T('The image must be no larger than 10 MB.','L’image ne doit pas dépasser 10 Mo.'));
+        return;
+      }
+      try{
+        const bytes=new Uint8Array(await candidate.arrayBuffer());
+        const jpeg=bytes[0]===255&&bytes[1]===216&&bytes[2]===255;
+        const png=bytes[0]===137&&bytes[1]===80&&bytes[2]===78&&bytes[3]===71;
+        const webp=String.fromCharCode(...bytes.slice(0,4))==='RIFF'&&String.fromCharCode(...bytes.slice(8,12))==='WEBP';
+        if(!(candidate.type==='image/jpeg'&&jpeg||candidate.type==='image/png'&&png||candidate.type==='image/webp'&&webp))throw new Error('Format mismatch');
+        const bitmap=await createImageBitmap(candidate);
+        bitmap.close();
+        const digest=await crypto.subtle.digest('SHA-256',bytes);
+        if(request!==referenceGeneration)return;
+        file=candidate;
+        fileUrl=URL.createObjectURL(candidate);
+        fileHash=[...new Uint8Array(digest)].map(value=>value.toString(16).padStart(2,'0')).join('');
+        const image=new Image();
+        image.src=fileUrl;
+        image.alt=T('Your local reference image','Votre image de référence locale');
+        $('[data-reference-preview]').replaceChildren(image);
+        $('[data-remove-reference]').hidden=false;
+        fileError(T('Image ready in this browser. It has not been uploaded.','Image prête dans ce navigateur. Elle n’a pas été envoyée.'));
+      }catch{
+        if(request!==referenceGeneration)return;
+        clearReference();
+        fileError(T('This image could not be read. Try a valid JPEG, PNG or WebP.','Cette image est illisible. Essayez un fichier JPEG, PNG ou WebP valide.'));
+      }
+    }
     fileInput.addEventListener('change',()=>acceptFile(fileInput.files[0]));$('[data-remove-reference]').addEventListener('click',clearReference);
     const drop=$('[data-dropzone]');drop.addEventListener('dragover',ev=>{ev.preventDefault();drop.classList.add('is-dragging');});drop.addEventListener('dragleave',()=>drop.classList.remove('is-dragging'));drop.addEventListener('drop',ev=>{ev.preventDefault();drop.classList.remove('is-dragging');if(ev.dataTransfer.files.length!==1){fileError(T('Choose just one reference image.','Choisissez une seule image de référence.'));return;}acceptFile(ev.dataTransfer.files[0]);});
     function showStudy(){const s=studies.get(currentStudy);$('[data-concept-image]').src=assetBase+s.image;$('[data-concept-image]').alt=s.name+' · '+T('existing SUIJI concept','concept SUIJI existant');$$('[data-study]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.study===currentStudy)));}
-    $$('[data-study]').forEach(b=>b.addEventListener('click',()=>{currentStudy=b.dataset.study;showStudy();}));showStudy();
+    $$('[data-study]').forEach(b=>b.addEventListener('click',()=>{currentStudy=b.dataset.study;chooseNewExample=false;showStudy();}));showStudy();
     function showBase(){const category={earrings:'earrings',ring:'rings',neckpiece:'necklaces'}[base];const p=config.products.find(p=>p.category===category&&p.role.endsWith('_base'))||config.products.find(p=>p.category===category);const target=$('[data-base-context]');if(!p){target.innerHTML='<p>'+T('No photographed base is on view for this position. Contact us to discuss the parts.','Aucune base photographiée n’est présentée pour cet emplacement. Contactez-nous pour en discuter.')+'</p>';return;}target.innerHTML='<img src="'+esc(p.image)+'" alt="'+esc(p.title)+'" width="54" height="64"><p>'+esc(p.title)+'<br>'+T('Separate base reference. No assembled fit or scale has been verified.','Référence de base séparée. Assemblage et échelle non vérifiés.')+'</p>';}
     $$('[name=base-context]').forEach(i=>i.addEventListener('change',()=>{base=i.value;showBase();}));showBase();
     function values(){return{mode,idea:mode==='image'?'':idea.value.trim().slice(0,5000),priority:priority.value.trim().slice(0,1000),study:currentStudy,base,reference:mode!=='words'&&file?{name:file.name,type:file.type,size:file.size,sha256:fileHash}:null};}
-    function valid(){if(mode!=='image'&&!idea.value.trim()){fileError(T('Describe your idea to continue.','Décrivez votre idée pour continuer.'));idea.focus();return false;}if(mode!=='words'&&!file){fileError(T('Choose one reference image to continue.','Choisissez une image de référence pour continuer.'));fileInput.focus();return false;}return true;}
+    function valid(){if(chooseNewExample){fileError(T('Choose a current example before saving this version.','Choisissez un exemple actuel avant d’enregistrer cette version.'));$('[data-study][aria-pressed=true]')?.focus();return false;}if(mode!=='image'&&!idea.value.trim()){fileError(T('Describe your idea to continue.','Décrivez votre idée pour continuer.'));idea.focus();return false;}if(mode!=='words'&&!file){fileError(T('Choose one reference image to continue.','Choisissez une image de référence pour continuer.'));fileInput.focus();return false;}return true;}
     function briefSummary(){const v=values(),n=$('[data-brief-summary]');n.hidden=false;n.innerHTML='<h3>'+T('Your local brief','Votre projet local')+'</h3><p>'+esc(v.idea||T('An image-led starting point.','Un point de départ visuel.'))+'</p>'+(v.reference?'<p>'+esc(v.reference.name)+'</p>':'')+'<p class="r-caption">'+T('The concept on the canvas is an existing example. No new design has been generated.','Le concept affiché est un exemple existant. Aucune nouvelle création n’a été générée.')+'</p>';}
     form.addEventListener('submit',ev=>{ev.preventDefault();if(!valid())return;briefSummary();fileError(T('Brief prepared locally. Compare examples or save a version.','Projet préparé localement. Comparez les exemples ou enregistrez une version.'));});
-    function renderVersions(){const rows=draftRows();$('[data-version-list]').innerHTML=rows.length?rows.map(v=>'<article class="r-version'+(v.id===currentVersion?' is-current':'')+'"><h3>'+esc(v.title)+'</h3><p>'+esc(draftDescription(v))+'</p><label><input type="checkbox" data-compare-choice="'+esc(v.id)+'">'+T('Compare','Comparer')+'</label><div class="r-version-actions"><button data-load-version="'+esc(v.id)+'">'+T('Continue','Continuer')+'</button><button data-rename-version="'+esc(v.id)+'">'+T('Rename','Renommer')+'</button><button data-duplicate-version="'+esc(v.id)+'">'+T('Duplicate','Dupliquer')+'</button><button data-remove-version="'+esc(v.id)+'">'+T('Remove','Retirer')+'</button></div></article>').join(''):'<div class="r-empty"><p>'+T('Save a version to keep the idea and compare directions.','Enregistrez une version pour conserver l’idée et comparer les pistes.')+'</p></div>';
+    function renderVersions(){const rows=draftRows();$('[data-version-list]').innerHTML=rows.length?rows.map(v=>'<article class="r-version'+(v.id===currentVersion?' is-current':'')+'"><h3>'+esc(v.title)+'</h3><p>'+esc(draftDescription(v))+'</p><label><input type="checkbox" data-compare-choice="'+esc(v.id)+'">'+T('Compare','Comparer')+'</label><div class="r-version-actions"><button data-load-version="'+esc(v.id)+'">'+T('Continue','Continuer')+'</button><button data-rename-version="'+esc(v.id)+'">'+T('Rename','Renommer')+'</button><button data-duplicate-version="'+esc(v.id)+'">'+T('Duplicate','Dupliquer')+'</button><button data-remove-version="'+esc(v.id)+'">'+T('Remove version','Supprimer la version')+'</button></div></article>').join(''):'<div class="r-empty"><p>'+T('Save a version to keep the idea and compare directions.','Enregistrez une version pour conserver l’idée et comparer les pistes.')+'</p></div>';
       $$('[data-load-version]').forEach(b=>b.addEventListener('click',()=>loadVersion(b.dataset.loadVersion)));
-      $$('[data-duplicate-version]').forEach(b=>b.addEventListener('click',()=>{const rows=draftRows();const v=rows.find(v=>v.id===b.dataset.duplicateVersion);const copy={...v,id:crypto.randomUUID(),title:v.title+' · '+T('copy','copie'),updated:Date.now()};rows.unshift(copy);put(DRAFTS,rows);currentVersion=copy.id;renderVersions();}));
-      $$('[data-remove-version]').forEach(b=>b.addEventListener('click',()=>{put(DRAFTS,draftRows().filter(v=>v.id!==b.dataset.removeVersion));renderVersions();status.textContent=T('Local version removed.','Version locale retirée.');}));
-      $$('[data-rename-version]').forEach(b=>b.addEventListener('click',()=>{const parent=b.closest('.r-version'),old=$('h3',parent),id=b.dataset.renameVersion;const input=document.createElement('input');input.value=old.textContent;input.maxLength=80;input.setAttribute('aria-label',T('Version name','Nom de la version'));old.replaceWith(input);input.focus();input.select();function save(){const title=input.value.trim().slice(0,80);if(title){const rows=draftRows();rows.find(v=>v.id===id).title=title;put(DRAFTS,rows);}renderVersions();}input.addEventListener('keydown',ev=>{if(ev.key==='Enter'){ev.preventDefault();save();}if(ev.key==='Escape')renderVersions();});input.addEventListener('blur',save,{once:true});}));
+      $$('[data-duplicate-version]').forEach(b=>b.addEventListener('click',()=>{const rows=draftRows();const v=rows.find(v=>v.id===b.dataset.duplicateVersion);const copy={...v,id:crypto.randomUUID(),title:v.title+' · '+T('copy','copie'),updated:Date.now()};rows.unshift(copy);persistDraftRows(rows);currentVersion=copy.id;renderVersions();}));
+      $$('[data-remove-version]').forEach(button=>button.addEventListener('click',()=>{
+        const id=button.dataset.removeVersion;
+        const draft=draftRows().find(row=>row.id===id);
+        if(!draft)return;
+        const question=T(
+          'Remove “'+draft.title+'”? This local version cannot be recovered.',
+          'Supprimer « '+draft.title+' » ? Cette version locale ne pourra pas être récupérée.'
+        );
+        if(!window.confirm(question))return;
+        const saved=persistDraftRows(draftRows().filter(row=>row.id!==id));
+        if(currentVersion===id)currentVersion=null;
+        const review=$('[data-review-summary]');
+        if(review.dataset.reviewVersion===id){review.hidden=true;review.replaceChildren();}
+        renderVersions();
+        ($('[data-remove-version]')||$('[data-save-version]'))?.focus();
+        status.textContent=saved?T('Local version removed.','Version locale supprimée.'):
+          T('Browser storage is unavailable. Reloading may restore this version.','Le stockage du navigateur est indisponible. Cette version peut réapparaître au rechargement.');
+      }));
+      $$('[data-rename-version]').forEach(button=>button.addEventListener('click',()=>{
+        const card=button.closest('.r-version');
+        const heading=$('h3',card);
+        const id=button.dataset.renameVersion;
+        const input=document.createElement('input');
+        input.value=heading.textContent;
+        input.maxLength=80;
+        input.setAttribute('aria-label',T('Version name','Nom de la version'));
+        heading.replaceWith(input);
+        input.focus();
+        input.select();
+        let finished=false;
+        function finish(save,restoreFocus){
+          if(finished)return;
+          finished=true;
+          const title=input.value.trim();
+          if(save&&title){
+            const rows=draftRows();
+            const row=rows.find(draft=>draft.id===id);
+            if(row){row.title=title;persistDraftRows(rows);}
+          }
+          renderVersions();
+          if(restoreFocus)$$('[data-rename-version]').find(el=>el.dataset.renameVersion===id)?.focus();
+        }
+        input.addEventListener('keydown',event=>{
+          if(event.key==='Enter'||event.key==='Escape'){
+            event.preventDefault();
+            finish(event.key==='Enter',true);
+          }
+        });
+        input.addEventListener('blur',()=>finish(true,false),{once:true});
+      }));
     }
-    function loadVersion(id){const v=draftRows().find(v=>v.id===id);if(!v)return;currentVersion=id;setMode(v.mode);idea.value=v.idea;priority.value=v.priority;currentStudy=v.study;base=v.base;const radio=$$('[name=base-context]').find(n=>n.value===base);if(radio)radio.checked=true;showStudy();showBase();renderVersions();status.textContent=v.reference?T('Version loaded. Re-select its reference image if needed; uploaded files are not stored.','Version chargée. Sélectionnez à nouveau l’image si nécessaire ; les fichiers ne sont pas conservés.'):T('Local version loaded.','Version locale chargée.');}
-    $('[data-save-version]').addEventListener('click',()=>{if(!valid())return;const rows=draftRows();const v={...values(),id:crypto.randomUUID(),title:T('My charm','Mon ornement')+' · '+(rows.length+1),updated:Date.now(),stage:'local_draft'};rows.unshift(v);const saved=put(DRAFTS,rows);currentVersion=v.id;renderVersions();status.textContent=saved?T('Version saved on this device. No server submission was made.','Version enregistrée sur cet appareil. Aucun envoi sur serveur.'):T('Saved temporarily; browser storage is unavailable.','Enregistrement temporaire ; stockage du navigateur indisponible.');});
-    $('[data-compare-versions]').addEventListener('click',()=>{const ids=$$('[data-compare-choice]:checked').map(i=>i.dataset.compareChoice);if(ids.length!==2){status.textContent=T('Select two saved versions to compare.','Sélectionnez deux versions enregistrées.');return;}const rows=draftRows();const chosen=ids.map(id=>rows.find(v=>v.id===id));$('[data-compare-content]').innerHTML='<h2>'+T('Compare local versions','Comparer les versions locales')+'</h2><div class="r-compare-columns">'+chosen.map(v=>'<article><img src="'+assetBase+studies.get(v.study).image+'" alt="'+esc(studies.get(v.study).name)+'"><h3>'+esc(v.title)+'</h3><p>'+esc(v.idea||T('Image-led brief','Projet visuel'))+'</p><p>'+esc(v.priority)+'</p><p>'+esc(v.base)+'</p><p>'+T('Existing concept example · not AI-generated from this brief.','Concept existant · non généré par IA à partir du projet.')+'</p></article>').join('')+'</div>';$('#r-compare-dialog').showModal();});
-    $('[data-prepare-review]').addEventListener('click',async()=>{
-      if(!valid())return;
-      try{
-      const v=values(),rows=draftRows();let saved=rows.find(a=>a.id===currentVersion);
-      const snapshot=a=>JSON.stringify({mode:a.mode,idea:a.idea,priority:a.priority,study:a.study,base:a.base,reference:a.reference});
-      if(!saved||snapshot(saved)!==snapshot(v)){
-        saved={...v,id:crypto.randomUUID(),title:T('My charm','Mon ornement')+' · '+(rows.length+1),updated:Date.now(),stage:'local_draft'};
-        rows.unshift(saved);currentVersion=saved.id;
+    function loadVersion(id){
+      const draft=draftRows().find(row=>row.id===id);
+      if(!draft)return;
+      currentVersion=id;
+      clearReference();
+      setMode(['words','image','both'].includes(draft.mode)?draft.mode:'words');
+      idea.value=typeof draft.idea==='string'?draft.idea:'';
+      priority.value=typeof draft.priority==='string'?draft.priority:'';
+      chooseNewExample=!studies.has(draft.study);
+      currentStudy=chooseNewExample?config.studies[0].id:draft.study;
+      base=['earrings','ring','neckpiece'].includes(draft.base)?draft.base:'earrings';
+      const radio=$$('[name=base-context]').find(el=>el.value===base);
+      if(radio)radio.checked=true;
+      showStudy();
+      showBase();
+      renderVersions();
+      status.textContent=chooseNewExample?
+        T('Local version loaded. Its original example is unavailable. Choose an example to continue.','Version locale chargée. Son exemple d’origine est indisponible. Choisissez un exemple pour continuer.'):
+        draft.reference?T('Version loaded. Re-select its reference image if needed; uploaded files are not stored.','Version chargée. Sélectionnez à nouveau l’image si nécessaire ; les fichiers ne sont pas conservés.'):
+        T('Local version loaded.','Version locale chargée.');
+    }
+    $('[data-save-version]').addEventListener('click',()=>{if(!valid())return;const rows=draftRows();const v={...values(),id:crypto.randomUUID(),title:T('My charm','Mon ornement')+' · '+(rows.length+1),updated:Date.now(),stage:'local_draft'};rows.unshift(v);const saved=persistDraftRows(rows);currentVersion=v.id;renderVersions();status.textContent=saved?T('Version saved on this device. No server submission was made.','Version enregistrée sur cet appareil. Aucun envoi sur serveur.'):T('Saved temporarily; browser storage is unavailable.','Enregistrement temporaire ; stockage du navigateur indisponible.');});
+    $('[data-compare-versions]').addEventListener('click',()=>{
+      const ids=$$('[data-compare-choice]:checked').map(el=>el.dataset.compareChoice);
+      const chosen=draftRows().filter(draft=>ids.includes(draft.id));
+      if(chosen.length!==2){
+        status.textContent=T('Select two saved versions to compare.','Sélectionnez deux versions enregistrées.');
+        return;
       }
+      const columns=chosen.map(draft=>{
+        const example=studies.get(draft.study);
+        const visual=example?
+          '<img src="'+esc(assetBase+example.image)+'" alt="'+esc(example.name)+'" width="1200" height="1200">':
+          '<p>'+missingExample()+'</p>';
+        return '<article>'+visual+'<h3>'+esc(draft.title)+'</h3><p>'+esc(draft.idea||T('Image-led brief','Projet visuel'))+'</p><p>'+
+          esc(draft.priority)+'</p><p>'+esc(draft.base)+'</p>'+
+          (example?'<p>'+T('Existing concept example · not AI-generated from this brief.','Concept existant · non généré par IA à partir du projet.')+'</p>':'')+'</article>';
+      });
+      $('[data-compare-content]').innerHTML='<h2>'+T('Compare local versions','Comparer les versions locales')+'</h2><div class="r-compare-columns">'+columns.join('')+'</div>';
+      $('#r-compare-dialog').showModal();
+    });
+    const prepareReview=$('[data-prepare-review]');
+    prepareReview.addEventListener('click',async()=>{
+      if(prepareReview.disabled||!valid())return;
+      prepareReview.disabled=true;
+      try{
+      const v=values();let saved=draftRows().find(draft=>draft.id===currentVersion);
+      const snapshot=a=>JSON.stringify({mode:a.mode,idea:a.idea,priority:a.priority,study:a.study,base:a.base,reference:a.reference});
+      const isNew=!saved||snapshot(saved)!==snapshot(v);
+      if(isNew)saved={...v,id:crypto.randomUUID(),title:T('My charm','Mon ornement')+' · '+(draftRows().length+1),updated:Date.now(),stage:'local_draft'};
       const internalSnapshot=JSON.stringify({version:saved.id,...v});
       const digest=[...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(internalSnapshot)))].map(v=>v.toString(16).padStart(2,'0')).join('');
-      saved.review_snapshot_sha256=digest;put(DRAFTS,rows);renderVersions();
+      const rows=draftRows();
+      if(!isNew){
+        const current=rows.find(draft=>draft.id===saved.id);
+        if(!current||snapshot(current)!==snapshot(v))throw new Error('Local version changed while preparing');
+        saved=current;
+      }
+      saved={...saved,review_snapshot_sha256:digest};
+      const persistent=persistDraftRows(isNew?[saved,...rows]:rows.map(draft=>draft.id===saved.id?saved:draft));
+      currentVersion=saved.id;
+      renderVersions();
       const baseName={earrings:T('Earrings','Boucles'),ring:T('Ring','Bague'),neckpiece:T('Neckpiece','Bijou de cou')}[v.base];
       const lines=[T('SUIJI making review enquiry','Demande d’étude de fabrication SUIJI'),T('Local version: ','Version locale : ')+saved.title,T('Idea: ','Idée : ')+(v.idea||T('Image-led brief','Projet guidé par une image')),T('What matters most: ','L’essentiel : ')+(v.priority||T('To discuss','À préciser')),T('Existing concept example: ','Exemple de concept existant : ')+studies.get(v.study).name,T('Base context: ','Contexte de base : ')+baseName,T('Reference image: ','Image de référence : ')+(v.reference?v.reference.name:T('None','Aucune')),T('Please confirm feasibility, materials, dimensions, price and timing before any work.','Merci de confirmer la faisabilité, les matières, les dimensions, le prix et les délais avant tout travail.')];
       const customPolicy=config.custom_order_policy;if(customPolicy)lines.splice(-1,0,customPolicy.label+': '+customPolicy.summary+' '+customPolicy.rights);
-      const emailText=lines.join('\n\n'),n=$('[data-review-summary]');n.hidden=false;
-      n.innerHTML='<h3>'+T('Review draft — not submitted','Brouillon d’étude — non envoyé')+'</h3><p><strong>'+esc(saved.title)+'</strong></p><p>'+esc(v.idea||T('Image-led brief','Projet visuel'))+'</p><p>'+esc(studies.get(v.study).name)+' · '+esc(baseName)+'</p><p>'+T('This exact local version has been saved. The maker still needs to confirm the structure, dimensions, materials, feasibility, price and timing. Attach your authorised reference in your email app.','Cette version locale exacte a été enregistrée. L’artisan doit confirmer structure, dimensions, matières, faisabilité, prix et délais. Joignez votre référence autorisée dans votre messagerie.')+'</p><a class="r-link" href="mailto:contact@suijijewelry.com?subject='+encodeURIComponent(T('SUIJI making review enquiry','Demande d’étude SUIJI'))+'&body='+encodeURIComponent(emailText)+'">'+T('Open an email draft','Ouvrir un brouillon d’e-mail')+' ↗</a><button class="r-link" data-copy-review>'+T('Copy review draft','Copier le brouillon')+'</button><p class="r-caption">'+T('No quote has been approved, no design published and no production started. Uploaded image files are not kept with local versions.','Aucun devis accepté, aucune publication ni fabrication démarrée. Les fichiers image importés ne sont pas conservés avec les versions locales.')+'</p>';
+      const emailText=lines.join('\n\n'),n=$('[data-review-summary]');n.hidden=false;n.dataset.reviewVersion=saved.id;
+      n.innerHTML='<h3>'+T('Review draft — not submitted','Brouillon d’étude — non envoyé')+'</h3><p><strong>'+esc(saved.title)+'</strong></p><p>'+esc(v.idea||T('Image-led brief','Projet visuel'))+'</p><p>'+esc(studies.get(v.study).name)+' · '+esc(baseName)+'</p><p>'+(persistent?T('This version is saved on this device.','Cette version est enregistrée sur cet appareil.'):T('Browser storage is unavailable. Copy this draft to keep it after closing the page.','Le stockage du navigateur est indisponible. Copiez ce brouillon pour le conserver après la fermeture de la page.'))+' '+T('The maker needs to confirm feasibility, materials, dimensions, price and timing. Attach your authorised reference in your email app.','L’artisan doit confirmer la faisabilité, les matières, les dimensions, le prix et les délais. Joignez votre référence autorisée dans votre messagerie.')+'</p><a class="r-link" href="mailto:contact@suijijewelry.com?subject='+encodeURIComponent(T('SUIJI making review enquiry','Demande d’étude SUIJI'))+'&body='+encodeURIComponent(emailText)+'">'+T('Open an email draft','Ouvrir un brouillon d’e-mail')+' ↗</a><button class="r-link" data-copy-review>'+T('Copy review draft','Copier le brouillon')+'</button><p class="r-caption">'+T('No quote has been approved, no design published and no production started. Uploaded image files are not kept with local versions.','Aucun devis accepté, aucune publication ni fabrication démarrée. Les fichiers image importés ne sont pas conservés avec les versions locales.')+'</p>';
       $('[data-copy-review]',n).addEventListener('click',()=>copyText(emailText));n.scrollIntoView({block:'nearest'});
       }catch{status.textContent=T('The review draft could not be prepared. Your brief is still here. Try again, or contact SUIJI.','Le brouillon d’étude n’a pas pu être préparé. Votre projet est toujours ici. Réessayez ou contactez SUIJI.');status.scrollIntoView({block:'nearest'});}
+      finally{prepareReview.disabled=false;}
     });
     $$('[data-workspace-tab]').forEach(b=>b.addEventListener('click',()=>{$$('[data-workspace-tab]').forEach(a=>a.setAttribute('aria-pressed',String(a===b)));$('[data-workspace-panel="'+b.dataset.workspaceTab+'"]').scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}));
     renderVersions();if(initialParams.get('version'))loadVersion(initialParams.get('version'));

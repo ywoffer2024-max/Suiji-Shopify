@@ -1,4 +1,4 @@
-# SUIJI Design System · v6.1.9
+# SUIJI Design System · v6.1.10
 
 Updated 6 November 2026. Scope: the English and French rev107 storefront. This is the visual and interaction contract, not a deployment report. Publication receipts, QA results and historical versions belong in the release archive.
 
@@ -162,16 +162,24 @@ For a layout or shared-style change, verify actual browser widths **360, 390, 76
 
 Publication requires the actual native theme/Page/translation readback and the sole Store writer's publish receipt. Record physical-device, Safari, zoom, video, delivery, payments or performance tests as unverified when they were not performed. Keep test evidence and live theme IDs outside this normative document. A release must not silently change this contract or copy its historical operational numbers into new claims.
 
+### Local versions and phone controls
+
+A local version keeps its text and identity when an example is retired. Display the unavailable reference as text and let the visitor choose a current example before saving or preparing a new review. Comparing two versions keeps both briefs readable. Loading a different version clears the previous in-memory upload so that a reference cannot carry over by mistake.
+
+Before deleting a version, name it and ask for confirmation. Cancel leaves the record and focus in place. Escape cancels an in-progress rename. An on-page making-review draft must report whether the browser actually saved it, and offer copying as the recovery path when local storage is unavailable.
+
+Use named groups of native toggle buttons for Studio input modes and design-example stages. Each button exposes its pressed state and responds to Tab, Enter and Space. Editable version names, saved quantities and catalogue sorting controls use at least 16px text and a 44px height on small or coarse-pointer screens. Catalogue sorting uses an explicit 44px height at these widths to preserve the touch target in Safari while retaining the native select. Secondary controls use the essential control border. Scrollable overlays contain scrolling within their own panel.
+
 ## Machine-readable design lock
 
 This lock pins the reviewed visual implementation. Any mismatch stops compilation until the intended change, document and affected-page verification are reconciled. Font and CSS hashes are not a substitute for browser QA.
 
 ```json design-lock
 {
-  "version": "6.1.9",
+  "version": "6.1.10",
   "stylesheet": {
     "path": "theme/assets/suiji-r107.css",
-    "sha256": "ef03d6ccf8fef4c9dfec3243765241958f741db1e4c29a4226f2aefad0e4ccb6"
+    "sha256": "ad02e591602fd38d3ed8e93c4474ba5b5f572c21a5175e52a776502e5a7beed5"
   },
   "shell": {
     "path": "theme/layout/theme.liquid",
