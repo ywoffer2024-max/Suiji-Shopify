@@ -1,4 +1,4 @@
-# SUIJI Design System · v6.1.10
+# SUIJI Design System · v6.1.11
 
 Updated 6 November 2026. Scope: the English and French rev107 storefront. This is the visual and interaction contract, not a deployment report. Publication receipts, QA results and historical versions belong in the release archive.
 
@@ -148,7 +148,7 @@ The photo-publication.json registry is the only source for public product visibi
 
 
 - Use one shared renderer and generated template per family, not a hand-built page per SKU. Preserve URLs, identities, native locale roots and query-selected configuration. Bind native internal URLs through `routes.root_url`; do not hardcode an assumed `/fr` root.
-- Reserve image dimensions. The first visible main image is eager/high priority; below-fold galleries/cards are lazy. Use existing optimized WebP and CDN derivatives. Do not ship every product gallery or a full private catalogue/IR to the browser.
+- Reserve image dimensions. Give the first homepage or product gallery image eager loading and high priority. Use the existing 600px and 1200px WebP files for the same approved source. Match responsive source sizes to the hero and gallery layout. Keep the full-size URL and update both source attributes when the gallery selection changes. The zoom dialog uses the selected 1200px image. Keep below-fold galleries and cards lazy and the public catalogue allowlist scoped.
 - Future video uses a poster, controls, `preload=none` and intent-based playback. No grid autoplay, fake play button, new carousel library or heavyweight framework merely to add media.
 - AI campaign placeholders remain distinguished from real product geometry, founder portraits and documentary workshop images. Never invent a hidden product angle, manufacturing proof or source identity.
 - Production-scale filtering/pagination belongs to a backend catalogue source; do not solve growth by expanding an unbounded client-side data dump. Keep public config an explicit fact allowlist.
@@ -176,7 +176,7 @@ This lock pins the reviewed visual implementation. Any mismatch stops compilatio
 
 ```json design-lock
 {
-  "version": "6.1.10",
+  "version": "6.1.11",
   "stylesheet": {
     "path": "theme/assets/suiji-r107.css",
     "sha256": "ad02e591602fd38d3ed8e93c4474ba5b5f572c21a5175e52a776502e5a7beed5"

@@ -42,7 +42,16 @@
   $('[data-market-menu]')?.addEventListener('click',ev=>{const panel=$('.r-market-panel');panel.hidden=!panel.hidden;ev.currentTarget.setAttribute('aria-expanded',String(!panel.hidden));});
   $$('[data-market-select]').forEach(select=>select.addEventListener('change',ev=>{const b=$('[data-market-menu]');if(b)b.textContent=ev.target.selectedOptions[0].textContent+' ⌄';$$('[data-market-select]').forEach(other=>other.value=ev.target.value);toast(T('Destination selected for this preview. Order pricing and delivery still need confirmation.','Destination choisie pour cet aperçu. Le prix et la livraison restent à confirmer.'));}));
   document.addEventListener('click',ev=>{if(!ev.target.closest('.r-header'))closeNav();});
-  function openImage(img){if(!img)return;const d=$('#r-image-dialog');$('[data-dialog-image]',d).replaceChildren(img.cloneNode(true));d.showModal();}
+  function openImage(img){
+    if(!img)return;
+    const dialog=$('#r-image-dialog');
+    const enlarged=img.cloneNode(true);
+    enlarged.removeAttribute('srcset');
+    enlarged.removeAttribute('sizes');
+    enlarged.removeAttribute('fetchpriority');
+    $('[data-dialog-image]',dialog).replaceChildren(enlarged);
+    dialog.showModal();
+  }
   $$('[data-enlarge]').forEach(b=>b.addEventListener('click',()=>openImage($('img',b)||$('[data-concept-image]'))));
   $$('.r-dialog-close').forEach(b=>b.addEventListener('click',()=>b.closest('dialog').close()));
   $$('dialog').forEach(d=>d.addEventListener('click',ev=>{if(ev.target===d){const r=d.getBoundingClientRect();if(ev.clientX<r.left||ev.clientX>r.right||ev.clientY<r.top||ev.clientY>r.bottom)d.close();}}));
@@ -69,7 +78,32 @@
   renderBag();window.addEventListener('storage',()=>{updateCount();renderBag();});
   $$('[data-size-calculator]').forEach(form=>{const diameterInput=$('[data-size-diameter]',form);diameterInput.addEventListener('input',()=>{$('[data-size-result]',form).textContent='';});form.addEventListener('submit',event=>{event.preventDefault();const input=$('[data-size-diameter]',form),result=$('[data-size-result]',form);if(!form.reportValidity())return;const diameter=Number(input.value);result.textContent=diameter>=10&&diameter<=30?T('Approximate inner circumference: ','Circonférence intérieure approximative : ')+(Math.PI*diameter).toFixed(1)+' mm. '+T('Compare this with the table below.','Comparez cette mesure au tableau ci-dessous.'):T('Enter an inner diameter between 10 and 30 mm.','Saisissez un diamètre intérieur entre 10 et 30 mm.');});});
   $$('[data-journal-filter]').forEach(b=>b.addEventListener('click',()=>{const key=b.dataset.journalFilter;$$('[data-article-cluster]').forEach(a=>a.hidden=key!=='all'&&a.dataset.articleCluster!==key);$$('[data-journal-filter]').forEach(a=>a.setAttribute('aria-pressed',String(a.dataset.journalFilter===key)));$('[data-journal]')?.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}));
-  $$('[data-product-gallery]').forEach(gallery=>{const buttons=$$('[data-gallery-source]',gallery),main=$('[data-gallery-main]',gallery),counter=$('[data-gallery-counter]',gallery);buttons.forEach((button,index)=>{button.addEventListener('click',()=>{main.src=button.dataset.gallerySource;main.alt=button.dataset.galleryAlt;buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));counter.textContent=(index+1)+' / '+buttons.length;});button.addEventListener('keydown',event=>{let next;if(event.key==='ArrowRight')next=(index+1)%buttons.length;else if(event.key==='ArrowLeft')next=(index-1+buttons.length)%buttons.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=buttons.length-1;else return;event.preventDefault();buttons[next].focus();buttons[next].click();});});});
+  $$('[data-product-gallery]').forEach(gallery=>{
+    const buttons=$$('[data-gallery-source]',gallery);
+    const main=$('[data-gallery-main]',gallery);
+    const counter=$('[data-gallery-counter]',gallery);
+    buttons.forEach((button,index)=>{
+      button.addEventListener('click',()=>{
+        if(button.dataset.gallerySrcset)main.srcset=button.dataset.gallerySrcset;
+        else main.removeAttribute('srcset');
+        main.src=button.dataset.gallerySource;
+        main.alt=button.dataset.galleryAlt;
+        buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+        counter.textContent=(index+1)+' / '+buttons.length;
+      });
+      button.addEventListener('keydown',event=>{
+        let next;
+        if(event.key==='ArrowRight')next=(index+1)%buttons.length;
+        else if(event.key==='ArrowLeft')next=(index-1+buttons.length)%buttons.length;
+        else if(event.key==='Home')next=0;
+        else if(event.key==='End')next=buttons.length-1;
+        else return;
+        event.preventDefault();
+        buttons[next].focus();
+        buttons[next].click();
+      });
+    });
+  });
   $$('[data-gallery-stage]').forEach(b=>b.addEventListener('click',()=>{$$('[data-gallery-stage]').forEach(a=>a.setAttribute('aria-pressed',String(a===b)));$$('[data-gallery-panel]').forEach(p=>p.hidden=p.dataset.galleryPanel!==b.dataset.galleryStage);}));
   $$('[data-email-draft]').forEach(f=>f.addEventListener('submit',ev=>{ev.preventDefault();if(!f.reportValidity())return;const fields=[...new FormData(f)].map(([k,v])=>k+': '+v).join('\n\n');const subject=T('SUIJI enquiry','Demande SUIJI');$('[data-email-result]',f).innerHTML='<p>'+T('Your draft is ready. It has not been sent.','Votre brouillon est prêt. Il n’a pas été envoyé.')+'</p><a class="r-link" href="mailto:contact@suijijewelry.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(fields)+'">'+T('Open in my email app','Ouvrir dans ma messagerie')+' ↗</a><button class="r-link" type="button" data-copy-email>'+T('Copy email text','Copier le texte')+'</button><p class="r-caption">contact@suijijewelry.com</p>';$('[data-copy-email]',f).addEventListener('click',()=>copyText(fields));}));
   const ref=$('[data-contact-reference]');if(ref)ref.value=new URLSearchParams(location.search).get('piece')||'';
