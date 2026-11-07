@@ -21,7 +21,16 @@
       {% assign sj_url = request.origin | append: sj_resolved_path %}
       {% assign suiji_resolved_canonical = sj_url %}
       <link rel="canonical" href="{{ sj_url }}">
-    {% else %}<link rel="canonical" href="{{ canonical_url }}">{% endif %}
+    {% else %}
+      {%- capture suiji_resolved_canonical -%}
+        {%- render 'suiji-journal-index-canonical',
+          fallback: canonical_url, page_kind: request.page_type, blog_handle: blog.handle,
+          page_number: current_page, active_tags: current_tags, page_path: request.path,
+          site_origin: request.origin, market_root: routes.root_url
+        -%}
+      {%- endcapture -%}
+      <link rel="canonical" href="{{ suiji_resolved_canonical }}">
+    {% endif %}
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">

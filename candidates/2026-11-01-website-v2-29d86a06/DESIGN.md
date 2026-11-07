@@ -1,4 +1,4 @@
-# SUIJI Design System · v6.1.11
+# SUIJI Design System · v6.1.12
 
 Updated 6 November 2026. Scope: the English and French rev107 storefront. This is the visual and interaction contract, not a deployment report. Publication receipts, QA results and historical versions belong in the release archive.
 
@@ -152,7 +152,7 @@ The photo-publication.json registry is the only source for public product visibi
 - Future video uses a poster, controls, `preload=none` and intent-based playback. No grid autoplay, fake play button, new carousel library or heavyweight framework merely to add media.
 - AI campaign placeholders remain distinguished from real product geometry, founder portraits and documentary workshop images. Never invent a hidden product angle, manufacturing proof or source identity.
 - Production-scale filtering/pagination belongs to a backend catalogue source; do not solve growth by expanding an unbounded client-side data dump. Keep public config an explicit fact allowlist.
-- Keep page hierarchy, canonical/alternate metadata and native Article schema consistent with the content actually rendered. A sitemap result or deployed source is not evidence of Google indexation.
+- Keep page hierarchy, canonical/alternate metadata and native Article schema consistent with the content actually rendered. The legacy News index points to the Journal in the active market. Its historical articles retain their own canonicals. A sitemap result or deployed source is not evidence of Google indexation.
 
 ## 7. Verification and release
 
@@ -176,14 +176,14 @@ This lock pins the reviewed visual implementation. Any mismatch stops compilatio
 
 ```json design-lock
 {
-  "version": "6.1.11",
+  "version": "6.1.12",
   "stylesheet": {
     "path": "theme/assets/suiji-r107.css",
     "sha256": "ad02e591602fd38d3ed8e93c4474ba5b5f572c21a5175e52a776502e5a7beed5"
   },
   "shell": {
     "path": "theme/layout/theme.liquid",
-    "sha256": "4bd2a00e9f9e00de89681ba00558e3e6777650537952d5597112c832e1c24603"
+    "sha256": "7c7abf27b23d04347b0d32537e3e8b4f37a91bc6f96f7224e54a88987ea83c41"
   },
   "fonts": [
     {

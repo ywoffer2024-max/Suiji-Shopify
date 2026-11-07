@@ -1,0 +1,20 @@
+{%- doc -%}
+  Resolves the legacy News index to the Journal in the active market.
+  @param {string} fallback - Existing canonical URL.
+  @param {string} page_kind - Shopify request page type.
+  @param {string} [blog_handle] - Active blog handle.
+  @param {number} page_number - Requested page number.
+  @param {array} [active_tags] - Active blog tag filters.
+  @param {string} page_path - Requested storefront path.
+  @param {string} site_origin - Active storefront origin.
+  @param {string} market_root - Active market root.
+{%- enddoc -%}
+{%- assign resolved = fallback -%}
+{%- if page_kind == 'blog' and blog_handle == 'news' and page_number == 1 and active_tags == blank -%}
+  {%- assign path_handle = page_path | split: '/' | last -%}
+  {%- if path_handle == 'news' -%}
+    {%- assign journal_path = market_root | append: '/blogs/journal' | replace: '//', '/' -%}
+    {%- assign resolved = site_origin | append: journal_path -%}
+  {%- endif -%}
+{%- endif -%}
+{{- resolved -}}
