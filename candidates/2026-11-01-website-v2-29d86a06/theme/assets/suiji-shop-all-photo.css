@@ -3,6 +3,10 @@
   background: #fff;
 }
 
+.r-photo-catalogue .r-card__meta h3 a {
+  display: block;
+}
+
 .r-photo-catalogue .r-card__meta p:last-child {
   margin-bottom: 0;
 }
