@@ -1,0 +1,124 @@
+.r-photo-catalogue .r-card__image {
+  aspect-ratio: 4 / 5;
+  background: #fff;
+}
+
+.r-photo-catalogue .r-card__meta p:last-child {
+  margin-bottom: 0;
+}
+
+.r-photo-dialog {
+  box-sizing: border-box;
+  width: min(980px, calc(100% - 24px));
+  max-height: calc(100dvh - 24px);
+  max-width: none;
+  padding: 0;
+  border: 1px solid var(--r-line);
+  background: #fff;
+  color: var(--r-ink);
+  overscroll-behavior: contain;
+}
+
+.r-photo-dialog::backdrop {
+  background: #20222688;
+}
+
+.r-photo-dialog__header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px clamp(16px, 4vw, 32px);
+  border-bottom: 1px solid var(--r-line);
+  background: #fff;
+}
+
+.r-photo-dialog__header h2 {
+  font-size: clamp(21px, 4vw, 33px);
+  margin: 0;
+}
+
+.r-photo-dialog__close {
+  flex: 0 0 44px;
+  min-height: 44px;
+  border: 1px solid var(--r-line);
+  background: #fff;
+  color: inherit;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.r-photo-dialog__body {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(200px, 2fr);
+  gap: clamp(18px, 4vw, 36px);
+  padding: 20px clamp(16px, 4vw, 32px) 28px;
+}
+
+.r-photo-dialog__main {
+  display: block;
+  width: 100%;
+  height: min(64dvh, 580px);
+  object-fit: contain;
+}
+
+.r-photo-dialog__controls label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.r-photo-dialog__controls select {
+  width: 100%;
+  max-width: 340px;
+  min-height: 44px;
+  padding: 8px 10px;
+  color: inherit;
+  background: #fff;
+  border: 1px solid var(--r-line);
+}
+
+.r-photo-dialog__thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 10px;
+}
+
+.r-photo-dialog__thumbs button {
+  padding: 0;
+  width: 54px;
+  min-height: 54px;
+  background: #fff;
+  border: 1px solid var(--r-line);
+}
+
+.r-photo-dialog__thumbs button[aria-pressed="true"] {
+  border-color: currentColor;
+  box-shadow: 0 0 0 1px currentColor;
+}
+
+.r-photo-dialog__thumbs img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 749px) {
+  .r-photo-dialog__header {
+    padding-block: 12px;
+  }
+
+  .r-photo-dialog__body {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    padding-block: 8px 20px;
+  }
+
+  .r-photo-dialog__main {
+    height: min(46dvh, 400px);
+  }
+}
