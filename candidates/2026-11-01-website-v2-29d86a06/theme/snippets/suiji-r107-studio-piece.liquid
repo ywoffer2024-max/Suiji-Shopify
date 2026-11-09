@@ -1,92 +1,261 @@
+{% doc %}
+  Renders a photographed catalogue page with the shared SUIJI product layout.
+  @param {object} piece - Localized suiji.studio_piece page data.
+{% enddoc %}
 {%- liquid
   assign piece_locale = 'en'
   if request.locale.iso_code contains 'fr'
     assign piece_locale = 'fr'
   endif
+  assign is_fr = false
+  if piece_locale == 'fr'
+    assign is_fr = true
+  endif
+  assign home_path = routes.root_url
   assign all_path = routes.root_url | append: '/collections/all' | replace: '//', '/'
+  assign size_path = routes.root_url | append: '/pages/bases#size-guide' | replace: '//', '/'
+  assign contact_path = routes.root_url | append: '/pages/contact' | replace: '//', '/'
+  assign mechanism_path = routes.root_url | append: '/pages/the-mechanism' | replace: '//', '/'
+  assign care_path = routes.root_url | append: '/pages/care-guide#materials' | replace: '//', '/'
+  assign shipping_path = routes.root_url | append: '/pages/shipping-returns' | replace: '//', '/'
+  assign warranty_path = routes.root_url | append: '/pages/warranty' | replace: '//', '/'
   assign image_root = 'https://cdn.shopify.com/s/files/1/1041/4112/8020/files/'
+  assign image_widths = '420,560,840,1120,1400' | split: ','
   assign default_finish = piece.finishes.first
   assign default_view = default_finish.views.first
   assign default_image = image_root | append: default_view.file
-  assign image_widths = '420,560,840,1120,1400' | split: ','
   assign piece_title = piece.title[piece_locale]
   assign default_alt = piece_title | append: ' · ' | append: default_finish.label[piece_locale] | append: ' · ' | append: default_view.label[piece_locale]
-  if piece_locale == 'fr'
+  assign contact_reference = piece_title | append: ' · ' | append: default_finish.label[piece_locale]
+  assign is_ring = false
+  if piece.category.en == 'Ring'
+    assign is_ring = true
+    assign size = piece.facts[1].value.en | remove: ' mm' | plus: 0
+    case piece.group
+      when 'ring-01'
+        assign other_size_page = 'piece-brushed-wide-ring-57-mm'
+      when 'ring-02'
+        assign other_size_page = 'piece-brushed-wide-ring-54-mm'
+      when 'ring-03'
+        assign other_size_page = 'piece-hammered-wide-ring-57-mm'
+      when 'ring-05'
+        assign other_size_page = 'piece-hammered-wide-ring-54-mm'
+      when 'ring-04'
+        assign other_size_page = 'piece-hammered-wide-ring-with-accent-stone-57-mm'
+      when 'ring-06'
+        assign other_size_page = 'piece-hammered-wide-ring-with-accent-stone-54-mm'
+      when 'ring-07'
+        assign other_size_page = 'piece-double-arm-ring-57-mm'
+      when 'ring-08'
+        assign other_size_page = 'piece-double-arm-ring-54-mm'
+    endcase
+  endif
+  if is_fr
+    assign home_label = 'Accueil'
     assign back_label = 'Tous les bijoux'
     assign breadcrumb_label = 'Fil d’Ariane'
     assign preview_label = 'Aperçu de l’atelier'
-    assign gallery_label = 'Galerie'
     assign finish_label = 'Finition'
-    assign detail_label = 'Détails'
-    assign original_label = 'Ouvrir l’image en pleine résolution'
+    assign gallery_label = 'Galerie'
+    assign zoom_label = 'Agrandir le visuel'
+    assign size_label = 'Taille de bague'
+    assign size_guide = 'Guide des tailles'
+    assign other_sizes_label = 'Autres tailles · indisponibles dans cet aperçu'
+    assign price_label = 'Prix à confirmer'
+    assign availability_label = 'Les commandes ne sont pas encore ouvertes.'
+    assign contact_label = 'Poser une question sur ce bijou'
+    assign shown_label = 'Dans la galerie'
+    assign size_details = 'Dimensions et port'
+    assign connect_label = 'Comment les éléments se relient'
+    assign materials_label = 'Matières et entretien'
+    assign mechanism_label = 'Core-Lock et système modulaire'
+    assign service_label = 'Livraison, retours et réparation'
+    assign shipping_label = 'Livraison et retours'
+    assign warranty_label = 'Garantie et réparation'
+    assign related_label = 'Vous aimerez aussi'
+    assign reading_label = 'Avant de choisir'
+    assign reading_title = 'S’offrir un bijou : choisir une pièce pour sa vie d’aujourd’hui'
   else
-    assign back_label = 'Shop all'
+    assign home_label = 'Home'
+    assign back_label = 'Shop All'
     assign breadcrumb_label = 'Breadcrumb'
     assign preview_label = 'Studio preview'
-    assign gallery_label = 'Gallery'
     assign finish_label = 'Finish'
-    assign detail_label = 'Details'
-    assign original_label = 'Open full-size image'
+    assign gallery_label = 'Gallery'
+    assign zoom_label = 'Enlarge product image'
+    assign size_label = 'Ring size'
+    assign size_guide = 'Ring size guide'
+    assign other_sizes_label = 'Other sizes · not offered in this preview'
+    assign price_label = 'Price to be confirmed'
+    assign availability_label = 'Ordering is not open yet.'
+    assign contact_label = 'Ask about this piece'
+    assign shown_label = 'Shown in the gallery'
+    assign size_details = 'Size & wearing'
+    assign connect_label = 'How the parts connect'
+    assign materials_label = 'Materials & care'
+    assign mechanism_label = 'Core-Lock & Modular System'
+    assign service_label = 'Delivery, returns & repair'
+    assign shipping_label = 'Shipping & returns'
+    assign warranty_label = 'Warranty & repair'
+    assign related_label = 'You may also like'
+    assign reading_label = 'Before you choose'
+    assign reading_title = 'Buying yourself jewelry: choose a piece for the life you have'
+  endif
+  assign reading_path = routes.root_url | append: '/blogs/journal/buy-jewelry-for-yourself' | replace: '//', '/'
+  if piece.study
+    assign preview_label = piece.category[piece_locale]
+    if is_fr
+      assign contact_label = 'Poser une question sur cette étude'
+      assign availability_label = 'Étude de design. La pierre illustrée est indicative.'
+    else
+      assign contact_label = 'Ask about this design study'
+      assign availability_label = 'Design study. The stone shown is illustrative.'
+    endif
   endif
 -%}
-{{ 'suiji-studio-piece.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'suiji-studio-piece.js' | asset_url }}" defer></script>
-<div class="r-site r-studio-piece" data-r107-page data-family="studio-piece" data-studio-piece="{{ piece.group | escape }}">
+{{ 'suiji-studio-piece-v3511.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'suiji-studio-piece-v3511.js' | asset_url }}" defer></script>
+<div class="r-site r-studio-piece" data-r107-page data-family="pdp" data-studio-piece="{{ piece.group | escape }}">
   <nav class="r-breadcrumb" aria-label="{{ breadcrumb_label }}">
+    <a href="{{ home_path }}">{{ home_label }}</a>
+    <span aria-hidden="true">/</span>
     <a href="{{ all_path }}">{{ back_label }}</a>
     <span aria-hidden="true">/</span>
     <span aria-current="page">{{ piece_title | escape }}</span>
   </nav>
-  <div class="r-studio-piece__layout">
-    <header class="r-studio-piece__heading">
-      <p class="r-eyebrow">{{ preview_label }} · {{ piece.category[piece_locale] | escape }}</p>
-      <h1>{{ piece_title | escape }}</h1>
-      <p class="r-studio-piece__intro">{{ piece.description[piece_locale] | escape }}</p>
-    </header>
-    <section class="r-studio-piece__gallery" aria-label="{{ gallery_label }}">
-      <figure class="r-studio-piece__figure">
-        <img data-studio-main src="{{ default_image }}?width=840"
+
+  <div class="r-pdp" data-product="{{ piece.handle | escape }}">
+    <div class="r-pdp__gallery" aria-label="{{ gallery_label }}" role="region">
+      <button type="button" class="r-gallery-image" data-enlarge aria-label="{{ zoom_label }}">
+        <img data-studio-main src="{{ default_image }}"
           srcset="{%- for width in image_widths -%}{{ default_image }}?width={{ width }} {{ width }}w{% unless forloop.last %}, {% endunless %}{%- endfor -%}"
-          sizes="(max-width: 749px) calc(100vw - 40px), (max-width: 1100px) 48vw, 620px"
+          sizes="(max-width: 749px) calc(100vw - 2 * max(20px, 4.2vw)), (max-width: 989px) calc((100vw - 2 * max(20px, 4.2vw) - 32px) * 0.535), calc((100vw - 2 * clamp(20px, 4.2vw, 72px) - clamp(40px, 6vw, 100px)) * 0.535)"
           width="1400" height="1750" alt="{{ default_alt | escape }}" fetchpriority="high" decoding="async">
-        <figcaption data-studio-caption aria-live="polite">{{ default_finish.label[piece_locale] | escape }} · {{ default_view.label[piece_locale] | escape }}</figcaption>
-      </figure>
+        <span aria-hidden="true">＋</span>
+      </button>
       {%- for finish in piece.finishes %}
-        <div class="r-studio-piece__thumbs" data-studio-angles="{{ finish.key | escape }}"{% unless forloop.first %} hidden{% endunless %}>
-          {%- assign is_first_finish = forloop.first -%}
+        {%- assign is_first_finish = forloop.first -%}
+        <div class="r-gallery-thumbs" data-studio-angles="{{ finish.key | escape }}"{% unless is_first_finish %} hidden{% endunless %}>
           {%- for view in finish.views %}
             {%- assign view_image = image_root | append: view.file -%}
             {%- assign view_alt = piece_title | append: ' · ' | append: finish.label[piece_locale] | append: ' · ' | append: view.label[piece_locale] -%}
-            <a href="{{ view_image }}" data-studio-angle data-photo-alt="{{ view_alt | escape }}"
-              data-photo-caption="{{ finish.label[piece_locale] | escape }} · {{ view.label[piece_locale] | escape }}"
-              aria-label="{{ view.label[piece_locale] | escape }}"{% if forloop.first and is_first_finish %} aria-current="true"{% endif %}>
+            <button type="button" data-studio-angle data-photo="{{ view_image }}"
+              data-photo-alt="{{ view_alt | escape }}" data-photo-caption="{{ view.label[piece_locale] | escape }}"
+              aria-label="{{ view.label[piece_locale] | escape }}" aria-pressed="{% if is_first_finish and forloop.first %}true{% else %}false{% endif %}">
               <img src="{{ view_image }}?width=140" width="140" height="175" alt="" loading="lazy" decoding="async">
-            </a>
+            </button>
           {%- endfor %}
         </div>
       {%- endfor %}
-      <a class="r-link r-studio-piece__original" data-studio-original href="{{ default_image }}" target="_blank" rel="noopener">
-        {{ original_label }} <span aria-hidden="true">↗</span>
+      <p class="r-caption r-gallery-counter" data-studio-counter aria-live="polite">1 / {{ default_finish.views.size }}</p>
+      <p class="r-caption" data-studio-caption>{{ default_view.label[piece_locale] | escape }}</p>
+    </div>
+
+    <div class="r-pdp__buy">
+      <p class="r-eyebrow">{{ preview_label }}{% unless piece.study %} · {{ piece.category[piece_locale] | escape }}{% endunless %}</p>
+      <h1>{{ piece_title | escape }}</h1>
+      <p class="r-selling-unit">{{ availability_label }}</p>
+      {% unless piece.study %}<p class="r-price r-price--large">{{ price_label }}</p>{% endunless %}
+      <p>{{ piece.description[piece_locale] | escape }}</p>
+
+      <div class="r-options">
+        {% if piece.finishes.size > 1 %}
+          <fieldset data-studio-finishes hidden>
+            <legend>{{ finish_label }}</legend>
+            <div class="r-choice-row">
+              {%- for finish in piece.finishes %}
+                <label class="r-choice r-choice--swatch r-studio-piece__swatch r-studio-piece__swatch--{{ finish.key | escape }}">
+                  <input type="radio" name="studio-finish" value="{{ finish.key | escape }}" data-studio-finish
+                    data-label="{{ finish.label[piece_locale] | escape }}"{% if forloop.first %} checked{% endif %}>
+                  <span>{{ finish.label[piece_locale] | escape }}</span>
+                </label>
+              {%- endfor %}
+            </div>
+          </fieldset>
+        {% endif %}
+        {% if is_ring %}
+          <fieldset>
+            <legend>{{ size_label }}</legend>
+            <div class="r-choice-row">
+              {% assign studio_sizes = '54,57' | split: ',' %}
+              {% for studio_size in studio_sizes %}
+                {% assign numeric_size = studio_size | plus: 0 %}
+                {% if numeric_size == size %}
+                  <span class="r-choice r-studio-piece__size-current" aria-current="true">{{ studio_size }} mm</span>
+                {% elsif other_size_page != blank %}
+                  <a class="r-choice r-studio-piece__size-link" href="{{ routes.root_url | append: '/pages/' | append: other_size_page | replace: '//', '/' }}">{{ studio_size }} mm</a>
+                {% else %}
+                  <span class="r-choice r-choice--unavailable" aria-disabled="true"><span>{{ studio_size }} mm</span></span>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <a class="r-size-link" data-open-size-guide href="{{ size_path }}">{{ size_guide }}</a>
+            <details class="r-studio-piece__other-sizes">
+              <summary>{{ other_sizes_label }}</summary>
+              <div class="r-choice-row">
+                {% for other_size in (41..65) %}
+                  {% unless other_size == 54 or other_size == 57 %}
+                    <span class="r-choice r-choice--unavailable" aria-disabled="true"><span>{{ other_size }} mm</span></span>
+                  {% endunless %}
+                {% endfor %}
+              </div>
+            </details>
+          </fieldset>
+        {% endif %}
+      </div>
+
+      <a class="r-button r-studio-piece__action" data-studio-contact="{{ contact_path }}"
+        data-piece-title="{{ piece_title | escape }}" href="{{ contact_path }}?piece={{ contact_reference | url_encode }}">
+        {{ contact_label }} <span aria-hidden="true">↗</span>
       </a>
-    </section>
-    <section class="r-studio-piece__details" aria-label="{{ detail_label }}">
-      {% if piece.finishes.size > 1 %}
-        <div class="r-studio-piece__finish" data-studio-finish-control hidden>
-          <label for="StudioPieceFinish">{{ finish_label }}</label>
-          <select id="StudioPieceFinish" data-studio-finish>
-            {%- for finish in piece.finishes %}
-              <option value="{{ finish.key | escape }}">{{ finish.label[piece_locale] | escape }}</option>
-            {%- endfor %}
-          </select>
-        </div>
+      {% if is_ring %}
+        {% render 'suiji-studio-piece-reference', mode: 'ring-pairing', is_fr: is_fr %}
+      {% else %}
+        {% render 'suiji-studio-piece-reference', mode: 'related', piece: piece, piece_locale: piece_locale, title: related_label, preview_label: preview_label, image_root: image_root %}
       {% endif %}
-      <h2>{{ detail_label }}</h2>
-      <dl class="r-studio-piece__facts">
-        {%- for fact in piece.facts %}
-          <div><dt>{{ fact.label[piece_locale] | escape }}</dt><dd>{{ fact.value[piece_locale] | escape }}</dd></div>
-        {%- endfor %}
-      </dl>
-      <a class="r-link" href="{{ all_path }}"><span aria-hidden="true">←</span> {{ back_label }}</a>
-    </section>
+    </div>
   </div>
+
+  <div class="r-pdp-details">
+    <section id="included">
+      <h2>{{ shown_label }}</h2>
+      <p>{{ piece.description[piece_locale] | escape }}</p>
+      {%- for fact in piece.facts offset: 1 %}
+        {%- unless fact.label.en == 'Inner circumference' or fact.label.en == 'Shown in the gallery' %}
+          <p>{{ fact.label[piece_locale] | escape }}: {{ fact.value[piece_locale] | escape }}</p>
+        {%- endunless %}
+      {%- endfor %}
+    </section>
+    {% if is_ring %}
+      <section>
+        <h2>{{ size_details }}</h2>
+        <p>{{ piece.facts[1].label[piece_locale] | escape }}: {{ piece.facts[1].value[piece_locale] | escape }}</p>
+        <a class="r-link" data-open-size-guide href="{{ size_path }}">{{ size_guide }} <span aria-hidden="true">↗</span></a>
+      </section>
+    {% endif %}
+    {% unless piece.study %}
+      <section>
+        <h2>{{ materials_label }}</h2>
+        <p>{% if is_fr %}Pour connaître les matières de chaque élément et leur entretien, indiquez-nous la pièce et la finition qui vous intéressent.{% else %}Ask about the piece and finish you’re interested in for materials and care by component.{% endif %}</p>
+        <a class="r-link" href="{{ care_path }}">{{ materials_label }} <span aria-hidden="true">↗</span></a>
+      </section>
+      <section>
+        <h2>{{ connect_label }}</h2>
+        <p>{% if is_fr %}Si vous possédez déjà une base ou un ornement, indiquez-nous lequel pour que nous puissions confirmer les éléments qui s’associent.{% else %}If you already have a base or charm, tell us which one so we can confirm what works with it.{% endif %}</p>
+        <a class="r-link" href="{{ mechanism_path }}">{{ mechanism_label }} <span aria-hidden="true">↗</span></a>
+      </section>
+      <section>
+        <h2>{{ service_label }}</h2>
+        <a class="r-link" href="{{ shipping_path }}">{{ shipping_label }} <span aria-hidden="true">↗</span></a>
+        <a class="r-link" href="{{ warranty_path }}">{{ warranty_label }} <span aria-hidden="true">↗</span></a>
+      </section>
+    {% endunless %}
+  </div>
+  <aside class="r-reading">
+    <p class="r-eyebrow">{{ reading_label }}</p>
+    <a class="r-link" href="{{ reading_path }}">{{ reading_title | escape }} <span aria-hidden="true">↗</span></a>
+  </aside>
+  {% if is_ring %}
+    {% render 'suiji-studio-piece-reference', mode: 'ring-guide', is_fr: is_fr %}
+  {% endif %}
 </div>

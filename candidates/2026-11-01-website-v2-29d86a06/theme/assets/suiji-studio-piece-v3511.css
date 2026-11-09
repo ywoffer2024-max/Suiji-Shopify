@@ -1,0 +1,14 @@
+.r-studio-piece [hidden] { display: none !important; }
+
+.r-studio-piece__swatch--gold { --swatch: #bea464; --swatch-secondary: #bea464; }
+.r-studio-piece__swatch--silver { --swatch: #b6babe; --swatch-secondary: #b6babe; }
+.r-studio-piece__swatch--blue { --swatch: #557f9c; --swatch-secondary: #557f9c; }
+.r-studio-piece__swatch--iridescent { --swatch: #557f9c; --swatch-secondary: #836e94; }
+
+.r-studio-piece__size-current { border-color: var(--r-ink, #232429); }
+.r-studio-piece__size-link { text-decoration: none; }
+.r-studio-piece__size-link:hover { border-color: var(--r-ink, #232429); }
+.r-studio-piece__other-sizes { margin-top: 12px; }
+.r-studio-piece__other-sizes summary { cursor: pointer; }
+.r-studio-piece__other-sizes .r-choice-row { margin-top: 10px; }
+.r-studio-piece__action { min-height: 52px; width: 100%; justify-content: center; }
