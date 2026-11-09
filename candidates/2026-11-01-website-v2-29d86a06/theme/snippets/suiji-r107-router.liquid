@@ -77,6 +77,8 @@
 {% when 'the-edits', 'gift-sets', 'gifts' %}{% render 'suiji-r107-collection-sets' %}
 {% when 'core-lock', 'locks-chains' %}{% render 'suiji-r107-collection-all' %}
 {% endcase %}
+{%- elsif request.page_type == 'page' and page.metafields.suiji.studio_piece.value.schema == 'suiji-studio-piece/1' -%}
+{% render 'suiji-r107-studio-piece', piece: page.metafields.suiji.studio_piece.value %}
 {%- elsif request.page_type == 'page' -%}{% case page.handle %}
 {% when 'study-triangle' %}{% render 'suiji-r107-public-study-triangle' %}
 {% when 'study-gate' %}{% render 'suiji-r107-public-study-gate' %}
