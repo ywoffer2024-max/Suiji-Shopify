@@ -5,7 +5,13 @@
 .r-studio-piece__swatch--blue { --swatch: #557f9c; --swatch-secondary: #557f9c; }
 .r-studio-piece__swatch--iridescent { --swatch: #557f9c; --swatch-secondary: #836e94; }
 
-.r-studio-piece__size-current { border-color: var(--r-ink, #232429); }
+.r-studio-piece .r-pdp__buy h1 { text-wrap: balance; }
+.r-studio-piece__heading-size { white-space: nowrap; }
+.r-studio-piece .r-pdp__buy .r-studio-piece__size-current {
+  border-color: #4b6576;
+  box-shadow: inset 0 0 0 1px #4b6576;
+  background: #e9f0f4;
+}
 .r-studio-piece__size-link { text-decoration: none; }
 .r-studio-piece__size-link:hover { border-color: var(--r-ink, #232429); }
 .r-studio-piece__other-sizes { margin-top: 12px; }

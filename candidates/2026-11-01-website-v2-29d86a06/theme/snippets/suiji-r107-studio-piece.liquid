@@ -153,7 +153,12 @@
 
     <div class="r-pdp__buy">
       <p class="r-eyebrow">{{ preview_label }}{% unless piece.study %} · {{ piece.category[piece_locale] | escape }}{% endunless %}</p>
-      <h1>{{ piece_title | escape }}</h1>
+      {% if is_ring %}
+        {% assign ring_title = piece_title | split: ' · ' %}
+        <h1>{{ ring_title.first | escape }} <span class="r-studio-piece__heading-size">· {{ ring_title.last | escape }}</span></h1>
+      {% else %}
+        <h1>{{ piece_title | escape }}</h1>
+      {% endif %}
       <p class="r-selling-unit">{{ availability_label }}</p>
       {% unless piece.study %}<p class="r-price r-price--large">{{ price_label }}</p>{% endunless %}
       <p>{{ piece.description[piece_locale] | escape }}</p>
