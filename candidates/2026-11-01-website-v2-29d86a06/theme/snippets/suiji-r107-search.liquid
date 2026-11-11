@@ -1,3 +1,7 @@
+<style>
+  .r-search-result-group .r-search-result-link--photo { display: inline-flex; align-items: center; gap: 12px; }
+  .r-search-result-link--photo img { object-fit: contain; }
+</style>
 {%- if request.locale.iso_code contains 'fr' -%}
 <div class="r-site" data-r107-page data-family="search" data-modules="1,2,3"><header class="r-intro r-intro--small"><p class="r-eyebrow">SUIJI</p><h1>Un bijou. Une réponse.</h1><p>Recherchez un bijou, un ornement, une base ou une question.</p></header><section class="r-section" data-search><form role="search" data-search-form><label class="r-search-label" for="r-search-query">Rechercher sur SUIJI</label><div class="r-search-row"><input id="r-search-query" name="q" type="search" autocomplete="off" enterkeyhint="search" maxlength="160" placeholder="Une bague, un fermoir, une question…"><button class="r-button">Rechercher</button></div></form><p data-search-status role="status"></p><div class="r-tabs"><button data-search-kind="all" aria-pressed="true">Tout</button><button data-search-kind="pieces" aria-pressed="false">Bijoux</button><button data-search-kind="guides" aria-pressed="false">Guides et aide</button><button data-search-kind="design" aria-pressed="false">Exemples de création</button></div><div data-search-results></div></section></div>
 {%- else -%}

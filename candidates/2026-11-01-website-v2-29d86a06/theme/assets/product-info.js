@@ -64,6 +64,7 @@ if (!customElements.get('product-info')) {
         if (!this.contains(event.target)) return;
 
         this.resetProductFormState();
+        this.showReviewedGalleryStatus('loading');
 
         const productUrl = target.dataset.productUrl || this.pendingRequestUrl || this.dataset.url;
         this.pendingRequestUrl = productUrl;
@@ -132,6 +133,7 @@ if (!customElements.get('product-info')) {
             if (error.name === 'AbortError') {
               console.log('Fetch aborted by user');
             } else {
+              this.showReviewedGalleryStatus('error');
               console.error(error);
             }
           });
@@ -171,6 +173,7 @@ if (!customElements.get('product-info')) {
           this.updateVariantInputs(variant?.id);
 
           if (!variant) {
+            this.updateMedia(html, null);
             this.setUnavailable();
             return;
           }
@@ -239,7 +242,36 @@ if (!customElements.get('product-info')) {
         document.querySelectorAll(selectors).forEach(({ classList }) => classList.add('hidden'));
       }
 
+      showReviewedGalleryStatus(state) {
+        const gallery = this.querySelector('media-gallery[data-suiji-reviewed-gallery]');
+        const status = gallery?.querySelector('[data-suiji-gallery-status]');
+        if (!status) return;
+
+        gallery.setAttribute('aria-busy', String(state === 'loading'));
+        gallery.querySelectorAll('slider-component').forEach((slider) => {
+          slider.style.visibility = 'hidden';
+        });
+        status.textContent = status.dataset[state];
+        status.hidden = false;
+      }
+
       updateMedia(html, variantFeaturedMediaId) {
+        const currentGallery = this.querySelector('media-gallery[data-suiji-reviewed-gallery]');
+        const incomingGallery = html.querySelector('media-gallery[data-suiji-reviewed-gallery]');
+
+        if (currentGallery) {
+          if (!incomingGallery) {
+            this.showReviewedGalleryStatus('error');
+            return;
+          }
+          currentGallery.replaceWith(incomingGallery);
+          const modalContent = this.productModal?.querySelector('.product-media-modal__content');
+          const incomingModalContent = html.querySelector('product-modal .product-media-modal__content');
+          if (modalContent && incomingModalContent) modalContent.innerHTML = incomingModalContent.innerHTML;
+          if (this.hasAttribute('data-zoom-on-hover')) enableZoomOnHover(2);
+          return;
+        }
+
         if (!variantFeaturedMediaId) return;
 
         const mediaGallerySource = this.querySelector('media-gallery ul');

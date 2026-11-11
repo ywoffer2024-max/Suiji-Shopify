@@ -2,6 +2,28 @@
   assign suiji_product_display_only = false
   assign suiji_product_title = product.title
   assign suiji_product_description = product.description
+  assign gallery_layout = section.settings.gallery_layout
+  assign gallery_mobile_thumbnails = section.settings.mobile_thumbnails
+  capture reviewed_media_ids
+    render 'suiji-reviewed-variant-media-ids', product: product
+  endcapture
+  assign reviewed_media_ids = reviewed_media_ids | strip
+  if reviewed_media_ids != blank
+    assign gallery_layout = 'thumbnail_slider'
+    assign gallery_mobile_thumbnails = 'show'
+    assign ordered_ids = reviewed_media_ids | split: ','
+    assign reviewed_media = '' | split: ','
+    unless reviewed_media_ids == 'missing'
+      for approved_id in ordered_ids
+        assign numeric_id = approved_id | plus: 0
+        assign matching = product.media | where: 'id', numeric_id | where: 'media_type', 'image'
+        assign reviewed_media = reviewed_media | concat: matching
+      endfor
+      if reviewed_media.size != ordered_ids.size
+        assign reviewed_media = '' | split: ','
+      endif
+    endunless
+  endif
   if product.tags contains 'suiji-display-only'
     assign suiji_product_display_only = true
     assign suiji_product_locale = request.locale.iso_code | split: '-' | first
@@ -90,9 +112,9 @@
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   <div class="page-width">
     <nav class="suiji-pdp__breadcrumbs" aria-label="{{ 'suiji_pdp.breadcrumbs' | t | escape }}"><a href="{{ routes.root_url }}">{{ 'suiji_pdp.home' | t }}</a><span aria-hidden="true">/</span>{% if collection != blank %}<a href="{% render 'suiji-localized-menu-url', url: collection.url %}">{{ collection.title | escape }}</a>{% else %}<a href="{% render 'suiji-localized-menu-url', url: '/collections/all' %}">{{ 'suiji_navigation.labels.shop_all' | t }}</a>{% endif %}<span aria-hidden="true">/</span><span aria-current="page">{{ suiji_product_title | escape }}</span></nav>
-    <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+    <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ gallery_layout }} product--mobile-{{ gallery_mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
-        {% render 'product-media-gallery', variant_images: variant_images %}
+        {% render 'product-media-gallery', variant_images: variant_images, reviewed_media_ids: reviewed_media_ids, reviewed_media: reviewed_media, gallery_layout: gallery_layout, gallery_mobile_thumbnails: gallery_mobile_thumbnails %}
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <section
@@ -705,7 +727,7 @@
       </div>
     </div>
 
-    {% render 'product-media-modal', variant_images: variant_images %}
+    {% render 'product-media-modal', variant_images: variant_images, reviewed_media_ids: reviewed_media_ids, reviewed_media: reviewed_media %}
 
     {% assign popups = section.blocks | where: 'type', 'popup' %}
     {%- for block in popups -%}
