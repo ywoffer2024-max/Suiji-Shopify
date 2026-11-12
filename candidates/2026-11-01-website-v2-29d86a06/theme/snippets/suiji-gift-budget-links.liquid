@@ -1,0 +1,41 @@
+{%- doc -%}
+  Renders the cumulative EUR budget links for Gifts.
+  @param {string} [presentation] - Use page for an in-page heading.
+  @param {string} [current_limit] - The active EUR ceiling on a budget collection.
+{%- enddoc -%}
+{%- liquid
+  assign language = request.locale.iso_code | split: '-' | first
+  assign budgets = '100,500,1000' | split: ','
+  assign group_title = 'Shop by price'
+  if language == 'fr'
+    assign group_title = 'Par budget'
+  endif
+-%}
+<nav class="r-gift-budget" aria-label="{{ group_title }}" data-gift-budget-links>
+  {% if presentation == 'page' %}
+    <div class="r-section__heading"><h2>{{ group_title }}</h2></div>
+  {% else %}
+    <p class="r-gift-budget__title">{{ group_title }}</p>
+  {% endif %}
+  <div class="r-mega-links">
+    {% for limit in budgets %}
+      {%- liquid
+        assign amount = limit
+        if limit == '1000'
+          if language == 'fr'
+            assign amount = '1 000'
+          else
+            assign amount = '1,000'
+          endif
+        endif
+        if language == 'fr'
+          assign label = 'Moins de ' | append: amount | append: ' €'
+        else
+          assign label = 'Under €' | append: amount
+        endif
+        assign path = routes.root_url | append: '/collections/gifts-under-' | append: limit | append: '-eur' | replace: '//', '/'
+      -%}
+      <a class="r-link" href="{{ path }}" data-gift-budget-link="{{ limit }}"{% if current_limit == limit %} aria-current="page"{% endif %}>{{ label }}</a>
+    {% endfor %}
+  </div>
+</nav>

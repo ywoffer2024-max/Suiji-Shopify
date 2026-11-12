@@ -250,3 +250,53 @@ dialog.r-filters,
 .suiji-bracelet-preview__photo { width: min(100%, 640px); height: auto; display: block; margin: 1rem auto clamp(2rem, 5vw, 4rem); }
 @media (max-width: 900px) { .suiji-set-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 590px) { .suiji-set-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* Gifts budget links and collection cards */
+.r-gift-budget {
+  border-top: 1px solid var(--r-line);
+  padding-top: 16px;
+}
+.r-gift-budget__title {
+  margin: 0;
+  font-weight: 600;
+}
+.r-gift-budget .r-mega-links {
+  padding-block: 5px 0;
+}
+.r-gift-budget .r-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+}
+.r-gift-budget a[aria-current='page'] {
+  font-weight: 600;
+}
+.r-gift-budget-panel {
+  padding-block: 0 24px;
+}
+.r-gift-budget-page .r-intro {
+  padding-bottom: 22px;
+}
+.r-gift-budget-page .r-intro h1 {
+  margin-top: 12px;
+}
+.r-gift-budget-results {
+  padding-top: 24px;
+}
+.r-gift-budget-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.r-gift-budget-card-link:hover h3,
+.r-gift-budget-card-link:focus-visible h3 {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (max-width: 749px) {
+  .r-gift-budget .r-mega-links {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}

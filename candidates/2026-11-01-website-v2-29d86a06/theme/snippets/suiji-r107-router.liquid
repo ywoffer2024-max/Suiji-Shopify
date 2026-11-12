@@ -76,6 +76,9 @@
 {% when 'motifs' %}{% render 'suiji-r107-collection-charms' %}
 {% when 'the-edits', 'gift-sets', 'gifts' %}{% render 'suiji-r107-collection-sets' %}
 {% when 'core-lock', 'locks-chains' %}{% render 'suiji-r107-collection-all' %}
+{% when 'gifts-under-100-eur', 'gifts-under-500-eur', 'gifts-under-1000-eur' %}
+  {% assign gift_budget_limit = collection.handle | remove_first: 'gifts-under-' | remove: '-eur' %}
+  {% render 'suiji-r107-gift-budget-collection', limit: gift_budget_limit %}
 {% endcase %}
 {%- elsif request.page_type == 'page' -%}{% case page.handle %}
 {% when 'study-triangle' %}{% render 'suiji-r107-public-study-triangle' %}

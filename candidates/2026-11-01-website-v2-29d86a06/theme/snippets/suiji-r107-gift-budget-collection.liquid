@@ -1,0 +1,85 @@
+{%- doc -%}
+  Presents a Shopify collection whose rules select qualifying variants in EUR.
+  @param {string} limit - The exclusive budget ceiling encoded in the collection handle.
+{%- enddoc -%}
+{%- liquid
+  assign language = request.locale.iso_code | split: '-' | first
+  assign amount = limit
+  assign currency = cart.currency.iso_code | default: shop.currency
+  assign gifts_url = routes.root_url | append: '/pages/gifts' | replace: '//', '/'
+  if language == 'fr'
+    if limit == '1000'
+      assign amount = '1 000'
+    endif
+    assign heading = 'Cadeaux à moins de ' | append: amount | append: ' €'
+    assign back_label = 'Tous les cadeaux'
+    assign empty_label = 'Aucune pièce avec un prix confirmé dans ce budget pour le moment.'
+    assign results_label = 'Cadeaux dans ce budget'
+    assign currency_note = 'Les budgets sont calculés en euros. Les prix des pièces s’affichent dans votre devise.'
+  else
+    if limit == '1000'
+      assign amount = '1,000'
+    endif
+    assign heading = 'Gifts under €' | append: amount
+    assign back_label = 'All gifts'
+    assign empty_label = 'There are no pieces with a confirmed price in this budget yet.'
+    assign results_label = 'Gifts in this budget'
+    assign currency_note = 'Budgets use EUR store prices. Piece prices are shown in your selected currency.'
+  endif
+-%}
+<div class="r-site r-gift-budget-page" data-r107-page data-family="gift-budget" data-gift-budget="{{ limit }}" data-gift-budget-currency="{{ currency | escape }}">
+  <header class="r-intro r-intro--small">
+    <a class="r-link" href="{{ gifts_url }}">{{ back_label }}</a>
+    <h1>{{ heading }}</h1>
+    {% if currency != 'EUR' %}<p>{{ currency_note }}</p>{% endif %}
+  </header>
+
+  <section class="r-section r-gift-budget-panel">
+    {% render 'suiji-gift-budget-links', presentation: 'page', current_limit: limit %}
+  </section>
+
+  <section class="r-section r-gift-budget-results" id="gift-budget-products" aria-label="{{ results_label }}">
+    <h2 class="visually-hidden">{{ results_label }}</h2>
+    {% paginate collection.products by 24 %}
+      {% if collection.products.size == 0 %}
+        <p data-gift-budget-empty>{{ empty_label }}</p>
+      {% else %}
+        <div class="r-grid">
+          {% for product in collection.products %}
+            {%- liquid
+              assign offer = product.selected_or_first_available_variant
+              assign localized = product.metafields.custom.suiji_display_copy.value[language]
+              assign title = localized.title | default: product.title
+              assign image = offer.featured_image | default: product.featured_image
+              assign path = routes.root_url | append: '/products/' | append: product.handle | replace: '//', '/'
+              if offer.id
+                assign path = path | append: '?variant=' | append: offer.id
+              endif
+              assign display_price = offer.price | default: product.price
+              assign loading = 'lazy'
+              if forloop.index <= 4
+                assign loading = 'eager'
+              endif
+            -%}
+            <article class="r-card" data-gift-budget-product="{{ product.handle | escape }}">
+              <a class="r-gift-budget-card-link" href="{{ path | escape }}">
+                {% if image %}
+                  <div class="r-card__image">
+                    {{ image | image_url: width: 880 | image_tag: widths: '220, 360, 550, 720, 880', sizes: '(min-width: 1280px) 20vw, (min-width: 750px) 30vw, 48vw', alt: '', loading: loading, decoding: 'async' }}
+                  </div>
+                {% endif %}
+                <div class="r-card__meta">
+                  <h3>{{ title | escape }}</h3>
+                  <p class="r-price" data-gift-budget-price>{{ display_price | money_with_currency }}</p>
+                </div>
+              </a>
+            </article>
+          {% endfor %}
+        </div>
+        {% if paginate.pages > 1 %}
+          {% render 'pagination', paginate: paginate, anchor: '#gift-budget-products' %}
+        {% endif %}
+      {% endif %}
+    {% endpaginate %}
+  </section>
+</div>
