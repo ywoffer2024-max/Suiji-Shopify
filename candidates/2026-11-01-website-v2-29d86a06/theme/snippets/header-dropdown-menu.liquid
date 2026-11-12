@@ -8,12 +8,21 @@
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}
+      {%- assign menu_url = link.url -%}
+      {%- assign menu_children = link.links -%}
+      {%- assign menu_current = link.current -%}
+      {%- if link.handle == 'sets' -%}
+        {%- assign menu_url = '/collections/sets' -%}
+        {%- assign menu_children = '' -%}
+        {%- assign menu_current = false -%}
+        {%- if request.page_type == 'collection' and collection.handle == 'sets' -%}
+          {%- assign menu_current = true -%}
+        {%- endif -%}
+      {%- endif -%}
       {%- assign suiji_is_shop_all = false -%}{%- if link.url contains '/collections/all' -%}{%- assign suiji_is_shop_all = true -%}{%- endif -%}
-      {%- assign suiji_is_sets = false -%}{%- if link.handle == 'sets' -%}{%- assign suiji_is_sets = true -%}{%- endif -%}
-      {%- assign suiji_is_visual_menu = false -%}{%- if suiji_is_shop_all or suiji_is_sets -%}{%- assign suiji_is_visual_menu = true -%}{%- endif -%}
-      <li class="{% if link.links != blank %}suiji-desktop-parent{% endif %}{% if suiji_is_visual_menu %} suiji-mega-root{% endif %}"{% if suiji_is_visual_menu %} data-suiji-mega-root{% endif %}>
-        {%- if link.links != blank -%}
-          <a id="HeaderMenu-{{ link.handle }}" href="{% render 'suiji-localized-menu-url', url: link.url %}" class="header__menu-item list-menu__item link link--text focus-inset">{%- render 'suiji-localized-menu-title', title: link.title -%}</a>
+      <li class="{% if menu_children != blank %}suiji-desktop-parent{% endif %}{% if suiji_is_shop_all %} suiji-mega-root{% endif %}"{% if suiji_is_shop_all %} data-suiji-mega-root{% endif %}>
+        {%- if menu_children != blank -%}
+          <a id="HeaderMenu-{{ link.handle }}" href="{% render 'suiji-localized-menu-url', url: menu_url %}" class="header__menu-item list-menu__item link link--text focus-inset">{%- render 'suiji-localized-menu-title', title: link.title -%}</a>
           <header-menu>
             <details id="Details-HeaderMenu-{{ forloop.index }}">
               <summary id="HeaderMenuToggle-{{ link.handle }}" class="header__menu-item list-menu__item link focus-inset" aria-labelledby="HeaderMenu-{{ link.handle }} HeaderMenuToggleLabel-{{ link.handle }}">
@@ -22,11 +31,11 @@
               </summary>
               <ul
                 id="HeaderMenu-MenuList-{{ forloop.index }}"
-                class="{% if suiji_is_visual_menu %}suiji-mega-menu {% endif %}{% if suiji_is_sets %}suiji-sets-mega-menu {% endif %}header__submenu list-menu list-menu--disclosure color-{{ section.settings.menu_color_scheme }} gradient caption-large motion-reduce global-settings-popup"
+                class="{% if suiji_is_shop_all %}suiji-mega-menu {% endif %}header__submenu list-menu list-menu--disclosure color-{{ section.settings.menu_color_scheme }} gradient caption-large motion-reduce global-settings-popup"
                 role="list"
                 tabindex="-1"
               >
-                {%- if suiji_is_shop_all -%}{% render 'suiji-shop-mega-menu', links: link.links, parent_handle: link.handle %}{%- elsif suiji_is_sets -%}{% render 'suiji-sets-mega-menu' %}{%- else -%}
+                {%- if suiji_is_shop_all -%}{% render 'suiji-shop-mega-menu', links: link.links, parent_handle: link.handle %}{%- else -%}
                 {%- for childlink in link.links -%}
                   <li class="{% if childlink.links != blank %}suiji-desktop-child-parent{% endif %}">
                     {%- if childlink.links == blank -%}
@@ -81,14 +90,14 @@
         {%- else -%}
           <a
             id="HeaderMenu-{{ link.handle }}"
-            href="{% render 'suiji-localized-menu-url', url: link.url %}"
+            href="{% render 'suiji-localized-menu-url', url: menu_url %}"
             class="header__menu-item list-menu__item link link--text focus-inset"
-            {% if link.current %}
+            {% if menu_current %}
               aria-current="page"
             {% endif %}
           >
             <span
-              {%- if link.current %}
+              {%- if menu_current %}
                 class="header__active-menu-item"
               {% endif %}
             >

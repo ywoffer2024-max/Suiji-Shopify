@@ -22,9 +22,20 @@
           <nav class="menu-drawer__navigation">
             <ul class="menu-drawer__menu has-submenu list-menu" role="list">
               {%- for link in section.settings.menu.links -%}
-                <li class="{% if link.links != blank %}suiji-mobile-parent{% endif %}">
-                  {%- if link.links != blank -%}
-                    <a id="HeaderDrawerParent-{{ link.handle }}" href="{% render 'suiji-localized-menu-url', url: link.url %}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">{%- render 'suiji-localized-menu-title', title: link.title -%}</a>
+                {%- assign menu_url = link.url -%}
+                {%- assign menu_children = link.links -%}
+                {%- assign menu_current = link.current -%}
+                {%- if link.handle == 'sets' -%}
+                  {%- assign menu_url = '/collections/sets' -%}
+                  {%- assign menu_children = '' -%}
+                  {%- assign menu_current = false -%}
+                  {%- if request.page_type == 'collection' and collection.handle == 'sets' -%}
+                    {%- assign menu_current = true -%}
+                  {%- endif -%}
+                {%- endif -%}
+                <li class="{% if menu_children != blank %}suiji-mobile-parent{% endif %}">
+                  {%- if menu_children != blank -%}
+                    <a id="HeaderDrawerParent-{{ link.handle }}" href="{% render 'suiji-localized-menu-url', url: menu_url %}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">{%- render 'suiji-localized-menu-title', title: link.title -%}</a>
                     <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
                       <summary id="HeaderDrawerToggle-{{ link.handle }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset" aria-labelledby="HeaderDrawerParent-{{ link.handle }} HeaderDrawerToggleLabel-{{ link.handle }}">
                         <span id="HeaderDrawerToggleLabel-{{ link.handle }}" class="visually-hidden">{{ 'suiji_navigation.labels.submenu' | t }}</span>
@@ -117,9 +128,9 @@
                   {%- else -%}
                     <a
                       id="HeaderDrawer-{{ link.handle }}"
-                      href="{% render 'suiji-localized-menu-url', url: link.url %}"
-                      class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"
-                      {% if link.current %}
+                      href="{% render 'suiji-localized-menu-url', url: menu_url %}"
+                      class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if menu_current %} menu-drawer__menu-item--active{% endif %}"
+                      {% if menu_current %}
                         aria-current="page"
                       {% endif %}
                     >
