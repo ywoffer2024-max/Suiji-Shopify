@@ -1,15 +1,23 @@
-# SUIJI Design System · v6.1.13
+# SUIJI Design System · v6.2.1
 
-Updated 6 November 2026. Scope: the English and French rev107 storefront. This is the visual and interaction contract, not a deployment report. Publication receipts, QA results and historical versions belong in the release archive.
+Updated 12 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The acceptance criteria govern subsequent storefront changes. The implementation lock pins the reviewed source, and deployment evidence belongs in the release archive.
 
 ## 1. Authority and change control
 
 1. The latest direct human instruction takes priority, followed by this contract, then the existing component implementation. Reference websites and skills inform a change; they do not replace SUIJI's tokens or introduce a new visual direction.
 2. Keep the established white/ice-blue palette, Newsreader/Manrope pairing, image-led layout and restrained rectangular controls. Copy, translations and new catalogue records must use the same components. Do not restyle a page because its text or imagery changed.
 3. Values below are required. A `clamp()` is a fixed responsive formula, not permission to select another number. Do not add page-specific font families, arbitrary sizes, new accent colors, shadows, radii or breakpoints.
-4. A deliberate design change must update the shared CSS, this document and its machine-readable lock in the same change, state the affected components, and repeat their EN/FR desktop/mobile checks. Never update only the lock to silence a failure. A copy-only change must leave the CSS and font hashes unchanged.
-5. `maintenance/rev107/site.py` is the shared renderer; `build_theme.py` compiles it to Liquid. Generated snippets must not be hand-styled or edited as a second implementation. The root workspace DESIGN.md and the release's DESIGN.md must be byte-identical at freeze.
+4. Update the applicable shared component, this document and its machine-readable lock together when an intentional change revises a design rule. State the affected components and verify them on desktop and mobile in English and French. A copy-only change leaves the CSS and font hashes unchanged. Update a locked template's hash only after reviewing its intended change.
+5. The maintained Shopify repository's release DESIGN.md is the source of truth. The workspace DESIGN.md is its byte-identical working copy. Native and editorial pages share the shell, colors, typography and media rules. When a generator owns a template, apply durable changes in its source.
 6. There is one visual implementation per component across EN/FR. Translation may wrap naturally; it must not select a different font, size, button treatment or page layout.
+
+### Visual direction
+
+- Let approved imagery carry SUIJI's identity. Show the sculptural metal silhouette first, then use a verified view of the Core-Lock connection or an approved worn view to explain what makes the piece distinctive. One lead image or image group owns the main visual emphasis. Keep accompanying typography and controls secondary to the jewelry on shopping surfaces.
+- Use white for the reading and shopping canvas. Ice blue serves a purposeful instructional or editorial band, the preview notice and the footer. Keep successive modules on white unless a change of surface marks a new subject. Main actions use charcoal. Blue ink serves links, focus and selection.
+- Give each decision area one primary action. Use plain links or named icons for supporting actions and quiet outlines when the control needs a visible boundary. Use circles for swatches, approved category imagery and functional icons. Keep shopping controls and image frames square, and group related elements with spacing before adding a divider.
+- Put product choice, size help and purchase state before descriptive tabs. Show material, size, weight, wearing scale and compatibility wherever verified. A preview piece gets honest viewing guidance. Cards, galleries and editorial photography have separate roles and use the matching approved asset.
+
 
 ## 2. Brand voice and factual boundaries
 
@@ -39,20 +47,28 @@ SUIJI is handmade jewelry shaped by personal choices. The story begins with Chun
 | `--r-serif` | `Newsreader,Georgia,serif` | Display headings |
 | `--r-sans` | `Manrope,Arial,sans-serif` | Reading text, labels and controls |
 | `--r-story-size` / `--r-story-leading` | `16px` / `1.8` | About chapter prose at every width |
+| `--r-touch-target` | `44px` | Shared tappable controls |
+| `--r-finish-target` / `--r-finish-gap` | `48px` / `8px` | Finish and size target and finish row spacing |
+| `--r-purchase-target` | `52px` | Main purchase control |
+| `--r-thumbnail` / `--r-thumbnail-phone` | `64px` / `56px` | Gallery thumbnails |
+| `--r-gallery-phone-max` | `38svh` | Mobile product image stage maximum |
 
 White is the default. Do not make an entire page ice blue to group unrelated sections. Product colors come from images and truthful options, never CSS recoloring. Use the two existing self-hosted WOFF2 files with `font-display:swap`; add no external font service. Newsreader is 400. Manrope is at least 400 for reading and utility text.
+
+Keep product-image fields visually neutral, including pale silver pieces against their light source background. Use the essential control outline on white and ice blue where a visible boundary is required. The two surfaces differ by only 1.14:1, so the surface tint cannot carry a control boundary or a selected state by itself. Use a readable label, underline, outline or check as appropriate.
 
 | Role | Desktop rule | At 749px and below |
 |---|---|---|
 | Common H1 | Newsreader 400, `clamp(42px,5vw,72px)`, line-height `1.02` | Same formula |
 | Compact page H1 | `clamp(40px,4.3vw,60px)` | `40px` |
-| Homepage H1 | `clamp(48px,6vw,88px)` | `53px` |
-| Product H1 | `clamp(40px,4vw,58px)`; `40px` at 750–989px | `42px`, maximum `15ch` |
+| Homepage H1 | `clamp(48px,6vw,88px)` | `clamp(42px,11vw,53px)` |
+| Product H1 | `clamp(40px,4vw,58px)`; `40px` at 750–989px | `clamp(34px,9.5vw,42px)`, maximum `15ch` |
 | Studio workspace tool H1 | Manrope 500, `28px/1.25` | Same; this tool-header exception does not apply to marketing or article pages |
 | Common H2 | Newsreader 400, `clamp(30px,3vw,46px)`, `1.12` | Same formula unless named below |
 | About chapter H2 | `clamp(30px,3vw,44px)` | `32px` |
 | General H3 | Manrope 500, `20px/1.35` | Same |
 | General interface text | Manrope 400, `15px/1.65` | Same; input exception below |
+| Filter, budget and sort group labels | Manrope 500, `15px/1.65` | Same, with natural wrapping |
 | Page introduction | `17px/1.6`, maximum `64ch` | `15px/1.6` |
 | About prose | `16px/1.8`, maximum `72ch` | Same |
 | Journal article prose | `16px/1.85` | Same |
@@ -65,6 +81,8 @@ White is the default. Do not make an entire page ice blue to group unrelated sec
 | Founder role | `12px/1.5` | Same |
 
 Long paragraphs must not exceed `72ch`; do not justify, line-clamp or shrink them to fit. A caption is not a substitute for body copy. Input/select/textarea text is at least `16px` on mobile. Headings may wrap; desktop navigation labels may not. The existing compact native country select is an explicit `11px` desktop exception and moves into the mobile drawer below 1280px. Do not extend that exception to body copy or other controls.
+
+Reserve display typography for page titles, editorial chapters and the existing product names and prices. Use the utility role for filtering, budgets and sort controls even when the group label is a semantic heading. Give French titles and labels the room to wrap at the same type size, including on cards and buttons.
 
 ## 4. Layout and responsive boundaries
 
@@ -81,27 +99,70 @@ Other bounded queries are 1280–1399px for compact inline navigation, below 600
 - Main sections: `54px` vertical padding and the shared gutter; mobile `36px`. Introduction: `58px` top / `46px` bottom and maximum `1180px`; mobile `36px / 32px`.
 - Catalogue grid gaps: `38px 24px`, then `32px 20px` at intermediate widths, then `28px 14px` on mobile. Use the shared card; do not create bespoke card proportions for each page.
 - Product columns: gap `clamp(40px,6vw,100px)`, top `20px`, bottom `64px`; 750–989px gap `32px`; mobile top `10px` and gallery bottom gap `28px`. Neither gallery nor purchase column is sticky.
-- About chapters: ordinary chapter columns remain .8fr / 1.2fr, gap60px and existing page edges. The designer note is the explicit6November2026 exception: one continuous personal letter at68ch, using16px/1.8 throughout. A compact header pairs the unchanged, uncropped original portrait (maximum220px, natural height) with the note heading and founder role; gap40px, aligned to the center of that header. All narrative paragraphs follow beneath at the same leading edge and measure, in their original order. No opening paragraphs may be split beside the photo, no later continuation may move to a second reading origin. Header-to-story gap32px. At749px and below the header stacks, portrait maximum180px centered, gap24px and story gap28px; heading32px and prose stays16px. Preserve all ten source paragraphs including the founder role; no sticky photo, floating text, folding, truncation or omission. The other seven About chapters retain their existing layout and spacing.
+- About chapters use `0.8fr / 1.2fr` columns, a `60px` gap and the existing page edges. The founder note has a compact header with the original uncropped portrait at natural height, up to `220px` wide. Center the heading and founder role vertically beside it with a `40px` gap. All ten approved source paragraphs including the founder role stay in their approved order. The letter begins `32px` below the header and has one continuous reading column at `68ch` and `16px/1.8`.
+- At 749px and below, stack the founder-note header with a centered portrait up to `180px`, a `24px` gap, a `32px` heading and a `28px` gap to the letter. Keep the same body size, full text and uninterrupted reading order. The current approved About story controls the section count and order.
 - Controls remain rectangular. Do not add pill-shaped buttons/cards, decorative rounded containers or new ambient shadows. Circles are reserved for the two system entrances, category imagery and finish swatches.
 - Focus ring: `2px` accent with `4px` offset. Preserve visible hover, selected, disabled, invalid, pending and success states. A status change must be readable without relying on color alone.
+
+### First-screen hierarchy and spacing
+
+| Surface | First-screen composition |
+|---|---|
+| Home and editorial pages | Pair one lead image or image group with one clear headline. Keep the next action near the text it belongs to. Use section-scale space between chapters and keep the caption close to its own image. |
+| Shop All, categories, Sets, budget and search results | Use the compact page H1, an optional short introduction and one compact row or group for applicable controls. Align the title, controls and grid to the same page edges. The product grid follows that group directly. |
+| Product detail | Give the approved lead view its own stage and keep the product name, price or state, applicable choices and primary action in the established order. Keep the size guide next to sizing and Complete the look next to the main decision. |
+| Help and account | Lead with the answer or task. Use the shared reading column, form controls and localized feedback. |
+
+At `1440 × 900` and `390 × 844`, a populated browse result shows a recognizable first product image, its name and either its price or its preview state in the initial viewport after any consent prompt is dismissed. Keep the visual heading for a filter or budget group at utility size, and use section-scale padding between different subjects. Apply the established smaller gaps inside a single group of headings, controls or card details. At other supported widths, allow navigation and French labels to wrap where the component permits while preserving the reading order, visible controls and touch targets.
 
 ## 5. Shared component contracts
 
 ### Navigation and footer
 
-The header has **Core-Lock & Modular System**, **Shop All**, **Gifts** and **About SUIJI**, with their existing French labels. Sets returns as the optional fifth group only when the photo registry contains a complete photographed set. Keep the full Core-Lock label on one line on inline navigation, one underline, and one adjacent SVG chevron. Shop All uses image-backed disclosures; Sets does so only when it is available. Keep a clickable parent link, separately operated disclosure, fine-pointer hover, click, keyboard access, outside-click close, Escape and focus return. Mobile subcategories open into a right-side panel with Back and Close; do not reintroduce nested accordion stacks.
+Use the same SUIJI header and footer across home, catalogue, editorial, product, search, cart and policy routes. Provide Core-Lock & Modular System, Shop All, Sets, Gifts and About SUIJI with the current French labels and working destinations. Keep the shopping bag, search and language switch at consistent entry points. Keep the full Core-Lock label on one line on inline navigation with one underline and one adjacent SVG chevron.
+
+The Shop All / Tous les bijoux disclosure contains exactly six image links in this order across desktop and mobile in both languages. The links are Necklaces, Earrings, Rings, Charms, Bracelets & bangles, and Accessories. The top-level Sets / Ensembles link opens the set collection directly. Keep a clickable parent link, separately operated disclosure, fine-pointer hover, click, keyboard access, outside-click close, Escape and focus return. Mobile subcategories open into a right-side panel with Back and Close.
+
+Gifts / Cadeaux provides a Shop by price / Par budget group in the desktop menu, mobile panel and Gifts page. Use three plain links in ascending order for budgets under €100, €500 and €1,000. Each result uses current positive Shopify prices and a strict upper limit. In a populated result, put the current budget in the page title and show the other budgets and the route back to all gifts as compact utility links near the grid. Use the shared catalogue cards and price formatting.
 
 The footer order is **Shop → How it works → About SUIJI → Create with us → Client care**, followed by legal/privacy controls. Desktop gap `28px`; intermediate `32px 36px`; mobile `32px 24px`. Headings `14px`, links `13px` desktop / `14px` mobile, minimum link targets `36px` / `44px`. Legal text `12px`. Do not add a sixth catch-all column or repeat account/design-rights links across groups.
 
+### Catalogue cards and set previews
+
+- Keep image edges and the leading edges of names and prices aligned across a row. Place the price or preview state just below its own name. Give a longer localized name the space it needs before placing the next card. Keep the name and price visible independently of hover.
+- Review the actual jewelry silhouette inside the frame at desktop and mobile sizes. Keep the full outline and make the intended detail legible, especially for small charms and accessories shown beside larger pieces. Where the source has excess exterior white margin, use approved display framing for that view. Preserve the original file, zoom source, aspect ratio and any size reference. Apparent size across unrelated card images carries no product dimension claim.
+- Set previews use the authorized component photos and identify them as selected components. Keep the images, set name and verified price together. The set page lists exact included parts, quantities and supported ways to wear them from the approved set record. A component image represents only the piece it depicts. Use a verified assembled image when showing an assembled set.
+
 ### Product, complete the look and size guide
 
-Keep image-led product columns, breadcrumb, reference, title, sale unit, material, applicable options, size guide, quantity and primary action in the shared order. Show only applicable choices; do not replace simple swatches with many dropdowns. Do not invent prices, stock, included components, compatibility or finish photographs.
+Start with the shared breadcrumb and gallery, then the localized product name and price or preview/availability state. Follow with applicable finish and size, size help, sale unit where needed, and the primary action. Complete the look follows the main choice and precedes product details and service notes. Each step has a single visual priority. Use the same publicly approved product identity across cards and detail pages. Market formatting and actual variant pricing come from Shopify.
 
-Product galleries use one primary image followed by a horizontal thumbnail strip and a visible view counter. Thumbnail buttons are 64px on desktop and 56px on mobile; keyboard Left/Right/Home/End changes the current view. Enlarge always uses the selected view. Mobile primary imagery is capped at 42svh so multiple images do not postpone the title. Where a catalogue option stores nine clasp/button combinations, show two named groups of three colors and map them back to the unchanged compound value; no new SKU or stock claim.
+#### Finish and sizing controls
 
-**Complete the look is inside the purchase column, after the product action/tags/contact link, before the full-width product details.** Ring product pages must show exactly two controlled front-view oval companions: **OV-SM-AQ-G** (Smooth/F01) and **OV-HA-AQ-B** (Textured/F02). Image/name links and lazy quick forms preserve that exact existing SKU; quick-form defaults must not inherit the parent ring SKU. The ring pair uses two equal columns at every width. Other product pages retain their compact three-card desktop strip; mobile is a scroll-snap rail with `46%` cards, `12px` gap and visible continuation. Keep image, name and honest price state. The plus target is `44 × 44px` at every width. The plus action lazily opens that companion's configuration; it must not duplicate or change the main form's selected options. Do not move this back into an oversized full-page block.
+- Use native radio buttons for displayed finishes. The default visual is a 26px color sample with a Manrope 13px label below. The control is 78px wide and at least 48px high. Use an 8px row gap, 12px column gap and natural wrapping. Prefer Shopify's real swatch data. Known SUIJI finishes may use the approved color samples. Use a readable text choice when a sample is unavailable.
+- The selected radio has a thin outer ring and a check, with a 2px focus outline and 4px offset for keyboard interaction. Keep labels readable in all states. Use separate plain status text for a sold-out finish or a missing configuration. Reserve visual strike-through for price comparison where appropriate.
+- Real sizes are visible in a button group. Keep the size guide adjacent. Its international reference and calculator are informational. Actual size options and availability come from the existing Shopify variants. For the documented ring families, the known active sizes are 54/57 mm. Preserve the 41–65 mm comparison range and display unverified equivalents as an em dash.
+- The guide uses two measurement methods, an Enter-submittable calculator and live result/error text. Table overflow stays in its labeled region. Guide input and action are 48px and aligned. Quick dialogs use up to 880px and the size guide up to 1120px. Use a 12px mobile inset, an internal scroll area up to 92dvh, Escape and focus return.
 
-Quantity and purchase button are `52px` high; the row is `80px / 1fr` with `14px` gap, aligned to the bottom. A ring's guide opens a dialog and also exists on the standalone Bases & sizing page. Ring-size selectors show existing **54 / 57mm** options first. The remaining 23 sizes in **41–65mm** stay inside a labeled “Other sizes” details control, disabled and crossed out. The complete international table stays in the size guide. This is not a stock or presale claim. The guide table uses the same 41–65mm range and preserves unverified regional equivalents as an em dash. Keep two measurement methods, an Enter-submittable calculator, live result/error, approximate international table, and highlights for 54 / 57. Table overflow stays inside its labeled region. Guide input and action are `48px` high and align; do not reproduce the previously misaligned input/button row. Quick configuration dialog maximum width is `880px`; the size guide is `1120px`; mobile horizontal inset `12px`, maximum height `92dvh`, with internal scroll and focus return.
+#### Purchase states
+
+| State | Visible treatment |
+|---|---|
+| Collection preview | Browsable options and details, one quiet “Collection preview” label, reference price only when a real amount exists. |
+| Available | Current price and one charcoal primary Add to cart control, with quantity if appropriate. |
+| Sold out | One clearly labeled status with browsable media and existing alternatives. |
+| Missing configuration | Plain localized status and available choices. |
+| Request beyond standard options | Contextual final-sale notice before the relevant inquiry or confirmation, with full terms linked. |
+
+The theme's ordering setting is shared by the header, native product, card quick add, cart and cart drawer. The site's current preview mode is the default until the approved launch configuration enables ordering. Show purchasing controls only for the available state. A pending option request suspends checkout affordances, and an error names the available recovery. Price and availability use accessible status regions. A valid variant selection updates the selected options, gallery, URL, price and status in one response.
+
+#### Media and compatible pieces
+
+Product pages use an image-led two-column layout at 750px and above, with single-column layout on phones. At 360 × 800 and 390 × 844, after dismissing any first-visit consent message, the product title and price or state should appear in the initial viewport. Primary imagery uses a white, dimensioned stage and its original silhouette. The mobile stage caps at 38svh. Thumbnail controls are 64px desktop and 56px mobile. Show the active media, its view count and a zoom action. Zoom uses the original approved view.
+
+A different framing can be approved for a specific image role. The verified 8-Link Collar front role uses a 1.18 display scale, leaving the underlying approved file and zoom unchanged. Keep the complete jewelry silhouette in the initial gallery and preserve visible links and clasps.
+
+**Complete the look** lives in the purchase column, before the detail tabs. A curated pairing has a verified compatibility relationship, approved image and live variant or equivalent preview destination. R01's two current oval examples render side by side. Link to the exact companion choice and use a minimum 44px target. Use a compact scroll rail for longer approved groups. Show prices sourced from the linked variant when applicable.
 
 The mechanism entrance keeps the two circular image entrances: `200px` diameter and `50px` gap on desktop, `140px` diameter and `26px` gap on mobile. Labels use Newsreader `26px/1.4`, reduced to `24px` on mobile. Keep the Bases and Charms destinations.
 
@@ -109,7 +170,7 @@ The mechanism entrance keeps the two circular image entrances: `200px` diameter 
 
 Journal article layout uses a maximum `760px` reading column plus a `180–260px` aside, `60px` gap; at 750–989px the aside is `200px` and gap `32px`; at 749px both stack and the aside is no longer sticky.
 
-About retains exactly eight chapters in this order: introduction; meaning of SUIJI; why structure; Core-Lock/system/engineering; Chunyu's first-person story and original portrait; the studio; materials/continued use; mission. Keep the campaign image slot with an approved final2 composition, the founder portrait in chapter five and the other chapter layouts. Only the designer chapter uses the compact portrait identity plus continuous letter exception specified above; preserve the full paragraph order in EN/FR. Engineering refinement copy is shared with the mechanism page, not separately paraphrased into inconsistent claims.
+About uses the latest approved EN/FR story. Preserve the existing designer portrait and continuous letter treatment. Keep a short contextual final-sale link inside the relevant reading column and the full policy at the applicable custom decision. The final editorial action links to its actual destination. A stock or campaign image may anchor one editorial section per page. Subsequent sections use a different approved image or a text-led band.
 
 Journal solves a concrete consumer problem with an early usable answer, practical steps/comparisons, clear conditions/units, sources, related reading and one main next action. Keep the six need directions and all approved full EN/FR articles. Evidence/research cards stay internal. Article title, author and dates come from native Shopify data. Tables scroll within their own labeled region; document overflow is a failure.
 
@@ -119,21 +180,24 @@ Social sharing images follow the same final2 whitelist. The shared social-image 
 
 ### Native cart, forms and local previews
 
-R107-rendered content must use body class `r107-root` and must not also inherit `suiji-mvp-root`. The legacy `.suiji-mvp-root :is(h1,…,.h1)` selector has greater specificity than the shared display rule and changes Newsreader400 into the old heading family500. Keep this scope boundary in the shared Liquid shell; do not solve it with page-by-page font overrides. Native cart and legacy native product pages stay in their existing branch. Verify computed font family and weight against real Shopify CSS, not only the local preview or loaded-font list.
-
-The native Shopify cart uses the shared header/footer **while retaining Dawn's `10px` root/rem system, forms, line items, totals, scripts and section updates**. Its main wrapper must **not** acquire `.r-site`. Keep exactly one `#cart-icon-bubble` update target, its native SVG wrapper, badge and screen-reader text. Do not replace native commerce with the browser-local preview bag.
-
-The shopping preview is a separate, clearly labeled browser-local flow with no order/payment creation. Real contact uses Shopify's native `contact` form; newsletter uses `customer`, an unchecked required marketing-consent checkbox, and actual server success/error states. Do not display a fake sent/subscribed result. PDF buttons require a real configured URL or an honest unavailable state. Account endpoints remain native.
+Native pages and R107 pages share the storefront shell. Native sections keep the existing Shopify rem scale and section updates. The cart uses one `#cart-icon-bubble` update target with its existing quantity and accessible label. App embeds and native forms retain their active settings. The preview bag is browser-local and clearly labeled. Contact and newsletter submit only to their configured Shopify services and show actual success or failure. Native account endpoints stay in use.
 
 ### Custom-work final-sale notice
 
-Use the single custom-order-policy.json EN/FR source for all custom-design, personalisation or agreed product modifications beyond standard options. Labels are “Custom work · Final sale” and “Sur-mesure · Vente définitive”; scope is change-of-mind returns/exchanges, with statutory faulty/non-conforming goods rights expressly preserved. Listed standard colours/finishes/sizes do not become custom merely by selection. Place the notice before custom enquiry/review actions, in relevant PDP details, Contact, Studio, FAQ, Shipping/returns, About mission, relevant custom-design Journal guides and the shared footer; preserve the written-quote confirmation point. Do not add a prechecked acknowledgement or mark every standard SKU final sale. Shared notice: white background, decorative top rule, margin24px, vertical padding20px, body14px/1.6, label600, detail link13px with44px target. Render-only notices may be appended to relevant custom-design Articles without altering their native bodies, authors or dates. Future custom-work Articles use the custom-work tag. No unrelated native-policy rewrite.
+Use the single custom-order-policy.json EN/FR source for all custom-design, personalisation or agreed product modifications beyond standard options. Labels are “Custom work · Final sale” and “Sur-mesure · Vente définitive”; scope is change-of-mind returns/exchanges, with statutory faulty/non-conforming goods rights expressly preserved. Listed standard colours/finishes/sizes do not become custom merely by selection. Place the notice before custom enquiry/review actions, in relevant PDP details, Contact, Studio, FAQ, Shipping/returns, relevant About and custom-design Journal content and the shared footer; preserve the written-quote confirmation point. Do not add a prechecked acknowledgement or mark every standard SKU final sale. Shared notice: white background, decorative top rule, margin24px, vertical padding20px, body14px/1.6, label600, detail link13px with44px target. Render-only notices may be appended to relevant custom-design Articles without altering their native bodies, authors or dates. Future custom-work Articles use the custom-work tag. No unrelated native-policy rewrite.
 
 ## 6. Media, routing and architecture
 
-White-image rules: retain original foreground geometry, color, engravings, openings and fine edges; background must be #ffffff outside a source-appropriate antialiased boundary. A technical mask pass is not visual acceptance: inspect holes, pale walls, pearls, small links and detached components. Preserve original full-resolution files; serve dimensioned600/1200px WebP derivatives with lazy loading outside the first view. A grey hole or damaged wall blocks that candidate; repair the local mask, never recolor the product to hide the defect. Editorial composition images require composition captions and must not imply a complete sales BOM. Render all final2 white-background photos with contain inside their existing image boxes, including the About banner and split sections; never crop away parts of the product to fit a former campaign image slot.
+White-background photos retain the original geometry, color, engravings, openings and fine edges. The background is `#FFFFFF` outside the antialiased boundary. Inspect holes, pale walls, pearls, small links and detached components after masking. Repair local masking faults while preserving product color. Preserve full-resolution sources and use dimensioned 600px and 1200px WebP derivatives where the photo registry supplies them. Editorial composition captions identify what is shown. Use `contain` and keep the complete jewelry silhouette inside its frame, including in the About banner and split sections.
 
-Availability-driven navigation: this release has four header groups (Core-Lock, Shop All, Gifts, About), and the currently photographed categories. Empty Sets/Bracelets/Accessories product entrances are hidden, while the educational combination route stays available. Category components follow the actual visible catalogue, never restore fixed placeholder cards. Both locale branches must use the same product allowlist.
+| Image role | View and information |
+|---|---|
+| Category tile and product card | Use an approved final display angle. For a single-product card, reuse an angle present in that product's final gallery and show the same subject and finish as the listing. |
+| Product gallery | Lead with the approved front or three-quarter view that best identifies the piece. Use additional views to show a different fact such as the mechanism, profile, texture or wearing scale, when approved imagery exists. |
+| Set preview | Use the set's approved component views, with the component label adjacent to the images. Keep the full outlines and preserve the connection between the image and the exact set record. |
+| Editorial or instructions | Use an approved worn view, a verified assembly or a labeled detail as appropriate to the subject. Put fit, dimensions and compatibility in readable text where verified. |
+
+Availability-driven navigation uses the latest approved category and media list. Category entrances remain navigable where there is a working collection or explanatory landing. Hold unreviewed products and media at their own visibility level. Keep the same category names and links in both menus.
 
 Shared UI states: use --r-control-border (#7c8992, minimum3:1 against white) for essential form and option outlines. --r-line remains a decorative separator. Preserve existing readable ink/muted/focus colors. Filter controls open one native modal dialog, constrain keyboard focus, scroll the panel on small screens, lock background scroll, and return focus to the trigger on every close path including Escape. Design comparison uses the shared heading font; below600px it is one readable column and long text wraps.
 
@@ -144,7 +208,7 @@ Empty selections show one exploration action and hide order/review summaries. Pr
 Shopping preview: the final action goes to the existing Contact page with the current local selection prefilled, and sends nothing automatically. Do not link to an unsaved Page or imply that an order/payment exists. Search indexes the visible catalogue's documented EN/FR names, roles, materials and option labels; all query words must match. No-result states offer clear, browse and Contact actions. Do not infer a mineral from appearance.
 
 
-The photo-publication.json registry is the only source for public product visibility and jewelry imagery. Only final 2.zip white-background derivatives may appear in product galleries, category/navigation cards, editorial figures, search, workspace examples or the preview bag. The existing Chunyu portrait, brand Logo and functional icons are explicit human-approved exceptions. Never use another product or a generic series picture to fill a missing product image. Missing-picture products retain their source records but are absent from lists, search, menus, recommendations and bag additions; old direct links show a readable unavailable state without an image or selection form. Match alt text and captions to visible components; a complete charm assembly must not illustrate a bare base SKU.
+Use the `photo-publication.json` registry for public single-product visibility and approved `final 2.zip` derivatives. The specifically authorized Shopify set previews use their approved set records and component media. The existing Chunyu portrait, brand logo and functional icons are approved exceptions to the product-image source. Match captions and alt text to the components actually visible. A bare-base listing depicts the base on its own. Products awaiting their own approved imagery retain their source records and stay out of listings, search, menus, recommendations and bag additions. Show only the readable unavailable state on their old direct links.
 
 
 - Use one shared renderer and generated template per family, not a hand-built page per SKU. Preserve URLs, identities, native locale roots and query-selected configuration. Bind native internal URLs through `routes.root_url`; do not hardcode an assumed `/fr` root.
@@ -156,11 +220,13 @@ The photo-publication.json registry is the only source for public product visibi
 
 ## 7. Verification and release
 
-Run `python3 maintenance/rev107/check_design_contract.py` before compilation. It checks the locked stylesheet/font/shell bytes, rejects page-specific style blocks or inline layout overrides (only factual swatch variables are allowed), and checks essential template contracts; it does not claim computed layout or usability. `build_theme.py` also enforces this check. Run portable generation checks and changed-file Theme Check after compilation.
+Run `python3 maintenance/rev107/check_design_contract.py` from the release directory before preparing a Shopify patch. The checker verifies the design token values, reviewed source bytes, state wiring and required template boundaries. Run Shopify Theme Check on the resulting theme and compare changed-file errors with the same baseline.
 
-For a layout or shared-style change, verify actual browser widths **360, 390, 768, 1024, 1280 and 1440px** in EN and FR, plus the changed component's breakpoint edges. Assert the actual viewport dimensions in the saved evidence; a mislabeled screenshot is not a pass. Assert actual Newsreader400 H1/display and Manrope body on the native storefront (native cart keeps its existing exception). Check long translated strings, navigation, focus, form/error states, product configuration, guide, complete-the-look and cart behavior as applicable. At 200% zoom verify usable reflow and access to controls. No page overflow or hidden primary action is acceptable.
+For a layout or shared-style change, verify actual browser widths **320, 360, 390, 768, 1024, 1280 and 1440px** in EN and FR, plus the changed component's breakpoint edges. Assert the actual viewport dimensions in the saved evidence; a mislabeled screenshot is not a pass. Assert actual Newsreader400 H1/display and Manrope body on the native storefront (native cart keeps its existing exception). Check long translated strings, navigation, focus, form/error states, product configuration, guide, complete-the-look and cart behavior as applicable. At 200% zoom verify usable reflow and access to controls. No page overflow or hidden primary action is acceptable.
 
-Publication requires the actual native theme/Page/translation readback and the sole Store writer's publish receipt. Record physical-device, Safari, zoom, video, delivery, payments or performance tests as unverified when they were not performed. Keep test evidence and live theme IDs outside this normative document. A release must not silently change this contract or copy its historical operational numbers into new claims.
+For a storefront-visible design change, compare before and after on the affected surface at the same viewport and state. Inspect the first visual focus, the largest empty gap, the actual jewelry silhouette and the first name/price or action at the two first-screen sizes above. On image grids, include the longest French title and representative small and large pieces when present. Content, product-data and image-only changes use the same contract and verify the affected presentation and linked destination.
+
+Publication requires the actual native theme/Page/translation readback and the sole Store writer's publish receipt. Record physical-device, Safari, zoom, video, delivery, payments or performance tests as unverified when they were not performed. Keep test evidence and live theme IDs outside this normative document. Keep the template matrix in release evidence, including home, catalogue and filter, preview and native product, search, cart, About, Core-Lock, Journal, contact, help and empty/error states. Validate normal text at 4.5:1 and required control boundaries and focus at 3:1. Do not label physical device or payment behavior as verified based on fixture tests.
 
 ### Local versions and phone controls
 
@@ -170,20 +236,28 @@ Before deleting a version, name it and ask for confirmation. Cancel leaves the r
 
 Use named groups of native toggle buttons for Studio input modes and design-example stages. Each button exposes its pressed state and responds to Tab, Enter and Space. Editable version names, saved quantities and catalogue sorting controls use at least 16px text and a 44px height on small or coarse-pointer screens. Catalogue sorting uses an explicit 44px height at these widths to preserve the touch target in Safari while retaining the native select. Secondary controls use the essential control border. Scrollable overlays contain scrolling within their own panel.
 
+## Reference patterns
+
+- Product-led hierarchy, factual dimensions and service access are informed by [Tiffany HardWear](https://www.tiffany.com/jewelry/necklaces-pendants/tiffany-hardwear-small-link-necklace-60964882/) and [Boucheron Quatre](https://www.boucheron.com/us/quatre-classique-small-ring-classique-jrg00290.html).
+- Modularity and wearable scale are informed by [Marla Aaron's jewelry guide](https://marlaaaron.com/en-ca/pages/guide-to-our-jewelry) and [Jenny Bird's Florence earrings](https://jenny-bird.com/products/florence-earrings-gold).
+- The restrained component vocabulary and editorial spacing draw on the public third-party [Cartier DESIGN.md](https://www.shadcn.io/design/cartier), [Aesop DESIGN.md](https://www.shadcn.io/design/aesop/raw) and [REI Cedar's spacing guidance](https://cedar.rei.com/guidelines/spacing).
+- Product option behavior and image loading follow [Shopify variant guidance](https://shopify.dev/docs/storefronts/themes/product-merchandising/variants), [Shopify theme performance guidance](https://shopify.dev/docs/storefronts/themes/best-practices/performance) and [Baymard product page research](https://baymard.com/research-articles/current-state-ecommerce-product-page-ux).
+- Follow [WCAG 2.2](https://www.w3.org/TR/WCAG22/) for reflow, focus, contrast, name and state and live messages. SUIJI uses the above 44/48px control targets as its own design minimums.
+
 ## Machine-readable design lock
 
-This lock pins the reviewed visual implementation. Any mismatch stops compilation until the intended change, document and affected-page verification are reconciled. Font and CSS hashes are not a substitute for browser QA.
+This lock pins the reviewed visual implementation. Resolve any mismatch in the intended change, document and affected-page verification before preparing a patch. Review the visual acceptance criteria in the browser.
 
 ```json design-lock
 {
-  "version": "6.1.13",
+  "version": "6.2.1",
   "stylesheet": {
     "path": "theme/assets/suiji-r107.css",
-    "sha256": "f8608b49a51958be77f2e5cc1fc0864fb52bc9a0c88fa14eff2488afb5af8b0a"
+    "sha256": "2ed23764aee45dbd11af69ca904c34c3b6064cb67242268dd95ce6ada9b39a12"
   },
   "shell": {
     "path": "theme/layout/theme.liquid",
-    "sha256": "7c7abf27b23d04347b0d32537e3e8b4f37a91bc6f96f7224e54a88987ea83c41"
+    "sha256": "2f24e0e9ba65781d1fadfe8aaef904257486a6656920ec2a2cdd616bd609eb06"
   },
   "fonts": [
     {
@@ -206,9 +280,17 @@ This lock pins the reviewed visual implementation. Any mismatch stops compilatio
     "--r-sans": "Manrope,Arial,sans-serif",
     "--r-story-size": "16px",
     "--r-story-leading": "1.8",
-    "--r-control-border": "#7c8992"
+    "--r-control-border": "#7c8992",
+    "--r-touch-target": "44px",
+    "--r-finish-target": "48px",
+    "--r-finish-gap": "8px",
+    "--r-purchase-target": "52px",
+    "--r-thumbnail": "64px",
+    "--r-thumbnail-phone": "56px",
+    "--r-gallery-phone-max": "38svh"
   },
   "qa_widths": [
+    320,
     360,
     390,
     768,
@@ -220,9 +302,7 @@ This lock pins the reviewed visual implementation. Any mismatch stops compilatio
     "en",
     "fr"
   ],
-  "header_groups": 4,
   "footer_groups": 5,
-  "about_chapters": 8,
   "designer_layout": "single-column-letter",
   "designer_measure": "68ch",
   "designer_portrait_max_width_px": 220,
@@ -236,9 +316,63 @@ This lock pins the reviewed visual implementation. Any mismatch stops compilatio
     54,
     57
   ],
-  "ring_companion_skus": [
-    "OV-SM-AQ-G",
-    "OV-HA-AQ-B"
+  "components": [
+    {
+      "path": "theme/assets/suiji-native-pdp.css",
+      "sha256": "8fdbe3fd0ae9950d89dffb47ded16811180cf00efd264eafd4f8ceca326d0943"
+    },
+    {
+      "path": "theme/assets/product-info.js",
+      "sha256": "580dd071261e0c4389bb167267bcc5044b2c315f46d2bb744fb786cd6f527efd"
+    },
+    {
+      "path": "theme/assets/media-gallery.js",
+      "sha256": "9bb3d821b5f44bddbfdf1a6d288dbd99db3acc1d4d407000c32d4a3827c4894a"
+    },
+    {
+      "path": "theme/snippets/suiji-finish-option.liquid",
+      "sha256": "5ede5cc689ab036d67cfacf85fcb93739c3a429c250816a8ee6f3cf445b51d2f"
+    },
+    {
+      "path": "theme/snippets/suiji-purchase-state.liquid",
+      "sha256": "f5b8e0b5126ed97753bb5a842c3df29ac49ee26262e6c4b8924386de0dfc85fd"
+    },
+    {
+      "path": "theme/sections/main-product.liquid",
+      "sha256": "8c3d78aa4d19fe91b2b4b4f6d129028814c20824fb747a9e7a61089ad44756ea"
+    },
+    {
+      "path": "theme/snippets/product-variant-picker.liquid",
+      "sha256": "721a8f75d4cdc0dba4bfde941cf2d122f7c72cc8d7ca409821ca7d46dd3279bb"
+    },
+    {
+      "path": "theme/snippets/product-variant-options.liquid",
+      "sha256": "3594dd73cfa0b987c51b2e50dabf0529f5ac8ccadc0f8d3a8a3f9624ad2682e1"
+    },
+    {
+      "path": "theme/snippets/product-thumbnail.liquid",
+      "sha256": "d0319448aec80d75f4cf4170944f7b4c18005dfde10862abada5a6712165eb1a"
+    },
+    {
+      "path": "theme/snippets/product-media-gallery.liquid",
+      "sha256": "294f8d48a57894d71d71a58cc060fc00ca87484f9aec5389520903bb1fee14bd"
+    },
+    {
+      "path": "theme/snippets/buy-buttons.liquid",
+      "sha256": "4d339a58088bce21338727bb20a3d0676e717397bee60be639849ed41aa255c1"
+    },
+    {
+      "path": "theme/snippets/card-product.liquid",
+      "sha256": "b8ae0e72e767ab7f2f7468284335ceae5ae4f6ba2c3f405619880f9074b1c39e"
+    },
+    {
+      "path": "theme/snippets/cart-drawer.liquid",
+      "sha256": "51545e9f89785a9ee3211a0d85c9b9279fed3ba00ba71727776e28d76893fa10"
+    },
+    {
+      "path": "theme/sections/main-cart-footer.liquid",
+      "sha256": "2d3c15dce7e3c9ec2308abda0cfa763b1c932ee23a513158f2bb15593e9647bb"
+    }
   ]
 }
 ```
