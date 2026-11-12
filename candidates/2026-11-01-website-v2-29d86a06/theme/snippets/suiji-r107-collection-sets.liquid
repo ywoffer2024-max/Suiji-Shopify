@@ -10,10 +10,10 @@
   <header class="r-intro r-intro--small">
     {% if locale == 'fr' %}
       <h1>Ensembles</h1>
-      <p>Découvrez le contenu de chaque ensemble. Les photos présentent une sélection de composants.</p>
+      <p>Découvrez le contenu de chaque ensemble et les façons de le porter.</p>
     {% else %}
       <h1>Sets</h1>
-      <p>See what comes with each set. The photos show selected components.</p>
+      <p>See what comes with each set and how to wear it.</p>
     {% endif %}
   </header>
   {%- assign listed = 0 -%}
@@ -27,11 +27,16 @@
         {% if listed <= 3 %}{% assign loading = 'eager' %}{% endif %}
         <article class="suiji-set-card" data-quote-set="{{ quote.code | escape }}">
           <a class="suiji-set-card__link" href="{{ routes.root_url | append: '/products/' | append: set_product.handle | replace: '//', '/' }}">
-            <div class="suiji-set-card__images{% if set_product.media.size > 1 %} suiji-set-card__images--pair{% endif %}">
-              {% for photo in set_product.media limit: 2 %}
-                {{ photo.preview_image | image_url: width: 680 | image_tag: widths: '250, 360, 480, 680', sizes: '(min-width: 1000px) 20vw, (min-width: 591px) 28vw, 70vw', alt: '', loading: loading, decoding: 'async' }}
-              {% endfor %}
-            </div>
+            <figure>
+              <div class="suiji-set-card__images{% if set_product.media.size > 1 %} suiji-set-card__images--pair{% endif %}">
+                {% for photo in set_product.media limit: 2 %}
+                  <span class="suiji-set-card__component">
+                    {{ photo.preview_image | image_url: width: 680 | image_tag: widths: '250, 360, 480, 680', sizes: '(min-width: 1000px) 20vw, (min-width: 591px) 28vw, 70vw', alt: '', loading: loading, decoding: 'async' }}
+                  </span>
+                {% endfor %}
+              </div>
+              <figcaption class="r-caption">{% if locale == 'fr' %}Composants présentés{% else %}Selected components{% endif %}</figcaption>
+            </figure>
             <h2 class="suiji-set-card__title">{{ quote.title[locale] | escape }}</h2>
             <p class="suiji-set-card__price" data-set-price>{{ set_product.price | money_without_trailing_zeros }}</p>
           </a>
