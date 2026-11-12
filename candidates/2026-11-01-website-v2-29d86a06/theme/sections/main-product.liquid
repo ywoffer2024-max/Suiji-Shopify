@@ -1,7 +1,32 @@
 {%- liquid
   assign suiji_product_display_only = false
-  assign suiji_product_title = product.title
   assign suiji_product_description = product.description
+  assign suiji_product_locale = request.locale.iso_code | split: '-' | first
+  assign suiji_product_copy = product.metafields.custom.suiji_display_copy.value[suiji_product_locale]
+  assign suiji_product_title = suiji_product_copy.title | default: product.title
+  if suiji_product_title == product.title
+    case product.handle
+      when 'r01'
+        if product.title == 'R01'
+          assign suiji_product_title = 'Brushed Ring Base'
+          if suiji_product_locale == 'fr'
+            assign suiji_product_title = 'Bague large brossée'
+          endif
+        endif
+      when 'h01-blue-hoop'
+        if suiji_product_locale == 'fr' and product.title == 'Rounded Rectangle Hoops'
+          assign suiji_product_title = 'Créoles rectangulaires arrondies'
+        endif
+      when 'suiji-photo-20261109-collar-03'
+        if suiji_product_locale == 'fr' and product.title == '8-Link Collar'
+          assign suiji_product_title = 'Tour de cou à 8 maillons'
+        endif
+    endcase
+  endif
+  capture suiji_purchase_state
+    render 'suiji-purchase-state', product: product
+  endcapture
+  assign suiji_purchase_state = suiji_purchase_state | strip
   assign gallery_layout = section.settings.gallery_layout
   assign gallery_mobile_thumbnails = section.settings.mobile_thumbnails
   capture reviewed_media_ids
@@ -26,9 +51,6 @@
   endif
   if product.tags contains 'suiji-display-only'
     assign suiji_product_display_only = true
-    assign suiji_product_locale = request.locale.iso_code | split: '-' | first
-    assign suiji_product_copy = product.metafields.custom.suiji_display_copy.value[suiji_product_locale]
-    assign suiji_product_title = suiji_product_copy.title | default: product.title
     assign suiji_product_description = suiji_product_copy.description | default: product.description
   endif
 -%}
@@ -37,6 +59,8 @@
   class="suiji-native-pdp section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
   data-section="{{ section.id }}"
   data-product-id="{{ product.id }}"
+  data-suiji-purchase-state="{{ suiji_purchase_state }}"
+  data-suiji-option-error="{{ 'suiji_pdp.option_error' | t | escape }}"
   data-update-url="true"
   data-url="{{ product.url }}"
   {% if section.settings.image_zoom == 'hover' %}
@@ -114,7 +138,7 @@
     <nav class="suiji-pdp__breadcrumbs" aria-label="{{ 'suiji_pdp.breadcrumbs' | t | escape }}"><a href="{{ routes.root_url }}">{{ 'suiji_pdp.home' | t }}</a><span aria-hidden="true">/</span>{% if collection != blank %}<a href="{% render 'suiji-localized-menu-url', url: collection.url %}">{{ collection.title | escape }}</a>{% else %}<a href="{% render 'suiji-localized-menu-url', url: '/collections/all' %}">{{ 'suiji_navigation.labels.shop_all' | t }}</a>{% endif %}<span aria-hidden="true">/</span><span aria-current="page">{{ suiji_product_title | escape }}</span></nav>
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ gallery_layout }} product--mobile-{{ gallery_mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
-        {% render 'product-media-gallery', variant_images: variant_images, reviewed_media_ids: reviewed_media_ids, reviewed_media: reviewed_media, gallery_layout: gallery_layout, gallery_mobile_thumbnails: gallery_mobile_thumbnails %}
+        {% render 'product-media-gallery', variant_images: variant_images, reviewed_media_ids: reviewed_media_ids, reviewed_media: reviewed_media, gallery_layout: gallery_layout, gallery_mobile_thumbnails: gallery_mobile_thumbnails, native_primary_gallery: true %}
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <section
@@ -126,6 +150,9 @@
           {%- assign suiji_panels_rendered = false -%}
 
           {%- for block in section.blocks -%}
+            {%- if suiji_purchase_state == 'preview' -%}
+              {%- if block.type == 'quantity_selector' or block.type == 'inventory' -%}{%- continue -%}{%- endif -%}
+            {%- endif -%}
             {%- if suiji_product_display_only -%}
               {%- if block.type == 'price' or block.type == 'quantity_selector' or block.type == 'buy_buttons' or block.type == 'inventory' -%}{%- continue -%}{%- endif -%}
             {%- endif -%}
@@ -148,12 +175,22 @@
                     </h2>
                   </a>
                 </div>
+                <p id="SuijiPurchaseStatus-{{ section.id }}" class="suiji-purchase-status" role="status" aria-atomic="true">
+                  {%- case suiji_purchase_state -%}
+                    {%- when 'preview' -%}{{ 'suiji_pdp.preview_status' | t }}
+                    {%- when 'sold-out' -%}{{ 'products.product.sold_out' | t }}
+                    {%- when 'unavailable' -%}{{ 'products.product.unavailable' | t }}
+                  {%- endcase -%}
+                </p>
               {%- when 'price' -%}
-                <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                <div id="price-{{ section.id }}" role="status" aria-atomic="true" {{ block.shopify_attributes }}>
+                  {%- if suiji_purchase_state == 'preview' and product.selected_or_first_available_variant != blank -%}
+                    <span class="suiji-price-context">{{ 'suiji_pdp.preview_price' | t }}</span>
+                  {%- endif -%}
                   {%- render 'price',
                     product: product,
                     use_variant: true,
-                    show_badges: true,
+                    show_badges: false,
                     price_class: 'price--large'
                   -%}
                 </div>
@@ -162,6 +199,7 @@
                     <span>{{ 'products.product.volume_pricing.note' | t }}</span>
                   </div>
                 {%- endif -%}
+                {%- if suiji_purchase_state != 'preview' -%}
                 {%- if cart.taxes_included or cart.duties_included or shop.shipping_policy.body != blank -%}
                   <div class="product__tax caption rte">
                     {%- if cart.duties_included and cart.taxes_included -%}
@@ -183,6 +221,7 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
+                {%- endif -%}
               {%- when 'inventory' -%}
                 <p
                   class="product__inventory{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -247,7 +286,9 @@
                   {{- product.selected_or_first_available_variant.sku -}}
                 </p>
               {%- when 'custom_liquid' -%}
-                {{ block.settings.custom_liquid }}
+                {%- unless block.id == 'custom_liquid_Jc7zXW' or block.id == 'custom_liquid_CVV6JV' -%}
+                  {{ block.settings.custom_liquid }}
+                {%- endunless -%}
               {%- when 'collapsible_tab' -%}
                 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                   <details id="Details-{{ block.id }}-{{ section.id }}">
@@ -269,6 +310,8 @@
               {%- when 'quantity_selector' -%}
                 <div
                   id="Quantity-Form-{{ section.id }}"
+                  data-suiji-purchase-control
+                  {% unless suiji_purchase_state == 'available' %}hidden{% endunless %}
                   class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
                   {{ block.shopify_attributes }}
                 >
@@ -515,16 +558,26 @@
                 %}
 
               {%- when 'variant_picker' -%}
-                {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+                {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id, suiji_purchase_state: suiji_purchase_state %}
                 {% render 'suiji-native-ring-guide', product: product, section: section %}
               {%- when 'buy_buttons' -%}
-                {%- render 'buy-buttons',
-                  block: block,
-                  product: product,
-                  product_form_id: product_form_id,
-                  section_id: section.id,
-                  show_pickup_availability: true
-                -%}
+                {%- unless suiji_purchase_state == 'preview' -%}
+                  <div data-suiji-purchase-control {% unless suiji_purchase_state == 'available' %}hidden{% endunless %}>
+                    {%- if product.handle == 'r01' or product.handle == 'oval-motif' -%}
+                      <p class="suiji-preorder-note">{{ 'suiji_pdp.preorder_note' | t }}</p>
+                      <input type="hidden" form="{{ product_form_id }}" name="properties[Pre-order]" value="{{ 'suiji_pdp.preorder_note' | t | escape }}">
+                    {%- endif -%}
+                    {%- render 'buy-buttons',
+                      block: block,
+                      product: product,
+                      product_form_id: product_form_id,
+                      section_id: section.id,
+                      show_pickup_availability: true,
+                      suiji_primary_purchase: true
+                    -%}
+                  </div>
+                {%- endunless -%}
+                {% render 'suiji-native-pairing', product: product, purchase_state: suiji_purchase_state %}
                 {% render 'suiji-native-product-panels', product: product, section: section, description_block: suiji_description_block %}
                 {%- assign suiji_panels_rendered = true -%}
               {%- when 'rating' -%}
@@ -718,7 +771,10 @@
                 {% render 'icon-with-text', block: block %}
             {%- endcase -%}
           {%- endfor -%}
-          {% unless suiji_panels_rendered %}{% render 'suiji-native-product-panels', product: product, section: section, description_block: suiji_description_block %}{% endunless %}
+          {% unless suiji_panels_rendered %}
+            {% render 'suiji-native-pairing', product: product, purchase_state: suiji_purchase_state %}
+            {% render 'suiji-native-product-panels', product: product, section: section, description_block: suiji_description_block %}
+          {% endunless %}
           <a href="{{ product.url }}" class="link product__view-details animate-arrow">
             {{ 'products.product.view_full_details' | t }}
             {{- 'icon-arrow.svg' | inline_asset_content -}}

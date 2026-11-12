@@ -1,0 +1,18 @@
+{%- comment -%}
+  Ordering mode precedes inventory. Display-only products remain browsable.
+  Accepts a native product. Returns preview, unavailable, sold-out or available.
+{%- endcomment -%}
+{%- liquid
+  assign selected = product.selected_or_first_available_variant
+  if settings.suiji_enable_orders != true or product.tags contains 'suiji-display-only'
+    echo 'preview'
+  elsif selected == blank
+    echo 'unavailable'
+  elsif selected.available == false
+    echo 'sold-out'
+  elsif selected.inventory_management == 'shopify' and selected.inventory_policy == 'deny' and selected.quantity_rule.min > selected.inventory_quantity
+    echo 'sold-out'
+  else
+    echo 'available'
+  endif
+-%}

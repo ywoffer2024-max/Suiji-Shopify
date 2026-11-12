@@ -64,6 +64,7 @@ if (!customElements.get('product-info')) {
         if (!this.contains(event.target)) return;
 
         this.resetProductFormState();
+        this.querySelectorAll('[data-suiji-purchase-control]').forEach((element) => { element.hidden = true; });
         this.showReviewedGalleryStatus('loading');
 
         const productUrl = target.dataset.productUrl || this.pendingRequestUrl || this.dataset.url;
@@ -134,6 +135,8 @@ if (!customElements.get('product-info')) {
               console.log('Fetch aborted by user');
             } else {
               this.showReviewedGalleryStatus('error');
+              const status = this.querySelector(`#SuijiPurchaseStatus-${this.dataset.section}`);
+              if (status && this.dataset.suijiOptionError) status.textContent = this.dataset.suijiOptionError;
               console.error(error);
             }
           });
@@ -171,6 +174,7 @@ if (!customElements.get('product-info')) {
           this.updateOptionValues(html);
           this.updateURL(productUrl, variant?.id);
           this.updateVariantInputs(variant?.id);
+          this.updatePurchaseState(html);
 
           if (!variant) {
             this.updateMedia(html, null);
@@ -212,6 +216,22 @@ if (!customElements.get('product-info')) {
             },
           });
         };
+      }
+
+      updatePurchaseState(html) {
+        const product = html.getElementById(`MainProduct-${this.sectionId}`);
+        const state = product?.dataset.suijiPurchaseState;
+        if (!state) return;
+
+        this.dataset.suijiPurchaseState = state;
+        this.querySelectorAll('[data-suiji-purchase-control]').forEach((element) => {
+          element.hidden = state !== 'available';
+        });
+        const source = html.getElementById(`SuijiPurchaseStatus-${this.sectionId}`);
+        const status = this.querySelector(`#SuijiPurchaseStatus-${this.dataset.section}`);
+        if (source && status && status.textContent !== source.textContent) {
+          status.textContent = source.textContent;
+        }
       }
 
       updateVariantInputs(variantId) {
@@ -390,7 +410,7 @@ if (!customElements.get('product-info')) {
         const selectors = ['.quantity__input', '.quantity__rules', '.quantity__label'];
         for (let selector of selectors) {
           const current = this.quantityForm.querySelector(selector);
-          const updated = quantityFormUpdated.querySelector(selector);
+          const updated = quantityFormUpdated?.querySelector(selector);
           if (!current || !updated) continue;
           if (selector === '.quantity__input') {
             const attributes = ['data-cart-quantity', 'data-min', 'data-max', 'step'];

@@ -562,6 +562,7 @@
         <!-- CTAs -->
 
         <div class="cart__ctas" {{ block.shopify_attributes }}>
+          {%- if settings.suiji_enable_orders -%}
           <button
             type="submit"
             id="CartDrawer-Checkout"
@@ -574,6 +575,9 @@
           >
             {{ 'sections.cart.checkout' | t }}
           </button>
+          {%- else -%}
+          <p class="caption">{{ 'suiji_pdp.preview_status' | t }}</p>
+          {%- endif -%}
         </div>
       </div>
     </div>

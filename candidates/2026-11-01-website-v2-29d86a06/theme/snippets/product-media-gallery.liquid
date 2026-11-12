@@ -113,7 +113,8 @@
             media_width: media_width,
             media_fit: section.settings.media_fit,
             constrain_to_viewport: section.settings.constrain_to_viewport,
-            lazy_load: false
+            lazy_load: false,
+            native_primary_gallery: native_primary_gallery
           %}
         </li>
       {%- endif -%}
@@ -151,13 +152,14 @@
               media_width: media_width,
               media_fit: section.settings.media_fit,
               constrain_to_viewport: section.settings.constrain_to_viewport,
-              lazy_load: lazy_load
+              lazy_load: lazy_load,
+              native_primary_gallery: native_primary_gallery
             %}
           </li>
         {%- endunless -%}
       {%- endfor -%}
     </ul>
-    <div class="slider-buttons quick-add-hidden{% if hide_mobile_slider %} small-hide{% endif %}">
+    <div class="slider-buttons quick-add-hidden{% if hide_mobile_slider %} small-hide{% endif %}{% if native_primary_gallery and media_count > 1 %} suiji-native-gallery-count{% endif %}">
       <button
         type="button"
         class="slider-button slider-button--prev"
@@ -169,6 +171,7 @@
         </span>
       </button>
       <div class="slider-counter caption">
+        {% if native_primary_gallery %}<span class="visually-hidden">{{ 'suiji_pdp.gallery_counter' | t }} </span>{% endif %}
         <span class="slider-counter--current">1</span>
         <span aria-hidden="true"> / </span>
         <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
