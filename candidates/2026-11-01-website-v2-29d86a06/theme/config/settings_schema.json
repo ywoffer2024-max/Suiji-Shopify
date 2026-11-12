@@ -1466,5 +1466,17 @@
         "label": "Creator guide PDF · French"
       }
     ]
+  },
+  {
+    "name": "SUIJI storefront",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "suiji_enable_orders",
+        "label": "Enable storefront ordering",
+        "info": "Enable once checkout is open. The preview keeps product information and finish galleries available.",
+        "default": false
+      }
+    ]
   }
 ]

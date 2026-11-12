@@ -36,6 +36,8 @@
     assign option_disabled = true
     if value.available
       assign option_disabled = false
+    elsif suiji_purchase_state == 'preview' and value.variant != blank
+      assign option_disabled = false
     endif
   -%}
 
@@ -60,7 +62,17 @@
 
   {% assign escaped_value = value | escape %}
 
-  {%- if picker_type == 'swatch' -%}
+  {%- if picker_type == 'suiji_finish' -%}
+    {%- render 'suiji-finish-option',
+      value: value,
+      input_id: input_id,
+      input_name: input_name,
+      product_form_id: product_form_id,
+      input_dataset: input_dataset,
+      purchase_state: suiji_purchase_state,
+      product_available: product.available
+    -%}
+  {%- elsif picker_type == 'swatch' -%}
     {%- capture help_text -%}
       <span class="visually-hidden">{{ escaped_value }}</span>
       {{ label_unavailable }}

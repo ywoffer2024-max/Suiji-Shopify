@@ -164,6 +164,13 @@
       {%- assign suiji_nav_seo_title = suiji_fixed_title | strip | strip_html | replace: '&amp;', '&' -%}
       {%- assign suiji_nav_seo_description = suiji_fixed_description | strip | strip_html | replace: '&amp;', '&' -%}
     {%- endif -%}
+    {%- if request.page_type == 'page' and page.metafields.suiji.studio_piece.value.schema == 'suiji-studio-piece/1' -%}
+      {%- assign suiji_studio_piece = page.metafields.suiji.studio_piece.value -%}
+      {%- assign suiji_piece_locale = 'en' -%}
+      {%- if request.locale.iso_code contains 'fr' -%}{%- assign suiji_piece_locale = 'fr' -%}{%- endif -%}
+      {%- assign suiji_nav_seo_title = suiji_studio_piece.title[suiji_piece_locale] -%}
+      {%- assign suiji_nav_seo_description = suiji_studio_piece.description[suiji_piece_locale] -%}
+    {%- endif -%}
     {% if suiji_commerce_product %}<meta name="robots" content="noindex,follow">{% endif %}
     {% if request.page_type == 'article' %}<meta name="robots" content="max-image-preview:large">{% endif %}
     {% if request.page_type == 'blog' and blog.handle == 'journal' and current_tags != blank %}<meta name="robots" content="noindex,follow">{% endif %}
@@ -465,7 +472,7 @@
       }
     </script>
   {% if request.page_type == 'page' %}{% if page.handle == 'studio-workspace' or page.handle == 'my-design' or page.handle == 'shopping-preview' %}<meta name="robots" content="noindex, nofollow">{% endif %}{% endif %}
-  {% if suiji_r107_content contains 'data-r107-page' or request.page_type == 'cart' %}{{ 'suiji-r107.css' | asset_url | stylesheet_tag }}<script src="{{ 'suiji-r107.js' | asset_url }}" defer></script>{% endif %}
+  {{ 'suiji-r107.css' | asset_url | stylesheet_tag }}<script src="{{ 'suiji-r107.js' | asset_url }}" defer></script>
 {% if page.handle == 'studio-workspace' or page.handle == 'my-design' or page.handle == 'checkout-preview' or page.handle == 'shopping-preview' %}<meta name="robots" content="noindex,nofollow">{% endif %}
 </head>
 
@@ -478,23 +485,12 @@
       {% render 'suiji-r107-config' %}
     {% else %}
 
-    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
-      {{ 'accessibility.skip_to_text' | t }}
-    </a>
-
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
     {%- endif -%}
 
-    {% comment %}R107 NATIVE CART CHROME — native forms remain unchanged{% endcomment %}
-    {% if request.page_type == 'cart' %}
-      {% render 'suiji-r107-header' %}
-    {% else %}
-    <div class="sc-demo-bar">{{ 'suiji_commerce.demo_bar' | t }}</div>
-    {% sections 'header-group' %}
-    {% endif %}
-
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1"{% if request.page_type == 'cart' %} data-r107-page data-family="native-cart"{% endif %}>
+    {% render 'suiji-r107-header' %}
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1" data-r107-page data-family="native-{{ request.page_type | escape }}">
       {% if suiji_commerce_product %}
         {{ content_for_layout }}
       {% elsif suiji_hoop_detail %}
@@ -532,17 +528,8 @@
       {% endif %}
     </main>
 
-    {% if request.page_type == 'cart' %}
-      {% render 'suiji-r107-footer' %}
-      {% render 'suiji-r107-config' %}
-    {% else %}
-    <nav class="sc-services" aria-label="{% if request.locale.iso_code contains 'fr' %}Conseils et assistance{% else %}Guidance and assistance{% endif %}">
-      <a href="{% render 'suiji-localized-menu-url', url: '/pages/care-guide' %}"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5C18 14 10 22 10 30a14 14 0 0 0 28 0c0-8-8-16-14-25Z"/><path d="M17 30a7 7 0 0 0 7 7"/></svg><h3>{% if request.locale.iso_code contains 'fr' %}Prendre soin de vos bijoux{% else %}Care for your jewelry{% endif %}</h3><p>{% if request.locale.iso_code contains 'fr' %}Des gestes simples pour le nettoyage, le rangement et les éléments amovibles.{% else %}Simple guidance on cleaning, storage and removable elements.{% endif %}</p></a>
-      <a href="{% render 'suiji-localized-menu-url', url: '/pages/the-mechanism' %}"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="6" width="18" height="27" rx="9" transform="rotate(-20 17 20)"/><rect x="22" y="17" width="18" height="27" rx="9" transform="rotate(-20 31 30)"/></svg><h3>{% if request.locale.iso_code contains 'fr' %}À vous de composer{% else %}Make it yours{% endif %}</h3><p>{% if request.locale.iso_code contains 'fr' %}Découvrez les supports, les ornements et les connexions compatibles.{% else %}Explore bases, charms and compatible connections.{% endif %}</p></a>
-      <a href="{% render 'suiji-localized-menu-url', url: '/pages/contact' %}"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M39 23c0 10-7 17-17 17H8l3-9C5 18 13 8 24 8c9 0 15 6 15 15Z"/><path d="M16 20h16M16 27h10"/></svg><h3>{% if request.locale.iso_code contains 'fr' %}Une question ? Parlons-en.{% else %}A question? Let’s talk.{% endif %}</h3><p>{% if request.locale.iso_code contains 'fr' %}Contactez SUIJI pour une question sur une pièce, une taille ou une composition.{% else %}Contact SUIJI with a question about a piece, a size or a combination.{% endif %}</p></a>
-    </nav>
-    {% sections 'footer-group' %}
-    {% endif %}
+    {% render 'suiji-r107-footer' %}
+    {% render 'suiji-r107-config' %}
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>

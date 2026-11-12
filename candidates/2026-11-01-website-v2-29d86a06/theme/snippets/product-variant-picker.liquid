@@ -27,7 +27,29 @@
           endif
         endif
       -%}
-      {%- if picker_type == 'swatch' -%}
+      {%- liquid
+        if suiji_purchase_state != blank
+          assign option_key = option.name | downcase | strip
+          case option_key
+            when 'color', 'colour', 'couleur', 'finish', 'finition'
+              assign picker_type = 'suiji_finish'
+          endcase
+        endif
+      -%}
+      {%- if picker_type == 'suiji_finish' -%}
+        <fieldset class="js product-form__input product-form__input--finish">
+          <legend class="form__label">{{ 'suiji_pdp.finish_option' | t }}</legend>
+          <div class="suiji-finish-list">
+            {%- render 'product-variant-options',
+              product: product,
+              option: option,
+              block: block,
+              picker_type: picker_type,
+              suiji_purchase_state: suiji_purchase_state
+            -%}
+          </div>
+        </fieldset>
+      {%- elsif picker_type == 'swatch' -%}
         <fieldset class="js product-form__input product-form__input--swatch">
           <legend class="form__label">
             {{ option.name }}:
@@ -39,7 +61,8 @@
             product: product,
             option: option,
             block: block,
-            picker_type: picker_type
+            picker_type: picker_type,
+            suiji_purchase_state: suiji_purchase_state
           %}
         </fieldset>
       {%- elsif picker_type == 'button' -%}
@@ -49,7 +72,8 @@
             product: product,
             option: option,
             block: block,
-            picker_type: picker_type
+            picker_type: picker_type,
+            suiji_purchase_state: suiji_purchase_state
           %}
         </fieldset>
       {%- else -%}
@@ -76,7 +100,8 @@
                 product: product,
                 option: option,
                 block: block,
-                picker_type: picker_type
+                picker_type: picker_type,
+            suiji_purchase_state: suiji_purchase_state
               %}
             </select>
             <span class="svg-wrapper">

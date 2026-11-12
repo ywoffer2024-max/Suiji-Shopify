@@ -1,0 +1,49 @@
+{%- comment -%}
+  R01 has two reviewed oval companions. Look up the exact Shopify SKU when the
+  native item is published. The equivalent preview page also accepts that SKU.
+{%- endcomment -%}
+{%- if product.handle == 'r01' -%}
+  {%- liquid
+    assign motif = all_products['oval-motif']
+    assign companions = 'OV-SM-AQ-G,OV-HA-AQ-B' | split: ','
+  -%}
+  <section class="suiji-native-pairing" aria-label="{{ 'suiji_pdp.pairing_title' | t | escape }}">
+    <h2>{{ 'suiji_pdp.pairing_title' | t }}</h2>
+    <ul class="suiji-native-pairing__grid" role="list">
+      {%- for sku in companions -%}
+        {%- liquid
+          assign variant = motif.variants | where: 'sku', sku | first
+          if forloop.first
+            assign name_key = 'suiji_pdp.pairing_smooth'
+            assign photo = 'suiji-final2-white-A001-600.webp'
+          else
+            assign name_key = 'suiji_pdp.pairing_hammered'
+            assign photo = 'suiji-final2-white-A038-600.webp'
+          endif
+          assign name = name_key | t
+          if variant != blank
+            assign target = routes.root_url | append: '/products/' | append: motif.handle | append: '?variant=' | append: variant.id | replace: '//', '/'
+          else
+            assign target = routes.root_url | append: '/collections/charms?view=suiji-p-oval-motif&sku=' | append: sku | replace: '//', '/'
+          endif
+        -%}
+        <li>
+          <a class="suiji-native-pairing__link" href="{{ target | escape }}">
+            <span class="suiji-native-pairing__image">
+              <img src="{{ photo | asset_url }}" width="600" height="600" loading="lazy" decoding="async" alt="">
+            </span>
+            <span class="suiji-native-pairing__body">
+              <span>{{ name | escape }}</span>
+              <span class="suiji-native-pairing__action" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8h12M8 2v12" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              </span>
+            </span>
+          </a>
+          {%- if variant != blank and purchase_state != 'preview' -%}
+            <p class="suiji-price-context">{{ variant.price | money_with_currency }}</p>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  </section>
+{%- endif -%}

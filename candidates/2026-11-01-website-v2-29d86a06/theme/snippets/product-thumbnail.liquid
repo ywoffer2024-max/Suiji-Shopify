@@ -26,9 +26,14 @@
 {% endcomment %}
 
 {%- liquid
-  unless lazy_load == false
-    assign lazy = 'lazy'
-  endunless
+  assign image_loading = 'lazy'
+  assign image_priority = 'auto'
+  if lazy_load == false
+    assign image_loading = 'eager'
+    if native_primary_gallery and position == 1
+      assign image_priority = 'high'
+    endif
+  endif
 
   assign desktop_columns = 1
   if desktop_layout == 'columns' and media_count > 1
@@ -51,6 +56,7 @@
 
 <div
   class="product-media-container media-type-{{ media.media_type }} media-fit-{{ media_fit }} global-media-settings gradient{% if constrain_to_viewport %} constrain-height{% endif %}"
+  {% if native_primary_gallery and product.handle == 'suiji-photo-20261109-collar-03' and media.alt contains '8-Link Collar' and media.alt contains 'View 01' %}data-suiji-collar-front{% endif %}
   style="--ratio: {{ media.aspect_ratio | default: 1.0 }}; --preview-ratio: {{ media.preview_image.aspect_ratio | default: 1.0 }};"
 >
   <modal-opener
@@ -83,7 +89,8 @@
         | image_url: width: 1946
         | image_tag:
           class: image_class,
-          loading: lazy,
+          loading: image_loading,
+          fetchpriority: image_priority,
           sizes: sizes,
           widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
       }}
@@ -124,7 +131,7 @@
         media.preview_image
         | image_url: width: 1946
         | image_tag:
-          loading: lazy,
+          loading: image_loading,
           sizes: sizes,
           widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
       }}

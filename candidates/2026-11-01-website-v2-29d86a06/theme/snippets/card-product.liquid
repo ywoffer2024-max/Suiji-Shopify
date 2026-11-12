@@ -32,7 +32,7 @@
     assign suiji_card_description = suiji_card_copy.description | default: card_product.description
   endif
 -%}
-{% if suiji_card_display_only %}{% assign quick_add = 'none' %}{% endif %}
+{% if suiji_card_display_only or settings.suiji_enable_orders != true %}{% assign quick_add = 'none' %}{% endif %}
 
 {%- unless skip_styles -%}
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}

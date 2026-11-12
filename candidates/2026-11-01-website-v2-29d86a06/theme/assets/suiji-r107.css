@@ -153,6 +153,63 @@ dialog.r-filters,
   background-image: radial-gradient(circle closest-side, #fff 66%, transparent 67%);
 }
 
+/* Shared catalogue, editorial and policy geometry. */
+:root {
+  --r-touch-target: 44px;
+  --r-finish-target: 48px;
+  --r-finish-gap: 8px;
+  --r-purchase-target: 52px;
+  --r-thumbnail: 64px;
+  --r-thumbnail-phone: 56px;
+  --r-gallery-phone-max: 38svh;
+}
+
+.r-site .r-filter-bar > [data-open-filters] {
+  min-height: var(--r-touch-target);
+}
+
+.r-about-chapter .r-about-custom {
+  margin: 24px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--r-line);
+  font: 400 14px/1.6 var(--r-sans);
+}
+
+.r-about-custom .r-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-inline-start: 8px;
+}
+
+.r-split--text {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.r-split--text > div {
+  width: min(100%, 780px);
+  margin-inline: auto;
+  padding-block: 0;
+}
+
+.r-split--text h2 {
+  max-width: 23ch;
+}
+
+.r-site > .r-custom-sale {
+  margin-inline: var(--r-gutter);
+}
+
+.r-site .r-card__image {
+  aspect-ratio: 4 / 5;
+  background: white;
+}
+
+.r-footer {
+  border-top: 1px solid var(--r-line);
+  box-shadow: none;
+}
+
 /* Photo navigation and the quoted set cards. */
 .r-mega-categories.suiji-photo-categories {
   display: grid;

@@ -77,6 +77,11 @@ if (!customElements.get('media-gallery')) {
           .querySelectorAll('button')
           .forEach((element) => element.removeAttribute('aria-current'));
         thumbnail.querySelector('button').setAttribute('aria-current', true);
+        const count = this.querySelector('.suiji-native-gallery-count .slider-counter--current');
+        if (count) {
+          const slides = [...this.elements.thumbnails.querySelectorAll('[data-target]')];
+          count.textContent = slides.indexOf(thumbnail) + 1;
+        }
         if (this.elements.thumbnails.isSlideVisible(thumbnail, 10)) return;
 
         this.elements.thumbnails.slider.scrollTo({ left: thumbnail.offsetLeft });
