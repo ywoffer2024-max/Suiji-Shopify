@@ -3,7 +3,7 @@
   @param {string} [presentation] - Pass r107 when the caller already provides a grid container.
 {%- enddoc -%}
 {%- liquid
-  assign categories = 'necklaces,earrings,rings,charms,bracelets,extras,sets' | split: ','
+  assign categories = 'necklaces,earrings,rings,charms,bracelets,extras' | split: ','
   assign language = request.locale.iso_code | split: '-' | first
 -%}
 {%- for category in categories -%}
@@ -33,9 +33,6 @@
       when 'extras'
         assign title_en = 'Accessories'
         assign title_fr = 'Accessoires'
-      when 'sets'
-        assign title_en = 'Sets'
-        assign title_fr = 'Ensembles'
     endcase
     assign title = title_en
     if language == 'fr'
@@ -44,14 +41,11 @@
   -%}
   {%- unless presentation == 'r107' -%}<li class="suiji-mega-menu__group suiji-photo-category-item">{%- endunless -%}
   <a class="suiji-photo-category suiji-mega-menu__category" data-shop-category="{{ category }}" href="{{ routes.root_url | append: '/collections/' | append: category | replace: '//', '/' }}">
-    <span class="suiji-photo-category__visual{% if category == 'sets' %} suiji-photo-category__visual--pair{% endif %}" aria-hidden="true">
+    <span class="suiji-photo-category__visual" aria-hidden="true">
       {% if asset != blank %}
         <img src="{{ asset | asset_url }}" width="600" height="600" loading="lazy" decoding="async" alt="">
       {% elsif category == 'extras' %}
         <img src="https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-reviewed-20261112-fitting-03-01-gold-131282aec3bbb0ab.png?width=360" width="360" height="450" loading="lazy" decoding="async" alt="">
-      {% else %}
-        <img src="https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-reviewed-20261112-collar-04-01-gold-f2d2e0b47fa59ae1.png?width=300" width="300" height="375" loading="lazy" decoding="async" alt="">
-        <img src="https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-reviewed-20261112-bare-square-01-gold-2e09f476bb5d7870.png?width=240" width="240" height="300" loading="lazy" decoding="async" alt="">
       {% endif %}
     </span>
     <span class="suiji-photo-category__title suiji-mega-menu__name">{{ title | escape }}</span>
