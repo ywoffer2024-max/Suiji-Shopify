@@ -27,15 +27,13 @@
     render 'suiji-purchase-state', product: product
   endcapture
   assign suiji_purchase_state = suiji_purchase_state | strip
-  assign gallery_layout = section.settings.gallery_layout
-  assign gallery_mobile_thumbnails = section.settings.mobile_thumbnails
+  assign gallery_layout = 'thumbnail_slider'
+  assign gallery_mobile_thumbnails = 'show'
   capture reviewed_media_ids
     render 'suiji-reviewed-variant-media-ids', product: product
   endcapture
   assign reviewed_media_ids = reviewed_media_ids | strip
   if reviewed_media_ids != blank
-    assign gallery_layout = 'thumbnail_slider'
-    assign gallery_mobile_thumbnails = 'show'
     assign ordered_ids = reviewed_media_ids | split: ','
     assign reviewed_media = '' | split: ','
     unless reviewed_media_ids == 'missing'

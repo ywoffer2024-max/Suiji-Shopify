@@ -1,4 +1,6 @@
-"""Verify the reviewed SUIJI design token values and shared commerce wiring."""
+"""Verify the SUIJI theme lock and, when supplied, the approved design preview."""
+import argparse
+from base64 import b64decode
 from hashlib import sha256
 import json
 from pathlib import Path
@@ -18,8 +20,45 @@ def json_with_header(path):
     return json.loads(re.sub(r"^\s*/\*.*?\*/", "", read(path), count=1, flags=re.S))
 
 
-def check_contract():
-    doc = (ROOT / "DESIGN.md").read_text(encoding="utf-8")
+def check_approved_preview(path, reference):
+    if not path.is_file():
+        return [f"Approved preview file not found: {path}"]
+    data = path.read_bytes()
+    if sha256(data).hexdigest() != reference["sha256"]:
+        return [f"Approved preview bytes differ: {path}"]
+
+    html = data.decode("utf-8")
+    style = re.search(r"<style>(.*?)</style>", html, re.S)
+    if not style:
+        return ["Approved preview is missing its embedded stylesheet"]
+    css = style[1]
+    mark = reference["header_mark"]
+    errors = []
+    image = re.search(
+        r'<a class="brand" href="#home" aria-label="SUIJI">\s*'
+        r'<img src="data:image/png;base64,([A-Za-z0-9+/=]+)"',
+        html,
+    )
+    if not image or sha256(b64decode(image[1])).hexdigest() != mark["sha256"]:
+        errors.append("The preview header must use the approved transparent square mark")
+
+    sizes = re.findall(r"\.brand img\s*\{\s*width:\s*(\d+)px;\s*height:\s*(\d+)px;", css)
+    expected_sizes = [(str(mark[key]), str(mark[key])) for key in ("desktop_size_px", "mobile_size_px")]
+    if sizes != expected_sizes:
+        errors.append("The preview header mark dimensions differ from the design lock")
+    gaps = re.findall(r"\.brand\s*\{[^{}]*?\bgap:\s*(\d+)px;", css)
+    if gaps != [str(mark["gap_px"])]:
+        errors.append("The preview header mark and wordmark gap differs from the design lock")
+
+    ratios = re.findall(r"\.catalog-image\s*\{\s*aspect-ratio:\s*(\d+/\d+)\s*;", css)
+    if ratios != [reference["catalogue_image_ratio"]]:
+        errors.append("The preview catalogue image ratio differs from the design lock")
+    return errors
+
+
+def check_contract(approved_preview=None, workspace_copy=None):
+    document = (ROOT / "DESIGN.md").read_bytes()
+    doc = document.decode("utf-8")
     blocks = re.findall(r"```json design-lock\n(.*?)\n```", doc, re.S)
     if len(blocks) != 1:
         return ["DESIGN.md must contain exactly one design lock"]
@@ -30,10 +69,22 @@ def check_contract():
     if expected_heading not in doc.splitlines()[0]:
         errors.append("DESIGN.md heading and lock version differ")
 
-    for entry in (lock["stylesheet"], lock["shell"], *lock["fonts"], *lock["components"]):
+    reference = lock["approved_preview"]
+    reviewed_files = (
+        lock["stylesheet"], lock["shell"], *lock["fonts"], *lock["components"],
+        reference["header_mark"],
+    )
+    for entry in reviewed_files:
         path = ROOT / entry["path"]
         if not path.is_file() or sha256(path.read_bytes()).hexdigest() != entry["sha256"]:
             errors.append(f"Reviewed bytes differ for {entry['path']}")
+
+    if approved_preview is not None:
+        errors.extend(check_approved_preview(approved_preview, reference))
+    if workspace_copy is not None and (
+        not workspace_copy.is_file() or workspace_copy.read_bytes() != document
+    ):
+        errors.append(f"Workspace DESIGN.md differs from the repository copy: {workspace_copy}")
 
     css = read("assets/suiji-r107.css")
     for name, value in lock["root_tokens"].items():
@@ -47,10 +98,22 @@ def check_contract():
             errors.append(f"Both storefront branches must use the shared {snippet}")
 
     header = read("snippets/suiji-r107-header.liquid")
+    wordmark = read("snippets/suiji-r107-wordmark.liquid")
+    mark_filename = Path(reference["header_mark"]["path"]).name
+    if header.count("render 'suiji-r107-wordmark'") != 4 or f"'{mark_filename}' | asset_url" not in wordmark:
+        errors.append("Both locales must use the approved square wordmark in the header and drawer")
     if header.count('id="cart-icon-bubble"') != 2:
         errors.append("Each language needs one native cart update target")
     if header.count("unless settings.suiji_enable_orders") != 2:
         errors.append("The preview announcement must follow the order setting in both locales")
+
+    home = read("snippets/suiji-r107-home.liquid")
+    if home.count("render 'suiji-r107-home-hero'") != 2:
+        errors.append("Both locales must use the shared homepage composition")
+
+    collection = read("sections/main-collection-product-grid.liquid")
+    if "media_aspect_ratio: 'portrait'" not in collection:
+        errors.append("Native catalogue cards must use the portrait product frame")
 
     product = read("sections/main-product.liquid")
     required = (
@@ -64,6 +127,8 @@ def check_contract():
     calls = re.findall(r"render 'suiji-native-(?:pairing|product-panels)'", product)
     if calls != ["render 'suiji-native-pairing'", "render 'suiji-native-product-panels'"] * 2:
         errors.append("Pairing must precede native details on both product render paths")
+    if "data-suiji-thumbnail-rail" not in read("snippets/product-media-gallery.liquid"):
+        errors.append("The native product gallery must expose the responsive thumbnail rail")
 
     finish = read("snippets/suiji-finish-option.liquid")
     if 'type="radio"' not in finish or "value.selected" not in finish or "value.swatch" not in finish:
@@ -95,7 +160,11 @@ def check_contract():
 
 
 if __name__ == "__main__":
-    issues = check_contract()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--approved-preview", type=Path, help="Path to the saved approved index.html")
+    parser.add_argument("--workspace-copy", type=Path, help="Path to the synchronized workspace DESIGN.md")
+    args = parser.parse_args()
+    issues = check_contract(args.approved_preview, args.workspace_copy)
     if issues:
         print("\n".join(issues), file=sys.stderr)
         raise SystemExit(1)

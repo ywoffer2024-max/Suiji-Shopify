@@ -62,6 +62,7 @@
   {% endif %}
   aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
   {% if reviewed_media_ids != blank %}data-suiji-reviewed-gallery{% endif %}
+  {% if native_primary_gallery and product.handle == 'r01' %}data-suiji-ring-gallery{% endif %}
   data-desktop-layout="{{ gallery_layout }}"
 >
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
@@ -206,18 +207,19 @@
     </button>
   {%- endif -%}
   {%- liquid
-    assign is_not_limited_to_single_item = false
-    if limit == null or limit > 1
-      assign is_not_limited_to_single_item = true
+    assign show_thumbnails = false
+    if media_count > 1
+      if limit == null or limit > 1
+        if gallery_layout contains 'thumbnail' or gallery_mobile_thumbnails == 'show'
+          assign show_thumbnails = true
+        endif
+      endif
     endif
   -%}
-  {%- if is_not_limited_to_single_item
-    and media_count > 1
-    and gallery_layout contains 'thumbnail'
-    or gallery_mobile_thumbnails == 'show'
-  -%}
+  {%- if show_thumbnails -%}
     <slider-component
       id="GalleryThumbnails-{{ section.id }}"
+      {% if native_primary_gallery %}data-suiji-thumbnail-rail{% endif %}
       class="thumbnail-slider slider-mobile-gutter quick-add-hidden{% unless gallery_layout contains 'thumbnail' %} medium-hide large-up-hide{% endunless %}{% if gallery_mobile_thumbnails != 'show' %} small-hide{% endif %}{% if media_count <= 3 %} thumbnail-slider--no-slide{% endif %}"
     >
       <button

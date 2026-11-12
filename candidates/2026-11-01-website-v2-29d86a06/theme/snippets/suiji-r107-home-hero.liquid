@@ -1,0 +1,49 @@
+{% doc %}
+  Renders the approved homepage composition with localized text and a collection link.
+{% enddoc %}
+
+{%- liquid
+  if request.locale.iso_code contains 'fr'
+    assign headline = 'Une base, plusieurs façons de la porter.'
+    assign description = 'Des bijoux en titane aux ornements interchangeables.'
+    assign action = 'Découvrir les bijoux'
+    assign lead_alt = 'Créole dorée avec ornement ovale, à côté des éléments du même modèle présentés séparément'
+    assign detail_alt = 'Gros plan sur un fermoir Core-Lock bleu monté sur une base de pendentif'
+  else
+    assign headline = 'One base. More ways to wear it.'
+    assign description = 'Titanium jewelry with interchangeable charms.'
+    assign action = 'Explore the pieces'
+    assign lead_alt = 'Gold-tone hoop with an oval charm, next to the same design separated into its parts'
+    assign detail_alt = 'Close-up of a blue Core-Lock clasp on a pendant fitting'
+  endif
+-%}
+<section class="r-home-hero" aria-labelledby="SuijiHomeTitle">
+  <div class="r-home-hero__media">
+    <img
+      class="r-home-hero__lead"
+      src="{{ 'suiji-final2-gold-hoop-charm-composition-1200.webp' | asset_url }}"
+      alt="{{ lead_alt | escape }}"
+      width="1200"
+      height="1200"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    >
+    <img
+      class="r-home-hero__detail"
+      src="{{ 'suiji-final2-blue-core-lock-connector-600.webp' | asset_url }}"
+      alt="{{ detail_alt | escape }}"
+      width="600"
+      height="600"
+      loading="lazy"
+      decoding="async"
+    >
+  </div>
+  <div class="r-home-hero__statement">
+    <div>
+      <h1 id="SuijiHomeTitle">{{ headline }}</h1>
+      <p>{{ description }}</p>
+    </div>
+    <a class="r-button r-home-hero__action" href="{{ routes.all_products_collection_url }}">{{ action }}</a>
+  </div>
+</section>
