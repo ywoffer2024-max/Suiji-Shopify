@@ -1,4 +1,4 @@
-# SUIJI Design System · v6.2.1
+# SUIJI Design System · v6.2.2
 
 Updated 12 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The acceptance criteria govern subsequent storefront changes. The implementation lock pins the reviewed source, and deployment evidence belongs in the release archive.
 
@@ -250,10 +250,10 @@ This lock pins the reviewed visual implementation. Resolve any mismatch in the i
 
 ```json design-lock
 {
-  "version": "6.2.1",
+  "version": "6.2.2",
   "stylesheet": {
     "path": "theme/assets/suiji-r107.css",
-    "sha256": "2ed23764aee45dbd11af69ca904c34c3b6064cb67242268dd95ce6ada9b39a12"
+    "sha256": "e225ac88f86071a5cfa76e9e00efe38dcde1f7d82ed12b2f2f04771ceca521e0"
   },
   "shell": {
     "path": "theme/layout/theme.liquid",

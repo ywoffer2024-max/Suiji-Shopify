@@ -29,14 +29,10 @@
 -%}
 <div class="r-site r-gift-budget-page" data-r107-page data-family="gift-budget" data-gift-budget="{{ limit }}" data-gift-budget-currency="{{ currency | escape }}">
   <header class="r-intro r-intro--small">
-    <a class="r-link" href="{{ gifts_url }}">{{ back_label }}</a>
     <h1>{{ heading }}</h1>
+    {% render 'suiji-gift-budget-links', presentation: 'results', current_limit: limit, return_url: gifts_url, return_label: back_label %}
     {% if currency != 'EUR' %}<p>{{ currency_note }}</p>{% endif %}
   </header>
-
-  <section class="r-section r-gift-budget-panel">
-    {% render 'suiji-gift-budget-links', presentation: 'page', current_limit: limit %}
-  </section>
 
   <section class="r-section r-gift-budget-results" id="gift-budget-products" aria-label="{{ results_label }}">
     <h2 class="visually-hidden">{{ results_label }}</h2>

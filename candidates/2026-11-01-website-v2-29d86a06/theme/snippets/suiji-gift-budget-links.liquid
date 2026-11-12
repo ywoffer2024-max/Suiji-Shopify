@@ -1,7 +1,9 @@
 {%- doc -%}
   Renders the cumulative EUR budget links for Gifts.
-  @param {string} [presentation] - Use page for an in-page heading.
+  @param {string} [presentation] - Use page for a heading or results for inline navigation.
   @param {string} [current_limit] - The active EUR ceiling on a budget collection.
+  @param {string} [return_url] - Link to the Gifts landing page on budget results.
+  @param {string} [return_label] - Localized label for the Gifts landing page.
 {%- enddoc -%}
 {%- liquid
   assign language = request.locale.iso_code | split: '-' | first
@@ -11,13 +13,16 @@
     assign group_title = 'Par budget'
   endif
 -%}
-<nav class="r-gift-budget" aria-label="{{ group_title }}" data-gift-budget-links>
+<nav class="r-gift-budget{% if presentation == 'results' %} r-gift-budget--results{% endif %}" aria-label="{{ group_title }}" data-gift-budget-links>
   {% if presentation == 'page' %}
     <div class="r-section__heading"><h2>{{ group_title }}</h2></div>
   {% else %}
     <p class="r-gift-budget__title">{{ group_title }}</p>
   {% endif %}
   <div class="r-mega-links">
+    {% if return_url != blank %}
+      <a class="r-link" href="{{ return_url | escape }}">{{ return_label | escape }}</a>
+    {% endif %}
     {% for limit in budgets %}
       {%- liquid
         assign amount = limit
