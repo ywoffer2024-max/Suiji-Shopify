@@ -13,6 +13,7 @@
         <a class="r-button r-button--line" href="{{ routes.root_url | append: '/collections/all' | replace: '//', '/' }}">Explore all jewelry</a>
       {% endif %}
     </header>
+    <img class="suiji-bracelet-preview__photo" src="{{ 'suiji-home-bracelet-optimized.webp' | asset_url }}" width="1254" height="1254" alt="{% if request.locale.iso_code contains 'fr' %}Un jonc argenté et un bracelet à chaîne bleue{% else %}A silver-tone bangle and a blue chain bracelet{% endif %}" decoding="async">
   </div>
 {% else %}
 {%- if request.locale.iso_code contains 'fr' -%}

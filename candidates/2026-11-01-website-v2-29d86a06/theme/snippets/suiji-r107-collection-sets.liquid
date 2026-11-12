@@ -1,3 +1,38 @@
+{% if collection.handle == 'sets' %}
+{%- assign language = request.locale.iso_code | split: '-' | first -%}
+<div class="r-site suiji-set-listing" data-r107-page data-family="sets">
+  <header class="r-intro r-intro--small">
+    {% if language == 'fr' %}
+      <h1>Ensembles</h1>
+      <p>Découvrez les pièces qui composeront les ensembles SUIJI.</p>
+    {% else %}
+      <h1>Sets</h1>
+      <p>Discover the pieces that will make up the SUIJI sets.</p>
+    {% endif %}
+  </header>
+  <div class="suiji-set-grid" data-set-category-preview>
+    <article class="suiji-set-card">
+      <a class="suiji-set-card__link" href="{{ routes.root_url | append: '/pages/piece-9-link-collar' | replace: '//', '/' }}">
+        <span class="suiji-set-card__images"><img src="https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-reviewed-20261112-collar-04-01-gold-f2d2e0b47fa59ae1.png?width=680" width="680" height="850" alt="" decoding="async"></span>
+        <h2 class="suiji-set-card__title">{% if language == 'fr' %}Collier rigide{% else %}Collar{% endif %}</h2>
+      </a>
+    </article>
+    <article class="suiji-set-card">
+      <a class="suiji-set-card__link" href="{{ routes.root_url | append: '/pages/piece-rounded-rectangle-hoops' | replace: '//', '/' }}">
+        <span class="suiji-set-card__images"><img src="https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-reviewed-20261112-bare-square-01-gold-2e09f476bb5d7870.png?width=680" width="680" height="850" alt="" decoding="async"></span>
+        <h2 class="suiji-set-card__title">{% if language == 'fr' %}Créoles carrées{% else %}Square hoops{% endif %}</h2>
+      </a>
+    </article>
+    <article class="suiji-set-card">
+      <a class="suiji-set-card__link" href="{{ routes.root_url | append: '/pages/piece-hammered-wide-ring-with-accent-stone-54-mm' | replace: '//', '/' }}">
+        <span class="suiji-set-card__images"><img src="https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-reviewed-20261112-ring-04-04-gold-ab17ac79dc117fc0.png?width=680" width="680" height="850" alt="" decoding="async"></span>
+        <h2 class="suiji-set-card__title">{% if language == 'fr' %}Base de bague à anneau plein{% else %}Solid-band ring base{% endif %}</h2>
+      </a>
+    </article>
+  </div>
+  <p>{% if language == 'fr' %}Les ensembles et leurs photos sont en préparation.{% else %}The sets and their photography are in preparation.{% endif %}</p>
+</div>
+{% else %}
 {% if request.page_type == 'collection' and collection.all_products_count == 0 %}
   <div class="r-site" data-r107-page data-family="sets">
     <header class="r-intro r-intro--small">
@@ -20,4 +55,5 @@
 {%- else -%}
 <div class="r-site" data-r107-page data-family="sets" data-modules="1,2,3,4,5"><header class="r-intro r-intro--small"><p class="r-eyebrow">SUIJI</p><h1>Sets</h1><p>See the complete looks a set can create, then check exactly what is included. Rotation images show different ways to use the parts, not a separate charm for every position.</p></header><div class="r-catalogue" data-catalogue><div class="r-filter-bar"><button class="r-button r-button--line" data-open-filters>Filter <span data-filter-count></span></button><p data-result-count></p><label>Sort <select data-sort><option value="original">Selection</option><option value="name">Name A–Z</option></select></label></div><div class="r-catalogue__layout"><dialog class="r-filters" id="r-filters" aria-labelledby="r-filter-title"><div class="r-filters__head"><h2 id="r-filter-title">Your selection</h2><button data-close-filters aria-label="Close filters">×</button></div><fieldset><legend>Piece type</legend></fieldset><button class="r-link" data-clear-filters>Clear filters</button></dialog><div class="r-results"><div class="r-grid "></div><div class="r-empty" data-no-results hidden><h2>Nothing matches these choices.</h2><p>No pieces match these choices. Clear the filters, or tell us what you are looking for.</p><button class="r-button" data-clear-filters>Clear filters</button></div></div></div></div><section class="r-section "><div class="r-section__heading"><h2>A little guidance</h2></div><p>Not sure which parts you need? See how bases and charms connect.</p><a class="r-link" href="{{ routes.root_url | append: '/pages/bases' | replace: '//', '/' }}">Bases &amp; components<span aria-hidden="true"> ↗</span></a><aside class="r-reading"><p class="r-eyebrow">A useful next read</p><a class="r-link" href="{{ routes.root_url | append: '/blogs/journal/interchangeable-or-fixed-jewelry' | replace: '//', '/' }}">Convertible jewelry or separate pieces: which suits your habits?<span aria-hidden="true"> ↗</span></a></aside></section></div>
 {%- endif -%}
+{% endif %}
 {% endif %}

@@ -53,7 +53,10 @@
                             </span>
                             {%- render 'suiji-localized-menu-title', title: link.title -%}
                           </button>
-                          <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                          <ul class="menu-drawer__menu list-menu{% if link.url contains '/collections/all' %} suiji-visual-mobile-categories{% endif %}" role="list" tabindex="-1">
+                            {%- if link.url contains '/collections/all' -%}
+                              {% render 'suiji-shop-mega-menu' %}
+                            {%- else -%}
                             {%- for childlink in link.links -%}
                               <li class="{% if childlink.links != blank %}suiji-mobile-child-parent{% endif %}">
                                 {%- if childlink.links == blank -%}
@@ -121,6 +124,7 @@
                                 {%- endif -%}
                               </li>
                             {%- endfor -%}
+                            {%- endif -%}
                           </ul>
                         </div>
                       </div>
