@@ -1,0 +1,39 @@
+{
+  "design_version": "6.3.0",
+  "source": "Shopify Online Store",
+  "mode": "collection_preview",
+  "new_online_store_products": {
+    "suiji-h02-hoop": 19,
+    "suiji-collar-9": 141,
+    "suiji-cross-chain": 27
+  },
+  "sets_eur": {
+    "RPT-SET-04": 238,
+    "RPT-SET-05": 465,
+    "RPT-SET-06": 577,
+    "RPT-SET-09": 292
+  },
+  "updated_native_gallery_slots": 476,
+  "studio_pages_updated": 42,
+  "product_copy": {
+    "r01": {
+      "en_description_html": "<p data-suiji-preorder=\"v1\"><strong>Preorder — Estimated dispatch within 3 months of placing your order.</strong></p><p>Available in 54 mm or 57 mm (inner circumference).</p><p>A ring with a parallel brushed finish and the SUIJI Core-Lock system.</p><p>Available in Classic Gold, Silver, SUIJI Blue and Blue Iridescent.</p><p>The two optional SUIJI charms shown here fit this base. The ring base is supplied on its own.</p>",
+      "fr_description_html": "<p data-suiji-preorder=\"v1\"><strong>Précommande — Expédition prévue dans les 3 mois suivant votre commande.</strong></p><p>Tour de doigt : 54 mm ou 57 mm (circonférence intérieure).</p><p>Bague à stries parallèles avec le système SUIJI Core-Lock.</p><p>Quatre couleurs : R01-Gold, R01-Silver, R01-Blue et R01-Blue Iridescent.</p><p>Compatible avec les deux motifs SUIJI proposés en option. Motifs non inclus.</p>"
+    },
+    "suiji-collar-9": {
+      "en_description_html": "<p>Includes one nine-link collar with a central clasp.</p><p>A sculptural SUIJI piece, made to become part of your own combination.</p><p>Metal: TC4 titanium alloy.</p>",
+      "fr_title": "Tour de cou à 9 maillons",
+      "fr_description_html": "<p>Comprend un tour de cou à neuf maillons avec un fermoir central.</p><p>Une pièce sculpturale SUIJI à intégrer à votre propre composition.</p><p>Alliage de titane TC4.</p>"
+    },
+    "suiji-cross-chain": {
+      "en_description_html": "<p>The chain body measures 550 mm and has an additional ring at each end. Includes one chain.</p><p>A sculptural SUIJI piece, made to become part of your own combination.</p><p>Metal: TC4 titanium alloy.</p>",
+      "fr_title": "Chaîne à maillons croisés de 550 mm",
+      "fr_description_html": "<p>Le corps de la chaîne mesure 550 mm, avec un anneau supplémentaire à chaque extrémité. Comprend une chaîne.</p><p>Une pièce sculpturale SUIJI à intégrer à votre propre composition.</p><p>Alliage de titane TC4.</p>"
+    },
+    "suiji-h02-hoop": {
+      "en_description_html": "<p>A pair of round hoops with hinged closures. Includes two matching hoops.</p><p>A sculptural SUIJI piece, made to become part of your own combination.</p><p>Metal: TC4 titanium alloy.</p>",
+      "fr_title": "Créoles rondes",
+      "fr_description_html": "<p>Une paire de créoles rondes à fermoirs articulés. Deux créoles assorties sont incluses.</p><p>Une pièce sculpturale SUIJI à intégrer à votre propre composition.</p><p>Alliage de titane TC4.</p>"
+    }
+  }
+}

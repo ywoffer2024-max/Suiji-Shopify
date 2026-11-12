@@ -28,14 +28,18 @@
         <article class="suiji-set-card" data-quote-set="{{ quote.code | escape }}">
           <a class="suiji-set-card__link" href="{{ routes.root_url | append: '/products/' | append: set_product.handle | replace: '//', '/' }}">
             <figure>
-              <div class="suiji-set-card__images{% if set_product.media.size > 1 %} suiji-set-card__images--pair{% endif %}">
-                {% for photo in set_product.media limit: 2 %}
+            {% assign approved_set_photo = false %}
+            {% if set_product.featured_media.alt contains ' · Set contents' %}{% assign approved_set_photo = true %}{% endif %}
+              <div class="suiji-set-card__images{% if set_product.media.size > 1 and approved_set_photo == false %} suiji-set-card__images--pair{% endif %}">
+                {% assign card_photo_limit = 2 %}
+                {% if approved_set_photo %}{% assign card_photo_limit = 1 %}{% endif %}
+                {% for photo in set_product.media limit: card_photo_limit %}
                   <span class="suiji-set-card__component">
                     {{ photo.preview_image | image_url: width: 680 | image_tag: widths: '250, 360, 480, 680', sizes: '(min-width: 1000px) 20vw, (min-width: 591px) 28vw, 70vw', alt: '', loading: loading, decoding: 'async' }}
                   </span>
                 {% endfor %}
               </div>
-              <figcaption class="r-caption">{% if locale == 'fr' %}Composants présentés{% else %}Selected components{% endif %}</figcaption>
+              <figcaption class="r-caption">{% if approved_set_photo %}{% if locale == 'fr' %}Ensemble présenté{% else %}Set shown{% endif %}{% else %}{% if locale == 'fr' %}Composants présentés{% else %}Selected components{% endif %}{% endif %}</figcaption>
             </figure>
             <h2 class="suiji-set-card__title">{{ quote.title[locale] | escape }}</h2>
             <p class="suiji-set-card__price" data-set-price>{{ set_product.price | money_without_trailing_zeros }}</p>
