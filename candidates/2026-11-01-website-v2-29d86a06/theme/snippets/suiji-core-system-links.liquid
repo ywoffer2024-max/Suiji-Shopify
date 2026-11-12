@@ -1,0 +1,19 @@
+{%- liquid
+  assign language = request.locale.iso_code | split: '-' | first
+  assign charm_label = 'Charms'
+  assign nav_label = 'Bases and charms'
+  if language == 'fr'
+    assign charm_label = 'Ornements'
+    assign nav_label = 'Bases et ornements'
+  endif
+-%}
+<nav class="r-system-circles" aria-label="{{ nav_label }}">
+  <a data-core-system-choice="bases" href="{{ routes.root_url | append: '/pages/bases' | replace: '//', '/' }}">
+    <img src="{{ 'suiji-final2-white-A088-600.webp' | asset_url }}" data-image-slot="system-bases" data-photo-origin="final2-white" width="600" height="600" loading="lazy" decoding="async" alt="">
+    <span>Bases</span>
+  </a>
+  <a data-core-system-choice="charms" href="{{ routes.root_url | append: '/pages/charms' | replace: '//', '/' }}">
+    <img src="{{ 'suiji-final2-white-A038-600.webp' | asset_url }}" data-image-slot="system-charms" data-photo-origin="final2-white" width="600" height="600" loading="lazy" decoding="async" alt="">
+    <span>{{ charm_label }}</span>
+  </a>
+</nav>

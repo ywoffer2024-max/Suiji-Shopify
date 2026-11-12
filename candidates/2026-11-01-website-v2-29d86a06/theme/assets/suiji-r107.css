@@ -296,6 +296,76 @@ dialog.r-filters,
   .suiji-set-grid { gap: 28px 14px; }
 }
 
+/* Core-Lock introduction, picture navigation and base families. */
+.r-core-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 40px;
+  background: var(--r-ink);
+  color: white;
+  padding: 54px var(--r-gutter);
+}
+.r-core-hero .r-intro { padding: 0; }
+.r-core-hero .r-intro h1 { color: inherit; max-width: 19ch; }
+.r-core-hero :focus-visible { outline-color: white; }
+.r-core-hero .r-system-circles { width: 100%; margin-inline: 0; padding-inline: 0; }
+.r-core-hero .r-system-circles,
+#r-mega-core .r-system-circles { margin-bottom: 0; }
+.r-menu-drawer [data-mobile-level="core"] .r-system-circles {
+  margin: 16px 0 0;
+  padding-inline: 0;
+}
+.r-system-circles a { min-width: 0; }
+.r-system-circles a img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+}
+.r-core-parts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0 0 24px;
+}
+.r-core-parts dt { font: 500 17px/1.4 var(--r-sans); }
+.r-core-parts dd { margin: 6px 0 0; max-width: 35ch; }
+.r-core-connection > .r-link { min-height: var(--r-touch-target); }
+[data-family="bases"] > .r-intro { padding-bottom: 18px; }
+.r-base-types { padding-top: 24px; }
+.r-base-type { min-width: 0; }
+.r-base-type > a { display: block; }
+.r-base-type__photo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  overflow: hidden;
+  aspect-ratio: 1.12;
+  background: #fafbfc;
+}
+.r-base-type__photo--pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.r-base-type__photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.r-base-type__photo img[src*="-A088-600.webp"] { transform: scale(1.1); }
+.r-base-type__photo img[src*="-collar-03-01-gold-ea77b3f6549abc60"] { transform: translateY(-3%) scale(1.55); }
+.r-base-type h3 { margin: 12px 0 4px; }
+.r-base-type__caption { display: block; margin-bottom: 4px; }
+.r-base-type p { margin: 0; }
+@media (max-width: 989px) {
+  .r-core-hero { grid-template-columns: minmax(0, 1fr); gap: 24px; padding-block: 36px; }
+}
+@media (max-width: 749px) {
+  .r-core-hero { padding-block: 32px 24px; }
+  .r-core-parts { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+}
+
 /* Gifts budget links and collection cards */
 .r-gift-budget {
   border-top: 1px solid var(--r-line);

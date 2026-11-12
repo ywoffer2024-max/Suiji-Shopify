@@ -1,4 +1,4 @@
-# SUIJI Design System · v6.2.3
+# SUIJI Design System · v6.2.4
 
 Updated 12 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The acceptance criteria govern subsequent storefront changes. The implementation lock pins the reviewed source, and deployment evidence belongs in the release archive.
 
@@ -14,7 +14,7 @@ Updated 12 November 2026. This contract applies to the English and French Shopif
 ### Visual direction
 
 - Let approved imagery carry SUIJI's identity. Show the sculptural metal silhouette first, then use a verified view of the Core-Lock connection or an approved worn view to explain what makes the piece distinctive. One lead image or image group owns the main visual emphasis. Keep accompanying typography and controls secondary to the jewelry on shopping surfaces.
-- Use white for the reading and shopping canvas. Ice blue serves a purposeful instructional or editorial band, the preview notice and the footer. Keep successive modules on white unless a change of surface marks a new subject. Main actions use charcoal. Blue ink serves links, focus and selection.
+- Use white for product photography, shopping controls and long reading. Give an editorial background a clear job. Ice blue marks an instructional or editorial chapter, the preview notice and the footer. The Core-Lock introduction uses the existing charcoal with white text and white image fields. Blue ink serves links, focus and selection on light surfaces.
 - Give each decision area one primary action. Use plain links or named icons for supporting actions and quiet outlines when the control needs a visible boundary. Use circles for swatches, approved category imagery and functional icons. Keep shopping controls and image frames square, and group related elements with spacing before adding a divider.
 - Put product choice, size help and purchase state before descriptive tabs. Show material, size, weight, wearing scale and compatibility wherever verified. A preview piece gets honest viewing guidance. Cards, galleries and editorial photography have separate roles and use the matching approved asset.
 
@@ -38,7 +38,7 @@ SUIJI is handmade jewelry shaped by personal choices. The story begins with Chun
 |---|---|---|
 | Paper | `#FFFFFF` | Page, header and product-image canvas |
 | `--r-ice` | `#EAF1F5` | Deliberate modules and footer |
-| `--r-ink` | `#202226` | Primary text and primary action |
+| `--r-ink` | `#202226` | Primary text and action on light surfaces, background of the Core-Lock introduction |
 | `--r-muted` | `#626466` | Supporting text |
 | `--r-accent` | `#315A73` | Focus and selected-state emphasis |
 | `--r-line` | `#D5DFE5` | Decorative separators |
@@ -84,6 +84,8 @@ Long paragraphs must not exceed `72ch`; do not justify, line-clamp or shrink the
 
 Reserve display typography for page titles, editorial chapters and the existing product names and prices. Use the utility role for filtering, budgets and sort controls even when the group label is a semantic heading. Give French titles and labels the room to wrap at the same type size, including on cards and buttons.
 
+Use surface changes to mark the transition from a collection story to shopping. Keep filters, sort, price and product images on a calm neutral field. The header and catalogue use the same color roles across locales. Use white text and a white focus outline on the charcoal Core-Lock introduction. Keep the same underlying product image and lighting as its gallery.
+
 ## 4. Layout and responsive boundaries
 
 | Range | Header | Product page | Catalogue | Footer |
@@ -122,6 +124,8 @@ At `1440 × 900` and `390 × 844`, a populated browse result shows a recognizabl
 Use the same SUIJI header and footer across home, catalogue, editorial, product, search, cart and policy routes. Provide Core-Lock & Modular System, Shop All, Sets, Gifts and About SUIJI with the current French labels and working destinations. Keep the shopping bag, search and language switch at consistent entry points. Keep the full Core-Lock label on one line on inline navigation with one underline and one adjacent SVG chevron.
 
 The Shop All / Tous les bijoux disclosure contains exactly six image links in this order across desktop and mobile in both languages. The links are Necklaces, Earrings, Rings, Charms, Bracelets & bangles, and Accessories. The top-level Sets / Ensembles link opens the set collection directly. Keep a clickable parent link, separately operated disclosure, fine-pointer hover, click, keyboard access, outside-click close, Escape and focus return. Mobile subcategories open into a right-side panel with Back and Close.
+
+The Core-Lock parent links to its explanation page. Its desktop disclosure and mobile panel use the same two picture links, **Bases / Bases** and **Charms / Ornements**, in that order. The mechanism page reuses those links. The Bases page shows four image-led families for rings, earrings, necklaces and bracelets. Explain where an attachment sits for each family and refer to the exact piece for compatibility and included parts. A temporary wrist-category illustration has a visible bilingual category label and belongs to the guide only.
 
 Gifts / Cadeaux provides a Shop by price / Par budget group in the desktop menu, mobile panel and Gifts page. Use three plain links in ascending order for budgets under €100, €500 and €1,000. Each result uses current positive Shopify prices and a strict upper limit. In a populated result, put the current budget in the page title and show the other budgets and the route back to all gifts as compact utility links near the grid. Use the shared catalogue cards and price formatting.
 
@@ -164,7 +168,7 @@ A different framing can be approved for a specific image role. The verified 8-Li
 
 **Complete the look** lives in the purchase column, before the detail tabs. A curated pairing has a verified compatibility relationship, approved image and live variant or equivalent preview destination. R01's two current oval examples render side by side. Link to the exact companion choice and use a minimum 44px target. Use a compact scroll rail for longer approved groups. Show prices sourced from the linked variant when applicable.
 
-The mechanism entrance keeps the two circular image entrances: `200px` diameter and `50px` gap on desktop, `140px` diameter and `26px` gap on mobile. Labels use Newsreader `26px/1.4`, reduced to `24px` on mobile. Keep the Bases and Charms destinations.
+The mechanism entrance uses two circular image links with a `200px` diameter and `50px` gap on desktop, and up to `140px` diameter with a `26px` gap on mobile. The editorial hero pairs a leading text column with the links at 990px and above, then stacks the links below the introduction. Keep both links inside the content edge at narrow widths. Labels use Newsreader `26px/1.4`, reduced to `24px` on mobile. The introduction names the three parts in order: the base you wear, the clasp that connects, and the charm you choose. One charm can move between bases with the matching connection. State compatibility and contents separately. Keep the established fit guide and operating instructions accessible.
 
 ### About and Journal
 
@@ -244,16 +248,32 @@ Use named groups of native toggle buttons for Studio input modes and design-exam
 - Product option behavior and image loading follow [Shopify variant guidance](https://shopify.dev/docs/storefronts/themes/product-merchandising/variants), [Shopify theme performance guidance](https://shopify.dev/docs/storefronts/themes/best-practices/performance) and [Baymard product page research](https://baymard.com/research-articles/current-state-ecommerce-product-page-ux).
 - Follow [WCAG 2.2](https://www.w3.org/TR/WCAG22/) for reflow, focus, contrast, name and state and live messages. SUIJI uses the above 44/48px control targets as its own design minimums.
 
+### Palette proposal for review
+
+This palette is a design proposal. The locked tokens in section 3 govern the storefront until a palette revision is approved and verified.
+
+| Candidate | Suggested role |
+|---|---|
+| Warm stone `#F2EFE9` | The main editorial background for a homepage story, a collection introduction or a studio chapter |
+| Smoke blue `#DDE3E6` | A smaller surface for Core-Lock, titanium or a compatibility guide |
+| Mineral charcoal `#2A2926` | Text, the main shopping action and a single dark editorial field with white text |
+| Copper brown `#75584B` | Underlined editorial links and small accents |
+| Paper `#FFFFFF` | Product image fields, gallery zoom, filters and the purchase area |
+
+Marla Aaron uses a collection introduction to set the tone and hands off to a separate filter and product grid. Apply that page structure with SUIJI's brushed titanium, clasp close-ups and worn views. Le Gramme provides a material-led reference. Jenny Bird provides a reference for seeing the piece and its scale on the body. [Marla Aaron Locks](https://marlaaaron.com/en-fr/collections/locks), [le gramme titanium](https://eu.legramme.com/collections/titanium), [Jenny Bird Florence](https://jenny-bird.com/products/florence-earrings-gold).
+
+Test the palette around identical approved photos of blue titanium, silver finish and champagne gold. Keep color out of the product image itself. Start with a homepage editorial section, a collection introduction and an information section below the product decision. Evaluate the three on mobile as well as desktop. The proposed charcoal and copper brown reach 12.68:1 and 5.62:1 on warm stone. Measure the actual rendered background before assigning an outline or focus color. [Baymard product image research](https://baymard.com/research-articles/human-model), [WCAG text contrast](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
+
 ## Machine-readable design lock
 
 This lock pins the reviewed visual implementation. Resolve any mismatch in the intended change, document and affected-page verification before preparing a patch. Review the visual acceptance criteria in the browser.
 
 ```json design-lock
 {
-  "version": "6.2.3",
+  "version": "6.2.4",
   "stylesheet": {
     "path": "theme/assets/suiji-r107.css",
-    "sha256": "dd2557359d68486c1135bca738774139486e9cbc63f93c8089dcceae3b9a4759"
+    "sha256": "f6d85d7688e8587aef3da862a9bab232543d8913cc7bd0df554bac6165240a7e"
   },
   "shell": {
     "path": "theme/layout/theme.liquid",

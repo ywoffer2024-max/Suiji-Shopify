@@ -1,0 +1,72 @@
+{%- liquid
+  assign language = request.locale.iso_code | split: '-' | first
+  assign families = 'rings,earrings,necklaces,bracelets' | split: ','
+  assign heading = 'Choose where to wear it'
+  assign note_label = 'Category illustration'
+  if language == 'fr'
+    assign heading = 'Choisir où porter le bijou'
+    assign note_label = 'Visuel de catégorie'
+  endif
+-%}
+<section class="r-section r-base-types" id="base-types">
+  <h2>{{ heading }}</h2>
+  <div class="r-grid r-base-types__grid">
+    {%- for family in families -%}
+      {%- liquid
+        assign second_asset = ''
+        assign illustration = false
+        assign image_height = 600
+        case family
+          when 'rings'
+            assign image_url = 'suiji-final2-white-A088-600.webp' | asset_url
+            assign title = 'Ring bases'
+            assign description = 'The band is the base. On a Core-Lock ring, the clasp is where the charm connects.'
+            if language == 'fr'
+              assign title = 'Bases de bague'
+              assign description = 'L’anneau forme la base. Sur une bague Core-Lock, l’ornement se fixe au fermoir.'
+            endif
+          when 'earrings'
+            assign image_url = 'suiji-final2-white-A016-600.webp' | asset_url
+            assign second_asset = 'suiji-final2-white-A060-600.webp'
+            assign title = 'Earring bases'
+            assign description = 'Choose a hoop or a stud. Its page shows the attachment and any fittings it needs.'
+            if language == 'fr'
+              assign title = 'Bases de boucle d’oreille'
+              assign description = 'Choisissez une créole ou une puce. La fiche indique le point d’attache et les pièces à prévoir.'
+            endif
+          when 'necklaces'
+            assign image_url = 'https://suijijewelry.com/cdn/shop/files/suiji-reviewed-20261112-collar-03-01-gold-ea77b3f6549abc60.png?width=600'
+            assign image_height = 750
+            assign title = 'Necklace bases'
+            assign description = 'A chain or collar is the base. Check the piece’s page for its clasp or pendant fitting before adding a charm.'
+            if language == 'fr'
+              assign title = 'Bases de collier'
+              assign description = 'Une chaîne ou un tour de cou forme la base. Vérifiez le fermoir ou le support de pendentif indiqué sur la fiche.'
+            endif
+          when 'bracelets'
+            assign image_url = 'suiji-home-bracelet-optimized.webp' | asset_url
+            assign illustration = true
+            assign title = 'Bracelet bases'
+            assign description = 'For a bracelet or bangle, check the exact piece for a compatible attachment point.'
+            if language == 'fr'
+              assign title = 'Bases de bracelet'
+              assign description = 'Pour un bracelet souple ou un jonc, vérifiez le point d’attache compatible sur la fiche de la pièce.'
+            endif
+        endcase
+      -%}
+      <article class="r-base-type" data-core-base-family="{{ family }}">
+        <a href="{{ routes.root_url | append: '/collections/' | append: family | replace: '//', '/' }}">
+          <span class="r-base-type__photo{% if second_asset != blank %} r-base-type__photo--pair{% endif %}">
+            <img src="{{ image_url | escape }}" width="600" height="{{ image_height }}" loading="lazy" decoding="async" alt="">
+            {% if second_asset != blank %}
+              <img src="{{ second_asset | asset_url }}" width="600" height="600" loading="lazy" decoding="async" alt="">
+            {% endif %}
+          </span>
+          <h3>{{ title }}</h3>
+          {% if illustration %}<span class="r-caption r-base-type__caption">{{ note_label }}</span>{% endif %}
+        </a>
+        <p>{{ description }}</p>
+      </article>
+    {%- endfor -%}
+  </div>
+</section>
