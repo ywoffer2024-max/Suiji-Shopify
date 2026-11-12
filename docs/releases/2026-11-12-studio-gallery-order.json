@@ -1,0 +1,921 @@
+{
+  "storefront": "SUIJI",
+  "scope": "Public studio previews",
+  "pages": {
+    "/pages/piece-6-link-collar": {
+      "design": "collar-01",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-collar-01-01-gold-7d7ebb4bdd134fec.png",
+          "suiji-reviewed-20261112-collar-01-02-gold-c8833f098c5c8542.png",
+          "suiji-reviewed-20261112-collar-01-03-gold-2bb5c819e17cc7d4.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-collar-01-01-silver-c83f990ac2dc9046.png",
+          "suiji-reviewed-20261112-collar-01-02-silver-728cd9383c19f15d.png",
+          "suiji-reviewed-20261112-collar-01-03-silver-dcce42d598a2f75e.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-collar-01-01-blue-3fc2b5623653c4fe.png",
+          "suiji-reviewed-20261112-collar-01-02-blue-bceb6c83eabf94c9.png",
+          "suiji-reviewed-20261112-collar-01-03-blue-6950511be7c44903.png"
+        ]
+      }
+    },
+    "/pages/piece-7-link-collar": {
+      "design": "collar-02",
+      "finishes": {
+        "silver": [
+          "suiji-reviewed-20261112-collar-02-01-silver-446995590212c2be.png",
+          "suiji-reviewed-20261112-collar-02-02-silver-c6a7392c99a87f30.png",
+          "suiji-reviewed-20261112-collar-02-03-silver-48e627c19396f3fb.png"
+        ],
+        "gold": [
+          "suiji-reviewed-20261112-collar-02-01-gold-f6ed12a84e393e45.png",
+          "suiji-reviewed-20261112-collar-02-02-gold-f7dbd521c2938703.png",
+          "suiji-reviewed-20261112-collar-02-03-gold-a40a6820af37983b.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-collar-02-01-blue-4941e2040b5150da.png",
+          "suiji-reviewed-20261112-collar-02-02-blue-c7714c30600c4515.png",
+          "suiji-reviewed-20261112-collar-02-03-blue-9ffb47882ccd550f.png"
+        ]
+      }
+    },
+    "/pages/piece-8-link-collar": {
+      "design": "collar-03",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-collar-03-01-gold-ea77b3f6549abc60.png",
+          "suiji-reviewed-20261112-collar-03-02-gold-183748d3524b76a0.png",
+          "suiji-reviewed-20261112-collar-03-03-gold-0af1c9d428d99ef0.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-collar-03-01-silver-a477d80a71329132.png",
+          "suiji-reviewed-20261112-collar-03-02-silver-cc4c5ae39dbe6c77.png",
+          "suiji-reviewed-20261112-collar-03-03-silver-2e6f38d0b92e7f24.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-collar-03-01-blue-d22b08a268b95b52.png",
+          "suiji-reviewed-20261112-collar-03-02-blue-1d9df73aa22a0b94.png",
+          "suiji-reviewed-20261112-collar-03-03-blue-0eca8427869239b7.png"
+        ]
+      }
+    },
+    "/pages/piece-9-link-collar": {
+      "design": "collar-04",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-collar-04-01-gold-f2d2e0b47fa59ae1.png",
+          "suiji-reviewed-20261112-collar-04-02-gold-f6b0fe9a192b2b2a.png",
+          "suiji-reviewed-20261112-collar-04-03-gold-bf790a65cce6b827.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-collar-04-01-silver-fc34efeb0c6f3254.png",
+          "suiji-reviewed-20261112-collar-04-02-silver-3d11436b23e8f4bc.png",
+          "suiji-reviewed-20261112-collar-04-03-silver-22f02b59023099e6.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-collar-04-01-blue-e324a1ba09bbd36e.png",
+          "suiji-reviewed-20261112-collar-04-02-blue-bb184e78e453ec63.png",
+          "suiji-reviewed-20261112-collar-04-03-blue-8b29cde326460f3f.png"
+        ]
+      }
+    },
+    "/pages/piece-aquarius-zodiac-charm": {
+      "design": "ornament-21",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ornament-21-01-gold-8a4505b2f1656198.png",
+          "suiji-reviewed-20261112-ornament-21-02-gold-4ae7bced665f9eef.png",
+          "suiji-reviewed-20261112-ornament-21-03-gold-ab4b782c270fac56.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ornament-21-01-silver-0dcda5ac1449d0fc.png",
+          "suiji-reviewed-20261112-ornament-21-02-silver-a32252cd0550e6e7.png",
+          "suiji-reviewed-20261112-ornament-21-03-silver-27be7044cea8168b.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ornament-21-01-blue-a389a9d05ee78ce8.png",
+          "suiji-reviewed-20261112-ornament-21-02-blue-8762d8a80a772b55.png",
+          "suiji-reviewed-20261112-ornament-21-03-blue-f60c25244daa4fcc.png"
+        ]
+      }
+    },
+    "/pages/piece-aries-zodiac-charm": {
+      "design": "ornament-11",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ornament-11-01-gold-f5043079fa9e29b7.png",
+          "suiji-reviewed-20261112-ornament-11-02-gold-d22f4d9df346938d.png",
+          "suiji-reviewed-20261112-ornament-11-03-gold-497d3760d8344de8.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ornament-11-01-silver-44ca5a708a3b3d54.png",
+          "suiji-reviewed-20261112-ornament-11-02-silver-ec072fbc9a259e86.png",
+          "suiji-reviewed-20261112-ornament-11-03-silver-491ff5697feecfae.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ornament-11-01-blue-b6b954c98a6fec41.png",
+          "suiji-reviewed-20261112-ornament-11-02-blue-df0aa783b4d64036.png",
+          "suiji-reviewed-20261112-ornament-11-03-blue-2466c99a15917485.png"
+        ]
+      }
+    },
+    "/pages/piece-black-faceted-stone-charm": {
+      "design": "ornament-09",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ornament-09-01-gold-1d2cd9d25bd7ff7d.png",
+          "suiji-reviewed-20261112-ornament-09-02-gold-87b209ad98301d99.png",
+          "suiji-reviewed-20261112-ornament-09-03-gold-b2d349593445205a.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ornament-09-01-silver-d8a8e77676889616.png",
+          "suiji-reviewed-20261112-ornament-09-02-silver-4330434c451552d8.png",
+          "suiji-reviewed-20261112-ornament-09-03-silver-acf347cc6bfcab68.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ornament-09-01-blue-cafa8df1f34dc01d.png",
+          "suiji-reviewed-20261112-ornament-09-02-blue-5e999df9b9d09d28.png",
+          "suiji-reviewed-20261112-ornament-09-03-blue-5950181e1b930705.png"
+        ]
+      }
+    },
+    "/pages/piece-brushed-wide-ring-54-mm": {
+      "design": "ring-01",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ring-01-04-gold-899dbc244f55e558.png",
+          "suiji-reviewed-20261112-ring-01-01-gold-5b1a84d3c68ca0ff.png",
+          "suiji-reviewed-20261112-ring-01-02-gold-172396368c158320.png",
+          "suiji-reviewed-20261112-ring-01-03-gold-e66f7c5132150af3.png",
+          "suiji-reviewed-20261112-ring-01-05-gold-74fcc92cdb0b84e7.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ring-01-04-silver-07fc0dd23509ac66.png",
+          "suiji-reviewed-20261112-ring-01-01-silver-27c4a1f3dcad2cc5.png",
+          "suiji-reviewed-20261112-ring-01-02-silver-ecbb6da5ce435f51.png",
+          "suiji-reviewed-20261112-ring-01-03-silver-477ffbff680701a6.png",
+          "suiji-reviewed-20261112-ring-01-05-silver-7bf2b7edb9822454.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ring-01-04-blue-8a3bce925d4e22b5.png",
+          "suiji-reviewed-20261112-ring-01-01-blue-3fb20ef391c98105.png",
+          "suiji-reviewed-20261112-ring-01-02-blue-bafadf27716b3b15.png",
+          "suiji-reviewed-20261112-ring-01-03-blue-ea159a7551f03748.png",
+          "suiji-reviewed-20261112-ring-01-05-blue-a1d54368020be4f1.png"
+        ],
+        "iridescent": [
+          "suiji-reviewed-20261112-ring-01-04-iridescent-f5eea7c4bd6d9617.png",
+          "suiji-reviewed-20261112-ring-01-01-iridescent-6e7d1cd8618524f5.png",
+          "suiji-reviewed-20261112-ring-01-02-iridescent-68c608b5f0383a3f.png",
+          "suiji-reviewed-20261112-ring-01-03-iridescent-92d57dd06f304552.png",
+          "suiji-reviewed-20261112-ring-01-05-iridescent-257d71716de234ca.png"
+        ]
+      }
+    },
+    "/pages/piece-brushed-wide-ring-57-mm": {
+      "design": "ring-02",
+      "finishes": {
+        "iridescent": [
+          "suiji-reviewed-20261112-ring-02-04-iridescent-5197b0baea2e7a69.png",
+          "suiji-reviewed-20261112-ring-02-01-iridescent-560719c6faa9ee88.png",
+          "suiji-reviewed-20261112-ring-02-02-iridescent-156866de3bf5d035.png",
+          "suiji-reviewed-20261112-ring-02-03-iridescent-f83fa1ec508106c4.png",
+          "suiji-reviewed-20261112-ring-02-05-iridescent-fa02b53b1718f06f.png"
+        ],
+        "gold": [
+          "suiji-reviewed-20261112-ring-02-04-gold-384a4ecd82dc97aa.png",
+          "suiji-reviewed-20261112-ring-02-01-gold-5f1a83c34dc6e8d2.png",
+          "suiji-reviewed-20261112-ring-02-02-gold-9a1ce935ce4bad40.png",
+          "suiji-reviewed-20261112-ring-02-03-gold-774a3774f5993b04.png",
+          "suiji-reviewed-20261112-ring-02-05-gold-428c061cc2190921.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ring-02-04-silver-1ba450bc705cf53c.png",
+          "suiji-reviewed-20261112-ring-02-01-silver-c88431d52b9cac3c.png",
+          "suiji-reviewed-20261112-ring-02-02-silver-b0dfbdc9b712619b.png",
+          "suiji-reviewed-20261112-ring-02-03-silver-44d2af344fb4d5be.png",
+          "suiji-reviewed-20261112-ring-02-05-silver-26fcfcc2415c23b1.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ring-02-04-blue-a0cbb928bea82e9e.png",
+          "suiji-reviewed-20261112-ring-02-01-blue-caca8148f81134b9.png",
+          "suiji-reviewed-20261112-ring-02-02-blue-9cccd1917ae2e439.png",
+          "suiji-reviewed-20261112-ring-02-03-blue-40412821ec4b4767.png",
+          "suiji-reviewed-20261112-ring-02-05-blue-a2e140c2102532b2.png"
+        ]
+      }
+    },
+    "/pages/piece-cancer-zodiac-charm": {
+      "design": "ornament-14",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ornament-14-01-gold-4e3e30d46b4c63cc.png",
+          "suiji-reviewed-20261112-ornament-14-02-gold-2468815cb870f3e3.png",
+          "suiji-reviewed-20261112-ornament-14-03-gold-6950a469630a43d5.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ornament-14-01-silver-178187038df6af6f.png",
+          "suiji-reviewed-20261112-ornament-14-02-silver-daae6a3ab3427f97.png",
+          "suiji-reviewed-20261112-ornament-14-03-silver-18e04ba4389722f8.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ornament-14-01-blue-7a4447cb6788812b.png",
+          "suiji-reviewed-20261112-ornament-14-02-blue-c5a09c35cdb9b120.png",
+          "suiji-reviewed-20261112-ornament-14-03-blue-4cdb31744902d8a2.png"
+        ]
+      }
+    },
+    "/pages/piece-capricorn-zodiac-charm": {
+      "design": "ornament-20",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ornament-20-01-gold-3b254ecd9601b100.png",
+          "suiji-reviewed-20261112-ornament-20-02-gold-76ff5f6975bd4412.png",
+          "suiji-reviewed-20261112-ornament-20-03-gold-cfa057e2ddab9fae.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ornament-20-01-silver-3a0a92658519b3b8.png",
+          "suiji-reviewed-20261112-ornament-20-02-silver-89f62c8e06da122c.png",
+          "suiji-reviewed-20261112-ornament-20-03-silver-7426994cc79cf187.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ornament-20-01-blue-a7dc1950b6175486.png",
+          "suiji-reviewed-20261112-ornament-20-02-blue-8ed2ab3614dac27e.png",
+          "suiji-reviewed-20261112-ornament-20-03-blue-26eabe9cc613ebc1.png"
+        ]
+      }
+    },
+    "/pages/piece-core-lock-stud-with-metal-back": {
+      "design": "stud-01",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-stud-01-01-gold-d69d566a76a44af8.png",
+          "suiji-reviewed-20261112-stud-01-02-gold-c5bd3e5451962705.png",
+          "suiji-reviewed-20261112-stud-01-03-gold-e1c678c4ec0e5795.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-stud-01-01-silver-cc7c5fc88341a9d8.png",
+          "suiji-reviewed-20261112-stud-01-02-silver-7455abec0857e43e.png",
+          "suiji-reviewed-20261112-stud-01-03-silver-8fda7446bae45938.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-stud-01-01-blue-33fd2b96b5716729.png",
+          "suiji-reviewed-20261112-stud-01-02-blue-3ada4a5474e3d5d5.png",
+          "suiji-reviewed-20261112-stud-01-03-blue-5eae2b80095a98a6.png"
+        ]
+      }
+    },
+    "/pages/piece-double-arm-ring-54-mm": {
+      "design": "ring-07",
+      "finishes": {
+        "blue": [
+          "suiji-reviewed-20261112-ring-07-04-blue-1a65af61c0a3cc10.png",
+          "suiji-reviewed-20261112-ring-07-01-blue-3b2ceb04021647dc.png",
+          "suiji-reviewed-20261112-ring-07-02-blue-b142d26d08c6b484.png"
+        ],
+        "gold": [
+          "suiji-reviewed-20261112-ring-07-04-gold-742fb1d452e9af89.png",
+          "suiji-reviewed-20261112-ring-07-01-gold-8f84cfaaa5ffb87b.png",
+          "suiji-reviewed-20261112-ring-07-02-gold-733dfb5f1f8892ce.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ring-07-04-silver-e5d8157030b74bbb.png",
+          "suiji-reviewed-20261112-ring-07-01-silver-3ab93ed256636766.png",
+          "suiji-reviewed-20261112-ring-07-02-silver-8b54b5985332ee07.png"
+        ]
+      }
+    },
+    "/pages/piece-double-arm-ring-57-mm": {
+      "design": "ring-08",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ring-08-04-gold-270c576f50daeeff.png",
+          "suiji-reviewed-20261112-ring-08-01-gold-0fbd85740e621c3a.png",
+          "suiji-reviewed-20261112-ring-08-02-gold-65a8afc03dc493ab.png",
+          "suiji-reviewed-20261112-ring-08-03-gold-bbac77ed315409a7.png",
+          "suiji-reviewed-20261112-ring-08-05-gold-cf9df5d50d884219.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ring-08-04-silver-c9ac7ff5648dc03b.png",
+          "suiji-reviewed-20261112-ring-08-01-silver-2b7bd52a1456105e.png",
+          "suiji-reviewed-20261112-ring-08-02-silver-4a41eade7c9f946a.png",
+          "suiji-reviewed-20261112-ring-08-03-silver-c58fa40eba892dba.png",
+          "suiji-reviewed-20261112-ring-08-05-silver-75044d822a38cab8.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ring-08-04-blue-4b8fadf76d356d38.png",
+          "suiji-reviewed-20261112-ring-08-01-blue-050002ce3eae392d.png",
+          "suiji-reviewed-20261112-ring-08-02-blue-32905f1d62b9b7fe.png",
+          "suiji-reviewed-20261112-ring-08-03-blue-c6e119b318f1e7e2.png",
+          "suiji-reviewed-20261112-ring-08-05-blue-d2d46d09a260f716.png"
+        ]
+      }
+    },
+    "/pages/piece-gemini-zodiac-charm": {
+      "design": "ornament-13",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ornament-13-01-gold-ac02db4168341726.png",
+          "suiji-reviewed-20261112-ornament-13-02-gold-7343680825cc4436.png",
+          "suiji-reviewed-20261112-ornament-13-03-gold-033c5dde905c70e1.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ornament-13-01-silver-ec2c01095aac58c8.png",
+          "suiji-reviewed-20261112-ornament-13-02-silver-aefc3b236966a80e.png",
+          "suiji-reviewed-20261112-ornament-13-03-silver-d3a7a31bc4ad9a73.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ornament-13-01-blue-6e7b570c723ae03d.png",
+          "suiji-reviewed-20261112-ornament-13-02-blue-a92741c91d0c12ce.png",
+          "suiji-reviewed-20261112-ornament-13-03-blue-6986b0ca72cc997f.png"
+        ]
+      }
+    },
+    "/pages/piece-hammered-wide-ring-54-mm": {
+      "design": "ring-03",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ring-03-04-gold-48f86e070f34fdce.png",
+          "suiji-reviewed-20261112-ring-03-01-gold-5488ececa8595410.png",
+          "suiji-reviewed-20261112-ring-03-02-gold-63aa917e8facc8d6.png",
+          "suiji-reviewed-20261112-ring-03-03-gold-0b8c057d36034890.png",
+          "suiji-reviewed-20261112-ring-03-05-gold-3f9057427a2e472a.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ring-03-04-silver-ca4376c1249e7494.png",
+          "suiji-reviewed-20261112-ring-03-01-silver-0a0b15e4cd7792e6.png",
+          "suiji-reviewed-20261112-ring-03-02-silver-baa025cd86811033.png",
+          "suiji-reviewed-20261112-ring-03-03-silver-ffcb52ed9cddb3c0.png",
+          "suiji-reviewed-20261112-ring-03-05-silver-2d2fc177f540b11f.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ring-03-04-blue-5c618c406467d38f.png",
+          "suiji-reviewed-20261112-ring-03-01-blue-1f24ebb32ec75764.png",
+          "suiji-reviewed-20261112-ring-03-02-blue-95b8163a66197278.png",
+          "suiji-reviewed-20261112-ring-03-03-blue-9f56ae3ee017bd11.png",
+          "suiji-reviewed-20261112-ring-03-05-blue-626888d5feb4810a.png"
+        ]
+      }
+    },
+    "/pages/piece-hammered-wide-ring-57-mm": {
+      "design": "ring-05",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ring-05-04-gold-100ec36411123e8b.png",
+          "suiji-reviewed-20261112-ring-05-01-gold-616a5b1ad5ac3d06.png",
+          "suiji-reviewed-20261112-ring-05-02-gold-d835739f75f46ae7.png",
+          "suiji-reviewed-20261112-ring-05-03-gold-b57525596e820bbe.png",
+          "suiji-reviewed-20261112-ring-05-05-gold-9673f9fd6578acc4.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ring-05-04-silver-9bc99c826a7b4700.png",
+          "suiji-reviewed-20261112-ring-05-01-silver-e98c00027ec2c614.png",
+          "suiji-reviewed-20261112-ring-05-02-silver-0f8c17c1c379038f.png",
+          "suiji-reviewed-20261112-ring-05-03-silver-bcf577620cc2fcdd.png",
+          "suiji-reviewed-20261112-ring-05-05-silver-98f0166fb53e4ac0.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ring-05-04-blue-61018a12b9861489.png",
+          "suiji-reviewed-20261112-ring-05-01-blue-03afde3443bde7f7.png",
+          "suiji-reviewed-20261112-ring-05-02-blue-66d3f743c76ba5cb.png",
+          "suiji-reviewed-20261112-ring-05-03-blue-2e7786b7ad3e4d44.png",
+          "suiji-reviewed-20261112-ring-05-05-blue-4af7b544c09437d3.png"
+        ]
+      }
+    },
+    "/pages/piece-hammered-wide-ring-with-accent-stone-54-mm": {
+      "design": "ring-04",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ring-04-04-gold-ab17ac79dc117fc0.png",
+          "suiji-reviewed-20261112-ring-04-01-gold-8fcb136cd38e8481.png",
+          "suiji-reviewed-20261112-ring-04-02-gold-cb5a094952ca3f53.png",
+          "suiji-reviewed-20261112-ring-04-03-gold-af58aa8a904f79f9.png",
+          "suiji-reviewed-20261112-ring-04-05-gold-662ee9c6b62bf5d1.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ring-04-04-silver-75077af30bd533e8.png",
+          "suiji-reviewed-20261112-ring-04-01-silver-51c88b5a3d045ea6.png",
+          "suiji-reviewed-20261112-ring-04-02-silver-a06a12fd8f75c2e1.png",
+          "suiji-reviewed-20261112-ring-04-03-silver-2b3dd8bc250757c7.png",
+          "suiji-reviewed-20261112-ring-04-05-silver-ff7528044f24d642.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ring-04-04-blue-3e6710f60316e098.png",
+          "suiji-reviewed-20261112-ring-04-01-blue-ee4ac47fb70e9c45.png",
+          "suiji-reviewed-20261112-ring-04-02-blue-af754a9da402f2fd.png",
+          "suiji-reviewed-20261112-ring-04-03-blue-2fdb4a20d57dd92d.png",
+          "suiji-reviewed-20261112-ring-04-05-blue-46f9487350ecffba.png"
+        ]
+      }
+    },
+    "/pages/piece-hammered-wide-ring-with-accent-stone-57-mm": {
+      "design": "ring-06",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ring-06-04-gold-b132a3b8eea98b54.png",
+          "suiji-reviewed-20261112-ring-06-01-gold-8fb5f114a4721127.png",
+          "suiji-reviewed-20261112-ring-06-02-gold-501485f11cfe75f9.png",
+          "suiji-reviewed-20261112-ring-06-03-gold-37e75805d65d10f4.png",
+          "suiji-reviewed-20261112-ring-06-05-gold-432ab573b0559c6c.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ring-06-04-silver-82f18e16cf366a26.png",
+          "suiji-reviewed-20261112-ring-06-01-silver-8078d9623c70ffa9.png",
+          "suiji-reviewed-20261112-ring-06-02-silver-ed1349a214d179e6.png",
+          "suiji-reviewed-20261112-ring-06-03-silver-f92c00f5af28790d.png",
+          "suiji-reviewed-20261112-ring-06-05-silver-c8bccacda101cbc7.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ring-06-04-blue-8bd780fc6fbf23ee.png",
+          "suiji-reviewed-20261112-ring-06-01-blue-a56c20065f4ec113.png",
+          "suiji-reviewed-20261112-ring-06-02-blue-0122668ff205c9cf.png",
+          "suiji-reviewed-20261112-ring-06-03-blue-59e9015c2238b977.png",
+          "suiji-reviewed-20261112-ring-06-05-blue-8245f2f6a916b482.png"
+        ]
+      }
+    },
+    "/pages/piece-hand-brushed-wide-ring-57-mm": {
+      "design": "ring-09",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ring-09-04-gold-1488a7c09e728266.png",
+          "suiji-reviewed-20261112-ring-09-01-gold-8e1c51814a76dff9.png",
+          "suiji-reviewed-20261112-ring-09-02-gold-b76f4a56501d9b02.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ring-09-04-silver-f0996216bae33b6e.png",
+          "suiji-reviewed-20261112-ring-09-01-silver-ccf3e263468b66f8.png",
+          "suiji-reviewed-20261112-ring-09-02-silver-a7ddd5871f50b40d.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ring-09-04-blue-f1e7ac4819e3310c.png",
+          "suiji-reviewed-20261112-ring-09-01-blue-b5c21e6be0c852ce.png",
+          "suiji-reviewed-20261112-ring-09-02-blue-bc52d97c9771e43d.png"
+        ]
+      }
+    },
+    "/pages/piece-hook-01": {
+      "design": "fitting-01",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-fitting-01-01-gold-314b5c9bf8b690d4.png",
+          "suiji-reviewed-20261112-fitting-01-02-gold-97627a72a5b14675.png",
+          "suiji-reviewed-20261112-fitting-01-03-gold-05ac971d9dddceb4.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-fitting-01-01-silver-6fdf7e10d816e038.png",
+          "suiji-reviewed-20261112-fitting-01-02-silver-4e925f337914d025.png",
+          "suiji-reviewed-20261112-fitting-01-03-silver-ba78049e800ecf8e.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-fitting-01-01-blue-9db4cbb60930e63b.png",
+          "suiji-reviewed-20261112-fitting-01-02-blue-58de7f339e55f88e.png",
+          "suiji-reviewed-20261112-fitting-01-03-blue-8b95bf21a6944875.png"
+        ]
+      }
+    },
+    "/pages/piece-hook-02": {
+      "design": "fitting-02",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-fitting-02-01-gold-44928f097573e287.png",
+          "suiji-reviewed-20261112-fitting-02-02-gold-4f2bc4dc52cd99b6.png",
+          "suiji-reviewed-20261112-fitting-02-03-gold-acba8f7c4cf464da.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-fitting-02-01-silver-68da2a861319b935.png",
+          "suiji-reviewed-20261112-fitting-02-02-silver-6bbb361d871fe711.png",
+          "suiji-reviewed-20261112-fitting-02-03-silver-84bda991b08d5335.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-fitting-02-01-blue-de30d6b098b9e067.png",
+          "suiji-reviewed-20261112-fitting-02-02-blue-93ddf338acd7921f.png",
+          "suiji-reviewed-20261112-fitting-02-03-blue-83bded3fa5dcbf6a.png"
+        ]
+      }
+    },
+    "/pages/piece-l03-chain": {
+      "design": "chain-03",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-chain-03-01-gold-d18386b96b306a2a.png",
+          "suiji-reviewed-20261112-chain-03-02-gold-2d9c480e7444ba2e.png",
+          "suiji-reviewed-20261112-chain-03-03-gold-18f1916b7b8397e5.png",
+          "suiji-reviewed-20261112-chain-03-04-gold-5c6b10a1f924267c.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-chain-03-01-silver-5495d30ce933e305.png",
+          "suiji-reviewed-20261112-chain-03-02-silver-f3bd2254f17137e0.png",
+          "suiji-reviewed-20261112-chain-03-03-silver-6b362eb9a387167f.png",
+          "suiji-reviewed-20261112-chain-03-04-silver-402fb44da35d8a17.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-chain-03-01-blue-98c5acb45a4538e5.png",
+          "suiji-reviewed-20261112-chain-03-02-blue-cdab2ba75c658cc9.png",
+          "suiji-reviewed-20261112-chain-03-03-blue-daf9b2f0546da482.png",
+          "suiji-reviewed-20261112-chain-03-04-blue-c1bbdae104d5fe45.png"
+        ]
+      }
+    },
+    "/pages/piece-l05-chain": {
+      "design": "chain-01",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-chain-01-01-gold-29ab6201ee2c69aa.png",
+          "suiji-reviewed-20261112-chain-01-02-gold-96a313a39d946310.png",
+          "suiji-reviewed-20261112-chain-01-03-gold-7b4a4b3c69a0c42d.png",
+          "suiji-reviewed-20261112-chain-01-04-gold-6eee60334b32b92c.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-chain-01-01-silver-3c34a4aefc887b47.png",
+          "suiji-reviewed-20261112-chain-01-02-silver-3516dad5c077d2d9.png",
+          "suiji-reviewed-20261112-chain-01-03-silver-10f4d3375f7c4205.png",
+          "suiji-reviewed-20261112-chain-01-04-silver-040dd78851cb05ce.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-chain-01-01-blue-76b6880f03705efc.png",
+          "suiji-reviewed-20261112-chain-01-02-blue-64f09750c1ac805d.png",
+          "suiji-reviewed-20261112-chain-01-03-blue-778ac18077bca03c.png",
+          "suiji-reviewed-20261112-chain-01-04-blue-71094de1e48102d4.png"
+        ]
+      }
+    },
+    "/pages/piece-leo-zodiac-charm": {
+      "design": "ornament-15",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ornament-15-01-gold-e45e34c43c35c831.png",
+          "suiji-reviewed-20261112-ornament-15-02-gold-780831d5a2a10b90.png",
+          "suiji-reviewed-20261112-ornament-15-03-gold-9ff48256dafbd8f7.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ornament-15-01-silver-326284f8854936da.png",
+          "suiji-reviewed-20261112-ornament-15-02-silver-b00e24df89e4aa41.png",
+          "suiji-reviewed-20261112-ornament-15-03-silver-c30d26f8023963d8.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ornament-15-01-blue-6ede1fecfd6f3d4b.png",
+          "suiji-reviewed-20261112-ornament-15-02-blue-b9a654c24e4023a7.png",
+          "suiji-reviewed-20261112-ornament-15-03-blue-ff3c04e96abc97bb.png"
+        ]
+      }
+    },
+    "/pages/piece-libra-zodiac-charm": {
+      "design": "ornament-17",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ornament-17-01-gold-929af08716876e18.png",
+          "suiji-reviewed-20261112-ornament-17-02-gold-effe0208fd721ba0.png",
+          "suiji-reviewed-20261112-ornament-17-03-gold-58bee78fcfaf76af.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ornament-17-01-silver-8b30242ca258986e.png",
+          "suiji-reviewed-20261112-ornament-17-02-silver-ee55f07fa2206947.png",
+          "suiji-reviewed-20261112-ornament-17-03-silver-88d61f92ee35ff2a.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ornament-17-01-blue-f9620ebcc9170ac9.png",
+          "suiji-reviewed-20261112-ornament-17-02-blue-f5eecfa412a1ae9e.png",
+          "suiji-reviewed-20261112-ornament-17-03-blue-230b0005d8de3119.png"
+        ]
+      }
+    },
+    "/pages/piece-loose-black-faceted-stone": {
+      "design": "ornament-10",
+      "finishes": {
+        "black": [
+          "suiji-reviewed-20261112-ornament-10-01-onyx-68dc43b71aeccdd4.png",
+          "suiji-reviewed-20261112-ornament-10-02-onyx-3727b7f1e9380d28.png",
+          "suiji-reviewed-20261112-ornament-10-03-onyx-1d9a0e3aded1e1da.png"
+        ]
+      }
+    },
+    "/pages/piece-pendant-holder-01": {
+      "design": "fitting-03",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-fitting-03-01-gold-131282aec3bbb0ab.png",
+          "suiji-reviewed-20261112-fitting-03-02-gold-01bfd9d4d8d14c9b.png",
+          "suiji-reviewed-20261112-fitting-03-03-gold-e9360c0ae7a5a421.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-fitting-03-01-silver-55951e05abe93daa.png",
+          "suiji-reviewed-20261112-fitting-03-02-silver-40fb21db0555a19e.png",
+          "suiji-reviewed-20261112-fitting-03-03-silver-f6dc811202b9d7a1.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-fitting-03-01-blue-913fbfc2151f8f57.png",
+          "suiji-reviewed-20261112-fitting-03-02-blue-3ee44083ded90f4e.png",
+          "suiji-reviewed-20261112-fitting-03-03-blue-31d3e6cc64472e05.png"
+        ]
+      }
+    },
+    "/pages/piece-pendant-holder-02": {
+      "design": "fitting-04",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-fitting-04-01-gold-60142c0c67ef3c0b.png",
+          "suiji-reviewed-20261112-fitting-04-02-gold-69aff28067fd55d1.png",
+          "suiji-reviewed-20261112-fitting-04-03-gold-618454c2decf02a2.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-fitting-04-01-silver-970915475c832676.png",
+          "suiji-reviewed-20261112-fitting-04-02-silver-baee59e87e691388.png",
+          "suiji-reviewed-20261112-fitting-04-03-silver-609054b0faf69612.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-fitting-04-01-blue-f52f3db3867565f4.png",
+          "suiji-reviewed-20261112-fitting-04-02-blue-bcb6e6b734779b52.png",
+          "suiji-reviewed-20261112-fitting-04-03-blue-55dd5266cce3f488.png"
+        ]
+      }
+    },
+    "/pages/piece-pisces-zodiac-charm": {
+      "design": "ornament-22",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ornament-22-01-gold-58b939833a6aa5ed.png",
+          "suiji-reviewed-20261112-ornament-22-02-gold-4fe1023739dbc09f.png",
+          "suiji-reviewed-20261112-ornament-22-03-gold-38d95ef2c59d8fbc.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ornament-22-01-silver-7fc593ce6c83486d.png",
+          "suiji-reviewed-20261112-ornament-22-02-silver-dc8d13c43c1e22f6.png",
+          "suiji-reviewed-20261112-ornament-22-03-silver-047c4ad6116d04c0.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ornament-22-01-blue-335e0606a598f36f.png",
+          "suiji-reviewed-20261112-ornament-22-02-blue-fd50705e93aa8440.png",
+          "suiji-reviewed-20261112-ornament-22-03-blue-61aaf23512e9fb55.png"
+        ]
+      }
+    },
+    "/pages/piece-quarter-turn-pendant-holder": {
+      "design": "fitting-05",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-fitting-05-01-gold-796a85b4ae8c2421.png",
+          "suiji-reviewed-20261112-fitting-05-02-gold-30d6186eb6a42b66.png",
+          "suiji-reviewed-20261112-fitting-05-03-gold-59967062cb0d14c7.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-fitting-05-01-silver-2cab4084aaf506ec.png",
+          "suiji-reviewed-20261112-fitting-05-02-silver-9dde514cb3d73c39.png",
+          "suiji-reviewed-20261112-fitting-05-03-silver-193b4af84c78b50f.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-fitting-05-01-blue-10f896655d1bf640.png",
+          "suiji-reviewed-20261112-fitting-05-02-blue-1820f2ce47c7f8b3.png",
+          "suiji-reviewed-20261112-fitting-05-03-blue-f57d422e3a354ad4.png"
+        ]
+      }
+    },
+    "/pages/piece-rectangle-hoops-with-coin-drop": {
+      "design": "hoop-02",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-hoop-02-01-gold-c687b58a1c842915.png",
+          "suiji-reviewed-20261112-hoop-02-02-gold-51e31cbbcb78f658.png",
+          "suiji-reviewed-20261112-hoop-02-03-gold-331ea39e95178668.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-hoop-02-01-silver-3b08fedcb1718ad4.png",
+          "suiji-reviewed-20261112-hoop-02-02-silver-657ed2c894593f05.png",
+          "suiji-reviewed-20261112-hoop-02-03-silver-8bdf87ba6f0c2cd3.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-hoop-02-01-blue-c8fc2cbfe4ed8dde.png",
+          "suiji-reviewed-20261112-hoop-02-02-blue-67d0110ff91e65f2.png",
+          "suiji-reviewed-20261112-hoop-02-03-blue-4b14bd30466fcf31.png"
+        ]
+      }
+    },
+    "/pages/piece-rolled-link-chain-with-pendant-holder": {
+      "design": "chain-02",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-chain-02-01-gold-6ea052d7d9fb5f31.png",
+          "suiji-reviewed-20261112-chain-02-02-gold-1bffaa0107fc8c02.png",
+          "suiji-reviewed-20261112-chain-02-03-gold-d07f6e2c0f738a26.png",
+          "suiji-reviewed-20261112-chain-02-04-gold-db6ffdc7582ad8cd.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-chain-02-01-silver-c1b3d9e36992e63a.png",
+          "suiji-reviewed-20261112-chain-02-02-silver-da4b296a4cf74cdc.png",
+          "suiji-reviewed-20261112-chain-02-03-silver-59977528bf16f51e.png",
+          "suiji-reviewed-20261112-chain-02-04-silver-1faa6aeba522474d.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-chain-02-01-blue-706c560e50e35579.png",
+          "suiji-reviewed-20261112-chain-02-02-blue-8c03a698c5ce7b0a.png",
+          "suiji-reviewed-20261112-chain-02-03-blue-8e27b143184a564c.png",
+          "suiji-reviewed-20261112-chain-02-04-blue-0f91d5d03e4f2477.png"
+        ]
+      }
+    },
+    "/pages/piece-round-hoops": {
+      "design": "bare-round",
+      "finishes": {
+        "silver": [
+          "suiji-reviewed-20261112-bare-round-01-silver-0b0d8d3516e161b7.png",
+          "suiji-reviewed-20261112-bare-round-02-silver-7910ea7a0e0fceff.png",
+          "suiji-reviewed-20261112-bare-round-03-silver-90bb075d49a854b6.png"
+        ],
+        "gold": [
+          "suiji-reviewed-20261112-bare-round-01-gold-b427ea3fd3ba0f87.png",
+          "suiji-reviewed-20261112-bare-round-02-gold-f571a890f9fecc07.png",
+          "suiji-reviewed-20261112-bare-round-03-gold-66dd7fda53e25740.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-bare-round-01-blue-d317a8178a4ee753.png",
+          "suiji-reviewed-20261112-bare-round-02-blue-c25b65d1709ad36e.png",
+          "suiji-reviewed-20261112-bare-round-03-blue-c29d358aef6050aa.png"
+        ]
+      }
+    },
+    "/pages/piece-round-hoops-with-coin-drop": {
+      "design": "hoop-01",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-hoop-01-01-gold-4adf603bd6cf2ff5.png",
+          "suiji-reviewed-20261112-hoop-01-02-gold-861cbcb7a9cb4e8d.png",
+          "suiji-reviewed-20261112-hoop-01-03-gold-553d0045a1647447.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-hoop-01-01-silver-b39dd5ec4a54c295.png",
+          "suiji-reviewed-20261112-hoop-01-02-silver-2e0efa24eecdba2b.png",
+          "suiji-reviewed-20261112-hoop-01-03-silver-4c087a6089394de6.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-hoop-01-01-blue-cee5590821a47976.png",
+          "suiji-reviewed-20261112-hoop-01-02-blue-59eef016c992e195.png",
+          "suiji-reviewed-20261112-hoop-01-03-blue-9a54ca55e549a3aa.png"
+        ]
+      }
+    },
+    "/pages/piece-round-logo-charm": {
+      "design": "ornament-24",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ornament-24-01-gold-9e22e4f304336a0c.png",
+          "suiji-reviewed-20261112-ornament-24-02-gold-942a62d5a6a80556.png",
+          "suiji-reviewed-20261112-ornament-24-03-gold-68877379b00fa3fd.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ornament-24-01-silver-847962a1af780a84.png",
+          "suiji-reviewed-20261112-ornament-24-02-silver-fd9acb90cfb9afab.png",
+          "suiji-reviewed-20261112-ornament-24-03-silver-3480c65eac5aaf14.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ornament-24-01-blue-9e7531482d0acea1.png",
+          "suiji-reviewed-20261112-ornament-24-02-blue-009089caad9a3cfa.png",
+          "suiji-reviewed-20261112-ornament-24-03-blue-833b6a7dd3300dbb.png"
+        ]
+      }
+    },
+    "/pages/piece-rounded-rectangle-hoops": {
+      "design": "bare-square",
+      "finishes": {
+        "blue": [
+          "suiji-reviewed-20261112-bare-square-01-blue-8bceccae6430d71d.png",
+          "suiji-reviewed-20261112-bare-square-02-blue-ffa026699ddf8a68.png",
+          "suiji-reviewed-20261112-bare-square-03-blue-3038176c1abbe4b5.png"
+        ],
+        "gold": [
+          "suiji-reviewed-20261112-bare-square-01-gold-2e09f476bb5d7870.png",
+          "suiji-reviewed-20261112-bare-square-02-gold-318667d932e2ce07.png",
+          "suiji-reviewed-20261112-bare-square-03-gold-184a7f99df937318.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-bare-square-01-silver-2a359a93077d5d54.png",
+          "suiji-reviewed-20261112-bare-square-02-silver-36e544042f8f5aba.png",
+          "suiji-reviewed-20261112-bare-square-03-silver-561c4050399e9628.png"
+        ]
+      }
+    },
+    "/pages/piece-sagittarius-zodiac-charm": {
+      "design": "ornament-19",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ornament-19-01-gold-a45958649740f89f.png",
+          "suiji-reviewed-20261112-ornament-19-02-gold-679bc7c924d6f506.png",
+          "suiji-reviewed-20261112-ornament-19-03-gold-704a863065a2857f.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ornament-19-01-silver-a1b8796057208af5.png",
+          "suiji-reviewed-20261112-ornament-19-02-silver-62474e7a5158f73c.png",
+          "suiji-reviewed-20261112-ornament-19-03-silver-5b44ac6ec2f34baa.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ornament-19-01-blue-3ab263d33426c523.png",
+          "suiji-reviewed-20261112-ornament-19-02-blue-ad4a518533762c5f.png",
+          "suiji-reviewed-20261112-ornament-19-03-blue-a7ccee1c6a945e82.png"
+        ]
+      }
+    },
+    "/pages/piece-scorpio-zodiac-charm": {
+      "design": "ornament-18",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ornament-18-01-gold-f7d92e616fa6dc71.png",
+          "suiji-reviewed-20261112-ornament-18-02-gold-dd79e17a25b83911.png",
+          "suiji-reviewed-20261112-ornament-18-03-gold-189548c349a8a600.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ornament-18-01-silver-b24088b45e4e3146.png",
+          "suiji-reviewed-20261112-ornament-18-02-silver-051767b2ac7b0e76.png",
+          "suiji-reviewed-20261112-ornament-18-03-silver-522d4115fdf9cab7.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ornament-18-01-blue-90984a2c14d08cb4.png",
+          "suiji-reviewed-20261112-ornament-18-02-blue-a50b766110c7d0db.png",
+          "suiji-reviewed-20261112-ornament-18-03-blue-19ea289177442e2c.png"
+        ]
+      }
+    },
+    "/pages/piece-square-logo-charm": {
+      "design": "ornament-23",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ornament-23-01-gold-2148d0c5141b7775.png",
+          "suiji-reviewed-20261112-ornament-23-02-gold-c5e33cafa9f37458.png",
+          "suiji-reviewed-20261112-ornament-23-03-gold-a1fcc37f30588398.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ornament-23-01-silver-539e5e3db154d242.png",
+          "suiji-reviewed-20261112-ornament-23-02-silver-7cf7e0f11885150f.png",
+          "suiji-reviewed-20261112-ornament-23-03-silver-a94da0ca80a840b5.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ornament-23-01-blue-a7b5cd24f0bb34bc.png",
+          "suiji-reviewed-20261112-ornament-23-02-blue-6c7c1b5ec244a983.png",
+          "suiji-reviewed-20261112-ornament-23-03-blue-fc029c25bf5de3d7.png"
+        ]
+      }
+    },
+    "/pages/piece-stud-with-pearl-effect-back": {
+      "design": "stud-02",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-stud-02-01-gold-1630a29f7206f20a.png",
+          "suiji-reviewed-20261112-stud-02-02-gold-d184c4610dd738bb.png",
+          "suiji-reviewed-20261112-stud-02-03-gold-a8df6b1b5575896a.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-stud-02-01-silver-1cda426475d6e93a.png",
+          "suiji-reviewed-20261112-stud-02-02-silver-9a0075ee24b49afd.png",
+          "suiji-reviewed-20261112-stud-02-03-silver-13a70fb2d7fe6ffb.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-stud-02-01-blue-c6d16a5feead37f9.png",
+          "suiji-reviewed-20261112-stud-02-02-blue-bec08cf93d0a10eb.png",
+          "suiji-reviewed-20261112-stud-02-03-blue-08bda543a063fa41.png"
+        ]
+      }
+    },
+    "/pages/piece-taurus-zodiac-charm": {
+      "design": "ornament-12",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ornament-12-01-gold-a176970bc403fcff.png",
+          "suiji-reviewed-20261112-ornament-12-02-gold-43adec69aea956ed.png",
+          "suiji-reviewed-20261112-ornament-12-03-gold-58f882fb4c261443.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ornament-12-01-silver-7dd219053686377e.png",
+          "suiji-reviewed-20261112-ornament-12-02-silver-8f5b198aff053215.png",
+          "suiji-reviewed-20261112-ornament-12-03-silver-29899fb8e7ca88ba.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ornament-12-01-blue-3e573dbeb76d99b4.png",
+          "suiji-reviewed-20261112-ornament-12-02-blue-4741860af06aadbd.png",
+          "suiji-reviewed-20261112-ornament-12-03-blue-4b2e3f604a7b2a41.png"
+        ]
+      }
+    },
+    "/pages/piece-virgo-zodiac-charm": {
+      "design": "ornament-16",
+      "finishes": {
+        "gold": [
+          "suiji-reviewed-20261112-ornament-16-01-gold-ff282d85f0e88e83.png",
+          "suiji-reviewed-20261112-ornament-16-02-gold-b9bec4e7dd21ba70.png",
+          "suiji-reviewed-20261112-ornament-16-03-gold-33c556906b9dddfc.png"
+        ],
+        "silver": [
+          "suiji-reviewed-20261112-ornament-16-01-silver-008345af22a03946.png",
+          "suiji-reviewed-20261112-ornament-16-02-silver-78cc6ff236465247.png",
+          "suiji-reviewed-20261112-ornament-16-03-silver-b84496d7b334b8e0.png"
+        ],
+        "blue": [
+          "suiji-reviewed-20261112-ornament-16-01-blue-666448f2be87a4b5.png",
+          "suiji-reviewed-20261112-ornament-16-02-blue-275e1468a834c9c8.png",
+          "suiji-reviewed-20261112-ornament-16-03-blue-e9c804e49e88a61d.png"
+        ]
+      }
+    }
+  }
+}
