@@ -548,7 +548,8 @@ dialog.r-filters,
 .r-gift-budget-page .r-intro h1 {
   margin-bottom: 12px;
 }
-.r-gift-budget-page .r-gift-budget--results {
+.r-gift-budget-page .r-gift-budget--results,
+.suiji-gifts .r-gift-budget--results {
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
@@ -556,17 +557,20 @@ dialog.r-filters,
   border: 0;
   padding: 0;
 }
-.r-gift-budget-page .r-gift-budget--results .r-gift-budget__title {
+.r-gift-budget-page .r-gift-budget--results .r-gift-budget__title,
+.suiji-gifts .r-gift-budget--results .r-gift-budget__title {
   margin: 0;
   font: 500 15px/1.65 var(--r-sans);
 }
-.r-gift-budget-page .r-gift-budget--results .r-mega-links {
+.r-gift-budget-page .r-gift-budget--results .r-mega-links,
+.suiji-gifts .r-gift-budget--results .r-mega-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0 18px;
   padding: 0;
 }
-.r-gift-budget-page .r-gift-budget--results .r-link {
+.r-gift-budget-page .r-gift-budget--results .r-link,
+.suiji-gifts .r-gift-budget--results .r-link {
   margin: 0;
 }
 .r-gift-budget-results {
@@ -591,7 +595,238 @@ dialog.r-filters,
   .r-gift-budget-page .r-intro {
     padding-top: 24px;
   }
-  .r-gift-budget-page .r-gift-budget--results .r-gift-budget__title {
+  .r-gift-budget-page .r-gift-budget--results .r-gift-budget__title,
+  .suiji-gifts .r-gift-budget--results .r-gift-budget__title {
     flex-basis: 100%;
   }
+}
+
+/* All public commerce cards share a full silhouette and a single native product link. */
+.suiji-reviewed-card__link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.suiji-reviewed-card .r-card__image,
+.suiji-gifts-menu .suiji-photo-category__visual,
+.suiji-core-choices__image,
+.suiji-core-choices__sample {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: #fff;
+}
+.suiji-reviewed-card .r-card__image {
+  aspect-ratio: 4 / 5;
+}
+.suiji-reviewed-card .r-card__image img,
+.suiji-gifts-menu .suiji-photo-category__visual img,
+.suiji-core-choices .suiji-core-choices__image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: contain;
+  border-radius: 0;
+}
+img.suiji-framed-cover,
+.r-site .r-card__image:hover img.suiji-framed-cover {
+  transform: translate(var(--suiji-x, 0%), var(--suiji-y, 0%)) scale(var(--suiji-scale, 1));
+}
+.suiji-reviewed-card .r-card__meta h3 {
+  margin: 0 0 2px;
+}
+.suiji-reviewed-card .r-card__meta .r-price {
+  margin: 0;
+  font-size: 15px;
+  color: var(--r-ink);
+}
+.suiji-reviewed-card .r-card__state {
+  margin: 2px 0 0;
+}
+.suiji-reviewed-card__link:hover h3,
+.suiji-reviewed-card__link:focus-visible h3 {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.suiji-set-card__images {
+  position: relative;
+}
+.suiji-set-card__images > img.suiji-reviewed-card__worn,
+.suiji-reviewed-card .r-card__image > img.suiji-reviewed-card__worn {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  transform: none;
+  transition: opacity .16s ease;
+}
+.suiji-reviewed-card__link:focus-visible img.suiji-reviewed-card__worn,
+.suiji-set-card__link:focus-visible img.suiji-reviewed-card__worn {
+  opacity: 1;
+}
+@media (hover: hover) and (pointer: fine) {
+  .suiji-reviewed-card__link:hover img.suiji-reviewed-card__worn,
+  .suiji-set-card__link:hover img.suiji-reviewed-card__worn {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .suiji-reviewed-card__worn { transition: none; }
+}
+
+.suiji-photo-categories .suiji-photo-category__visual,
+.suiji-gifts-menu .suiji-photo-category__visual {
+  background: #fff;
+  aspect-ratio: 4 / 5;
+}
+.suiji-photo-categories .suiji-photo-category--text {
+  align-content: center;
+}
+.suiji-core-choices .suiji-core-choices__image {
+  width: clamp(104px, 13vw, 188px);
+  aspect-ratio: 1;
+  margin: 0 auto 9px;
+  border-radius: 50%;
+}
+.suiji-core-choices .suiji-core-choices__image--bases {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  padding: 12%;
+}
+.suiji-core-choices__sample:last-child {
+  grid-column: 1 / -1;
+}
+.suiji-core-choices a .r-caption {
+  font-family: var(--r-sans);
+  font-size: 12px;
+  margin-top: 2px;
+}
+.suiji-gifts-menu {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(108px, 150px);
+  gap: 24px;
+  align-items: start;
+}
+.suiji-gifts-menu .r-mega-links {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+.suiji-gifts-menu .r-link {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+}
+.suiji-gifts-menu__feature {
+  display: grid;
+  gap: 8px;
+  color: inherit;
+}
+.suiji-gifts-menu .suiji-photo-category__visual {
+  aspect-ratio: 4 / 3;
+}
+.r-menu-drawer .suiji-gifts-menu {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 14px;
+}
+.r-menu-drawer .suiji-gifts-menu__feature {
+  grid-column: 1 / -1;
+  width: min(100%, 170px);
+}
+.suiji-reviewed-catalogue .r-intro,
+.suiji-gifts > .r-intro,
+.suiji-storefront-search .r-intro {
+  padding-block: 32px 16px;
+}
+.suiji-reviewed-catalogue .r-intro h1,
+.suiji-gifts > .r-intro h1,
+.suiji-storefront-search .r-intro h1 {
+  margin: 0 0 10px;
+}
+.suiji-catalogue-empty,
+.suiji-gifts__first {
+  padding-top: 18px;
+}
+.suiji-gifts__first > h2 {
+  margin-top: 0;
+}
+.suiji-gifts__first > p {
+  margin: 16px 0 0;
+}
+.suiji-gifts__grid {
+  margin-top: 18px;
+}
+.suiji-gifts__help {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  background: var(--r-ice);
+}
+.suiji-storefront-search__form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.suiji-storefront-search__form input[type="search"] {
+  flex: 1 1 180px;
+  min-height: 48px;
+  font: 400 16px/1.4 var(--r-sans);
+  border: 1px solid var(--r-control, #6b747d);
+  background: #fff;
+  padding: 8px 12px;
+}
+.suiji-storefront-search__guides {
+  margin-top: 28px;
+}
+.suiji-native-pairing > p {
+  margin: 0 0 6px;
+}
+.suiji-native-pairing > .r-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.suiji-set-card__component img[src*="-stud-"] {
+  --suiji-frame-scale: 1.7;
+}
+.suiji-set-card__component img[src*="-bare-"] {
+  --suiji-frame-scale: 1.65;
+}
+.suiji-set-card__component img[src*="-ring-"] {
+  --suiji-frame-scale: 2;
+  --suiji-frame-y: -5%;
+}
+@media (max-width: 749px) {
+  .suiji-reviewed-catalogue .r-intro,
+  .suiji-gifts > .r-intro,
+  .suiji-storefront-search .r-intro {
+    padding-block: 24px 12px;
+  }
+  .suiji-gifts__grid {
+    margin-top: 14px;
+  }
+  .suiji-gifts__help {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.suiji-wearing-caption {
+  position: absolute;
+  z-index: 2;
+  bottom: 8px;
+  left: 8px;
+  margin: 0;
+  padding: 2px 6px;
+  background: #fff;
+  color: var(--r-ink);
+  font: 400 12px/1.6 var(--r-sans);
+  pointer-events: none;
 }

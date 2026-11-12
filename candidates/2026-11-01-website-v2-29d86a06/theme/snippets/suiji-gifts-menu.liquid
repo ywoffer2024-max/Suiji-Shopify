@@ -1,0 +1,18 @@
+{%- assign french = false -%}
+{%- if request.locale.iso_code contains 'fr' -%}{%- assign french = true -%}{%- endif -%}
+<div class="suiji-gifts-menu">
+  <div class="r-mega-links">
+    <a class="r-link" href="{{ routes.root_url | append: '/pages/gifts' | replace: '//', '/' }}">{% if french %}Trouver un cadeau{% else %}Find a gift{% endif %}</a>
+    <a class="r-link" href="{{ routes.root_url | append: '/collections/sets' | replace: '//', '/' }}">{% if french %}Voir les ensembles{% else %}Shop sets{% endif %}</a>
+    <a class="r-link" href="{{ routes.root_url | append: '/pages/gifts#gift-help' | replace: '//', '/' }}">{% if french %}Conseils cadeaux{% else %}Gift help{% endif %}</a>
+  </div>
+  {% render 'suiji-gift-budget-links' %}
+  <a class="suiji-photo-category suiji-gifts-menu__feature" href="{{ routes.root_url | append: '/pages/gifts#first-piece' | replace: '//', '/' }}">
+    <span class="suiji-photo-category__visual" aria-hidden="true">
+      {%- capture cover -%}{% render 'suiji-storefront-cover', handle: 'suiji-h02-hoop' %}{%- endcapture -%}
+      {%- assign cover = cover | split: '|' -%}
+      {% render 'suiji-storefront-cover-image', cover: cover, sizes: '140px' %}
+    </span>
+    <span>{% if french %}Un premier bijou SUIJI{% else %}Their first SUIJI piece{% endif %}</span>
+  </a>
+</div>

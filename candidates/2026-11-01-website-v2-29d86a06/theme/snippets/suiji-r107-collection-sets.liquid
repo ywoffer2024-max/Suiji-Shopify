@@ -21,13 +21,13 @@
     {% for handle in set_handles %}
       {% assign set_product = all_products[handle] %}
       {% assign quote = set_product.metafields.custom.suiji_set_quote.value %}
-      {% if set_product != blank and quote != blank and set_product.media.size > 0 %}
+      {% if set_product.tags contains 'suiji-reviewed-storefront' and set_product.price > 0 and quote != blank and set_product.media.size > 0 %}
         {% assign listed = listed | plus: 1 %}
         {% assign loading = 'lazy' %}
         {% if listed <= 3 %}{% assign loading = 'eager' %}{% endif %}
         <article class="suiji-set-card" data-quote-set="{{ quote.code | escape }}">
           <a class="suiji-set-card__link" href="{{ routes.root_url | append: '/products/' | append: set_product.handle | replace: '//', '/' }}">
-            <figure>
+            <figure class="suiji-set-card__figure">
             {% assign approved_set_photo = false %}
             {% if set_product.featured_media.alt contains ' · Set contents' %}{% assign approved_set_photo = true %}{% endif %}
               <div class="suiji-set-card__images{% if set_product.media.size > 1 and approved_set_photo == false %} suiji-set-card__images--pair{% endif %}">
@@ -35,14 +35,25 @@
                 {% if approved_set_photo %}{% assign card_photo_limit = 1 %}{% endif %}
                 {% for photo in set_product.media limit: card_photo_limit %}
                   <span class="suiji-set-card__component">
+                    {% if photo.preview_image.src contains 'suiji-quote-set-cross-chain-55cm-reference' %}
+                      {%- capture cover -%}{% render 'suiji-storefront-cover', handle: 'suiji-cross-chain' %}{%- endcapture -%}
+                      {%- assign cover = cover | split: '|' -%}
+                      {% render 'suiji-storefront-cover-image', cover: cover, loading: loading, sizes: '(min-width: 990px) 13vw, 45vw' %}
+                    {% else %}
                     {{ photo.preview_image | image_url: width: 680 | image_tag: widths: '250, 360, 480, 680', sizes: '(min-width: 1000px) 20vw, (min-width: 591px) 28vw, 70vw', alt: '', loading: loading, decoding: 'async' }}
+                    {% endif %}
                   </span>
                 {% endfor %}
+                {% assign worn_file = set_product.selected_or_first_available_variant.metafields.custom.suiji_reviewed_worn.value %}
+                {% assign worn = worn_file.preview_image | default: worn_file %}
+                {% if worn != blank %}
+                  {{ worn | image_url: width: 900 | image_tag: widths: '360, 540, 720, 900', sizes: '(min-width: 990px) 25vw, 85vw', alt: '', loading: 'lazy', decoding: 'async', class: 'suiji-reviewed-card__worn' }}
+                {% endif %}
               </div>
               <figcaption class="r-caption">{% if approved_set_photo %}{% if locale == 'fr' %}Ensemble présenté{% else %}Set shown{% endif %}{% else %}{% if locale == 'fr' %}Composants présentés{% else %}Selected components{% endif %}{% endif %}</figcaption>
             </figure>
             <h2 class="suiji-set-card__title">{{ quote.title[locale] | escape }}</h2>
-            <p class="suiji-set-card__price" data-set-price>{{ set_product.price | money_without_trailing_zeros }}</p>
+            <p class="suiji-set-card__price" data-set-price>{{ set_product.price | money_with_currency }}</p>
           </a>
         </article>
       {% endif %}

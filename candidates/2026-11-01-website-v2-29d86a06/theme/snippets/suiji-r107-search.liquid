@@ -1,9 +1,51 @@
-<style>
-  .r-search-result-group .r-search-result-link--photo { display: inline-flex; align-items: center; gap: 12px; }
-  .r-search-result-link--photo img { object-fit: contain; }
-</style>
-{%- if request.locale.iso_code contains 'fr' -%}
-<div class="r-site" data-r107-page data-family="search" data-modules="1,2,3"><header class="r-intro r-intro--small"><p class="r-eyebrow">SUIJI</p><h1>Un bijou. Une réponse.</h1><p>Recherchez un bijou, un ornement, une base ou une question.</p></header><section class="r-section" data-search><form role="search" data-search-form><label class="r-search-label" for="r-search-query">Rechercher sur SUIJI</label><div class="r-search-row"><input id="r-search-query" name="q" type="search" autocomplete="off" enterkeyhint="search" maxlength="160" placeholder="Une bague, un fermoir, une question…"><button class="r-button">Rechercher</button></div></form><p data-search-status role="status"></p><div class="r-tabs"><button data-search-kind="all" aria-pressed="true">Tout</button><button data-search-kind="pieces" aria-pressed="false">Bijoux</button><button data-search-kind="guides" aria-pressed="false">Guides et aide</button><button data-search-kind="design" aria-pressed="false">Exemples de création</button></div><div data-search-results></div></section></div>
-{%- else -%}
-<div class="r-site" data-r107-page data-family="search" data-modules="1,2,3"><header class="r-intro r-intro--small"><p class="r-eyebrow">SUIJI</p><h1>Find a piece. Find an answer.</h1><p>Search pieces, charms, bases or a question.</p></header><section class="r-section" data-search><form role="search" data-search-form><label class="r-search-label" for="r-search-query">Search SUIJI</label><div class="r-search-row"><input id="r-search-query" name="q" type="search" autocomplete="off" enterkeyhint="search" maxlength="160" placeholder="A ring, a clasp, a question…"><button class="r-button">Search</button></div></form><p data-search-status role="status"></p><div class="r-tabs"><button data-search-kind="all" aria-pressed="true">All</button><button data-search-kind="pieces" aria-pressed="false">Pieces</button><button data-search-kind="guides" aria-pressed="false">Guides & help</button><button data-search-kind="design" aria-pressed="false">Design examples</button></div><div data-search-results></div></section></div>
-{%- endif -%}
+{%- assign french = false -%}
+{%- if request.locale.iso_code contains 'fr' -%}{%- assign french = true -%}{%- endif -%}
+<div class="r-site suiji-storefront-search" data-r107-page data-family="search" data-modules="1,2,3">
+  <header class="r-intro r-intro--small">
+    <h1>{% if french %}Rechercher{% else %}Search{% endif %}</h1>
+    <form action="{{ routes.search_url }}" method="get" role="search" class="suiji-storefront-search__form">
+      <label class="visually-hidden" for="SuijiStorefrontSearch">{% if french %}Rechercher un bijou ou un conseil{% else %}Search for jewelry or guidance{% endif %}</label>
+      <input id="SuijiStorefrontSearch" type="search" name="q" value="{{ search.terms | escape }}" placeholder="{% if french %}Bijou, matière ou conseil{% else %}Piece, material or guidance{% endif %}">
+      <input type="hidden" name="type" value="product,article,page">
+      <button class="r-button r-button--line" type="submit">{% if french %}Rechercher{% else %}Search{% endif %}</button>
+    </form>
+  </header>
+  <section class="r-section" aria-label="{% if french %}Résultats{% else %}Search results{% endif %}">
+    {% if search.performed %}
+      {% paginate search.results by 24 %}
+        {%- capture cards -%}
+          {% for item in search.results %}
+            {% if item.object_type == 'product' %}
+              {% render 'suiji-storefront-card', piece: item %}
+            {% endif %}
+          {% endfor %}
+        {%- endcapture -%}
+        {%- capture guidance -%}
+          {% for item in search.results %}
+            {% if item.object_type == 'article' or item.object_type == 'page' %}
+              {% unless item.handle contains 'piece-' %}
+                <li><a class="r-link" href="{{ item.url }}">{{ item.title | escape }}</a></li>
+              {% endunless %}
+            {% endif %}
+          {% endfor %}
+        {%- endcapture -%}
+        {%- assign cards = cards | strip -%}
+        {%- assign guidance = guidance | strip -%}
+        {% if cards != blank %}<div class="r-grid">{{ cards }}</div>{% endif %}
+        {% if guidance != blank %}
+          <div class="suiji-storefront-search__guides">
+            <h2>{% if french %}Guides et aide{% else %}Guides &amp; help{% endif %}</h2>
+            <ul>{{ guidance }}</ul>
+          </div>
+        {% endif %}
+        {% if cards == blank and guidance == blank %}
+          <p>{% if french %}Aucun résultat pour cette recherche.{% else %}No results for this search.{% endif %}</p>
+          <a class="r-link" href="{{ routes.root_url | append: '/collections/all' | replace: '//', '/' }}">{% if french %}Voir tous les bijoux{% else %}Browse all jewelry{% endif %}</a>
+        {% endif %}
+        {% if paginate.pages > 1 %}{% render 'pagination', paginate: paginate %}{% endif %}
+      {% endpaginate %}
+    {% else %}
+      <p>{% if french %}Essayez « bague », « titane » ou « tailles » .{% else %}Try “ring”, “titanium” or “sizing”.{% endif %}</p>
+    {% endif %}
+  </section>
+</div>

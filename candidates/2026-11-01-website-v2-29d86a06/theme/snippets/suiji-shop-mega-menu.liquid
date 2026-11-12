@@ -1,54 +1,30 @@
 {%- doc -%}
-  Image links for the Shop All menu. Native headers render list items, while the editorial header supplies the grid.
-  @param {string} [presentation] - Pass r107 when the caller already provides a grid container.
+  The same verified category covers and destinations for desktop and mobile.
+  @param {string} [presentation] - Use r107 for the shared editorial shell.
 {%- enddoc -%}
 {%- liquid
   assign categories = 'necklaces,earrings,rings,charms,bracelets,extras' | split: ','
-  assign language = request.locale.iso_code | split: '-' | first
+  assign examples = 'suiji-photo-20261109-collar-03,h01-blue-hoop,r01,suiji-photo-20261109-ornament-09,,suiji-photo-20261109-fitting-03' | split: ','
+  assign labels_en = 'Necklaces,Earrings,Rings,Charms,Bracelets & bangles,Accessories' | split: ','
+  assign labels_fr = 'Colliers,Boucles d’oreilles,Bagues,Ornements,Bracelets,Accessoires' | split: ','
+  assign labels = labels_en
+  if request.locale.iso_code contains 'fr'
+    assign labels = labels_fr
+  endif
 -%}
 {%- for category in categories -%}
-  {%- liquid
-    assign asset = ''
-    case category
-      when 'necklaces'
-        assign asset = 'suiji-final2-white-A010-600.webp'
-        assign title_en = 'Necklaces'
-        assign title_fr = 'Colliers'
-      when 'earrings'
-        assign asset = 'suiji-final2-white-A002-600.webp'
-        assign title_en = 'Earrings'
-        assign title_fr = 'Boucles d’oreilles'
-      when 'rings'
-        assign asset = 'suiji-final2-white-A088-600.webp'
-        assign title_en = 'Rings'
-        assign title_fr = 'Bagues'
-      when 'charms'
-        assign asset = 'suiji-final2-white-A038-600.webp'
-        assign title_en = 'Charms'
-        assign title_fr = 'Ornements'
-      when 'bracelets'
-        assign asset = 'suiji-home-bracelet-optimized.webp'
-        assign title_en = 'Bracelets & bangles'
-        assign title_fr = 'Bracelets'
-      when 'extras'
-        assign title_en = 'Accessories'
-        assign title_fr = 'Accessoires'
-    endcase
-    assign title = title_en
-    if language == 'fr'
-      assign title = title_fr
-    endif
-  -%}
-  {%- unless presentation == 'r107' -%}<li class="suiji-mega-menu__group suiji-photo-category-item">{%- endunless -%}
-  <a class="suiji-photo-category suiji-mega-menu__category" data-shop-category="{{ category }}" href="{{ routes.root_url | append: '/collections/' | append: category | replace: '//', '/' }}">
-    <span class="suiji-photo-category__visual" aria-hidden="true">
-      {% if asset != blank %}
-        <img src="{{ asset | asset_url }}" width="600" height="600" loading="lazy" decoding="async" alt="">
-      {% elsif category == 'extras' %}
-        <img src="https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-reviewed-20261112-fitting-03-01-gold-131282aec3bbb0ab.png?width=360" width="360" height="450" loading="lazy" decoding="async" alt="">
-      {% endif %}
-    </span>
-    <span class="suiji-photo-category__title suiji-mega-menu__name">{{ title | escape }}</span>
+  {%- assign example = examples[forloop.index0] -%}
+  {%- assign target = '/collections/' | append: category -%}
+  {%- capture cover -%}{% render 'suiji-storefront-cover', handle: example %}{%- endcapture -%}
+  {%- assign cover = cover | split: '|' -%}
+  {%- if presentation != 'r107' -%}<li class="suiji-mega-menu__group">{%- endif -%}
+  <a class="suiji-photo-category{% if cover[1] == blank %} suiji-photo-category--text{% endif %}" href="{% render 'suiji-localized-menu-url', url: target %}">
+    {% if cover[1] != blank %}
+      <span class="suiji-photo-category__visual" aria-hidden="true">
+        {% render 'suiji-storefront-cover-image', cover: cover %}
+      </span>
+    {% endif %}
+    <span class="suiji-photo-category__title">{{ labels[forloop.index0] | escape }}</span>
   </a>
-  {%- unless presentation == 'r107' -%}</li>{%- endunless -%}
+  {%- if presentation != 'r107' -%}</li>{%- endif -%}
 {%- endfor -%}

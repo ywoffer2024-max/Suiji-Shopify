@@ -1,19 +1,35 @@
 {%- liquid
   assign language = request.locale.iso_code | split: '-' | first
+  assign base_examples = 'h01-blue-hoop,r01,suiji-photo-20261109-collar-03' | split: ','
   assign charm_label = 'Charms'
   assign nav_label = 'Bases and charms'
+  assign base_types = 'Hoops, rings and necklaces'
   if language == 'fr'
     assign charm_label = 'Ornements'
     assign nav_label = 'Bases et ornements'
+    assign base_types = 'Créoles, bagues et colliers'
   endif
 -%}
-<nav class="r-system-circles" aria-label="{{ nav_label }}">
+<nav class="r-system-circles suiji-core-choices" aria-label="{{ nav_label }}">
   <a data-core-system-choice="bases" href="{{ routes.root_url | append: '/pages/bases' | replace: '//', '/' }}">
-    <img src="{{ 'suiji-final2-white-A088-600.webp' | asset_url }}" data-image-slot="system-bases" data-photo-origin="final2-white" width="600" height="600" loading="lazy" decoding="async" alt="">
+    <span class="suiji-core-choices__image suiji-core-choices__image--bases" aria-hidden="true">
+      {% for example in base_examples %}
+        {%- capture cover -%}{% render 'suiji-storefront-cover', handle: example %}{%- endcapture -%}
+        {%- assign cover = cover | split: '|' -%}
+        <span class="suiji-core-choices__sample">
+          {% render 'suiji-storefront-cover-image', cover: cover, sizes: '100px' %}
+        </span>
+      {% endfor %}
+    </span>
     <span>Bases</span>
+    <span class="r-caption">{{ base_types }}</span>
   </a>
   <a data-core-system-choice="charms" href="{{ routes.root_url | append: '/pages/charms' | replace: '//', '/' }}">
-    <img src="{{ 'suiji-final2-white-A038-600.webp' | asset_url }}" data-image-slot="system-charms" data-photo-origin="final2-white" width="600" height="600" loading="lazy" decoding="async" alt="">
+    <span class="suiji-core-choices__image" aria-hidden="true">
+      {%- capture cover -%}{% render 'suiji-storefront-cover', handle: 'suiji-photo-20261109-ornament-09' %}{%- endcapture -%}
+      {%- assign cover = cover | split: '|' -%}
+      {% render 'suiji-storefront-cover-image', cover: cover, sizes: '220px' %}
+    </span>
     <span>{{ charm_label }}</span>
   </a>
 </nav>

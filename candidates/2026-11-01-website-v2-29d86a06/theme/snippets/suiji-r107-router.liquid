@@ -61,21 +61,23 @@
 {% when 'set05-stud-earring-ring-set' %}{% render 'suiji-r107-p-set05-stud-earring-ring-set' %}
 {% when 'set06-hoop-earring-necklace-ring-set' %}{% render 'suiji-r107-p-set06-hoop-earring-necklace-ring-set' %}
 {%- endcase -%}
+{%- elsif request.page_type == 'page' and page.metafields.suiji.studio_piece.value.schema == 'suiji-studio-piece/1' -%}
+{% render 'suiji-r107-studio-piece', piece: page.metafields.suiji.studio_piece.value %}
 {%- elsif request.page_type == 'index' -%}{% render 'suiji-r107-home' %}
 {%- elsif request.page_type == 'collection' -%}
 {% case collection.handle %}
-{% when 'all' %}{% render 'suiji-r107-collection-all' %}
-{% when 'earrings' %}{% render 'suiji-r107-collection-earrings' %}
-{% when 'rings' %}{% render 'suiji-r107-collection-rings' %}
-{% when 'necklaces' %}{% render 'suiji-r107-collection-necklaces' %}
-{% when 'bracelets' %}{% render 'suiji-r107-collection-bracelets' %}
-{% when 'charms' %}{% render 'suiji-r107-collection-charms' %}
-{% when 'extras' %}{% render 'suiji-r107-collection-extras' %}
+{% when 'all' %}{% render 'suiji-shop-all-photo' %}
+{% when 'earrings' %}{% render 'suiji-shop-all-photo', catalogue_family: 'earrings' %}
+{% when 'rings' %}{% render 'suiji-shop-all-photo', catalogue_family: 'rings' %}
+{% when 'necklaces' %}{% render 'suiji-shop-all-photo', catalogue_family: 'necklaces' %}
+{% when 'bracelets' %}{% render 'suiji-shop-all-photo', catalogue_family: 'bracelets' %}
+{% when 'charms' %}{% render 'suiji-shop-all-photo', catalogue_family: 'charms' %}
+{% when 'extras' %}{% render 'suiji-shop-all-photo', catalogue_family: 'extras' %}
 {% when 'sets' %}{% render 'suiji-r107-collection-sets' %}
-{% when 'accessories' %}{% render 'suiji-r107-collection-extras' %}
-{% when 'motifs' %}{% render 'suiji-r107-collection-charms' %}
+{% when 'accessories' %}{% render 'suiji-shop-all-photo', catalogue_family: 'extras' %}
+{% when 'motifs' %}{% render 'suiji-shop-all-photo', catalogue_family: 'charms' %}
 {% when 'the-edits', 'gift-sets', 'gifts' %}{% render 'suiji-r107-collection-sets' %}
-{% when 'core-lock', 'locks-chains' %}{% render 'suiji-r107-collection-all' %}
+{% when 'core-lock', 'locks-chains' %}{% render 'suiji-shop-all-photo' %}
 {% when 'gifts-under-100-eur', 'gifts-under-500-eur', 'gifts-under-1000-eur' %}
   {% assign gift_budget_limit = collection.handle | remove_first: 'gifts-under-' | remove: '-eur' %}
   {% render 'suiji-r107-gift-budget-collection', limit: gift_budget_limit %}

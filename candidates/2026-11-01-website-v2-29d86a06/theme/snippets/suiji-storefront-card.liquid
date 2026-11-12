@@ -1,0 +1,79 @@
+{%- doc -%}
+  A priced card for reviewed native Shopify products.
+  @param {product} piece - The published native product.
+  @param {string} [family] - The card's category, when supplied by its collection.
+  @param {boolean} [priority] - Load images visible on entry without waiting for scroll.
+  @param {boolean} [budget] - Expose the price and product markers for budget results.
+{%- enddoc -%}
+{%- if piece != blank and piece.tags contains 'suiji-reviewed-storefront' -%}
+  {%- capture cover -%}{% render 'suiji-storefront-cover', handle: piece.handle %}{%- endcapture -%}
+  {%- liquid
+    assign cover = cover | split: '|'
+    assign offer = piece.selected_or_first_available_variant
+    assign cover_offer = piece.variants | where: 'sku', cover[0] | first
+    if cover_offer != blank and cover_offer.price > 0
+      if budget == false or budget == nil or cover_offer.price == offer.price
+        assign offer = cover_offer
+      endif
+    endif
+    assign fallback_image = offer.featured_image | default: piece.featured_image
+    assign set_quote = piece.metafields.custom.suiji_set_quote.value
+    if set_quote != blank
+      assign family = 'sets'
+    endif
+    if family == blank
+      for tag in piece.tags
+        assign key = tag | split: ':' | first
+        if key == 'category'
+          assign family = tag | split: ':' | last
+          break
+        endif
+      endfor
+    endif
+    assign locale = request.locale.iso_code | split: '-' | first
+    if locale != 'fr'
+      assign locale = 'en'
+    endif
+    assign info = piece.metafields.custom.suiji_display_copy.value[locale]
+    assign name = set_quote.title[locale] | default: info.title | default: piece.title
+    if piece.handle == 'r01' and name == 'R01'
+      assign name = 'Brushed Ring Base'
+      if locale == 'fr'
+        assign name = 'Bague large brossée'
+      endif
+    endif
+    assign worn_file = offer.metafields.custom.suiji_reviewed_worn.value
+    assign worn = worn_file.preview_image | default: worn_file
+    assign loading = 'lazy'
+    if priority
+      assign loading = 'eager'
+    endif
+    assign href = routes.root_url | append: '/products/' | append: piece.handle | replace: '//', '/'
+    assign href = href | append: '?variant=' | append: offer.id
+  -%}
+  {%- if offer != blank and offer.price > 0 and fallback_image != blank -%}
+    <article class="r-card suiji-reviewed-card" data-piece-card data-suiji-shop-product data-key="{{ piece.handle | escape }}" data-role="{{ family | escape }}" data-category="{{ family | escape }}"{% if budget %} data-gift-budget-product="{{ piece.handle | escape }}"{% endif %}>
+      <a class="suiji-reviewed-card__link" href="{{ href | escape }}">
+        <div class="r-card__image">
+          {% if cover_offer.id == offer.id and cover[1] != blank and cover_offer.price > 0 %}
+            {% render 'suiji-storefront-cover-image', cover: cover, loading: loading, sizes: 'card' %}
+          {% else %}
+            {{ fallback_image | image_url: width: 900 | image_tag: widths: '220, 360, 550, 720, 900', sizes: '(min-width: 990px) 25vw, (min-width: 750px) 33vw, 50vw', alt: '', loading: loading, decoding: 'async' }}
+          {% endif %}
+          {% if worn != blank %}
+            {{ worn | image_url: width: 900 | image_tag: widths: '360, 540, 720, 900', sizes: '(min-width: 990px) 25vw, 48vw', alt: '', loading: 'lazy', decoding: 'async', class: 'suiji-reviewed-card__worn' }}
+          {% endif %}
+        </div>
+        <div class="r-card__meta">
+          <h3>{{ name | escape }}</h3>
+          <p class="r-price" data-card-price{% if budget %} data-gift-budget-price{% endif %}>{{ offer.price | money_with_currency }}</p>
+          {%- if set_quote != blank -%}
+            <p class="r-card__state">{% if locale == 'fr' %}Composants présentés{% else %}Selected components{% endif %}</p>
+          {%- elsif settings.suiji_enable_orders == false or piece.tags contains 'suiji-display-only' -%}
+            <p class="r-card__state">{{ 'suiji_pdp.preview_status' | t }}</p>
+          {%- endif -%}
+        </div>
+      </a>
+    </article>
+  {%- endif -%}
+{%- endif -%}

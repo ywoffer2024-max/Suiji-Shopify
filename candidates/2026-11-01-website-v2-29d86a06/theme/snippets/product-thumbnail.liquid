@@ -45,6 +45,15 @@
     assign mobile_columns = 2
   endif
 
+  assign image_alt = media.alt | default: media.preview_image.alt
+  assign wearing = false
+  if media.alt contains ' · Wearing illustration'
+    assign wearing = true
+    assign locale = request.locale.iso_code | split: '-' | first
+    assign wearing_alt = product.selected_or_first_available_variant.metafields.custom.suiji_reviewed_worn_alt.value[locale]
+    assign image_alt = wearing_alt | default: image_alt
+  endif
+
   if media.media_type == 'image'
     assign image_class = 'image-magnify-' | append: section.settings.image_zoom
   endif
@@ -89,12 +98,18 @@
         | image_url: width: 1946
         | image_tag:
           class: image_class,
+          alt: image_alt,
           loading: image_loading,
           fetchpriority: image_priority,
           sizes: sizes,
           widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
       }}
     </div>
+    {% if wearing %}
+      <p class="suiji-wearing-caption" data-suiji-wearing-illustration>
+        {% if request.locale.iso_code contains 'fr' %}Illustration du porté{% else %}Wearing illustration{% endif %}
+      </p>
+    {% endif %}
     <button
       class="product__media-toggle quick-add-hidden product__media-zoom-{{ section.settings.image_zoom }}"
       type="button"

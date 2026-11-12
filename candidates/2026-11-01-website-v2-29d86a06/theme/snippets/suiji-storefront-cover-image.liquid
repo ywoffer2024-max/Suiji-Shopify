@@ -1,0 +1,27 @@
+{%- comment -%}
+  Displays an approved view using its measured whitespace framing.
+{%- endcomment -%}
+{%- liquid
+  assign file = cover[1]
+  assign loading = loading | default: 'lazy'
+  assign scale = cover[2] | default: 1
+  assign dx = cover[3] | default: 0
+  assign dy = cover[4] | default: 0
+  assign desktop_width = 25 | times: scale | round
+  assign tablet_width = 33 | times: scale | round
+  assign mobile_width = 50 | times: scale | round
+  assign nav_width = 160 | times: scale | round
+  assign nav_phone_width = 42 | times: scale | round
+-%}
+{%- if sizes == 'card' -%}
+  {%- capture sizes -%}(min-width: 990px) {{ desktop_width }}vw, (min-width: 750px) {{ tablet_width }}vw, {{ mobile_width }}vw{%- endcapture -%}
+{%- elsif sizes == blank -%}
+  {%- capture sizes -%}(min-width: 1280px) {{ nav_width }}px, {{ nav_phone_width }}vw{%- endcapture -%}
+{%- endif -%}
+{%- if file contains 'asset:' -%}
+  {%- assign source = file | remove_first: 'asset:' -%}
+  <img src="{{ source | asset_url }}" srcset="{{ 'suiji-final2-white-A076-600.webp' | asset_url }} 600w, {{ source | asset_url }} 1200w" sizes="{{ sizes }}" width="1200" height="1200" alt="" loading="{{ loading }}" decoding="async" class="suiji-framed-cover" style="--suiji-scale:{{ scale }};--suiji-x:{{ dx }}%;--suiji-y:{{ dy }}%">
+{%- elsif file != blank -%}
+  {%- assign source = 'https://cdn.shopify.com/s/files/1/1041/4112/8020/files/' | append: file -%}
+  <img src="{{ source }}?width=720" srcset="{{ source }}?width=360 360w, {{ source }}?width=540 540w, {{ source }}?width=720 720w, {{ source }}?width=1080 1080w, {{ source }}?width=1280 1280w, {{ source }}?width=1600 1600w, {{ source }}?width=2000 2000w" sizes="{{ sizes }}" width="800" height="1000" alt="" loading="{{ loading }}" decoding="async" class="suiji-framed-cover" style="--suiji-scale:{{ scale }};--suiji-x:{{ dx }}%;--suiji-y:{{ dy }}%">
+{%- endif -%}

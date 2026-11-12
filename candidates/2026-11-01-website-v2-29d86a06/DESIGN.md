@@ -1,6 +1,6 @@
-# SUIJI Design System · v6.3.0
+# SUIJI Design System · v6.3.1
 
-Updated 12 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. The implementation lock identifies the Shopify theme source for v6.3.0. Deployment evidence belongs in the release archive.
+Updated 13 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation and product imagery. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
 
 ## 1. Authority and change control
 
@@ -125,13 +125,13 @@ Use the same SUIJI header and footer across home, catalogue, editorial, product,
 
 The shared header uses the existing transparent square mark followed by the SUIJI wordmark in one horizontal home link. Use `theme/assets/suiji-logo-mark-180.png` at **25 × 25 px from 750 px** and **24 × 24 px at 749 px and below**, with a **10 px gap** and vertical center alignment. Give the home link a 44 px minimum touch height and an accessible SUIJI name. The dark mark sits directly on the white header. Reserve the black circular badge for circular avatars.
 
-The Shop All / Tous les bijoux disclosure contains exactly six image links in this order across desktop and mobile in both languages. The links are Necklaces, Earrings, Rings, Charms, Bracelets & bangles, and Accessories. The top-level Sets / Ensembles link opens the set collection directly. Keep a clickable parent link, separately operated disclosure, fine-pointer hover, click, keyboard access, outside-click close, Escape and focus return. Mobile subcategories open into a right-side panel with Back and Close.
+The Shop All / Tous les bijoux disclosure contains six category links in this order across desktop and mobile in both languages. The links are Necklaces, Earrings, Rings, Charms, Bracelets & bangles, and Accessories. Show an approved photograph of a representative item when the category has one. A category awaiting an approved photograph uses its text link in the same slot. Use the same crop and source on desktop and mobile. The top-level Sets / Ensembles link opens the set collection directly. Keep a clickable parent link, separately operated disclosure, fine-pointer hover, click, keyboard access, outside-click close, Escape and focus return. Mobile subcategories open into a right-side panel with Back and Close.
 
 The Core-Lock parent links to its explanation page. Its desktop disclosure and mobile panel use the same two picture links, **Bases / Bases** and **Charms / Ornements**, in that order. The mechanism page reuses those links. The Bases page shows four image-led families for rings, earrings, necklaces and bracelets. Explain where an attachment sits for each family and refer to the exact piece for compatibility and included parts. A temporary wrist-category illustration has a visible bilingual category label and belongs to the guide only.
 
-Gifts / Cadeaux provides a Shop by price / Par budget group in the desktop menu, mobile panel and Gifts page. Use three plain links in ascending order for budgets under €100, €500 and €1,000. Each result uses current positive Shopify prices and a strict upper limit. In a populated result, put the current budget in the page title and show the other budgets and the route back to all gifts as compact utility links near the grid. Use the shared catalogue cards and price formatting.
+Gifts / Cadeaux provides a Shop by price / Par budget group in the desktop menu, mobile panel and Gifts page. Use three plain links in ascending order for budgets under €100, €500 and €1,000. Each result uses current positive Shopify prices and a strict upper limit. In a populated result, put the current budget in the page title and show the other budgets and the route back to all gifts as compact utility links near the grid. Use the shared catalogue cards and price formatting. The Gifts landing page keeps the first product cards immediately below its compact budget links.
 
-The footer order is **Shop → How it works → About SUIJI → Create with us → Client care**, followed by legal/privacy controls. Desktop gap `28px`; intermediate `32px 36px`; mobile `32px 24px`. Headings `14px`, links `13px` desktop / `14px` mobile, minimum link targets `36px` / `44px`. Legal text `12px`. Do not add a sixth catch-all column or repeat account/design-rights links across groups.
+The footer order is **Shop → How it works → About SUIJI → Create with us → Client care**, followed by legal/privacy controls. Desktop gap `28px`; intermediate `32px 36px`; mobile `32px 24px`. Headings `14px`, links `13px` desktop / `14px` mobile, minimum link targets `36px` / `44px`. Legal text `12px`. Keep each group focused on destinations shoppers need. Let secondary story, account and creator links live on their relevant landing pages.
 
 ### Homepage photography
 
@@ -141,8 +141,11 @@ The footer order is **Shop → How it works → About SUIJI → Create with us �
 ### Catalogue cards and set previews
 
 - Use the shared **4:5** white image frame for product cards on desktop and mobile. Keep the whole silhouette inside it and use the same frame proportions across the row.
-- Keep image edges and the leading edges of names and prices aligned across a row. Place the price or preview state just below its own name. Give a longer localized name the space it needs before placing the next card. Keep the name and price visible independently of hover.
+- Keep image edges and the leading edges of names and prices aligned across a row. Place the verified variant price just below its own name and keep the preview or availability note separate. Give a longer localized name the space it needs before placing the next card. Keep the name and price visible independently of hover.
 - Review the actual jewelry silhouette inside the frame at desktop and mobile sizes. Keep the full outline and make the intended detail legible, especially for small charms and accessories shown beside larger pieces. Where the source has excess exterior white margin, use approved display framing for that view. Preserve the original file, zoom source, aspect ratio and any size reference. Apparent size across unrelated card images carries no product dimension claim.
+- A public product card opens the exact native product detail with its shown variant selected. A single activation works on mouse, keyboard and touch. Use the same destination in search, recommendations, gifts, homepage cards and category grids. Products enter these shopping surfaces when their image, native identity and positive Shopify price are confirmed.
+- Keep the approved packshot as the default. When an approved wearing illustration is available for that exact SKU and finish, reveal it on fine-pointer hover or keyboard focus and add it after the packshots in that variant’s gallery. Label the gallery view as a wearing illustration. For a variant awaiting its own approved wearing illustration, keep its packshot on hover and focus.
+- Record the native handle, SKU, approved view and display framing together. Frames trim exterior whitespace and keep the full jewelry silhouette. Responsive image sizes account for the effective display scale, so framing still uses sufficient source resolution. The Core-Lock menu illustrates the base types and shows a separate verified charm example. Withdrawn imagery stays outside public cards, navigation, gallery payloads and recommendations until the replacement is approved.
 - Set previews use the authorized component photos and identify them as selected components. Use the shared desktop column counts. At 590px and below, keep one set per row so that the separate components remain legible. Keep the images, set name and verified price together. The set page lists exact included parts, quantities and supported ways to wear them from the approved set record. A component image represents only the piece it depicts. Use a verified assembled image when showing an assembled set.
 
 ### Product, complete the look and size guide
@@ -176,7 +179,7 @@ Product pages use an image-led two-column layout at 750px and above, with single
 
 A different framing can be approved for a specific image role. The verified 8-Link Collar front role uses a 1.18 display scale, leaving the underlying approved file and zoom unchanged. Keep the complete jewelry silhouette in the initial gallery and preserve visible links and clasps.
 
-**Complete the look** lives in the purchase column, before the detail tabs. A curated pairing has a verified compatibility relationship, approved image and live variant or equivalent preview destination. R01's two current oval examples render side by side. Link to the exact companion choice and use a minimum 44px target. Use a compact scroll rail for longer approved groups. Show prices sourced from the linked variant when applicable.
+**Complete the look** lives in the purchase column, before the detail tabs. Bases link to compatible charms and charms link to compatible bases. Show up to two verified companions with their exact native variant, approved image and Shopify price. Where a compatible product is awaiting publication or price confirmation, link to the matching Core-Lock guide. Use a minimum 44px target.
 
 The mechanism entrance uses two circular image links with a `200px` diameter and `50px` gap on desktop, and up to `140px` diameter with a `26px` gap on mobile. The editorial hero pairs a leading text column with the links at 990px and above, then stacks the links below the introduction. Keep both links inside the content edge at narrow widths. Labels use Newsreader `26px/1.4`, reduced to `24px` on mobile. The introduction names the three parts in order: the base you wear, the clasp that connects, and the charm you choose. One charm can move between bases with the matching connection. State compatibility and contents separately. Keep the established fit guide and operating instructions accessible.
 
@@ -266,7 +269,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
 
 ```json design-lock
 {
-  "version": "6.3.0",
+  "version": "6.3.1",
   "implementation_version": "6.3.0",
   "approved_preview": {
     "sha256": "6e28e3e61d6effec39fd36c7c8777d09bb5e85471d3b7c794ccb75b0277cdc92",
@@ -281,7 +284,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
   },
   "stylesheet": {
     "path": "theme/assets/suiji-r107.css",
-    "sha256": "ce178ca2d69b4f2b5b2fe15dfdf81d6d14cc012527b46ceb944e8042e2689393"
+    "sha256": "00e385b7404f15d826dec3a4d9bf267c0ca5da58a5c368c807c8c0605425a40a"
   },
   "shell": {
     "path": "theme/layout/theme.liquid",
@@ -379,7 +382,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/product-thumbnail.liquid",
-      "sha256": "d0319448aec80d75f4cf4170944f7b4c18005dfde10862abada5a6712165eb1a"
+      "sha256": "36321c60aca29bcdef8ba886b206bb2ce8faa1ff3a093571b69bac5b14671d45"
     },
     {
       "path": "theme/snippets/product-media-gallery.liquid",
@@ -411,11 +414,11 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-r107-header.liquid",
-      "sha256": "69bbfcdc036c2df93e634750525284808958a07928b5808a0d1a7674b754546d"
+      "sha256": "598b433953f8946d70862856ebc3ee39ca46e529c86f3a7ff8e2237152c4bc28"
     },
     {
       "path": "theme/snippets/suiji-r107-home.liquid",
-      "sha256": "02c16e760f0a300a78c70e8257f1b4dae515dab5b88d5a6811c442a1205f5b08"
+      "sha256": "72ed3e78ac101111b39f5e370a122f63a25cb3afdde84f38cfcdecb251cd5ce7"
     },
     {
       "path": "theme/snippets/suiji-r107-wordmark.liquid",
@@ -424,6 +427,50 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     {
       "path": "theme/snippets/suiji-r107-home-hero.liquid",
       "sha256": "bfc2a2708be16612935180b7e466c6800d6a0e72e0cadb085c8af5c969714967"
+    },
+    {
+      "path": "theme/snippets/suiji-storefront-card.liquid",
+      "sha256": "10b40c896e6813d032b035fa4596edf9b8d6e1a5e2ad7ae1432c09f9b61fe36a"
+    },
+    {
+      "path": "theme/snippets/suiji-storefront-cover.liquid",
+      "sha256": "6ccd13ea0843ef0d4b2ba851d2c871c0f207e9c3f5c9f3132e946f85a0f2d5c4"
+    },
+    {
+      "path": "theme/snippets/suiji-storefront-cover-image.liquid",
+      "sha256": "665dcdcfe8e10d2e38e6ce8313608ef93c6e30b706d87f280cc5ae52919a5790"
+    },
+    {
+      "path": "theme/snippets/suiji-shop-all-photo.liquid",
+      "sha256": "cb06f7155dbb0cef1e11085d6702f3adb131c7187a73c0aafc641fba32ebfbe3"
+    },
+    {
+      "path": "theme/snippets/suiji-core-system-links.liquid",
+      "sha256": "af6acaa2f0929d8c2a2366fc0305e1ab6ea2a83cf66903e06516aa606723fe6e"
+    },
+    {
+      "path": "theme/snippets/suiji-shop-mega-menu.liquid",
+      "sha256": "a087e80fdc2447378ac9cb9297fa6d26d2fce0b29572c40d5194ece38aa8b0a2"
+    },
+    {
+      "path": "theme/snippets/suiji-gifts-menu.liquid",
+      "sha256": "1e459bb0559365898c69e5ab140f9e9293d2dcd5db7dc64bc4315b3a7d5113c7"
+    },
+    {
+      "path": "theme/snippets/suiji-r107-gifts.liquid",
+      "sha256": "42f07a1f5dafd3ce62d098eb4ce30ead67a8e66eb94ec16020cd3b91a308c1e9"
+    },
+    {
+      "path": "theme/snippets/suiji-r107-footer.liquid",
+      "sha256": "44b1085d674652c4e39846a627172eb6787f8f1e1618bb5bb50e3dea3a5513c6"
+    },
+    {
+      "path": "theme/snippets/suiji-native-pairing.liquid",
+      "sha256": "398e6ab6c77722e10dab65f192499af9898bf5d62858b65c4e44948da755619f"
+    },
+    {
+      "path": "theme/snippets/suiji-reviewed-variant-media-ids.liquid",
+      "sha256": "336b7fe4839036bf889316d841c01599417fbc90b56936fb016c992a33d7ed86"
     }
   ]
 }

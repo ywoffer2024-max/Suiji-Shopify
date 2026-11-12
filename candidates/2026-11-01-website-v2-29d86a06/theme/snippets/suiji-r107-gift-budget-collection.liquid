@@ -37,44 +37,21 @@
   <section class="r-section r-gift-budget-results" id="gift-budget-products" aria-label="{{ results_label }}">
     <h2 class="visually-hidden">{{ results_label }}</h2>
     {% paginate collection.products by 24 %}
-      {% if collection.products.size == 0 %}
+      {%- capture cards -%}
+        {% for piece in collection.products %}
+          {%- assign priority = false -%}
+          {%- if forloop.index <= 4 -%}{%- assign priority = true -%}{%- endif -%}
+          {% render 'suiji-storefront-card', piece: piece, priority: priority, budget: true %}
+        {% endfor %}
+      {%- endcapture -%}
+      {%- assign cards = cards | strip -%}
+      {% if cards == blank %}
         <p data-gift-budget-empty>{{ empty_label }}</p>
       {% else %}
-        <div class="r-grid">
-          {% for product in collection.products %}
-            {%- liquid
-              assign offer = product.selected_or_first_available_variant
-              assign localized = product.metafields.custom.suiji_display_copy.value[language]
-              assign title = localized.title | default: product.title
-              assign image = offer.featured_image | default: product.featured_image
-              assign path = routes.root_url | append: '/products/' | append: product.handle | replace: '//', '/'
-              if offer.id
-                assign path = path | append: '?variant=' | append: offer.id
-              endif
-              assign display_price = offer.price | default: product.price
-              assign loading = 'lazy'
-              if forloop.index <= 4
-                assign loading = 'eager'
-              endif
-            -%}
-            <article class="r-card" data-gift-budget-product="{{ product.handle | escape }}">
-              <a class="r-gift-budget-card-link" href="{{ path | escape }}">
-                {% if image %}
-                  <div class="r-card__image">
-                    {{ image | image_url: width: 880 | image_tag: widths: '220, 360, 550, 720, 880', sizes: '(min-width: 1280px) 20vw, (min-width: 750px) 30vw, 48vw', alt: '', loading: loading, decoding: 'async' }}
-                  </div>
-                {% endif %}
-                <div class="r-card__meta">
-                  <h3>{{ title | escape }}</h3>
-                  <p class="r-price" data-gift-budget-price>{{ display_price | money_with_currency }}</p>
-                </div>
-              </a>
-            </article>
-          {% endfor %}
-        </div>
-        {% if paginate.pages > 1 %}
-          {% render 'pagination', paginate: paginate, anchor: '#gift-budget-products' %}
-        {% endif %}
+        <div class="r-grid">{{ cards }}</div>
+      {% endif %}
+      {% if paginate.pages > 1 %}
+        {% render 'pagination', paginate: paginate, anchor: '#gift-budget-products' %}
       {% endif %}
     {% endpaginate %}
   </section>
