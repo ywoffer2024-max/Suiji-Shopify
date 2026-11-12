@@ -1,36 +1,47 @@
 {% if collection.handle == 'sets' %}
-{%- assign language = request.locale.iso_code | split: '-' | first -%}
+{%- liquid
+  assign set_handles = 'suiji-rpt-set-01-dual-back-stud,suiji-rpt-set-02-stud-collar-ring,suiji-rpt-set-03-stud-ring,suiji-rpt-set-04-collar-charm,suiji-rpt-set-05-collar-hoop,suiji-rpt-set-06-collar-hoop-ring,suiji-rpt-set-07-chain-hoop,suiji-rpt-set-08-chain-hoop-ring,suiji-rpt-set-09-chain-ring' | split: ','
+  assign locale = request.locale.iso_code | split: '-' | first
+  if locale != 'fr'
+    assign locale = 'en'
+  endif
+-%}
 <div class="r-site suiji-set-listing" data-r107-page data-family="sets">
   <header class="r-intro r-intro--small">
-    {% if language == 'fr' %}
+    {% if locale == 'fr' %}
       <h1>Ensembles</h1>
-      <p>Découvrez les pièces qui composeront les ensembles SUIJI.</p>
+      <p>Découvrez le contenu de chaque ensemble. Les photos présentent une sélection de composants.</p>
     {% else %}
       <h1>Sets</h1>
-      <p>Discover the pieces that will make up the SUIJI sets.</p>
+      <p>See what comes with each set. The photos show selected components.</p>
     {% endif %}
   </header>
-  <div class="suiji-set-grid" data-set-category-preview>
-    <article class="suiji-set-card">
-      <a class="suiji-set-card__link" href="{{ routes.root_url | append: '/pages/piece-9-link-collar' | replace: '//', '/' }}">
-        <span class="suiji-set-card__images"><img src="https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-reviewed-20261112-collar-04-01-gold-f2d2e0b47fa59ae1.png?width=680" width="680" height="850" alt="" decoding="async"></span>
-        <h2 class="suiji-set-card__title">{% if language == 'fr' %}Collier rigide{% else %}Collar{% endif %}</h2>
-      </a>
-    </article>
-    <article class="suiji-set-card">
-      <a class="suiji-set-card__link" href="{{ routes.root_url | append: '/pages/piece-rounded-rectangle-hoops' | replace: '//', '/' }}">
-        <span class="suiji-set-card__images"><img src="https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-reviewed-20261112-bare-square-01-gold-2e09f476bb5d7870.png?width=680" width="680" height="850" alt="" decoding="async"></span>
-        <h2 class="suiji-set-card__title">{% if language == 'fr' %}Créoles carrées{% else %}Square hoops{% endif %}</h2>
-      </a>
-    </article>
-    <article class="suiji-set-card">
-      <a class="suiji-set-card__link" href="{{ routes.root_url | append: '/pages/piece-hammered-wide-ring-with-accent-stone-54-mm' | replace: '//', '/' }}">
-        <span class="suiji-set-card__images"><img src="https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-reviewed-20261112-ring-04-04-gold-ab17ac79dc117fc0.png?width=680" width="680" height="850" alt="" decoding="async"></span>
-        <h2 class="suiji-set-card__title">{% if language == 'fr' %}Base de bague à anneau plein{% else %}Solid-band ring base{% endif %}</h2>
-      </a>
-    </article>
+  {%- assign listed = 0 -%}
+  <div class="suiji-set-grid" data-quote-sets>
+    {% for handle in set_handles %}
+      {% assign set_product = all_products[handle] %}
+      {% assign quote = set_product.metafields.custom.suiji_set_quote.value %}
+      {% if set_product != blank and quote != blank and set_product.media.size > 0 %}
+        {% assign listed = listed | plus: 1 %}
+        {% assign loading = 'lazy' %}
+        {% if listed <= 3 %}{% assign loading = 'eager' %}{% endif %}
+        <article class="suiji-set-card" data-quote-set="{{ quote.code | escape }}">
+          <a class="suiji-set-card__link" href="{{ routes.root_url | append: '/products/' | append: set_product.handle | replace: '//', '/' }}">
+            <div class="suiji-set-card__images{% if set_product.media.size > 1 %} suiji-set-card__images--pair{% endif %}">
+              {% for photo in set_product.media limit: 2 %}
+                {{ photo.preview_image | image_url: width: 680 | image_tag: widths: '250, 360, 480, 680', sizes: '(min-width: 1000px) 20vw, (min-width: 591px) 28vw, 70vw', alt: '', loading: loading, decoding: 'async' }}
+              {% endfor %}
+            </div>
+            <h2 class="suiji-set-card__title">{{ quote.title[locale] | escape }}</h2>
+            <p class="suiji-set-card__price" data-set-price>{{ set_product.price | money_without_trailing_zeros }}</p>
+          </a>
+        </article>
+      {% endif %}
+    {% endfor %}
   </div>
-  <p>{% if language == 'fr' %}Les ensembles et leurs photos sont en préparation.{% else %}The sets and their photography are in preparation.{% endif %}</p>
+  {% if listed == 0 %}
+    <p>{% if locale == 'fr' %}Nos ensembles sont en préparation.{% else %}Our sets are in preparation.{% endif %}</p>
+  {% endif %}
 </div>
 {% else %}
 {% if request.page_type == 'collection' and collection.all_products_count == 0 %}
