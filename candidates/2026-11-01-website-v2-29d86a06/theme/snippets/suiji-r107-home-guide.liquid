@@ -1,0 +1,44 @@
+{%- liquid
+  assign language = request.locale.iso_code | split: '-' | first
+  if language == 'fr'
+    assign title = 'Le détail qui change tout'
+    assign intro = 'Le fermoir Core-Lock relie la base à l’ornement. Pour changer de style, gardez votre base et choisissez un autre ornement compatible.'
+    assign steps = 'Choisissez une base équipée du fermoir|Ajoutez un ornement compatible|Changez d’ornement au gré de vos envies' | split: '|'
+    assign caption = 'Étude de composition : une base de bague et plusieurs ornements'
+    assign photo_alt = 'Base de bague dorée avec fermoir visible et quatre ornements ovales présentés séparément'
+    assign action = 'Voir comment changer un ornement'
+  else
+    assign title = 'The detail that changes the look'
+    assign intro = 'Core-Lock connects the base to the charm. Keep the base you like and choose another compatible charm whenever you want a different look.'
+    assign steps = 'Choose a base fitted with Core-Lock|Add a compatible charm|Swap the charm whenever you like' | split: '|'
+    assign caption = 'Styling study: one ring base and a selection of charms'
+    assign photo_alt = 'Gold-tone ring base with its clasp visible and four oval charms shown separately'
+    assign action = 'See how to change a charm'
+  endif
+-%}
+<section class="r-split r-split--ice suiji-home-guide" id="home-core-lock" aria-labelledby="SuijiHomeCoreTitle">
+  <figure>
+    <img
+      src="{{ 'suiji-final2-white-A116-600.webp' | asset_url }}"
+      srcset="{{ 'suiji-final2-white-A116-600.webp' | asset_url }} 600w, {{ 'suiji-final2-white-A116-1200.webp' | asset_url }} 1200w"
+      sizes="(min-width: 1200px) 480px, (min-width: 750px) 42vw, 90vw"
+      alt="{{ photo_alt | escape }}"
+      width="600"
+      height="600"
+      loading="lazy"
+      decoding="async"
+    >
+    <figcaption>{{ caption | escape }}</figcaption>
+  </figure>
+  <div>
+    <p class="r-eyebrow">Core-Lock</p>
+    <h2 id="SuijiHomeCoreTitle">{{ title | escape }}</h2>
+    <p>{{ intro | escape }}</p>
+    <ol class="suiji-home-guide__steps">
+      {%- for step in steps -%}<li>{{ step | escape }}</li>{%- endfor -%}
+    </ol>
+    <a class="r-link" href="{{ routes.root_url | append: '/pages/the-mechanism#how-it-works' | replace: '//', '/' }}">
+      {{- action | escape -}}<span aria-hidden="true"> ↗</span>
+    </a>
+  </div>
+</section>

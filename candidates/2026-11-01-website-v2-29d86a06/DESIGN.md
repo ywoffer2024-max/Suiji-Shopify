@@ -1,6 +1,6 @@
-# SUIJI Design System · v6.3.3
+# SUIJI Design System · v6.3.5
 
-Updated 13 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery and the homepage featured set. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
+Updated 13 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery, the homepage featured set and delivery information. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
 
 ## 1. Authority and change control
 
@@ -80,7 +80,7 @@ Keep product-image fields visually neutral, including pale silver pieces against
 | Caption (`.r-caption`) | `12px/1.6` | Same |
 | Founder role | `12px/1.5` | Same |
 
-Long paragraphs must not exceed `72ch`; do not justify, line-clamp or shrink them to fit. A caption is not a substitute for body copy. Input/select/textarea text is at least `16px` on mobile. Headings may wrap; desktop navigation labels may not. The existing compact native country select is an explicit `11px` desktop exception and moves into the mobile drawer below 1280px. Do not extend that exception to body copy or other controls.
+Long paragraphs must not exceed `72ch`; do not justify, line-clamp or shrink them to fit. A caption is not a substitute for body copy. Input/select/textarea text is at least `16px` on mobile. Headings may wrap; desktop navigation labels may not.
 
 Reserve display typography for page titles, editorial chapters and the existing product names and prices. Use the utility role for filtering, budgets and sort controls even when the group label is a semantic heading. Give French titles and labels the room to wrap at the same type size, including on cards and buttons.
 
@@ -123,6 +123,8 @@ At `1440 × 900` and `390 × 844`, a populated browse result shows a recognizabl
 
 Use the same SUIJI header and footer across home, catalogue, editorial, product, search, cart and policy routes. Provide Core-Lock & Modular System, Shop All, Sets, Gifts and About SUIJI with the current French labels and working destinations. Keep the shopping bag, search and language switch at consistent entry points. Keep the full Core-Lock label on one line on inline navigation with one underline and one adjacent SVG chevron.
 
+Market and currency selection follow Shopify Markets automatically. The header and mobile drawer keep the English/French language control and omit country or currency controls. Checkout uses the shipping address for the available rates.
+
 The shared header uses the existing transparent square mark followed by the SUIJI wordmark in one horizontal home link. Use `theme/assets/suiji-logo-mark-180.png` at **25 × 25 px from 750 px** and **24 × 24 px at 749 px and below**, with a **10 px gap** and vertical center alignment. Give the home link a 44 px minimum touch height and an accessible SUIJI name. The dark mark sits directly on the white header. Reserve the black circular badge for circular avatars.
 
 The Shop All / Tous les bijoux disclosure contains six category links in this order across desktop and mobile in both languages. The links are Necklaces, Earrings, Rings, Charms, Bracelets & bangles, and Accessories. Show an approved photograph of a representative item when the category has one. A category awaiting an approved photograph uses its text link in the same slot. Use the same crop and source on desktop and mobile. The top-level Sets / Ensembles link opens the set collection directly. Keep a clickable parent link, separately operated disclosure, fine-pointer hover, click, keyboard access, outside-click close, Escape and focus return. Mobile subcategories open into a right-side panel with Back and Close.
@@ -142,6 +144,10 @@ The footer order is **Shop → How it works → About SUIJI → Create with us �
 - Use the shared split layout, with a `4:5` wearing image up to `480px` wide. Stack the image and information at `749px` and below and make the wearing image visible without hover. The caption identifies a base shown on its own. Show the version with a charm attached when an approved view confirms the assembly and wearing scale. Use responsive lazy images with their dimensions reserved.
 - Use the exact localized set name, included parts and current positive Shopify price. The action opens the matching variant. In preview mode, label the reference price. If the required reviewed image, set contents or price is unavailable, show the Core-Lock explanation in the same location.
 
+- The Core-Lock guide follows the featured set and gives shoppers one link to the detailed instructions. Use the existing ice-blue surface and an approved image with a visible caption that identifies a styling study. Reserve the image space and preserve the full composition. The guide stays available when the featured set falls back.
+- Use the approved founder portrait with the founder story and link it to the letter on the About page. Keep the caption next to the image.
+- The home service row links to delivery and returns, the ring size guide, and personal help with sizing or compatibility. Keep service text concise. Shipping claims match active Shopify market rates and the linked policy. Verify the native policy, French translation and both standard rates when changing the free shipping threshold.
+
 ### Catalogue cards and set previews
 
 - Use the shared **4:5** white image frame for product cards on desktop and mobile. Keep the whole silhouette inside it and use the same frame proportions across the row.
@@ -150,7 +156,8 @@ The footer order is **Shop → How it works → About SUIJI → Create with us �
 - On shared commerce cards, use 78% of the measured ring cover scale and centering offsets. The current ring silhouettes occupy about 56% of the image field width. Apply the same framing on desktop and mobile.
 - A public product card opens the exact native product detail with its shown variant selected. A single activation works on mouse, keyboard and touch. Use the same destination in search, recommendations, gifts, homepage cards and category grids. Products enter these shopping surfaces when their image, native identity and positive Shopify price are confirmed.
 - Keep the approved packshot as the default. When an approved wearing illustration is available for that exact SKU and finish, reveal it on fine-pointer hover or keyboard focus and add it after the packshots in that variant’s gallery. Label the gallery view as a wearing illustration. When a styling image includes a separately sold carrier, name the carrier and mark it as sold separately in the localized caption and image description. For a variant awaiting its own approved wearing illustration, keep its packshot on hover and focus.
-- When clothing appears in a wearing image, use a clean matte low square neckline, an open-collar shirt or a simple tailored sleeve as appropriate to the piece. Choose low-saturation colors with enough contrast to show the full jewelry. Keep fabric and hair clear of the clasp, links, settings and ends. Review each image at full size and in the mobile card. Avoid plain grey crew-neck T-shirts, prominent patterns, logos and shiny fabrics.
+- When clothing appears in a wearing image, use a specific editorial wardrobe reference for the neckline, shoulder or cuff construction and fabric drape. Draw on [JENNY BIRD’s Dane Collar](https://jenny-bird.com/products/dane-collar), [Boston Square Ring](https://jenny-bird.com/products/boston-square-ring-gold) and [Marla Aaron’s Set 6 Styling](https://marlaaaron.com/blogs/newsletters/set-6-styling). Prefer the approved SUIJI wardrobe where its actual cut suits the piece. For collars and earrings, use a structured low square neckline, a clean asymmetric shoulder or an ear close-up with hair pulled clear. For long chains, use softly tailored open lapels and a plain layer with enough tonal contrast to read both chain ends. For rings and wrist pieces, use a relaxed hand pose and a clean tailored cuff when a sleeve enters the frame. Use muted colors with clear jewelry separation, believable fabric and refined construction. Avoid generic crew-neck basics, prominent patterns, visible logos and distracting shine.
+- Review both the full-size image and its mobile card. Keep the product’s exact finish, structure and wearing scale and keep fabric and hair clear of the clasp, links, settings and ends. A visibly wrong outfit or a chain lost against clothing requires a new reviewed wearing image. Keep its verified packshot available on the card while the wearing image is being replaced.
 - Record the native handle, SKU, approved view and display framing together. Frames trim exterior whitespace and keep the full jewelry silhouette. Responsive image sizes account for the effective display scale, so framing still uses sufficient source resolution. The Core-Lock menu illustrates the base types and shows a separate verified charm example. Withdrawn imagery stays outside public cards, navigation, gallery payloads and recommendations until the replacement is approved.
 - Set previews use the authorized component photos and identify them as selected components. Use the shared desktop column counts. At 590px and below, keep one set per row so that the separate components remain legible. Keep the images, set name and verified price together. The set page lists exact included parts, quantities and supported ways to wear them from the approved set record. A component image represents only the piece it depicts. Use a verified assembled image when showing an assembled set.
 
@@ -275,8 +282,8 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
 
 ```json design-lock
 {
-  "version": "6.3.3",
-  "implementation_version": "6.3.3",
+  "version": "6.3.5",
+  "implementation_version": "6.3.5",
   "approved_preview": {
     "sha256": "6e28e3e61d6effec39fd36c7c8777d09bb5e85471d3b7c794ccb75b0277cdc92",
     "header_mark": {
@@ -290,7 +297,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
   },
   "stylesheet": {
     "path": "theme/assets/suiji-r107.css",
-    "sha256": "92a09070d290fb62ede757b47d41c7299fb598e4e4ad7f65346253383b341bc0"
+    "sha256": "dbb94f291b19b002c3c543d4661a56ae128c7bbddf0b60fc3f70894eabadc8bb"
   },
   "shell": {
     "path": "theme/layout/theme.liquid",
@@ -420,11 +427,11 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-r107-header.liquid",
-      "sha256": "598b433953f8946d70862856ebc3ee39ca46e529c86f3a7ff8e2237152c4bc28"
+      "sha256": "6cc585a885a4b5423d8c35991e1b5b8dcce6d3e948bf743970a45b74ba3bc91f"
     },
     {
       "path": "theme/snippets/suiji-r107-home.liquid",
-      "sha256": "15eb102b3c9894f915899c565ce5f2d8c915db2bf88d905036ea99c7c376b984"
+      "sha256": "63e820a42ad14f27a455595d12917d97f0a7d95625df5cd73ba992400a627d44"
     },
     {
       "path": "theme/snippets/suiji-r107-wordmark.liquid",
@@ -485,6 +492,18 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     {
       "path": "theme/assets/suiji-mvp.js",
       "sha256": "3ed187e19d4cecb2c50d7d11db79925f174f270df4ac9e16ca76cb33f31a9a57"
+    },
+    {
+      "path": "theme/snippets/suiji-r107-home-care.liquid",
+      "sha256": "cbfeb21e93f87784c96fbe607199bd07f7f7f9a82cf04b95a8021075a6c12bcc"
+    },
+    {
+      "path": "theme/snippets/suiji-r107-home-guide.liquid",
+      "sha256": "23336e1c413dc1b7a4dcfb934b5fdb73b6d8372000b6b091ee0525936017e41a"
+    },
+    {
+      "path": "theme/snippets/suiji-r107-shipping.liquid",
+      "sha256": "76ebf5a9b3296be0d3f03baf16e5befdfc610360b955127192a58f9cfbe7b9f8"
     }
   ]
 }

@@ -1,0 +1,39 @@
+{%- liquid
+  assign language = request.locale.iso_code | split: '-' | first
+  if language == 'fr'
+    assign title = 'Avant de choisir'
+    assign shipping = 'Livraison et retours'
+    assign shipping_copy = 'Livraison standard offerte dès 95 € en France et aux États-Unis.'
+    assign size = 'Guide des tailles de bague'
+    assign size_copy = 'Mesurez votre doigt ou une bague que vous portez déjà.'
+    assign styling = 'Un conseil pour votre choix'
+    assign styling_copy = 'Écrivez-nous pour vérifier une taille ou une association entre une base et un ornement.'
+  else
+    assign title = 'Help choosing your jewelry'
+    assign shipping = 'Shipping & returns'
+    assign shipping_copy = 'Free standard shipping on orders of €95 or more to France and the United States.'
+    assign size = 'Ring size guide'
+    assign size_copy = 'Measure your finger or a ring you already wear.'
+    assign styling = 'Ask us for advice'
+    assign styling_copy = 'Ask us about sizing or whether a charm fits the base you have in mind.'
+  endif
+-%}
+<section class="r-section suiji-home-care" aria-labelledby="SuijiHomeCareTitle">
+  <div class="r-section__heading">
+    <h2 id="SuijiHomeCareTitle">{{ title | escape }}</h2>
+  </div>
+  <ul class="r-core-parts" role="list">
+    <li>
+      <a class="r-link" href="{{ routes.root_url | append: '/pages/shipping-returns#delivery' | replace: '//', '/' }}">{{ shipping | escape }}</a>
+      <p>{{ shipping_copy | escape }}</p>
+    </li>
+    <li>
+      <a class="r-link" href="{{ routes.root_url | append: '/pages/bases#size-guide' | replace: '//', '/' }}">{{ size | escape }}</a>
+      <p>{{ size_copy | escape }}</p>
+    </li>
+    <li>
+      <a class="r-link" href="{{ routes.root_url | append: '/pages/contact' | replace: '//', '/' }}">{{ styling | escape }}</a>
+      <p>{{ styling_copy | escape }}</p>
+    </li>
+  </ul>
+</section>

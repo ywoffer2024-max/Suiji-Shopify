@@ -901,3 +901,53 @@ img.suiji-framed-cover,
     gap: 12px;
   }
 }
+
+.suiji-home-guide.r-split > figure,
+.suiji-home-founder.r-split > figure {
+  width: 100%;
+  max-width: 480px;
+  margin: 0;
+  justify-self: center;
+}
+.suiji-home-guide.r-split > figure img,
+.suiji-home-founder.r-split > figure img {
+  display: block;
+  height: auto;
+}
+.suiji-home-founder.r-split > figure {
+  max-width: 340px;
+}
+.suiji-home-guide__steps {
+  margin: 16px 0;
+  padding-inline-start: 24px;
+}
+.suiji-home-guide__steps li + li {
+  margin-top: 8px;
+}
+.suiji-home-care .r-core-parts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.suiji-home-care li {
+  min-width: 0;
+}
+.suiji-home-care li p {
+  margin: 4px 0 0;
+  max-width: 36ch;
+}
+.suiji-home-guide .r-link,
+.suiji-home-care .r-link {
+  color: var(--r-accent);
+  min-height: var(--r-touch-target);
+}
+#home-core-lock,
+#delivery {
+  scroll-margin-top: 110px;
+}
+@media (max-width: 749px) {
+  .suiji-home-care .r-core-parts {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+}
