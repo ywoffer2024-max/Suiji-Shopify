@@ -7,6 +7,12 @@
   assign scale = cover[2] | default: 1
   assign dx = cover[3] | default: 0
   assign dy = cover[4] | default: 0
+  if sizes == 'card' and family == 'rings'
+    assign ring_scale = 0.78
+    assign scale = scale | times: ring_scale | round: 3
+    assign dx = dx | times: ring_scale | round: 2
+    assign dy = dy | times: ring_scale | round: 2
+  endif
   assign desktop_width = 25 | times: scale | round
   assign tablet_width = 33 | times: scale | round
   assign mobile_width = 50 | times: scale | round

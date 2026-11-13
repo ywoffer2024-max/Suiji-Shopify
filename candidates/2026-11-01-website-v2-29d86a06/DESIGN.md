@@ -1,4 +1,4 @@
-# SUIJI Design System · v6.3.1
+# SUIJI Design System · v6.3.2
 
 Updated 13 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation and product imagery. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
 
@@ -143,6 +143,7 @@ The footer order is **Shop → How it works → About SUIJI → Create with us �
 - Use the shared **4:5** white image frame for product cards on desktop and mobile. Keep the whole silhouette inside it and use the same frame proportions across the row.
 - Keep image edges and the leading edges of names and prices aligned across a row. Place the verified variant price just below its own name and keep the preview or availability note separate. Give a longer localized name the space it needs before placing the next card. Keep the name and price visible independently of hover.
 - Review the actual jewelry silhouette inside the frame at desktop and mobile sizes. Keep the full outline and make the intended detail legible, especially for small charms and accessories shown beside larger pieces. Where the source has excess exterior white margin, use approved display framing for that view. Preserve the original file, zoom source, aspect ratio and any size reference. Apparent size across unrelated card images carries no product dimension claim.
+- On shared commerce cards, use 78% of the measured ring cover scale and centering offsets. The current ring silhouettes occupy about 56% of the image field width. Apply the same framing on desktop and mobile.
 - A public product card opens the exact native product detail with its shown variant selected. A single activation works on mouse, keyboard and touch. Use the same destination in search, recommendations, gifts, homepage cards and category grids. Products enter these shopping surfaces when their image, native identity and positive Shopify price are confirmed.
 - Keep the approved packshot as the default. When an approved wearing illustration is available for that exact SKU and finish, reveal it on fine-pointer hover or keyboard focus and add it after the packshots in that variant’s gallery. Label the gallery view as a wearing illustration. For a variant awaiting its own approved wearing illustration, keep its packshot on hover and focus.
 - Record the native handle, SKU, approved view and display framing together. Frames trim exterior whitespace and keep the full jewelry silhouette. Responsive image sizes account for the effective display scale, so framing still uses sufficient source resolution. The Core-Lock menu illustrates the base types and shows a separate verified charm example. Withdrawn imagery stays outside public cards, navigation, gallery payloads and recommendations until the replacement is approved.
@@ -269,8 +270,8 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
 
 ```json design-lock
 {
-  "version": "6.3.1",
-  "implementation_version": "6.3.0",
+  "version": "6.3.2",
+  "implementation_version": "6.3.2",
   "approved_preview": {
     "sha256": "6e28e3e61d6effec39fd36c7c8777d09bb5e85471d3b7c794ccb75b0277cdc92",
     "header_mark": {
@@ -430,7 +431,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-storefront-card.liquid",
-      "sha256": "10b40c896e6813d032b035fa4596edf9b8d6e1a5e2ad7ae1432c09f9b61fe36a"
+      "sha256": "fd738f54d98393f2689d9dd1ee33a2af7da178e0fec97ba5ad93f603f1a3f9cb"
     },
     {
       "path": "theme/snippets/suiji-storefront-cover.liquid",
@@ -438,7 +439,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-storefront-cover-image.liquid",
-      "sha256": "665dcdcfe8e10d2e38e6ce8313608ef93c6e30b706d87f280cc5ae52919a5790"
+      "sha256": "58144180bf8485160dad50ef4311e48fffd460b974c8ee649be229e40df6098f"
     },
     {
       "path": "theme/snippets/suiji-shop-all-photo.liquid",

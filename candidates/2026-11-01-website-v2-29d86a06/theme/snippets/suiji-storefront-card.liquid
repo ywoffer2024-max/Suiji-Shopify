@@ -56,7 +56,7 @@
       <a class="suiji-reviewed-card__link" href="{{ href | escape }}">
         <div class="r-card__image">
           {% if cover_offer.id == offer.id and cover[1] != blank and cover_offer.price > 0 %}
-            {% render 'suiji-storefront-cover-image', cover: cover, loading: loading, sizes: 'card' %}
+            {% render 'suiji-storefront-cover-image', cover: cover, loading: loading, sizes: 'card', family: family %}
           {% else %}
             {{ fallback_image | image_url: width: 900 | image_tag: widths: '220, 360, 550, 720, 900', sizes: '(min-width: 990px) 25vw, (min-width: 750px) 33vw, 50vw', alt: '', loading: loading, decoding: 'async' }}
           {% endif %}
