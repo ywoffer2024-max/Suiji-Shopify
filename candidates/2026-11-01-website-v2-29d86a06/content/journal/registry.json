@@ -660,7 +660,7 @@
     "image": "",
     "body_path": "content/journal/en/ring-stacking-size.html",
     "published_datetime": "2026-11-13T18:00:48Z",
-    "body_sha256": "3c649e734989767dd02fd6d7627ed1440ebc82c488b65acc1895452da10f266f"
+    "body_sha256": "3448d53c305fbbc7fc52b43b238bd037ae106c55d99c9576c376bea28b349804"
   },
   {
     "id": "guide-ring-stacking-size",
@@ -673,7 +673,7 @@
     "image": "",
     "body_path": "content/journal/fr/ring-stacking-size.html",
     "published_datetime": "2026-11-13T18:00:48Z",
-    "body_sha256": "1a55d1de1e2eb3e1662ed2c3ad13437729c855865a6d96009db5db0a344e3ec0"
+    "body_sha256": "891d5dfa764e03b369e5748a6a520198ea2c6077fb8eb274e84d4c697feaced3"
   },
   {
     "id": "guide-fasten-bracelet-one-handed",
