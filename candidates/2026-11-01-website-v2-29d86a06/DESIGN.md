@@ -472,7 +472,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-reviewed-variant-media-ids.liquid",
-      "sha256": "0b42e8abe3974b63bfbb43c35e1e626f1a4a87bd5b5ce042ce75aebde0faa9fd"
+      "sha256": "7572e3adcdceaac5fae37d9059006646f5c06ef9be974f2f00b2289dc025c1ac"
     }
   ]
 }
