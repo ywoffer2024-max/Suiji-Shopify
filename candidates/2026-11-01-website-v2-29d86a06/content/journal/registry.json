@@ -9,7 +9,7 @@
     "meta_html": "<p class=\"sj-byline\">Rowan · <time datetime=\"2026-10-31T07:33:49Z\">October 31, 2026</time></p>",
     "image": "",
     "body_path": "content/journal/en/earrings-headphones.html",
-    "body_sha256": "74a66a5f5e8fe96a742813b532a2cee87d2f08fc2a37055164417f2b5112f3a0",
+    "body_sha256": "0c60946449d81f9c8cd7cc71b2b89e2d1838ad30011fecedb1af34d5f13f72cc",
     "published_datetime": "2026-10-31T07:33:49Z"
   },
   {
@@ -22,7 +22,7 @@
     "meta_html": "<p class=\"sj-byline\">Rowan · <time datetime=\"2026-10-31T07:33:49Z\">31 octobre 2026</time></p>",
     "image": "",
     "body_path": "content/journal/fr/earrings-headphones.html",
-    "body_sha256": "8b8b4a8d887033475d5c9b8f7796d2cc54af7f3c757947059b6f435db75e6b82",
+    "body_sha256": "deb083d62361616f38e6c0d9b58ac0ef9e88ea880a7ab9a1f208766daca3960b",
     "published_datetime": "2026-10-31T07:33:49Z"
   },
   {
@@ -191,7 +191,7 @@
     "meta_html": "<p class=\"sj-byline\">Rowan · <time datetime=\"2026-10-31T07:33:49Z\">October 31, 2026</time></p>",
     "image": "",
     "body_path": "content/journal/en/necklace-bracelet-conversion.html",
-    "body_sha256": "6a9aaf899b021ede540e7004bc00efd5a4af29d878631b3174b2365d42b3543b",
+    "body_sha256": "6c8166a2df60e7d0a8d4bdf831f70661eb268fb25dc65d54c87c8661efe9641e",
     "published_datetime": "2026-10-31T07:33:49Z"
   },
   {
@@ -204,7 +204,7 @@
     "meta_html": "<p class=\"sj-byline\">Rowan · <time datetime=\"2026-10-31T07:33:49Z\">31 octobre 2026</time></p>",
     "image": "",
     "body_path": "content/journal/fr/necklace-bracelet-conversion.html",
-    "body_sha256": "031f8727abe874cec6167aa9c2d7087db01891a2cd53ae5af0eac8aa3d7ee49d",
+    "body_sha256": "78fda4afb7cbe9b28c29b19e8e551e7bd415f3f24d70056249d71fadc0d04f1a",
     "published_datetime": "2026-10-31T07:33:49Z"
   },
   {
@@ -373,7 +373,7 @@
     "meta_html": "<p class=\"sj-byline\">Rowan · <time datetime=\"2026-10-31T07:33:48Z\">October 31, 2026</time></p>",
     "image": "",
     "body_path": "content/journal/en/choosing-jewelry-gift.html",
-    "body_sha256": "4e3cdaf883a1949136fbfd39e05feada55470587917ad82b6edf78e43d5e48c6",
+    "body_sha256": "e9560442c22488a4e5b61f181bfa1fe6677b88fc014a2148f2054c43a6b74b3a",
     "published_datetime": "2026-10-31T07:33:48Z"
   },
   {
@@ -386,7 +386,7 @@
     "meta_html": "<p class=\"sj-byline\">Rowan · <time datetime=\"2026-10-31T07:33:48Z\">31 octobre 2026</time></p>",
     "image": "",
     "body_path": "content/journal/fr/choosing-jewelry-gift.html",
-    "body_sha256": "31967ca9eeedb455181f6c0ecdb53199cc00cad00f932887788376c75c5d3b2c",
+    "body_sha256": "e3e1cbf28360624d29358535d463c821e6afa4482d103526039c51683f549d58",
     "published_datetime": "2026-10-31T07:33:48Z"
   },
   {
@@ -451,7 +451,7 @@
     "meta_html": "<p class=\"sj-byline\">Rowan · <time datetime=\"2026-10-31T07:33:48Z\">October 31, 2026</time></p>",
     "image": "",
     "body_path": "content/journal/en/review-jewelry-cad.html",
-    "body_sha256": "1ef3858240b9c8aed382d2e69717f3b83b86e9841d30aa39be2b8124c03afe82",
+    "body_sha256": "4c12b2cef83a73564a938221ce5a2c2473e64ec011e8d6c011bae7bce3d63a69",
     "published_datetime": "2026-10-31T07:33:48Z"
   },
   {
@@ -464,7 +464,7 @@
     "meta_html": "<p class=\"sj-byline\">Rowan · <time datetime=\"2026-10-31T07:33:48Z\">31 octobre 2026</time></p>",
     "image": "",
     "body_path": "content/journal/fr/review-jewelry-cad.html",
-    "body_sha256": "850ef1f1c7f1870b667e2675fa61a3b98b3d534c4607aa97211461bf11d7e7c4",
+    "body_sha256": "8cabb1b28b43172a7fe95ac27b483e2f624f8e2551b2b105532a0cee3d2f0b0d",
     "published_datetime": "2026-10-31T07:33:48Z"
   },
   {
@@ -607,7 +607,7 @@
     "meta_html": "<p class=\"sj-byline\">Rowan · <time datetime=\"2026-09-09T16:43:48Z\">September 9, 2026</time></p>",
     "image": "",
     "body_path": "content/journal/en/eviter-perdre-boucle-oreille.html",
-    "body_sha256": "7e1eeb66b811cc5c35e691e30b779fa576f412e713bbf9fb7774bf15732c030e",
+    "body_sha256": "8ba9c031d40f765d14c85afcec2e10d500b773ba0dda5aa1b48024c573cccccc",
     "published_datetime": "2026-09-09T16:43:48Z"
   },
   {
@@ -620,7 +620,7 @@
     "meta_html": "<p class=\"sj-byline\">Rowan · <time datetime=\"2026-09-09T16:43:48Z\">9 septembre 2026</time></p>",
     "image": "",
     "body_path": "content/journal/fr/eviter-perdre-boucle-oreille.html",
-    "body_sha256": "b7761a3ceff4e0444de4537495cafc529d1e26cfc8a744f8442503437a37c5ab",
+    "body_sha256": "aa17ed6eee45719e78f77fae8c7db58c77ec3e4a3123a4290c98009084d53e10",
     "published_datetime": "2026-09-09T16:43:48Z"
   },
   {
@@ -648,5 +648,57 @@
     "body_path": "content/journal/fr/lire-composition-boucle-oreille.html",
     "body_sha256": "afedd4f423cf73048a7e6f3cdb920ce949df401fca2f598f37eed7cfd857fb7c",
     "published_datetime": "2026-09-09T16:44:40Z"
+  },
+  {
+    "id": "guide-ring-stacking-size",
+    "locale": "en",
+    "handle": "ring-stacking-size",
+    "url": "/en/blogs/journal/ring-stacking-size",
+    "title": "How do you choose the right size for stacking rings?",
+    "deck": "A ring can fit alone and feel tight in a stack. Check combined width, ring order and knuckle fit before deciding whether to size up.",
+    "meta_html": "<p class=\"sj-byline\">Rowan · <time datetime=\"2026-11-13T18:00:48Z\">November 13, 2026</time></p>",
+    "image": "",
+    "body_path": "content/journal/en/ring-stacking-size.html",
+    "published_datetime": "2026-11-13T18:00:48Z",
+    "body_sha256": "3c649e734989767dd02fd6d7627ed1440ebc82c488b65acc1895452da10f266f"
+  },
+  {
+    "id": "guide-ring-stacking-size",
+    "locale": "fr",
+    "handle": "ring-stacking-size",
+    "url": "/blogs/journal/ring-stacking-size",
+    "title": "Quelle taille choisir quand on superpose plusieurs bagues ?",
+    "deck": "Votre bague vous va seule, mais serre avec deux anneaux ? Testez la largeur cumulée, l’ordre et le passage de l’articulation avant de choisir une taille.",
+    "meta_html": "<p class=\"sj-byline\">Rowan · <time datetime=\"2026-11-13T18:00:48Z\">13 novembre 2026</time></p>",
+    "image": "",
+    "body_path": "content/journal/fr/ring-stacking-size.html",
+    "published_datetime": "2026-11-13T18:00:48Z",
+    "body_sha256": "1a55d1de1e2eb3e1662ed2c3ad13437729c855865a6d96009db5db0a344e3ec0"
+  },
+  {
+    "id": "guide-fasten-bracelet-one-handed",
+    "locale": "en",
+    "handle": "fasten-bracelet-one-handed",
+    "url": "/en/blogs/journal/fasten-bracelet-one-handed",
+    "title": "How do you put on a bracelet by yourself when the clasp keeps slipping?",
+    "deck": "A bracelet can fit once closed and still be hard to fasten. Check the receiving ring, the clasp lever and the room your thumb needs.",
+    "meta_html": "<p class=\"sj-byline\">Rowan · <time datetime=\"2026-11-13T18:00:54Z\">November 13, 2026</time></p>",
+    "image": "",
+    "body_path": "content/journal/en/fasten-bracelet-one-handed.html",
+    "published_datetime": "2026-11-13T18:00:54Z",
+    "body_sha256": "1e3c118bdd94524a80a474f3805f62091c90dc00f285461bdb8ae7a63977b9fa"
+  },
+  {
+    "id": "guide-fasten-bracelet-one-handed",
+    "locale": "fr",
+    "handle": "fasten-bracelet-one-handed",
+    "url": "/blogs/journal/fasten-bracelet-one-handed",
+    "title": "Comment attacher un bracelet seule quand le fermoir vous échappe ?",
+    "deck": "Le bracelet vous va une fois fermé, mais vous n’arrivez pas à l’attacher ? Repérez si le souci vient de l’anneau, du levier ou de la longueur.",
+    "meta_html": "<p class=\"sj-byline\">Rowan · <time datetime=\"2026-11-13T18:00:54Z\">13 novembre 2026</time></p>",
+    "image": "",
+    "body_path": "content/journal/fr/fasten-bracelet-one-handed.html",
+    "published_datetime": "2026-11-13T18:00:54Z",
+    "body_sha256": "b8227997ee758e01b9308d396d34e9da26a27203a2dbbc950f491836fd54889f"
   }
 ]
