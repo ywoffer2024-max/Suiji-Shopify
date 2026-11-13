@@ -1,6 +1,6 @@
-# SUIJI Design System · v6.3.6
+# SUIJI Design System · v6.3.7
 
-Updated 13 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery, the homepage featured set, delivery information and the cart shipping message. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
+Updated 14 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery, the homepage featured set, delivery information and the cart shipping message. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
 
 ## 1. Authority and change control
 
@@ -142,10 +142,11 @@ The footer order is **Shop → How it works → About SUIJI → Create with us �
 - Lead with one editorial image group. The desktop composition pairs an approved view of jewelry assembled and separated with an approved Core-Lock or material close-up. On mobile, show the lead composition at a size that preserves each component's silhouette. Keep the current image source and its component labels accurate when artwork changes.
 - Follow the images with a short headline, a concise description and one primary collection link. The headline and link are visible at `1440 × 900` and `1280 × 720` in both languages. Keep assembly, compatibility and included pieces clear in the Core-Lock explanation below.
 
-- Use one featured set in the homepage wearing section. Pair a reviewed wearing image with the white-background view of its actual set contents. Put the warmth in skin, lighting and approved low-saturation clothing. Use the paper surface for the section and the existing deep-blue link for its single action.
+- Use one featured set in the homepage wearing section. Pair a reviewed wearing image with the white-background view of its actual set contents. Put the warmth in skin, lighting and approved low-saturation clothing. Use the paper surface and deep-blue link treatment. The wearing image and its visible text link open the exact photographed base variant as one target. The set image and its visible text link open the exact set variant as a second target.
 - Use the shared split layout, with a `4:5` wearing image up to `480px` wide. Stack the image and information at `749px` and below and make the wearing image visible without hover. The caption identifies a base shown on its own. Show the version with a charm attached when an approved view confirms the assembly and wearing scale. Use responsive lazy images with their dimensions reserved.
-- Use the exact localized set name, included parts and current positive Shopify price. The action opens the matching variant. In preview mode, label the reference price. If the required reviewed image, set contents or price is unavailable, show the Core-Lock explanation in the same location.
+- Use the exact localized set name, included parts and current positive Shopify price. Give both links a visible focus ring and at least a 44px target. In preview mode, label the reference price. If the required reviewed image, set contents or price is unavailable, show the Core-Lock explanation in the same location.
 
+- Add Sets / Ensembles after the four existing links in the homepage category rail. Use a reviewed whole-set image with all components visible and link to the localized Sets collection. Keep the rail horizontally scrollable on phones.
 - The Core-Lock guide follows the featured set and gives shoppers one link to the detailed instructions. Use the existing ice-blue surface and an approved image with a visible caption that identifies a styling study. Reserve the image space and preserve the full composition. The guide stays available when the featured set falls back.
 - Use the approved founder portrait with the founder story and link it to the letter on the About page. Keep the caption next to the image.
 - The home service row links to delivery and returns, the ring size guide, and personal help with sizing or compatibility. Keep service text concise. Shipping claims match active Shopify market rates and the linked policy. Verify the native policy, French translation and both standard rates when changing the free shipping threshold.
@@ -286,8 +287,8 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
 
 ```json design-lock
 {
-  "version": "6.3.6",
-  "implementation_version": "6.3.6",
+  "version": "6.3.7",
+  "implementation_version": "6.3.7",
   "approved_preview": {
     "sha256": "6e28e3e61d6effec39fd36c7c8777d09bb5e85471d3b7c794ccb75b0277cdc92",
     "header_mark": {
@@ -301,7 +302,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
   },
   "stylesheet": {
     "path": "theme/assets/suiji-r107.css",
-    "sha256": "a5338fb07c852f3f62f02818ccd5065b78bbcbcfc2672b5c889f431a924f74b6"
+    "sha256": "03137002bcb916c4d63177100a736c48e5c5f93b169f1fb7a8078277f23383ed"
   },
   "shell": {
     "path": "theme/layout/theme.liquid",
@@ -435,7 +436,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-r107-home.liquid",
-      "sha256": "63e820a42ad14f27a455595d12917d97f0a7d95625df5cd73ba992400a627d44"
+      "sha256": "129dc261f533b92c4d00c01c859e18792a24640f9052424b58fa0b742a523ecf"
     },
     {
       "path": "theme/snippets/suiji-r107-wordmark.liquid",
@@ -491,7 +492,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-r107-home-look.liquid",
-      "sha256": "0f420e3e761cb5a7959f53977a2f94054a1503fbbf0e52afa9a37a2a95fb4b64"
+      "sha256": "60cd4888d47dc04bec2bebd3873596391168a9b148d4eba7188415cc3937093d"
     },
     {
       "path": "theme/assets/suiji-mvp.js",

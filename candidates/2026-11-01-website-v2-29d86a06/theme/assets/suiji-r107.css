@@ -836,13 +836,19 @@ img.suiji-framed-cover,
   align-items: start;
   background: #fff;
 }
-.suiji-home-look.r-split > figure {
+.suiji-home-look__collar,
+.suiji-home-look__set {
+  display: block;
+}
+.suiji-home-look__collar {
   width: 100%;
   max-width: 480px;
   justify-self: center;
+}
+.suiji-home-look__collar figure {
   margin: 0;
 }
-.suiji-home-look.r-split > figure img,
+.suiji-home-look__collar img,
 .suiji-home-look__contents img {
   display: block;
   width: 100%;
@@ -891,6 +897,11 @@ img.suiji-framed-cover,
   color: var(--r-accent);
   min-height: var(--r-touch-target);
   margin: 8px 0 0;
+}
+.suiji-home-look a:focus-visible,
+.r-category-rail > a[data-suiji-home-sets]:focus-visible {
+  outline: 2px solid var(--r-accent);
+  outline-offset: 4px;
 }
 @media (max-width: 749px) {
   .suiji-home-look.r-split {

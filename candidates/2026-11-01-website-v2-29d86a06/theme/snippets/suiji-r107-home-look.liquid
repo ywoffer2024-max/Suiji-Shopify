@@ -1,5 +1,5 @@
 {%- doc -%}
-  Features one reviewed set with a wearing illustration and a view of the included pieces.
+  Links a reviewed wearing illustration to its collar and the included pieces to their set.
 {%- enddoc -%}
 {%- liquid
   assign featured_set = all_products['suiji-rpt-set-04-collar-charm']
@@ -12,7 +12,7 @@
   assign quote = featured_set.metafields.custom.suiji_set_quote.value
   assign set_variant = featured_set.variants | where: 'sku', 'RPT-SET-04' | first
 -%}
-{%- if featured_set.tags contains 'suiji-reviewed-storefront' and set_variant.price > 0 and quote.code == set_variant.sku and worn_image != blank and components_image != blank -%}
+{%- if featured_set.tags contains 'suiji-reviewed-storefront' and set_variant.price > 0 and quote.code == set_variant.sku and collar.tags contains 'suiji-reviewed-storefront' and collar_variant.price > 0 and worn_image != blank and components_image != blank -%}
   {%- liquid
     assign locale = request.locale.iso_code | split: '-' | first
     if locale == 'fr'
@@ -22,7 +22,8 @@
       assign worn_alt = 'Tour de cou à neuf maillons, finition or classique, porté seul'
       assign components_alt = 'Un collier rigide et un ornement ovale présentés séparément'
       assign contents_label = 'Contenu de l’ensemble'
-      assign action = 'Découvrir l’ensemble'
+      assign collar_action = 'Voir le collier à neuf maillons'
+      assign set_action = 'Découvrir l’ensemble'
     else
       assign locale = 'en'
       assign heading = 'Keep what you love. Wear it your way.'
@@ -31,42 +32,63 @@
       assign worn_alt = 'Classic Gold nine-link collar worn on its own'
       assign components_alt = 'One collar and one oval charm shown separately'
       assign contents_label = 'What’s included'
-      assign action = 'Explore the set'
+      assign collar_action = 'View the 9-link collar'
+      assign set_action = 'Explore the set'
     endif
     assign set_name = quote.title[locale] | default: featured_set.title
     assign contents = quote.parts[locale]
+    assign collar_url = routes.root_url | append: '/products/' | append: collar.handle | replace: '//', '/'
+    assign collar_url = collar_url | append: '?variant=' | append: collar_variant.id
     assign set_url = routes.root_url | append: '/products/' | append: featured_set.handle | replace: '//', '/'
     assign set_url = set_url | append: '?variant=' | append: set_variant.id
   -%}
   {%- if contents != blank -%}
     <section class="r-split suiji-home-look" id="home-featured-set" data-modules="5,6" aria-labelledby="SuijiHomeLookTitle">
-      <figure>
-        {{ worn_image | image_url: width: 1200 | image_tag: widths: '360, 480, 600, 960, 1200', sizes: '(min-width: 1200px) 480px, (min-width: 750px) 42vw, (min-width: 540px) 480px, 90vw', alt: worn_alt, loading: 'lazy', decoding: 'async' }}
-        <figcaption class="r-caption">{{ worn_caption | escape }}</figcaption>
-      </figure>
+      <a
+        class="suiji-home-look__collar"
+        href="{{ collar_url | escape }}"
+        aria-labelledby="SuijiHomeCollarAction"
+        aria-describedby="SuijiHomeCollarCaption"
+        data-suiji-home-collar-link
+      >
+        <figure>
+          {{ worn_image | image_url: width: 1200 | image_tag: widths: '360, 480, 600, 960, 1200', sizes: '(min-width: 1200px) 480px, (min-width: 750px) 42vw, (min-width: 540px) 480px, 90vw', alt: worn_alt, loading: 'lazy', decoding: 'async' }}
+          <figcaption class="r-caption" id="SuijiHomeCollarCaption">{{ worn_caption | escape }}</figcaption>
+        </figure>
+        <span class="r-link" id="SuijiHomeCollarAction">
+          {{- collar_action | escape -}}<span aria-hidden="true"> ↗</span>
+        </span>
+      </a>
       <div>
         <h2 id="SuijiHomeLookTitle">{{ heading | escape }}</h2>
         <p>{{ intro | escape }}</p>
-        <div class="suiji-home-look__contents">
-          {{ components_image | image_url: width: 680 | image_tag: widths: '180, 240, 360, 480, 680', sizes: '(min-width: 750px) 25vw, 48vw', alt: components_alt, loading: 'lazy', decoding: 'async' }}
-          <div>
-            <h3>{{ set_name | escape }}</h3>
-            <p class="suiji-home-look__label">{{ contents_label | escape }}</p>
-            <ul role="list">
-              {%- for part in contents -%}
-                <li>{{ part | escape }}</li>
-              {%- endfor -%}
-            </ul>
-            <p class="suiji-home-look__price">
-              {%- if settings.suiji_enable_orders == false or featured_set.tags contains 'suiji-display-only' -%}
-                <span>{{ 'suiji_pdp.preview_price' | t }}</span>
-              {%- endif -%}
-              {{ set_variant.price | money_with_currency }}
-            </p>
+        <a
+          class="suiji-home-look__set"
+          href="{{ set_url | escape }}"
+          aria-labelledby="SuijiHomeSetAction SuijiHomeSetName"
+          data-suiji-home-set-link="{{ featured_set.handle | escape }}"
+        >
+          <div class="suiji-home-look__contents">
+            {{ components_image | image_url: width: 680 | image_tag: widths: '180, 240, 360, 480, 680', sizes: '(min-width: 750px) 25vw, 48vw', alt: components_alt, loading: 'lazy', decoding: 'async' }}
+            <div>
+              <h3 id="SuijiHomeSetName">{{ set_name | escape }}</h3>
+              <p class="suiji-home-look__label">{{ contents_label | escape }}</p>
+              <ul role="list">
+                {%- for part in contents -%}
+                  <li>{{ part | escape }}</li>
+                {%- endfor -%}
+              </ul>
+              <p class="suiji-home-look__price">
+                {%- if settings.suiji_enable_orders == false or featured_set.tags contains 'suiji-display-only' -%}
+                  <span>{{ 'suiji_pdp.preview_price' | t }}</span>
+                {%- endif -%}
+                {{ set_variant.price | money_with_currency }}
+              </p>
+            </div>
           </div>
-        </div>
-        <a class="r-link" href="{{ set_url | escape }}" data-suiji-home-set-link="{{ featured_set.handle | escape }}">
-          {{- action | escape -}}<span aria-hidden="true"> ↗</span>
+          <span class="r-link" id="SuijiHomeSetAction">
+            {{- set_action | escape -}}<span aria-hidden="true"> ↗</span>
+          </span>
         </a>
       </div>
     </section>
