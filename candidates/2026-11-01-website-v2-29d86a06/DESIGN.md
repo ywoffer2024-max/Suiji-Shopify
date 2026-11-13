@@ -125,7 +125,7 @@ Use the same SUIJI header and footer across home, catalogue, editorial, product,
 
 Market and currency selection follow Shopify Markets automatically. The header and mobile drawer keep the English/French language control and omit country or currency controls. Checkout uses the shipping address for the available rates.
 
-The shared ice-blue announcement links to Delivery in the active locale. For EUR in France and the United States, show free standard shipping from €95. In preview mode, keep the preview disclosure beside it or below it on phones. Use a naturally wrapping 12px Manrope link, the shared 44px touch target and visible keyboard focus.
+The shared ice-blue announcement links to Delivery in the active locale. For EUR in France and the United States, show free standard shipping from €95. In preview mode, keep the preview disclosure beside it or below it on phones. Use a naturally wrapping 12px Manrope link, the shared 44px touch target and visible keyboard focus. Keep the short-desktop homepage media height at clamp(365px, calc(38.5vw - 24px), 605px) so the primary collection link fits below the announcement.
 
 The shared header uses the existing transparent square mark followed by the SUIJI wordmark in one horizontal home link. Use `theme/assets/suiji-logo-mark-180.png` at **25 × 25 px from 750 px** and **24 × 24 px at 749 px and below**, with a **10 px gap** and vertical center alignment. Give the home link a 44 px minimum touch height and an accessible SUIJI name. The dark mark sits directly on the white header. Reserve the black circular badge for circular avatars.
 
@@ -301,7 +301,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
   },
   "stylesheet": {
     "path": "theme/assets/suiji-r107.css",
-    "sha256": "d3ed3abd238bccb2161e04c550c87d589952b9828abc40cf94379454c640875a"
+    "sha256": "a5338fb07c852f3f62f02818ccd5065b78bbcbcfc2672b5c889f431a924f74b6"
   },
   "shell": {
     "path": "theme/layout/theme.liquid",
