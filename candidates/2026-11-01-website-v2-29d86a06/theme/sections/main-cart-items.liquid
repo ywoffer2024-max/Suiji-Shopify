@@ -35,7 +35,9 @@
     </div>
 
     <div class="cart__warnings">
-      <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1><div class="sj-saved-selection-guidance"><p>{% if request.locale.iso_code contains 'fr' %}Les pièces enregistrées dans cet appareil sont distinctes de votre panier boutique.{% else %}Pieces saved on this device are separate from your shopping bag.{% endif %}</p><a class="button button--secondary" href="{{ routes.root_url | append: '/pages/shopping-preview' | replace: '//', '/' }}">{% if request.locale.iso_code contains 'fr' %}Voir ma sélection enregistrée{% else %}View my saved selection{% endif %}</a></div>
+      <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1>
+      {% render 'suiji-free-shipping', placement: 'empty' %}
+      <div class="sj-saved-selection-guidance"><p>{% if request.locale.iso_code contains 'fr' %}Les pièces enregistrées dans cet appareil sont distinctes de votre panier boutique.{% else %}Pieces saved on this device are separate from your shopping bag.{% endif %}</p><a class="button button--secondary" href="{{ routes.root_url | append: '/pages/shopping-preview' | replace: '//', '/' }}">{% if request.locale.iso_code contains 'fr' %}Voir ma sélection enregistrée{% else %}View my saved selection{% endif %}</a></div>
       <a href="{{ routes.all_products_collection_url }}" class="button">
         {{ 'general.continue_shopping' | t }}
       </a>

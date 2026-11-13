@@ -1,6 +1,6 @@
-# SUIJI Design System · v6.3.5
+# SUIJI Design System · v6.3.6
 
-Updated 13 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery, the homepage featured set and delivery information. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
+Updated 13 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery, the homepage featured set, delivery information and the cart shipping message. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
 
 ## 1. Authority and change control
 
@@ -125,6 +125,8 @@ Use the same SUIJI header and footer across home, catalogue, editorial, product,
 
 Market and currency selection follow Shopify Markets automatically. The header and mobile drawer keep the English/French language control and omit country or currency controls. Checkout uses the shipping address for the available rates.
 
+The shared ice-blue announcement links to Delivery in the active locale. For EUR in France and the United States, show free standard shipping from €95. In preview mode, keep the preview disclosure beside it or below it on phones. Use a naturally wrapping 12px Manrope link, the shared 44px touch target and visible keyboard focus.
+
 The shared header uses the existing transparent square mark followed by the SUIJI wordmark in one horizontal home link. Use `theme/assets/suiji-logo-mark-180.png` at **25 × 25 px from 750 px** and **24 × 24 px at 749 px and below**, with a **10 px gap** and vertical center alignment. Give the home link a 44 px minimum touch height and an accessible SUIJI name. The dark mark sits directly on the white header. Reserve the black circular badge for circular avatars.
 
 The Shop All / Tous les bijoux disclosure contains six category links in this order across desktop and mobile in both languages. The links are Necklaces, Earrings, Rings, Charms, Bracelets & bangles, and Accessories. Show an approved photograph of a representative item when the category has one. A category awaiting an approved photograph uses its text link in the same slot. Use the same crop and source on desktop and mobile. The top-level Sets / Ensembles link opens the set collection directly. Keep a clickable parent link, separately operated disclosure, fine-pointer hover, click, keyboard access, outside-click close, Escape and focus return. Mobile subcategories open into a right-side panel with Back and Close.
@@ -212,6 +214,8 @@ Social sharing images follow the same final2 whitelist. The shared social-image 
 
 Native pages and R107 pages share the storefront shell. Native sections keep the existing Shopify rem scale and section updates. The cart uses one `#cart-icon-bubble` update target with its existing quantity and accessible label. App embeds and native forms retain their active settings. The preview bag is browser-local and clearly labeled. Contact and newsletter submit only to their configured Shopify services and show actual success or failure. Native account endpoints stay in use.
 
+The full cart and cart drawer share the EUR free standard shipping rule with the announcement. In an empty cart show the threshold. With shippable products in the cart, show the amount remaining against the discounted Shopify cart total, or show that the threshold has been met. Use localized decimal separators and currency order, with plain 14px Manrope text next to the totals. Use the native refreshed cart sections and status text when quantities change. The local Saved selection does not contribute to the amount. Update Shopify Markets and the EN/FR delivery policy alongside any threshold or destination change.
+
 ### Custom-work final-sale notice
 
 Use the single custom-order-policy.json EN/FR source for all custom-design, personalisation or agreed product modifications beyond standard options. Labels are “Custom work · Final sale” and “Sur-mesure · Vente définitive”; scope is change-of-mind returns/exchanges, with statutory faulty/non-conforming goods rights expressly preserved. Listed standard colours/finishes/sizes do not become custom merely by selection. Place the notice before custom enquiry/review actions, in relevant PDP details, Contact, Studio, FAQ, Shipping/returns, relevant About and custom-design Journal content and the shared footer; preserve the written-quote confirmation point. Do not add a prechecked acknowledgement or mark every standard SKU final sale. Shared notice: white background, decorative top rule, margin24px, vertical padding20px, body14px/1.6, label600, detail link13px with44px target. Render-only notices may be appended to relevant custom-design Articles without altering their native bodies, authors or dates. Future custom-work Articles use the custom-work tag. No unrelated native-policy rewrite.
@@ -282,8 +286,8 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
 
 ```json design-lock
 {
-  "version": "6.3.5",
-  "implementation_version": "6.3.5",
+  "version": "6.3.6",
+  "implementation_version": "6.3.6",
   "approved_preview": {
     "sha256": "6e28e3e61d6effec39fd36c7c8777d09bb5e85471d3b7c794ccb75b0277cdc92",
     "header_mark": {
@@ -297,7 +301,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
   },
   "stylesheet": {
     "path": "theme/assets/suiji-r107.css",
-    "sha256": "dbb94f291b19b002c3c543d4661a56ae128c7bbddf0b60fc3f70894eabadc8bb"
+    "sha256": "d3ed3abd238bccb2161e04c550c87d589952b9828abc40cf94379454c640875a"
   },
   "shell": {
     "path": "theme/layout/theme.liquid",
@@ -411,11 +415,11 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/cart-drawer.liquid",
-      "sha256": "51545e9f89785a9ee3211a0d85c9b9279fed3ba00ba71727776e28d76893fa10"
+      "sha256": "2e2b80eb356f48b10b36c2ae21ea58b091af92f2680ece49248fb3b2927608c7"
     },
     {
       "path": "theme/sections/main-cart-footer.liquid",
-      "sha256": "2d3c15dce7e3c9ec2308abda0cfa763b1c932ee23a513158f2bb15593e9647bb"
+      "sha256": "a6280b215200fe81985f609a1016a4bf7fdec304440b1dc6883bcc32a72b1f25"
     },
     {
       "path": "theme/assets/global.js",
@@ -427,7 +431,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-r107-header.liquid",
-      "sha256": "6cc585a885a4b5423d8c35991e1b5b8dcce6d3e948bf743970a45b74ba3bc91f"
+      "sha256": "e3e41c8e78a0ce77499e5f34d25bec359751a6bf50467a27597c6d4afc8ff721"
     },
     {
       "path": "theme/snippets/suiji-r107-home.liquid",
@@ -504,6 +508,18 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     {
       "path": "theme/snippets/suiji-r107-shipping.liquid",
       "sha256": "76ebf5a9b3296be0d3f03baf16e5befdfc610360b955127192a58f9cfbe7b9f8"
+    },
+    {
+      "path": "theme/snippets/suiji-free-shipping.liquid",
+      "sha256": "e28b0d3e6fda6b161e3845e4eb6ba55db73a2bc45db1c365b795b58aed88c487"
+    },
+    {
+      "path": "theme/sections/main-cart-items.liquid",
+      "sha256": "198d945ee17872df6ae997b116c3b673f5988b166e766b7303df2db522fd4c50"
+    },
+    {
+      "path": "theme/sections/cart-live-region-text.liquid",
+      "sha256": "93d97dea16b8b8fc01f44ffb531264c537160b275857943b1f4bdce77b023026"
     }
   ]
 }

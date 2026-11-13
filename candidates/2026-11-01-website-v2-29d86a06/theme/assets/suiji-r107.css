@@ -951,3 +951,62 @@ img.suiji-framed-cover,
     gap: 16px;
   }
 }
+
+.suiji-announcement {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  padding-inline: 12px;
+  background: var(--r-ice);
+  color: var(--r-accent);
+  font: 400 12px/1.4 var(--r-sans);
+  letter-spacing: 0;
+  text-align: center;
+}
+.suiji-announcement:empty {
+  display: none;
+}
+.suiji-announcement__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--r-touch-target);
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.suiji-announcement__link:focus-visible {
+  outline: 2px solid var(--r-accent);
+  outline-offset: 4px;
+}
+.suiji-announcement .r-preview-strip {
+  height: auto;
+  margin: 0;
+  padding: 4px 0;
+  font-size: 10px;
+  line-height: 1.4;
+}
+.suiji-shipping-status {
+  margin: 0 0 12px;
+  color: var(--r-accent);
+  font: 400 14px/1.6 var(--r-sans);
+  letter-spacing: 0;
+}
+.cart__blocks .suiji-shipping-status {
+  text-align: right;
+}
+.cart__warnings .suiji-shipping-status,
+.cart-drawer__empty-content .suiji-shipping-status {
+  margin: 8px 0 12px;
+}
+@media (max-width: 749px) {
+  .suiji-announcement {
+    flex-direction: column;
+  }
+  .suiji-announcement .r-preview-strip {
+    padding: 0 0 6px;
+  }
+}
