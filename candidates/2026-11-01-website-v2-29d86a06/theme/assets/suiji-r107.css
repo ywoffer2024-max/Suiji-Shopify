@@ -830,3 +830,74 @@ img.suiji-framed-cover,
   font: 400 12px/1.6 var(--r-sans);
   pointer-events: none;
 }
+
+.suiji-home-look.r-split {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  background: #fff;
+}
+.suiji-home-look.r-split > figure {
+  width: 100%;
+  max-width: 480px;
+  justify-self: center;
+  margin: 0;
+}
+.suiji-home-look.r-split > figure img,
+.suiji-home-look__contents img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+}
+.suiji-home-look.r-split > div {
+  min-width: 0;
+  padding-block: 0;
+}
+.suiji-home-look.r-split h2 {
+  max-width: 19ch;
+}
+.suiji-home-look__contents {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+.suiji-home-look__contents h3 {
+  margin: 0 0 10px;
+}
+.suiji-home-look .suiji-home-look__label {
+  margin: 0 0 4px;
+  font: 500 14px/1.6 var(--r-sans);
+}
+.suiji-home-look__contents ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--r-muted);
+  font: 400 14px/1.6 var(--r-sans);
+}
+.suiji-home-look .suiji-home-look__price {
+  margin: 10px 0 0;
+  font: 400 25px/1.4 var(--r-serif);
+}
+.suiji-home-look__price span {
+  display: block;
+  color: var(--r-muted);
+  font: 400 12px/1.6 var(--r-sans);
+}
+.suiji-home-look .r-link {
+  color: var(--r-accent);
+  min-height: var(--r-touch-target);
+  margin: 8px 0 0;
+}
+@media (max-width: 749px) {
+  .suiji-home-look.r-split {
+    grid-template-columns: minmax(0, 1fr);
+    padding-block: 36px;
+  }
+  .suiji-home-look__contents {
+    gap: 12px;
+  }
+}

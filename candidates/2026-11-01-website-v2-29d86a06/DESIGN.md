@@ -1,6 +1,6 @@
-# SUIJI Design System · v6.3.2
+# SUIJI Design System · v6.3.3
 
-Updated 13 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation and product imagery. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
+Updated 13 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery and the homepage featured set. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
 
 ## 1. Authority and change control
 
@@ -138,6 +138,10 @@ The footer order is **Shop → How it works → About SUIJI → Create with us �
 - Lead with one editorial image group. The desktop composition pairs an approved view of jewelry assembled and separated with an approved Core-Lock or material close-up. On mobile, show the lead composition at a size that preserves each component's silhouette. Keep the current image source and its component labels accurate when artwork changes.
 - Follow the images with a short headline, a concise description and one primary collection link. The headline and link are visible at `1440 × 900` and `1280 × 720` in both languages. Keep assembly, compatibility and included pieces clear in the Core-Lock explanation below.
 
+- Use one featured set in the homepage wearing section. Pair a reviewed wearing image with the white-background view of its actual set contents. Put the warmth in skin, lighting and approved low-saturation clothing. Use the paper surface for the section and the existing deep-blue link for its single action.
+- Use the shared split layout, with a `4:5` wearing image up to `480px` wide. Stack the image and information at `749px` and below and make the wearing image visible without hover. The caption identifies a base shown on its own. Show the version with a charm attached when an approved view confirms the assembly and wearing scale. Use responsive lazy images with their dimensions reserved.
+- Use the exact localized set name, included parts and current positive Shopify price. The action opens the matching variant. In preview mode, label the reference price. If the required reviewed image, set contents or price is unavailable, show the Core-Lock explanation in the same location.
+
 ### Catalogue cards and set previews
 
 - Use the shared **4:5** white image frame for product cards on desktop and mobile. Keep the whole silhouette inside it and use the same frame proportions across the row.
@@ -271,8 +275,8 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
 
 ```json design-lock
 {
-  "version": "6.3.2",
-  "implementation_version": "6.3.2",
+  "version": "6.3.3",
+  "implementation_version": "6.3.3",
   "approved_preview": {
     "sha256": "6e28e3e61d6effec39fd36c7c8777d09bb5e85471d3b7c794ccb75b0277cdc92",
     "header_mark": {
@@ -286,7 +290,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
   },
   "stylesheet": {
     "path": "theme/assets/suiji-r107.css",
-    "sha256": "00e385b7404f15d826dec3a4d9bf267c0ca5da58a5c368c807c8c0605425a40a"
+    "sha256": "92a09070d290fb62ede757b47d41c7299fb598e4e4ad7f65346253383b341bc0"
   },
   "shell": {
     "path": "theme/layout/theme.liquid",
@@ -420,7 +424,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-r107-home.liquid",
-      "sha256": "72ed3e78ac101111b39f5e370a122f63a25cb3afdde84f38cfcdecb251cd5ce7"
+      "sha256": "15eb102b3c9894f915899c565ce5f2d8c915db2bf88d905036ea99c7c376b984"
     },
     {
       "path": "theme/snippets/suiji-r107-wordmark.liquid",
@@ -473,6 +477,14 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     {
       "path": "theme/snippets/suiji-reviewed-variant-media-ids.liquid",
       "sha256": "e763c0329cde97b1cef85184284ed69cceaf373eb2fde817a22f7e0f9ac1cd7a"
+    },
+    {
+      "path": "theme/snippets/suiji-r107-home-look.liquid",
+      "sha256": "0f420e3e761cb5a7959f53977a2f94054a1503fbbf0e52afa9a37a2a95fb4b64"
+    },
+    {
+      "path": "theme/assets/suiji-mvp.js",
+      "sha256": "3ed187e19d4cecb2c50d7d11db79925f174f270df4ac9e16ca76cb33f31a9a57"
     }
   ]
 }

@@ -114,6 +114,23 @@
     customElements.define('suiji-waitlist', SuijiWaitlist);
   }
 
+  const featuredSetLink = document.querySelector('[data-suiji-home-set-link]');
+  if (featuredSetLink) {
+    const featuredSet = {
+      item_handle: featuredSetLink.dataset.suijiHomeSetLink,
+      locale: document.documentElement.lang || 'en',
+    };
+    featuredSetLink.addEventListener('click', () => pushEvent('home_set_click', featuredSet));
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        if (!entries.some((entry) => entry.intersectionRatio >= 0.5)) return;
+        pushEvent('home_set_view', featuredSet);
+        observer.disconnect();
+      }, { threshold: 0.5 });
+      observer.observe(featuredSetLink);
+    }
+  }
+
   document.addEventListener('click', (event) => {
     const languageLink = event.target.closest('localization-form a[data-value]');
     if (languageLink) {
