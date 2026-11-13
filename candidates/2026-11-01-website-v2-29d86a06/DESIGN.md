@@ -145,7 +145,7 @@ The footer order is **Shop → How it works → About SUIJI → Create with us �
 - Review the actual jewelry silhouette inside the frame at desktop and mobile sizes. Keep the full outline and make the intended detail legible, especially for small charms and accessories shown beside larger pieces. Where the source has excess exterior white margin, use approved display framing for that view. Preserve the original file, zoom source, aspect ratio and any size reference. Apparent size across unrelated card images carries no product dimension claim.
 - On shared commerce cards, use 78% of the measured ring cover scale and centering offsets. The current ring silhouettes occupy about 56% of the image field width. Apply the same framing on desktop and mobile.
 - A public product card opens the exact native product detail with its shown variant selected. A single activation works on mouse, keyboard and touch. Use the same destination in search, recommendations, gifts, homepage cards and category grids. Products enter these shopping surfaces when their image, native identity and positive Shopify price are confirmed.
-- Keep the approved packshot as the default. When an approved wearing illustration is available for that exact SKU and finish, reveal it on fine-pointer hover or keyboard focus and add it after the packshots in that variant’s gallery. Label the gallery view as a wearing illustration. For a variant awaiting its own approved wearing illustration, keep its packshot on hover and focus.
+- Keep the approved packshot as the default. When an approved wearing illustration is available for that exact SKU and finish, reveal it on fine-pointer hover or keyboard focus and add it after the packshots in that variant’s gallery. Label the gallery view as a wearing illustration. When a styling image includes a separately sold carrier, name the carrier and mark it as sold separately in the localized caption and image description. For a variant awaiting its own approved wearing illustration, keep its packshot on hover and focus.
 - Record the native handle, SKU, approved view and display framing together. Frames trim exterior whitespace and keep the full jewelry silhouette. Responsive image sizes account for the effective display scale, so framing still uses sufficient source resolution. The Core-Lock menu illustrates the base types and shows a separate verified charm example. Withdrawn imagery stays outside public cards, navigation, gallery payloads and recommendations until the replacement is approved.
 - Set previews use the authorized component photos and identify them as selected components. Use the shared desktop column counts. At 590px and below, keep one set per row so that the separate components remain legible. Keep the images, set name and verified price together. The set page lists exact included parts, quantities and supported ways to wear them from the approved set record. A component image represents only the piece it depicts. Use a verified assembled image when showing an assembled set.
 
@@ -383,7 +383,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/product-thumbnail.liquid",
-      "sha256": "36321c60aca29bcdef8ba886b206bb2ce8faa1ff3a093571b69bac5b14671d45"
+      "sha256": "266a949a420027de56f593b67f71284ffcd81a9281f6635a3cdcf8af73a068c7"
     },
     {
       "path": "theme/snippets/product-media-gallery.liquid",
@@ -471,7 +471,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-reviewed-variant-media-ids.liquid",
-      "sha256": "9ec62dbcb3fb6e4ac4094375b0875cf855eee4db7a3890d0ae986da460d558b9"
+      "sha256": "6f3077ac3d9aec4f51cc134c09bfa562dc20900d34a0ae4a86f5bad6f3e226df"
     }
   ]
 }

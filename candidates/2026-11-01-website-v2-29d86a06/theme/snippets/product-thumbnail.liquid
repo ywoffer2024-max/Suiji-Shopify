@@ -50,7 +50,9 @@
   if media.alt contains ' · Wearing illustration'
     assign wearing = true
     assign locale = request.locale.iso_code | split: '-' | first
-    assign wearing_alt = product.selected_or_first_available_variant.metafields.custom.suiji_reviewed_worn_alt.value[locale]
+    assign wearing_copy = product.selected_or_first_available_variant.metafields.custom.suiji_reviewed_worn_alt.value
+    assign wearing_alt = wearing_copy[locale]
+    assign wearing_caption = wearing_copy.caption[locale]
     assign image_alt = wearing_alt | default: image_alt
   endif
 
@@ -108,6 +110,9 @@
     {% if wearing %}
       <p class="suiji-wearing-caption" data-suiji-wearing-illustration>
         {% if request.locale.iso_code contains 'fr' %}Illustration du porté{% else %}Wearing illustration{% endif %}
+        {%- if wearing_caption != blank -%}
+          {{- ' · ' -}}{{- wearing_caption | escape -}}
+        {%- endif -%}
       </p>
     {% endif %}
     <button
