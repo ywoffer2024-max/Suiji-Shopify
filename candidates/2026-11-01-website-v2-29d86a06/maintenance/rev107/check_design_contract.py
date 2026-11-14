@@ -86,13 +86,16 @@ def check_contract(approved_preview=None, workspace_copy=None):
     ):
         errors.append(f"Workspace DESIGN.md differs from the repository copy: {workspace_copy}")
 
-    css = read("assets/suiji-r107.css")
+    css_path = ROOT / lock["stylesheet"]["path"]
+    css = css_path.read_text(encoding="utf-8")
     for name, value in lock["root_tokens"].items():
         found = re.findall(rf"{re.escape(name)}\s*:\s*([^;}}]+)", css)
         if found != [value]:
             errors.append(f"{name} must be declared once at {value}. Found {found!r}")
 
     layout = read("layout/theme.liquid")
+    if layout.count(f"'{css_path.name}' | asset_url | stylesheet_tag") != 1:
+        errors.append("The storefront must load the reviewed shared stylesheet")
     for snippet in ("header", "footer"):
         if layout.count(f"render 'suiji-r107-{snippet}'") != 2:
             errors.append(f"Both storefront branches must use the shared {snippet}")

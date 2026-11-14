@@ -1,4 +1,4 @@
-# SUIJI Design System · v6.3.8
+# SUIJI Design System · v6.3.9
 
 Updated 14 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery, the homepage featured set, delivery information and the cart shipping message. It also refines the shared Core-Lock entry and limits the global announcement to delivery. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
 
@@ -287,8 +287,8 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
 
 ```json design-lock
 {
-  "version": "6.3.8",
-  "implementation_version": "6.3.8",
+  "version": "6.3.9",
+  "implementation_version": "6.3.9",
   "approved_preview": {
     "sha256": "6e28e3e61d6effec39fd36c7c8777d09bb5e85471d3b7c794ccb75b0277cdc92",
     "header_mark": {
@@ -301,12 +301,12 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     "catalogue_image_ratio": "4/5"
   },
   "stylesheet": {
-    "path": "theme/assets/suiji-r107.css",
+    "path": "theme/assets/suiji-r107-v639.css",
     "sha256": "68e12f2e47e7edf57a79e11f20b89eed29b7dd9067920113dedd6c2c382bcadb"
   },
   "shell": {
     "path": "theme/layout/theme.liquid",
-    "sha256": "2f24e0e9ba65781d1fadfe8aaef904257486a6656920ec2a2cdd616bd609eb06"
+    "sha256": "e079511a6a45651b64eb567d4e082b9bf4d0fd9f35b930eb6283b3a7e62e0c3c"
   },
   "fonts": [
     {
