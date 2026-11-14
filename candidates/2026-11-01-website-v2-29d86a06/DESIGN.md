@@ -1,11 +1,11 @@
-# SUIJI Design System · v6.3.9
+# SUIJI Design System · v6.3.10
 
-Updated 14 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery, the homepage featured set, delivery information and the cart shipping message. It also refines the shared Core-Lock entry and limits the global announcement to delivery. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
+Updated 14 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery, the homepage featured set, delivery information and the cart shipping message. It also refines the shared Core-Lock entry, limits the global announcement to delivery, and uses a light palette with a muted grey-blue editorial surface. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
 
 ## 1. Authority and change control
 
 1. The latest direct human instruction takes priority, followed by this contract, then the existing component implementation. Reference websites and skills inform a change; they do not replace SUIJI's tokens or introduce a new visual direction.
-2. Keep the established white/ice-blue palette, Newsreader/Manrope pairing, image-led layout and restrained rectangular controls. Copy, translations and new catalogue records must use the same components. Do not restyle a page because its text or imagery changed.
+2. Keep the established light palette, Newsreader/Manrope pairing, image-led layout and restrained rectangular controls. Copy, translations and new catalogue records must use the same components. Do not restyle a page because its text or imagery changed.
 3. Values below are required. A `clamp()` is a fixed responsive formula, not permission to select another number. Do not add page-specific font families, arbitrary sizes, new accent colors, shadows, radii or breakpoints.
 4. Update the applicable shared component, this document and its machine-readable lock together when an intentional change revises a design rule. State the affected components and verify them on desktop and mobile in English and French. A copy-only change leaves the CSS and font hashes unchanged. Update a locked template's hash only after reviewing its intended change.
 5. The maintained Shopify repository's release DESIGN.md is the source of truth. The workspace DESIGN.md is its byte-identical working copy. Native and editorial pages share the shell, colors, typography and media rules. When a generator owns a template, apply durable changes in its source.
@@ -14,7 +14,7 @@ Updated 14 November 2026. This contract applies to the English and French Shopif
 ### Visual direction
 
 - Let approved imagery carry SUIJI's identity. Show the sculptural metal silhouette first, then use a verified view of the Core-Lock connection or an approved worn view to explain what makes the piece distinctive. One lead image or image group owns the main visual emphasis. Keep accompanying typography and controls secondary to the jewelry on shopping surfaces.
-- Use white for the header, product photography, shopping controls, long reading and footer. Reserve ice blue for Core-Lock and material explanations, other instructional sections, and the eligible delivery announcement. The Core-Lock landing page can use its existing charcoal introduction with white text and white image fields. Deep blue serves links, focus and selection on light surfaces. Titanium, gemstones and the photographic light carry the campaign color. On editorial pages, a single ice-blue or charcoal section can give a story its own space before the white product area resumes. An approved blue titanium finish, warm gold finish or gemstone can provide the color accent in the photograph.
+- Use white for the header, product photography, shopping controls, long reading and footer. Use ice blue for material explanations, instructions and the eligible delivery announcement. Use the low-saturation smoke blue-grey surface on the Core-Lock introduction with blue-grey type and white image fields. Keep page and section backgrounds white, ice blue or smoke blue-grey. Deep blue serves links, focus and selection on light surfaces. Titanium, gemstones and the photographic light carry the campaign color. On editorial pages, choose one tinted section to give a story its own space before the white product area resumes. An approved blue titanium finish, warm gold finish or gemstone can provide the color accent in the photograph.
 - Give each decision area one primary action. Use plain links or named icons for supporting actions and quiet outlines when the control needs a visible boundary. Use circles for swatches, approved category imagery and functional icons. Keep shopping controls and image frames square, and group related elements with spacing before adding a divider.
 - Put product choice, size help and purchase state before descriptive tabs. Show material, size, weight, wearing scale and compatibility wherever verified. A preview piece gets honest viewing guidance. Cards, galleries and editorial photography have separate roles and use the matching approved asset.
 
@@ -38,7 +38,8 @@ SUIJI is handmade jewelry shaped by personal choices. The story begins with Chun
 |---|---|---|
 | Paper | `#FFFFFF` | Page, header and product-image canvas |
 | `--r-ice` | `#EAF1F5` | Core-Lock and material explanations, instructional sections and the delivery announcement |
-| `--r-ink` | `#202226` | Primary text and action on light surfaces, background of the Core-Lock introduction |
+| `--r-editorial-surface` | `#DDE3E6` | Smoke blue-grey; Core-Lock introduction and short editorial sections |
+| `--r-ink` | `#2B414D` | Blue-grey primary text and small solid actions |
 | `--r-muted` | `#626466` | Supporting text |
 | `--r-accent` | `#315A73` | Links, focus and selected-state emphasis |
 | `--r-line` | `#D5DFE5` | Decorative separators |
@@ -53,9 +54,9 @@ SUIJI is handmade jewelry shaped by personal choices. The story begins with Chun
 | `--r-thumbnail` / `--r-thumbnail-phone` | `64px` / `56px` | Gallery thumbnails |
 | `--r-gallery-phone-max` | `38svh` | Mobile product image stage maximum |
 
-White is the default. Do not make an entire page ice blue to group unrelated sections. Product colors come from images and truthful options, never CSS recoloring. Use the two existing self-hosted WOFF2 files with `font-display:swap`; add no external font service. Newsreader is 400. Manrope is at least 400 for reading and utility text.
+White is the default. Use a tint to mark a single subject or transition. Charcoal and black are excluded from large interface surfaces; keep the approved dark wordmark and actual product imagery. Product colors come from images and truthful options, never CSS recoloring. Use the two existing self-hosted WOFF2 files with `font-display:swap`; add no external font service. Newsreader is 400. Manrope is at least 400 for reading and utility text.
 
-Keep product-image fields visually neutral, including pale silver pieces against their light source background. Use the essential control outline on white and ice blue where a visible boundary is required. The two surfaces differ by only 1.14:1, so the surface tint cannot carry a control boundary or a selected state by itself. Use a readable label, underline, outline or check as appropriate.
+Keep product-image fields visually neutral, including pale silver pieces against their light source background. Use the essential control outline on white and ice blue where a visible boundary is required. The light surfaces are close in value. A tint alone cannot carry a control boundary or a selected state. On smoke blue-grey, use the deep-blue focus treatment for interactive links. Use a readable label, underline, outline or check as appropriate.
 
 | Role | Desktop rule | At 749px and below |
 |---|---|---|
@@ -84,7 +85,7 @@ Long paragraphs must not exceed `72ch`; do not justify, line-clamp or shrink the
 
 Reserve display typography for page titles, editorial chapters and the existing product names and prices. Use the utility role for filtering, budgets and sort controls even when the group label is a semantic heading. Give French titles and labels the room to wrap at the same type size, including on cards and buttons.
 
-Use surface changes to mark the transition from a collection story to shopping. Keep filters, sort, price and product images on a calm neutral field. The header and catalogue use the same color roles across locales. Use white text and a white focus outline on the charcoal Core-Lock introduction. Keep the same underlying product image and lighting as its gallery.
+Use surface changes to mark the transition from a collection story to shopping. Keep filters, sort, price and product images on a calm neutral field. The header and catalogue use the same color roles across locales. Use blue-grey text and the shared deep-blue focus outline on the smoke blue-grey Core-Lock introduction. Keep the same underlying product image and lighting as its gallery.
 
 ## 4. Layout and responsive boundaries
 
@@ -182,7 +183,7 @@ On desktop, place the thumbnail rail to the left of the main image. On mobile, p
 | State | Visible treatment |
 |---|---|
 | Collection preview | Browsable options and details, one quiet “Collection preview” label, reference price only when a real amount exists. |
-| Available | Current price and one charcoal primary Add to cart control, with quantity if appropriate. |
+| Available | Current price and one solid blue-grey Add to cart control, with quantity if appropriate. |
 | Sold out | One clearly labeled status with browsable media and existing alternatives. |
 | Missing configuration | Plain localized status and available choices. |
 | Request beyond standard options | Contextual final-sale notice before the relevant inquiry or confirmation, with full terms linked. |
@@ -287,8 +288,8 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
 
 ```json design-lock
 {
-  "version": "6.3.9",
-  "implementation_version": "6.3.9",
+  "version": "6.3.10",
+  "implementation_version": "6.3.10",
   "approved_preview": {
     "sha256": "6e28e3e61d6effec39fd36c7c8777d09bb5e85471d3b7c794ccb75b0277cdc92",
     "header_mark": {
@@ -301,12 +302,12 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     "catalogue_image_ratio": "4/5"
   },
   "stylesheet": {
-    "path": "theme/assets/suiji-r107-v639.css",
-    "sha256": "68e12f2e47e7edf57a79e11f20b89eed29b7dd9067920113dedd6c2c382bcadb"
+    "path": "theme/assets/suiji-r107-v6310.css",
+    "sha256": "7004aa89a385b3de2c41cfbaf029558dd797c3f8189d591c34f509c6fb0ae2fd"
   },
   "shell": {
     "path": "theme/layout/theme.liquid",
-    "sha256": "e079511a6a45651b64eb567d4e082b9bf4d0fd9f35b930eb6283b3a7e62e0c3c"
+    "sha256": "fb0f8a1f80a8bcf2ce707fa349ff618da956097d7733a926ae5a5131b7dc2dd2"
   },
   "fonts": [
     {
@@ -319,7 +320,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     }
   ],
   "root_tokens": {
-    "--r-ink": "#202226",
+    "--r-ink": "#2b414d",
     "--r-muted": "#626466",
     "--r-ice": "#eaf1f5",
     "--r-line": "#d5dfe5",
@@ -336,7 +337,8 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     "--r-purchase-target": "52px",
     "--r-thumbnail": "64px",
     "--r-thumbnail-phone": "56px",
-    "--r-gallery-phone-max": "38svh"
+    "--r-gallery-phone-max": "38svh",
+    "--r-editorial-surface": "#dde3e6"
   },
   "qa_widths": [
     320,
