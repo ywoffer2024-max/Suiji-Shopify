@@ -1,6 +1,6 @@
-# SUIJI Design System · v6.3.7
+# SUIJI Design System · v6.3.8
 
-Updated 14 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery, the homepage featured set, delivery information and the cart shipping message. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
+Updated 14 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery, the homepage featured set, delivery information and the cart shipping message. It also refines the shared Core-Lock entry and limits the global announcement to delivery. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
 
 ## 1. Authority and change control
 
@@ -14,7 +14,7 @@ Updated 14 November 2026. This contract applies to the English and French Shopif
 ### Visual direction
 
 - Let approved imagery carry SUIJI's identity. Show the sculptural metal silhouette first, then use a verified view of the Core-Lock connection or an approved worn view to explain what makes the piece distinctive. One lead image or image group owns the main visual emphasis. Keep accompanying typography and controls secondary to the jewelry on shopping surfaces.
-- Use white for the header, product photography, shopping controls, long reading and footer. Reserve ice blue for Core-Lock and material explanations, other instructional sections, and the preview notice. The Core-Lock landing page can use its existing charcoal introduction with white text and white image fields. Deep blue serves links, focus and selection on light surfaces. Titanium, gemstones and the photographic light carry the campaign color.
+- Use white for the header, product photography, shopping controls, long reading and footer. Reserve ice blue for Core-Lock and material explanations, other instructional sections, and the eligible delivery announcement. The Core-Lock landing page can use its existing charcoal introduction with white text and white image fields. Deep blue serves links, focus and selection on light surfaces. Titanium, gemstones and the photographic light carry the campaign color. On editorial pages, a single ice-blue or charcoal section can give a story its own space before the white product area resumes. An approved blue titanium finish, warm gold finish or gemstone can provide the color accent in the photograph.
 - Give each decision area one primary action. Use plain links or named icons for supporting actions and quiet outlines when the control needs a visible boundary. Use circles for swatches, approved category imagery and functional icons. Keep shopping controls and image frames square, and group related elements with spacing before adding a divider.
 - Put product choice, size help and purchase state before descriptive tabs. Show material, size, weight, wearing scale and compatibility wherever verified. A preview piece gets honest viewing guidance. Cards, galleries and editorial photography have separate roles and use the matching approved asset.
 
@@ -37,7 +37,7 @@ SUIJI is handmade jewelry shaped by personal choices. The story begins with Chun
 | Token | Locked value | Use |
 |---|---|---|
 | Paper | `#FFFFFF` | Page, header and product-image canvas |
-| `--r-ice` | `#EAF1F5` | Core-Lock and material explanations, instruction and preview notices |
+| `--r-ice` | `#EAF1F5` | Core-Lock and material explanations, instructional sections and the delivery announcement |
 | `--r-ink` | `#202226` | Primary text and action on light surfaces, background of the Core-Lock introduction |
 | `--r-muted` | `#626466` | Supporting text |
 | `--r-accent` | `#315A73` | Links, focus and selected-state emphasis |
@@ -125,7 +125,7 @@ Use the same SUIJI header and footer across home, catalogue, editorial, product,
 
 Market and currency selection follow Shopify Markets automatically. The header and mobile drawer keep the English/French language control and omit country or currency controls. Checkout uses the shipping address for the available rates.
 
-The shared ice-blue announcement links to Delivery in the active locale. For EUR in France and the United States, show free standard shipping from €95. In preview mode, keep the preview disclosure beside it or below it on phones. Use a naturally wrapping 12px Manrope link, the shared 44px touch target and visible keyboard focus. Keep the short-desktop homepage media height at clamp(365px, calc(38.5vw - 24px), 605px) so the primary collection link fits below the announcement.
+The shared ice-blue announcement links to Delivery in the active locale. For EUR in France and the United States, show free standard shipping from €95. The header announcement contains only the eligible delivery offer. Explain preview status in the relevant product or collection context. Use a naturally wrapping 12px Manrope link, the shared 44px touch target and visible keyboard focus. Keep the short-desktop homepage media height at clamp(365px, calc(38.5vw - 24px), 605px) so the primary collection link fits below the announcement.
 
 The shared header uses the existing transparent square mark followed by the SUIJI wordmark in one horizontal home link. Use `theme/assets/suiji-logo-mark-180.png` at **25 × 25 px from 750 px** and **24 × 24 px at 749 px and below**, with a **10 px gap** and vertical center alignment. Give the home link a 44 px minimum touch height and an accessible SUIJI name. The dark mark sits directly on the white header. Reserve the black circular badge for circular avatars.
 
@@ -161,7 +161,7 @@ The footer order is **Shop → How it works → About SUIJI → Create with us �
 - Keep the approved packshot as the default. When an approved wearing illustration is available for that exact SKU and finish, reveal it on fine-pointer hover or keyboard focus and add it after the packshots in that variant’s gallery. Label the gallery view as a wearing illustration. When a styling image includes a separately sold carrier, name the carrier and mark it as sold separately in the localized caption and image description. For a variant awaiting its own approved wearing illustration, keep its packshot on hover and focus.
 - When clothing appears in a wearing image, use a specific editorial wardrobe reference for the neckline, shoulder or cuff construction and fabric drape. Draw on [JENNY BIRD’s Dane Collar](https://jenny-bird.com/products/dane-collar), [Boston Square Ring](https://jenny-bird.com/products/boston-square-ring-gold) and [Marla Aaron’s Set 6 Styling](https://marlaaaron.com/blogs/newsletters/set-6-styling). Prefer the approved SUIJI wardrobe where its actual cut suits the piece. For collars and earrings, use a structured low square neckline, a clean asymmetric shoulder or an ear close-up with hair pulled clear. For long chains, use softly tailored open lapels and a plain layer with enough tonal contrast to read both chain ends. For rings and wrist pieces, use a relaxed hand pose and a clean tailored cuff when a sleeve enters the frame. Use muted colors with clear jewelry separation, believable fabric and refined construction. Avoid generic crew-neck basics, prominent patterns, visible logos and distracting shine.
 - Review both the full-size image and its mobile card. Keep the product’s exact finish, structure and wearing scale and keep fabric and hair clear of the clasp, links, settings and ends. A visibly wrong outfit or a chain lost against clothing requires a new reviewed wearing image. Keep its verified packshot available on the card while the wearing image is being replaced.
-- Record the native handle, SKU, approved view and display framing together. Frames trim exterior whitespace and keep the full jewelry silhouette. Responsive image sizes account for the effective display scale, so framing still uses sufficient source resolution. The Core-Lock menu illustrates the base types and shows a separate verified charm example. Withdrawn imagery stays outside public cards, navigation, gallery payloads and recommendations until the replacement is approved.
+- Record the native handle, SKU, approved view and display framing together. Frames trim exterior whitespace and keep the full jewelry silhouette. Responsive image sizes account for the effective display scale, so framing still uses sufficient source resolution. In the Core-Lock menu and introduction, show the Core-Lock earring base (H03-CORE), ring base and gold-finish collar side by side in one row, then the single “Bases” label below. Use a separate verified charm image for “Charms / Ornements”. The label is the accessible name of the link. Withdrawn imagery stays outside public cards, navigation, gallery payloads and recommendations until the replacement is approved.
 - Set previews use the authorized component photos and identify them as selected components. Use the shared desktop column counts. At 590px and below, keep one set per row so that the separate components remain legible. Keep the images, set name and verified price together. The set page lists exact included parts, quantities and supported ways to wear them from the approved set record. A component image represents only the piece it depicts. Use a verified assembled image when showing an assembled set.
 
 ### Product, complete the look and size guide
@@ -187,7 +187,7 @@ On desktop, place the thumbnail rail to the left of the main image. On mobile, p
 | Missing configuration | Plain localized status and available choices. |
 | Request beyond standard options | Contextual final-sale notice before the relevant inquiry or confirmation, with full terms linked. |
 
-The theme's ordering setting is shared by the header, native product, card quick add, cart and cart drawer. The site's current preview mode is the default until the approved launch configuration enables ordering. Show purchasing controls only for the available state. A pending option request suspends checkout affordances, and an error names the available recovery. Price and availability use accessible status regions. A valid variant selection updates the selected options, gallery, URL, price and status in one response.
+The theme's ordering setting is shared by the native product, card quick add, cart and cart drawer. The site's current preview mode is the default until the approved launch configuration enables ordering. Show purchasing controls only for the available state. A pending option request suspends checkout affordances, and an error names the available recovery. Price and availability use accessible status regions. A valid variant selection updates the selected options, gallery, URL, price and status in one response.
 
 #### Media and compatible pieces
 
@@ -287,8 +287,8 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
 
 ```json design-lock
 {
-  "version": "6.3.7",
-  "implementation_version": "6.3.7",
+  "version": "6.3.8",
+  "implementation_version": "6.3.8",
   "approved_preview": {
     "sha256": "6e28e3e61d6effec39fd36c7c8777d09bb5e85471d3b7c794ccb75b0277cdc92",
     "header_mark": {
@@ -302,7 +302,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
   },
   "stylesheet": {
     "path": "theme/assets/suiji-r107.css",
-    "sha256": "03137002bcb916c4d63177100a736c48e5c5f93b169f1fb7a8078277f23383ed"
+    "sha256": "68e12f2e47e7edf57a79e11f20b89eed29b7dd9067920113dedd6c2c382bcadb"
   },
   "shell": {
     "path": "theme/layout/theme.liquid",
@@ -432,7 +432,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-r107-header.liquid",
-      "sha256": "e3e41c8e78a0ce77499e5f34d25bec359751a6bf50467a27597c6d4afc8ff721"
+      "sha256": "fe29a08799bff27ee8e530419f6706d2a73c81e2060d1394727d3d6754032fb9"
     },
     {
       "path": "theme/snippets/suiji-r107-home.liquid",
@@ -464,7 +464,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-core-system-links.liquid",
-      "sha256": "af6acaa2f0929d8c2a2366fc0305e1ab6ea2a83cf66903e06516aa606723fe6e"
+      "sha256": "1042a6a38509cfb277ec559a360888c5eae39d2703923d9340112259da53d48a"
     },
     {
       "path": "theme/snippets/suiji-shop-mega-menu.liquid",

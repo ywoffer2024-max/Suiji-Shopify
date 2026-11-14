@@ -104,10 +104,8 @@ def check_contract(approved_preview=None, workspace_copy=None):
         errors.append("Both locales must use the approved square wordmark in the header and drawer")
     if header.count('id="cart-icon-bubble"') != 2:
         errors.append("Each language needs one native cart update target")
-    if header.count("unless settings.suiji_enable_orders") != 1 or header.count(
-        "render 'suiji-free-shipping', placement: 'announcement'"
-    ) != 1:
-        errors.append("The shared announcement must carry shipping and follow the preview order setting")
+    if header.count("render 'suiji-free-shipping', placement: 'announcement'") != 1 or "r-preview-strip" in header:
+        errors.append("The shared header announcement must show only the eligible delivery offer")
 
     home = read("snippets/suiji-r107-home.liquid")
     if home.count("render 'suiji-r107-home-hero'") != 2:

@@ -1,28 +1,29 @@
 {%- liquid
   assign language = request.locale.iso_code | split: '-' | first
-  assign base_examples = 'h01-blue-hoop,r01,suiji-photo-20261109-collar-03' | split: ','
+  assign collar_cover = 'COLLAR-03|suiji-reviewed-20261112-collar-03-01-gold-ea77b3f6549abc60.png|1.8|0|-4' | split: '|'
   assign charm_label = 'Charms'
   assign nav_label = 'Bases and charms'
-  assign base_types = 'Hoops, rings and necklaces'
   if language == 'fr'
     assign charm_label = 'Ornements'
     assign nav_label = 'Bases et ornements'
-    assign base_types = 'Créoles, bagues et colliers'
   endif
 -%}
 <nav class="r-system-circles suiji-core-choices" aria-label="{{ nav_label }}">
   <a data-core-system-choice="bases" href="{{ routes.root_url | append: '/pages/bases' | replace: '//', '/' }}">
     <span class="suiji-core-choices__image suiji-core-choices__image--bases" aria-hidden="true">
-      {% for example in base_examples %}
-        {%- capture cover -%}{% render 'suiji-storefront-cover', handle: example %}{%- endcapture -%}
-        {%- assign cover = cover | split: '|' -%}
-        <span class="suiji-core-choices__sample">
-          {% render 'suiji-storefront-cover-image', cover: cover, sizes: '100px' %}
-        </span>
-      {% endfor %}
+      <span class="suiji-core-choices__sample">
+        <img src="{{ 'suiji-final2-white-A016-600.webp' | asset_url }}" width="600" height="600" alt="" loading="lazy" decoding="async" class="suiji-framed-cover" style="--suiji-scale:1.28;--suiji-x:-1%;--suiji-y:-2.7%">
+      </span>
+      {%- capture ring_cover -%}{% render 'suiji-storefront-cover', handle: 'r01' %}{%- endcapture -%}
+      {%- assign ring_cover = ring_cover | split: '|' -%}
+      <span class="suiji-core-choices__sample">
+        {% render 'suiji-storefront-cover-image', cover: ring_cover, sizes: '160px' %}
+      </span>
+      <span class="suiji-core-choices__sample">
+        {% render 'suiji-storefront-cover-image', cover: collar_cover, sizes: '160px' %}
+      </span>
     </span>
     <span>Bases</span>
-    <span class="r-caption">{{ base_types }}</span>
   </a>
   <a data-core-system-choice="charms" href="{{ routes.root_url | append: '/pages/charms' | replace: '//', '/' }}">
     <span class="suiji-core-choices__image" aria-hidden="true">
