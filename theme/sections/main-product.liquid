@@ -158,7 +158,8 @@
               {%- if block.type == 'quantity_selector' or block.type == 'inventory' -%}{%- continue -%}{%- endif -%}
             {%- endif -%}
             {%- if suiji_product_display_only -%}
-              {%- if block.type == 'price' or block.type == 'quantity_selector' or block.type == 'buy_buttons' or block.type == 'inventory' -%}{%- continue -%}{%- endif -%}
+              {%- if block.type == 'quantity_selector' or block.type == 'buy_buttons' or block.type == 'inventory' -%}{%- continue -%}{%- endif -%}
+              {%- if block.type == 'price' and product.price <= 0 -%}{%- continue -%}{%- endif -%}
             {%- endif -%}
             {%- case block.type -%}
               {%- when '@app' -%}

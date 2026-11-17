@@ -2696,19 +2696,243 @@
               }
             ]
           }
+        },
+        "suiji-cross-chain": {
+          "product_id": "15926887579988",
+          "cover": "CROSS-S",
+          "state": "current_clasp_included_chain",
+          "source_groups": [
+            "CROSS"
+          ],
+          "latest_gallery": {
+            "CROSS-S": [
+              {
+                "sheet": "3lMVji",
+                "cell": "M526",
+                "media_id": "75253685190996",
+                "file": "suiji-20261118-cross-a-silver-6761dde5bc5d.jpg",
+                "source_sha256": "6761dde5bc5d57877972ccec4840bbaebfc0f8c3903b505d3dfd2472d5167742",
+                "reviewed_ai_sha256": "17a96a3e62b963fb2c87a958dbcd036788828ee3022f14b5f351fd9f71ef18d9"
+              },
+              {
+                "sheet": "3lMVji",
+                "cell": "M527",
+                "media_id": "75253685223764",
+                "file": "suiji-20261118-cross-b-silver-51c48684c7a6.jpg",
+                "source_sha256": "51c48684c7a6c1d5d2a082c431fe2134adae465314f605c50aa40849030edcde",
+                "reviewed_ai_sha256": "34dd3ec38aecc1b85fdf8dc5ba33ebca464b6fad92c78721621961bd8b2e6042"
+              },
+              {
+                "sheet": "3lMVji",
+                "cell": "M528",
+                "media_id": "75253685256532",
+                "file": "suiji-20261118-cross-d-silver-4a75e4952baa.jpg",
+                "source_sha256": "4a75e4952baad7ce7f0d46902bbabbc547650a2630bef755e5ca3448415d6b69",
+                "reviewed_ai_sha256": "1bad5785c84d4faee8dbc0c39246053512214414803a62504b4ca405a7426331"
+              }
+            ],
+            "CROSS-B": [
+              {
+                "sheet": "3lMVji",
+                "cell": "M532",
+                "media_id": "75253685289300",
+                "file": "suiji-20261118-cross-a-light-blue-4ca15d0238a3.jpg",
+                "source_sha256": "4ca15d0238a3a5a276d53e11402d5f31ce73bf54e84f57defa23be9e29f70e3b",
+                "reviewed_ai_sha256": "dab8f7421a0ee1526cc1e74664a4ddcbdf5d149afcd1a2f6c77d862da062f646"
+              },
+              {
+                "sheet": "3lMVji",
+                "cell": "M533",
+                "media_id": "75253685322068",
+                "file": "suiji-20261118-cross-b-light-blue-63e5da165bd4.jpg",
+                "source_sha256": "63e5da165bd403527e73f520856091d6666ef4a4c7b05d3d10da8a580cabb1f0",
+                "reviewed_ai_sha256": "e003577f5bc84e92aad39459311bc6f8de0e1601bb2e187ebe8afef6e015ce75"
+              },
+              {
+                "sheet": "3lMVji",
+                "cell": "M534",
+                "media_id": "75253685354836",
+                "file": "suiji-20261118-cross-d-light-blue-b51488f83dbd.jpg",
+                "source_sha256": "b51488f83dbd6890809ef1e499619291f7320e21d8eb8ba375ab02311f9d8f3d",
+                "reviewed_ai_sha256": "7c6efaa1f638e164c13da54cf0c2a9f7a5adec319d457ca60a0d1d399cf453a3"
+              }
+            ],
+            "CROSS-G": [
+              {
+                "sheet": "3lMVji",
+                "cell": "M529",
+                "media_id": "75253685387604",
+                "file": "suiji-20261118-cross-a-gold-66a08c4ab467.jpg",
+                "source_sha256": "66a08c4ab4677418a7530470278f18956cbecbb2d89c9293ef5fcc71e8919aa0",
+                "reviewed_ai_sha256": "1b92999c8ee240a50b0f7c02111a0bb32c2b8b4b9990b2a93c1d354f31fe4065"
+              },
+              {
+                "sheet": "3lMVji",
+                "cell": "M530",
+                "media_id": "75253685420372",
+                "file": "suiji-20261118-cross-b-gold-ccdf74301b07.jpg",
+                "source_sha256": "ccdf74301b07d8a4c6d3109205bb90500ad2a04de7fb1186b373443ea8c62e37",
+                "reviewed_ai_sha256": "6c06237cb39d76a04586949d2fb78dbc473e76f3d25d9a5e75305195e14ddd15"
+              },
+              {
+                "sheet": "3lMVji",
+                "cell": "M531",
+                "media_id": "75253685453140",
+                "file": "suiji-20261118-cross-d-gold-ab4301d8bd85.jpg",
+                "source_sha256": "ab4301d8bd8527ff0b932fa803c7cc14e9a605e2fb827eac3d170235455fc2e2",
+                "reviewed_ai_sha256": "8e9af377d3f9caff58f1f71474aa7507deaf0f0781915e26b0511d021c0292f1"
+              }
+            ]
+          }
+        },
+        "suiji-rpt-set-05-collar-hoop": {
+          "product_id": "15969780695380",
+          "cover": "RPT-SET-05",
+          "state": "current_whole_set",
+          "source_groups": [
+            "RPT-SET-05"
+          ],
+          "latest_gallery": {
+            "RPT-SET-05": [
+              {
+                "sheet": "Gv3hK",
+                "cell": "G21",
+                "media_id": "75253692727636",
+                "file": "suiji-20261118-05-a-gold-91223aeb63d6.jpg",
+                "source_sha256": "91223aeb63d6a126324fb9f67be81450705e2b0a71ab499dacd75b31c0f6edbf",
+                "reviewed_ai_sha256": "499d3620232ba244a5f0e2cd66ff806c6fc7cc31dae8fb69196e3dbf38503db4"
+              },
+              {
+                "sheet": "Gv3hK",
+                "cell": "G22",
+                "media_id": "75253692760404",
+                "file": "suiji-20261118-05-b-gold-3183f892a768.jpg",
+                "source_sha256": "3183f892a7683fc1bcf52fcb5c1845cc95b184a27d11808eed83004093d8bad0",
+                "reviewed_ai_sha256": "9a51565314cfc76ff9a5a824c8d70c9044aa2f5362878322cbf98e108a065ead"
+              },
+              {
+                "sheet": "Gv3hK",
+                "cell": "G23",
+                "media_id": "75253692793172",
+                "file": "suiji-20261118-05-d-gold-fb1b52629ffb.jpg",
+                "source_sha256": "fb1b52629ffbde18156b86e756930f9c11df00771711012427f16250ef574720",
+                "reviewed_ai_sha256": "7d59ce251b38b43c507ced3d2b0cf29f5aab1a63326d83212da4efb81aabb4ba"
+              }
+            ]
+          }
+        },
+        "suiji-rpt-set-06-collar-hoop-ring": {
+          "product_id": "15969781612884",
+          "cover": "RPT-SET-06",
+          "state": "current_whole_set",
+          "source_groups": [
+            "RPT-SET-06"
+          ],
+          "latest_gallery": {
+            "RPT-SET-06": [
+              {
+                "sheet": "Gv3hK",
+                "cell": "G24",
+                "media_id": "75253711765844",
+                "file": "suiji-20261118-06-a-gold-e118e793eaf8.jpg",
+                "source_sha256": "e118e793eaf8807e5c7ef498aa7e7477a373d8139643bb9283793aa1a9468989",
+                "reviewed_ai_sha256": "d6fb46c5d0384165cf39fa7b382d2ca3a2b39bf9fbab3f66941faa6b80ea4a0c"
+              },
+              {
+                "sheet": "Gv3hK",
+                "cell": "G25",
+                "media_id": "75253711798612",
+                "file": "suiji-20261118-06-b-gold-2e78c965aa06.jpg",
+                "source_sha256": "2e78c965aa06c7683a5d663664bb62f1bcf0ea417a7804e1ba94d47dea257bea",
+                "reviewed_ai_sha256": "e2b176d5eaa959ee847cb6755b1a078e46f6b8689537f7f42ac1412123dc7001"
+              },
+              {
+                "sheet": "Gv3hK",
+                "cell": "G26",
+                "media_id": "75253711831380",
+                "file": "suiji-20261118-06-d-gold-2aa3b987fae5.jpg",
+                "source_sha256": "2aa3b987fae5aec8d1d30e8bbf0f476c050e94b5af4a2700a1acd87f4f41e365",
+                "reviewed_ai_sha256": "d41b9e4badf57b4d2844d570b79a43c57be3632b4d04709b3b64b227d41747f1"
+              }
+            ]
+          }
+        },
+        "suiji-rpt-set-09-chain-ring": {
+          "product_id": "15969782301012",
+          "cover": "RPT-SET-09",
+          "state": "current_whole_set",
+          "source_groups": [
+            "RPT-SET-09"
+          ],
+          "latest_gallery": {
+            "RPT-SET-09": [
+              {
+                "sheet": "Gv3hK",
+                "cell": "G27",
+                "media_id": "75253722546516",
+                "file": "suiji-20261118-09-a-gold-a227d488366a.jpg",
+                "source_sha256": "a227d488366a7dea818ba9cf4dd6339e10bfc62f5c1758a103bbfe3f8331f82c",
+                "reviewed_ai_sha256": "03916da63b3282e35cce0933b788119082c2117eeaabfe4849faca15c6a38b52"
+              },
+              {
+                "sheet": "Gv3hK",
+                "cell": "G28",
+                "media_id": "75253722579284",
+                "file": "suiji-20261118-09-b-gold-e6269d8ded03.jpg",
+                "source_sha256": "e6269d8ded036b6d6888e5527603d15bd3204bd972a9bf51c87b5ff8814d76aa",
+                "reviewed_ai_sha256": "4a725ba77cf138be4016d38553656918ed012aa86753f71786d7204cd2293d06"
+              },
+              {
+                "sheet": "Gv3hK",
+                "cell": "G29",
+                "media_id": "75253722612052",
+                "file": "suiji-20261118-09-d-gold-94517e32ef82.jpg",
+                "source_sha256": "94517e32ef82be9213db4c85da1b68a24e62729f18a7f53396a15ba49b38db21",
+                "reviewed_ai_sha256": "ea224d8a27b2226d27bc910fb9aa9e40646d9b5dbf272b29a138142f5b2784f6"
+              }
+            ]
+          }
         }
       },
-      "without_current_gallery": [
-        "suiji-cross-chain",
-        "suiji-rpt-set-05-collar-hoop",
-        "suiji-rpt-set-06-collar-hoop-ring",
-        "suiji-rpt-set-09-chain-ring"
-      ]
+      "without_current_gallery": []
     }
   ],
   "explicit_exclusions": [
     "Two Logo disc pieces as standalone products",
     "Pearl backs as standalone products"
   ],
-  "image_policy": "Only current exact-match Feishu render attachments are used for storefront product imagery."
+  "image_policy": "Only current exact-match Feishu render attachments are used for storefront product imagery.",
+  "supplemental_batches": [
+    {
+      "date": "2026-11-18",
+      "products": [
+        "suiji-cross-chain",
+        "suiji-rpt-set-05-collar-hoop",
+        "suiji-rpt-set-06-collar-hoop-ring",
+        "suiji-rpt-set-09-chain-ring"
+      ],
+      "photo_count": 18,
+      "source_manifest_sha256": "f9f790b5f072adb0aa7ec8927312baf0a439781514de3cca4980238ab70f2997",
+      "source_cells": [
+        "3lMVji!M526",
+        "3lMVji!M527",
+        "3lMVji!M528",
+        "3lMVji!M532",
+        "3lMVji!M533",
+        "3lMVji!M534",
+        "3lMVji!M529",
+        "3lMVji!M530",
+        "3lMVji!M531",
+        "Gv3hK!G21",
+        "Gv3hK!G22",
+        "Gv3hK!G23",
+        "Gv3hK!G24",
+        "Gv3hK!G25",
+        "Gv3hK!G26",
+        "Gv3hK!G27",
+        "Gv3hK!G28",
+        "Gv3hK!G29"
+      ]
+    }
+  ]
 }

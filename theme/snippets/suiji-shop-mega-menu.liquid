@@ -1,0 +1,30 @@
+{%- doc -%}
+  The same verified category covers and destinations for desktop and mobile.
+  @param {string} [presentation] - Use r107 for the shared editorial shell.
+{%- enddoc -%}
+{%- liquid
+  assign categories = 'necklaces,earrings,rings,charms,bracelets,extras' | split: ','
+  assign examples = 'suiji-photo-20261109-collar-03,h01-blue-hoop,r01,suiji-photo-20261109-ornament-09,,suiji-photo-20261109-fitting-03' | split: ','
+  assign labels_en = 'Necklaces,Earrings,Rings,Charms,Bracelets & bangles,Accessories' | split: ','
+  assign labels_fr = 'Colliers,Boucles d’oreilles,Bagues,Ornements,Bracelets,Accessoires' | split: ','
+  assign labels = labels_en
+  if request.locale.iso_code contains 'fr'
+    assign labels = labels_fr
+  endif
+-%}
+{%- for category in categories -%}
+  {%- assign example = examples[forloop.index0] -%}
+  {%- assign target = '/collections/' | append: category -%}
+  {%- capture cover -%}{% render 'suiji-storefront-cover', handle: example %}{%- endcapture -%}
+  {%- assign cover = cover | split: '|' -%}
+  {%- if presentation != 'r107' -%}<li class="suiji-mega-menu__group">{%- endif -%}
+  <a class="suiji-photo-category{% if cover[1] == blank %} suiji-photo-category--text{% endif %}" href="{% render 'suiji-localized-menu-url', url: target %}">
+    {% if cover[1] != blank %}
+      <span class="suiji-photo-category__visual" aria-hidden="true">
+        {% render 'suiji-storefront-cover-image', cover: cover %}
+      </span>
+    {% endif %}
+    <span class="suiji-photo-category__title">{{ labels[forloop.index0] | escape }}</span>
+  </a>
+  {%- if presentation != 'r107' -%}</li>{%- endif -%}
+{%- endfor -%}

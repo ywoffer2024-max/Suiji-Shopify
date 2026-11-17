@@ -1,0 +1,83 @@
+{% doc %}
+  Renders the free standard shipping offer for the currently eligible euro markets.
+
+  @param {string} placement - announcement, empty, cart, or live
+{% enddoc %}
+{%- liquid
+  assign destination = localization.country.iso_code
+  assign currency = cart.currency.iso_code | default: localization.country.currency.iso_code
+  assign eligible_market = false
+  if destination == 'FR' or destination == 'US'
+    assign eligible_market = true
+  endif
+-%}
+{%- if eligible_market and currency == 'EUR' -%}
+  {%- liquid
+    assign minimum = 9500
+    assign balance = minimum
+    assign state = 'threshold'
+    assign french = false
+    if request.locale.iso_code contains 'fr'
+      assign french = true
+    endif
+
+    if placement == 'cart' or placement == 'live'
+      if cart.requires_shipping
+        assign balance = minimum | minus: cart.total_price
+        if balance > 0
+          assign state = 'remaining'
+        else
+          assign state = 'qualified'
+          assign balance = 0
+        endif
+      else
+        assign state = blank
+      endif
+    endif
+  -%}
+  {%- if state != blank -%}
+    {%- liquid
+      assign euros = balance | divided_by: 100
+      assign cents = balance | modulo: 100
+      if cents > 0
+        assign fraction = cents | prepend: '0' | slice: -2, 2
+        assign separator = '.'
+        if french
+          assign separator = ','
+        endif
+        assign euros = euros | append: separator | append: fraction
+      endif
+    -%}
+    {%- capture message -%}
+      {%- case state -%}
+        {%- when 'remaining' -%}
+          {%- if french -%}
+            Plus que {{ euros }} € pour bénéficier de la livraison standard offerte.
+          {%- else -%}
+            You’re €{{ euros }} away from free standard shipping.
+          {%- endif -%}
+        {%- when 'qualified' -%}
+          {%- if french -%}
+            Vous bénéficiez de la livraison standard offerte.
+          {%- else -%}
+            You qualify for free standard shipping.
+          {%- endif -%}
+        {%- else -%}
+          {%- if french -%}
+            Livraison standard offerte dès {{ euros }} €
+          {%- else -%}
+            Free standard shipping on orders of €{{ euros }} or more
+          {%- endif -%}
+      {%- endcase -%}
+    {%- endcapture -%}
+    {%- case placement -%}
+      {%- when 'announcement' -%}
+        {%- assign policy_link = routes.root_url | append: '/pages/shipping-returns#delivery' | replace: '//', '/' -%}
+        <a class="suiji-announcement__link" href="{{ policy_link }}"><span>{{ message | escape }}</span></a>
+      {%- when 'live' -%}
+        {{- message | escape -}}
+      {%- else -%}
+        <p class="suiji-shipping-status">{{ message | escape }}</p>
+    {%- endcase -%}
+  {%- endif -%}
+{%- endif -%}

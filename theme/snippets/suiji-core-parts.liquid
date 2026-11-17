@@ -1,0 +1,34 @@
+{%- liquid
+  assign language = request.locale.iso_code | split: '-' | first
+  if language == 'fr'
+    assign heading = 'Une base. Un fermoir. Votre ornement.'
+    assign base_label = 'La base'
+    assign base_copy = 'C’est la pièce que vous portez : un anneau, une boucle d’oreille, une chaîne, un tour de cou ou un bracelet.'
+    assign clasp_label = 'Le fermoir Core-Lock'
+    assign clasp_copy = 'C’est le point de connexion. Sur une base qui en est équipée, le fermoir reçoit et maintient l’ornement compatible.'
+    assign charm_label = 'L’ornement'
+    assign charm_copy = 'C’est le détail que vous choisissez. Il peut passer à une autre base SUIJI si les deux utilisent la connexion correspondante.'
+    assign note = 'Un ornement occupe un seul point de connexion à la fois. La fiche de chaque pièce précise le contenu et les associations compatibles.'
+    assign link_label = 'Voir les bases par type de bijou'
+  else
+    assign heading = 'A base. A clasp. Your charm.'
+    assign base_label = 'The base'
+    assign base_copy = 'This is the piece you wear: a ring band, earring, chain, collar or bracelet.'
+    assign clasp_label = 'The Core-Lock clasp'
+    assign clasp_copy = 'This is the connection point. On a base fitted with Core-Lock, the clasp receives and holds a compatible charm.'
+    assign charm_label = 'The charm'
+    assign charm_copy = 'This is the detail you choose. It can move to another SUIJI base when both use the matching connection.'
+    assign note = 'One charm occupies one connection point at a time. Each piece’s page tells you what is included and which combinations are compatible.'
+    assign link_label = 'See bases by jewelry type'
+  endif
+-%}
+<section class="r-section r-core-connection" id="connection">
+  <h2>{{ heading }}</h2>
+  <dl class="r-core-parts">
+    <div><dt>{{ base_label }}</dt><dd>{{ base_copy }}</dd></div>
+    <div><dt>{{ clasp_label }}</dt><dd>{{ clasp_copy }}</dd></div>
+    <div><dt>{{ charm_label }}</dt><dd>{{ charm_copy }}</dd></div>
+  </dl>
+  <p>{{ note }}</p>
+  <a class="r-link" href="{{ routes.root_url | append: '/pages/bases#base-types' | replace: '//', '/' }}">{{ link_label }}</a>
+</section>

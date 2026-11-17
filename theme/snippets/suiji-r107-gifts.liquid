@@ -1,0 +1,48 @@
+{%- liquid
+  assign french = false
+  if request.locale.iso_code contains 'fr'
+    assign french = true
+  endif
+  assign first_pieces = 'suiji-h02-hoop,suiji-cross-chain' | split: ','
+  assign gift_sets = 'suiji-rpt-set-04-collar-charm,suiji-rpt-set-09-chain-ring' | split: ','
+-%}
+<div class="r-site suiji-gifts" data-r107-page data-family="gifts" data-modules="1,2,3">
+  <header class="r-intro r-intro--small">
+    <h1>{% if french %}Cadeaux{% else %}Gifts{% endif %}</h1>
+    <p>{% if french %}Un bijou à porter à leur façon.{% else %}A gift they can make their own.{% endif %}</p>
+    {% render 'suiji-gift-budget-links', presentation: 'results' %}
+  </header>
+  <section class="r-section suiji-gifts__first" id="first-piece">
+    <h2>{% if french %}Leur premier bijou SUIJI{% else %}Their first SUIJI piece{% endif %}</h2>
+    <div class="r-grid suiji-gifts__grid">
+      {% for handle in first_pieces %}
+        {% render 'suiji-storefront-card', piece: all_products[handle], priority: true %}
+      {% endfor %}
+    </div>
+    <p>{% if french %}Une paire de créoles ou une chaîne se porte aussi seule.{% else %}Start with a pair of hoops or a chain. Either can be worn on its own.{% endif %}</p>
+  </section>
+  <section class="r-section">
+    <div class="r-section__heading">
+      <h2>{% if french %}Des ensembles à composer{% else %}Sets to wear together{% endif %}</h2>
+      <a class="r-link" href="{{ routes.root_url | append: '/collections/sets' | replace: '//', '/' }}">{% if french %}Voir les ensembles{% else %}View all sets{% endif %}</a>
+    </div>
+    <p>{% if french %}Chaque fiche précise les pièces incluses et les façons de les porter.{% else %}Each set page lists the pieces included and ways to wear them.{% endif %}</p>
+    <div class="r-grid suiji-gifts__grid">
+      {% for handle in gift_sets %}
+        {% render 'suiji-storefront-card', piece: all_products[handle] %}
+      {% endfor %}
+    </div>
+  </section>
+  <section class="r-section suiji-gifts__help" id="gift-help">
+    <div>
+      <h2>{% if french %}Compléter un bijou qu’ils portent déjà{% else %}Add to a piece they already wear{% endif %}</h2>
+      <p>{% if french %}Repérez la base et vérifiez son système de fixation avant de choisir un ornement ou un support.{% else %}Start with their base and check the connection before choosing a charm or holder.{% endif %}</p>
+      <a class="r-link" href="{{ routes.root_url | append: '/pages/the-mechanism' | replace: '//', '/' }}">{% if french %}Comprendre le système Core-Lock{% else %}Explore the Core-Lock system{% endif %}</a>
+    </div>
+    <div>
+      <h2>{% if french %}Vous hésitez sur le tour de doigt ?{% else %}Unsure of their ring size?{% endif %}</h2>
+      <p>{% if french %}Pensez aux boucles d’oreilles ou à une chaîne. Si vous avez une bague qui leur va, mesurez-la à l’aide du guide.{% else %}Consider earrings or a chain. If you have a ring that fits them, measure it with the size guide.{% endif %}</p>
+      <a class="r-link" href="{{ routes.root_url | append: '/pages/bases#size-guide' | replace: '//', '/' }}">{% if french %}Guide des tailles{% else %}Ring size guide{% endif %}</a>
+    </div>
+  </section>
+</div>

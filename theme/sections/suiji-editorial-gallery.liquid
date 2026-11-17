@@ -1,0 +1,35 @@
+<section class="suiji-gallery" aria-labelledby="SuijiGallery-{{ section.id }}">
+  <div class="suiji-gallery__header">
+    {%- if section.settings.eyebrow != blank -%}<span class="suiji-gallery__number">{{ section.settings.eyebrow | escape }}</span>{%- endif -%}
+    <h2 id="SuijiGallery-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
+    <p class="suiji-gallery__intro">{{ section.settings.intro | escape }}</p>
+  </div>
+
+  <div class="suiji-gallery__grid suiji-gallery__grid--single">
+    <figure class="suiji-gallery__figure suiji-gallery__figure--single">
+      <span class="suiji-gallery__image">
+        <img
+          src="{{ 'suiji-studio-editorial.webp' | asset_url }}"
+          alt="SUIJI Orbit and Gate pieces in a cool studio composition"
+          width="2400"
+          height="1600"
+          loading="lazy"
+        >
+      </span>
+      <figcaption><span>A COLLECTION IN MOTION</span><span class="suiji-gallery__caption-detail">Built to reconfigure</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "SUIJI editorial gallery",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Built as a system. Styled as a collection." },
+    { "type": "textarea", "id": "intro", "label": "Introduction", "default": "Sculptural forms repeat across earrings, rings and chains, so every combination still feels like SUIJI." }
+  ],
+  "presets": [{ "name": "SUIJI editorial gallery" }]
+}
+{% endschema %}

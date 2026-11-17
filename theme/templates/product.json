@@ -1,0 +1,122 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "custom_liquid_Jc7zXW": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% comment %}Merchant-confirmed preorder notice. Only R01 and its Oval Motif. 2026-10-28.{% endcomment %}\n{% if product.handle == 'r01' or product.handle == 'oval-motif' %}\n  {% if request.locale.iso_code == 'fr' %}\n    {% assign suiji_ship_note = 'Précommande — Expédition prévue dans les 3 mois suivant votre commande.' %}\n  {% else %}\n    {% assign suiji_ship_note = 'Pre-order — expected to ship within 3 months of purchase.' %}\n  {% endif %}\n  <p data-suiji-preorder-notice style=\"padding:1.2rem 1.4rem;border:1px solid rgba(var(--color-foreground),.18);font-size:1.3rem;line-height:1.6;margin:1.4rem 0;\">{{ suiji_ship_note }}</p>\n  <input type=\"hidden\" form=\"product-form-{{ section.id }}\" name=\"properties[Pre-order]\" value=\"{{ suiji_ship_note | escape }}\">\n{% endif %}\n\n{% comment %}SUIJI 2026-10-29. Display-only sizes; no new SKUs or stock. Only true 54/57 mm variants can be selected. Scope: a Ring Size option, or Size on a Ring product.{% endcomment %}\n{% liquid\n  assign suiji_size_position = 0\n  assign suiji_product_type = product.type | downcase\n  for suiji_option in product.options_with_values\n    assign suiji_option_name = suiji_option.name | downcase | strip\n    if suiji_option_name == 'ring size' or suiji_option_name == '戒围'\n      assign suiji_size_position = suiji_option.position\n    elsif suiji_option_name == 'size'\n      if suiji_product_type contains 'ring'\n        assign suiji_size_position = suiji_option.position\n      endif\n    endif\n  endfor\n  assign suiji_size_index = suiji_size_position | minus: 1\n  assign suiji_size_label = 'Ring size — inner circumference (mm)'\n  assign suiji_size_available = 'Available for pre-order'\n  assign suiji_size_unavailable = 'Currently unavailable'\n  assign suiji_size_choose = 'Choose your ring size'\n  assign suiji_size_note = 'Only 54 and 57 mm are available for pre-order. Expected to ship within 3 months of payment.'\n  if request.locale.iso_code == 'fr'\n    assign suiji_size_label = 'Taille de bague — circonférence intérieure (mm)'\n    assign suiji_size_available = 'Disponible en précommande'\n    assign suiji_size_unavailable = 'Actuellement indisponible'\n    assign suiji_size_choose = 'Choisir votre taille de bague'\n    assign suiji_size_note = 'Seules les tailles 54 et 57 mm sont disponibles en précommande. Expédition prévue dans les 3 mois suivant le paiement.'\n  elsif request.locale.iso_code contains 'zh'\n    assign suiji_size_label = '戒围 — 内周长（毫米）'\n    assign suiji_size_available = '可预售'\n    assign suiji_size_unavailable = '暂不可售'\n    assign suiji_size_choose = '请选择戒围'\n    assign suiji_size_note = '目前仅 54、57 mm 可预售，付款后预计三个月内发货。'\n  endif\n%}\n{% if suiji_size_position > 0 %}\n<div class=\"suiji-ring-size-policy\" data-suiji-ring-size-policy data-section=\"{{ section.id }}\" data-position=\"{{ suiji_size_position }}\" hidden>\n  <label for=\"SuijiRingSize-{{ section.id }}\">{{ suiji_size_label }}</label>\n  <select id=\"SuijiRingSize-{{ section.id }}\" aria-describedby=\"SuijiRingSizeNote-{{ section.id }}\" autocomplete=\"off\">\n    <option value=\"\" disabled>{{ suiji_size_choose }}</option>\n    {% for suiji_mm in (41..65) %}\n      <option value=\"{{ suiji_mm }}\" disabled>{{ suiji_mm }} mm — {{ suiji_size_unavailable }}</option>\n    {% endfor %}\n  </select>\n  <p id=\"SuijiRingSizeNote-{{ section.id }}\">{{ suiji_size_note }}</p>\n  <p data-size-status role=\"status\" aria-live=\"polite\"></p>\n  <script type=\"application/json\" data-size-variants>{{ product.variants | json }}</script>\n  <script type=\"application/json\" data-size-labels>{\"available\":{{ suiji_size_available | json }},\"unavailable\":{{ suiji_size_unavailable | json }}}</script>\n</div>\n<style>\n.suiji-ring-size-policy{margin:1.5rem 0;max-width:44rem}\n.suiji-ring-size-policy[hidden],.suiji-native-ring-size[hidden]{display:none!important}\n.suiji-ring-size-policy label{display:block;font-size:1.3rem;line-height:1.5;margin-bottom:.7rem}\n.suiji-ring-size-policy select{width:100%;min-height:4.5rem;padding:1rem 3.2rem 1rem 1.2rem;border:1px solid rgba(var(--color-foreground),.4);border-radius:0;background:rgb(var(--color-background));color:rgb(var(--color-foreground));font:inherit;font-size:1.4rem}\n.suiji-ring-size-policy select:focus-visible{outline:2px solid currentColor;outline-offset:3px}\n.suiji-ring-size-policy option:disabled{color:#777}\n.suiji-ring-size-policy p{font-size:1.2rem;line-height:1.6;margin:.6rem 0}\n.suiji-ring-size-policy [data-size-status]:empty{display:none}\n</style>\n<script>\n(function(){\n  const boot = () => document.querySelectorAll('[data-suiji-ring-size-policy]').forEach(root => {\n    if(root.dataset.ready) return;\n    const scope = document.getElementById('ProductInfo-'+root.dataset.section) || root.closest('product-info');\n    if(!scope) return;\n    const variants = JSON.parse(root.querySelector('[data-size-variants]').textContent);\n    const words = JSON.parse(root.querySelector('[data-size-labels]').textContent);\n    const pos = Number(root.dataset.position)-1;\n    const control = root.querySelector('select');\n    const status = root.querySelector('[data-size-status]');\n    const mm = value => Number(String(value).replace(/mm/ig,'').trim());\n    const allowed = value => [54,57].includes(mm(value));\n    let pending = false;\n    function controls(){\n      const picker = scope.querySelector('variant-selects');\n      if(!picker) return null;\n      const groups = Array.from(picker.querySelectorAll('fieldset, .product-form__input--dropdown'));\n      if(!groups[pos]) return null;\n      return {picker,groups,size:groups[pos]};\n    }\n    function valueOf(group){return group.querySelector('input:checked')?.value || group.querySelector('select')?.value || '';}\n    function current(){\n      const id = scope.querySelector('product-form form input[name=\"id\"]')?.value;\n      return variants.find(v=>String(v.id)===String(id));\n    }\n    function valid(){const v=current();return !!(v && v.available && allowed(v.options[pos]));}\n    function sync(){\n      const c=controls(); if(!c) return;\n      const chosen=c.groups.map(valueOf);\n      for(const option of control.options){\n        if(!option.value)continue;\n        const n=Number(option.value);\n        const available=[54,57].includes(n) && variants.some(v=>v.available && mm(v.options[pos])===n && v.options.every((value,i)=>i===pos || value===chosen[i]));\n        const label=n+' mm — '+(available?words.available:words.unavailable);\n        if(option.disabled===available) option.disabled=!available;\n        if(option.textContent!==label) option.textContent=label;\n      }\n      const selected=mm(chosen[pos]);\n      const next=[54,57].includes(selected) && !Array.from(control.options).find(o=>Number(o.value)===selected)?.disabled ? String(selected) : '';\n      if(control.value!==next) control.value=next;\n      c.size.classList.add('suiji-native-ring-size');\n      if(!c.size.hidden)c.size.hidden=true;\n      if(root.previousElementSibling!==c.picker)c.picker.after(root);\n      if(root.hidden)root.hidden=false;\n      const ok=valid();\n      const text=ok ? '' : words.unavailable;\n      if(status.textContent!==text)status.textContent=text;\n      scope.querySelectorAll('product-form button[type=\"submit\"]').forEach(button=>{\n        if(!ok && !button.disabled){button.dataset.suijiSizeBlocked='1';button.disabled=true;}\n        else if(ok && button.dataset.suijiSizeBlocked){delete button.dataset.suijiSizeBlocked;button.disabled=false;}\n      });\n      const accelerated=scope.querySelector('.shopify-payment-button');\n      if(accelerated){\n        if(!ok && !accelerated.hidden){accelerated.dataset.suijiSizeBlocked='1';accelerated.hidden=true;}\n        else if(ok && accelerated.dataset.suijiSizeBlocked){delete accelerated.dataset.suijiSizeBlocked;accelerated.hidden=false;}\n      }\n    }\n    function schedule(){if(pending)return;pending=true;requestAnimationFrame(()=>{pending=false;sync();});}\n    control.addEventListener('change',event=>{\n      event.stopPropagation();\n      if(![54,57].includes(Number(control.value)))return;\n      const c=controls();if(!c)return;\n      const radio=Array.from(c.size.querySelectorAll('input[type=\"radio\"]')).find(input=>mm(input.value)===Number(control.value));\n      if(radio)radio.click();\n      else{const select=c.size.querySelector('select');const option=select && Array.from(select.options).find(o=>mm(o.value)===Number(control.value));if(option){select.value=option.value;select.dispatchEvent(new Event('change',{bubbles:true}));}}\n      schedule();\n    });\n    scope.addEventListener('change',schedule);\n    scope.addEventListener('submit',event=>{if(!valid()){event.preventDefault();event.stopImmediatePropagation();status.textContent=words.unavailable;}},true);\n    new MutationObserver(schedule).observe(scope,{subtree:true,childList:true,attributes:true,attributeFilter:['value','checked','disabled']});\n    root.dataset.ready='1';sync();\n  });\n  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();\n  document.addEventListener('shopify:section:load',boot);\n})();\n</script>\n{% endif %}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "custom_liquid_CVV6JV": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% comment %}SUIJI merchant-authored pairing module, R01 only. Existing Oval Motif variants; no duplicate catalog products. 2026-10-28.{% endcomment %}\n{% if product.handle == 'r01' %}\n{% assign motif_product = all_products['oval-motif'] %}\n{% if request.locale.iso_code == 'fr' %}{% assign suiji_ship_note = 'Précommande — Expédition prévue dans les 3 mois suivant votre commande.' %}{% else %}{% assign suiji_ship_note = 'Pre-order — expected to ship within 3 months of purchase.' %}{% endif %}\n<suiji-complete-look class=\"suiji-look\" data-add-url=\"{{ routes.cart_add_url }}.js\" data-cart-url=\"{{ routes.cart_url }}\" data-add-label=\"{{ 'products.product.add_to_cart' | t | escape }}\" data-sold-label=\"{{ 'products.product.sold_out' | t | escape }}\" data-error-label=\"{{ 'sections.cart.cart_error' | t | escape }}\">\n  <div class=\"suiji-look__header\"><h2 class=\"suiji-look__heading\">Complete the look</h2><a class=\"suiji-look__cart\" href=\"{{ routes.cart_url }}\">{{ 'general.cart.view_empty_cart' | t }} →</a></div>\n  <div class=\"suiji-look__grid\">\n  {% assign look_styles = 'Smooth,Hammered' | split: ',' %}\n  {% for look_style in look_styles %}\n    {% assign look_variants = motif_product.variants | where: 'option1', look_style %}\n    {% assign look_selected = look_variants.first %}\n    {% if look_style == 'Smooth' %}\n      {% assign look_title = 'Smooth oval motif' %}\n      {% assign look_image = 'https://cdn.shopify.com/s/files/1/1041/4112/8020/files/mf-f01-front-f337b8015d3d1e41.png?v=1793146105' %}\n      {% for look_variant in look_variants %}{% if look_variant.option2 == 'Smoky' and look_variant.option3 == 'Gold' %}{% assign look_selected = look_variant %}{% endif %}{% endfor %}\n    {% else %}\n      {% assign look_title = 'Hammered oval motif' %}\n      {% assign look_image = 'https://cdn.shopify.com/s/files/1/1041/4112/8020/files/mf-f02-front-7866b0cf3fed3922.png?v=1793146100' %}\n      {% for look_variant in look_variants %}{% if look_variant.option2 == 'Aqua' and look_variant.option3 == 'Silver' %}{% assign look_selected = look_variant %}{% endif %}{% endfor %}\n    {% endif %}\n    <article class=\"suiji-look__card\" data-look-style=\"{{ look_style | escape }}\">\n      <div class=\"suiji-look__photo\"><img src=\"{{ look_image }}\" alt=\"{{ look_title | escape }}\" width=\"400\" height=\"500\" loading=\"lazy\"></div>\n      <h3 class=\"suiji-look__title\">{{ look_title }}</h3>\n      <p class=\"suiji-look__price\" data-look-price>{% if look_selected != blank %}{{ look_selected.price | money_with_currency }}{% else %}{{ 3900 | money_with_currency }}{% endif %}</p>\n      <div class=\"suiji-look__options\">\n        <button type=\"button\" class=\"suiji-look__toggle\" data-look-toggle aria-expanded=\"false\" aria-controls=\"SuijiLookPanel-{{ section.id }}-{{ forloop.index }}\"><span>{{ 'products.product.choose_options' | t }}</span><span aria-hidden=\"true\" class=\"suiji-look__plus\">+</span></button>\n        <div data-look-panel id=\"SuijiLookPanel-{{ section.id }}-{{ forloop.index }}\" hidden>\n        {% if look_variants.size > 0 %}\n        <form method=\"post\" action=\"{{ routes.cart_add_url }}\" class=\"suiji-look__form\">\n          <label for=\"SuijiLook-{{ section.id }}-{{ forloop.index }}\" class=\"visually-hidden\">{{ 'products.product.product_variants' | t }}: {{ look_title }}</label>\n          <select id=\"SuijiLook-{{ section.id }}-{{ forloop.index }}\" name=\"id\" aria-label=\"{{ look_title | escape }} — {{ 'products.product.product_variants' | t | escape }}\">\n          {% for look_variant in look_variants %}\n            <option value=\"{{ look_variant.id }}\" data-available=\"{{ look_variant.available }}\" data-price=\"{{ look_variant.price | money_with_currency | escape }}\" {% if look_variant.id == look_selected.id %}selected{% endif %}>{{ look_variant.option2 | escape }} / {{ look_variant.option3 | escape }}{% unless look_variant.available %} — {{ 'products.product.sold_out' | t }}{% endunless %}</option>\n          {% endfor %}\n          </select>\n          <input type=\"hidden\" name=\"quantity\" value=\"1\">\n          <input type=\"hidden\" name=\"properties[Pre-order]\" data-preorder-value value=\"{{ suiji_ship_note | escape }}\">\n          <button type=\"submit\" class=\"button button--secondary suiji-look__add\" {% unless look_selected.available %}disabled{% endunless %}>{% if look_selected.available %}{{ 'products.product.add_to_cart' | t }}{% else %}{{ 'products.product.sold_out' | t }}{% endif %}</button>\n          <p data-look-error class=\"suiji-look__error\" role=\"status\" aria-live=\"polite\"></p>\n        </form>\n        {% else %}\n          <button class=\"button button--secondary suiji-look__add\" disabled>{{ 'products.product.unavailable' | t }}</button>\n        {% endif %}\n      </div></div>\n    </article>\n  {% endfor %}\n  </div>\n</suiji-complete-look>\n<style>\n.suiji-look{display:block;margin:2.8rem 0 2.4rem;padding-top:2.4rem;border-top:1px solid rgba(var(--color-foreground),.18)}\n.suiji-look__header{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}.suiji-look__cart{font-size:1.15rem;color:inherit;text-underline-offset:3px;white-space:nowrap}.suiji-look__heading{font-family:inherit;font-size:1.8rem;line-height:1.35;font-weight:500;letter-spacing:.02em;margin:0 0 1.8rem}\n.suiji-look__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.8rem}\n.suiji-look__card{min-width:0}.suiji-look__photo{aspect-ratio:4/5;background:#fff;overflow:hidden}\n.suiji-look__photo img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .25s ease}\n.suiji-look__title{font-family:inherit;font-size:1.35rem;font-weight:500;line-height:1.5;letter-spacing:.01em;margin:1.1rem 0 .3rem}\n.suiji-look__price{font-size:1.25rem;line-height:1.5;margin:0 0 .9rem}.suiji-look__options{border-top:1px solid rgba(var(--color-foreground),.14)}\n.suiji-look__toggle{appearance:none;border:0;border-radius:0;background:transparent;color:inherit;font:inherit;text-align:left;width:100%;display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:1rem 0;cursor:pointer;font-size:1.15rem;line-height:1.4}\n.suiji-look [hidden]{display:none!important}.suiji-look__plus{font-size:2rem;line-height:1}.suiji-look__toggle[aria-expanded=\"true\"] .suiji-look__plus{transform:rotate(45deg)}\n.suiji-look__form select{font:inherit;font-size:1.2rem;width:100%;padding:.8rem;border:1px solid #aaa;background:#fff;color:#171717;border-radius:0}\n.suiji-look__add{width:100%;min-height:4rem;margin-top:1rem;padding:.8rem;font-size:1.15rem;min-width:0}.suiji-look__add:disabled{opacity:.55;cursor:not-allowed}\n.suiji-look__error{font-size:1.1rem;color:#8f2626;line-height:1.5;margin:.7rem 0 0}.suiji-look__error:empty{display:none}\n@media(prefers-reduced-motion:reduce){.suiji-look__photo img{transition:none}}\n@media(max-width:480px){.suiji-look__grid{gap:1.2rem}.suiji-look__heading{font-size:1.7rem}.suiji-look__title{font-size:1.25rem}}\n</style>\n<script>\nif(!customElements.get('suiji-complete-look')){\n  customElements.define('suiji-complete-look',class extends HTMLElement{\n    connectedCallback(){\n      if(this.dataset.ready)return;this.dataset.ready='true';\n      this.querySelectorAll('[data-look-toggle]').forEach(toggle=>{toggle.addEventListener('click',()=>{const panel=this.querySelector('#'+toggle.getAttribute('aria-controls'));const open=toggle.getAttribute('aria-expanded')==='true';panel.hidden=open;toggle.setAttribute('aria-expanded',String(!open));});});\n      this.querySelectorAll('form').forEach(form=>{\n        const select=form.querySelector('select[name=\"id\"]'),button=form.querySelector('button[type=\"submit\"]'),error=form.querySelector('[data-look-error]');\n        const sync=()=>{const option=select.selectedOptions[0];button.disabled=option.dataset.available!=='true';button.textContent=button.disabled?this.dataset.soldLabel:this.dataset.addLabel;form.closest('article').querySelector('[data-look-price]').textContent=option.dataset.price;error.textContent='';};\n        select.addEventListener('change',sync);sync();\n        form.addEventListener('submit',async event=>{\n          event.preventDefault();if(form.dataset.busy||select.selectedOptions[0].dataset.available!=='true')return;\n          form.dataset.busy='true';button.disabled=true;form.setAttribute('aria-busy','true');error.textContent='';\n          try{\n            const response=await fetch(this.dataset.addUrl,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({id:Number(select.value),quantity:1,properties:{\"Pre-order\":form.querySelector(\"[data-preorder-value]\").value}})});\n            const result=await response.json();if(!response.ok)throw new Error(result.description||this.dataset.errorLabel);\n            window.location.assign(this.dataset.cartUrl);\n          }catch(reason){error.textContent=reason.message||this.dataset.errorLabel;button.disabled=false;}\n          finally{delete form.dataset.busy;form.removeAttribute('aria-busy');}\n        });\n      });\n    }\n  });\n}\n</script>\n{% endif %}"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "custom_liquid_Jc7zXW",
+        "buy_buttons",
+        "custom_liquid_CVV6JV",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products"
+  ]
+}

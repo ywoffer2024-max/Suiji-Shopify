@@ -1,0 +1,9 @@
+.suiji-hero__media,.suiji-method__media{background:#eee}
+.suiji-hero__image,.suiji-method__image{object-fit:contain!important;object-position:center;aspect-ratio:4/5;width:100%;height:auto!important;display:block;filter:none}
+.suiji-hero__media{align-self:stretch;display:flex;align-items:center;justify-content:center}
+.suiji-guides .suiji-guide-feature{display:flex;align-items:flex-end;min-height:220px;border:1px solid rgba(var(--color-foreground),.18)}
+.suiji-guides .suiji-guide-feature__content{position:static;background:none;color:inherit;padding:28px}
+@media(max-width:749px){.suiji-hero__image{max-height:70vh;width:auto;max-width:100%}.suiji-method__image{max-height:65vh;width:100%;max-width:100%;margin-inline:auto}}
+
+/* Keep the existing typeface while opening up tightly tracked display text. */
+.suiji-hero .suiji-display { letter-spacing: -.03em; text-wrap: balance; }

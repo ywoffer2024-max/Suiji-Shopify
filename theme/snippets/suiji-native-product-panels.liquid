@@ -6,7 +6,7 @@
   if product.tags contains 'suiji-display-only'
     assign suiji_panel_display_only = true
   endif
-  if suiji_panel_display_only or product.tags contains 'suiji-render-20261117'
+  if suiji_panel_display_only or product.tags contains 'suiji-render-20261117' or product.tags contains 'suiji-render-20261118'
     assign suiji_panel_locale = request.locale.iso_code | split: '-' | first
     assign suiji_panel_copy = product.metafields.custom.suiji_display_copy.value[suiji_panel_locale]
     assign suiji_panel_title = suiji_panel_copy.title | default: product.title
@@ -18,9 +18,6 @@
 -%}
 
 <suiji-native-product class="suiji-native-tabs" {{ description_block.shopify_attributes }}>
-  {% if product.metafields.custom.suiji_set_quote.value != blank %}
-    <p class="price price--large" data-quote-set-product-price>{{ product.price | money_without_trailing_zeros }}</p>
-  {% endif %}
   <div role="tablist" aria-label="{{ suiji_panel_title | escape }}">
     {%- assign panel_names = 'description,notes,shipping' | split: ',' -%}
     {%- for panel_name in panel_names -%}{%- assign label_key = 'suiji_pdp.tab_' | append: panel_name -%}<button type="button" role="tab" id="NativeTab-{{ section.id }}-{{ product.id }}-{{ panel_name }}" aria-controls="NativePanel-{{ section.id }}-{{ product.id }}-{{ panel_name }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" tabindex="{% if forloop.first %}0{% else %}-1{% endif %}" data-native-tab="{{ panel_name }}">{{ label_key | t }}</button>{%- endfor -%}

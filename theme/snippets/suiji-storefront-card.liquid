@@ -73,7 +73,7 @@
           {% if fixed_circumference %}<p class="r-caption">{{ 'suiji_sizing.inner_circumference_value' | t: measurement: fixed_circumference }}</p>{% endif %}
           <p class="r-price" data-card-price{% if budget %} data-gift-budget-price{% endif %}>{{ offer.price | money_with_currency }}</p>
           {%- if set_quote != blank and shows_cover -%}
-            <p class="r-card__state">{% if piece.featured_media.alt contains ' · Set contents' %}{% if locale == 'fr' %}Ensemble présenté{% else %}Set shown{% endif %}{% else %}{% if locale == 'fr' %}Composants présentés{% else %}Selected components{% endif %}{% endif %}</p>
+            <p class="r-card__state">{% if piece.featured_media.alt contains ' · Set contents' or piece.featured_media.alt contains ' · Full set' %}{% if locale == 'fr' %}Ensemble présenté{% else %}Set shown{% endif %}{% else %}{% if locale == 'fr' %}Composants présentés{% else %}Selected components{% endif %}{% endif %}</p>
           {%- elsif settings.suiji_enable_orders == false or piece.tags contains 'suiji-display-only' -%}
             <p class="r-card__state">{{ 'suiji_pdp.preview_status' | t }}</p>
           {%- endif -%}

@@ -448,6 +448,13 @@ html.suiji-native-dialog-open{overflow:hidden}
     scrollbar-width: none;
   }
 
+  .suiji-native-pdp [data-suiji-thumbnail-rail] .thumbnail-list .thumbnail-list__item.slider__slide {
+    width: var(--r-thumbnail);
+    min-width: var(--r-thumbnail);
+    max-width: var(--r-thumbnail);
+    flex: 0 0 var(--r-thumbnail);
+  }
+
   .suiji-native-pdp [data-suiji-thumbnail-rail] .slider-button,
   .suiji-native-pdp .suiji-native-gallery-count .slider-button {
     display: none;

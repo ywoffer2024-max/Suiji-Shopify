@@ -1,0 +1,28 @@
+<section class="suiji-manifesto" aria-labelledby="SuijiManifesto-{{ section.id }}">
+  <div class="suiji-manifesto__copy-block">
+    {%- if section.settings.eyebrow != blank -%}<span class="suiji-manifesto__eyebrow">{{ section.settings.eyebrow | escape }}</span>{%- endif -%}
+    <h2 id="SuijiManifesto-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
+    <div class="suiji-manifesto__copy">{{ section.settings.text }}</div>
+    {%- if section.settings.link_label != blank -%}
+      <a class="suiji-editorial__link" href="{{ section.settings.link }}">{{ section.settings.link_label | escape }}</a>
+    {%- endif -%}
+  </div>
+  <div class="suiji-manifesto__media" aria-label="SUIJI form shown between two compatible jewelry bases">
+    <img src="{{ 'suiji-studio-mechanism-preview.webp' | asset_url }}" alt="A SUIJI triangular form displayed between ring and earring bases" width="2000" height="1333" loading="lazy">
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "SUIJI manifesto",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "THE SUIJI SYSTEM" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "One form. More ways to wear it." },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Detach the ornament, align it with a compatible base, and press until it locks. No tools required.</p>" },
+    { "type": "text", "id": "link_label", "label": "Link label", "default": "SEE HOW IT WORKS" },
+    { "type": "url", "id": "link", "label": "Link" }
+  ],
+  "presets": [{ "name": "SUIJI manifesto" }]
+}
+{% endschema %}

@@ -1,4 +1,4 @@
-# SUIJI Design System · v6.3.14
+# SUIJI Design System · v6.3.15
 
 Updated 18 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery, the homepage featured set, delivery information and the cart shipping message. It also refines the shared Core-Lock entry, limits the global announcement to delivery, and uses a light palette with a muted grey-blue editorial surface. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
 
@@ -212,6 +212,13 @@ Journal uses the existing breadcrumb component for Home / The Journal / current 
 
 Social sharing images follow the same current-render whitelist. The shared social-image helper maps known product and collection contexts to an approved current render. Pages without an exact mapping, including image-free Journal articles, use the existing SUIJI logo as neutral brand identification in social metadata; it is not an article feature image or a product photograph. Its actual512×511 dimensions and summary Twitter card are declared. Use an explicit brand image because live pages with an omitted image gained an additional old-image tag after the theme scripts. Verify the corrected live output rather than infer the injection mechanism. Never fall back to a legacy Page/settings image, mutate those native settings, or introduce unrelated imagery. This v6.1.9 fix changes metadata only; layout, CSS, fonts and visible content stay unchanged.
 
+### Verified catalogue supplement · 18 November 2026
+
+- The clasp-included 55 cm cross-link chain uses its reviewed 18 November views for all three finishes. All three native prices are €27. The fixed Core-Lock is welded to both chain ends; compatible charms are separate. Its Complete the look area presents the complete currently published compatible charm range.
+- Sets 05, 06 and 09 use their own reviewed complete-set and component views. Their native English/French contents match the pictured bases. Sets with confirmed positive prices use the standard price block beside the preview status, before supporting links and descriptive tabs.
+- Keep the desktop thumbnail rail at the existing 64 px token. Its slide width must override the inherited horizontal carousel percentage widths; mobile retains the existing 56 px horizontal thumbnails.
+- Native product stages and zoom images request Shopify image quality 90. Zoom retains an original-width source candidate. Catalogue images remain responsive; do not load every full-size image for a card.
+
 ### Native cart, forms and local previews
 
 Native pages and R107 pages share the storefront shell. Native sections keep the existing Shopify rem scale and section updates. The cart uses one `#cart-icon-bubble` update target with its existing quantity and accessible label. App embeds and native forms retain their active settings. The preview bag is browser-local and clearly labeled. Contact and newsletter submit only to their configured Shopify services and show actual success or failure. Native account endpoints stay in use.
@@ -244,7 +251,7 @@ Empty selections show one exploration action and hide order/review summaries. Pr
 Shopping preview: the final action goes to the existing Contact page with the current local selection prefilled, and sends nothing automatically. Do not link to an unsaved Page or imply that an order/payment exists. Search indexes the visible catalogue's documented EN/FR names, roles, materials and option labels; all query words must match. No-result states offer clear, browse and Contact actions. Do not infer a mineral from appearance.
 
 
-Use the current publication batch registry to select the latest exact-match Feishu render for each Shopify SKU and view, including cards, galleries, recommendations, cart thumbnails, menus, editorial product placements and share images. Keep existing public product and set links available when current imagery is missing. Show a text-only card or empty gallery state with the actual details. Label partial set imagery as selected components and show only positively identified parts. Withhold wearing illustrations until their current versions are reviewed. The existing Chunyu portrait, brand logo and functional icons are approved exceptions to the product-image source. Match captions and alt text to the components actually visible. A bare-base listing depicts the base on its own. Recommendations require a current, exact-match image. Keep historically unpublished products on their established unavailable routes.
+Use the current publication batch registry to select the latest exact-match Feishu render for each Shopify SKU and view, including cards, galleries, recommendations, cart thumbnails, menus, editorial product placements and share images. The 18 November supplement adds the verified 55 cm clasp-included chain in three finishes and whole-set images for sets 05, 06 and 09. Their six native variants have three current views each. The chain includes its fixed Core-Lock clasp, directly welded to both chain ends, at the confirmed €27 for each finish. Keep existing public product and set links available when current imagery is missing. Show a text-only card or empty gallery state with the actual details. Label partial set imagery as selected components and show only positively identified parts. Withhold wearing illustrations until their current versions are reviewed. The existing Chunyu portrait, brand logo and functional icons are approved exceptions to the product-image source. Match captions and alt text to the components actually visible. A bare-base listing depicts the base on its own. Recommendations require a current, exact-match image. Keep historically unpublished products on their established unavailable routes.
 
 
 - Use one shared renderer and generated template per family, not a hand-built page per SKU. Preserve URLs, identities, native locale roots and query-selected configuration. Bind native internal URLs through `routes.root_url`; do not hardcode an assumed `/fr` root.
@@ -288,7 +295,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
 
 ```json design-lock
 {
-  "version": "6.3.14",
+  "version": "6.3.15",
   "implementation_version": "6.3.10",
   "approved_preview": {
     "sha256": "6e28e3e61d6effec39fd36c7c8777d09bb5e85471d3b7c794ccb75b0277cdc92",
@@ -370,7 +377,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
   "components": [
     {
       "path": "theme/assets/suiji-native-pdp.css",
-      "sha256": "20d6d1cd152aa537e1dd37576ac071baea5ee4abf9ca349765762592b296a8ea"
+      "sha256": "c3a3707fdc16651c45a93db7e0bb180b2120b6a37fa6946f376b2ef43465cf1a"
     },
     {
       "path": "theme/assets/product-info.js",
@@ -390,7 +397,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/sections/main-product.liquid",
-      "sha256": "f32f0c0a8d3a8ec456e21c4884e1670cbaf5be7d8ab167313755b4a3105d0d4b"
+      "sha256": "62f92a24f598846ce1ebfa1b2c1aa4bcd7c5837a2b7d1d523403f2bbce08e284"
     },
     {
       "path": "theme/snippets/product-variant-picker.liquid",
@@ -402,7 +409,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/product-thumbnail.liquid",
-      "sha256": "d8b3ddc8eb7baf0c7c8e932c962ce05405edc7ce39a92c6f20df53bbd0de93b7"
+      "sha256": "0ffc60719a93f4f67f2a6c32b2ef5755642f2f6d64793b7e30e4860118126a1e"
     },
     {
       "path": "theme/snippets/product-media-gallery.liquid",
@@ -450,15 +457,15 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-storefront-card.liquid",
-      "sha256": "63d4d0d31b1015039c20fddf238cbda6cb3f4ad2414079cb5e38835deed195cd"
+      "sha256": "df950ef5490c5fd30a938f70a32591e9b5744f8b2d050fbdae661a504618f153"
     },
     {
       "path": "theme/snippets/suiji-storefront-cover.liquid",
-      "sha256": "f025b8b081511c7bf4df73660b2fb0a6428fb21a828bad27c7c2c0202a55f78d"
+      "sha256": "b3c1d14dd68fe6f7fa1b87db5b4f79ff67d6037ca498b2a2c1d08bc6dafd6afc"
     },
     {
       "path": "theme/snippets/suiji-storefront-cover-image.liquid",
-      "sha256": "8d98d2fbe51281743a4ddcac6c99b43bf651bc098222efba72589e615b862717"
+      "sha256": "c92a69851803b7029aae1f1c4a124cd9522578e1bd97a7e42e5be48ea4df3a5f"
     },
     {
       "path": "theme/snippets/suiji-shop-all-photo.liquid",
@@ -498,15 +505,23 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-native-product-panels.liquid",
-      "sha256": "fe77fb8582c65c5eca9f5895bb143431f4e1cdc6d96ccc4dccb8aed5f4011a42"
+      "sha256": "bbb29e485f0e538c413ee4b04fa65c821bd2a1a4425e1ae0b14f206a14810890"
+    },
+    {
+      "path": "maintenance/rev107/photo-publication-20261117.json",
+      "sha256": "1c7e43119243bc96c57974c1146ed25a29e694e7545c14fb676415bdc96d67c7"
+    },
+    {
+      "path": "theme/snippets/suiji-r107-social-image.liquid",
+      "sha256": "a747b1ca74cbea79d75c1c4555f01a6d987fb5f7eebea6edceb5feaa83897cef"
     },
     {
       "path": "theme/snippets/suiji-native-pairing.liquid",
-      "sha256": "f4ea390fa8e5378f31255891000f3c8d38a4db8b7e5ba27f7c4206e8137a5d84"
+      "sha256": "0bcf82339ae0f9c6d77960416328dae8a5c2adec057990718a0399157a76ee78"
     },
     {
       "path": "theme/snippets/suiji-reviewed-variant-media-ids.liquid",
-      "sha256": "a4d284432d1fa343ae7360bf8852ec96b7df3118f2f412496a6d0f4849eab885"
+      "sha256": "363265fe9e29a3df58c6752698f05ba5be05c9f0750a706819e3ad3c2a774aea"
     },
     {
       "path": "theme/snippets/suiji-r107-home-look.liquid",
@@ -543,6 +558,10 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     {
       "path": "theme/snippets/suiji-ring-size-label.liquid",
       "sha256": "0ac5210d9dfbaacccd7003612ea13db9e1b612d380edf6f0fa910b28f8713978"
+    },
+    {
+      "path": "theme/snippets/price.liquid",
+      "sha256": "684230a84181d99791d2539e96a2f286f4629839dc8e7e7b4d576f1720dcf3c1"
     }
   ]
 }

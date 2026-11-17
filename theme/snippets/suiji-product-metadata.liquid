@@ -1,0 +1,91 @@
+{% doc %}
+Public demo product metadata from the frozen catalogue; no price/stock/Offer claims.
+@param {string} product_key - Approved catalogue key.
+@param {string} field - title, description, category or path.
+{% enddoc %}
+{%- case product_key -%}
+{%- when 'r01-ring-base' -%}
+{%- case field -%}
+{%- when 'title' -%}{{ 'suiji_products.r01_ring_base.title' | t }}
+{%- when 'description' -%}{{ 'suiji_products.r01_ring_base.description' | t }}
+{%- when 'category' -%}rings
+{%- when 'path' -%}/collections/rings?view=suiji-p-r01-ring-base
+{%- endcase -%}
+{%- when 'r02-ring-base' -%}
+{%- case field -%}
+{%- when 'title' -%}{{ 'suiji_products.r02_ring_base.title' | t }}
+{%- when 'description' -%}{{ 'suiji_products.r02_ring_base.description' | t }}
+{%- when 'category' -%}rings
+{%- when 'path' -%}/collections/rings?view=suiji-p-r02-ring-base
+{%- endcase -%}
+{%- when 'double-arm-ring-base' -%}
+{%- case field -%}
+{%- when 'title' -%}{{ 'suiji_products.double_arm_ring_base.title' | t }}
+{%- when 'description' -%}{{ 'suiji_products.double_arm_ring_base.description' | t }}
+{%- when 'category' -%}rings
+{%- when 'path' -%}/collections/rings?view=suiji-p-double-arm-ring-base
+{%- endcase -%}
+{%- when 'a02-drop' -%}
+{%- case field -%}
+{%- when 'title' -%}{{ 'suiji_products.a02_drop.title' | t }}
+{%- when 'description' -%}{{ 'suiji_products.a02_drop.description' | t }}
+{%- when 'category' -%}earrings
+{%- when 'path' -%}/collections/earrings?view=suiji-p-a02-drop
+{%- endcase -%}
+{%- when 'a03-drop' -%}
+{%- case field -%}
+{%- when 'title' -%}{{ 'suiji_products.a03_drop.title' | t }}
+{%- when 'description' -%}{{ 'suiji_products.a03_drop.description' | t }}
+{%- when 'category' -%}earrings
+{%- when 'path' -%}/collections/earrings?view=suiji-p-a03-drop
+{%- endcase -%}
+{%- when 'collar-7' -%}
+{%- case field -%}
+{%- when 'title' -%}{{ 'suiji_products.collar_7.title' | t }}
+{%- when 'description' -%}{{ 'suiji_products.collar_7.description' | t }}
+{%- when 'category' -%}necklaces
+{%- when 'path' -%}/collections/necklaces?view=suiji-p-collar-7
+{%- endcase -%}
+{%- when 'collar-7-drops-1' -%}
+{%- case field -%}
+{%- when 'title' -%}{{ 'suiji_products.collar_7_drops_1.title' | t }}
+{%- when 'description' -%}{{ 'suiji_products.collar_7_drops_1.description' | t }}
+{%- when 'category' -%}necklaces
+{%- when 'path' -%}/collections/necklaces?view=suiji-p-collar-7-drops-1
+{%- endcase -%}
+{%- when 'collar-9-drops-5' -%}
+{%- case field -%}
+{%- when 'title' -%}{{ 'suiji_products.collar_9_drops_5.title' | t }}
+{%- when 'description' -%}{{ 'suiji_products.collar_9_drops_5.description' | t }}
+{%- when 'category' -%}necklaces
+{%- when 'path' -%}/collections/necklaces?view=suiji-p-collar-9-drops-5
+{%- endcase -%}
+{%- when 'core-lock-stud-metal-back' -%}
+{%- case field -%}
+{%- when 'title' -%}{{ 'suiji_products.core_lock_stud_metal_back.title' | t }}
+{%- when 'description' -%}{{ 'suiji_products.core_lock_stud_metal_back.description' | t }}
+{%- when 'category' -%}earrings
+{%- when 'path' -%}/collections/earrings?view=suiji-p-core-lock-stud-metal-back
+{%- endcase -%}
+{%- when 'pearl-back-stud' -%}
+{%- case field -%}
+{%- when 'title' -%}{{ 'suiji_products.pearl_back_stud.title' | t }}
+{%- when 'description' -%}{{ 'suiji_products.pearl_back_stud.description' | t }}
+{%- when 'category' -%}earrings
+{%- when 'path' -%}/collections/earrings?view=suiji-p-pearl-back-stud
+{%- endcase -%}
+{%- when 'h03-core-lock' -%}
+{%- case field -%}
+{%- when 'title' -%}{{ 'suiji_products.h03_core_lock.title' | t }}
+{%- when 'description' -%}{{ 'suiji_products.h03_core_lock.description' | t }}
+{%- when 'category' -%}earrings
+{%- when 'path' -%}/collections/earrings?view=suiji-p-h03-core-lock
+{%- endcase -%}
+{%- when 'oval-motif' -%}
+{%- case field -%}
+{%- when 'title' -%}{{ 'suiji_products.oval_motif.title' | t }}
+{%- when 'description' -%}{{ 'suiji_products.oval_motif.description' | t }}
+{%- when 'category' -%}charms
+{%- when 'path' -%}/collections/charms?view=suiji-p-oval-motif
+{%- endcase -%}
+{%- endcase -%}

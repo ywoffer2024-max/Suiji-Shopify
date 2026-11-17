@@ -102,7 +102,7 @@
     <div class="product__media media media--transparent">
       {{
         media.preview_image
-        | image_url: width: 1946
+        | image_url: width: 1946, quality: 90
         | image_tag:
           class: image_class,
           alt: image_alt,
@@ -154,7 +154,7 @@
       </span>
       {{
         media.preview_image
-        | image_url: width: 1946
+        | image_url: width: 1946, quality: 90
         | image_tag:
           loading: image_loading,
           sizes: sizes,

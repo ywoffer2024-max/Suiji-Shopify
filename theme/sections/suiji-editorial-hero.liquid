@@ -1,0 +1,43 @@
+<section class="suiji-editorial suiji-editorial__hero" aria-labelledby="SuijiHero-{{ section.id }}">
+  <div class="suiji-editorial__hero-media">
+    <img
+      src="{{ 'suiji-studio-hero.webp' | asset_url }}"
+      alt="SUIJI triangle drop earrings and geometric signet ring in a cool white studio"
+      width="2400"
+      height="1500"
+      loading="eager"
+      fetchpriority="high"
+    >
+  </div>
+
+  <div class="suiji-editorial__hero-copy">
+    {%- if section.settings.eyebrow != blank -%}<span class="suiji-editorial__eyebrow">{{ section.settings.eyebrow | escape }}</span>{%- endif -%}
+    <h1 id="SuijiHero-{{ section.id }}">{{ section.settings.heading | escape }}</h1>
+    <p>{{ section.settings.text | escape }}</p>
+    <div class="suiji-editorial__actions">
+      {%- if section.settings.primary_label != blank -%}
+        <a class="suiji-editorial__button" href="{{ section.settings.primary_link }}">{{ section.settings.primary_label | escape }}</a>
+      {%- endif -%}
+      {%- if section.settings.secondary_label != blank -%}
+        <a class="suiji-editorial__link" href="{{ section.settings.secondary_link }}">{{ section.settings.secondary_label | escape }}</a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "SUIJI editorial hero",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "NEW COLLECTION" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Jewelry that changes with you." },
+    { "type": "textarea", "id": "text", "label": "Text", "default": "Move one sculptural form between earrings, rings and chains. Reconfigure it in seconds." },
+    { "type": "text", "id": "primary_label", "label": "Primary label", "default": "SHOP THE EDIT" },
+    { "type": "url", "id": "primary_link", "label": "Primary link" },
+    { "type": "text", "id": "secondary_label", "label": "Secondary label", "default": "SEE THE MECHANISM" },
+    { "type": "url", "id": "secondary_link", "label": "Secondary link" }
+  ],
+  "presets": [{ "name": "SUIJI editorial hero" }]
+}
+{% endschema %}

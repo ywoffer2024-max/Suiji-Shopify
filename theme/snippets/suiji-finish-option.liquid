@@ -1,0 +1,57 @@
+{%- comment -%}
+  The label and sample are presentation only. Shopify owns option values, IDs and variant availability.
+  An existing variant remains selectable for viewing, including during a preview.
+{%- endcomment -%}
+{%- liquid
+  assign finish_name = value.name
+  assign raw_finish = finish_name | downcase | strip
+  assign finish = ''
+  case raw_finish
+    when 'r01-gold', 'classic gold', 'champagne', 'gold', 'or classique', 'doré'
+      assign finish = 'gold'
+    when 'r01-silver', 'silver', 'silver tone', 'argent', 'argenté'
+      assign finish = 'silver'
+    when 'r01-blue', 'blue', 'suiji blue', 'bleu', 'bleu suiji'
+      assign finish = 'blue'
+    when 'natural titanium', 'titane naturel'
+      assign finish = 'titanium'
+    when 'r01-blue iridescent', 'blue iridescent', 'iridescent blue', 'bleu irisé'
+      assign finish = 'iridescent'
+  endcase
+  if finish != blank
+    assign finish_key = 'suiji_pdp.finish_' | append: finish
+    assign finish_name = finish_key | t
+  endif
+  assign option_notice = ''
+  if value.product_url == blank
+    if value.variant == blank and value.available == false
+      assign option_notice = 'suiji_pdp.finish_unavailable' | t
+    elsif purchase_state != 'preview' and product_available and value.variant != blank and value.variant.available == false
+      assign option_notice = 'products.product.sold_out' | t
+    endif
+  endif
+-%}
+<input
+  type="radio"
+  id="{{ input_id }}"
+  name="{{ input_name | escape }}"
+  value="{{ value.name | escape }}"
+  form="{{ product_form_id }}"
+  {% if value.selected %}checked{% endif %}
+  {% if option_notice != blank %}aria-describedby="{{ input_id }}-availability"{% endif %}
+  {{ input_dataset }}
+>
+<label class="suiji-finish{% if value.swatch == blank %}{% if finish == blank or finish == 'iridescent' %} suiji-finish--text{% endif %}{% endif %}" for="{{ input_id }}">
+  {%- if value.swatch != blank -%}
+    <span class="suiji-finish__sample" aria-hidden="true">{% render 'swatch', swatch: value.swatch %}</span>
+  {%- elsif finish != blank and finish != 'iridescent' -%}
+    <span class="suiji-finish__sample" data-finish="{{ finish }}" aria-hidden="true"></span>
+  {%- endif -%}
+  <span class="suiji-finish__name">{{ finish_name | escape }}</span>
+  <svg class="suiji-finish__check" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+    <path d="m3.5 8 3 3 6-6" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  </svg>
+  {%- if option_notice != blank -%}
+    <span class="suiji-finish__availability" id="{{ input_id }}-availability" aria-hidden="true">{{ option_notice | escape }}</span>
+  {%- endif -%}
+</label>

@@ -1,0 +1,12 @@
+{% doc %}
+  Display the selected, unpriced product without creating a purchase form.
+  @param {product} product - The current product.
+{% enddoc %}
+{% if product.tags contains 'suiji-display-only' %}
+<div class="suiji-display-only">
+  <dl class="suiji-display-only__facts"><div><dt>{{ 'suiji_display.colour' | t }}</dt><dd>{{ 'suiji_display.blue' | t }}</dd></div><div><dt>{{ 'suiji_display.reference' | t }}</dt><dd>{{ product.selected_or_first_available_variant.sku | escape }}</dd></div></dl>
+  <p class="suiji-display-only__pricing">{{ 'suiji_display.pricing_pending' | t }}</p>
+  <button type="button" class="suiji-display-only__button" disabled>{{ 'suiji_display.coming_soon' | t }}</button>
+  <p class="suiji-display-only__notice">{{ 'suiji_display.notice' | t }}</p>
+</div>
+{% endif %}

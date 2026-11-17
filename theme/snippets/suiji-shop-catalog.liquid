@@ -1,0 +1,68 @@
+{% doc %}
+  Render the approved Shop All categories or a temporarily empty category landing page.
+  @param {string} category_key - all or the existing collection handle.
+{% enddoc %}
+{%- liquid
+  assign selected_category = category_key | default: 'all' | replace: '-', '_'
+  case selected_category
+    when 'bracelets'
+      assign selected_category = 'bracelets_bangles'
+    when 'extras', 'accessories'
+      assign selected_category = 'accessories'
+    when 'motifs'
+      assign selected_category = 'charms'
+  endcase
+  assign catalog_categories = 'necklaces,bracelets_bangles,earrings,rings,charms,accessories' | split: ','
+-%}
+{%- if selected_category == 'all' -%}
+<header class="suiji-info__intro">
+  <h1>{{ 'suiji_navigation.labels.shop_all' | t }}</h1>
+  <p>{{ 'suiji_catalog.intro' | t }}</p>
+  <p class="suiji-info__status">{{ 'suiji_catalog.availability' | t }}</p>
+</header>
+{% render 'suiji-ring-preview-entry' %}
+<div class="suiji-info__base-grid" data-shop-all-categories>
+  {%- for category in catalog_categories -%}
+    {% render 'suiji-catalog-group', category_key: category, display: 'card' %}
+  {%- endfor -%}
+</div>
+{%- else -%}
+{%- assign category_title_key = 'suiji_navigation.labels.' | append: selected_category -%}
+{%- assign category_description_key = 'suiji_catalog.descriptions.' | append: selected_category -%}
+<header class="suiji-info__intro">
+  <p><a href="{% render 'suiji-localized-menu-url', url: '/collections/all' %}">{{ 'suiji_catalog.back_shop_all' | t }} ←</a></p>
+  <h1>{{ category_title_key | t }}</h1>
+  <p>{{ category_description_key | t }}</p>
+  <p class="suiji-info__status">{{ 'suiji_catalog.availability' | t }}</p>
+</header>
+<nav class="suiji-info__links" aria-label="{{ 'suiji_catalog.browse_categories' | t | escape }}">
+  {%- for category in catalog_categories -%}
+    {%- liquid
+      assign collection_handle = category
+      case category
+        when 'bracelets_bangles'
+          assign collection_handle = 'bracelets'
+        when 'accessories'
+          assign collection_handle = 'extras'
+      endcase
+      assign category_url = '/collections/' | append: collection_handle
+      assign link_title_key = 'suiji_navigation.labels.' | append: category
+    -%}
+    <a href="{% render 'suiji-localized-menu-url', url: category_url %}"{% if category == selected_category %} aria-current="page"{% endif %}>{{ link_title_key | t }}</a>
+  {%- endfor -%}
+</nav>
+{%- if selected_category == 'rings' -%}
+  {% render 'suiji-ring-preview-entry' %}
+{%- endif -%}
+{% render 'suiji-catalog-group', category_key: selected_category, display: 'detail' %}
+<div class="suiji-info__links">
+  {%- if selected_category == 'rings' -%}
+    <a href="{% render 'suiji-localized-menu-url', url: '/pages/bases#size-guide' %}">{{ 'suiji_navigation.labels.size_guide' | t }} →</a>
+  {%- endif -%}
+  {%- if selected_category == 'rings' or selected_category == 'charms' -%}
+    <a href="{% render 'suiji-localized-menu-url', url: '/pages/bases#build-your-look' %}">{{ 'suiji_catalog.try_combination' | t }} →</a>
+  {%- endif -%}
+  <a href="{% render 'suiji-localized-menu-url', url: '/pages/the-mechanism' %}">{{ 'suiji_navigation.labels.discover_core_lock' | t }} →</a>
+  <a href="{% render 'suiji-localized-menu-url', url: '/pages/editions' %}">{{ 'suiji_navigation.labels.sets' | t }} →</a>
+</div>
+{%- endif -%}

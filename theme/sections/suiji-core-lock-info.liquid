@@ -1,0 +1,60 @@
+{% render 'suiji-modular-system', media_settings: section.settings %}
+{% render 'suiji-wear-media', media_settings: section.settings, media_id: section.id %}
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "base_image",
+      "label": "Bases entrance image"
+    },
+    {
+      "type": "image_picker",
+      "id": "charm_image",
+      "label": "Charms entrance image"
+    },
+    {
+      "type": "header",
+      "content": "Optional styling media"
+    },
+    {
+      "type": "paragraph",
+      "content": "Existing visuals stay unchanged. Empty slots are hidden. Upload verified media with accurate image alt text. Video is never set to autoplay."
+    },
+    {
+      "type": "image_picker",
+      "id": "two_looks_image",
+      "label": "Same piece, two arrangements"
+    },
+    {
+      "type": "image_picker",
+      "id": "cross_wear_image",
+      "label": "Same ornament across bases"
+    },
+    {
+      "type": "video",
+      "id": "operation_video",
+      "label": "Core-Lock operation video"
+    },
+    {
+      "type": "image_picker",
+      "id": "operation_poster",
+      "label": "Static operation image when no video"
+    },
+    {
+      "type": "image_picker",
+      "id": "material_detail_image",
+      "label": "Verified material detail"
+    },
+    {
+      "type": "checkbox",
+      "id": "illustrative_media",
+      "label": "Label uploaded media as illustrative",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

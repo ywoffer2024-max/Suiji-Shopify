@@ -1,0 +1,16 @@
+{% doc %}
+  Present the SUIJI modular system through bases, charms and their connection.
+  @param {object} media_settings - Merchant image settings; existing public illustrations are fallbacks.
+{% enddoc %}
+{{ 'suiji-modular-system.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign base_visual = media_settings.base_image | default: images['r01-blue-front-area17-559667e818a1ea03.png']
+  assign charm_visual = media_settings.charm_image | default: images['mf-f01-front-f337b8015d3d1e41.png']
+  assign base_alt = 'suiji_modular.base_alt' | t
+  assign charm_alt = 'suiji_modular.charm_alt' | t
+-%}
+<div class="suiji-system">
+  {% render 'suiji-category-landing', media_settings: media_settings %}
+  <section class="suiji-system__how" id="how-it-works" aria-labelledby="ModularHowTitle"><div class="page-width"><h2 id="ModularHowTitle">{{ 'suiji_modular.how_title' | t }}</h2><ol class="suiji-system__steps" role="list">{% for step in (1..3) %}{% assign title_key = 'suiji_modular.step' | append: step | append: '_title' %}{% assign text_key = 'suiji_modular.step' | append: step | append: '_text' %}<li><span class="suiji-system__step-number" aria-hidden="true">0{{ step }}</span><h3>{{ title_key | t }}</h3><p>{{ text_key | t }}</p></li>{% endfor %}</ol></div></section>
+  <section class="suiji-system__connection page-width" id="design-and-compatibility" aria-labelledby="ModularConnectionTitle"><div><h2 id="ModularConnectionTitle">{{ 'suiji_modular.connection_title' | t }}</h2><p class="suiji-system__connection-lead">{{ 'suiji_modular.connection_text' | t }}</p><a class="suiji-system__text-link" href="{% render 'suiji-localized-menu-url', url: '/collections/sets' %}">{{ 'suiji_modular.sets_cta' | t }} →</a></div><aside><h3>{{ 'suiji_modular.check_title' | t }}</h3><p>{{ 'suiji_modular.check_text' | t }}</p><p>{{ 'suiji_v40.core.compatibility_text' | t }}</p><a class="suiji-system__text-link" href="{% render 'suiji-localized-menu-url', url: '/pages/bases#size-guide' %}">{{ 'suiji_modular.size_cta' | t }} →</a></aside></section>
+</div>

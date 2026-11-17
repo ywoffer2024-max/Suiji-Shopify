@@ -1,0 +1,81 @@
+{%- liquid
+  assign is_fr = false
+  if request.locale.iso_code contains 'fr'
+    assign is_fr = true
+  endif
+-%}
+
+<section class="suiji-section suiji-system">
+  <div class="suiji-shell suiji-system__layout">
+    <div class="suiji-system__intro">
+      <h2 class="suiji-title">
+        {%- if is_fr -%}Une garde-robe d'oreille plus personnelle.{%- else -%}A more personal ear wardrobe.{%- endif -%}
+      </h2>
+      <p class="suiji-copy">
+        {%- if is_fr -%}
+          Notre Première Édition explore des façons plus libres de choisir, d'associer et de porter. Les détails produit seront publiés après validation.
+        {%- else -%}
+          Our First Edition explores freer ways to choose, combine and wear. Product details will follow once they are verified.
+        {%- endif -%}
+      </p>
+    </div>
+
+    <div class="suiji-system__principles">
+      <article class="suiji-principle">
+        <p class="suiji-principle__verb">{%- if is_fr -%}Choisir{%- else -%}Choose{%- endif -%}</p>
+        <h3 class="suiji-principle__title">
+          {%- if is_fr -%}Commencer par le confort et l'usage.{%- else -%}Begin with comfort and use.{%- endif -%}
+        </h3>
+        <p class="suiji-principle__text">
+          {%- if is_fr -%}
+            La matière, le poids et la fermeture comptent autant que la silhouette.
+          {%- else -%}
+            Material, weight and fastening matter as much as silhouette.
+          {%- endif -%}
+        </p>
+      </article>
+
+      <article class="suiji-principle">
+        <p class="suiji-principle__verb">{%- if is_fr -%}Associer{%- else -%}Combine{%- endif -%}</p>
+        <h3 class="suiji-principle__title">
+          {%- if is_fr -%}Penser en ensembles, pas en règles.{%- else -%}Think in combinations, not rules.{%- endif -%}
+        </h3>
+        <p class="suiji-principle__text">
+          {%- if is_fr -%}
+            Une unité, une paire ou une composition asymétrique peuvent répondre à des envies différentes.
+          {%- else -%}
+            A single, a pair or an asymmetric combination can answer different needs.
+          {%- endif -%}
+        </p>
+      </article>
+
+      <article class="suiji-principle">
+        <p class="suiji-principle__verb">{%- if is_fr -%}Porter{%- else -%}Wear{%- endif -%}</p>
+        <h3 class="suiji-principle__title">
+          {%- if is_fr -%}Adapter la présence à la journée.{%- else -%}Match the presence to the day.{%- endif -%}
+        </h3>
+        <p class="suiji-principle__text">
+          {%- if is_fr -%}
+            Le journal vous aide à comparer les options avant que la collection n'arrive.
+          {%- else -%}
+            The journal helps you compare options before the collection arrives.
+          {%- endif -%}
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "SUIJI system preview",
+  "tag": "section",
+  "class": "section",
+  "presets": [
+    {
+      "name": "SUIJI system preview"
+    }
+  ]
+}
+{% endschema %}
+

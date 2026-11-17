@@ -1,0 +1,22 @@
+{% doc %}
+  Renders the shared SUIJI wordmark as the storefront home link.
+{% enddoc %}
+
+{%- liquid
+  assign home_label = 'SUIJI — Home'
+  if request.locale.iso_code contains 'fr'
+    assign home_label = 'SUIJI — Accueil'
+  endif
+-%}
+<a class="r-logo" href="{{ routes.root_url }}" aria-label="{{ home_label | escape }}">
+  <img
+    class="r-logo-mark"
+    src="{{ 'suiji-logo-mark-180.png' | asset_url }}"
+    alt=""
+    width="25"
+    height="25"
+    loading="eager"
+    decoding="async"
+  >
+  <span>SUIJI</span>
+</a>

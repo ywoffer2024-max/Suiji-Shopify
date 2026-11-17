@@ -1,0 +1,26 @@
+{% doc %}
+Resolve a published native Article, preserving the existing query page until publication.
+@param {number} key - Existing Journal number 1–20.
+{% enddoc %}
+{%- case key -%}
+{%- when 1 -%}{%- assign native_guide = articles['journal/earrings-headphones'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j01' | replace: '//', '/' }}{%- endif -%}
+{%- when 2 -%}{%- assign native_guide = articles['journal/why-earrings-tilt-forward'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j02' | replace: '//', '/' }}{%- endif -%}
+{%- when 3 -%}{%- assign native_guide = articles['journal/statement-earrings-everyday'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j03' | replace: '//', '/' }}{%- endif -%}
+{%- when 4 -%}{%- assign native_guide = articles['journal/ornament-base-compatibility'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j04' | replace: '//', '/' }}{%- endif -%}
+{%- when 5 -%}{%- assign native_guide = articles['journal/one-base-two-ornaments'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j05' | replace: '//', '/' }}{%- endif -%}
+{%- when 6 -%}{%- assign native_guide = articles['journal/interchangeable-jewelry-routine'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j06' | replace: '//', '/' }}{%- endif -%}
+{%- when 7 -%}{%- assign native_guide = articles['journal/earring-ornament-necklace'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j07' | replace: '//', '/' }}{%- endif -%}
+{%- when 8 -%}{%- assign native_guide = articles['journal/necklace-bracelet-conversion'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j08' | replace: '//', '/' }}{%- endif -%}
+{%- when 9 -%}{%- assign native_guide = articles['journal/interchangeable-or-fixed-jewelry'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j09' | replace: '//', '/' }}{%- endif -%}
+{%- when 10 -%}{%- assign native_guide = articles['journal/jewelry-clasps-easier-handling'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j10' | replace: '//', '/' }}{%- endif -%}
+{%- when 11 -%}{%- assign native_guide = articles['journal/choosing-hoop-earrings'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j11' | replace: '//', '/' }}{%- endif -%}
+{%- when 12 -%}{%- assign native_guide = articles['journal/jewelry-discomfort-record'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j12' | replace: '//', '/' }}{%- endif -%}
+{%- when 13 -%}{%- assign native_guide = articles['journal/buy-jewelry-for-yourself'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j13' | replace: '//', '/' }}{%- endif -%}
+{%- when 14 -%}{%- assign native_guide = articles['journal/jewelry-you-no-longer-wear'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j14' | replace: '//', '/' }}{%- endif -%}
+{%- when 15 -%}{%- assign native_guide = articles['journal/choosing-jewelry-gift'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j15' | replace: '//', '/' }}{%- endif -%}
+{%- when 16 -%}{%- assign native_guide = articles['journal/meaningful-jewelry-collection'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j16' | replace: '//', '/' }}{%- endif -%}
+{%- when 17 -%}{%- assign native_guide = articles['journal/personal-jewelry-design-brief'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j17' | replace: '//', '/' }}{%- endif -%}
+{%- when 18 -%}{%- assign native_guide = articles['journal/review-jewelry-cad'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j18' | replace: '//', '/' }}{%- endif -%}
+{%- when 19 -%}{%- assign native_guide = articles['journal/jewelry-design-revisions'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j19' | replace: '//', '/' }}{%- endif -%}
+{%- when 20 -%}{%- assign native_guide = articles['journal/redesign-sentimental-jewelry'] -%}{%- if native_guide != blank -%}{{ native_guide.url }}{%- else -%}{{ routes.root_url | append: '/blogs/journal?view=suiji-j20' | replace: '//', '/' }}{%- endif -%}
+{%- endcase -%}

@@ -1,0 +1,58 @@
+{%- doc -%}
+  Presents a Shopify collection whose rules select qualifying variants in EUR.
+  @param {string} limit - The exclusive budget ceiling encoded in the collection handle.
+{%- enddoc -%}
+{%- liquid
+  assign language = request.locale.iso_code | split: '-' | first
+  assign amount = limit
+  assign currency = cart.currency.iso_code | default: shop.currency
+  assign gifts_url = routes.root_url | append: '/pages/gifts' | replace: '//', '/'
+  if language == 'fr'
+    if limit == '1000'
+      assign amount = '1 000'
+    endif
+    assign heading = 'Cadeaux à moins de ' | append: amount | append: ' €'
+    assign back_label = 'Tous les cadeaux'
+    assign empty_label = 'Aucune pièce avec un prix confirmé dans ce budget pour le moment.'
+    assign results_label = 'Cadeaux dans ce budget'
+    assign currency_note = 'Les budgets sont calculés en euros. Les prix des pièces s’affichent dans votre devise.'
+  else
+    if limit == '1000'
+      assign amount = '1,000'
+    endif
+    assign heading = 'Gifts under €' | append: amount
+    assign back_label = 'All gifts'
+    assign empty_label = 'There are no pieces with a confirmed price in this budget yet.'
+    assign results_label = 'Gifts in this budget'
+    assign currency_note = 'Budgets use EUR store prices. Piece prices are shown in your selected currency.'
+  endif
+-%}
+<div class="r-site r-gift-budget-page" data-r107-page data-family="gift-budget" data-gift-budget="{{ limit }}" data-gift-budget-currency="{{ currency | escape }}">
+  <header class="r-intro r-intro--small">
+    <h1>{{ heading }}</h1>
+    {% render 'suiji-gift-budget-links', presentation: 'results', current_limit: limit, return_url: gifts_url, return_label: back_label %}
+    {% if currency != 'EUR' %}<p>{{ currency_note }}</p>{% endif %}
+  </header>
+
+  <section class="r-section r-gift-budget-results" id="gift-budget-products" aria-label="{{ results_label }}">
+    <h2 class="visually-hidden">{{ results_label }}</h2>
+    {% paginate collection.products by 24 %}
+      {%- capture cards -%}
+        {% for piece in collection.products %}
+          {%- assign priority = false -%}
+          {%- if forloop.index <= 4 -%}{%- assign priority = true -%}{%- endif -%}
+          {% render 'suiji-storefront-card', piece: piece, priority: priority, budget: true %}
+        {% endfor %}
+      {%- endcapture -%}
+      {%- assign cards = cards | strip -%}
+      {% if cards == blank %}
+        <p data-gift-budget-empty>{{ empty_label }}</p>
+      {% else %}
+        <div class="r-grid">{{ cards }}</div>
+      {% endif %}
+      {% if paginate.pages > 1 %}
+        {% render 'pagination', paginate: paginate, anchor: '#gift-budget-products' %}
+      {% endif %}
+    {% endpaginate %}
+  </section>
+</div>

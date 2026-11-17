@@ -1,0 +1,32 @@
+.suiji-about--v40 .suiji-about__hero{align-items:start}
+.suiji-about--v40 h3{font-family:var(--suiji-display-family,Newsreader,Georgia,serif);font-size:2.8rem;line-height:1.25;font-weight:400;letter-spacing:-.015em;text-wrap:balance;margin:2rem 0 1.2rem}
+.suiji-v40-designer{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);align-items:center;gap:clamp(3.2rem,6vw,8rem);padding-block:clamp(4.8rem,6vw,8rem);border-bottom:1px solid var(--suiji-line-soft,#e5ebef);scroll-margin-top:10rem}
+.suiji-v40-designer__portrait{margin:0;max-width:44rem;min-width:0;width:100%}
+.suiji-v40-designer__portrait img{display:block;width:100%;height:auto;aspect-ratio:1230/1672;object-fit:cover}
+.suiji-v40-designer__copy{min-width:0;max-width:62ch}
+.suiji-about--v40 .suiji-v40-designer__role{color:var(--suiji-muted,#626466);font-size:1.4rem;line-height:1.6}
+.suiji-about--v40 .suiji-about__copy h3{font-family:var(--font-body-family,Manrope,sans-serif);font-size:1.6rem;font-weight:500;line-height:1.5;letter-spacing:0}
+@media(max-width:989px){.suiji-home__story--v40{gap:3.2rem;padding-inline:2.4rem}.suiji-mvp-root .suiji-home__story--v40 h2{font-size:clamp(3.4rem,4.2vw,4.8rem)}.suiji-v40-designer{gap:3.2rem}}
+@media(max-width:749px){.suiji-home__story--v40{grid-template-columns:minmax(0,1fr);gap:3.2rem;padding:3.2rem 2rem 4.8rem}.suiji-home__story--v40 .suiji-home__story-image{height:auto;aspect-ratio:4/3}.suiji-home__story--v40 .suiji-home__story-copy{padding:0}.suiji-mvp-root .suiji-home__story--v40 h2{font-size:3.8rem;max-width:18ch}.suiji-home__story--v40 .suiji-home__lead{font-size:1.7rem;margin-bottom:2rem}.suiji-v40-designer{grid-template-columns:minmax(0,1fr)}.suiji-v40-designer__portrait{max-width:42rem}.suiji-about--v40 h3{font-size:2.5rem}}
+@media(prefers-reduced-motion:reduce){.suiji-home__story--v40 *,.suiji-about--v40 *{scroll-behavior:auto;transition:none}}
+
+/* A text-first component check replaces only j04's previous generic decision image. */
+.sj-component-check{padding:clamp(2rem,3vw,3.2rem);margin-block:0 3.2rem;background:var(--suiji-surface,#eaf1f5);color:var(--suiji-ink,#202226)}
+.sj-component-check ol{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.4rem}
+.sj-component-check li{display:flex;flex-direction:column;gap:.8rem;min-width:0;padding:0;margin:0}
+.sj-component-check strong{font-size:1.6rem;font-weight:500;line-height:1.5}.sj-component-check span{font-size:1.4rem;line-height:1.6}
+.sj-byline--updated{margin-block-start:.6rem}
+@media(max-width:600px){.sj-component-check ol{grid-template-columns:minmax(0,1fr);gap:2rem}.sj-component-check{padding:2rem}}
+
+/* SUIJI: image-led editorial rhythm, white with ice-blue modules. */
+.suiji-home__story--v40{position:relative;display:flex;align-items:center;min-height:clamp(740px,63vw,980px);padding:0;background:#fff;isolation:isolate}
+.suiji-home__story--v40 .suiji-home__story-image{position:absolute;inset:0;min-width:0;overflow:hidden;background:#fff;z-index:-1}
+.suiji-home__story--v40 .suiji-home__story-image img{width:100%;height:100%;max-width:100%;transform:none;object-fit:contain;object-position:right center}
+.suiji-home__story--v40 .suiji-home__story-copy{position:relative;margin:0 0 0 10%;width:40%;max-width:62rem;min-width:0;padding:8rem 0}
+.suiji-mvp-root .suiji-home__story--v40 h2{font-size:clamp(5.8rem,5.9vw,9.2rem);line-height:1.04;max-width:15ch;margin-bottom:3.6rem;letter-spacing:-.035em}
+.suiji-home__story--v40 .suiji-home__lead{font-family:var(--suiji-display-family,Newsreader,Georgia,serif);font-size:clamp(2.4rem,2.3vw,3.4rem);line-height:1.25;max-width:25ch;margin-bottom:4.8rem}
+.suiji-home__story--v40 .suiji-home__story-copy>p:not(.suiji-home__lead){max-width:39ch;margin-bottom:3.2rem;font-size:1.6rem;line-height:1.7}
+.suiji-home__story--v40 .suiji-home__button{border-radius:0}
+@media(min-width:1600px){.suiji-home__story--v40 .suiji-home__story-copy{margin-left:12.2%}}
+@media(max-width:989px) and (min-width:750px){.suiji-home__story--v40{min-height:780px}.suiji-home__story--v40 .suiji-home__story-copy{margin-left:6%;width:43%}.suiji-mvp-root .suiji-home__story--v40 h2{font-size:5.6rem}.suiji-home__story--v40 .suiji-home__story-copy>p:not(.suiji-home__lead){font-size:1.5rem}}
+@media(max-width:749px){.suiji-home__story--v40{display:flex;flex-direction:column;min-height:0}.suiji-home__story--v40 .suiji-home__story-image{position:relative;inset:auto;z-index:0;width:100%;height:300px}.suiji-home__story--v40 .suiji-home__story-image img{width:165%;max-width:none;transform:translateX(-39%);object-fit:cover}.suiji-home__story--v40 .suiji-home__story-copy{margin:0;width:100%;max-width:none;padding:3.2rem 2.4rem 5.6rem}.suiji-mvp-root .suiji-home__story--v40 h2{font-size:4.8rem;max-width:15ch;margin-bottom:2.4rem}.suiji-home__story--v40 .suiji-home__lead{font-size:2.6rem;margin-bottom:3.2rem}.suiji-home__story--v40 .suiji-home__story-copy>p:not(.suiji-home__lead){max-width:45ch;font-size:1.5rem}}

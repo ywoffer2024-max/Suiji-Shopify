@@ -1,0 +1,152 @@
+{%- comment -%}
+  SUIJI · Members area (native, no apps)
+  Membership = the logged-in customer has any order containing a Set product.
+  States: guest -> sign in / join; non-member -> unlock pitch; member ->
+  presale rail + product voting (contact form) + waitlist (customer form).
+{%- endcomment -%}
+
+{%- liquid
+  assign is_member = false
+  if customer
+    for order in customer.orders
+      for line in order.line_items
+        if line.product.type == 'Set'
+          assign is_member = true
+          break
+        endif
+      endfor
+      if is_member
+        break
+      endif
+    endfor
+  endif
+-%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width suiji-members" style="padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;">
+
+    {%- if customer == null -%}
+      {%- comment -%} ---- state 1: guest ---- {%- endcomment -%}
+      <p class="suiji-eyebrow">{% if request.locale.iso_code contains 'fr' %}Le Studio{% else %}The Studio{% endif %}</p>
+      <h1 class="suiji-members__heading">{% if request.locale.iso_code contains 'fr' %}Votre ensemble. Vos idées pour la suite.{% else %}Own a set. Shape the next one.{% endif %}</h1>
+      <p class="suiji-members__lead">{% if request.locale.iso_code contains 'fr' %}Les propriétaires d’un ensemble découvrent nos prochaines créations, donnent leur avis sur les propositions et accèdent en priorité aux listes d’attente. Créez un compte pour commencer — les abonnés bénéficient de <strong>10 % de réduction</strong> sur leur première commande avec le code <strong>WELCOME10</strong>.{% else %}Set owners see what we engineer next, vote on candidates, and join waitlists first. Create an account to begin — subscribers get <strong>10% off</strong> their first order with code <strong>WELCOME10</strong>.{% endif %}</p>
+      <div class="suiji-members__actions">
+        <a class="button" href="/account/register">{% if request.locale.iso_code contains 'fr' %}Créer un compte{% else %}Create account{% endif %}</a>
+        <a class="button button--secondary" href="/account/login">{% if request.locale.iso_code contains 'fr' %}Se connecter{% else %}Sign in{% endif %}</a>
+      </div>
+
+    {%- elsif is_member == false -%}
+      {%- comment -%} ---- state 2: signed in, no set yet ---- {%- endcomment -%}
+      <p class="suiji-eyebrow">{% if request.locale.iso_code contains 'fr' %}Le Studio{% else %}The Studio{% endif %}</p>
+      <h1 class="suiji-members__heading">{% if request.locale.iso_code contains 'fr' %}Un ensemble vous ouvre les portes du Studio.{% else %}One set unlocks the studio.{% endif %}</h1>
+      <p class="suiji-members__lead">{% if request.locale.iso_code contains 'fr' %}Bonjour{% if customer.first_name != blank %} {{ customer.first_name | escape }}{% endif %} — l’achat d’un ensemble SUIJI vous donne accès aux avant-premières, aux votes sur les créations et aux listes d’attente prioritaires.{% else %}Hello {{ customer.first_name | default: 'there' }} — buy any SUIJI set and this page opens: presale previews, product voting, first-in-line waitlists.{% endif %}</p>
+      <div class="suiji-members__actions">
+        <a class="button" href="/collections/sets">{% if request.locale.iso_code contains 'fr' %}Découvrir les ensembles{% else %}Shop sets{% endif %}</a>
+      </div>
+
+    {%- else -%}
+      {%- comment -%} ---- state 3: member ---- {%- endcomment -%}
+      <p class="suiji-eyebrow">{% if request.locale.iso_code contains 'fr' %}Le Studio · Membre{% else %}The Studio · Member{% endif %}</p>
+      <h1 class="suiji-members__heading">{% if request.locale.iso_code contains 'fr' %}Bon retour{% if customer.first_name != blank %}, {{ customer.first_name | escape }}{% endif %}.{% else %}Welcome back, {{ customer.first_name | default: 'member' }}.{% endif %}</h1>
+
+      {%- assign presale = collections['members-presale'] -%}
+      {%- if presale and presale.products.size > 0 -%}
+        <div class="suiji-members__block">
+          <h2 class="suiji-members__block-title">{% if request.locale.iso_code contains 'fr' %}Avant-premières réservées aux membres{% else %}Presale — members only{% endif %}</h2>
+          <ul class="suiji-members__grid" role="list">
+            {%- for product in presale.products limit: 8 -%}
+              <li class="suiji-members__card">
+                <a href="{{ product.url }}">
+                  {%- if product.featured_image -%}
+                    {{ product.featured_image | image_url: width: 480 | image_tag: loading: 'lazy', alt: product.title }}
+                  {%- endif -%}
+                  <p class="suiji-members__card-name">{{ product.title }}</p>
+                  <p class="suiji-members__card-meta">{{ product.price | money }}</p>
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endif -%}
+
+      <div class="suiji-members__block">
+        <h2 class="suiji-members__block-title">{% if request.locale.iso_code contains 'fr' %}Votez — quelle sera notre prochaine création ?{% else %}Vote — what should we engineer next?{% endif %}</h2>
+        <p class="suiji-members__note">{% if request.locale.iso_code contains 'fr' %}Le vote est ouvert. Le Studio examine les résultats ; les propositions retenues sont mises en production et les votants sont informés en premier par e-mail.{% else %}Voting is open. Results are reviewed by the studio; winning candidates go into production and voters are emailed first.{% endif %}</p>
+        <ul class="suiji-members__grid" role="list">
+          {%- for item in shop.metaobjects.vote_item.values -%}
+            {%- if item.status.value == 'open' -%}
+              <li class="suiji-members__card suiji-members__card--vote">
+                {%- if item.image.value != blank -%}
+                  {{ item.image.value | image_url: width: 480 | image_tag: loading: 'lazy', alt: item.name.value }}
+                {%- else -%}
+                  <div class="suiji-members__card-ph" aria-hidden="true">{{ item.name.value | slice: 0, 1 }}</div>
+                {%- endif -%}
+                <p class="suiji-members__card-name">{{ item.name.value }}</p>
+                <p class="suiji-members__card-meta">{{ item.description.value }}</p>
+                {%- assign form_id = 'vote-' | append: item.system.handle -%}
+                {%- form 'contact', id: form_id, class: 'suiji-members__vote-form' -%}
+                  <input type="hidden" name="contact[email]" value="{{ customer.email }}">
+                  <input type="hidden" name="contact[subject]" value="VOTE — {{ item.name.value }}">
+                  <input type="hidden" name="contact[body]" value="Member vote: {{ item.name.value }} ({{ item.system.handle }}) by {{ customer.email }}">
+                  <button type="submit" class="button button--secondary suiji-members__vote-btn">{% if request.locale.iso_code contains 'fr' %}Voter pour cette création{% else %}Vote for this{% endif %}</button>
+                  {%- if form.posted_successfully? -%}
+                    <p class="suiji-members__ok">{% if request.locale.iso_code contains 'fr' %}✓ Votre vote a bien été reçu.{% else %}✓ Vote received. Locked in.{% endif %}</p>
+                  {%- endif -%}
+                {%- endform -%}
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </div>
+
+    {%- endif -%}
+
+    {%- if customer -%}
+      <div class="suiji-members__block">
+        <h2 class="suiji-members__block-title">{% if request.locale.iso_code contains 'fr' %}Liste d’attente{% else %}Waitlist{% endif %}</h2>
+        <p class="suiji-members__note">{% if request.locale.iso_code contains 'fr' %}Accédez en priorité aux nouvelles pièces et aux ornements vendus séparément.{% else %}Be first in line when new pieces and standalone charms arrive.{% endif %}</p>
+        {%- form 'customer', class: 'suiji-members__waitlist' -%}
+          <input type="hidden" name="contact[email]" value="{{ customer.email }}">
+          <input type="hidden" name="contact[tags]" value="waitlist">
+          <button type="submit" class="button">{% if request.locale.iso_code contains 'fr' %}Rejoindre la liste d’attente{% else %}Join the waitlist{% endif %}</button>
+          {%- if form.posted_successfully? -%}
+            <p class="suiji-members__ok">{% if request.locale.iso_code contains 'fr' %}✓ Votre inscription a bien été prise en compte.{% else %}✓ You are on the list.{% endif %}</p>
+          {%- endif -%}
+        {%- endform -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% style %}
+  .suiji-members__heading { margin: 0.6rem 0 0; font-size: calc(var(--font-heading-scale) * 3.6rem); }
+  .suiji-members__lead { max-width: 72rem; font-size: 1.6rem; line-height: 1.65; color: rgba(var(--color-foreground), 0.8); margin: 1.2rem 0 0; }
+  .suiji-members__actions { display: flex; gap: 1.2rem; margin-top: 2.4rem; flex-wrap: wrap; }
+  .suiji-members__block { margin-top: 4rem; border-top: 1px solid rgba(var(--color-foreground), 0.1); padding-top: 2.4rem; }
+  .suiji-members__block-title { font-size: 1.4rem; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 0.8rem; }
+  .suiji-members__note { color: rgba(var(--color-foreground), 0.65); font-size: 1.4rem; margin: 0 0 1.6rem; max-width: 72rem; }
+  .suiji-members__grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem; }
+  @media screen and (max-width: 749px) { .suiji-members__grid { grid-template-columns: repeat(2, 1fr); } }
+  .suiji-members__card { border: 1px solid rgba(var(--color-foreground), 0.1); background: rgb(var(--color-background)); padding: 0 0 1.2rem; }
+  .suiji-members__card img, .suiji-members__card-ph { width: 100%; aspect-ratio: 1; object-fit: cover; background: #ECECE7; display: flex; align-items: center; justify-content: center; font-size: 2.4rem; color: #A0A0A0; }
+  .suiji-members__card-name { margin: 1rem 1.2rem 0.2rem; font-size: 1.4rem; font-weight: 500; }
+  .suiji-members__card-meta { margin: 0 1.2rem; font-size: 1.2rem; color: rgba(var(--color-foreground), 0.6); }
+  .suiji-members__vote-form { margin: 1.2rem 1.2rem 0; }
+  .suiji-members__vote-btn { width: 100%; }
+  .suiji-members__ok { margin: 0.8rem 0 0; font-size: 1.3rem; }
+  .suiji-members__waitlist { display: flex; gap: 1.2rem; align-items: center; flex-wrap: wrap; }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "SUIJI · Members area",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Padding top", "default": 64 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Padding bottom", "default": 80 }
+  ],
+  "presets": [{ "name": "SUIJI · Members area" }]
+}
+{% endschema %}

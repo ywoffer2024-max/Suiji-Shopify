@@ -1,0 +1,25 @@
+{% doc %}
+  Collects email applications for the invitation-only AI Charm Studio beta through Shopify's contact form.
+{% enddoc %}
+{%- assign privacy_url = routes.root_url | append: '/policies/privacy-policy' | replace: '//', '/' -%}
+{%- form 'contact', id: 'SuijiCharmBetaWaitlist', class: 'r-newsletter-form', return_to: 'back' -%}
+  {%- if form.posted_successfully? -%}
+    <p class="r-form-status" role="status">{{ 'suiji_charm_beta.success' | t | escape }}</p>
+  {%- else -%}
+    <input type="hidden" name="contact[Topic]" value="AI Charm Studio beta waitlist">
+    <input type="hidden" name="contact[body]" value="AI Charm Studio beta waitlist application.">
+    <input type="hidden" name="contact[Locale]" value="{{ request.locale.iso_code | escape }}">
+    <label for="SuijiCharmBetaEmail">{{ 'suiji_charm_beta.email' | t | escape }}
+      <input id="SuijiCharmBetaEmail" type="email" name="contact[email]" autocomplete="email"
+        value="{{ form.email | escape }}" required
+        {% if form.errors %}aria-invalid="true" aria-describedby="SuijiCharmBetaError SuijiCharmBetaPrivacy"{% else %}aria-describedby="SuijiCharmBetaPrivacy"{% endif %}>
+    </label>
+    <button class="r-button" type="submit">{{ 'suiji_charm_beta.submit' | t | escape }}</button>
+    {%- if form.errors -%}
+      <div id="SuijiCharmBetaError" role="alert">{{ form.errors | default_errors }}</div>
+    {%- endif -%}
+  {%- endif -%}
+{%- endform -%}
+<p class="r-caption" id="SuijiCharmBetaPrivacy">{{ 'suiji_charm_beta.privacy' | t | escape }}
+  <a class="r-link" href="{{ privacy_url }}">{{ 'suiji_charm_beta.privacy_link' | t | escape }}</a>
+</p>

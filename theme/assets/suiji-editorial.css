@@ -1,0 +1,398 @@
+/* SUIJI 2026 storefront. Cold monochrome, image-led, sharp geometry. */
+:root {
+  --suiji-canvas: #f4f4f2;
+  --suiji-surface: #fbfbfa;
+  --suiji-white: #ffffff;
+  --suiji-ink: #17181a;
+  --suiji-muted: #66686d;
+  --suiji-line: rgba(23, 24, 26, 0.16);
+  --suiji-line-soft: rgba(23, 24, 26, 0.09);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--suiji-canvas);
+  color: var(--suiji-ink);
+  font-family: var(--font-body-family);
+}
+
+.announcement-bar-section,
+.utility-bar { background: #ececeb; }
+.announcement-bar__message {
+  color: var(--suiji-ink);
+  font-size: 1.05rem;
+  letter-spacing: 0.11em;
+  min-height: 3.2rem;
+  text-transform: uppercase;
+}
+
+.header-wrapper {
+  background: rgba(244, 244, 242, 0.95);
+  border-bottom: 1px solid var(--suiji-line);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.header {
+  max-width: 160rem;
+  min-height: 6.8rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.header__heading-link,
+.header__heading-link .h2 {
+  color: var(--suiji-ink);
+  font-family: var(--font-heading-family);
+  font-size: clamp(2.2rem, 2.3vw, 3.4rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+}
+.header__menu-item,
+.header__icon { color: var(--suiji-ink); }
+.header__menu-item {
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.suiji-editorial,
+.suiji-product-edit,
+.suiji-manifesto,
+.suiji-gallery {
+  background: var(--suiji-canvas);
+  color: var(--suiji-ink);
+}
+
+.suiji-editorial__eyebrow,
+.suiji-product-edit__eyebrow,
+.suiji-gallery__number,
+.suiji-manifesto__eyebrow {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.suiji-editorial__hero {
+  align-items: center;
+  display: grid;
+  isolation: isolate;
+  min-height: min(78rem, calc(100dvh - 10rem));
+  overflow: hidden;
+  position: relative;
+}
+.suiji-editorial__hero-media,
+.suiji-editorial__hero-media img {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
+.suiji-editorial__hero-media { z-index: -2; }
+.suiji-editorial__hero-media img {
+  object-fit: cover;
+  object-position: center;
+}
+.suiji-editorial__hero::after {
+  background: linear-gradient(90deg, rgba(244, 244, 242, 0.98) 0%, rgba(244, 244, 242, 0.86) 32%, rgba(244, 244, 242, 0.08) 61%, rgba(244, 244, 242, 0) 75%);
+  content: '';
+  inset: 0;
+  position: absolute;
+  z-index: -1;
+}
+.suiji-editorial__hero-copy {
+  max-width: 64rem;
+  padding: clamp(4rem, 7vw, 9rem);
+  position: relative;
+}
+.suiji-editorial__hero h1,
+.suiji-product-edit h2,
+.suiji-manifesto h2,
+.suiji-gallery h2 {
+  color: var(--suiji-ink);
+  font-family: var(--font-heading-family);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+}
+.suiji-editorial__hero h1 {
+  font-size: clamp(4.8rem, 6.4vw, 8.4rem);
+  line-height: 0.94;
+  margin: 1.6rem 0 2.2rem;
+  max-width: 10.5ch;
+}
+.suiji-editorial__hero p {
+  font-size: clamp(1.5rem, 1.7vw, 1.9rem);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 42rem;
+}
+.suiji-editorial__actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem 2.4rem;
+  margin-top: 3.2rem;
+}
+.suiji-editorial__button,
+.suiji-editorial__link {
+  color: inherit;
+  display: inline-flex;
+  font-size: 1.08rem;
+  font-weight: 650;
+  justify-content: center;
+  letter-spacing: 0.11em;
+  line-height: 1.2;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.suiji-editorial__button {
+  background: var(--suiji-ink);
+  border: 1px solid var(--suiji-ink);
+  color: var(--suiji-white);
+  min-width: 15rem;
+  padding: 1.45rem 2.2rem;
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+.suiji-editorial__button:hover {
+  background: transparent;
+  color: var(--suiji-ink);
+}
+.suiji-editorial__button:active { transform: translateY(1px); }
+.suiji-editorial__link {
+  border-bottom: 1px solid currentColor;
+  padding: 0.45rem 0;
+}
+
+.suiji-product-edit {
+  padding: clamp(7rem, 9vw, 13rem) clamp(1.8rem, 3vw, 4.8rem) clamp(8rem, 10vw, 14rem);
+}
+.suiji-product-edit__heading {
+  align-items: end;
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  margin: 0 auto clamp(3.2rem, 4vw, 5.2rem);
+  max-width: 160rem;
+}
+.suiji-product-edit h2,
+.suiji-gallery h2 {
+  font-size: clamp(4rem, 5vw, 6.8rem);
+  line-height: 0.96;
+  margin: 0;
+}
+.suiji-product-edit__eyebrow { margin-bottom: 1.4rem; }
+.suiji-product-edit__grid {
+  display: grid;
+  gap: clamp(1rem, 1.5vw, 2.4rem);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0 auto;
+  max-width: 160rem;
+}
+.suiji-product-edit__card {
+  color: var(--suiji-ink);
+  display: block;
+  min-width: 0;
+  text-decoration: none;
+}
+.suiji-product-edit__image {
+  aspect-ratio: 4 / 5;
+  background: var(--suiji-surface);
+  display: block;
+  overflow: hidden;
+}
+.suiji-product-edit__image img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+}
+.suiji-product-edit__card:hover img { transform: scale(1.018); }
+.suiji-product-edit__meta {
+  align-items: baseline;
+  border-bottom: 1px solid var(--suiji-line);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1.45rem 0 1.7rem;
+}
+.suiji-product-edit__title,
+.suiji-product-edit__price {
+  font-size: 1.12rem;
+  letter-spacing: 0.05em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+.suiji-product-edit__title { font-weight: 650; }
+.suiji-product-edit__price { color: var(--suiji-muted); }
+
+.suiji-manifesto {
+  align-items: center;
+  border-top: 1px solid var(--suiji-line-soft);
+  display: grid;
+  gap: clamp(4rem, 8vw, 13rem);
+  grid-template-columns: minmax(28rem, 0.72fr) minmax(0, 1.28fr);
+  padding: clamp(7rem, 10vw, 15rem) clamp(2rem, 7vw, 11rem);
+}
+.suiji-manifesto__copy-block { max-width: 52rem; }
+.suiji-manifesto__eyebrow { margin-bottom: 2rem; }
+.suiji-manifesto h2 {
+  font-size: clamp(4.2rem, 5.8vw, 7.6rem);
+  line-height: 0.98;
+  margin: 0 0 2.4rem;
+  max-width: 11ch;
+}
+.suiji-manifesto__copy {
+  color: var(--suiji-muted);
+  font-size: clamp(1.55rem, 1.8vw, 1.9rem);
+  line-height: 1.6;
+  max-width: 44rem;
+}
+.suiji-manifesto__copy p { margin: 0; }
+.suiji-manifesto__copy-block .suiji-editorial__link { margin-top: 3rem; }
+.suiji-manifesto__media {
+  background: var(--suiji-surface);
+  overflow: hidden;
+}
+.suiji-manifesto__media img {
+  background: var(--suiji-surface);
+  display: block;
+  height: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  width: 100%;
+}
+
+.suiji-gallery {
+  border-top: 1px solid var(--suiji-line-soft);
+  padding: clamp(7rem, 10vw, 14rem) clamp(1.8rem, 3vw, 4.8rem);
+}
+.suiji-gallery__header {
+  margin: 0 auto clamp(3.5rem, 6vw, 7rem);
+  max-width: 160rem;
+}
+.suiji-gallery__number { margin-bottom: 1.5rem; }
+.suiji-gallery h2 { max-width: 15ch; }
+.suiji-gallery__intro {
+  color: var(--suiji-muted);
+  font-size: 1.55rem;
+  line-height: 1.55;
+  margin: 2rem 0 0;
+  max-width: 54rem;
+}
+.suiji-gallery__grid {
+  display: grid;
+  margin: 0 auto;
+  max-width: 160rem;
+}
+.suiji-gallery__figure { margin: 0; }
+.suiji-gallery__image {
+  background: #e8e9e8;
+  display: block;
+  overflow: hidden;
+}
+.suiji-gallery__figure--single .suiji-gallery__image { aspect-ratio: 3 / 2; }
+.suiji-gallery__image img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.suiji-gallery figcaption {
+  align-items: baseline;
+  border-bottom: 1px solid var(--suiji-line);
+  display: flex;
+  font-size: 1.05rem;
+  font-weight: 650;
+  justify-content: space-between;
+  letter-spacing: 0.11em;
+  padding: 1.35rem 0 1.8rem;
+  text-transform: uppercase;
+}
+.suiji-gallery__caption-detail { color: var(--suiji-muted); font-weight: 500; }
+
+.template-product .product,
+.template-collection .collection { padding-top: 4rem; }
+.template-product .product__title h1,
+.template-collection .collection-hero__title,
+.template-collection .title--primary {
+  color: var(--suiji-ink);
+  font-family: var(--font-heading-family);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+}
+.template-product .product__title h1 { font-size: clamp(4rem, 5vw, 6.4rem); line-height: 0.95; }
+.template-collection .title--primary { font-size: clamp(4.5rem, 6vw, 7.2rem); line-height: 0.95; }
+.template-product .product__media-wrapper .product__media,
+.template-collection .card__media .media { background: var(--suiji-surface); }
+.template-collection .card__heading,
+.template-collection .price {
+  font-size: 1.1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.template-product .product-form__submit,
+.template-product .product__tax { border-radius: 0; }
+.footer { background: var(--suiji-canvas); border-top: 1px solid var(--suiji-line); }
+
+@media screen and (max-width: 989px) {
+  .suiji-editorial__hero { min-height: 68rem; }
+  .suiji-product-edit__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .suiji-manifesto { grid-template-columns: 1fr; }
+  .suiji-manifesto__copy-block { max-width: 62rem; }
+  .suiji-manifesto h2 { max-width: 13ch; }
+}
+
+@media screen and (max-width: 749px) {
+  .header { min-height: 6rem; padding-bottom: 0.8rem; padding-top: 0.8rem; }
+  .suiji-editorial__hero {
+    align-items: end;
+    min-height: 74dvh;
+  }
+  .suiji-editorial__hero-media img { object-position: 68% center; }
+  .suiji-editorial__hero::after {
+    background: linear-gradient(0deg, rgba(244, 244, 242, 0.98) 0%, rgba(244, 244, 242, 0.86) 38%, rgba(244, 244, 242, 0.06) 72%);
+  }
+  .suiji-editorial__hero-copy { max-width: none; padding: 3.2rem 2rem 4rem; }
+  .suiji-editorial__hero h1 { font-size: clamp(4.5rem, 13vw, 6.4rem); max-width: 11ch; }
+  .suiji-editorial__actions { gap: 1.2rem 1.8rem; margin-top: 2.5rem; }
+  .suiji-editorial__button { min-width: 13.5rem; padding: 1.35rem 1.8rem; }
+
+  .suiji-product-edit { padding-left: 0; padding-right: 0; }
+  .suiji-product-edit__heading { align-items: start; flex-direction: column; padding: 0 2rem; }
+  .suiji-product-edit__grid {
+    grid-auto-columns: minmax(76vw, 1fr);
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    overflow-x: auto;
+    padding: 0 2rem 1rem;
+    scroll-padding-left: 2rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .suiji-product-edit__grid::-webkit-scrollbar { display: none; }
+  .suiji-product-edit__card { scroll-snap-align: start; }
+
+  .suiji-manifesto { gap: 4.5rem; padding-left: 2rem; padding-right: 2rem; }
+  .suiji-manifesto__media img { aspect-ratio: 4 / 5; object-position: center; }
+
+  .suiji-gallery__figure--single .suiji-gallery__image { aspect-ratio: 4 / 5; }
+  .suiji-gallery__image img { object-position: 62% center; }
+  .suiji-gallery figcaption { align-items: start; flex-direction: column; gap: 0.6rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .suiji-editorial__button,
+  .suiji-product-edit__image img { transition: none; }
+  .suiji-product-edit__card:hover img,
+  .suiji-editorial__button:active { transform: none; }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .header-wrapper { background: var(--suiji-canvas); backdrop-filter: none; -webkit-backdrop-filter: none; }
+}

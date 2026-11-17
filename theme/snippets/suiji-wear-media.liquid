@@ -1,0 +1,47 @@
+{% doc %}
+  Optional merchant-managed media, hidden until an image, poster or video exists.
+  @param {object} media_settings - Settings from the Core-Lock section.
+  @param {string} media_id - Unique owning section identifier.
+{% enddoc %}
+{%- if media_settings.two_looks_image != blank or media_settings.cross_wear_image != blank or media_settings.operation_video != blank or media_settings.operation_poster != blank or media_settings.material_detail_image != blank -%}
+{{ 'suiji-information.css' | asset_url | stylesheet_tag }}
+<div class="suiji-wear-media page-width" data-suiji-wear-media>
+  {%- assign wear_slots = 'two,cross,video,material' | split: ',' -%}
+  {%- for slot in wear_slots -%}
+    {%- liquid
+      assign slot_image = blank
+      assign slot_video = blank
+      case slot
+        when 'two'
+          assign slot_image = media_settings.two_looks_image
+          assign title_key = 'suiji_storefront.purchase.two_title'
+          assign alt_key = 'suiji_storefront.purchase.two_alt'
+        when 'cross'
+          assign slot_image = media_settings.cross_wear_image
+          assign title_key = 'suiji_storefront.purchase.cross_title'
+          assign alt_key = 'suiji_storefront.purchase.cross_alt'
+        when 'video'
+          assign slot_image = media_settings.operation_poster
+          assign slot_video = media_settings.operation_video
+          assign title_key = 'suiji_storefront.purchase.video_title'
+          assign alt_key = 'suiji_storefront.purchase.poster_alt'
+        when 'material'
+          assign slot_image = media_settings.material_detail_image
+          assign title_key = 'suiji_storefront.purchase.material_title'
+          assign alt_key = 'suiji_storefront.purchase.material_alt'
+      endcase
+      assign slot_alt = slot_image.alt | default: alt_key
+      if slot_image.alt == blank
+        assign slot_alt = alt_key | t
+      endif
+    -%}
+    {%- if slot_image != blank or slot_video != blank -%}
+    <section class="suiji-wear-media__section" aria-labelledby="WearMedia-{{ media_id }}-{{ slot }}"><header><h2 id="WearMedia-{{ media_id }}-{{ slot }}">{{ title_key | t }}</h2>{% if slot == 'cross' or slot == 'two' %}<p>{{ 'suiji_storefront.purchase.shared' | t }}</p>{% endif %}</header>
+      <figure>{%- if slot_video != blank -%}{{ slot_video | video_tag: image_size: '1440x', controls: true, autoplay: false, loop: false, muted: false, playsinline: true, preload: 'none' }}{%- else -%}{{ slot_image | image_url: width: 1800 | image_tag: widths: '360, 540, 750, 1000, 1400, 1800', sizes: '(min-width: 1280px) 1200px, 94vw', loading: 'lazy', decoding: 'async', alt: slot_alt }}{%- endif -%}
+      {%- if media_settings.illustrative_media -%}<figcaption>{{ 'suiji_storefront.purchase.illustrative' | t }}</figcaption>{%- endif -%}</figure>
+      {%- if slot == 'video' -%}<a href="#how-it-works">{{ 'suiji_storefront.purchase.steps' | t }} →</a>{%- endif -%}
+    </section>
+    {%- endif -%}
+  {%- endfor -%}
+</div>
+{%- endif -%}

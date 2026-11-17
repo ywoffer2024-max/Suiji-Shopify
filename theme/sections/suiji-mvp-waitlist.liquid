@@ -1,0 +1,165 @@
+{% if request.page_type == 'page' and page.handle == 'editions' %}
+{% render 'suiji-information-page', page_kind: 'sets' %}
+{% else %}
+{%- liquid
+  assign is_fr = false
+  if request.locale.iso_code contains 'fr'
+    assign is_fr = true
+  endif
+  assign form_id = 'SuijiWaitlist-' | append: section.id
+  assign journal_url = routes.root_url | append: '/blogs/journal' | replace: '//', '/'
+-%}
+
+<section id="suiji-waitlist" class="suiji-section suiji-waitlist{% if section.settings.full_page %} suiji-waitlist--page{% endif %}">
+  <div class="suiji-shell suiji-waitlist__layout">
+    <div class="suiji-waitlist__intro">
+      <span class="suiji-kicker">
+        {%- if is_fr -%}Accès Première Édition{%- else -%}First Edition Access{%- endif -%}
+      </span>
+      {%- if section.settings.full_page -%}
+        <h1 class="suiji-waitlist__title">
+          {%- if is_fr -%}Soyez informée en premier.{%- else -%}Hear about it first.{%- endif -%}
+        </h1>
+      {%- else -%}
+        <h2 class="suiji-waitlist__title">
+          {%- if is_fr -%}Soyez informée en premier.{%- else -%}Hear about it first.{%- endif -%}
+        </h2>
+      {%- endif -%}
+      <p class="suiji-copy">
+        {%- if is_fr -%}
+          Recevez les nouvelles de la Première Édition et aidez-nous à comprendre ce qui compte pour vous.
+        {%- else -%}
+          Get First Edition updates and help us understand what matters to you.
+        {%- endif -%}
+      </p>
+      <p class="suiji-waitlist__promise">
+        {%- if is_fr -%}
+          Pas de remise promise, pas de compte à rebours. Seulement des nouvelles utiles et la possibilité de vous désinscrire.
+        {%- else -%}
+          No promised discount and no countdown. Just useful updates, with the option to unsubscribe.
+        {%- endif -%}
+      </p>
+    </div>
+
+    {%- form 'customer', id: form_id, class: 'suiji-form' -%}
+      <suiji-waitlist
+        data-locale="{{ request.locale.iso_code | escape }}"
+        data-success="{% if form.posted_successfully? %}true{% else %}false{% endif %}"
+      >
+        {%- if form.posted_successfully? -%}
+          <div class="suiji-form__status suiji-form__status--success" role="status" tabindex="-1">
+            {%- if is_fr -%}
+              Merci. Votre inscription est bien enregistrée. Vous pouvez continuer à lire le <a class="suiji-link" href="{{ journal_url }}">journal</a>.
+            {%- else -%}
+              Thank you. Your place is recorded. You can keep reading the <a class="suiji-link" href="{{ journal_url }}">journal</a>.
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+        {%- if form.errors -%}
+          <div class="suiji-form__status suiji-form__status--error" role="alert">
+            {%- if is_fr -%}Veuillez vérifier les informations ci-dessous.{%- else -%}Please check the information below.{%- endif -%}
+            <div class="suiji-form__errors">{{ form.errors | default_errors }}</div>
+          </div>
+        {%- endif -%}
+
+        <input type="hidden" name="contact[tags]" value="SUIJI_WAITLIST" data-suiji-tags>
+        <input type="hidden" name="contact[note]" value="" data-suiji-note>
+
+        <div class="suiji-form__grid">
+          <div class="suiji-form__group">
+            <label class="suiji-form__label" for="SuijiWaitlistEmail-{{ section.id }}">
+              {%- if is_fr -%}Adresse e-mail{%- else -%}Email address{%- endif -%}
+            </label>
+            <input
+              class="suiji-form__input"
+              id="SuijiWaitlistEmail-{{ section.id }}"
+              type="email"
+              name="contact[email]"
+              value="{{ form.email }}"
+              autocomplete="email"
+              autocapitalize="off"
+              autocorrect="off"
+              required
+              aria-required="true"
+              {% if form.errors contains 'email' %}aria-invalid="true"{% endif %}
+            >
+          </div>
+
+          <div class="suiji-form__group">
+            <label class="suiji-form__label" for="SuijiWaitlistInterest-{{ section.id }}">
+              {%- if is_fr -%}Ce qui vous intéresse le plus{%- else -%}What interests you most{%- endif -%}
+            </label>
+            <select
+              class="suiji-form__select"
+              id="SuijiWaitlistInterest-{{ section.id }}"
+              name="contact[interest]"
+              data-suiji-interest
+              required
+              aria-required="true"
+            >
+              <option value="" selected disabled>{%- if is_fr -%}Choisir une option{%- else -%}Choose an option{%- endif -%}</option>
+              <option value="sensitive-ears">{%- if is_fr -%}Oreilles sensibles{%- else -%}Sensitive ears{%- endif -%}</option>
+              <option value="lightweight-statement">{%- if is_fr -%}Grandes boucles légères{%- else -%}Lightweight statement earrings{%- endif -%}</option>
+              <option value="modular-styling">{%- if is_fr -%}Compositions et modularité{%- else -%}Combinations and modular styling{%- endif -%}</option>
+              <option value="not-sure">{%- if is_fr -%}Je ne sais pas encore{%- else -%}I am not sure yet{%- endif -%}</option>
+            </select>
+          </div>
+
+          <div class="suiji-form__consent">
+            <input
+              class="suiji-form__checkbox"
+              id="SuijiWaitlistConsent-{{ section.id }}"
+              type="checkbox"
+              name="contact[consent]"
+              value="explicit"
+              required
+              aria-required="true"
+            >
+            <label class="suiji-form__consent-label" for="SuijiWaitlistConsent-{{ section.id }}">
+              {%- if is_fr -%}
+                J'accepte de recevoir les e-mails SUIJI. Je peux me désinscrire à tout moment.
+              {%- else -%}
+                I agree to receive SUIJI emails. I can unsubscribe at any time.
+              {%- endif -%}
+              {%- if shop.privacy_policy != blank -%}
+                <a href="{{ shop.privacy_policy.url }}">{%- if is_fr -%}Politique de confidentialité{%- else -%}Privacy policy{%- endif -%}</a>
+              {%- endif -%}
+            </label>
+          </div>
+
+          <button
+            class="suiji-button suiji-button--primary"
+            type="submit"
+            data-suiji-submit
+            data-loading-label="{% if is_fr %}Envoi en cours...{% else %}Submitting...{% endif %}"
+          >
+            {%- if is_fr -%}Rejoindre la liste{%- else -%}Join the waitlist{%- endif -%}
+          </button>
+        </div>
+      </suiji-waitlist>
+    {%- endform -%}
+  </div>
+</section>
+
+{% endif %}
+{% schema %}
+{
+  "name": "SUIJI waitlist",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_page",
+      "label": "Use full page spacing",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "SUIJI waitlist"
+    }
+  ]
+}
+{% endschema %}

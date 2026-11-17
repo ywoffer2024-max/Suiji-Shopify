@@ -1,0 +1,57 @@
+{% doc %}
+Server-rendered collection details and links; JavaScript adds filters and pagination.
+@param {string} category - Existing wearing category or all.
+{% enddoc %}
+<div data-server-content class="sc-ssr-catalogue">
+{% assign catalogue_title_category = category | default: 'all' %}{% if category == 'search' %}{% assign catalogue_title_category = 'all' %}{% endif %}
+{% assign catalogue_title_key = 'suiji_storefront.categories.' | append: catalogue_title_category %}
+<header class="sc-list-head"><p>SUIJI</p><h1>{{ catalogue_title_key | t }}</h1><p>{{ 'suiji_storefront.category_intro' | t }}</p></header>
+<nav class="sc-category-nav" aria-label="{{ 'suiji_commerce.contact' | t | escape }}">
+<a href="{{ routes.root_url | append: '/collections/all' | replace: '//', '/' }}">{{ 'suiji_storefront.categories.all' | t }}</a>
+<a href="{{ routes.root_url | append: '/collections/rings' | replace: '//', '/' }}">{{ 'suiji_storefront.categories.rings' | t }}</a>
+<a href="{{ routes.root_url | append: '/collections/earrings' | replace: '//', '/' }}">{{ 'suiji_storefront.categories.earrings' | t }}</a>
+<a href="{{ routes.root_url | append: '/collections/necklaces' | replace: '//', '/' }}">{{ 'suiji_storefront.categories.necklaces' | t }}</a>
+<a href="{{ routes.root_url | append: '/collections/bracelets' | replace: '//', '/' }}">{{ 'suiji_storefront.categories.bracelets' | t }}</a>
+<a href="{{ routes.root_url | append: '/collections/charms' | replace: '//', '/' }}">{{ 'suiji_storefront.categories.charms' | t }}</a>
+<a href="{{ routes.root_url | append: '/collections/extras' | replace: '//', '/' }}">{{ 'suiji_storefront.categories.extras' | t }}</a>
+<a href="{{ routes.root_url | append: '/collections/sets' | replace: '//', '/' }}">{{ 'suiji_storefront.categories.sets' | t }}</a>
+</nav>
+<p class="sc-loading" role="status">{{ 'suiji_storefront.catalogue_loading' | t }}</p>
+<div class="sc-catalogue-grid">
+{% if category == 'all' or category == 'search' or category == 'rings' or category == 'bases' and 'ring_base' contains '_base' %}
+{% render 'suiji-product-card-static', product_key: 'r01-ring-base' %}
+{% endif %}
+{% if category == 'all' or category == 'search' or category == 'rings' or category == 'bases' and 'ring_base' contains '_base' %}
+{% render 'suiji-product-card-static', product_key: 'r02-ring-base' %}
+{% endif %}
+{% if category == 'all' or category == 'search' or category == 'rings' or category == 'bases' and 'ring_base' contains '_base' %}
+{% render 'suiji-product-card-static', product_key: 'double-arm-ring-base' %}
+{% endif %}
+{% if category == 'all' or category == 'search' or category == 'earrings' or category == 'bases' and 'assembled_jewelry' contains '_base' %}
+{% render 'suiji-product-card-static', product_key: 'a02-drop' %}
+{% endif %}
+{% if category == 'all' or category == 'search' or category == 'earrings' or category == 'bases' and 'assembled_jewelry' contains '_base' %}
+{% render 'suiji-product-card-static', product_key: 'a03-drop' %}
+{% endif %}
+{% if category == 'all' or category == 'search' or category == 'necklaces' or category == 'bases' and 'necklace_base' contains '_base' %}
+{% render 'suiji-product-card-static', product_key: 'collar-7' %}
+{% endif %}
+{% if category == 'all' or category == 'search' or category == 'necklaces' or category == 'bases' and 'assembled_jewelry' contains '_base' %}
+{% render 'suiji-product-card-static', product_key: 'collar-7-drops-1' %}
+{% endif %}
+{% if category == 'all' or category == 'search' or category == 'necklaces' or category == 'bases' and 'assembled_jewelry' contains '_base' %}
+{% render 'suiji-product-card-static', product_key: 'collar-9-drops-5' %}
+{% endif %}
+{% if category == 'all' or category == 'search' or category == 'earrings' or category == 'bases' and 'assembled_jewelry' contains '_base' %}
+{% render 'suiji-product-card-static', product_key: 'core-lock-stud-metal-back' %}
+{% endif %}
+{% if category == 'all' or category == 'search' or category == 'earrings' or category == 'bases' and 'assembled_jewelry' contains '_base' %}
+{% render 'suiji-product-card-static', product_key: 'pearl-back-stud' %}
+{% endif %}
+{% if category == 'all' or category == 'search' or category == 'earrings' or category == 'bases' and 'earring_base' contains '_base' %}
+{% render 'suiji-product-card-static', product_key: 'h03-core-lock' %}
+{% endif %}
+{% if category == 'all' or category == 'search' or category == 'charms' or category == 'bases' and 'charm' contains '_base' %}
+{% render 'suiji-product-card-static', product_key: 'oval-motif' %}
+{% endif %}
+</div><p class="sc-caption">{{ 'suiji_storefront.demo' | t }}</p></div>

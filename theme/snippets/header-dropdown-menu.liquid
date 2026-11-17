@@ -1,0 +1,111 @@
+{% comment %}
+  Renders a standard dropdown style menu for the header.
+
+  Usage:
+  {% render 'header-dropdown-menu' %}
+{% endcomment %}
+
+<nav class="header__inline-menu">
+  <ul class="list-menu list-menu--inline" role="list">
+    {%- for link in section.settings.menu.links -%}
+      {%- assign menu_url = link.url -%}
+      {%- assign menu_children = link.links -%}
+      {%- assign menu_current = link.current -%}
+      {%- if link.handle == 'sets' -%}
+        {%- assign menu_url = '/collections/sets' -%}
+        {%- assign menu_children = '' -%}
+        {%- assign menu_current = false -%}
+        {%- if request.page_type == 'collection' and collection.handle == 'sets' -%}
+          {%- assign menu_current = true -%}
+        {%- endif -%}
+      {%- endif -%}
+      {%- assign suiji_is_shop_all = false -%}{%- if link.url contains '/collections/all' -%}{%- assign suiji_is_shop_all = true -%}{%- endif -%}
+      <li class="{% if menu_children != blank %}suiji-desktop-parent{% endif %}{% if suiji_is_shop_all %} suiji-mega-root{% endif %}"{% if suiji_is_shop_all %} data-suiji-mega-root{% endif %}>
+        {%- if menu_children != blank -%}
+          <a id="HeaderMenu-{{ link.handle }}" href="{% render 'suiji-localized-menu-url', url: menu_url %}" class="header__menu-item list-menu__item link link--text focus-inset">{%- render 'suiji-localized-menu-title', title: link.title -%}</a>
+          <header-menu>
+            <details id="Details-HeaderMenu-{{ forloop.index }}">
+              <summary id="HeaderMenuToggle-{{ link.handle }}" class="header__menu-item list-menu__item link focus-inset" aria-labelledby="HeaderMenu-{{ link.handle }} HeaderMenuToggleLabel-{{ link.handle }}">
+                <span id="HeaderMenuToggleLabel-{{ link.handle }}" class="visually-hidden">{{ 'suiji_navigation.labels.submenu' | t }}</span>
+                {{- 'icon-caret.svg' | inline_asset_content -}}
+              </summary>
+              <ul
+                id="HeaderMenu-MenuList-{{ forloop.index }}"
+                class="{% if suiji_is_shop_all %}suiji-mega-menu {% endif %}header__submenu list-menu list-menu--disclosure color-{{ section.settings.menu_color_scheme }} gradient caption-large motion-reduce global-settings-popup"
+                role="list"
+                tabindex="-1"
+              >
+                {%- if suiji_is_shop_all -%}{% render 'suiji-shop-mega-menu', links: link.links, parent_handle: link.handle %}{%- else -%}
+                {%- for childlink in link.links -%}
+                  <li class="{% if childlink.links != blank %}suiji-desktop-child-parent{% endif %}">
+                    {%- if childlink.links == blank -%}
+                      <a
+                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                        href="{% render 'suiji-localized-menu-url', url: childlink.url %}"
+                        class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"
+                        {% if childlink.current %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        {%- render 'suiji-localized-menu-title', title: childlink.title -%}
+                      </a>
+                    {%- else -%}
+                      <a id="HeaderMenuChild-{{ link.handle }}-{{ childlink.handle }}" href="{% render 'suiji-localized-menu-url', url: childlink.url %}" class="header__menu-item list-menu__item link link--text focus-inset caption-large">{%- render 'suiji-localized-menu-title', title: childlink.title -%}</a>
+                      <details id="Details-HeaderSubMenu-{{ link.handle }}-{{ childlink.handle }}">
+                        <summary
+                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                          aria-labelledby="HeaderMenuChild-{{ link.handle }}-{{ childlink.handle }} HeaderSubmenuLabel-{{ link.handle }}-{{ childlink.handle }}"
+                          class="header__menu-item link link--text list-menu__item focus-inset caption-large"
+                        >
+                          <span id="HeaderSubmenuLabel-{{ link.handle }}-{{ childlink.handle }}" class="visually-hidden">{{ 'suiji_navigation.labels.submenu' | t }}</span>
+                          {{- 'icon-caret.svg' | inline_asset_content -}}
+                        </summary>
+                        <ul
+                          id="HeaderMenu-SubMenuList-{{ link.handle }}-{{ childlink.handle }}"
+                          class="header__submenu list-menu motion-reduce"
+                        >
+                          {%- for grandchildlink in childlink.links -%}
+                            <li>
+                              <a
+                                id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                href="{% render 'suiji-localized-menu-url', url: grandchildlink.url %}"
+                                class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"
+                                {% if grandchildlink.current %}
+                                  aria-current="page"
+                                {% endif %}
+                              >
+                                {%- render 'suiji-localized-menu-title', title: grandchildlink.title -%}
+                              </a>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      </details>
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+                {%- endif -%}
+              </ul>
+            </details>
+          </header-menu>
+        {%- else -%}
+          <a
+            id="HeaderMenu-{{ link.handle }}"
+            href="{% render 'suiji-localized-menu-url', url: menu_url %}"
+            class="header__menu-item list-menu__item link link--text focus-inset"
+            {% if menu_current %}
+              aria-current="page"
+            {% endif %}
+          >
+            <span
+              {%- if menu_current %}
+                class="header__active-menu-item"
+              {% endif %}
+            >
+              {%- render 'suiji-localized-menu-title', title: link.title -%}
+            </span>
+          </a>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>

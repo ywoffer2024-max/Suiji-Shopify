@@ -26,7 +26,7 @@
 {%- elsif sizes == blank -%}
   {%- capture sizes -%}(min-width: 1280px) {{ nav_width }}px, {{ nav_phone_width }}vw{%- endcapture -%}
 {%- endif -%}
-{%- if file contains 'suiji-20261117-' -%}
+{%- if file contains 'suiji-20261117-' or file contains 'suiji-20261118-' -%}
   {%- assign source = 'https://cdn.shopify.com/s/files/1/1041/4112/8020/files/' | append: file -%}
   <img src="{{ source }}?width=720" srcset="{{ source }}?width=360 360w, {{ source }}?width=540 540w, {{ source }}?width=720 720w, {{ source }}?width=1080 1080w, {{ source }}?width=1280 1280w, {{ source }}?width=1600 1600w, {{ source }}?width=2000 2000w" sizes="{{ sizes }}" width="{{ image_width }}" height="{{ image_height }}" alt="{{ alt | escape }}" data-suiji-current-render loading="{{ loading }}" decoding="async" class="suiji-framed-cover" style="--suiji-scale:{{ scale }};--suiji-x:{{ dx }}%;--suiji-y:{{ dy }}%">
 {%- endif -%}

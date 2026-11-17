@@ -12,6 +12,9 @@
   elsif product.tags contains 'role:necklace_base' and product.handle contains 'collar'
     assign shows_charm_range = true
   endif
+  if product.handle == 'suiji-cross-chain' and product.tags contains 'core-lock:included'
+    assign shows_charm_range = true
+  endif
   assign pairs = product.metafields.custom.suiji_compatible_products.value
   if shows_charm_range
     assign pairs = collections['all'].products | sort: 'handle'
@@ -35,7 +38,7 @@
           {%- endunless -%}
         {%- endif -%}
         {%- capture cover -%}{% render 'suiji-storefront-cover', handle: partner.handle %}{%- endcapture -%}
-        {%- unless cover contains '|suiji-20261117-' -%}{%- continue -%}{%- endunless -%}
+        {%- unless cover contains '|suiji-20261117-' or cover contains '|suiji-20261118-' -%}{%- continue -%}{%- endunless -%}
         {%- capture card -%}{% render 'suiji-storefront-card', piece: partner %}{%- endcapture -%}
         {%- assign card = card | strip -%}
         {%- if card != blank -%}

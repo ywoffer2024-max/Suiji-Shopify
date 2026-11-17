@@ -1,0 +1,60 @@
+{{ 'suiji-homepage.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign suiji_home_image = section.settings.image | default: images['r01-blue-front-area17-559667e818a1ea03.png']
+  assign suiji_home_alt = 'suiji_preview.home_hero_alt' | t
+-%}
+<section class="suiji-hero">
+  <div class="suiji-shell suiji-hero__grid">
+    <div class="suiji-hero__content">
+      <span class="suiji-kicker">SUIJI · Core-Lock</span>
+      <h1 class="suiji-display">{{ 'suiji_navigation.core.title' | t }}</h1>
+      <p class="suiji-copy">{{ 'suiji_navigation.core.intro' | t }}</p>
+      <div class="suiji-hero__actions">
+        <a class="suiji-button suiji-button--primary" href="{% render 'suiji-localized-menu-url', url: '/pages/bases#build-your-look' %}">{{ 'suiji_preview.entry_cta' | t }}</a>
+        <a class="suiji-button suiji-button--secondary" href="{% render 'suiji-localized-menu-url', url: '/pages/the-mechanism#how-it-works' %}">{{ 'suiji_navigation.labels.how_it_works' | t }}</a>
+        <a class="suiji-button suiji-button--secondary" href="{% render 'suiji-localized-menu-url', url: '/pages/editions' %}">{{ 'suiji_navigation.labels.sets' | t }}</a>
+      </div>
+    </div>
+    <div class="suiji-hero__media">
+      <a class="suiji-hero__product-link" href="{% render 'suiji-localized-menu-url', url: '/pages/bases#build-your-look' %}">
+      {%- if suiji_home_image != blank -%}
+          {{ suiji_home_image | image_url: width: 1600 | image_tag:
+            class: 'suiji-hero__image',
+            widths: '360, 540, 750, 960, 1200, 1600',
+            sizes: '(min-width: 990px) 50vw, 100vw',
+            loading: 'eager',
+            decoding: 'async',
+            fetchpriority: 'high',
+            alt: suiji_home_alt
+          }}
+        {%- else -%}<span>{{ 'suiji_preview.home_image_pending' | t }}</span>{%- endif -%}
+        <span class="suiji-hero__product-caption">{{ 'suiji_preview.base_title' | t }} · 54 / 57 mm →</span>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="suiji-intro-band">
+  <div class="suiji-shell suiji-intro-band__grid">
+    <p class="suiji-intro-band__statement">{{ 'suiji_navigation.sets.intro' | t }}</p>
+    <p class="suiji-intro-band__note">{{ 'suiji_navigation.sets.availability' | t }}</p>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "SUIJI MVP hero",
+  "tag": "section",
+  "class": "section",
+  "presets": [
+    {
+      "name": "SUIJI MVP hero"
+    }
+  ],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-banner.settings.image.label"
+    }
+  ]
+}
+{% endschema %}
