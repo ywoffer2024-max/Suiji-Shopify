@@ -28,7 +28,7 @@ SUIJI is handmade jewelry shaped by personal choices. The story begins with Chun
 - French spring engineers contributed to later spring, mechanics and operating-pressure refinement. Public engineering copy focuses on successive prototypes, component fit, movement and hand finishing. Omit actual patent identifiers and publication links from storefront copy. Use iteration or test counts only when the user supplies verified numbers; do not invent them.
 - Titanium alloy is used for components designed to contact skin. Other materials depend on design/process, with lightness and wearing feel as priorities. Preserve specific TC4 and component facts; a silver-colored finish is not silver material. Do not promise that nobody can have an allergic reaction.
 - Sustainability means continued use, compatible changes, care and discussing repair. Do not invent recycled-content percentages, carbon savings, zero-waste claims or environmental certification.
-- Personal design is the brand vision. The public Studio remains a clearly described preview until its backend exists; do not imply a live AI production or ordering service.
+- Personal design is the brand vision. The Shopify Studio page collects email applications for an invitation-only beta using the native contact form. The public page gives one application action and links to the privacy policy. Beta applications do not subscribe visitors to marketing. The application and the preview do not create an order.
 - Product finish display names are **Classic Gold / Or classique**, **Silver / Argent**, **SUIJI Blue / Bleu SUIJI**. **Natural Titanium / Titane naturel** is reserved for a real corresponding option. Preserve internal option values, variant IDs and SKUs; never manufacture a new choice by renaming another one.
 - Journal authors are **Rowan**. Preserve native article identities, full approved EN/FR bodies, titles and publication dates.
 
@@ -438,7 +438,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-r107-home.liquid",
-      "sha256": "129dc261f533b92c4d00c01c859e18792a24640f9052424b58fa0b742a523ecf"
+      "sha256": "04d5daad97deb1fd3f06d534c05b574bb568530e43e7150e2aaa0f6207718305"
     },
     {
       "path": "theme/snippets/suiji-r107-wordmark.liquid",

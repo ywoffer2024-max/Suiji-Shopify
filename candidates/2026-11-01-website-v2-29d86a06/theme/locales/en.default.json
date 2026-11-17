@@ -1167,5 +1167,18 @@
     "sets_cta": "Start with a complete set",
     "size_cta": "Find your ring size",
     "seo": "Discover the SUIJI Core-Lock modular system. Choose a jewelry base, add a compatible charm and check the parts you need for each composition."
+  },
+  "suiji_charm_beta": {
+    "status": "AI Charm Studio · Beta by invitation",
+    "intro": "Start with an idea or a sketch. Explore shapes, colors, and finishes for a charm you can try on a compatible SUIJI base.",
+    "offer": "Apply to be among the first to try the Studio. If invited, you’ll get 20 free design projects. A project counts when you confirm your design.",
+    "email": "Your email address",
+    "submit": "Join the waitlist",
+    "success": "You’re on the waitlist. If you’re selected, we’ll email you an invitation.",
+    "privacy": "We’ll use your email to manage your beta application.",
+    "privacy_link": "Privacy policy",
+    "home": "Explore your own charm design with AI. Apply for an invitation and free design credits in the first beta group.",
+    "legacy_heading": "Design your own charm.",
+    "legacy_body": "Apply for an invitation to the AI Charm Studio beta."
   }
 }

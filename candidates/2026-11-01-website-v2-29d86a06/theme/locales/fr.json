@@ -1179,5 +1179,18 @@
     "sets_cta": "Commencer par un ensemble complet",
     "size_cta": "Trouver votre taille de bague",
     "seo": "Découvrez le système modulaire Core-Lock de SUIJI. Choisissez une base, ajoutez un ornement compatible et vérifiez les pièces nécessaires à votre composition."
+  },
+  "suiji_charm_beta": {
+    "status": "AI Charm Studio · Bêta sur invitation",
+    "intro": "Partez d’une idée ou d’un croquis. Explorez les formes, les couleurs et les finitions d’un ornement à essayer sur une base SUIJI compatible.",
+    "offer": "Inscrivez-vous pour faire partie des premières personnes à essayer le Studio. Sur invitation, vous pourrez créer 20 projets gratuitement. Un projet est décompté lorsque vous validez votre création.",
+    "email": "Votre adresse e-mail",
+    "submit": "Rejoindre la liste d’attente",
+    "success": "Vous êtes sur la liste d’attente. Si votre candidature est retenue, nous vous enverrons une invitation par e-mail.",
+    "privacy": "Nous utiliserons votre adresse e-mail pour gérer votre candidature à la bêta.",
+    "privacy_link": "Politique de confidentialité",
+    "home": "Imaginez votre ornement avec l’IA. Demandez une invitation pour obtenir des crédits de création gratuits et essayer la première version du Studio.",
+    "legacy_heading": "Créez votre ornement.",
+    "legacy_body": "Demandez une invitation à la bêta d’AI Charm Studio."
   }
 }
