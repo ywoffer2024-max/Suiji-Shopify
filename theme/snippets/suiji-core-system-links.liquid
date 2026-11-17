@@ -1,0 +1,34 @@
+{%- liquid
+  assign language = request.locale.iso_code | split: '-' | first
+  assign charm_label = 'Charms'
+  assign nav_label = 'Bases and charms'
+  if language == 'fr'
+    assign charm_label = 'Ornements'
+    assign nav_label = 'Bases et ornements'
+  endif
+-%}
+<nav class="r-system-circles suiji-core-choices" aria-label="{{ nav_label }}">
+  <a data-core-system-choice="bases" href="{{ routes.root_url | append: '/pages/bases' | replace: '//', '/' }}">
+    <span class="suiji-core-choices__image suiji-core-choices__image--bases" aria-hidden="true">
+      {%- capture collar_cover -%}{% render 'suiji-storefront-cover', handle: 'suiji-collar-9', sku: 'COLLAR9-G' %}{%- endcapture -%}
+      {%- assign collar_cover = collar_cover | split: '|' -%}
+      {%- capture ring_cover -%}{% render 'suiji-storefront-cover', handle: 'r01' %}{%- endcapture -%}
+      {%- assign ring_cover = ring_cover | split: '|' -%}
+      <span class="suiji-core-choices__sample">
+        {% render 'suiji-storefront-cover-image', cover: ring_cover, sizes: '160px' %}
+      </span>
+      <span class="suiji-core-choices__sample">
+        {% render 'suiji-storefront-cover-image', cover: collar_cover, sizes: '160px' %}
+      </span>
+    </span>
+    <span>Bases</span>
+  </a>
+  <a data-core-system-choice="charms" href="{{ routes.root_url | append: '/pages/charms' | replace: '//', '/' }}">
+    <span class="suiji-core-choices__image" aria-hidden="true">
+      {%- capture cover -%}{% render 'suiji-storefront-cover', handle: 'suiji-photo-20261109-ornament-09' %}{%- endcapture -%}
+      {%- assign cover = cover | split: '|' -%}
+      {% render 'suiji-storefront-cover-image', cover: cover, sizes: '220px' %}
+    </span>
+    <span>{{ charm_label }}</span>
+  </a>
+</nav>

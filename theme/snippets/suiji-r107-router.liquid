@@ -1,0 +1,81 @@
+{%- liquid
+ assign r107_product_key = ''
+ if template.suffix contains 'suiji-p-'
+  assign r107_product_key = template.suffix | remove_first: 'suiji-p-'
+ endif
+-%}
+{%- if r107_product_key != blank -%}
+{%- assign current_handle = '' -%}
+{%- case r107_product_key -%}
+  {%- when 'r01-ring-base' -%}{%- assign current_handle = 'r01' -%}
+  {%- when 'r02-ring-base' -%}{%- assign current_handle = 'suiji-r02-ring-base' -%}
+  {%- when 'double-arm-ring-base' -%}{%- assign current_handle = 'suiji-double-arm-ring-base' -%}
+  {%- when 'h01-hoops' -%}{%- assign current_handle = 'h01-blue-hoop' -%}
+  {%- when 'h02-hoop' -%}{%- assign current_handle = 'suiji-h02-hoop' -%}
+  {%- when 'collar-7' -%}{%- assign current_handle = 'suiji-collar-7' -%}
+  {%- when 'collar-9' -%}{%- assign current_handle = 'suiji-collar-9' -%}
+  {%- when 'cross-chain' -%}{%- assign current_handle = 'suiji-cross-chain' -%}
+  {%- when 'set01-stud-earring-set' -%}{%- assign current_handle = 'suiji-rpt-set-01-dual-back-stud' -%}
+{%- endcase -%}
+<div class="r-site" data-r107-page data-family="archive-entry">
+  <section class="r-section">
+    <h1>{{ collection.title | escape }}</h1>
+    {% if current_handle != blank %}{% render 'suiji-storefront-card', piece: all_products[current_handle] %}{% endif %}
+    <p><a class="r-link" href="{{ routes.all_products_collection_url }}">{{ 'suiji_navigation.labels.shop_all' | t }}</a></p>
+  </section>
+</div>
+{%- elsif request.page_type == 'page' and page.metafields.suiji.studio_piece.value.schema == 'suiji-studio-piece/1' -%}
+{% render 'suiji-r107-studio-piece', piece: page.metafields.suiji.studio_piece.value %}
+{%- elsif request.page_type == 'index' -%}{% render 'suiji-r107-home' %}
+{%- elsif request.page_type == 'collection' -%}
+{% case collection.handle %}
+{% when 'all' %}{% render 'suiji-shop-all-photo' %}
+{% when 'earrings' %}{% render 'suiji-shop-all-photo', catalogue_family: 'earrings' %}
+{% when 'rings' %}{% render 'suiji-shop-all-photo', catalogue_family: 'rings' %}
+{% when 'necklaces' %}{% render 'suiji-shop-all-photo', catalogue_family: 'necklaces' %}
+{% when 'bracelets' %}{% render 'suiji-shop-all-photo', catalogue_family: 'bracelets' %}
+{% when 'charms' %}{% render 'suiji-shop-all-photo', catalogue_family: 'charms' %}
+{% when 'extras' %}{% render 'suiji-shop-all-photo', catalogue_family: 'extras' %}
+{% when 'sets' %}{% render 'suiji-r107-collection-sets' %}
+{% when 'accessories' %}{% render 'suiji-shop-all-photo', catalogue_family: 'extras' %}
+{% when 'motifs' %}{% render 'suiji-shop-all-photo', catalogue_family: 'charms' %}
+{% when 'the-edits', 'gift-sets', 'gifts' %}{% render 'suiji-r107-collection-sets' %}
+{% when 'core-lock', 'locks-chains' %}{% render 'suiji-shop-all-photo' %}
+{% when 'gifts-under-100-eur', 'gifts-under-500-eur', 'gifts-under-1000-eur' %}
+  {% assign gift_budget_limit = collection.handle | remove_first: 'gifts-under-' | remove: '-eur' %}
+  {% render 'suiji-r107-gift-budget-collection', limit: gift_budget_limit %}
+{% endcase %}
+{%- elsif request.page_type == 'page' -%}{% case page.handle %}
+{% when 'study-triangle' %}{% render 'suiji-r107-public-study-triangle' %}
+{% when 'study-gate' %}{% render 'suiji-r107-public-study-gate' %}
+{% when 'study-pink-orbit' %}{% render 'suiji-r107-public-study-pink-orbit' %}
+{% when 'study-aurora' %}{% render 'suiji-r107-public-study-aurora' %}
+{% when 'about' %}{% render 'suiji-r107-about' %}
+{% when 'bases' %}{% render 'suiji-r107-bases' %}
+{% when 'care-guide' %}{% render 'suiji-r107-care' %}
+{% when 'contact' %}{% render 'suiji-r107-contact' %}
+{% when 'editions' %}{% render 'suiji-r107-editions' %}
+{% when 'faq' %}{% render 'suiji-r107-faq' %}
+{% when 'the-mechanism' %}{% render 'suiji-r107-mechanism' %}
+{% when 'members' %}{% render 'suiji-r107-members' %}
+{% when 'shipping-returns' %}{% render 'suiji-r107-shipping' %}
+{% when 'warranty' %}{% render 'suiji-r107-warranty' %}
+{% when 'charms' %}{% render 'suiji-r107-charms-help' %}
+{% when 'design-studio' %}{% render 'suiji-r107-studio-intro' %}
+{% when 'co-create' %}{% render 'suiji-r107-co-create' %}
+{% when 'studio-workspace' %}{% render 'suiji-r107-studio-workspace' %}
+{% when 'my-design' %}{% render 'suiji-r107-design-private' %}
+{% when 'designers' %}{% render 'suiji-r107-designer' %}
+{% when 'charm-exchange' %}{% render 'suiji-r107-exchange' %}
+{% when 'gifts' %}{% render 'suiji-r107-gifts' %}
+{% when 'creator-partnerships' %}{% render 'suiji-r107-creator' %}
+{% when 'creator-guide' %}{% render 'suiji-r107-creator-guide' %}
+{% when 'shopping-preview' %}{% render 'suiji-r107-shopping-preview' %}
+{% when 'sets' %}{% render 'suiji-r107-collection-sets' %}
+{% endcase %}
+{%- elsif request.page_type == 'article' -%}{% render 'suiji-r107-article' %}
+{%- elsif request.page_type == 'blog' -%}{% render 'suiji-r107-journal' %}
+{% comment %}Native cart and checkout remain Shopify-managed. The separate shopping-preview Page holds local demo selections.{% endcomment %}
+{%- elsif request.page_type == 'search' -%}{% render 'suiji-r107-search' %}
+{%- elsif request.page_type == '404' -%}{% render 'suiji-r107-utility' %}
+{%- endif -%}

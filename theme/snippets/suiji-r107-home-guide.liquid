@@ -1,0 +1,35 @@
+{%- liquid
+  assign language = request.locale.iso_code | split: '-' | first
+  if language == 'fr'
+    assign title = 'Le détail qui change tout'
+    assign intro = 'Le fermoir Core-Lock relie la base à l’ornement. Pour changer de style, gardez votre base et choisissez un autre ornement compatible.'
+    assign steps = 'Choisissez une base équipée du fermoir|Ajoutez un ornement compatible|Changez d’ornement au gré de vos envies' | split: '|'
+    assign caption = 'Base de bague avec fermoir Core-Lock'
+    assign photo_alt = 'Base de bague brossée en finition bleue, avec fermoir visible'
+    assign action = 'Voir comment changer un ornement'
+  else
+    assign title = 'The detail that changes the look'
+    assign intro = 'Core-Lock connects the base to the charm. Keep the base you like and choose another compatible charm whenever you want a different look.'
+    assign steps = 'Choose a base fitted with Core-Lock|Add a compatible charm|Swap the charm whenever you like' | split: '|'
+    assign caption = 'Ring base with its Core-Lock clasp'
+    assign photo_alt = 'Brushed blue ring base with its clasp visible'
+    assign action = 'See how to change a charm'
+  endif
+-%}
+<section class="r-split r-split--ice suiji-home-guide" id="home-core-lock" aria-labelledby="SuijiHomeCoreTitle">
+  <figure>
+    <img src="https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-ring-01-04-light-blue-b710e3a7ffa3.jpg?width=600" srcset="https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-ring-01-04-light-blue-b710e3a7ffa3.jpg?width=360 360w, https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-ring-01-04-light-blue-b710e3a7ffa3.jpg?width=480 480w, https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-ring-01-04-light-blue-b710e3a7ffa3.jpg?width=640 640w, https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-ring-01-04-light-blue-b710e3a7ffa3.jpg?width=960 960w, https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-ring-01-04-light-blue-b710e3a7ffa3.jpg?width=1280 1280w, https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-ring-01-04-light-blue-b710e3a7ffa3.jpg?width=1800 1800w" sizes="(min-width: 1200px) 480px, (min-width: 750px) 42vw, 90vw" data-suiji-current-render alt="{{ photo_alt | escape }}" width="3200" height="4000" loading="lazy" decoding="async">
+    <figcaption>{{ caption | escape }}</figcaption>
+  </figure>
+  <div>
+    <p class="r-eyebrow">Core-Lock</p>
+    <h2 id="SuijiHomeCoreTitle">{{ title | escape }}</h2>
+    <p>{{ intro | escape }}</p>
+    <ol class="suiji-home-guide__steps">
+      {%- for step in steps -%}<li>{{ step | escape }}</li>{%- endfor -%}
+    </ol>
+    <a class="r-link" href="{{ routes.root_url | append: '/pages/the-mechanism#how-it-works' | replace: '//', '/' }}">
+      {{- action | escape -}}<span aria-hidden="true"> ↗</span>
+    </a>
+  </div>
+</section>

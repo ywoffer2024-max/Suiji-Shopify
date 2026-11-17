@@ -1,0 +1,73 @@
+{% doc %}
+Renders sizing methods and a verified international ring reference.
+@param {string} [guide_id] - Unique anchor and control ID prefix.
+@param {boolean} [in_dialog] - Show only ring guidance in a product dialog.
+@param {object} [native_product] - Use product-specific availability text.
+{% enddoc %}
+{%- assign current_guide_id = guide_id | default: 'size-guide' -%}
+{%- assign sizing_locale = 'en' -%}
+{%- if request.locale.iso_code contains 'fr' -%}{%- assign sizing_locale = 'fr' -%}{%- endif -%}
+{%- assign sizing_chart_file = 'suiji-ring-sizing-' | append: sizing_locale | append: '.svg' -%}
+{{ 'suiji-sizing.css' | asset_url | stylesheet_tag }}
+<section class="suiji-size-guide ssg-root" id="{{ current_guide_id }}" data-sizing-guide data-sizing-locale="{{ sizing_locale }}" aria-label="{{ 'suiji_sizing.title' | t }}">
+{% unless in_dialog %}<header class="ssg-header"><p class="ssg-eyebrow">SUIJI</p><h2>{{ 'suiji_sizing.title' | t }}</h2><p>{{ 'suiji_sizing.intro' | t }}</p></header>
+<nav class="ssg-category-nav" aria-label="{{ 'suiji_sizing.category_nav' | t | escape }}"><a href="#{{ current_guide_id }}-rings">{{ 'suiji_sizing.rings' | t }}</a><a href="#{{ current_guide_id }}-bracelets">{{ 'suiji_sizing.bracelets' | t }}</a><a href="#{{ current_guide_id }}-necklaces">{{ 'suiji_sizing.necklaces' | t }}</a><a href="#{{ current_guide_id }}-earrings">{{ 'suiji_sizing.earrings' | t }}</a></nav>{% endunless %}
+<div class="ssg-rings" id="{{ current_guide_id }}-rings">{% if in_dialog %}<p class="ssg-intro">{{ 'suiji_sizing.intro' | t }}</p>{% else %}<h3 class="ssg-heading">{{ 'suiji_sizing.ring_title' | t }}</h3>{% endif %}
+<div class="ssg-current">
+  <h3>{{ 'suiji_sizing.current' | t }}</h3>
+  <table class="ssg-available-table"><caption class="visually-hidden">{{ 'suiji_sizing.current' | t }}</caption>
+    <thead><tr><th scope="col">{{ 'suiji_sizing.size' | t }}</th><th scope="col">{{ 'suiji_pdp.circumference' | t }}</th><th scope="col">{{ 'suiji_sizing.inner_diameter' | t }}</th></tr></thead>
+    <tbody>
+      {%- assign current_sizes = '54,57' | split: ',' -%}
+      {%- for circumference in current_sizes -%}
+        {%- assign diameter = circumference | divided_by: 3.14159265359 | round: 1 | append: '' -%}
+        {%- if sizing_locale == 'fr' -%}{%- assign diameter = diameter | replace: '.', ',' -%}{%- endif -%}
+        <tr><th scope="row">{% render 'suiji-ring-size-label', value: circumference %}</th><td>{{ circumference }} mm</td><td>{{ 'suiji_sizing.approx' | t }} {{ diameter }} mm</td></tr>
+      {%- endfor -%}
+    </tbody>
+  </table>
+  <p>{% if native_product %}{{ 'suiji_pdp.native_guide_range' | t }}{% else %}{{ 'suiji_sizing.current_note' | t }}{% endif %}</p>
+</div>
+<h3 class="ssg-heading">{{ 'suiji_sizing.measure_title' | t }}</h3><div class="ssg-methods">
+<article class="ssg-method"><svg viewBox="0 0 320 140" aria-hidden="true" focusable="false"><circle cx="160" cy="65" r="50"/><circle cx="160" cy="65" r="40"/><path class="ssg-measure-line" d="M120 65h80m-73-6-7 6 7 6m66-12 7 6-7 6"/><path d="M75 128h170m-170-9v9m17-4v4m17-9v9m17-4v4m17-9v9m17-4v4m17-9v9m17-4v4m17-9v9m17-4v4m17-9v9"/></svg><h3><span>01</span> {{ 'suiji_sizing.method_ring' | t }}</h3><p>{{ 'suiji_sizing.method_ring_text' | t }}</p></article>
+<article class="ssg-method">
+  <svg viewBox="84 0 145 140" aria-hidden="true" focusable="false" data-sizing-finger-diagram>
+    <path d="M129 134c-3-10-11-17-18-26-7-9-9-16-13-24l-7-12c-4-7-1-14 5-15 6-1 10 3 14 8l11 13c3 3 7 1 7-4l-7-44c-1-7 2-12 8-13 6-1 11 3 12 10l7 25-2-36c0-7 4-11 10-11s10 5 10 11l4 34 5-27c1-6 5-9 11-8s10 6 9 12l-3 35 10-18c3-6 8-7 12-4 5 3 7 8 4 15l-9 29c-4 18-8 26-16 35-5 5-8 10-9 15"/>
+    <path stroke-width="1" d="M125 32l-1-5c0-4 2-6 6-7 3 0 6 2 7 5l1 5m13-10v-5c0-4 2-6 5-6s6 3 6 6l1 5m16 8 1-4c0-3 3-5 6-5 4 1 6 3 5 7l-1 4m17 19 2-3c2-2 4-2 6 0 2 1 2 4 1 7l-1 3M94 68c-1-4 1-7 4-8 3 0 6 2 8 5"/>
+    <path stroke-width="1" d="M130 47c3-2 6-2 9-1m14-8c3-1 6-1 9 0m16 1c3-1 7-1 10 1m15 23c2 0 5 1 7 3m-76 24c8 5 11 12 10 21m8-38c6 2 13 2 19 1m-7 35c7-5 16-6 23-5"/>
+    <path class="ssg-paper" d="M169 50c8-3 18-3 26-1l-1 13c-8-2-17-1-27 1Z"/>
+    <path class="ssg-measure-line" d="M188 49l-1 12"/>
+    <path d="m173 55 10-2" stroke-dasharray="2 3"/>
+  </svg>
+  <h3><span>02</span> {{ 'suiji_sizing.method_finger' | t }}</h3>
+  <p>{{ 'suiji_sizing.method_finger_text' | t }}</p>
+</article></div>
+<p class="ssg-caption">{{ 'suiji_sizing.diagram_note' | t }}</p>
+<fieldset class="ssg-calculator" data-sizing-calculator data-result="{{ 'suiji_sizing.result' | t: measure: '__VALUE__' | escape }}" data-us-size-result="{{ 'suiji_sizing.us_size_result' | t: size: '__SIZE__' | escape }}" data-diameter-result="{{ 'suiji_sizing.result_diameter' | t: measure: '__VALUE__' | escape }}" data-error="{{ 'suiji_sizing.result_error' | t | escape }}" data-idle="{{ 'suiji_sizing.result_idle' | t | escape }}"><legend>{{ 'suiji_sizing.calculator_title' | t }}</legend><div class="ssg-input-row"><label for="{{ current_guide_id }}-measurement-type">{{ 'suiji_sizing.measurement_type' | t }}<select id="{{ current_guide_id }}-measurement-type" data-sizing-type><option value="diameter">{{ 'suiji_sizing.diameter_option' | t }}</option><option value="circumference">{{ 'suiji_sizing.circumference_option' | t }}</option></select></label><label for="{{ current_guide_id }}-measurement">{{ 'suiji_sizing.measurement' | t }}<input id="{{ current_guide_id }}-measurement" data-sizing-value type="number" min="5" max="35" step="0.1" inputmode="decimal" placeholder="17.2"></label><button type="button" data-sizing-convert>{{ 'suiji_sizing.calculate' | t }}</button></div><div class="ssg-result" role="status" aria-live="polite" aria-atomic="true"><strong data-sizing-result>{{ 'suiji_sizing.result_idle' | t }}</strong><span data-sizing-result-diameter></span></div><p class="ssg-caption">{{ 'suiji_sizing.calculator_note' | t }}</p></fieldset>
+<aside class="ssg-print"><h3>{{ 'suiji_sizing.print_title' | t }}</h3><p>{{ 'suiji_sizing.print_text' | t }}</p><a href="{{ sizing_chart_file | asset_url }}" target="_blank" rel="noopener">{{ 'suiji_sizing.print_link' | t }} ↗</a></aside>
+<details class="ssg-international"><summary>{{ 'suiji_sizing.all_chart' | t }}<span aria-hidden="true">+</span></summary><p class="ssg-caption">{{ 'suiji_sizing.formula' | t }}</p><p class="ssg-caption">{{ 'suiji_pdp.guide_scroll' | t }}</p>
+  <div class="suiji-size-guide__scroll" role="region" tabindex="0" aria-label="{{ 'suiji_pdp.guide_all' | t | escape }}">
+    <table><caption class="visually-hidden">{{ 'suiji_pdp.guide_all' | t }}</caption>
+      <thead><tr><th scope="col">{{ 'suiji_sizing.size' | t }}</th><th scope="col">{{ 'suiji_pdp.circumference' | t }}</th><th scope="col">{{ 'suiji_pdp.diameter' | t }}</th></tr></thead>
+      <tbody>
+      {%- for circumference in (41..65) -%}
+        {%- capture size -%}{% render 'suiji-ring-size-label', value: circumference %}{%- endcapture -%}
+        {%- assign size = size | strip -%}
+        {%- assign diameter = circumference | divided_by: 3.14159265359 | round: 2 | append: '' -%}
+        {%- if sizing_locale == 'fr' -%}{%- assign diameter = diameter | replace: '.', ',' -%}{%- endif -%}
+        <tr{% if circumference == 54 or circumference == 57 %} class="suiji-size-guide__initial"{% endif %}>
+          <th scope="row"{% if size != blank %} data-us-size="{{ circumference }}"{% endif %}>{{ size | default: '—' }}</th><td>{{ circumference }} mm</td><td>{{ diameter }} mm</td>
+        </tr>
+      {%- endfor -%}
+      </tbody>
+    </table>
+  </div>
+  <p class="suiji-size-guide__note">{{ 'suiji_pdp.guide_dash' | t }}</p><p class="suiji-size-guide__note">{{ 'suiji_pdp.guide_regional' | t }}</p>
+  <details class="suiji-size-guide__sources"><summary>{{ 'suiji_pdp.guide_source' | t }}</summary><ul>
+    <li><a href="https://www.cartier.com/on/demandware.static/-/Library-Sites-CartierSharedLibrary/default/dwd544e43c/size-guide-pdf/Sizing-guide_rings_210x297_en.pdf" target="_blank" rel="noopener">Cartier · EU / US</a></li>
+  </ul></details>
+
+</details><aside class="ssg-fit"><h3>{{ 'suiji_sizing.fit_title' | t }}</h3><p>{{ 'suiji_sizing.fit_text' | t }}</p><a href="{% render 'suiji-localized-menu-url', url: '/pages/contact' %}">{{ 'suiji_sizing.contact' | t }} →</a></aside></div>
+{% unless in_dialog %}<section class="ssg-other"><h3 class="ssg-heading">{{ 'suiji_sizing.other_title' | t }}</h3><div class="ssg-other-grid"><article id="{{ current_guide_id }}-bracelets"><h3>{{ 'suiji_sizing.bracelets' | t }}</h3><p>{{ 'suiji_sizing.bracelet_text' | t }}</p></article><article id="{{ current_guide_id }}-necklaces"><h3>{{ 'suiji_sizing.necklaces' | t }}</h3><p>{{ 'suiji_sizing.necklace_text' | t }}</p></article><article id="{{ current_guide_id }}-earrings"><h3>{{ 'suiji_sizing.earrings' | t }}</h3><p>{{ 'suiji_sizing.earring_text' | t }}</p></article></div><p class="ssg-caption">{{ 'suiji_sizing.other_note' | t }}</p><a href="{% render 'suiji-localized-menu-url', url: '/pages/contact' %}">{{ 'suiji_sizing.contact' | t }} →</a></section>{% else %}<p class="ssg-all-link"><a href="{% render 'suiji-localized-menu-url', url: '/pages/bases#size-guide' %}">{{ 'suiji_sizing.full_guide' | t }} →</a></p>{% endunless %}
+</section>
+<script src="{{ 'suiji-sizing.js' | asset_url }}" defer></script>

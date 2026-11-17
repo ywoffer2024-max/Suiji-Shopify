@@ -1,0 +1,75 @@
+{% if collection.handle == 'sets' %}
+{%- liquid
+  assign set_handles = 'suiji-rpt-set-01-dual-back-stud,suiji-rpt-set-02-stud-collar-ring,suiji-rpt-set-03-stud-ring,suiji-rpt-set-04-collar-charm,suiji-rpt-set-05-collar-hoop,suiji-rpt-set-06-collar-hoop-ring,suiji-rpt-set-07-chain-hoop,suiji-rpt-set-08-chain-hoop-ring,suiji-rpt-set-09-chain-ring' | split: ','
+  assign locale = request.locale.iso_code | split: '-' | first
+  if locale != 'fr'
+    assign locale = 'en'
+  endif
+-%}
+<div class="r-site suiji-set-listing" data-r107-page data-family="sets">
+  <header class="r-intro r-intro--small">
+    {% if locale == 'fr' %}
+      <h1>Ensembles</h1>
+      <p>Découvrez le contenu de chaque ensemble et les façons de le porter.</p>
+    {% else %}
+      <h1>Sets</h1>
+      <p>See what comes with each set and how to wear it.</p>
+    {% endif %}
+  </header>
+  {%- assign listed = 0 -%}
+  <div class="suiji-set-grid" data-quote-sets>
+    {% for handle in set_handles %}
+      {% assign set_product = all_products[handle] %}
+      {% assign quote = set_product.metafields.custom.suiji_set_quote.value %}
+      {% if set_product.tags contains 'suiji-reviewed-storefront' and set_product.price > 0 and quote != blank %}
+        {% assign listed = listed | plus: 1 %}
+        {% assign loading = 'lazy' %}
+        {% if listed <= 3 %}{% assign loading = 'eager' %}{% endif %}
+        <article class="suiji-set-card" data-quote-set="{{ quote.code | escape }}">
+          <a class="suiji-set-card__link" href="{{ routes.root_url | append: '/products/' | append: set_product.handle | replace: '//', '/' }}">
+            {%- capture cover -%}{% render 'suiji-storefront-cover', handle: set_product.handle %}{%- endcapture -%}
+            {%- assign cover = cover | split: '|' -%}
+            {% if cover[1] != blank %}
+              <figure class="suiji-set-card__figure">
+                <div class="suiji-set-card__images">
+                  <span class="suiji-set-card__component">{% render 'suiji-storefront-cover-image', cover: cover, loading: loading, sizes: '(min-width: 1000px) 20vw, (min-width: 591px) 28vw, 70vw' %}</span>
+                </div>
+                <figcaption class="r-caption">{% if set_product.featured_media.alt contains ' · Component shown' %}{% if locale == 'fr' %}Composants présentés{% else %}Selected components{% endif %}{% else %}{% if locale == 'fr' %}Ensemble présenté{% else %}Set shown{% endif %}{% endif %}</figcaption>
+              </figure>
+            {% endif %}
+            <h2 class="suiji-set-card__title">{{ quote.title[locale] | escape }}</h2>
+            <p class="suiji-set-card__price" data-set-price>{{ set_product.price | money_with_currency }}</p>
+          </a>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% if listed == 0 %}
+    <p>{% if locale == 'fr' %}Nos ensembles sont en préparation.{% else %}Our sets are in preparation.{% endif %}</p>
+  {% endif %}
+</div>
+{% else %}
+{% if request.page_type == 'collection' and collection.all_products_count == 0 %}
+  <div class="r-site" data-r107-page data-family="sets">
+    <header class="r-intro r-intro--small">
+      {% if request.locale.iso_code contains 'fr' %}
+        <h1>Ensembles</h1>
+        <h2>Nos ensembles sont en préparation</h2>
+        <p>Nous préparons les photos et vérifions le contenu de chaque ensemble. Découvrez comment associer les pièces.</p>
+        <a class="r-button r-button--line" href="{{ routes.root_url | append: '/pages/editions' | replace: '//', '/' }}">Voir les associations</a>
+      {% else %}
+        <h1>Sets</h1>
+        <h2>Our sets are in preparation</h2>
+        <p>We’re preparing the photography and checking what comes with each set. Explore how the pieces can be combined.</p>
+        <a class="r-button r-button--line" href="{{ routes.root_url | append: '/pages/editions' | replace: '//', '/' }}">Explore combinations</a>
+      {% endif %}
+    </header>
+  </div>
+{% else %}
+{%- if request.locale.iso_code contains 'fr' -%}
+<div class="r-site" data-r107-page data-family="sets" data-modules="1,2,3,4,5"><header class="r-intro r-intro--small"><p class="r-eyebrow">SUIJI</p><h1>Ensembles</h1><p>Découvrez les compositions possibles, puis vérifiez le contenu exact. Les images présentent différentes utilisations des éléments, pas un ornement distinct pour chaque emplacement.</p></header><div class="r-catalogue" data-catalogue><div class="r-filter-bar"><button class="r-button r-button--line" data-open-filters>Filtrer <span data-filter-count></span></button><p data-result-count></p><label>Trier <select data-sort><option value="original">Sélection</option><option value="name">Nom A–Z</option></select></label></div><div class="r-catalogue__layout"><dialog class="r-filters" id="r-filters" aria-labelledby="r-filter-title"><div class="r-filters__head"><h2 id="r-filter-title">Votre sélection</h2><button data-close-filters aria-label="Fermer les filtres">×</button></div><fieldset><legend>Type de pièce</legend></fieldset><button class="r-link" data-clear-filters>Effacer les filtres</button></dialog><div class="r-results"><div class="r-grid "></div><div class="r-empty" data-no-results hidden><h2>Aucune pièce ne correspond à ces choix.</h2><p>Aucune pièce ne correspond à ces choix. Effacez les filtres ou dites-nous ce que vous recherchez.</p><button class="r-button" data-clear-filters>Effacer les filtres</button></div></div></div></div><section class="r-section "><div class="r-section__heading"><h2>Quelques repères</h2></div><p>Vous hésitez sur les éléments nécessaires ? Découvrez comment les bases et les ornements s’assemblent.</p><a class="r-link" href="{{ routes.root_url | append: '/pages/bases' | replace: '//', '/' }}">Bases et éléments<span aria-hidden="true"> ↗</span></a><aside class="r-reading"><p class="r-eyebrow">Pour aller plus loin</p><a class="r-link" href="{{ routes.root_url | append: '/blogs/journal/interchangeable-or-fixed-jewelry' | replace: '//', '/' }}">Bijou transformable ou pièces séparées : que choisir selon vos habitudes ?<span aria-hidden="true"> ↗</span></a></aside></section></div>
+{%- else -%}
+<div class="r-site" data-r107-page data-family="sets" data-modules="1,2,3,4,5"><header class="r-intro r-intro--small"><p class="r-eyebrow">SUIJI</p><h1>Sets</h1><p>See the complete looks a set can create, then check exactly what is included. Rotation images show different ways to use the parts, not a separate charm for every position.</p></header><div class="r-catalogue" data-catalogue><div class="r-filter-bar"><button class="r-button r-button--line" data-open-filters>Filter <span data-filter-count></span></button><p data-result-count></p><label>Sort <select data-sort><option value="original">Selection</option><option value="name">Name A–Z</option></select></label></div><div class="r-catalogue__layout"><dialog class="r-filters" id="r-filters" aria-labelledby="r-filter-title"><div class="r-filters__head"><h2 id="r-filter-title">Your selection</h2><button data-close-filters aria-label="Close filters">×</button></div><fieldset><legend>Piece type</legend></fieldset><button class="r-link" data-clear-filters>Clear filters</button></dialog><div class="r-results"><div class="r-grid "></div><div class="r-empty" data-no-results hidden><h2>Nothing matches these choices.</h2><p>No pieces match these choices. Clear the filters, or tell us what you are looking for.</p><button class="r-button" data-clear-filters>Clear filters</button></div></div></div></div><section class="r-section "><div class="r-section__heading"><h2>A little guidance</h2></div><p>Not sure which parts you need? See how bases and charms connect.</p><a class="r-link" href="{{ routes.root_url | append: '/pages/bases' | replace: '//', '/' }}">Bases &amp; components<span aria-hidden="true"> ↗</span></a><aside class="r-reading"><p class="r-eyebrow">A useful next read</p><a class="r-link" href="{{ routes.root_url | append: '/blogs/journal/interchangeable-or-fixed-jewelry' | replace: '//', '/' }}">Convertible jewelry or separate pieces: which suits your habits?<span aria-hidden="true"> ↗</span></a></aside></section></div>
+{%- endif -%}
+{% endif %}
+{% endif %}

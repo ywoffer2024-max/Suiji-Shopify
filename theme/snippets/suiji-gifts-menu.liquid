@@ -1,0 +1,10 @@
+{%- assign french = false -%}
+{%- if request.locale.iso_code contains 'fr' -%}{%- assign french = true -%}{%- endif -%}
+<div class="suiji-gifts-menu">
+  <div class="r-mega-links">
+    <a class="r-link" href="{{ routes.root_url | append: '/pages/gifts' | replace: '//', '/' }}">{% if french %}Trouver un cadeau{% else %}Find a gift{% endif %}</a>
+    <a class="r-link" href="{{ routes.root_url | append: '/collections/sets' | replace: '//', '/' }}">{% if french %}Voir les ensembles{% else %}Shop sets{% endif %}</a>
+    <a class="r-link" href="{{ routes.root_url | append: '/pages/gifts#gift-help' | replace: '//', '/' }}">{% if french %}Conseils cadeaux{% else %}Gift help{% endif %}</a>
+  </div>
+  {% render 'suiji-gift-budget-links' %}
+</div>

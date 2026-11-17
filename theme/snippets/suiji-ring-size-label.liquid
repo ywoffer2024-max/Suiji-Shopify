@@ -1,0 +1,14 @@
+{% doc %}
+  Returns the SUIJI U.S. label for a verified inner circumference in millimetres.
+  @param {string} value - Native ring option value or measured circumference.
+{% enddoc %}
+{%- liquid
+  assign native_mm = value | append: '' | downcase | replace: 'mm', '' | strip
+  assign circumference = native_mm | plus: 0
+  assign numeric_string = circumference | append: ''
+  if native_mm == numeric_string and circumference >= 44 and circumference <= 65
+    assign us_sizes = '3,3¼,3¾,4,4½,4¾,5¼,5¾,6,6¼,6¾,7¼,7½,8,8¼,8¾,9,9½,10,10¼,10¾,11' | split: ','
+    assign size_index = circumference | minus: 44
+    echo 'US ' | append: us_sizes[size_index]
+  endif
+-%}

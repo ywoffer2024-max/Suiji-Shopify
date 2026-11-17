@@ -1,0 +1,75 @@
+{%- doc -%}
+  Render social metadata, optionally using the current information page's translated metadata.
+  @param {string} [seo_title] - Optional page-specific title.
+  @param {string} [seo_description] - Optional page-specific description.
+  @param {string} [seo_url] - Optional resolved canonical URL for this presentation.
+{%- enddoc -%}
+{%- liquid
+  assign og_title = seo_title | default: page_title | default: shop.name
+  assign og_url = seo_url | default: canonical_url | default: request.origin
+  assign og_type = 'website'
+  assign og_description = seo_description | default: page_description | default: shop.description | default: shop.name
+
+  if request.page_type == 'product'
+    assign og_type = 'product'
+  elsif request.page_type == 'article'
+    assign og_type = 'article'
+  elsif request.page_type == 'password'
+    assign og_url = request.origin
+  endif
+%}
+
+<meta property="og:site_name" content="{{ shop.name }}">
+<meta property="og:url" content="{{ og_url }}">
+<meta property="og:title" content="{{ og_title | replace: ' · 54 mm', ' · US 6¾' | replace: ' · 57 mm', ' · US 8' | escape }}">
+<meta property="og:type" content="{{ og_type }}">
+<meta property="og:description" content="{{ og_description | escape }}">
+
+{%- capture r107_social_file -%}{% render 'suiji-r107-social-image' %}{%- endcapture -%}
+{%- liquid
+  assign r107_social_file = r107_social_file | strip
+  assign r107_social_url = ''
+  assign r107_social_width = 1200
+  assign r107_social_height = 1200
+  assign r107_twitter_card = 'summary_large_image'
+  if r107_social_file == 'suiji-logo-mark.png'
+    assign r107_social_width = 512
+    assign r107_social_height = 511
+    assign r107_twitter_card = 'summary'
+  endif
+  if r107_social_file != blank
+    if r107_social_file contains 'suiji-20261117-'
+      assign social_filename = r107_social_file | split: '|' 
+      assign r107_social_url = 'https://cdn.shopify.com/s/files/1/1041/4112/8020/files/' | append: social_filename[0]
+      assign r107_social_width = social_filename[1]
+      assign r107_social_height = social_filename[2]
+    else
+      assign r107_social_url = r107_social_file | asset_url
+    endif
+    assign r107_social_prefix = r107_social_url | slice: 0, 2
+    if r107_social_prefix == '//'
+      assign r107_social_url = r107_social_url | prepend: 'https:'
+    endif
+  endif
+-%}
+{%- if r107_social_url != blank -%}
+  <meta property="og:image" content="{{ r107_social_url | escape }}">
+  <meta property="og:image:secure_url" content="{{ r107_social_url | escape }}">
+  <meta property="og:image:width" content="{{ r107_social_width }}">
+  <meta property="og:image:height" content="{{ r107_social_height }}">
+  <meta name="twitter:image" content="{{ r107_social_url | escape }}">
+{%- endif -%}
+
+{%- if request.page_type == 'product' -%}
+{%- unless product.tags contains 'suiji-display-only' -%}
+  <meta property="og:price:amount" content="{{ product.price | money_without_currency | strip_html }}">
+  <meta property="og:price:currency" content="{{ cart.currency.iso_code }}">
+{%- endunless -%}
+{%- endif -%}
+
+{%- if settings.social_twitter_link != blank -%}
+  <meta name="twitter:site" content="{{ settings.social_twitter_link | split: 'twitter.com/' | last | prepend: '@' }}">
+{%- endif -%}
+<meta name="twitter:card" content="{% if r107_social_url != blank %}{{ r107_twitter_card }}{% else %}summary{% endif %}">
+<meta name="twitter:title" content="{{ og_title | replace: ' · 54 mm', ' · US 6¾' | replace: ' · 57 mm', ' · US 8' | escape }}">
+<meta name="twitter:description" content="{{ og_description | escape }}">

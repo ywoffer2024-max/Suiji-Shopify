@@ -44,6 +44,18 @@
       assign display_value = display_value | replace: 'Champagne', gold_label | replace: 'Natural titanium', titanium_label | replace: 'Blue', blue_label
     endif
 
+    assign circumference = nil
+    if uses_us_ring_size
+      capture ring_label
+        render 'suiji-ring-size-label', value: display_value
+      endcapture
+      assign ring_label = ring_label | strip
+      if ring_label != blank
+        assign circumference = display_value | append: '' | downcase | remove: 'mm' | strip
+        assign display_value = ring_label
+      endif
+    endif
+
     assign option_disabled = true
     if value.available
       assign option_disabled = false
@@ -119,7 +131,10 @@
     >
     <label for="{{ input_id }}">
       {{ display_value | escape -}}
-      {{ label_unavailable }}
+      {%- if circumference != blank -%}
+        <small class="suiji-ring-option__dimension">{{ 'suiji_sizing.inner_circumference_value' | t: measurement: circumference }}</small>
+      {%- endif -%}
+      {%- if option_disabled -%}{{ label_unavailable }}{%- endif -%}
     </label>
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
     <option

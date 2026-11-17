@@ -1,5 +1,5 @@
 {
-  "source_revision": 2905,
+  "source_revision": 2933,
   "stores": [
     {
       "shop": "suijijewelry.com",
@@ -9,9 +9,7 @@
           "framing": {
             "scale": 1.84,
             "x": 1.79,
-            "y": -0.41,
-            "width_fraction": 0.69,
-            "height_fraction": 0.245
+            "y": -0.41
           },
           "product_id": "15926879813972",
           "source_groups": [
@@ -95,9 +93,7 @@
           "framing": {
             "scale": 1.84,
             "x": 1.79,
-            "y": -0.61,
-            "width_fraction": 0.69,
-            "height_fraction": 0.307
+            "y": -0.61
           },
           "product_id": "15926828466516",
           "source_groups": [
@@ -181,9 +177,7 @@
           "framing": {
             "scale": 2.287,
             "x": 0.32,
-            "y": -4.83,
-            "width_fraction": 0.56,
-            "height_fraction": 0.472
+            "y": -4.83
           },
           "product_id": "15921361191252",
           "source_groups": [
@@ -495,9 +489,7 @@
           "framing": {
             "scale": 2.247,
             "x": 0.31,
-            "y": -4.49,
-            "width_fraction": 0.56,
-            "height_fraction": 0.467
+            "y": -4.49
           },
           "product_id": "15958795288916",
           "source_groups": [
@@ -623,9 +615,7 @@
           "framing": {
             "scale": 2.287,
             "x": 0.32,
-            "y": -4.83,
-            "width_fraction": 0.56,
-            "height_fraction": 0.472
+            "y": -4.83
           },
           "product_id": "15958795190612",
           "source_groups": [
@@ -751,9 +741,7 @@
           "framing": {
             "scale": 2.267,
             "x": 0.63,
-            "y": -4.79,
-            "width_fraction": 0.56,
-            "height_fraction": 0.468
+            "y": -4.79
           },
           "product_id": "15958795551060",
           "source_groups": [
@@ -764,9 +752,9 @@
               {
                 "sheet": "3lMVji",
                 "cell": "M82",
-                "media_id": "75248379429204",
-                "file": "suiji-20261117-ring-09-04-light-blue-5d51b61d19b5.jpg",
-                "source_sha256": "5d51b61d19b5025d47673e71fa4c7f83c81984d217cacec0f9536898f7b1af68"
+                "media_id": "75249411850580",
+                "file": "suiji-20261117-ring-09-04-light-blue-2a6cca736145.jpg",
+                "source_sha256": "2a6cca736145fca3957edd8e5cb2fae63a247e88ddaac01f104e9ba770c0dfe7"
               },
               {
                 "sheet": "3lMVji",
@@ -801,9 +789,9 @@
               {
                 "sheet": "3lMVji",
                 "cell": "M81",
-                "media_id": "75248379265364",
-                "file": "suiji-20261117-ring-09-04-gold-ad3fd58f2cca.jpg",
-                "source_sha256": "ad3fd58f2cca3ca421dec3d078e810fd627b882eaf94c7903dd303238ebc6afb"
+                "media_id": "75249411817812",
+                "file": "suiji-20261117-ring-09-04-gold-df5aae191da9.jpg",
+                "source_sha256": "df5aae191da96b23e15af972f2e98637a5d63bb1c6ddbfc7a2f0aeddc41a3992"
               },
               {
                 "sheet": "3lMVji",
@@ -879,9 +867,7 @@
           "framing": {
             "scale": 1.11,
             "x": 0.11,
-            "y": -0.62,
-            "width_fraction": 0.73,
-            "height_fraction": 0.525
+            "y": -0.62
           },
           "product_id": "15958789914964",
           "source_groups": [
@@ -965,9 +951,7 @@
           "framing": {
             "scale": 1.117,
             "x": 0.12,
-            "y": -0.5,
-            "width_fraction": 0.73,
-            "height_fraction": 0.531
+            "y": -0.5
           },
           "product_id": "15926880141652",
           "source_groups": [
@@ -978,16 +962,16 @@
               {
                 "sheet": "3lMVji",
                 "cell": "M304",
-                "media_id": "75248409674068",
-                "file": "suiji-20261117-collar-02-01-light-blue-c361de4f0c2f.jpg",
-                "source_sha256": "c361de4f0c2f4d033dad25ea90a8b3abbcbc540888089b48a8c8805023e84680"
+                "media_id": "75249398284628",
+                "file": "suiji-20261117-collar-02-01-light-blue-a13c3248e3bc.jpg",
+                "source_sha256": "a13c3248e3bc93be539090176d6d4ed114295f95e3c688d9d196a933872a56c2"
               },
               {
                 "sheet": "3lMVji",
                 "cell": "M307",
-                "media_id": "75248409706836",
-                "file": "suiji-20261117-collar-02-02-light-blue-0686750a5289.jpg",
-                "source_sha256": "0686750a5289a493afb62edf3b281672c2dea7a17d5a56c513ee4d4f1bb81d8d"
+                "media_id": "75249398382932",
+                "file": "suiji-20261117-collar-02-02-light-blue-3c3b477e993c.jpg",
+                "source_sha256": "3c3b477e993c6957cea503c8d2d6b14542da52e61943b5614694d56754e6665b"
               },
               {
                 "sheet": "3lMVji",
@@ -1001,16 +985,16 @@
               {
                 "sheet": "3lMVji",
                 "cell": "M303",
-                "media_id": "75248409772372",
-                "file": "suiji-20261117-collar-02-01-gold-1439a4ff1233.jpg",
-                "source_sha256": "1439a4ff1233371ad1fadf0fe3c76fb0d9d89941a53b614329f6df89a35ec24c"
+                "media_id": "75249398251860",
+                "file": "suiji-20261117-collar-02-01-gold-65d7fa6ba84c.jpg",
+                "source_sha256": "65d7fa6ba84c0f4be25a407d05e7a0822feb227bdc5b3ea89312f8f649e9eb4c"
               },
               {
                 "sheet": "3lMVji",
                 "cell": "M306",
-                "media_id": "75248409805140",
-                "file": "suiji-20261117-collar-02-02-gold-c61fe81cca17.jpg",
-                "source_sha256": "c61fe81cca174a0ee7053eb2559a3441e1fe5e864e6ecb6cba158ce598731c5e"
+                "media_id": "75249398350164",
+                "file": "suiji-20261117-collar-02-02-gold-119d1e1d1131.jpg",
+                "source_sha256": "119d1e1d1131e37794e5d68b80e3e6d874b17ba9da64c73142613e8bb416834a"
               },
               {
                 "sheet": "3lMVji",
@@ -1031,9 +1015,9 @@
               {
                 "sheet": "3lMVji",
                 "cell": "M305",
-                "media_id": "75248409608532",
-                "file": "suiji-20261117-collar-02-02-silver-8e282630c028.jpg",
-                "source_sha256": "8e282630c028545adb1086eb5321d7376d9e2c312dea2967a20de93c7e3e7b59"
+                "media_id": "75249398317396",
+                "file": "suiji-20261117-collar-02-02-silver-a9de02ee2092.jpg",
+                "source_sha256": "a9de02ee209210bf7f397d08fbbddd16cbb23e65190f7bb6d56e8998f86351d7"
               },
               {
                 "sheet": "3lMVji",
@@ -1051,9 +1035,7 @@
           "framing": {
             "scale": 1.644,
             "x": -2.28,
-            "y": -6.21,
-            "width_fraction": 0.237,
-            "height_fraction": 0.57
+            "y": -6.21
           },
           "product_id": "15958798041428",
           "source_groups": [
@@ -1137,9 +1119,7 @@
           "framing": {
             "scale": 1.109,
             "x": 0.15,
-            "y": -0.49,
-            "width_fraction": 0.73,
-            "height_fraction": 0.522
+            "y": -0.49
           },
           "product_id": "15926886367572",
           "source_groups": [
@@ -1150,16 +1130,16 @@
               {
                 "sheet": "3lMVji",
                 "cell": "M371",
-                "media_id": "75248380215636",
-                "file": "suiji-20261117-collar-04-01-light-blue-638f5495bf4e.jpg",
-                "source_sha256": "638f5495bf4e4d1ffd38ddcb1ad11fff93e166d0e4a7e0f253c7535b20d1492c"
+                "media_id": "75249399759188",
+                "file": "suiji-20261117-collar-04-01-light-blue-688fc2a49f78.jpg",
+                "source_sha256": "688fc2a49f788c071db571bb796723d23f6e130b6850c70d320f1a4b0ea65e55"
               },
               {
                 "sheet": "3lMVji",
                 "cell": "M374",
-                "media_id": "75248380248404",
-                "file": "suiji-20261117-collar-04-02-light-blue-83cfe9775adf.jpg",
-                "source_sha256": "83cfe9775adf7670834c214ee61930e17596e22375355224c55ef45f76ef296e"
+                "media_id": "75249399857492",
+                "file": "suiji-20261117-collar-04-02-light-blue-da34077fed8d.jpg",
+                "source_sha256": "da34077fed8d251c392f03bf03cde4424106e21b114e7cf3eb9ff7820883f730"
               },
               {
                 "sheet": "3lMVji",
@@ -1173,16 +1153,16 @@
               {
                 "sheet": "3lMVji",
                 "cell": "M370",
-                "media_id": "75248380117332",
-                "file": "suiji-20261117-collar-04-01-gold-f114e7994b2b.jpg",
-                "source_sha256": "f114e7994b2b6aad2c185c8d63258fc0ac50696887d956786a49bf03d96b9d17"
+                "media_id": "75249399726420",
+                "file": "suiji-20261117-collar-04-01-gold-32b93e2f3305.jpg",
+                "source_sha256": "32b93e2f33054ec4ac756811404907b54298fe87549a8fbfd7d5fea451b6d687"
               },
               {
                 "sheet": "3lMVji",
                 "cell": "M373",
-                "media_id": "75248380150100",
-                "file": "suiji-20261117-collar-04-02-gold-e3f1b2f25704.jpg",
-                "source_sha256": "e3f1b2f257041b24af60a75a8f1db3725fb026371e018924fd873f031462c347"
+                "media_id": "75249399824724",
+                "file": "suiji-20261117-collar-04-02-gold-972370d011f1.jpg",
+                "source_sha256": "972370d011f1fc867c3b18e82515b7a4f0c79c18dea63df567759080ae16b9e5"
               },
               {
                 "sheet": "3lMVji",
@@ -1203,9 +1183,9 @@
               {
                 "sheet": "3lMVji",
                 "cell": "M372",
-                "media_id": "75248380346708",
-                "file": "suiji-20261117-collar-04-02-silver-d49f619c6d53.jpg",
-                "source_sha256": "d49f619c6d53131aeaaf6cf38c161884ab1ba701297ab0306527878f1b8a034e"
+                "media_id": "75249399791956",
+                "file": "suiji-20261117-collar-04-02-silver-de3f5cea5eb6.jpg",
+                "source_sha256": "de3f5cea5eb60f07784a9f2fe01395da34fd3e0c2199a757f8392634c75f7372"
               },
               {
                 "sheet": "3lMVji",
@@ -1223,9 +1203,7 @@
           "framing": {
             "scale": 1.109,
             "x": 0.15,
-            "y": -0.62,
-            "width_fraction": 0.73,
-            "height_fraction": 0.525
+            "y": -0.62
           },
           "product_id": "15958795780436",
           "source_groups": [
@@ -1236,16 +1214,16 @@
               {
                 "sheet": "3lMVji",
                 "cell": "M363",
-                "media_id": "75248388342100",
-                "file": "suiji-20261117-collar-03-01-light-blue-087adddb9e4a.jpg",
-                "source_sha256": "087adddb9e4aadf74fcda417a4f9c95e26dba9d14d85be50608b26f5177c0402"
+                "media_id": "75249416143188",
+                "file": "suiji-20261117-collar-03-01-light-blue-4bc7de166091.jpg",
+                "source_sha256": "4bc7de16609182c7c319d3c451ddc6b8c0d690a04ec252b776976b52d3c30f11"
               },
               {
                 "sheet": "3lMVji",
                 "cell": "M366",
-                "media_id": "75248388374868",
-                "file": "suiji-20261117-collar-03-02-light-blue-9d0e34be6471.jpg",
-                "source_sha256": "9d0e34be6471a0ae314da1c1720e0d461c646e4b771e0966c3decda90eac38ae"
+                "media_id": "75249416241492",
+                "file": "suiji-20261117-collar-03-02-light-blue-c535af31857b.jpg",
+                "source_sha256": "c535af31857b8504c047316ae7f091d11016d76bf14f3086921d245516e371f0"
               },
               {
                 "sheet": "3lMVji",
@@ -1259,16 +1237,16 @@
               {
                 "sheet": "3lMVji",
                 "cell": "M362",
-                "media_id": "75248388440404",
-                "file": "suiji-20261117-collar-03-01-gold-4b6772dbecd4.jpg",
-                "source_sha256": "4b6772dbecd45b875559016a4c62be27bc474cf70704e60cfd1ccd90fdbdb8cc"
+                "media_id": "75249416110420",
+                "file": "suiji-20261117-collar-03-01-gold-37943eb09e8e.jpg",
+                "source_sha256": "37943eb09e8e9f95f9c502cf2cd6ed35560bfe672bde5de2353fb2bb32368692"
               },
               {
                 "sheet": "3lMVji",
                 "cell": "M365",
-                "media_id": "75248388473172",
-                "file": "suiji-20261117-collar-03-02-gold-2e7d4be81156.jpg",
-                "source_sha256": "2e7d4be811566e3def4df2a09a7525efedf474bf3328c7d8a46452123b760b6d"
+                "media_id": "75249416208724",
+                "file": "suiji-20261117-collar-03-02-gold-e1805a91faa3.jpg",
+                "source_sha256": "e1805a91faa38d0eef8f2ddf28d6a940b850ba138d48bfceeb517eaab5d5fa6e"
               },
               {
                 "sheet": "3lMVji",
@@ -1289,9 +1267,9 @@
               {
                 "sheet": "3lMVji",
                 "cell": "M364",
-                "media_id": "75248388276564",
-                "file": "suiji-20261117-collar-03-02-silver-d29d42cb692d.jpg",
-                "source_sha256": "d29d42cb692d29f29cae4d6d382a9f278d998cb8ca629843225dfb0a5d94c9fb"
+                "media_id": "75249416175956",
+                "file": "suiji-20261117-collar-03-02-silver-26653897da5a.jpg",
+                "source_sha256": "26653897da5aebd673ab5622ac4e5d976044fcad5fcd45c0394ec1318ff8546a"
               },
               {
                 "sheet": "3lMVji",
@@ -1309,9 +1287,7 @@
           "framing": {
             "scale": 1.667,
             "x": -2.55,
-            "y": -6.11,
-            "width_fraction": 0.486,
-            "height_fraction": 0.5
+            "y": -6.11
           },
           "product_id": "15958796403028",
           "source_groups": [
@@ -1395,9 +1371,7 @@
           "framing": {
             "scale": 2.287,
             "x": 0.32,
-            "y": -4.83,
-            "width_fraction": 0.56,
-            "height_fraction": 0.472
+            "y": -4.83
           },
           "product_id": "15926896787796",
           "source_groups": [
@@ -1446,9 +1420,9 @@
               {
                 "sheet": "3lMVji",
                 "cell": "M79",
-                "media_id": "75248467870036",
-                "file": "suiji-20261117-ring-06-04-light-blue-0907f74c614e.jpg",
-                "source_sha256": "0907f74c614e4db2c92ca9084c13e4df96059aaf038c4cd785fbe9e32f8e7ba8"
+                "media_id": "75249423253844",
+                "file": "suiji-20261117-ring-06-04-light-blue-251cdc43cef9.jpg",
+                "source_sha256": "251cdc43cef995f25148d04cb263a144d6ec8ad58a6d9d1c227e5e7e6c889978"
               },
               {
                 "sheet": "3lMVji",
@@ -1520,9 +1494,9 @@
               {
                 "sheet": "3lMVji",
                 "cell": "M78",
-                "media_id": "75248468197716",
-                "file": "suiji-20261117-ring-06-04-gold-5892a5ccf5c7.jpg",
-                "source_sha256": "5892a5ccf5c7871bb7ab6cfad2a9ee28eb797840c35438e3fffc2241ba3ef192"
+                "media_id": "75249423221076",
+                "file": "suiji-20261117-ring-06-04-gold-21e22bf37926.jpg",
+                "source_sha256": "21e22bf3792685cde38bffbc5461134242b4eeeeebe4850036bf7a91fca6ad03"
               },
               {
                 "sheet": "3lMVji",
@@ -1644,9 +1618,7 @@
           "framing": {
             "scale": 2.247,
             "x": 0.31,
-            "y": -4.74,
-            "width_fraction": 0.56,
-            "height_fraction": 0.464
+            "y": -4.74
           },
           "product_id": "15926897181012",
           "source_groups": [
@@ -1658,9 +1630,9 @@
               {
                 "sheet": "3lMVji",
                 "cell": "M68",
-                "media_id": "75248463053140",
-                "file": "suiji-20261117-ring-07-04-light-blue-72ff674869d5.jpg",
-                "source_sha256": "72ff674869d5a7afbad9656ee0ea1190a10b312def2ba59c6cf1b4343967083a"
+                "media_id": "75249400545620",
+                "file": "suiji-20261117-ring-07-04-light-blue-84372774946e.jpg",
+                "source_sha256": "84372774946ee73d906174e6f26bf8c5d34400978a84820db0d11cb71c9c10c0"
               },
               {
                 "sheet": "3lMVji",
@@ -1695,9 +1667,9 @@
               {
                 "sheet": "3lMVji",
                 "cell": "M76",
-                "media_id": "75248463216980",
-                "file": "suiji-20261117-ring-08-04-light-blue-a0a0c1d96ab6.jpg",
-                "source_sha256": "a0a0c1d96ab6f74ac8e9d2025bd226e76c0a927d90531ded3a4d24299c913ad6"
+                "media_id": "75249400611156",
+                "file": "suiji-20261117-ring-08-04-light-blue-03612b7cdaae.jpg",
+                "source_sha256": "03612b7cdaae42111ec82ca866f8e80241f37b3c2be21478f43c4e1c44683aa7"
               },
               {
                 "sheet": "3lMVji",
@@ -1732,9 +1704,9 @@
               {
                 "sheet": "3lMVji",
                 "cell": "M67",
-                "media_id": "75248463380820",
-                "file": "suiji-20261117-ring-07-04-gold-9f23d6685978.jpg",
-                "source_sha256": "9f23d668597871a7d146d78daeb3d928bcf3baf1b8d3d1294ded6dd9d74677eb"
+                "media_id": "75249400512852",
+                "file": "suiji-20261117-ring-07-04-gold-b25b696f88e2.jpg",
+                "source_sha256": "b25b696f88e2354062221753a39ed4e1701c63e5060536899d79ecf43ce12dbb"
               },
               {
                 "sheet": "3lMVji",
@@ -1769,9 +1741,9 @@
               {
                 "sheet": "3lMVji",
                 "cell": "M75",
-                "media_id": "75248463544660",
-                "file": "suiji-20261117-ring-08-04-gold-e2293ddf0ae4.jpg",
-                "source_sha256": "e2293ddf0ae4a69ab3f30e1450a08977786e52183d6431dd8a676c741f8fd04f"
+                "media_id": "75249400578388",
+                "file": "suiji-20261117-ring-08-04-gold-60df83c8c168.jpg",
+                "source_sha256": "60df83c8c168a17362e4388349a6d353f17b89baa0645d8185c4d5872686b20b"
               },
               {
                 "sheet": "3lMVji",
@@ -1893,9 +1865,7 @@
           "framing": {
             "scale": 1.667,
             "x": -2.55,
-            "y": -6.11,
-            "width_fraction": 0.486,
-            "height_fraction": 0.5
+            "y": -6.11
           },
           "product_id": "15958796501332",
           "source_groups": [
@@ -1979,9 +1949,7 @@
           "framing": {
             "scale": 1.782,
             "x": -2.72,
-            "y": -7.52,
-            "width_fraction": 0.5,
-            "height_fraction": 0.499
+            "y": -7.52
           },
           "product_id": "15958795977044",
           "source_groups": [
@@ -2065,9 +2033,7 @@
           "framing": {
             "scale": 1.744,
             "x": -2.42,
-            "y": -6.78,
-            "width_fraction": 0.484,
-            "height_fraction": 0.5
+            "y": -6.78
           },
           "product_id": "15958796206420",
           "source_groups": [
@@ -2151,9 +2117,7 @@
           "framing": {
             "scale": 1.744,
             "x": -2.42,
-            "y": -6.4,
-            "width_fraction": 0.484,
-            "height_fraction": 0.5
+            "y": -6.4
           },
           "product_id": "15958796140884",
           "source_groups": [
@@ -2237,9 +2201,7 @@
           "framing": {
             "scale": 1.682,
             "x": -2.57,
-            "y": -7.1,
-            "width_fraction": 0.5,
-            "height_fraction": 0.486
+            "y": -7.1
           },
           "product_id": "15958798401876",
           "source_groups": [
@@ -2323,9 +2285,7 @@
           "framing": {
             "scale": 1.744,
             "x": -2.42,
-            "y": -6.4,
-            "width_fraction": 0.494,
-            "height_fraction": 0.5
+            "y": -6.4
           },
           "product_id": "15958795845972",
           "source_groups": [
@@ -2409,9 +2369,7 @@
           "framing": {
             "scale": 1.758,
             "x": -2.44,
-            "y": -6.64,
-            "width_fraction": 0.498,
-            "height_fraction": 0.5
+            "y": -6.64
           },
           "product_id": "15958796304724",
           "source_groups": [
@@ -2495,9 +2453,7 @@
           "framing": {
             "scale": 1.667,
             "x": -2.55,
-            "y": -6.11,
-            "width_fraction": 0.486,
-            "height_fraction": 0.5
+            "y": -6.11
           },
           "product_id": "15958798500180",
           "source_groups": [
@@ -2667,12 +2623,92 @@
             ]
           },
           "state": "refresh"
+        },
+        "suiji-rpt-set-02-stud-collar-ring": {
+          "product_id": "15970952413524",
+          "cover": "RPT-SET-02",
+          "state": "current_components",
+          "source_groups": [
+            "COLLAR-04-01-gold",
+            "RING-04-04-gold"
+          ],
+          "latest_gallery": {
+            "RPT-SET-02": [
+              {
+                "sheet": "3lMVji",
+                "cell": "M370",
+                "media_id": "75249794875732",
+                "file": "suiji-20261117-collar-04-01-gold-32b93e2f3305_7e05e5c0-da97-436d-b47a-7da9311fed3a.jpg",
+                "source_sha256": "32b93e2f33054ec4ac756811404907b54298fe87549a8fbfd7d5fea451b6d687"
+              },
+              {
+                "sheet": "3lMVji",
+                "cell": "M64",
+                "media_id": "75249794908500",
+                "file": "suiji-20261117-ring-04-04-gold-914239220334_d57106c1-5c60-4335-9b42-1fe9614eb95b.jpg",
+                "source_sha256": "914239220334dc360287cf37e1c71a1c800431758ff560c3b0b49d3a838872c7"
+              }
+            ]
+          }
+        },
+        "suiji-rpt-set-03-stud-ring": {
+          "product_id": "15970953462100",
+          "cover": "RPT-SET-03",
+          "state": "current_components",
+          "source_groups": [
+            "RING-04-04-gold"
+          ],
+          "latest_gallery": {
+            "RPT-SET-03": [
+              {
+                "sheet": "3lMVji",
+                "cell": "M64",
+                "media_id": "75249794613588",
+                "file": "suiji-20261117-ring-04-04-gold-914239220334_100d3045-6711-4168-8a48-6e2de1445945.jpg",
+                "source_sha256": "914239220334dc360287cf37e1c71a1c800431758ff560c3b0b49d3a838872c7"
+              }
+            ]
+          }
+        },
+        "suiji-rpt-set-07-chain-hoop": {
+          "product_id": "15970955592020",
+          "cover": "RPT-SET-07",
+          "state": "current_components",
+          "source_groups": [
+            "BARE-SQUARE-01-gold",
+            "FITTING-03-01-gold"
+          ],
+          "latest_gallery": {
+            "RPT-SET-07": [
+              {
+                "sheet": "3lMVji",
+                "cell": "M193",
+                "media_id": "75249800446292",
+                "file": "suiji-20261117-bare-square-01-gold-1b53e6471a70_fb9b8171-3de4-4cf6-bfb5-b9a3620d09e4.jpg",
+                "source_sha256": "1b53e6471a700a1e6d3cd5f3368273383496308581bb8f293d664c8f0476a577"
+              },
+              {
+                "sheet": "3lMVji",
+                "cell": "M315",
+                "media_id": "75249800479060",
+                "file": "suiji-20261117-fitting-03-01-gold-c11537b51f93_67d042a1-1767-4cde-a79e-28a8b9a9ce40.jpg",
+                "source_sha256": "c11537b51f93d16840e67f47cbd9d258b1e4a1ba0ddd43eb8fd2a89a2567e9c7"
+              }
+            ]
+          }
         }
-      }
+      },
+      "without_current_gallery": [
+        "suiji-cross-chain",
+        "suiji-rpt-set-05-collar-hoop",
+        "suiji-rpt-set-06-collar-hoop-ring",
+        "suiji-rpt-set-09-chain-ring"
+      ]
     }
   ],
   "explicit_exclusions": [
     "Two Logo disc pieces as standalone products",
     "Pearl backs as standalone products"
-  ]
+  ],
+  "image_policy": "Only current exact-match Feishu render attachments are used for storefront product imagery."
 }

@@ -1,0 +1,32 @@
+{%- comment -%}
+  Displays an approved view using its measured whitespace framing.
+{%- endcomment -%}
+{%- liquid
+  assign file = cover[1]
+  assign loading = loading | default: 'lazy'
+  assign scale = cover[2] | default: 1
+  assign dx = cover[3] | default: 0
+  assign dy = cover[4] | default: 0
+  assign image_width = cover[5] | default: 800
+  assign image_height = cover[6] | default: 1000
+  if sizes == 'card' and family == 'rings'
+    assign ring_scale = 0.78
+    assign scale = scale | times: ring_scale | round: 3
+    assign dx = dx | times: ring_scale | round: 2
+    assign dy = dy | times: ring_scale | round: 2
+  endif
+  assign desktop_width = 25 | times: scale | round
+  assign tablet_width = 33 | times: scale | round
+  assign mobile_width = 50 | times: scale | round
+  assign nav_width = 160 | times: scale | round
+  assign nav_phone_width = 42 | times: scale | round
+-%}
+{%- if sizes == 'card' -%}
+  {%- capture sizes -%}(min-width: 990px) {{ desktop_width }}vw, (min-width: 750px) {{ tablet_width }}vw, {{ mobile_width }}vw{%- endcapture -%}
+{%- elsif sizes == blank -%}
+  {%- capture sizes -%}(min-width: 1280px) {{ nav_width }}px, {{ nav_phone_width }}vw{%- endcapture -%}
+{%- endif -%}
+{%- if file contains 'suiji-20261117-' -%}
+  {%- assign source = 'https://cdn.shopify.com/s/files/1/1041/4112/8020/files/' | append: file -%}
+  <img src="{{ source }}?width=720" srcset="{{ source }}?width=360 360w, {{ source }}?width=540 540w, {{ source }}?width=720 720w, {{ source }}?width=1080 1080w, {{ source }}?width=1280 1280w, {{ source }}?width=1600 1600w, {{ source }}?width=2000 2000w" sizes="{{ sizes }}" width="{{ image_width }}" height="{{ image_height }}" alt="{{ alt | escape }}" data-suiji-current-render loading="{{ loading }}" decoding="async" class="suiji-framed-cover" style="--suiji-scale:{{ scale }};--suiji-x:{{ dx }}%;--suiji-y:{{ dy }}%">
+{%- endif -%}

@@ -1,0 +1,31 @@
+{% doc %}Selects a current cover for sharing, with the brand mark as the neutral fallback.{% enddoc %}
+{%- liquid
+  assign sharing_handle = ''
+  if request.page_type == 'product'
+    assign sharing_handle = product.handle
+  elsif request.page_type == 'index'
+    assign sharing_handle = 'suiji-rpt-set-04-collar-charm'
+  elsif request.page_type == 'collection'
+    case collection.handle
+      when 'all', 'rings'
+        assign sharing_handle = 'r01'
+      when 'necklaces'
+        assign sharing_handle = 'suiji-photo-20261109-collar-03'
+      when 'earrings'
+        assign sharing_handle = 'h01-blue-hoop'
+      when 'charms', 'motifs'
+        assign sharing_handle = 'suiji-photo-20261109-ornament-09'
+      when 'sets'
+        assign sharing_handle = 'suiji-rpt-set-04-collar-charm'
+    endcase
+  endif
+  capture cover
+    render 'suiji-storefront-cover', handle: sharing_handle
+  endcapture
+  assign parts = cover | split: '|'
+  if parts[1] != blank
+    echo parts[1] | append: '|' | append: parts[5] | append: '|' | append: parts[6]
+  else
+    echo 'suiji-logo-mark.png'
+  endif
+-%}

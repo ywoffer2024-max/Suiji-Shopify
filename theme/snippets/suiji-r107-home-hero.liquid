@@ -1,0 +1,36 @@
+{% doc %}
+  Renders the approved homepage composition with localized text and a collection link.
+{% enddoc %}
+
+{%- liquid
+  if request.locale.iso_code contains 'fr'
+    assign headline = 'Une base, plusieurs façons de la porter.'
+    assign description = 'Des bijoux en titane aux ornements interchangeables.'
+    assign action = 'Découvrir les ensembles'
+    assign lead_alt = 'Ensemble An Evening Out'
+    assign detail_alt = 'Ensemble Weekdays avec puces d’oreilles et fermoirs interchangeables'
+  else
+    assign headline = 'One base. More ways to wear it.'
+    assign description = 'Titanium jewelry with interchangeable charms.'
+    assign action = 'Discover the sets'
+    assign lead_alt = 'An Evening Out jewelry set'
+    assign detail_alt = 'Weekdays stud earring set with interchangeable backs'
+  endif
+-%}
+<section class="r-home-hero" aria-labelledby="SuijiHomeTitle">
+  <div class="r-home-hero__media">
+    <a class="r-home-hero__piece r-home-hero__piece--lead" href="{{ routes.root_url | append: '/products/suiji-rpt-set-08-chain-hoop-ring?variant=58298808598868' | replace: '//', '/' }}" aria-label="{{ lead_alt | escape }}">
+      <img class="r-home-hero__lead" src="https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-rpt-set-08-17-shown-73f8e215efb2.jpg?width=1200" srcset="https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-rpt-set-08-17-shown-73f8e215efb2.jpg?width=360 360w, https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-rpt-set-08-17-shown-73f8e215efb2.jpg?width=480 480w, https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-rpt-set-08-17-shown-73f8e215efb2.jpg?width=640 640w, https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-rpt-set-08-17-shown-73f8e215efb2.jpg?width=960 960w, https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-rpt-set-08-17-shown-73f8e215efb2.jpg?width=1280 1280w, https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-rpt-set-08-17-shown-73f8e215efb2.jpg?width=1800 1800w" sizes="(min-width: 750px) 64vw, 125vw" data-suiji-current-render alt="{{ lead_alt | escape }}" width="3200" height="4000" loading="eager" fetchpriority="high" decoding="async">
+    </a>
+    <a class="r-home-hero__piece r-home-hero__piece--detail" href="{{ routes.root_url | append: '/products/suiji-rpt-set-01-dual-back-stud?variant=58298741948756' | replace: '//', '/' }}" aria-label="{{ detail_alt | escape }}">
+      <img class="r-home-hero__detail" src="https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-rpt-set-01-04-shown-c66f8043a5e2.jpg?width=640" srcset="https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-rpt-set-01-04-shown-c66f8043a5e2.jpg?width=360 360w, https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-rpt-set-01-04-shown-c66f8043a5e2.jpg?width=480 480w, https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-rpt-set-01-04-shown-c66f8043a5e2.jpg?width=640 640w, https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-rpt-set-01-04-shown-c66f8043a5e2.jpg?width=960 960w, https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-rpt-set-01-04-shown-c66f8043a5e2.jpg?width=1280 1280w, https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-rpt-set-01-04-shown-c66f8043a5e2.jpg?width=1800 1800w" sizes="(min-width: 750px) 64vw, 125vw" data-suiji-current-render alt="{{ detail_alt | escape }}" width="3200" height="4000" loading="eager" decoding="async">
+    </a>
+  </div>
+  <div class="r-home-hero__statement">
+    <div>
+      <h1 id="SuijiHomeTitle">{{ headline }}</h1>
+      <p>{{ description }}</p>
+    </div>
+    <a class="r-button r-home-hero__action" href="{{ routes.root_url | append: '/collections/sets' | replace: '//', '/' }}">{{ action }}</a>
+  </div>
+</section>

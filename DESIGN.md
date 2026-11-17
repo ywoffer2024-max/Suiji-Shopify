@@ -1,6 +1,6 @@
-# SUIJI Design System · v6.3.13
+# SUIJI Design System · v6.3.14
 
-Updated 14 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery, the homepage featured set, delivery information and the cart shipping message. It also refines the shared Core-Lock entry, limits the global announcement to delivery, and uses a light palette with a muted grey-blue editorial surface. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
+Updated 18 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery, the homepage featured set, delivery information and the cart shipping message. It also refines the shared Core-Lock entry, limits the global announcement to delivery, and uses a light palette with a muted grey-blue editorial surface. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
 
 ## 1. Authority and change control
 
@@ -132,19 +132,19 @@ The shared header uses the existing transparent square mark followed by the SUIJ
 
 The Shop All / Tous les bijoux disclosure contains six category links in this order across desktop and mobile in both languages. The links are Necklaces, Earrings, Rings, Charms, Bracelets & bangles, and Accessories. Show an approved photograph of a representative item when the category has one. A category awaiting an approved photograph uses its text link in the same slot. Use the same crop and source on desktop and mobile. The top-level Sets / Ensembles link opens the set collection directly. Keep a clickable parent link, separately operated disclosure, fine-pointer hover, click, keyboard access, outside-click close, Escape and focus return. Mobile subcategories open into a right-side panel with Back and Close.
 
-The Core-Lock parent links to its explanation page. Its desktop disclosure and mobile panel use the same two picture links, **Bases / Bases** and **Charms / Ornements**, in that order. The mechanism page reuses those links. The Bases page shows four image-led families for rings, earrings, necklaces and bracelets. Explain where an attachment sits for each family and refer to the exact piece for compatibility and included parts. A temporary wrist-category illustration has a visible bilingual category label and belongs to the guide only.
+The Core-Lock parent links to its explanation page. Its desktop disclosure and mobile panel use the same two picture links, **Bases / Bases** and **Charms / Ornements**, in that order. The mechanism page reuses those links. The Bases page shows four image-led families for rings, earrings, necklaces and bracelets. Explain where an attachment sits for each family and refer to the exact piece for compatibility and included parts. Keep text links available for base families awaiting their own current product photograph.
 
-Gifts / Cadeaux provides a Shop by price / Par budget group in the desktop menu, mobile panel and Gifts page. Use three plain links in ascending order for budgets under €100, €500 and €1,000. Each result uses current positive Shopify prices and a strict upper limit. In a populated result, put the current budget in the page title and show the other budgets and the route back to all gifts as compact utility links near the grid. Use the shared catalogue cards and price formatting. The Gifts landing page keeps the first product cards immediately below its compact budget links.
+Gifts / Cadeaux provides a Shop by price / Par budget group in the desktop menu, mobile panel and Gifts page. Use three plain links in ascending order for budgets under €100, €500 and €1,000. Each result uses current positive Shopify prices and a strict upper limit. In a populated result, put the current budget in the page title and show the other budgets and the route back to all gifts as compact utility links near the grid. Use the shared catalogue cards and price formatting. The Gifts landing page keeps the first product cards immediately below its compact budget links. The Gifts disclosure contains the utility links and budget group in two columns.
 
 The footer order is **Shop → How it works → About SUIJI → Create with us → Client care**, followed by legal/privacy controls. Desktop gap `28px`; intermediate `32px 36px`; mobile `32px 24px`. Headings `14px`, links `13px` desktop / `14px` mobile, minimum link targets `36px` / `44px`. Legal text `12px`. Keep each group focused on destinations shoppers need. Let secondary story, account and creator links live on their relevant landing pages.
 
 ### Homepage photography
 
-- Lead with one editorial image group. The desktop composition pairs an approved view of jewelry assembled and separated with an approved Core-Lock or material close-up. On mobile, show the lead composition at a size that preserves each component's silhouette. Keep the current image source and its component labels accurate when artwork changes.
+- Lead with the latest approved whole-set photographs. Desktop pairs An Evening Out (set 08) with Weekdays (set 01). Each image opens its own exact native set variant. Mobile shows the complete set 08 composition. Use contain fitting with a 1.18 display scale on desktop and 1.25 on mobile, keeping every component inside its image field. The primary collection action opens Sets / Ensembles.
 - Follow the images with a short headline, a concise description and one primary collection link. The headline and link are visible at `1440 × 900` and `1280 × 720` in both languages. Keep assembly, compatibility and included pieces clear in the Core-Lock explanation below.
 
-- Use one featured set in the homepage wearing section. Pair a reviewed wearing image with the white-background view of its actual set contents. Put the warmth in skin, lighting and approved low-saturation clothing. Use the paper surface and deep-blue link treatment. The wearing image and its visible text link open the exact photographed base variant as one target. The set image and its visible text link open the exact set variant as a second target.
-- Use the shared split layout, with a `4:5` wearing image up to `480px` wide. Stack the image and information at `749px` and below and make the wearing image visible without hover. The caption identifies a base shown on its own. Show the version with a charm attached when an approved view confirms the assembly and wearing scale. Use responsive lazy images with their dimensions reserved.
+- Use one featured set on the homepage. Pair the latest verified render of its base with a current image of the actual set contents. Both images and text links open their own exact native product variants. Use the paper surface and deep-blue link treatment.
+- Use the shared split layout, with a `4:5` base image up to `480px` wide. Stack the image and information at `749px` and below and make the image visible without hover. The caption identifies a base shown on its own. Use responsive lazy images with their dimensions reserved.
 - Use the exact localized set name, included parts and current positive Shopify price. Give both links a visible focus ring and at least a 44px target. In preview mode, label the reference price. If the required reviewed image, set contents or price is unavailable, show the Core-Lock explanation in the same location.
 
 - Add Sets / Ensembles after the four existing links in the homepage category rail. Use a reviewed whole-set image with all components visible and link to the localized Sets collection. Keep the rail horizontally scrollable on phones.
@@ -158,11 +158,11 @@ The footer order is **Shop → How it works → About SUIJI → Create with us �
 - Keep image edges and the leading edges of names and prices aligned across a row. Place the verified variant price just below its own name and keep the preview or availability note separate. Give a longer localized name the space it needs before placing the next card. Keep the name and price visible independently of hover.
 - Review the actual jewelry silhouette inside the frame at desktop and mobile sizes. Keep the full outline and make the intended detail legible, especially for small charms and accessories shown beside larger pieces. Where the source has excess exterior white margin, use approved display framing for that view. Preserve the original file, zoom source, aspect ratio and any size reference. Apparent size across unrelated card images carries no product dimension claim.
 - On shared commerce cards, use 78% of the measured ring cover scale and centering offsets. The current ring silhouettes occupy about 56% of the image field width. Apply the same framing on desktop and mobile.
-- A public product card opens the exact native product detail with its shown variant selected. A single activation works on mouse, keyboard and touch. Use the same destination in search, recommendations, gifts, homepage cards and category grids. Products enter these shopping surfaces when their image, native identity and positive Shopify price are confirmed.
+- A public product card opens the exact native product detail with its shown variant selected. A single activation works on mouse, keyboard and touch. Use the same destination in search, recommendations, gifts, homepage cards and category grids. A priced card requires a confirmed native identity and positive Shopify price. If a published piece awaits a current image, keep its product link, name and price visible.
 - Keep the approved packshot as the default. When an approved wearing illustration is available for that exact SKU and finish, reveal it on fine-pointer hover or keyboard focus and add it after the packshots in that variant’s gallery. Label the gallery view as a wearing illustration. When a styling image includes a separately sold carrier, name the carrier and mark it as sold separately in the localized caption and image description. For a variant awaiting its own approved wearing illustration, keep its packshot on hover and focus.
 - When clothing appears in a wearing image, use a specific editorial wardrobe reference for the neckline, shoulder or cuff construction and fabric drape. Draw on [JENNY BIRD’s Dane Collar](https://jenny-bird.com/products/dane-collar), [Boston Square Ring](https://jenny-bird.com/products/boston-square-ring-gold) and [Marla Aaron’s Set 6 Styling](https://marlaaaron.com/blogs/newsletters/set-6-styling). Prefer the approved SUIJI wardrobe where its actual cut suits the piece. For collars and earrings, use a structured low square neckline, a clean asymmetric shoulder or an ear close-up with hair pulled clear. For long chains, use softly tailored open lapels and a plain layer with enough tonal contrast to read both chain ends. For rings and wrist pieces, use a relaxed hand pose and a clean tailored cuff when a sleeve enters the frame. Use muted colors with clear jewelry separation, believable fabric and refined construction. Avoid generic crew-neck basics, prominent patterns, visible logos and distracting shine.
 - Review both the full-size image and its mobile card. Keep the product’s exact finish, structure and wearing scale and keep fabric and hair clear of the clasp, links, settings and ends. A visibly wrong outfit or a chain lost against clothing requires a new reviewed wearing image. Keep its verified packshot available on the card while the wearing image is being replaced.
-- Record the native handle, SKU, approved view and display framing together. Frames trim exterior whitespace and keep the full jewelry silhouette. Responsive image sizes account for the effective display scale, so framing still uses sufficient source resolution. In the Core-Lock menu and introduction, show the Core-Lock earring base (H03-CORE), ring base and gold-finish collar side by side in one row, then the single “Bases” label below. Use a separate verified charm image for “Charms / Ornements”. The label is the accessible name of the link. Withdrawn imagery stays outside public cards, navigation, gallery payloads and recommendations until the replacement is approved.
+- Record the native handle, SKU, approved view and display framing together. Frames trim exterior whitespace and keep the full jewelry silhouette. Responsive image sizes account for the effective display scale, so framing still uses sufficient source resolution. In the Core-Lock menu and introduction, show the current approved ring base and gold-finish collar side by side in one row, then the single “Bases” label below. Add the Core-Lock earring base after its own current exact-match photograph is approved. Use a separate verified charm image for “Charms / Ornements”. The label is the accessible name of the link. Withdrawn imagery stays outside public cards, navigation, gallery payloads and recommendations until the replacement is approved.
 - Set previews use the authorized component photos and identify them as selected components. Use the shared desktop column counts. At 590px and below, keep one set per row so that the separate components remain legible. Keep the images, set name and verified price together. The set page lists exact included parts, quantities and supported ways to wear them from the approved set record. A component image represents only the piece it depicts. Use a verified assembled image when showing an assembled set.
 
 ### Product, complete the look and size guide
@@ -175,8 +175,8 @@ On desktop, place the thumbnail rail to the left of the main image. On mobile, p
 
 - Use native radio buttons for displayed finishes. The default visual is a 26px color sample with a Manrope 13px label below. The control is 78px wide and at least 48px high. Use an 8px row gap, 12px column gap and natural wrapping. Prefer Shopify's real swatch data. Known SUIJI finishes may use the approved color samples. Use a readable text choice when a sample is unavailable.
 - The selected radio has a thin outer ring and a check, with a 2px focus outline and 4px offset for keyboard interaction. Keep labels readable in all states. Use separate plain status text for a sold-out finish or a missing configuration. Reserve visual strike-through for price comparison where appropriate.
-- Real sizes are visible in a button group. Keep the size guide adjacent. Its international reference and calculator are informational. Actual size options and availability come from the existing Shopify variants. For the documented ring families, the known active sizes are 54/57 mm. Preserve the 41–65 mm comparison range and display unverified equivalents as an em dash.
-- The guide uses two measurement methods, an Enter-submittable calculator and live result/error text. Table overflow stays in its labeled region. Guide input and action are 48px and aligned. Quick dialogs use up to 880px and the size guide up to 1120px. Use a 12px mobile inset, an internal scroll area up to 92dvh, Escape and focus return.
+- Real sizes are visible in a button group. Keep the size guide adjacent. Use short measurement labels in its table and calculator. Actual size options and availability come from the existing Shopify variants. Show U.S. ring-size labels in EN and FR for size choices and size-specific titles. The current measured sizes are US 6¾ (54 mm inner circumference) and US 8 (57 mm inner circumference). Place the millimetre value alone under each size option or below a size-specific item title. Preserve the underlying Shopify option values, SKU, variant IDs and availability rules. The guide keeps the 41–65 mm measurement range, lists the U.S. equivalent first, and marks unverified equivalents with an em dash.
+- The guide uses two measurement methods, an Enter-submittable calculator and live result/error text. The paper-strip diagram shows a hand with visible fingertips, nails and knuckles, and a strip around one finger with a visible overlap mark. The same drawing appears in English and French. Table overflow stays in its labeled region. Guide input and action are 48px and aligned. Quick dialogs use up to 880px and the size guide up to 1120px. Use a 12px mobile inset, an internal scroll area up to 92dvh, Escape and focus return.
 
 #### Purchase states
 
@@ -196,7 +196,7 @@ Product pages use an image-led two-column layout at 750px and above, with single
 
 A different framing can be approved for a specific image role. The verified 8-Link Collar front role uses a 1.18 display scale, leaving the underlying approved file and zoom unchanged. Keep the complete jewelry silhouette in the initial gallery and preserve visible links and clasps.
 
-**Complete the look** lives in the purchase column, before the detail tabs. Bases link to compatible charms and charms link to compatible bases. Show up to two verified companions with their exact native variant, approved image and Shopify price. Where a compatible product is awaiting publication or price confirmation, link to the matching Core-Lock guide. Use a minimum 44px target.
+**Complete the look** lives in the purchase column, before the detail tabs. Bases link to compatible charms and charms link to compatible bases. Show the full published, image-verified charm range beneath Core-Lock ring bases and collars. Other pieces use up to two verified companions. Each card links to its exact native variant and shows its current render and Shopify price. Where a compatible product is awaiting publication or price confirmation, link to the matching Core-Lock guide. Use a minimum 44px target.
 
 The mechanism entrance uses two circular image links with a `200px` diameter and `50px` gap on desktop, and up to `140px` diameter with a `26px` gap on mobile. The editorial hero pairs a leading text column with the links at 990px and above, then stacks the links below the introduction. Keep both links inside the content edge at narrow widths. Labels use Newsreader `26px/1.4`, reduced to `24px` on mobile. The introduction names the three parts in order: the base you wear, the clasp that connects, and the charm you choose. One charm can move between bases with the matching connection. State compatibility and contents separately. Keep the established fit guide and operating instructions accessible.
 
@@ -210,7 +210,7 @@ Journal solves a concrete consumer problem with an early usable answer, practica
 
 Journal uses the existing breadcrumb component for Home / The Journal / current article, with matching BreadcrumbList data. Native excerpts remain in list/SEO fields; detail pages preserve their approved body introduction without prepending the same summary again. Related reading uses up to two fixed, same-topic registry links, excluding the current article; when only one other approved guide exists in the topic, show that one rather than add an unrelated link; it does not depend on a random App. Keep one BlogPosting with the actual author and timezone-qualified publication date. A visible reviewed date and dateModified require the same explicitly recorded suiji.content_reviewed_at date/date_time field; otherwise omit both. Article handle comparisons first normalize blog/handle to the short handle. The scoped max-image-preview:large metadata permits larger existing images; it does not promise Discover or justify unrelated pictures. Native Journal tag archives repeat the full guide list, so they use noindex,follow; normal Journal and Article eligibility stays unchanged. This v6.1.9 addition changes shared Journal markup and these scoped shell metadata conditions; visual tokens, fonts and CSS remain unchanged.
 
-Social sharing images follow the same final2 whitelist. The shared social-image helper maps only known current page/product/category contexts to their approved1200px final2 file. Pages without an exact mapping, including image-free Journal articles, use the existing SUIJI logo as neutral brand identification in social metadata; it is not an article feature image or a product photograph. Its actual512×511 dimensions and summary Twitter card are declared. Use an explicit brand image because live pages with an omitted image gained an additional old-image tag after the theme scripts. Verify the corrected live output rather than infer the injection mechanism. Never fall back to a legacy Page/settings image, mutate those native settings, or introduce unrelated imagery. This v6.1.9 fix changes metadata only; layout, CSS, fonts and visible content stay unchanged.
+Social sharing images follow the same current-render whitelist. The shared social-image helper maps known product and collection contexts to an approved current render. Pages without an exact mapping, including image-free Journal articles, use the existing SUIJI logo as neutral brand identification in social metadata; it is not an article feature image or a product photograph. Its actual512×511 dimensions and summary Twitter card are declared. Use an explicit brand image because live pages with an omitted image gained an additional old-image tag after the theme scripts. Verify the corrected live output rather than infer the injection mechanism. Never fall back to a legacy Page/settings image, mutate those native settings, or introduce unrelated imagery. This v6.1.9 fix changes metadata only; layout, CSS, fonts and visible content stay unchanged.
 
 ### Native cart, forms and local previews
 
@@ -244,11 +244,11 @@ Empty selections show one exploration action and hide order/review summaries. Pr
 Shopping preview: the final action goes to the existing Contact page with the current local selection prefilled, and sends nothing automatically. Do not link to an unsaved Page or imply that an order/payment exists. Search indexes the visible catalogue's documented EN/FR names, roles, materials and option labels; all query words must match. No-result states offer clear, browse and Contact actions. Do not infer a mineral from appearance.
 
 
-Use the `photo-publication.json` registry and the current publication batch record for public product visibility. Use the latest approved Feishu render for the exact SKU and view when the batch contains one. Continue using approved `final 2.zip` derivatives for the remaining reviewed views. The specifically authorized Shopify set previews use their approved set records and component media. The existing Chunyu portrait, brand logo and functional icons are approved exceptions to the product-image source. Match captions and alt text to the components actually visible. A bare-base listing depicts the base on its own. Products awaiting their own approved imagery retain their source records and stay out of listings, search, menus, recommendations and bag additions. Show only the readable unavailable state on their old direct links.
+Use the current publication batch registry to select the latest exact-match Feishu render for each Shopify SKU and view, including cards, galleries, recommendations, cart thumbnails, menus, editorial product placements and share images. Keep existing public product and set links available when current imagery is missing. Show a text-only card or empty gallery state with the actual details. Label partial set imagery as selected components and show only positively identified parts. Withhold wearing illustrations until their current versions are reviewed. The existing Chunyu portrait, brand logo and functional icons are approved exceptions to the product-image source. Match captions and alt text to the components actually visible. A bare-base listing depicts the base on its own. Recommendations require a current, exact-match image. Keep historically unpublished products on their established unavailable routes.
 
 
 - Use one shared renderer and generated template per family, not a hand-built page per SKU. Preserve URLs, identities, native locale roots and query-selected configuration. Bind native internal URLs through `routes.root_url`; do not hardcode an assumed `/fr` root.
-- Reserve image dimensions. Give the first homepage or product gallery image eager loading and high priority. Use the existing 600px and 1200px WebP files for the same approved source. Match responsive source sizes to the hero and gallery layout. Keep the full-size URL and update both source attributes when the gallery selection changes. The zoom dialog uses the selected 1200px image. Keep below-fold galleries and cards lazy and the public catalogue allowlist scoped.
+- Reserve image dimensions. Give the first homepage or product gallery image eager loading and high priority. Use responsive widths generated from the same approved source. Match responsive source sizes to the hero and gallery layout. Keep the full-size URL and update both source attributes when the gallery selection changes. The zoom dialog uses the selected 1200px image. Keep below-fold galleries and cards lazy and the public catalogue allowlist scoped.
 - Future video uses a poster, controls, `preload=none` and intent-based playback. No grid autoplay, fake play button, new carousel library or heavyweight framework merely to add media.
 - AI campaign placeholders remain distinguished from real product geometry, founder portraits and documentary workshop images. Never invent a hidden product angle, manufacturing proof or source identity.
 - Production-scale filtering/pagination belongs to a backend catalogue source; do not solve growth by expanding an unbounded client-side data dump. Keep public config an explicit fact allowlist.
@@ -288,7 +288,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
 
 ```json design-lock
 {
-  "version": "6.3.13",
+  "version": "6.3.14",
   "implementation_version": "6.3.10",
   "approved_preview": {
     "sha256": "6e28e3e61d6effec39fd36c7c8777d09bb5e85471d3b7c794ccb75b0277cdc92",
@@ -303,7 +303,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
   },
   "stylesheet": {
     "path": "theme/assets/suiji-r107-v6310.css",
-    "sha256": "7004aa89a385b3de2c41cfbaf029558dd797c3f8189d591c34f509c6fb0ae2fd"
+    "sha256": "68e1e9792b38afbc24025ae8a1d07dff594c46aa1757d0ce3e3e25938dc5217d"
   },
   "shell": {
     "path": "theme/layout/theme.liquid",
@@ -370,7 +370,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
   "components": [
     {
       "path": "theme/assets/suiji-native-pdp.css",
-      "sha256": "83cf90d83202a7a2d23eb32d679d0ddede80557df41486367f91f700bb7fca1f"
+      "sha256": "20d6d1cd152aa537e1dd37576ac071baea5ee4abf9ca349765762592b296a8ea"
     },
     {
       "path": "theme/assets/product-info.js",
@@ -390,19 +390,19 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/sections/main-product.liquid",
-      "sha256": "0e6a1393fde7dcfd6441c31a477814ea826dad18d71979d2db24db44d6ef4657"
+      "sha256": "f32f0c0a8d3a8ec456e21c4884e1670cbaf5be7d8ab167313755b4a3105d0d4b"
     },
     {
       "path": "theme/snippets/product-variant-picker.liquid",
-      "sha256": "2b45be94275df69076300cc16d4509ec71181329ed8071cbda0cc3a13be98395"
+      "sha256": "5107e7003cd1a656512232af975df004aff762de3ed5183de20e3ba07295233c"
     },
     {
       "path": "theme/snippets/product-variant-options.liquid",
-      "sha256": "c2dadae175fd26648bfdb8421bf29024df83101f00040268db9bf06835e0e8e7"
+      "sha256": "ca73f576da5935eb4a147010fb6cac331767fc3421530a7f3152490dd8d804e5"
     },
     {
       "path": "theme/snippets/product-thumbnail.liquid",
-      "sha256": "266a949a420027de56f593b67f71284ffcd81a9281f6635a3cdcf8af73a068c7"
+      "sha256": "d8b3ddc8eb7baf0c7c8e932c962ce05405edc7ce39a92c6f20df53bbd0de93b7"
     },
     {
       "path": "theme/snippets/product-media-gallery.liquid",
@@ -414,11 +414,11 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/card-product.liquid",
-      "sha256": "b8ae0e72e767ab7f2f7468284335ceae5ae4f6ba2c3f405619880f9074b1c39e"
+      "sha256": "8a7ce2122a66860522bf2f885fe464c6e5370ce8dc5acb0053eeb9a37af3f14d"
     },
     {
       "path": "theme/snippets/cart-drawer.liquid",
-      "sha256": "2e2b80eb356f48b10b36c2ae21ea58b091af92f2680ece49248fb3b2927608c7"
+      "sha256": "17feee1d501d28117f8ac86640a77e23e8f9e8aa63c0021632d43d364f0d4c4c"
     },
     {
       "path": "theme/sections/main-cart-footer.liquid",
@@ -438,7 +438,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-r107-home.liquid",
-      "sha256": "04d5daad97deb1fd3f06d534c05b574bb568530e43e7150e2aaa0f6207718305"
+      "sha256": "28b66e8669d48a0669caa0473cc4787a4313dc0f8faf3f3924c1c9b04b2f0bf7"
     },
     {
       "path": "theme/snippets/suiji-r107-wordmark.liquid",
@@ -446,19 +446,19 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-r107-home-hero.liquid",
-      "sha256": "bfc2a2708be16612935180b7e466c6800d6a0e72e0cadb085c8af5c969714967"
+      "sha256": "e3c8497e187a70ddc5d7e0e6784510cb2125a1788063befed80f8a3ab3f6af9e"
     },
     {
       "path": "theme/snippets/suiji-storefront-card.liquid",
-      "sha256": "e8c56b387f6f2da54342045d2d92b0ab44a7decd8a4f4c0580d6904d86a719e6"
+      "sha256": "63d4d0d31b1015039c20fddf238cbda6cb3f4ad2414079cb5e38835deed195cd"
     },
     {
       "path": "theme/snippets/suiji-storefront-cover.liquid",
-      "sha256": "655e3482408a49fd0a8b50420719bb181741e760cf9b915a6a6b9aac459d264b"
+      "sha256": "f025b8b081511c7bf4df73660b2fb0a6428fb21a828bad27c7c2c0202a55f78d"
     },
     {
       "path": "theme/snippets/suiji-storefront-cover-image.liquid",
-      "sha256": "58144180bf8485160dad50ef4311e48fffd460b974c8ee649be229e40df6098f"
+      "sha256": "8d98d2fbe51281743a4ddcac6c99b43bf651bc098222efba72589e615b862717"
     },
     {
       "path": "theme/snippets/suiji-shop-all-photo.liquid",
@@ -466,7 +466,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-core-system-links.liquid",
-      "sha256": "1042a6a38509cfb277ec559a360888c5eae39d2703923d9340112259da53d48a"
+      "sha256": "154e3ee377443d717318bc262a3552619e7de86cab5c2f72acbc6f9898dd60f9"
     },
     {
       "path": "theme/snippets/suiji-shop-mega-menu.liquid",
@@ -474,7 +474,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-gifts-menu.liquid",
-      "sha256": "1e459bb0559365898c69e5ab140f9e9293d2dcd5db7dc64bc4315b3a7d5113c7"
+      "sha256": "dc26b2635c3cbe208bd49ef1a477670493231670caf04c6c3bd35fd7a1a8803d"
     },
     {
       "path": "theme/snippets/suiji-r107-gifts.liquid",
@@ -485,16 +485,32 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
       "sha256": "44b1085d674652c4e39846a627172eb6787f8f1e1618bb5bb50e3dea3a5513c6"
     },
     {
+      "path": "theme/snippets/suiji-size-guide.liquid",
+      "sha256": "80b7d79076768e7e8f1598d53705b5b80318038d3569f09279283d6a9f133530"
+    },
+    {
+      "path": "theme/snippets/suiji-r107-bases.liquid",
+      "sha256": "33774796d0b610e9a501cae58b63d94d2a81b85b80ff32f5a0af1fe842dc978d"
+    },
+    {
+      "path": "theme/snippets/suiji-r107-faq.liquid",
+      "sha256": "77071fcc28e12975e91d3b10966ff3743e270dc8831d7738e0213cc425d29d36"
+    },
+    {
+      "path": "theme/snippets/suiji-native-product-panels.liquid",
+      "sha256": "fe77fb8582c65c5eca9f5895bb143431f4e1cdc6d96ccc4dccb8aed5f4011a42"
+    },
+    {
       "path": "theme/snippets/suiji-native-pairing.liquid",
-      "sha256": "398e6ab6c77722e10dab65f192499af9898bf5d62858b65c4e44948da755619f"
+      "sha256": "f4ea390fa8e5378f31255891000f3c8d38a4db8b7e5ba27f7c4206e8137a5d84"
     },
     {
       "path": "theme/snippets/suiji-reviewed-variant-media-ids.liquid",
-      "sha256": "c735eba1dbb45dfe7cf6f90a9f6e1af115e183bf4fa4dcefd0a3b316e6ae53c1"
+      "sha256": "a4d284432d1fa343ae7360bf8852ec96b7df3118f2f412496a6d0f4849eab885"
     },
     {
       "path": "theme/snippets/suiji-r107-home-look.liquid",
-      "sha256": "60cd4888d47dc04bec2bebd3873596391168a9b148d4eba7188415cc3937093d"
+      "sha256": "02951384dd3605c11492371cd888c7ef04e2a48768aa6bea0b143e4646895a6a"
     },
     {
       "path": "theme/assets/suiji-mvp.js",
@@ -506,7 +522,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-r107-home-guide.liquid",
-      "sha256": "23336e1c413dc1b7a4dcfb934b5fdb73b6d8372000b6b091ee0525936017e41a"
+      "sha256": "ad24720e4342a3b5fcd3031835b0946fa915abf2b9094d3caaee53309d602246"
     },
     {
       "path": "theme/snippets/suiji-r107-shipping.liquid",
@@ -518,11 +534,15 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/sections/main-cart-items.liquid",
-      "sha256": "198d945ee17872df6ae997b116c3b673f5988b166e766b7303df2db522fd4c50"
+      "sha256": "b92109cf2a1c598fa3953f4c120f84d38d570dabb24ffcdc9061dc6f2d895a6f"
     },
     {
       "path": "theme/sections/cart-live-region-text.liquid",
       "sha256": "93d97dea16b8b8fc01f44ffb531264c537160b275857943b1f4bdce77b023026"
+    },
+    {
+      "path": "theme/snippets/suiji-ring-size-label.liquid",
+      "sha256": "0ac5210d9dfbaacccd7003612ea13db9e1b612d380edf6f0fa910b28f8713978"
     }
   ]
 }

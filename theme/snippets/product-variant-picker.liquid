@@ -30,11 +30,21 @@
       {%- liquid
         assign option_key = option.name | downcase | strip
         assign option_label = option.name
+        assign uses_us_ring_size = false
+        if option_key == 'ring size' or option_key == 'taille de bague'
+          assign uses_us_ring_size = true
+        elsif option_key == 'size' or option_key == 'taille'
+          if product.handle == 'r01' or product.tags contains 'role:ring_base' or product.tags contains 'category:rings'
+            assign uses_us_ring_size = true
+          endif
+        endif
+        if uses_us_ring_size
+          assign picker_type = 'button'
+          assign option_label = 'suiji_sizing.size' | t
+        endif
         case option_key
           when 'band finish'
             assign option_label = 'suiji_pdp.finish_option' | t
-          when 'ring size'
-            assign option_label = 'suiji_pdp.size' | t | append: ' (mm)'
           when 'clasp and buttons'
             if request.locale.iso_code == 'fr'
               assign option_label = 'Fermoir et boutons'
@@ -57,6 +67,7 @@
               option: option,
               block: block,
               picker_type: picker_type,
+              uses_us_ring_size: uses_us_ring_size,
               suiji_purchase_state: suiji_purchase_state
             -%}
           </div>
@@ -74,6 +85,7 @@
             option: option,
             block: block,
             picker_type: picker_type,
+            uses_us_ring_size: uses_us_ring_size,
             suiji_purchase_state: suiji_purchase_state
           %}
         </fieldset>
@@ -85,6 +97,7 @@
             option: option,
             block: block,
             picker_type: picker_type,
+            uses_us_ring_size: uses_us_ring_size,
             suiji_purchase_state: suiji_purchase_state
           %}
         </fieldset>
@@ -113,6 +126,7 @@
                 option: option,
                 block: block,
                 picker_type: picker_type,
+            uses_us_ring_size: uses_us_ring_size,
             suiji_purchase_state: suiji_purchase_state
               %}
             </select>
