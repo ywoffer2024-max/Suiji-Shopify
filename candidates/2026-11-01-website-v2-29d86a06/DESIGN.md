@@ -1,4 +1,4 @@
-# SUIJI Design System · v6.3.10
+# SUIJI Design System · v6.3.11
 
 Updated 14 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery, the homepage featured set, delivery information and the cart shipping message. It also refines the shared Core-Lock entry, limits the global announcement to delivery, and uses a light palette with a muted grey-blue editorial surface. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
 
@@ -244,7 +244,7 @@ Empty selections show one exploration action and hide order/review summaries. Pr
 Shopping preview: the final action goes to the existing Contact page with the current local selection prefilled, and sends nothing automatically. Do not link to an unsaved Page or imply that an order/payment exists. Search indexes the visible catalogue's documented EN/FR names, roles, materials and option labels; all query words must match. No-result states offer clear, browse and Contact actions. Do not infer a mineral from appearance.
 
 
-Use the `photo-publication.json` registry for public single-product visibility and approved `final 2.zip` derivatives. The specifically authorized Shopify set previews use their approved set records and component media. The existing Chunyu portrait, brand logo and functional icons are approved exceptions to the product-image source. Match captions and alt text to the components actually visible. A bare-base listing depicts the base on its own. Products awaiting their own approved imagery retain their source records and stay out of listings, search, menus, recommendations and bag additions. Show only the readable unavailable state on their old direct links.
+Use the `photo-publication.json` registry and the current publication batch record for public product visibility. Use the latest approved Feishu render for the exact SKU and view when the batch contains one. Continue using approved `final 2.zip` derivatives for the remaining reviewed views. The specifically authorized Shopify set previews use their approved set records and component media. The existing Chunyu portrait, brand logo and functional icons are approved exceptions to the product-image source. Match captions and alt text to the components actually visible. A bare-base listing depicts the base on its own. Products awaiting their own approved imagery retain their source records and stay out of listings, search, menus, recommendations and bag additions. Show only the readable unavailable state on their old direct links.
 
 
 - Use one shared renderer and generated template per family, not a hand-built page per SKU. Preserve URLs, identities, native locale roots and query-selected configuration. Bind native internal URLs through `routes.root_url`; do not hardcode an assumed `/fr` root.
@@ -288,7 +288,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
 
 ```json design-lock
 {
-  "version": "6.3.10",
+  "version": "6.3.11",
   "implementation_version": "6.3.10",
   "approved_preview": {
     "sha256": "6e28e3e61d6effec39fd36c7c8777d09bb5e85471d3b7c794ccb75b0277cdc92",
@@ -450,11 +450,11 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-storefront-card.liquid",
-      "sha256": "fd738f54d98393f2689d9dd1ee33a2af7da178e0fec97ba5ad93f603f1a3f9cb"
+      "sha256": "e8c56b387f6f2da54342045d2d92b0ab44a7decd8a4f4c0580d6904d86a719e6"
     },
     {
       "path": "theme/snippets/suiji-storefront-cover.liquid",
-      "sha256": "6ccd13ea0843ef0d4b2ba851d2c871c0f207e9c3f5c9f3132e946f85a0f2d5c4"
+      "sha256": "8df22f6a94b5c6264f2a0b56f522b2562dd0b14d933f0a4c1cdf3be77d3ec02a"
     },
     {
       "path": "theme/snippets/suiji-storefront-cover-image.liquid",
@@ -462,7 +462,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-shop-all-photo.liquid",
-      "sha256": "cb06f7155dbb0cef1e11085d6702f3adb131c7187a73c0aafc641fba32ebfbe3"
+      "sha256": "a32755b2f900cf753d20ac84c933e841556cdd82c220537b60e4ad5b6ffbffad"
     },
     {
       "path": "theme/snippets/suiji-core-system-links.liquid",
@@ -490,7 +490,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-reviewed-variant-media-ids.liquid",
-      "sha256": "e763c0329cde97b1cef85184284ed69cceaf373eb2fde817a22f7e0f9ac1cd7a"
+      "sha256": "b8fea95adee6fd4081358ad5f3688d4c6a1e417f85ab018ede09f0de1f147ef6"
     },
     {
       "path": "theme/snippets/suiji-r107-home-look.liquid",

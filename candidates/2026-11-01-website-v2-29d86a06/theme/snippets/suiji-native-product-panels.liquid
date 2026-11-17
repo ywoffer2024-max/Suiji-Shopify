@@ -5,6 +5,8 @@
   assign suiji_panel_description = product.description
   if product.tags contains 'suiji-display-only'
     assign suiji_panel_display_only = true
+  endif
+  if suiji_panel_display_only or product.tags contains 'suiji-render-20261117'
     assign suiji_panel_locale = request.locale.iso_code | split: '-' | first
     assign suiji_panel_copy = product.metafields.custom.suiji_display_copy.value[suiji_panel_locale]
     assign suiji_panel_title = suiji_panel_copy.title | default: product.title
@@ -20,7 +22,7 @@
     {%- assign panel_names = 'description,notes,shipping' | split: ',' -%}
     {%- for panel_name in panel_names -%}{%- assign label_key = 'suiji_pdp.tab_' | append: panel_name -%}<button type="button" role="tab" id="NativeTab-{{ section.id }}-{{ product.id }}-{{ panel_name }}" aria-controls="NativePanel-{{ section.id }}-{{ product.id }}-{{ panel_name }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" tabindex="{% if forloop.first %}0{% else %}-1{% endif %}" data-native-tab="{{ panel_name }}">{{ label_key | t }}</button>{%- endfor -%}
   </div>
-  <section role="tabpanel" id="NativePanel-{{ section.id }}-{{ product.id }}-description" aria-labelledby="NativeTab-{{ section.id }}-{{ product.id }}-description" tabindex="0" data-native-panel="description"><div class="rte">{% if suiji_panel_display_only and suiji_panel_description != blank %}<p>{{ suiji_panel_description | escape | newline_to_br }}</p>{% elsif product.description != blank %}{{ product.description }}{% else %}<p>{{ 'suiji_pdp.native_details_fallback' | t }}</p>{% endif %}</div></section>
+  <section role="tabpanel" id="NativePanel-{{ section.id }}-{{ product.id }}-description" aria-labelledby="NativeTab-{{ section.id }}-{{ product.id }}-description" tabindex="0" data-native-panel="description"><div class="rte">{% if suiji_panel_copy.description != blank and suiji_panel_description != blank %}<p>{{ suiji_panel_description | escape | newline_to_br }}</p>{% elsif product.description != blank %}{{ product.description }}{% else %}<p>{{ 'suiji_pdp.native_details_fallback' | t }}</p>{% endif %}</div></section>
   <section role="tabpanel" id="NativePanel-{{ section.id }}-{{ product.id }}-notes" aria-labelledby="NativeTab-{{ section.id }}-{{ product.id }}-notes" tabindex="0" data-native-panel="notes"><div class="rte">{% if product.metafields.custom.our_notes != blank %}{{ product.metafields.custom.our_notes | metafield_tag }}{% else %}<p>{{ 'suiji_pdp.native_notes_fallback' | t }}</p>{% endif %}</div></section>
   <section role="tabpanel" id="NativePanel-{{ section.id }}-{{ product.id }}-shipping" aria-labelledby="NativeTab-{{ section.id }}-{{ product.id }}-shipping" tabindex="0" data-native-panel="shipping"><div class="rte">{% if shop.shipping_policy.body != blank %}{{ shop.shipping_policy.body }}{% else %}<p>{{ 'suiji_pdp.native_shipping_fallback' | t }}</p>{% endif %}</div></section>
 </suiji-native-product>

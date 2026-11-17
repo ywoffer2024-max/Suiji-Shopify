@@ -5,14 +5,15 @@
 {%- liquid
   assign family = catalogue_family | default: 'all'
   assign locale = request.locale.iso_code | split: '-' | first
-  assign categories = 'rings,earrings,necklaces,extras,sets' | split: ','
-  assign english_categories = 'Rings,Earrings,Necklaces,Accessories,Sets' | split: ','
-  assign french_categories = 'Bagues,Boucles d’oreilles,Colliers,Accessoires,Ensembles' | split: ','
+  assign categories = 'rings,earrings,necklaces,charms,extras,sets' | split: ','
+  assign english_categories = 'Rings,Earrings,Necklaces,Charms,Accessories,Sets' | split: ','
+  assign french_categories = 'Bagues,Boucles d’oreilles,Colliers,Ornements,Accessoires,Ensembles' | split: ','
   assign labels = english_categories
   if locale == 'fr'
     assign labels = french_categories
   endif
-  assign groups = 'r01:rings,h01-blue-hoop:earrings,suiji-photo-20261109-collar-03:necklaces,suiji-photo-20261109-ring-03:rings,suiji-h02-hoop:earrings,suiji-collar-9:necklaces,suiji-photo-20261109-ring-05:rings,suiji-photo-20261109-ring-09:rings,suiji-cross-chain:necklaces,suiji-photo-20261109-fitting-03:extras,suiji-pearl-back-stud:earrings,suiji-rpt-set-04-collar-charm:sets,suiji-rpt-set-01-dual-back-stud:sets,suiji-rpt-set-02-stud-collar-ring:sets,suiji-rpt-set-03-stud-ring:sets,suiji-rpt-set-05-collar-hoop:sets,suiji-rpt-set-06-collar-hoop-ring:sets,suiji-rpt-set-07-chain-hoop:sets,suiji-rpt-set-08-chain-hoop-ring:sets,suiji-rpt-set-09-chain-ring:sets' | split: ','
+  assign groups = 'r01:rings,h01-blue-hoop:earrings,suiji-photo-20261109-collar-03:necklaces,suiji-photo-20261109-ring-03:rings,suiji-h02-hoop:earrings,suiji-collar-9:necklaces,suiji-photo-20261109-ring-05:rings,suiji-photo-20261109-ring-09:rings,suiji-cross-chain:necklaces,suiji-photo-20261109-fitting-03:extras,suiji-collar-7:necklaces,suiji-photo-20261109-collar-01:necklaces,suiji-photo-20261109-ornament-01:charms,suiji-photo-20261109-ornament-02:charms,suiji-photo-20261109-ornament-03:charms,suiji-photo-20261109-ornament-04:charms,suiji-photo-20261109-ornament-05:charms,suiji-photo-20261109-ornament-06:charms,suiji-photo-20261109-ornament-07:charms,suiji-photo-20261109-ornament-08:charms,suiji-photo-20261109-ornament-09:charms,suiji-pearl-back-stud:earrings,suiji-rpt-set-04-collar-charm:sets,suiji-rpt-set-01-dual-back-stud:sets,suiji-rpt-set-02-stud-collar-ring:sets,suiji-rpt-set-03-stud-ring:sets,suiji-rpt-set-05-collar-hoop:sets,suiji-rpt-set-06-collar-hoop-ring:sets,suiji-rpt-set-07-chain-hoop:sets,suiji-rpt-set-08-chain-hoop-ring:sets,suiji-rpt-set-09-chain-ring:sets' | split: ','
+  assign storefront_pieces = collections['all'].products
   assign heading_en = 'Shop all'
   assign heading_fr = 'Tous les bijoux'
   assign empty_url = routes.root_url | append: '/collections/all' | replace: '//', '/'
@@ -48,7 +49,7 @@
     {%- assign fields = entry | split: ':' -%}
     {%- unless family == 'all' or family == fields[1] -%}{%- continue -%}{%- endunless -%}
     {%- assign piece = collection.products | where: 'handle', fields[0] | first -%}
-    {%- if piece == blank -%}{%- assign piece = all_products[fields[0]] -%}{%- endif -%}
+    {%- if piece == blank -%}{%- assign piece = storefront_pieces | where: 'handle', fields[0] | first -%}{%- endif -%}
     {%- assign priority = false -%}
     {%- if visible < 4 -%}{%- assign priority = true -%}{%- endif -%}
     {%- capture card -%}{% render 'suiji-storefront-card', piece: piece, family: fields[1], priority: priority %}{%- endcapture -%}

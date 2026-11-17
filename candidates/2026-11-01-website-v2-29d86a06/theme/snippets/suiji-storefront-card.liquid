@@ -44,6 +44,9 @@
     endif
     assign worn_file = offer.metafields.custom.suiji_reviewed_worn.value
     assign worn = worn_file.preview_image | default: worn_file
+    if cover[1] contains 'suiji-20261117-' or piece.featured_media.alt contains ' · Set contents'
+      assign worn = nil
+    endif
     assign loading = 'lazy'
     if priority
       assign loading = 'eager'
@@ -68,7 +71,7 @@
           <h3>{{ name | escape }}</h3>
           <p class="r-price" data-card-price{% if budget %} data-gift-budget-price{% endif %}>{{ offer.price | money_with_currency }}</p>
           {%- if set_quote != blank -%}
-            <p class="r-card__state">{% if locale == 'fr' %}Composants présentés{% else %}Selected components{% endif %}</p>
+            <p class="r-card__state">{% if piece.featured_media.alt contains ' · Set contents' %}{% if locale == 'fr' %}Ensemble présenté{% else %}Set shown{% endif %}{% else %}{% if locale == 'fr' %}Composants présentés{% else %}Selected components{% endif %}{% endif %}</p>
           {%- elsif settings.suiji_enable_orders == false or piece.tags contains 'suiji-display-only' -%}
             <p class="r-card__state">{{ 'suiji_pdp.preview_status' | t }}</p>
           {%- endif -%}
