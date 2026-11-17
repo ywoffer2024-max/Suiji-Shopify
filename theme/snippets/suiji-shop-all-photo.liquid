@@ -1,0 +1,117 @@
+{%- doc -%}
+  Public SUIJI catalogue, with the same reviewed native cards for each category.
+  @param {string} [catalogue_family] - Category handle, or all.
+{%- enddoc -%}
+{%- liquid
+  assign family = catalogue_family | default: 'all'
+  assign locale = request.locale.iso_code | split: '-' | first
+  assign categories = 'rings,earrings,necklaces,charms,extras,sets' | split: ','
+  assign english_categories = 'Rings,Earrings,Necklaces,Charms,Accessories,Sets' | split: ','
+  assign french_categories = 'Bagues,Boucles d’oreilles,Colliers,Ornements,Accessoires,Ensembles' | split: ','
+  assign labels = english_categories
+  if locale == 'fr'
+    assign labels = french_categories
+  endif
+  assign groups = 'r01:rings,h01-blue-hoop:earrings,suiji-photo-20261109-collar-03:necklaces,suiji-photo-20261109-ring-03:rings,suiji-h02-hoop:earrings,suiji-collar-9:necklaces,suiji-photo-20261109-ring-05:rings,suiji-photo-20261109-ring-09:rings,suiji-cross-chain:necklaces,suiji-photo-20261109-fitting-03:extras,suiji-collar-7:necklaces,suiji-double-arm-ring-base:rings,suiji-photo-20261109-collar-01:necklaces,suiji-photo-20261109-ornament-01:charms,suiji-photo-20261109-ornament-02:charms,suiji-photo-20261109-ornament-03:charms,suiji-photo-20261109-ornament-04:charms,suiji-photo-20261109-ornament-05:charms,suiji-photo-20261109-ornament-06:charms,suiji-photo-20261109-ornament-07:charms,suiji-photo-20261109-ornament-08:charms,suiji-photo-20261109-ornament-09:charms,suiji-r02-ring-base:rings,suiji-pearl-back-stud:earrings,suiji-rpt-set-04-collar-charm:sets,suiji-rpt-set-01-dual-back-stud:sets,suiji-rpt-set-02-stud-collar-ring:sets,suiji-rpt-set-03-stud-ring:sets,suiji-rpt-set-05-collar-hoop:sets,suiji-rpt-set-06-collar-hoop-ring:sets,suiji-rpt-set-07-chain-hoop:sets,suiji-rpt-set-08-chain-hoop-ring:sets,suiji-rpt-set-09-chain-ring:sets' | split: ','
+  assign storefront_pieces = collections['all'].products
+  assign heading_en = 'Shop all'
+  assign heading_fr = 'Tous les bijoux'
+  assign empty_url = routes.root_url | append: '/collections/all' | replace: '//', '/'
+  assign empty_en = 'Browse all jewelry'
+  assign empty_fr = 'Voir tous les bijoux'
+  case family
+    when 'rings'
+      assign heading_en = 'Rings'
+      assign heading_fr = 'Bagues'
+    when 'earrings'
+      assign heading_en = 'Earrings'
+      assign heading_fr = 'Boucles d’oreilles'
+    when 'necklaces'
+      assign heading_en = 'Necklaces'
+      assign heading_fr = 'Colliers'
+    when 'extras'
+      assign heading_en = 'Accessories'
+      assign heading_fr = 'Accessoires'
+    when 'bracelets'
+      assign heading_en = 'Bracelets & bangles'
+      assign heading_fr = 'Bracelets et joncs'
+    when 'charms'
+      assign heading_en = 'Charms'
+      assign heading_fr = 'Ornements'
+      assign empty_url = routes.root_url | append: '/pages/charms' | replace: '//', '/'
+      assign empty_en = 'Discover the charms'
+      assign empty_fr = 'Découvrir les ornements'
+  endcase
+  assign visible = 0
+-%}
+{%- capture cards -%}
+  {%- for entry in groups -%}
+    {%- assign fields = entry | split: ':' -%}
+    {%- unless family == 'all' or family == fields[1] -%}{%- continue -%}{%- endunless -%}
+    {%- assign piece = collection.products | where: 'handle', fields[0] | first -%}
+    {%- if piece == blank -%}{%- assign piece = storefront_pieces | where: 'handle', fields[0] | first -%}{%- endif -%}
+    {%- assign priority = false -%}
+    {%- if visible < 4 -%}{%- assign priority = true -%}{%- endif -%}
+    {%- capture card -%}{% render 'suiji-storefront-card', piece: piece, family: fields[1], priority: priority %}{%- endcapture -%}
+    {%- assign card = card | strip -%}
+    {%- if card != blank -%}
+      {%- assign visible = visible | plus: 1 -%}
+      {{ card }}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+<div class="r-site r-photo-catalogue suiji-reviewed-catalogue" data-r107-page data-family="{{ family | escape }}" data-modules="1,2,3,4,5">
+  <header class="r-intro r-intro--small">
+    <h1>{% if locale == 'fr' %}{{ heading_fr | escape }}{% else %}{{ heading_en | escape }}{% endif %}</h1>
+  </header>
+  {% if visible > 0 %}
+    <div class="r-catalogue"{% if family == 'all' %} data-catalogue{% endif %}>
+      {% if family == 'all' %}
+        <div class="r-filter-bar">
+          <button class="r-button r-button--line" type="button" data-open-filters>{% if locale == 'fr' %}Filtrer{% else %}Filter{% endif %} <span data-filter-count></span></button>
+          <p data-result-count aria-live="polite">{{ visible }} {% if locale == 'fr' %}pièces{% else %}pieces{% endif %}</p>
+          <label>{% if locale == 'fr' %}Trier{% else %}Sort by{% endif %}
+            <select data-sort>
+              <option value="original">{% if locale == 'fr' %}Sélection{% else %}Featured{% endif %}</option>
+              <option value="name">{% if locale == 'fr' %}Nom A–Z{% else %}Name A–Z{% endif %}</option>
+            </select>
+          </label>
+        </div>
+        <dialog class="r-filters" id="r-filters" aria-labelledby="r-filter-title">
+          <div class="r-filters__head">
+            <h2 id="r-filter-title">{% if locale == 'fr' %}Votre sélection{% else %}Your selection{% endif %}</h2>
+            <button type="button" data-close-filters aria-label="{% if locale == 'fr' %}Fermer les filtres{% else %}Close filters{% endif %}">×</button>
+          </div>
+          <fieldset>
+            <legend>{% if locale == 'fr' %}Type de pièce{% else %}Piece type{% endif %}</legend>
+            {% for category in categories %}
+              {%- capture category_marker -%}data-category="{{ category }}"{%- endcapture -%}
+              {% if cards contains category_marker %}
+                <label><input type="checkbox" name="role" value="{{ category }}"> {{ labels[forloop.index0] | escape }}</label>
+              {% endif %}
+            {% endfor %}
+          </fieldset>
+          <button type="button" class="r-link" data-clear-filters>{% if locale == 'fr' %}Effacer les filtres{% else %}Clear filters{% endif %}</button>
+        </dialog>
+      {% endif %}
+      <div class="r-catalogue__layout"><div class="r-results">
+        <div class="r-grid">{{ cards }}</div>
+        {% if family == 'all' %}
+          <div class="r-empty" data-no-results hidden>
+            <h2>{% if locale == 'fr' %}Aucune pièce ne correspond à ces filtres.{% else %}No pieces match these filters.{% endif %}</h2>
+            <button type="button" class="r-button" data-clear-filters>{% if locale == 'fr' %}Effacer les filtres{% else %}Clear filters{% endif %}</button>
+          </div>
+        {% endif %}
+      </div></div>
+    </div>
+  {% else %}
+    <section class="r-section suiji-catalogue-empty">
+      {% if family == 'charms' %}
+        <p>{% if locale == 'fr' %}Découvrez comment les ornements se fixent sur une base compatible.{% else %}See how charms attach to a compatible base.{% endif %}</p>
+      {% else %}
+        <p>{% if locale == 'fr' %}Aucune pièce de cette catégorie n’est présentée pour le moment.{% else %}There are no pieces on view in this category yet.{% endif %}</p>
+      {% endif %}
+      <a class="r-button r-button--line" href="{{ empty_url }}">{% if locale == 'fr' %}{{ empty_fr }}{% else %}{{ empty_en }}{% endif %}</a>
+    </section>
+  {% endif %}
+</div>
