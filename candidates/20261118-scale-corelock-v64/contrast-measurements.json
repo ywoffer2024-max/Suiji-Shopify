@@ -1,0 +1,38 @@
+[
+  {
+    "pair": "ink on paper",
+    "fg": "#2b414d",
+    "bg": "#ffffff",
+    "contrast": 10.68
+  },
+  {
+    "pair": "muted on paper",
+    "fg": "#626466",
+    "bg": "#ffffff",
+    "contrast": 5.94
+  },
+  {
+    "pair": "white on current action",
+    "fg": "#ffffff",
+    "bg": "#315a73",
+    "contrast": 7.39
+  },
+  {
+    "pair": "white on wine action",
+    "fg": "#ffffff",
+    "bg": "#7b424b",
+    "contrast": 7.71
+  },
+  {
+    "pair": "ink on warm pearl",
+    "fg": "#2b414d",
+    "bg": "#f4efec",
+    "contrast": 9.36
+  },
+  {
+    "pair": "control on white",
+    "fg": "#7c8992",
+    "bg": "#ffffff",
+    "contrast": 3.59
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "scope": "Static prototype checks only; not a browser or visual acceptance",
+  "html_ids_unique": true,
+  "required_review_controls": [
+    "review-view",
+    "review-language",
+    "review-device",
+    "review-color",
+    "review-scale",
+    "core-menu",
+    "shop-menu",
+    "desktop-categories",
+    "view-home",
+    "view-core",
+    "view-catalogue",
+    "view-product",
+    "category",
+    "image-dialog",
+    "size-dialog",
+    "mobile-menu"
+  ],
+  "view_count": 4,
+  "locales": [
+    "en",
+    "fr"
+  ],
+  "explicit_images_matched_registry": 6,
+  "charm_sources_matched": 9,
+  "embedded_fonts_verified": [
+    {
+      "family": "Manrope",
+      "sha256": "8bd97e6bbbc1f602a8f791530eed1064c9a357d5731bbc76e3fc587fb068728f"
+    },
+    {
+      "family": "Newsreader",
+      "sha256": "e71a3bea5993009ab159b89d52d88ba515efd57e8d9324a94c681bfc72c9ac0f"
+    }
+  ],
+  "external_scripts": 0,
+  "storage_network_or_submission_code": false,
+  "javascript_syntax": "PASS",
+  "browser_interaction": "NOT_VERIFIED",
+  "physical_device_and_safari": "NOT_VERIFIED",
+  "geometry_and_glare_review": "PENDING",
+  "group_photographs": "EXPLICIT_INTERNAL_PLACEHOLDERS",
+  "production_theme_written": false,
+  "sha256": "16c4485f643b72073a13508685a2933d56f057b96c1244f75bb20786224e38c7",
+  "approved_native_charm_names": 9,
+  "pairing_layout": "All nine directly listed in a 3-column / 2-column grid"
+}
