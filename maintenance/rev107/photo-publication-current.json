@@ -1,9 +1,12 @@
 {
-  "version": "6.3.18",
+  "version": "6.3.19",
   "base_registry": "photo-publication-20261117.json",
   "amendments": [
     "photo-retouch-20261118-r01-gold-rear03.json",
-    "photo-retouch-20261118-r01-rear03-five-variants.json"
+    "photo-retouch-20261118-r01-rear03-five-variants.json",
+    "photo-colour-holds-20261118-r01-gold.json"
   ],
-  "effective_source": "Live theme whitelist and native product ownership; apply the amendment before reusing historic media IDs."
+  "effective_source": "Current actual live whitelist with ordered amendments; native file retention does not imply display approval.",
+  "effective_registry": "photo-publication-effective.json",
+  "effective_registry_sha256": "7c89e467f3cf887da0dbbca478dc2ebe120a349ccbcaf415c55cb9cf63958709"
 }

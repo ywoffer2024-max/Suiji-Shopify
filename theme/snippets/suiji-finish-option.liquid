@@ -1,7 +1,14 @@
-{%- comment -%}
-  The label and sample are presentation only. Shopify owns option values, IDs and variant availability.
-  An existing variant remains selectable for viewing, including during a preview.
-{%- endcomment -%}
+{% doc %}
+  Renders a native finish choice. Verified labels do not establish physical stock.
+  @param {product} product - Native product identity for exact source mappings.
+  @param {object} value - Native option value and corresponding variant.
+  @param {string} input_id - Input identifier.
+  @param {string} input_name - Input group name.
+  @param {string} product_form_id - Native product form.
+  @param {string} input_dataset - Native option data attributes.
+  @param {string} purchase_state - Current purchase state.
+  @param {boolean} product_available - Native availability.
+{% enddoc %}
 {%- liquid
   assign finish_name = value.name
   assign raw_finish = finish_name | downcase | strip
@@ -17,6 +24,11 @@
       assign finish = 'titanium'
     when 'r01-blue iridescent', 'blue iridescent', 'iridescent blue', 'bleu irisé'
       assign finish = 'iridescent'
+      if product.id == 15921361191252
+        if value.variant.id == 58009697255764 or value.variant.id == 58021876793684
+          assign finish = 'gradient'
+        endif
+      endif
   endcase
   if finish != blank
     assign finish_key = 'suiji_pdp.finish_' | append: finish
@@ -41,10 +53,10 @@
   {% if option_notice != blank %}aria-describedby="{{ input_id }}-availability"{% endif %}
   {{ input_dataset }}
 >
-<label class="suiji-finish{% if value.swatch == blank %}{% if finish == blank or finish == 'iridescent' %} suiji-finish--text{% endif %}{% endif %}" for="{{ input_id }}">
+<label class="suiji-finish{% if value.swatch == blank %}{% if finish == blank or finish == 'iridescent' or finish == 'gradient' %} suiji-finish--text{% endif %}{% endif %}" for="{{ input_id }}">
   {%- if value.swatch != blank -%}
     <span class="suiji-finish__sample" aria-hidden="true">{% render 'swatch', swatch: value.swatch %}</span>
-  {%- elsif finish != blank and finish != 'iridescent' -%}
+  {%- elsif finish != blank and finish != 'iridescent' and finish != 'gradient' -%}
     <span class="suiji-finish__sample" data-finish="{{ finish }}" aria-hidden="true"></span>
   {%- endif -%}
   <span class="suiji-finish__name">{{ finish_name | escape }}</span>

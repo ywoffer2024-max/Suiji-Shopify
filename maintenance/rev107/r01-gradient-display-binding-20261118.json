@@ -1,0 +1,133 @@
+{
+  "version": "6.3.19",
+  "public_labels": {
+    "en": "Gradient Blue",
+    "fr": "Bleu dégradé"
+  },
+  "exact_variant_bindings": [
+    {
+      "handle": "r01",
+      "product_id": "gid://shopify/Product/15921361191252",
+      "native_variant": {
+        "id": "gid://shopify/ProductVariant/58009697255764",
+        "sku": "R01-BLUE-IRIDESCENT",
+        "selectedOptions": [
+          {
+            "name": "Color",
+            "value": "R01-Blue Iridescent"
+          },
+          {
+            "name": "Size",
+            "value": "54 mm"
+          }
+        ]
+      },
+      "exact_source_images": [
+        {
+          "media_id": "75248362979668",
+          "filename": "suiji-20261117-ring-01-04-gradient-blue-e9a2a4f8c03b.jpg",
+          "source_sha256": "e9a2a4f8c03b545ef84da379ab8a83474389b3971f02d68053eecdae5364a382",
+          "source_cells": [
+            "3lMVji!M12"
+          ]
+        },
+        {
+          "media_id": "75248363012436",
+          "filename": "suiji-20261117-ring-01-01-gradient-blue-50c695168a7d.jpg",
+          "source_sha256": "50c695168a7df2517eac49d820a8a35ad680a9d1e76dcd3204a1011012663446",
+          "source_cells": [
+            "3lMVji!M20"
+          ]
+        },
+        {
+          "media_id": "75248363045204",
+          "filename": "suiji-20261117-ring-01-02-gradient-blue-fb69f5b63ef4.jpg",
+          "source_sha256": "fb69f5b63ef441b26f9800d370d5c636c13860bc0ca390c02218d41f958bc338",
+          "source_cells": [
+            "3lMVji!M24"
+          ]
+        },
+        {
+          "media_id": "75248363077972",
+          "filename": "suiji-20261117-ring-01-03-gradient-blue-545e8fd259be.jpg",
+          "source_sha256": "545e8fd259beba0ca06df2659ce44265d1de0c6c29dd5792bdbb2c112e65a76d",
+          "source_cells": [
+            "3lMVji!M28"
+          ]
+        },
+        {
+          "media_id": "75248363110740",
+          "filename": "suiji-20261117-ring-01-05-gradient-blue-797a69187804.jpg",
+          "source_sha256": "797a69187804a4eb6a5528a21872f482cb7ecc97cfbc1b19b5bb2dcece4f87d6",
+          "source_cells": [
+            "3lMVji!M30"
+          ]
+        }
+      ]
+    },
+    {
+      "handle": "r01",
+      "product_id": "gid://shopify/Product/15921361191252",
+      "native_variant": {
+        "id": "gid://shopify/ProductVariant/58021876793684",
+        "sku": "R01-BLUE-IRIDESCENT-57",
+        "selectedOptions": [
+          {
+            "name": "Color",
+            "value": "R01-Blue Iridescent"
+          },
+          {
+            "name": "Size",
+            "value": "57 mm"
+          }
+        ]
+      },
+      "exact_source_images": [
+        {
+          "media_id": "75248363143508",
+          "filename": "suiji-20261117-ring-02-04-gradient-blue-09baa56ef2b5.jpg",
+          "source_sha256": "09baa56ef2b5e609fe85b0adf03af0a9f681fcbb850035026402be8b86eb94ff",
+          "source_cells": [
+            "3lMVji!M35"
+          ]
+        },
+        {
+          "media_id": "75248363176276",
+          "filename": "suiji-20261117-ring-02-01-gradient-blue-a5b2ad40541f.jpg",
+          "source_sha256": "a5b2ad40541f22741ff39b7f9e875198b9fc29549f4d2a6d6560f9e18aeade37",
+          "source_cells": [
+            "3lMVji!M41"
+          ]
+        },
+        {
+          "media_id": "75248363209044",
+          "filename": "suiji-20261117-ring-02-02-gradient-blue-99acdd72018d.jpg",
+          "source_sha256": "99acdd72018dd82e00a3929fff3b4f3af727b5c703dadb64609e1c54631117ac",
+          "source_cells": [
+            "3lMVji!M45"
+          ]
+        },
+        {
+          "media_id": "75248363241812",
+          "filename": "suiji-20261117-ring-02-03-gradient-blue-461be4c793d5.jpg",
+          "source_sha256": "461be4c793d51ce7c2ffa5276eba6d2ab86582e1143eed7261a34a285d4fe185",
+          "source_cells": [
+            "3lMVji!M48"
+          ]
+        },
+        {
+          "media_id": "75248363274580",
+          "filename": "suiji-20261117-ring-02-05-gradient-blue-20250d9df26e.jpg",
+          "source_sha256": "20250d9df26ec70d0f53fce566c9844d8b3c30e9ae0e1e1c73af294e1f6c059c",
+          "source_cells": [
+            "3lMVji!M51"
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "Only the two exact R01 legacy native aliases; no other finish is renamed",
+  "native_options_and_skus_unchanged": true,
+  "stock_claim": false,
+  "colour_audit": "PENDING_CURRENT_FULL_COLOUR_AUDIT"
+}

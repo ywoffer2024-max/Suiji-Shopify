@@ -4,7 +4,9 @@
 {%- endcomment -%}
 {%- liquid
   assign selected = product.selected_or_first_available_variant
-  if settings.suiji_enable_orders != true or product.tags contains 'suiji-display-only'
+  if selected.id == 58009696469332 or selected.id == 58021876695380
+    echo 'unavailable'
+  elsif settings.suiji_enable_orders != true or product.tags contains 'suiji-display-only'
     echo 'preview'
   elsif selected == blank
     echo 'unavailable'

@@ -1,0 +1,6 @@
+# v6.3.19 — exact colour holds
+Withdraw nineteen exact current display images while retaining native products, variants, media, prices and inventory. R01 Gold in both sizes now has an empty gallery and unavailable state; its two finish choices are hidden. Ordinary Blue keeps four own views. Two exact legacy R01 gradient aliases display Gradient Blue / Bleu dégradé without changing native identifiers.
+
+The live theme #209222402388 was read back after publication; all seven changed source files are preserved. The gallery whitelist matches the retained 301-image effective inventory. Earlier twelve EN/FR direct-state HTTP checks confirmed Gold empty/no other-colour substitution, Blue four and Gradient five own images. Native R01 prices/inventory were retained. Current full-site colour review remains in progress; this release does not colour-approve remaining images.
+
+DESIGN copies are synchronized. Official Theme Check found zero changed-file errors against the existing baseline. Actual mobile/desktop gallery clicks, zoom focus, Safari and physical-device checks remain unverified because browser control did not apply inputs. Temporary source recovery used the approved GitHub commit plus actual live files; no healthy runtime or historic source was rebuilt.

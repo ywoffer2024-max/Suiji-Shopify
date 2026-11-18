@@ -154,7 +154,7 @@
           {%- assign suiji_panels_rendered = false -%}
 
           {%- for block in section.blocks -%}
-            {%- if suiji_purchase_state == 'preview' -%}
+            {%- if suiji_purchase_state == 'preview' or suiji_purchase_state == 'unavailable' -%}
               {%- if block.type == 'quantity_selector' or block.type == 'inventory' -%}{%- continue -%}{%- endif -%}
             {%- endif -%}
             {%- if suiji_product_display_only -%}

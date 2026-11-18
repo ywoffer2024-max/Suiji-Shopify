@@ -27,6 +27,11 @@
 -%}
 
 {%- for value in option.values -%}
+  {%- if product.id == 15921361191252 and picker_type == 'suiji_finish' -%}
+    {%- if value.variant.id == 58009696469332 or value.variant.id == 58021876695380 -%}
+      {%- continue -%}
+    {%- endif -%}
+  {%- endif -%}
   {%- liquid
     assign swatch_focal_point = null
     if value.swatch.image
@@ -87,6 +92,7 @@
 
   {%- if picker_type == 'suiji_finish' -%}
     {%- render 'suiji-finish-option',
+      product: product,
       value: value,
       input_id: input_id,
       input_name: input_name,

@@ -1,4 +1,4 @@
-# SUIJI Design System · v6.3.18
+# SUIJI Design System · v6.3.19
 
 Updated 18 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery, the homepage featured set, delivery information and the cart shipping message. It also refines the shared Core-Lock entry, limits the global announcement to delivery, and uses a light palette with a muted grey-blue editorial surface. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
 
@@ -219,6 +219,12 @@ Social sharing images follow the same current-render whitelist. The shared socia
 - Keep the desktop thumbnail rail at the existing 64 px token. Its slide width must override the inherited horizontal carousel percentage widths; mobile retains the existing 56 px horizontal thumbnails.
 - Native product stages and zoom images request Shopify image quality 90. Zoom retains an original-width source candidate. Catalogue images remain responsive; do not load every full-size image for a card.
 
+### Colour-source approval supplement · 18 November 2026
+
+Audit every product image against its exact product, size, part finish and approved colour reference. Warm pale Classic Gold follows the approved8336 direction, ordinary SUIJI Blue follows the light cool6885 exterior direction, and Silver remains neutral. An old publication label or an existing native variant is not colour or physical-stock evidence. Keep normal reflections and metal volume; reject a dominant unapproved green/olive cast. Withhold rejected images from the effective display list while retaining their native media for rollback. All five R01 Classic Gold views at US 6¾ and US 8 are currently withdrawn under the latest human colour rejection; both ordinary Blue view05 images are also held. Hide the two Gold finish choices, keep their native variants and direct URLs, and render their own empty gallery with unavailable state. Never substitute another finish on those direct URLs. Silver and ordinary Blue rear03 corrections keep only their own existing admission, subject to the full colour audit.
+
+Gradient Blue requires its own previously confirmed ring source and exact SKU mapping. Do not present an unverified Iridescent Blue finish, borrow another product colour, or rename it to imply a verified Gradient Blue finish. The full colour audit is an explicit per-image record; unreviewed images are not counted as passed. This supplement changes admission, not interface colour tokens. The two verified R01 gradient-source variants use the public labels Gradient Blue / Bleu dégradé. Their legacy native option value and SKUs still contain Iridescent; the exact two-ID mapping is recorded in r01-gradient-display-binding-20261118.json and does not rename any other finish or establish stock.
+
 ### Native cart, forms and local previews
 
 Native pages and R107 pages share the storefront shell. Native sections keep the existing Shopify rem scale and section updates. The cart uses one `#cart-icon-bubble` update target with its existing quantity and accessible label. App embeds and native forms retain their active settings. The preview bag is browser-local and clearly labeled. Contact and newsletter submit only to their configured Shopify services and show actual success or failure. Native account endpoints stay in use.
@@ -289,7 +295,7 @@ Use named groups of native toggle buttons for Studio input modes and design-exam
 - Product option behavior and image loading follow [Shopify variant guidance](https://shopify.dev/docs/storefronts/themes/product-merchandising/variants), [Shopify theme performance guidance](https://shopify.dev/docs/storefronts/themes/best-practices/performance) and [Baymard product page research](https://baymard.com/research-articles/current-state-ecommerce-product-page-ux).
 - Follow [WCAG 2.2](https://www.w3.org/TR/WCAG22/) for reflow, focus, contrast, name and state and live messages. SUIJI uses the above 44/48px control targets as its own design minimums.
 
-The R01 Classic Gold US 6¾ rear-detail image uses its separately reviewed 18 November 8336 color correction. Replace only that exact selected-gallery slot; preserve the primary view, all other gallery roles and native variant bindings. The old media remains retained for rollback. This image-source update does not change layout, color tokens or purchase state. The shared gallery thumbnail and zoom renderers omit the unsupported quality parameter for PNG sources; JPEG sources retain quality 90. Originals remain unchanged and PNG transparency is preserved. The subsequent exact rear-detail amendments cover SUIJI Blue and Silver at US 6¾ and US 8, and Classic Gold at US 8. Each uses its own size-specific source and independent image review; none inherits another finish or size. The corrected Silver US 6¾ source is v2; its rejected v1 stays excluded. The current publication index applies these amendments before the historic base registry.
+R01 rear-detail amendments are specific to their source, size and view. Apply the current publication index, including subsequent colour holds, before using an earlier image receipt. Preserve the primary view, other admitted gallery roles and native variant bindings; retained native media is not display admission. This image-source update does not change layout, color tokens or purchase state. The shared gallery thumbnail and zoom renderers omit the unsupported quality parameter for PNG sources; JPEG sources retain quality 90. Originals remain unchanged and PNG transparency is preserved. The recorded exact rear-detail amendments cover SUIJI Blue and Silver at US 6¾ and US 8, and the subsequently held Classic Gold sources. Each uses its own size-specific source and independent image review; none inherits another finish or size. The corrected Silver US 6¾ source is v2; its rejected v1 stays excluded. The current publication index applies these amendments before the historic base registry.
 
 ## Machine-readable design lock
 
@@ -297,7 +303,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
 
 ```json design-lock
 {
-  "version": "6.3.18",
+  "version": "6.3.19",
   "implementation_version": "6.3.10",
   "approved_preview": {
     "sha256": "6e28e3e61d6effec39fd36c7c8777d09bb5e85471d3b7c794ccb75b0277cdc92",
@@ -391,15 +397,15 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-finish-option.liquid",
-      "sha256": "5ede5cc689ab036d67cfacf85fcb93739c3a429c250816a8ee6f3cf445b51d2f"
+      "sha256": "415f72469877906fc62041e34af46cdc8cff6e051972faeb53e7c55a190163cb"
     },
     {
       "path": "theme/snippets/suiji-purchase-state.liquid",
-      "sha256": "f5b8e0b5126ed97753bb5a842c3df29ac49ee26262e6c4b8924386de0dfc85fd"
+      "sha256": "03d81472742391424838c25abbb6d2440d4db59de98eff7744ff3b6e9594ffd5"
     },
     {
       "path": "theme/sections/main-product.liquid",
-      "sha256": "62f92a24f598846ce1ebfa1b2c1aa4bcd7c5837a2b7d1d523403f2bbce08e284"
+      "sha256": "b5f89ce2296d87ee03853854035212a7f90c251d0a4c46de666953421afe819d"
     },
     {
       "path": "theme/snippets/product-variant-picker.liquid",
@@ -407,7 +413,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/product-variant-options.liquid",
-      "sha256": "ca73f576da5935eb4a147010fb6cac331767fc3421530a7f3152490dd8d804e5"
+      "sha256": "d8f73276d0ee5d4899cd95947b54d091861091c0adcfa2f8809dd62864f1a994"
     },
     {
       "path": "theme/snippets/product-thumbnail.liquid",
@@ -523,7 +529,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-reviewed-variant-media-ids.liquid",
-      "sha256": "e17ae7e06c58870843c686f79b86f8762a2d15ba5e80544ef47b8acb99610625"
+      "sha256": "73f02bcbcf521cc558d17b69605002aa07af544975a7aea6216dac598add2740"
     },
     {
       "path": "theme/snippets/suiji-r107-home-look.liquid",
@@ -571,11 +577,31 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "maintenance/rev107/photo-publication-current.json",
-      "sha256": "8978900f1f96fefd9cf45d385f717ad40256045b31d7d9bee49708a56a33c62e"
+      "sha256": "9cd2a581c9fb8bb9b099a99a3c6939893f4cd319d8e3d9c2f9bd2048ed1b8b32"
     },
     {
       "path": "maintenance/rev107/photo-retouch-20261118-r01-rear03-five-variants.json",
       "sha256": "e1432caea48283597ced8c234ee5a0f669a72d24aab8df84bf2434a86e223780"
+    },
+    {
+      "path": "maintenance/rev107/photo-colour-holds-20261118-r01-gold.json",
+      "sha256": "0e4d172e11c2299d942d2bb843626e243649b620a91613dde3a668b68db392a0"
+    },
+    {
+      "path": "theme/locales/en.default.json",
+      "sha256": "0840232538fb12b19d88cde9fb84f879abedc9e1599c99cf817d1fa5bf9fca41"
+    },
+    {
+      "path": "theme/locales/fr.json",
+      "sha256": "71ff067ce2a17e6b97e0997bd9af2c0b69f7644c155b44348427bc8742d6a85a"
+    },
+    {
+      "path": "maintenance/rev107/r01-gradient-display-binding-20261118.json",
+      "sha256": "7ea1a1945aa7760a686cdf20dd9b61137fe2f24d3847bfdc17d252a5b526174f"
+    },
+    {
+      "path": "maintenance/rev107/photo-publication-effective.json",
+      "sha256": "7c89e467f3cf887da0dbbca478dc2ebe120a349ccbcaf415c55cb9cf63958709"
     }
   ]
 }
