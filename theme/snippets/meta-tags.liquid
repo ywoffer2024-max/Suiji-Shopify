@@ -38,7 +38,7 @@
     assign r107_twitter_card = 'summary'
   endif
   if r107_social_file != blank
-    if r107_social_file contains 'suiji-20261117-'
+    if r107_social_file contains 'suiji-20261117-' or r107_social_file contains 'suiji-20261118-'
       assign social_filename = r107_social_file | split: '|' 
       assign r107_social_url = 'https://cdn.shopify.com/s/files/1/1041/4112/8020/files/' | append: social_filename[0]
       assign r107_social_width = social_filename[1]

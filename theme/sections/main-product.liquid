@@ -838,7 +838,7 @@
     -%}
 
     {% if suiji_product_display_only == false and reviewed_media.size > 0 %}<script type="application/ld+json">
-      {{ product | structured_data }}
+      {% render 'suiji-reviewed-product-schema', product: product, media: reviewed_media, title: suiji_product_title, purchase_state: suiji_purchase_state %}
     </script>{% endif %}
   </div>
 </product-info>

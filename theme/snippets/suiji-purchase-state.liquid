@@ -4,7 +4,11 @@
 {%- endcomment -%}
 {%- liquid
   assign selected = product.selected_or_first_available_variant
-  if selected.id == 58009696469332 or selected.id == 58021876695380
+  capture colour_hold
+    render 'suiji-colour-variant-hold', variant: selected
+  endcapture
+  assign colour_hold = colour_hold | strip
+  if colour_hold == 'held'
     echo 'unavailable'
   elsif settings.suiji_enable_orders != true or product.tags contains 'suiji-display-only'
     echo 'preview'

@@ -827,7 +827,8 @@
     "native_guide_title": "Tailles de bague SUIJI",
     "native_guide_range": "Consultez les options du produit pour connaître les tailles proposées pour ce modèle. Ce tableau sert de référence et n’indique pas la disponibilité en stock.",
     "native_size_reference": "Taille de référence SUIJI",
-    "native_save": "Enregistrer ce modèle pour cette visite"
+    "native_save": "Enregistrer ce modèle pour cette visite",
+    "image_review_status": "Photographies en révision"
   },
   "suiji_display": {
     "colour": "Couleur",

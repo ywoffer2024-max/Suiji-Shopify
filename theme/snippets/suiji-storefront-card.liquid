@@ -57,6 +57,8 @@
     assign href = routes.root_url | append: '/products/' | append: piece.handle | replace: '//', '/'
     assign href = href | append: '?variant=' | append: offer.id
   -%}
+  {%- capture colour_hold -%}{% render 'suiji-colour-variant-hold', variant: offer %}{%- endcapture -%}
+{%- assign colour_hold = colour_hold | strip -%}
   {%- assign fixed_circumference = nil -%}
 {%- case piece.handle -%}
   {%- when 'suiji-photo-20261109-ring-03' -%}{%- assign fixed_circumference = 54 -%}
@@ -72,7 +74,9 @@
           <h3>{{ name | replace: ' · 54 mm', ' · US 6¾' | replace: ' · 57 mm', ' · US 8' | escape }}</h3>
           {% if fixed_circumference %}<p class="r-caption">{{ 'suiji_sizing.inner_circumference_value' | t: measurement: fixed_circumference }}</p>{% endif %}
           <p class="r-price" data-card-price{% if budget %} data-gift-budget-price{% endif %}>{{ offer.price | money_with_currency }}</p>
-          {%- if set_quote != blank and shows_cover -%}
+          {%- if colour_hold == 'held' -%}
+            <p class="r-card__state">{{ 'suiji_pdp.image_review_status' | t }}</p>
+          {%- elsif set_quote != blank and shows_cover -%}
             <p class="r-card__state">{% if piece.featured_media.alt contains ' · Set contents' or piece.featured_media.alt contains ' · Full set' %}{% if locale == 'fr' %}Ensemble présenté{% else %}Set shown{% endif %}{% else %}{% if locale == 'fr' %}Composants présentés{% else %}Selected components{% endif %}{% endif %}</p>
           {%- elsif settings.suiji_enable_orders == false or piece.tags contains 'suiji-display-only' -%}
             <p class="r-card__state">{{ 'suiji_pdp.preview_status' | t }}</p>

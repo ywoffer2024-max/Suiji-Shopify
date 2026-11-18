@@ -1,0 +1,376 @@
+{
+  "version": "6.3.20",
+  "status": "HOLD_ORIGINAL_STONE_REFERENCE_NOT_BOUND",
+  "handoff_sha256": "75d8a8297e9826292c7fc70d5d0deb267afcd1aa8793333b0a1bd9985857f6e6",
+  "review": {
+    "path": "/Volumes/T7/Suiji/全图库颜色审核_20261118T101232Z_12d2db4b/silver-independent-colour-review-20261118T1027Z-9be2a6d1.json",
+    "sha256": "78cf3a323d0fdcb389d4f05446bbb3f71b9dc47ea9248ad465f1ce0e3c1cf7fe",
+    "historical_review_classification": "REWORK_COLOUR superseded by reference-binding HOLD"
+  },
+  "scope": "Eight exact images remain withheld pending user original stone photographs or approved per-SKU colour cards. Generic mineral-colour descriptions are insufficient for a confirmed colour rejection. Silver metal remains neutral.",
+  "affected_store_images": [
+    {
+      "media_id": "75248426451284",
+      "filename": "suiji-20261117-ornament-04-01-silver-b1336a312f34.jpg",
+      "source_sha256": "b1336a312f347a3ee7cfb9e625a4b44d53b7cc724b10454d2a27e5cb96b96457",
+      "associations": [
+        {
+          "handle": "suiji-photo-20261109-ornament-04",
+          "product_id": "15958796206420",
+          "sku": "SJI-PH-ORNAMENT-04-S",
+          "variant_id": "58226333778260",
+          "native_option_values": [
+            {
+              "name": "Finish",
+              "value": "Silver tone"
+            }
+          ],
+          "registry_original_position": 1,
+          "media_id": "75248426451284",
+          "filename": "suiji-20261117-ornament-04-01-silver-b1336a312f34.jpg",
+          "source_sha256": "b1336a312f347a3ee7cfb9e625a4b44d53b7cc724b10454d2a27e5cb96b96457",
+          "source_cell": "3lMVji!M297",
+          "source_groups": [
+            "ORNAMENT-04"
+          ],
+          "native_product_status": "ACTIVE",
+          "published_to_online_store": true,
+          "independent_review_sha256": null,
+          "current_colour_review": "PENDING_CURRENT_FULL_COLOUR_AUDIT",
+          "current_gallery_position": 1,
+          "native_media_owner_verified": true
+        }
+      ],
+      "cdn_url": "https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-ornament-04-01-silver-b1336a312f34.jpg?v=1794924899",
+      "width": 3200,
+      "height": 4000,
+      "native_file_status": "READY",
+      "role": "Oval Prehnite Charm · Silver · View 01",
+      "audit_matches": [
+        {
+          "cell": "3lMVji!M297",
+          "source_AI_sha256": "b1336a312f347a3ee7cfb9e625a4b44d53b7cc724b10454d2a27e5cb96b96457",
+          "observation": "正面银框中性；葡萄石为深橄榄绿，苹果淡绿和半透感不足。"
+        }
+      ]
+    },
+    {
+      "media_id": "75248426484052",
+      "filename": "suiji-20261117-ornament-04-02-silver-5238951def56.jpg",
+      "source_sha256": "5238951def5664a97c06d44b014ed82b0017dc957abde13bb79fa1613de30e70",
+      "associations": [
+        {
+          "handle": "suiji-photo-20261109-ornament-04",
+          "product_id": "15958796206420",
+          "sku": "SJI-PH-ORNAMENT-04-S",
+          "variant_id": "58226333778260",
+          "native_option_values": [
+            {
+              "name": "Finish",
+              "value": "Silver tone"
+            }
+          ],
+          "registry_original_position": 2,
+          "media_id": "75248426484052",
+          "filename": "suiji-20261117-ornament-04-02-silver-5238951def56.jpg",
+          "source_sha256": "5238951def5664a97c06d44b014ed82b0017dc957abde13bb79fa1613de30e70",
+          "source_cell": "3lMVji!M256",
+          "source_groups": [
+            "ORNAMENT-04"
+          ],
+          "native_product_status": "ACTIVE",
+          "published_to_online_store": true,
+          "independent_review_sha256": null,
+          "current_colour_review": "PENDING_CURRENT_FULL_COLOUR_AUDIT",
+          "current_gallery_position": 2,
+          "native_media_owner_verified": true
+        }
+      ],
+      "cdn_url": "https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-ornament-04-02-silver-5238951def56.jpg?v=1794924899",
+      "width": 3200,
+      "height": 4000,
+      "native_file_status": "READY",
+      "role": "Oval Prehnite Charm · Silver · View 02",
+      "audit_matches": [
+        {
+          "cell": "3lMVji!M256",
+          "source_AI_sha256": "5238951def5664a97c06d44b014ed82b0017dc957abde13bb79fa1613de30e70",
+          "observation": "银框中性；葡萄石呈深橄榄绿，石体暗且不符合苹果淡绿方向。"
+        }
+      ]
+    },
+    {
+      "media_id": "75248439099732",
+      "filename": "suiji-20261117-ornament-02-01-silver-01326becdeba.jpg",
+      "source_sha256": "01326becdebac0b3e21cbeb6b402bdea3ca84881819d6b4384038e17c55ec5a4",
+      "associations": [
+        {
+          "handle": "suiji-photo-20261109-ornament-02",
+          "product_id": "15958798401876",
+          "sku": "SJI-PH-ORNAMENT-02-S",
+          "variant_id": "58226337907028",
+          "native_option_values": [
+            {
+              "name": "Finish",
+              "value": "Silver tone"
+            }
+          ],
+          "registry_original_position": 1,
+          "media_id": "75248439099732",
+          "filename": "suiji-20261117-ornament-02-01-silver-01326becdeba.jpg",
+          "source_sha256": "01326becdebac0b3e21cbeb6b402bdea3ca84881819d6b4384038e17c55ec5a4",
+          "source_cell": "3lMVji!M357",
+          "source_groups": [
+            "ORNAMENT-02"
+          ],
+          "native_product_status": "ACTIVE",
+          "published_to_online_store": true,
+          "independent_review_sha256": null,
+          "current_colour_review": "PENDING_CURRENT_FULL_COLOUR_AUDIT",
+          "current_gallery_position": 1,
+          "native_media_owner_verified": true
+        }
+      ],
+      "cdn_url": "https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-ornament-02-01-silver-01326becdeba.jpg?v=1794924942",
+      "width": 3200,
+      "height": 4000,
+      "native_file_status": "READY",
+      "role": "Rectangular Blue Chalcedony Charm · Silver · View 01",
+      "audit_matches": [
+        {
+          "cell": "3lMVji!M357",
+          "source_AI_sha256": "01326becdebac0b3e21cbeb6b402bdea3ca84881819d6b4384038e17c55ec5a4",
+          "observation": "银框中性；长方蓝玉髓正面为暗灰蓝/灰紫，缺要求的淡蓝。"
+        }
+      ]
+    },
+    {
+      "media_id": "75248439132500",
+      "filename": "suiji-20261117-ornament-02-02-silver-343155ed5f7f.jpg",
+      "source_sha256": "343155ed5f7f32bd6780bdd3002e765edea8cf98c61ce2ebb7d3f0827f856016",
+      "associations": [
+        {
+          "handle": "suiji-photo-20261109-ornament-02",
+          "product_id": "15958798401876",
+          "sku": "SJI-PH-ORNAMENT-02-S",
+          "variant_id": "58226337907028",
+          "native_option_values": [
+            {
+              "name": "Finish",
+              "value": "Silver tone"
+            }
+          ],
+          "registry_original_position": 2,
+          "media_id": "75248439132500",
+          "filename": "suiji-20261117-ornament-02-02-silver-343155ed5f7f.jpg",
+          "source_sha256": "343155ed5f7f32bd6780bdd3002e765edea8cf98c61ce2ebb7d3f0827f856016",
+          "source_cell": "3lMVji!M258",
+          "source_groups": [
+            "ORNAMENT-02"
+          ],
+          "native_product_status": "ACTIVE",
+          "published_to_online_store": true,
+          "independent_review_sha256": null,
+          "current_colour_review": "PENDING_CURRENT_FULL_COLOUR_AUDIT",
+          "current_gallery_position": 2,
+          "native_media_owner_verified": true
+        }
+      ],
+      "cdn_url": "https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-ornament-02-02-silver-343155ed5f7f.jpg?v=1794924942",
+      "width": 3200,
+      "height": 4000,
+      "native_file_status": "READY",
+      "role": "Rectangular Blue Chalcedony Charm · Silver · View 02",
+      "audit_matches": [
+        {
+          "cell": "3lMVji!M258",
+          "source_AI_sha256": "343155ed5f7f32bd6780bdd3002e765edea8cf98c61ce2ebb7d3f0827f856016",
+          "observation": "银框中性；蓝玉髓呈暗灰蓝并带灰紫感，未达到淡蓝色。"
+        }
+      ]
+    },
+    {
+      "media_id": "75248450666836",
+      "filename": "suiji-20261117-ornament-06-01-silver-a684fe45c50e.jpg",
+      "source_sha256": "a684fe45c50e57b05fa260524b4756655927146ddb98f88abfba76526465b30c",
+      "associations": [
+        {
+          "handle": "suiji-photo-20261109-ornament-06",
+          "product_id": "15958796304724",
+          "sku": "SJI-PH-ORNAMENT-06-S",
+          "variant_id": "58226333942100",
+          "native_option_values": [
+            {
+              "name": "Finish",
+              "value": "Silver tone"
+            }
+          ],
+          "registry_original_position": 1,
+          "media_id": "75248450666836",
+          "filename": "suiji-20261117-ornament-06-01-silver-a684fe45c50e.jpg",
+          "source_sha256": "a684fe45c50e57b05fa260524b4756655927146ddb98f88abfba76526465b30c",
+          "source_cell": "3lMVji!M359",
+          "source_groups": [
+            "ORNAMENT-06"
+          ],
+          "native_product_status": "ACTIVE",
+          "published_to_online_store": true,
+          "independent_review_sha256": null,
+          "current_colour_review": "PENDING_CURRENT_FULL_COLOUR_AUDIT",
+          "current_gallery_position": 1,
+          "native_media_owner_verified": true
+        }
+      ],
+      "cdn_url": "https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-ornament-06-01-silver-a684fe45c50e.jpg?v=1794924978",
+      "width": 3200,
+      "height": 4000,
+      "native_file_status": "READY",
+      "role": "Oval Blue Moonstone Charm · Silver · View 01",
+      "audit_matches": [
+        {
+          "cell": "3lMVji!M359",
+          "source_AI_sha256": "a684fe45c50e57b05fa260524b4756655927146ddb98f88abfba76526465b30c",
+          "observation": "银框中性；正面月光石灰绿烟灰底过重，局部蓝晕明显但乳白透明感不足。"
+        }
+      ]
+    },
+    {
+      "media_id": "75248450699604",
+      "filename": "suiji-20261117-ornament-06-02-silver-bd71303410f6.jpg",
+      "source_sha256": "bd71303410f6440e68f4eb0852e26fe85d79fe7cd3aa693802788425be4b0da1",
+      "associations": [
+        {
+          "handle": "suiji-photo-20261109-ornament-06",
+          "product_id": "15958796304724",
+          "sku": "SJI-PH-ORNAMENT-06-S",
+          "variant_id": "58226333942100",
+          "native_option_values": [
+            {
+              "name": "Finish",
+              "value": "Silver tone"
+            }
+          ],
+          "registry_original_position": 2,
+          "media_id": "75248450699604",
+          "filename": "suiji-20261117-ornament-06-02-silver-bd71303410f6.jpg",
+          "source_sha256": "bd71303410f6440e68f4eb0852e26fe85d79fe7cd3aa693802788425be4b0da1",
+          "source_cell": "3lMVji!M260",
+          "source_groups": [
+            "ORNAMENT-06"
+          ],
+          "native_product_status": "ACTIVE",
+          "published_to_online_store": true,
+          "independent_review_sha256": null,
+          "current_colour_review": "PENDING_CURRENT_FULL_COLOUR_AUDIT",
+          "current_gallery_position": 2,
+          "native_media_owner_verified": true
+        }
+      ],
+      "cdn_url": "https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-ornament-06-02-silver-bd71303410f6.jpg?v=1794924978",
+      "width": 3200,
+      "height": 4000,
+      "native_file_status": "READY",
+      "role": "Oval Blue Moonstone Charm · Silver · View 02",
+      "audit_matches": [
+        {
+          "cell": "3lMVji!M260",
+          "source_AI_sha256": "bd71303410f6440e68f4eb0852e26fe85d79fe7cd3aa693802788425be4b0da1",
+          "observation": "银框中性；月光石主体烟灰偏灰绿，只有局部蓝晕，透明乳白底不足。"
+        }
+      ]
+    },
+    {
+      "media_id": "75248451715412",
+      "filename": "suiji-20261117-ornament-08-01-silver-34258e0129d3.jpg",
+      "source_sha256": "34258e0129d348e19e268c5b90bd30e7f986f81a842bca01e6beb0834f48ab73",
+      "associations": [
+        {
+          "handle": "suiji-photo-20261109-ornament-08",
+          "product_id": "15958798500180",
+          "sku": "SJI-PH-ORNAMENT-08-S",
+          "variant_id": "58226338070868",
+          "native_option_values": [
+            {
+              "name": "Finish",
+              "value": "Silver tone"
+            }
+          ],
+          "registry_original_position": 1,
+          "media_id": "75248451715412",
+          "filename": "suiji-20261117-ornament-08-01-silver-34258e0129d3.jpg",
+          "source_sha256": "34258e0129d348e19e268c5b90bd30e7f986f81a842bca01e6beb0834f48ab73",
+          "source_cell": "3lMVji!M361",
+          "source_groups": [
+            "ORNAMENT-08"
+          ],
+          "native_product_status": "ACTIVE",
+          "published_to_online_store": true,
+          "independent_review_sha256": null,
+          "current_colour_review": "PENDING_CURRENT_FULL_COLOUR_AUDIT",
+          "current_gallery_position": 1,
+          "native_media_owner_verified": true
+        }
+      ],
+      "cdn_url": "https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-ornament-08-01-silver-34258e0129d3.jpg?v=1794924982",
+      "width": 3200,
+      "height": 4000,
+      "native_file_status": "READY",
+      "role": "Low-profile Blue Chalcedony Charm · Silver · View 01",
+      "audit_matches": [
+        {
+          "cell": "3lMVji!M361",
+          "source_AI_sha256": "34258e0129d348e19e268c5b90bd30e7f986f81a842bca01e6beb0834f48ab73",
+          "observation": "薄型银框中性；正面蓝玉髓暗灰蓝且石体浑浊，未达到淡蓝。"
+        }
+      ]
+    },
+    {
+      "media_id": "75248451748180",
+      "filename": "suiji-20261117-ornament-08-02-silver-46f1dd4bd1a9.jpg",
+      "source_sha256": "46f1dd4bd1a9c137031cfc2000a25d59b613384815891ded4dc4a8f497b1eee3",
+      "associations": [
+        {
+          "handle": "suiji-photo-20261109-ornament-08",
+          "product_id": "15958798500180",
+          "sku": "SJI-PH-ORNAMENT-08-S",
+          "variant_id": "58226338070868",
+          "native_option_values": [
+            {
+              "name": "Finish",
+              "value": "Silver tone"
+            }
+          ],
+          "registry_original_position": 2,
+          "media_id": "75248451748180",
+          "filename": "suiji-20261117-ornament-08-02-silver-46f1dd4bd1a9.jpg",
+          "source_sha256": "46f1dd4bd1a9c137031cfc2000a25d59b613384815891ded4dc4a8f497b1eee3",
+          "source_cell": "3lMVji!M296",
+          "source_groups": [
+            "ORNAMENT-08"
+          ],
+          "native_product_status": "ACTIVE",
+          "published_to_online_store": true,
+          "independent_review_sha256": null,
+          "current_colour_review": "PENDING_CURRENT_FULL_COLOUR_AUDIT",
+          "current_gallery_position": 2,
+          "native_media_owner_verified": true
+        }
+      ],
+      "cdn_url": "https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261117-ornament-08-02-silver-46f1dd4bd1a9.jpg?v=1794924982",
+      "width": 3200,
+      "height": 4000,
+      "native_file_status": "READY",
+      "role": "Low-profile Blue Chalcedony Charm · Silver · View 02",
+      "audit_matches": [
+        {
+          "cell": "3lMVji!M296",
+          "source_AI_sha256": "46f1dd4bd1a9c137031cfc2000a25d59b613384815891ded4dc4a8f497b1eee3",
+          "observation": "薄型银框中性；蓝玉髓呈暗灰蓝，不是要求的淡蓝。"
+        }
+      ]
+    }
+  ],
+  "native_mutations": false,
+  "all_silver_withdrawn": false,
+  "correction_basis": "Trusted continuation from human-authorized review owner 01a17db9-9789-78c0-8615-4ee260617846, 18 November 2026"
+}

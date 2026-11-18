@@ -23,7 +23,19 @@
     render 'suiji-storefront-cover', handle: sharing_handle
   endcapture
   assign parts = cover | split: '|'
-  if parts[1] != blank
+  if request.page_type == 'product' and product.tags contains 'suiji-reviewed-storefront'
+    capture ids
+      render 'suiji-reviewed-variant-media-ids', product: product
+    endcapture
+    assign first_id = ids | strip | split: ',' | first | plus: 0
+    assign selected_media = product.media | where: 'id', first_id | first
+    if selected_media != blank
+      assign selected_file = selected_media.preview_image.src | split: '?' | first | split: '/' | last
+      echo selected_file | append: '|' | append: selected_media.preview_image.width | append: '|' | append: selected_media.preview_image.height
+    else
+      echo 'suiji-logo-mark.png'
+    endif
+  elsif parts[1] != blank
     echo parts[1] | append: '|' | append: parts[5] | append: '|' | append: parts[6]
   else
     echo 'suiji-logo-mark.png'

@@ -11,6 +11,10 @@
   assign quote = featured_set.metafields.custom.suiji_set_quote.value
   assign set_variant = featured_set.variants | where: 'sku', 'RPT-SET-04' | first
 -%}
+{%- capture collar_hold -%}{% render 'suiji-colour-image-hold', source: collar_image.src %}{%- endcapture -%}
+{%- capture components_hold -%}{% render 'suiji-colour-image-hold', source: components_image.src %}{%- endcapture -%}
+{%- assign collar_hold = collar_hold | strip -%}
+{%- assign components_hold = components_hold | strip -%}
 {%- if featured_set.tags contains 'suiji-reviewed-storefront' and set_variant.price > 0 and quote.code == set_variant.sku and collar.tags contains 'suiji-reviewed-storefront' and collar_variant.price > 0 and collar_image != blank and components_image != blank -%}
   {%- liquid
     assign locale = request.locale.iso_code | split: '-' | first
@@ -51,8 +55,10 @@
         data-suiji-home-collar-link
       >
         <figure>
+          {% unless collar_hold == 'held' %}
           {{ collar_image | image_url: width: 1200 | image_tag: widths: '360, 480, 600, 960, 1200', sizes: '(min-width: 1200px) 480px, (min-width: 750px) 42vw, (min-width: 540px) 480px, 90vw', alt: worn_alt, loading: 'lazy', decoding: 'async' }}
-          <figcaption class="r-caption" id="SuijiHomeCollarCaption">{{ worn_caption | escape }}</figcaption>
+          {% endunless %}
+          <figcaption class="r-caption" id="SuijiHomeCollarCaption">{% if collar_hold == 'held' %}{{ 'suiji_pdp.image_review_status' | t }}{% else %}{{ worn_caption | escape }}{% endif %}</figcaption>
         </figure>
         <span class="r-link" id="SuijiHomeCollarAction">
           {{- collar_action | escape -}}<span aria-hidden="true"> ↗</span>
@@ -68,7 +74,9 @@
           data-suiji-home-set-link="{{ featured_set.handle | escape }}"
         >
           <div class="suiji-home-look__contents">
+            {% unless components_hold == 'held' %}
             {{ components_image | image_url: width: 680 | image_tag: widths: '180, 240, 360, 480, 680', sizes: '(min-width: 750px) 25vw, 48vw', alt: components_alt, loading: 'lazy', decoding: 'async' }}
+            {% else %}<p class="r-caption">{{ 'suiji_pdp.image_review_status' | t }}</p>{% endunless %}
             <div>
               <h3 id="SuijiHomeSetName">{{ set_name | escape }}</h3>
               <p class="suiji-home-look__label">{{ contents_label | escape }}</p>

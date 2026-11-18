@@ -815,7 +815,8 @@
     "native_guide_title": "SUIJI ring sizing",
     "native_guide_range": "Use the product options to see the sizes offered for this design. This table is a conversion reference and does not indicate stock availability.",
     "native_size_reference": "SUIJI size reference",
-    "native_save": "Save this design for this visit"
+    "native_save": "Save this design for this visit",
+    "image_review_status": "Photos under review"
   },
   "suiji_display": {
     "colour": "Colour",

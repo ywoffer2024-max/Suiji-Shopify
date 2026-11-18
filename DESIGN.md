@@ -1,4 +1,4 @@
-# SUIJI Design System · v6.3.19
+# SUIJI Design System · v6.3.20
 
 Updated 18 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery, the homepage featured set, delivery information and the cart shipping message. It also refines the shared Core-Lock entry, limits the global announcement to delivery, and uses a light palette with a muted grey-blue editorial surface. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
 
@@ -225,6 +225,8 @@ Audit every product image against its exact product, size, part finish and appro
 
 Gradient Blue requires its own previously confirmed ring source and exact SKU mapping. Do not present an unverified Iridescent Blue finish, borrow another product colour, or rename it to imply a verified Gradient Blue finish. The full colour audit is an explicit per-image record; unreviewed images are not counted as passed. This supplement changes admission, not interface colour tokens. The two verified R01 gradient-source variants use the public labels Gradient Blue / Bleu dégradé. Their legacy native option value and SKUs still contain Iridescent; the exact two-ID mapping is recorded in r01-gradient-display-binding-20261118.json and does not rename any other finish or establish stock.
 
+Eight exact Silver gemstone images remain withheld pending their user original photograph or approved per-SKU colour card. Generic mineral-colour descriptions are insufficient for a confirmed rejection; neutral Silver metal is not rejected and another stone colour is never borrowed. The full Gold colour review is applied by exact native media, filename and variant identity across galleries, cards, navigation, editorial placements and sharing. Keep pending-original holds separate from confirmed failures. A fully withdrawn current gallery returns an empty state and a photos-under-review label without changing native stock or price. Product social images and structured data use the selected variant’s admitted views; use the brand mark for sharing when no view remains. Never use another finish as fallback. The current publication index records the exact admission overlay. Colour admission alone is not proof of geometry, physical stock or full commercial acceptance.
+
 ### Native cart, forms and local previews
 
 Native pages and R107 pages share the storefront shell. Native sections keep the existing Shopify rem scale and section updates. The cart uses one `#cart-icon-bubble` update target with its existing quantity and accessible label. App embeds and native forms retain their active settings. The preview bag is browser-local and clearly labeled. Contact and newsletter submit only to their configured Shopify services and show actual success or failure. Native account endpoints stay in use.
@@ -303,7 +305,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
 
 ```json design-lock
 {
-  "version": "6.3.19",
+  "version": "6.3.20",
   "implementation_version": "6.3.10",
   "approved_preview": {
     "sha256": "6e28e3e61d6effec39fd36c7c8777d09bb5e85471d3b7c794ccb75b0277cdc92",
@@ -401,11 +403,11 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-purchase-state.liquid",
-      "sha256": "03d81472742391424838c25abbb6d2440d4db59de98eff7744ff3b6e9594ffd5"
+      "sha256": "d5df799aceaddfe08fdb65a7bce32f95524365bd5533b7a2df9736add13dec62"
     },
     {
       "path": "theme/sections/main-product.liquid",
-      "sha256": "b5f89ce2296d87ee03853854035212a7f90c251d0a4c46de666953421afe819d"
+      "sha256": "303851bb64547a65d36e4a94f3ce0c0192b0add92ac3e7b921b2da6499179366"
     },
     {
       "path": "theme/snippets/product-variant-picker.liquid",
@@ -413,7 +415,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/product-variant-options.liquid",
-      "sha256": "d8f73276d0ee5d4899cd95947b54d091861091c0adcfa2f8809dd62864f1a994"
+      "sha256": "8dba3e1204477f970de12bf820a41af578db50e1954ec267a61f84789b9c43e1"
     },
     {
       "path": "theme/snippets/product-thumbnail.liquid",
@@ -461,19 +463,19 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-r107-home-hero.liquid",
-      "sha256": "e3c8497e187a70ddc5d7e0e6784510cb2125a1788063befed80f8a3ab3f6af9e"
+      "sha256": "8f9a7414d0f85ed7f4757503b6d69d50aa9b4d2680857e7889faf4fb6203ef5b"
     },
     {
       "path": "theme/snippets/suiji-storefront-card.liquid",
-      "sha256": "df950ef5490c5fd30a938f70a32591e9b5744f8b2d050fbdae661a504618f153"
+      "sha256": "1ad4f225506df7615015dcfae9dc69aea085cd34e0b9760bee228e6121bf4c36"
     },
     {
       "path": "theme/snippets/suiji-storefront-cover.liquid",
-      "sha256": "b3c1d14dd68fe6f7fa1b87db5b4f79ff67d6037ca498b2a2c1d08bc6dafd6afc"
+      "sha256": "e5602f41ae4d17f1f537faebc8d4dbac8e856cf0923ef436f465c9e12b5d91df"
     },
     {
       "path": "theme/snippets/suiji-storefront-cover-image.liquid",
-      "sha256": "c92a69851803b7029aae1f1c4a124cd9522578e1bd97a7e42e5be48ea4df3a5f"
+      "sha256": "de09a628f4f72faa59473783ffee4ab0c31c03cea9687f6d0136eda969e531ea"
     },
     {
       "path": "theme/snippets/suiji-shop-all-photo.liquid",
@@ -521,7 +523,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-r107-social-image.liquid",
-      "sha256": "a747b1ca74cbea79d75c1c4555f01a6d987fb5f7eebea6edceb5feaa83897cef"
+      "sha256": "328b2bde191a5a9e626d560a023f161cc2002309e54fb8c468a88e83d85a3d34"
     },
     {
       "path": "theme/snippets/suiji-native-pairing.liquid",
@@ -529,11 +531,11 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-reviewed-variant-media-ids.liquid",
-      "sha256": "73f02bcbcf521cc558d17b69605002aa07af544975a7aea6216dac598add2740"
+      "sha256": "dea0bb66c3f95b0b4523b4fed3330d377d5d7d7916a1e36c5f8cc2198d633d46"
     },
     {
       "path": "theme/snippets/suiji-r107-home-look.liquid",
-      "sha256": "02951384dd3605c11492371cd888c7ef04e2a48768aa6bea0b143e4646895a6a"
+      "sha256": "e2218401dbcbaa9fef6e0354f859af96de139710e8d0e8a4c92b0172cfeb927b"
     },
     {
       "path": "theme/assets/suiji-mvp.js",
@@ -577,7 +579,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "maintenance/rev107/photo-publication-current.json",
-      "sha256": "9cd2a581c9fb8bb9b099a99a3c6939893f4cd319d8e3d9c2f9bd2048ed1b8b32"
+      "sha256": "b8dc7de432a8ce9062080a4ef2e708c09ab98024d606f6a2d27431f4b9ec52a6"
     },
     {
       "path": "maintenance/rev107/photo-retouch-20261118-r01-rear03-five-variants.json",
@@ -589,11 +591,11 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/locales/en.default.json",
-      "sha256": "0840232538fb12b19d88cde9fb84f879abedc9e1599c99cf817d1fa5bf9fca41"
+      "sha256": "2c0dd52cbc29e2dc24a9e9d5f2263bc6c045432318f2415bedbd235044634d7a"
     },
     {
       "path": "theme/locales/fr.json",
-      "sha256": "71ff067ce2a17e6b97e0997bd9af2c0b69f7644c155b44348427bc8742d6a85a"
+      "sha256": "8e951146612b78960b5a847e917bd5254d0dc8433a6263525ab8615bfa8ad3b9"
     },
     {
       "path": "maintenance/rev107/r01-gradient-display-binding-20261118.json",
@@ -601,7 +603,31 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "maintenance/rev107/photo-publication-effective.json",
-      "sha256": "7c89e467f3cf887da0dbbca478dc2ebe120a349ccbcaf415c55cb9cf63958709"
+      "sha256": "fef4a78a82cf9219e314f326ca6ee42b066b9893813eb0342d5d9fea043dc38d"
+    },
+    {
+      "path": "maintenance/rev107/photo-colour-holds-20261118-gold-full.json",
+      "sha256": "218844eedaaec8f1007f86011a4ac0962679debd4ae0d1ab4f02cea0fc0834b2"
+    },
+    {
+      "path": "theme/snippets/meta-tags.liquid",
+      "sha256": "b9f781972607f8814d595f5d6f740040b66ce33fb979bc09e0f084420d67ef05"
+    },
+    {
+      "path": "theme/snippets/suiji-colour-image-hold.liquid",
+      "sha256": "8ee2a6a368b74d8218c19d863f635aa54968039e9e1b5f4f21a3f444f8ed0404"
+    },
+    {
+      "path": "theme/snippets/suiji-colour-variant-hold.liquid",
+      "sha256": "560915f86d4931e0d893d701b60fd65fea4658e0d9fc3bbc2007455224e47630"
+    },
+    {
+      "path": "theme/snippets/suiji-reviewed-product-schema.liquid",
+      "sha256": "aeae5f4ca81f62a406f7b857987de977890c1f8fd61f0515bee0440d2bcb8d4b"
+    },
+    {
+      "path": "maintenance/rev107/photo-colour-holds-20261118-silver-gemstone8.json",
+      "sha256": "1242a7ebe3d1b60c5072434c27e43bd1206d952117d77108666958187bcbbba7"
     }
   ]
 }

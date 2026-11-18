@@ -5,6 +5,7 @@
 {% enddoc %}
 {%- assign cover_key = handle -%}
 {%- if sku != blank -%}{%- assign cover_key = handle | append: '|' | append: sku -%}{%- endif -%}
+{%- capture source_cover -%}
 {%- case cover_key -%}
   {%- when 'h01-blue-hoop' -%}H01-BLUE|suiji-20261117-bare-square-01-light-blue-0ee267a8fb26.jpg|1.840|1.79|-0.61|3200|4000|58042482229588
   {%- when 'r01' -%}R01-BLUE|suiji-20261117-ring-01-04-light-blue-b710e3a7ffa3.jpg|2.287|0.32|-4.83|3200|4000|58009697222996
@@ -43,3 +44,12 @@
   {%- when 'suiji-rpt-set-06-collar-hoop-ring' -%}RPT-SET-06|suiji-20261118-06-a-gold-e118e793eaf8.jpg|1.000|0.00|0.00|3200|4000|58288360259924
   {%- when 'suiji-rpt-set-09-chain-ring' -%}RPT-SET-09|suiji-20261118-09-a-gold-a227d488366a.jpg|1.000|0.00|0.00|3200|4000|58288362783060
 {%- endcase -%}
+{%- endcapture -%}
+{%- assign cover_parts = source_cover | strip | split: '|' -%}
+{%- capture colour_hold -%}{% render 'suiji-colour-image-hold', source: cover_parts[1] %}{%- endcapture -%}
+{%- assign colour_hold = colour_hold | strip -%}
+{%- if colour_hold == 'held' -%}
+  {{- cover_parts[0] -}}||{{- cover_parts[2] -}}|{{- cover_parts[3] -}}|{{- cover_parts[4] -}}|{{- cover_parts[5] -}}|{{- cover_parts[6] -}}|{{- cover_parts[7] -}}
+{%- else -%}
+  {{- source_cover -}}
+{%- endif -%}

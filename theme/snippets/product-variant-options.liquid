@@ -27,10 +27,10 @@
 -%}
 
 {%- for value in option.values -%}
-  {%- if product.id == 15921361191252 and picker_type == 'suiji_finish' -%}
-    {%- if value.variant.id == 58009696469332 or value.variant.id == 58021876695380 -%}
-      {%- continue -%}
-    {%- endif -%}
+  {%- if picker_type == 'suiji_finish' -%}
+    {%- capture colour_hold -%}{% render 'suiji-colour-variant-hold', variant: value.variant %}{%- endcapture -%}
+{%- assign colour_hold = colour_hold | strip -%}
+    {%- if colour_hold == 'held' -%}{%- continue -%}{%- endif -%}
   {%- endif -%}
   {%- liquid
     assign swatch_focal_point = null
