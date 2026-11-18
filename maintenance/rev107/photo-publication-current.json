@@ -1,0 +1,6 @@
+{
+  "version": "6.3.17",
+  "base_registry": "photo-publication-20261117.json",
+  "amendments": ["photo-retouch-20261118-r01-gold-rear03.json"],
+  "effective_source": "Live theme whitelist and native product ownership; apply the amendment before reusing historic media IDs."
+}

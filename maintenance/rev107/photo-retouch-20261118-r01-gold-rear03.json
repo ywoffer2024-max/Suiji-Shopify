@@ -1,0 +1,52 @@
+{
+  "created_at": "2026-11-18T09:05:15.348085+00:00",
+  "version": "6.3.17",
+  "scope": "R01-GOLD 54mm exact rear03 only",
+  "product_id": "15921361191252",
+  "variant_id": "58009696469332",
+  "source_sha256": "64590e1781c948925175efde7828b8ed035ad793f24aa6e2122c5635c5ea84e9",
+  "native_new_media_id": "75268798316884",
+  "superseded_media_id_retained": "75248363405652",
+  "new_file": "suiji-20261118-r01-gold-54-view03-8336-v3-64590e1781c9.png",
+  "gallery_position": 4,
+  "native_variant_binding_changed": false,
+  "old_gallery_ids": [
+    "75248363307348",
+    "75248363340116",
+    "75248363372884",
+    "75248363405652",
+    "75248363438420"
+  ],
+  "new_gallery_ids": [
+    "75248363307348",
+    "75248363340116",
+    "75248363372884",
+    "75268798316884",
+    "75248363438420"
+  ],
+  "whitelist_sha256": "70b84a619c6a04648a200bf1bebbb8ce54e9d70fdbd73444d56a81b92ebd5cf9",
+  "rejected_source_sha256_never_applied": "d9e6d192cc4995e18df5f1e9bbf0b0d190e34c5df8dbf2af82fbf049fd7e6fdc",
+  "status": "PUBLISHED_AND_ANONYMOUS_SOURCE_IMAGE_CHECKS_PASS_NATIVE_UI_INTERACTION_PENDING",
+  "cdn_url": "https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261118-r01-gold-54-view03-8336-v3-64590e1781c9.png?v=1794992527",
+  "independent_review_sha256": "3e462d39fc0d7dec7e462274b47f3579e3613aff66d3ebac275c13813755acb9",
+  "cdn_original_rgb_pixels_identical": true,
+  "cdn_original_size": [
+    3200,
+    4000
+  ],
+  "actual_rendition_widths_verified": [
+    416,
+    1445,
+    1946
+  ],
+  "png_quality_compatibility": "PNG omits unsupported quality; JPEG retains90",
+  "deployed_theme_id": "209222402388",
+  "compatibility_fix_upload_completed_at": "2026-11-18T09:17:53Z",
+  "locales_readback": [
+    "en",
+    "fr"
+  ],
+  "native_ui_matrix": "PENDING, not passed",
+  "old_media_removed": false,
+  "other_sku_admission_changed": false
+}

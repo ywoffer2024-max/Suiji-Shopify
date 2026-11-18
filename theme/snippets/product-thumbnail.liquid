@@ -1,3 +1,4 @@
+{%- assign suiji_gallery_source_format = media.preview_image.src | split: '?' | first | split: '.' | last | downcase -%}
 {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
 {% comment %}
   Renders a product thumbnail with a modal-opener
@@ -100,7 +101,17 @@
     </span>
     {%- render 'loading-spinner' -%}
     <div class="product__media media media--transparent">
-      {{
+      {%- if suiji_gallery_source_format == 'png' -%}{{
+        media.preview_image
+        | image_url: width: 1946
+        | image_tag:
+          class: image_class,
+          alt: image_alt,
+          loading: image_loading,
+          fetchpriority: image_priority,
+          sizes: sizes,
+          widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
+      }}{%- else -%}{{
         media.preview_image
         | image_url: width: 1946, quality: 90
         | image_tag:
@@ -110,7 +121,7 @@
           fetchpriority: image_priority,
           sizes: sizes,
           widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
-      }}
+      }}{%- endif -%}
     </div>
     {% if wearing %}
       <p class="suiji-wearing-caption" data-suiji-wearing-illustration>
@@ -152,14 +163,21 @@
           </span>
         {%- endif -%}
       </span>
-      {{
+      {%- if suiji_gallery_source_format == 'png' -%}{{
+        media.preview_image
+        | image_url: width: 1946
+        | image_tag:
+          loading: image_loading,
+          sizes: sizes,
+          widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
+      }}{%- else -%}{{
         media.preview_image
         | image_url: width: 1946, quality: 90
         | image_tag:
           loading: image_loading,
           sizes: sizes,
           widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
-      }}
+      }}{%- endif -%}
     </button>
     <template>
       {%- liquid
