@@ -1,4 +1,4 @@
-# SUIJI Design System · v6.3.17
+# SUIJI Design System · v6.3.18
 
 Updated 18 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery, the homepage featured set, delivery information and the cart shipping message. It also refines the shared Core-Lock entry, limits the global announcement to delivery, and uses a light palette with a muted grey-blue editorial surface. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
 
@@ -289,7 +289,7 @@ Use named groups of native toggle buttons for Studio input modes and design-exam
 - Product option behavior and image loading follow [Shopify variant guidance](https://shopify.dev/docs/storefronts/themes/product-merchandising/variants), [Shopify theme performance guidance](https://shopify.dev/docs/storefronts/themes/best-practices/performance) and [Baymard product page research](https://baymard.com/research-articles/current-state-ecommerce-product-page-ux).
 - Follow [WCAG 2.2](https://www.w3.org/TR/WCAG22/) for reflow, focus, contrast, name and state and live messages. SUIJI uses the above 44/48px control targets as its own design minimums.
 
-The R01 Classic Gold US 6¾ rear-detail image uses its separately reviewed 18 November 8336 color correction. Replace only that exact selected-gallery slot; preserve the primary view, all other gallery roles and native variant bindings. The old media remains retained for rollback. This image-source update does not change layout, color tokens or purchase state. The shared gallery thumbnail and zoom renderers omit the unsupported quality parameter for PNG sources; JPEG sources retain quality 90. Originals remain unchanged and PNG transparency is preserved.
+The R01 Classic Gold US 6¾ rear-detail image uses its separately reviewed 18 November 8336 color correction. Replace only that exact selected-gallery slot; preserve the primary view, all other gallery roles and native variant bindings. The old media remains retained for rollback. This image-source update does not change layout, color tokens or purchase state. The shared gallery thumbnail and zoom renderers omit the unsupported quality parameter for PNG sources; JPEG sources retain quality 90. Originals remain unchanged and PNG transparency is preserved. The subsequent exact rear-detail amendments cover SUIJI Blue and Silver at US 6¾ and US 8, and Classic Gold at US 8. Each uses its own size-specific source and independent image review; none inherits another finish or size. The corrected Silver US 6¾ source is v2; its rejected v1 stays excluded. The current publication index applies these amendments before the historic base registry.
 
 ## Machine-readable design lock
 
@@ -297,7 +297,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
 
 ```json design-lock
 {
-  "version": "6.3.17",
+  "version": "6.3.18",
   "implementation_version": "6.3.10",
   "approved_preview": {
     "sha256": "6e28e3e61d6effec39fd36c7c8777d09bb5e85471d3b7c794ccb75b0277cdc92",
@@ -523,7 +523,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-reviewed-variant-media-ids.liquid",
-      "sha256": "70b84a619c6a04648a200bf1bebbb8ce54e9d70fdbd73444d56a81b92ebd5cf9"
+      "sha256": "e17ae7e06c58870843c686f79b86f8762a2d15ba5e80544ef47b8acb99610625"
     },
     {
       "path": "theme/snippets/suiji-r107-home-look.liquid",
@@ -568,6 +568,14 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     {
       "path": "theme/snippets/product-media.liquid",
       "sha256": "f1ce4593bc43a78a14ac84e129b755cbf9a0f38d0b094055c4b635e47ee151ff"
+    },
+    {
+      "path": "maintenance/rev107/photo-publication-current.json",
+      "sha256": "8978900f1f96fefd9cf45d385f717ad40256045b31d7d9bee49708a56a33c62e"
+    },
+    {
+      "path": "maintenance/rev107/photo-retouch-20261118-r01-rear03-five-variants.json",
+      "sha256": "e1432caea48283597ced8c234ee5a0f669a72d24aab8df84bf2434a86e223780"
     }
   ]
 }

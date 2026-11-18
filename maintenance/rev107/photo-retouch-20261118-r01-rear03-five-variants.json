@@ -1,0 +1,164 @@
+{
+  "created_at": "2026-11-18T09:54:27.738646+00:00",
+  "version": "6.3.18",
+  "scope": "Five exact R01 rear03 slots; v6.3.17 Classic Gold US 6¾ correction retained separately",
+  "entries": [
+    {
+      "sku": "R01-SILVER",
+      "variant_id": "58009697190228",
+      "product_id": "15921361191252",
+      "source_sha256": "cad7c3db0db6fc4c13e3f27abe20e1614923bba01b86ac99b1f8a1b9283cce2d",
+      "independent_review_sha256": "b1acfbe9f6784596da4f319a866773271915d14e109ec4860b72c1b7ac2e17ce",
+      "handoff_sha256": "be46b2922acaeb76b57a614e95aa3fed27c4814a18cdc23bc47f5208a0c28802",
+      "native_new_media_id": "75269871927636",
+      "superseded_media_id_retained": "75248367141204",
+      "gallery_position": 4,
+      "old_gallery_ids": [
+        "75248367042900",
+        "75248367075668",
+        "75248367108436",
+        "75248367141204",
+        "75248367173972"
+      ],
+      "new_gallery_ids": [
+        "75248367042900",
+        "75248367075668",
+        "75248367108436",
+        "75269871927636",
+        "75248367173972"
+      ],
+      "filename": "suiji-20261118-r01-silver-rear03-cad7c3db0db6.png",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261118-r01-silver-rear03-cad7c3db0db6.png?v=1794995465",
+      "native_variant_binding_changed": false
+    },
+    {
+      "sku": "R01-BLUE",
+      "variant_id": "58009697222996",
+      "product_id": "15921361191252",
+      "source_sha256": "776ce2ddd6043d01d79b48ba5519fbabbea9d90c029099510ff5f92cbaddf5c6",
+      "independent_review_sha256": "f26e57dae266b223d741f5bdbeb87cf20cbea27edb324531827d8e793dbb1484",
+      "handoff_sha256": "c2d0150b13ea364da5791677f544271f2e62e82c52f65c30f5e17371cd71df50",
+      "native_new_media_id": "75269854298452",
+      "superseded_media_id_retained": "75248362750292",
+      "gallery_position": 4,
+      "old_gallery_ids": [
+        "75248362651988",
+        "75248362684756",
+        "75248362717524",
+        "75248362750292",
+        "75248362783060"
+      ],
+      "new_gallery_ids": [
+        "75248362651988",
+        "75248362684756",
+        "75248362717524",
+        "75269854298452",
+        "75248362783060"
+      ],
+      "filename": "suiji-20261118-r01-blue-rear03-776ce2ddd604.png",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261118-r01-blue-rear03-776ce2ddd604.png?v=1794995431",
+      "native_variant_binding_changed": false
+    },
+    {
+      "sku": "R01-GOLD-57",
+      "variant_id": "58021876695380",
+      "product_id": "15921361191252",
+      "source_sha256": "b4bd5d32b5bd3ad33ca8dbb52062d120636e9810a25bef15ed46d19cb95ef8cf",
+      "independent_review_sha256": "a2c03fac9ffb9e8db33b3c2ca12e6c60fda4b9c36dfe84de54f14d5e080c5f29",
+      "handoff_sha256": "a9794916ee0bab358cddbb4bccfe076b0ee1b6a70751e579868e72da4ab1fb79",
+      "native_new_media_id": "75269865210196",
+      "superseded_media_id_retained": "75248366977364",
+      "gallery_position": 4,
+      "old_gallery_ids": [
+        "75248366879060",
+        "75248366911828",
+        "75248366944596",
+        "75248366977364",
+        "75248367010132"
+      ],
+      "new_gallery_ids": [
+        "75248366879060",
+        "75248366911828",
+        "75248366944596",
+        "75269865210196",
+        "75248367010132"
+      ],
+      "filename": "suiji-20261118-r01-gold-57-rear03-b4bd5d32b5bd.png",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261118-r01-gold-57-rear03-b4bd5d32b5bd.png?v=1794995446",
+      "native_variant_binding_changed": false
+    },
+    {
+      "sku": "R01-SILVER-57",
+      "variant_id": "58021876728148",
+      "product_id": "15921361191252",
+      "source_sha256": "37c40177609014c053eeb8f8a38090dba334293e263a37c31f5328a4d4a7bdf2",
+      "independent_review_sha256": "4881c480102950aac19cfa6060c0b802721d7e130439aea8adf8b7001911ca43",
+      "handoff_sha256": "931228981effca05093e99679cce3cd9070752d214996711fe8d86a883df4b6d",
+      "native_new_media_id": "75269889360212",
+      "superseded_media_id_retained": "75248367305044",
+      "gallery_position": 4,
+      "old_gallery_ids": [
+        "75248367206740",
+        "75248367239508",
+        "75248367272276",
+        "75248367305044",
+        "75248367337812"
+      ],
+      "new_gallery_ids": [
+        "75248367206740",
+        "75248367239508",
+        "75248367272276",
+        "75269889360212",
+        "75248367337812"
+      ],
+      "filename": "suiji-20261118-r01-silver-57-rear03-37c401776090.png",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261118-r01-silver-57-rear03-37c401776090.png?v=1794995564",
+      "native_variant_binding_changed": false
+    },
+    {
+      "sku": "R01-BLUE-57",
+      "variant_id": "58021876760916",
+      "product_id": "15921361191252",
+      "source_sha256": "df5851b9730bbe8e579a404254f3d23323add52720e3760e3d19cbf03302df82",
+      "independent_review_sha256": "cab91a4606e5643423644072f08ff4f825d3d318810c0651b2e47977bbaae27e",
+      "handoff_sha256": "d425ea91ed87fe76032f17129c8b01ccddd07c2ecd3d12dce88a279d3f6855cd",
+      "native_new_media_id": "75269875335508",
+      "superseded_media_id_retained": "75248362914132",
+      "gallery_position": 4,
+      "old_gallery_ids": [
+        "75248362815828",
+        "75248362848596",
+        "75248362881364",
+        "75248362914132",
+        "75248362946900"
+      ],
+      "new_gallery_ids": [
+        "75248362815828",
+        "75248362848596",
+        "75248362881364",
+        "75269875335508",
+        "75248362946900"
+      ],
+      "filename": "suiji-20261118-r01-blue-57-rear03-df5851b9730b.png",
+      "cdn_url": "https://cdn.shopify.com/s/files/1/1041/4112/8020/files/suiji-20261118-r01-blue-57-rear03-df5851b9730b.png?v=1794995482",
+      "native_variant_binding_changed": false
+    }
+  ],
+  "whitelist_sha256": "e17ae7e06c58870843c686f79b86f8762a2d15ba5e80544ef47b8acb99610625",
+  "status": "PUBLISHED_NATIVE_GALLERY_AND_IMAGE_READBACK_PASS_UI_INTERACTION_PENDING",
+  "old_media_removed": false,
+  "layout_tokens_fonts_purchase_state_changed": false,
+  "png_quality_compatibility": "Reuse v6.3.17 PNG support; no renderer change",
+  "native_ui_matrix": "PENDING: Chrome native input failed; no actual phone or gallery-click pass claimed",
+  "deployed_theme_id": "209222402388",
+  "published_at": "2026-11-18T09:55:45Z",
+  "locales_readback": [
+    "en",
+    "fr"
+  ],
+  "anonymous_gallery_checks": 10,
+  "actual_rendition_checks": 15,
+  "cdn_original_rgb_pixels_identical_count": 5,
+  "variant_primary_media_price_inventory_unchanged": true,
+  "old_media_retention_readback": true
+}
