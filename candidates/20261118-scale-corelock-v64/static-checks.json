@@ -1,5 +1,5 @@
 {
-  "scope": "Static prototype checks only; not a browser or visual acceptance",
+  "scope": "Static checks plus separately scoped local-proposal browser evidence; no full acceptance",
   "html_ids_unique": true,
   "required_review_controls": [
     "review-view",
@@ -39,12 +39,25 @@
   "external_scripts": 0,
   "storage_network_or_submission_code": false,
   "javascript_syntax": "PASS",
-  "browser_interaction": "NOT_VERIFIED",
+  "browser_interaction": "PARTIAL_FR_MOBILE_NATIVE_INTERACTIONS",
   "physical_device_and_safari": "NOT_VERIFIED",
   "geometry_and_glare_review": "PENDING",
   "group_photographs": "EXPLICIT_INTERNAL_PLACEHOLDERS",
   "production_theme_written": false,
-  "sha256": "16c4485f643b72073a13508685a2933d56f057b96c1244f75bb20786224e38c7",
+  "sha256": "7e6ca9e647d39681565433f1405fe5670387b9ca57b13ef1a713e1f85315ad69",
   "approved_native_charm_names": 9,
-  "pairing_layout": "All nine directly listed in a 3-column / 2-column grid"
+  "pairing_layout": "All nine directly listed in a 3-column / 2-column grid",
+  "screenshot_presentation_parameters": [
+    "view",
+    "lang",
+    "device",
+    "color",
+    "presentation",
+    "rev",
+    "vp"
+  ],
+  "passive_browser_metrics_readout": true,
+  "native_desktop_screenshots": "8_VERIFIED_1440x900",
+  "phone_preview_screenshots": "8_VERIFIED_390x844",
+  "live_store_publication": "Theme #209222402388 MAIN; live corrections tracked separately in v6.3.17"
 }
