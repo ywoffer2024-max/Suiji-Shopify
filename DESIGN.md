@@ -1,4 +1,4 @@
-# SUIJI Design System · v6.3.15
+# SUIJI Design System · v6.3.16
 
 Updated 18 November 2026. This contract applies to the English and French Shopify storefront, including native pages, merchant-managed content, forms and app embeds. The v6.3.0 visual direction is approved for subsequent storefront work. This revision applies the approved direction to catalogue discovery, navigation, product imagery, the homepage featured set, delivery information and the cart shipping message. It also refines the shared Core-Lock entry, limits the global announcement to delivery, and uses a light palette with a muted grey-blue editorial surface. The implementation lock identifies the Shopify theme source. Deployment evidence belongs in the release archive.
 
@@ -130,7 +130,7 @@ The shared ice-blue announcement links to Delivery in the active locale. For EUR
 
 The shared header uses the existing transparent square mark followed by the SUIJI wordmark in one horizontal home link. Use `theme/assets/suiji-logo-mark-180.png` at **25 × 25 px from 750 px** and **24 × 24 px at 749 px and below**, with a **10 px gap** and vertical center alignment. Give the home link a 44 px minimum touch height and an accessible SUIJI name. The dark mark sits directly on the white header. Reserve the black circular badge for circular avatars.
 
-The Shop All / Tous les bijoux disclosure contains six category links in this order across desktop and mobile in both languages. The links are Necklaces, Earrings, Rings, Charms, Bracelets & bangles, and Accessories. Show an approved photograph of a representative item when the category has one. A category awaiting an approved photograph uses its text link in the same slot. Use the same crop and source on desktop and mobile. The top-level Sets / Ensembles link opens the set collection directly. Keep a clickable parent link, separately operated disclosure, fine-pointer hover, click, keyboard access, outside-click close, Escape and focus return. Mobile subcategories open into a right-side panel with Back and Close.
+The Shop All / Tous les bijoux disclosure contains six category links in this order across desktop and mobile in both languages. The links are Necklaces, Earrings, Rings, Charms, Bracelets & bangles, and Accessories. Show an approved photograph of a representative item when the category has one. A category awaiting an approved photograph uses its text link in the same slot. Use the same crop and source on desktop and mobile. Use the current reviewed CROSS-S chain for the Necklaces entrance and homepage necklace category. The user explicitly assigned the existing 8-Link Collar photograph to the fifth Bracelets & bangles entrance while retaining that category name and destination; this is a navigation-photo exception only and does not reclassify the collar or change its product contents. The top-level Sets / Ensembles link opens the set collection directly. Keep a clickable parent link, separately operated disclosure, fine-pointer hover, click, keyboard access, outside-click close, Escape and focus return. Mobile subcategories open into a right-side panel with Back and Close.
 
 The Core-Lock parent links to its explanation page. Its desktop disclosure and mobile panel use the same two picture links, **Bases / Bases** and **Charms / Ornements**, in that order. The mechanism page reuses those links. The Bases page shows four image-led families for rings, earrings, necklaces and bracelets. Explain where an attachment sits for each family and refer to the exact piece for compatibility and included parts. Keep text links available for base families awaiting their own current product photograph.
 
@@ -295,7 +295,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
 
 ```json design-lock
 {
-  "version": "6.3.15",
+  "version": "6.3.16",
   "implementation_version": "6.3.10",
   "approved_preview": {
     "sha256": "6e28e3e61d6effec39fd36c7c8777d09bb5e85471d3b7c794ccb75b0277cdc92",
@@ -445,7 +445,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-r107-home.liquid",
-      "sha256": "28b66e8669d48a0669caa0473cc4787a4313dc0f8faf3f3924c1c9b04b2f0bf7"
+      "sha256": "d32eb6c097b5666f9fc3f78e5eccafa295d1c1873c29bbc0637401fcdf91f7d5"
     },
     {
       "path": "theme/snippets/suiji-r107-wordmark.liquid",
@@ -477,7 +477,7 @@ The approved preview pins the v6.3.0 design. The stylesheet, shell, fonts and co
     },
     {
       "path": "theme/snippets/suiji-shop-mega-menu.liquid",
-      "sha256": "a087e80fdc2447378ac9cb9297fa6d26d2fce0b29572c40d5194ece38aa8b0a2"
+      "sha256": "fd5ed02485f953aed4078c1e7760c9b399bfbe793699878afcdb9695af0c9cd6"
     },
     {
       "path": "theme/snippets/suiji-gifts-menu.liquid",
