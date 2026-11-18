@@ -19,15 +19,15 @@
   <img
     class="global-media-settings global-media-settings--no-shadow{% if variant_image %} product__media-item--variant{% endif %}"
     srcset="
-      {%- if media.preview_image.width >= 550 -%}{%- if suiji_gallery_source_format == 'png' -%}{{ media.preview_image | image_url: width: 550 }}{%- else -%}{{ media.preview_image | image_url: width: 550, quality: 90 }}{%- endif -%} 550w,{%- endif -%}
-      {%- if media.preview_image.width >= 1100 -%}{%- if suiji_gallery_source_format == 'png' -%}{{ media.preview_image | image_url: width: 1100 }}{%- else -%}{{ media.preview_image | image_url: width: 1100, quality: 90 }}{%- endif -%} 1100w,{%- endif -%}
-      {%- if media.preview_image.width >= 1445 -%}{%- if suiji_gallery_source_format == 'png' -%}{{ media.preview_image | image_url: width: 1445 }}{%- else -%}{{ media.preview_image | image_url: width: 1445, quality: 90 }}{%- endif -%} 1445w,{%- endif -%}
-      {%- if media.preview_image.width >= 1680 -%}{%- if suiji_gallery_source_format == 'png' -%}{{ media.preview_image | image_url: width: 1680 }}{%- else -%}{{ media.preview_image | image_url: width: 1680, quality: 90 }}{%- endif -%} 1680w,{%- endif -%}
-      {%- if media.preview_image.width >= 2048 -%}{%- if suiji_gallery_source_format == 'png' -%}{{ media.preview_image | image_url: width: 2048 }}{%- else -%}{{ media.preview_image | image_url: width: 2048, quality: 90 }}{%- endif -%} 2048w,{%- endif -%}
-      {%- if media.preview_image.width >= 2200 -%}{%- if suiji_gallery_source_format == 'png' -%}{{ media.preview_image | image_url: width: 2200 }}{%- else -%}{{ media.preview_image | image_url: width: 2200, quality: 90 }}{%- endif -%} 2200w,{%- endif -%}
-      {%- if media.preview_image.width >= 2890 -%}{%- if suiji_gallery_source_format == 'png' -%}{{ media.preview_image | image_url: width: 2890 }}{%- else -%}{{ media.preview_image | image_url: width: 2890, quality: 90 }}{%- endif -%} 2890w,{%- endif -%}
-      {%- if media.preview_image.width >= 4096 -%}{%- if suiji_gallery_source_format == 'png' -%}{{ media.preview_image | image_url: width: 4096 }}{%- else -%}{{ media.preview_image | image_url: width: 4096, quality: 90 }}{%- endif -%} 4096w,{%- endif -%}
-      {%- if suiji_gallery_source_format == 'png' -%}{{ media.preview_image | image_url: width: media.preview_image.width }}{%- else -%}{{ media.preview_image | image_url: width: media.preview_image.width, quality: 90 }}{%- endif -%} {{ media.preview_image.width }}w
+      {% if media.preview_image.width >= 550 %}{% if suiji_gallery_source_format == 'png' %}{{ media.preview_image | image_url: width: 550 }}{% else %}{{ media.preview_image | image_url: width: 550, quality: 90 }}{% endif %} 550w,{% endif %}
+      {% if media.preview_image.width >= 1100 %}{% if suiji_gallery_source_format == 'png' %}{{ media.preview_image | image_url: width: 1100 }}{% else %}{{ media.preview_image | image_url: width: 1100, quality: 90 }}{% endif %} 1100w,{% endif %}
+      {% if media.preview_image.width >= 1445 %}{% if suiji_gallery_source_format == 'png' %}{{ media.preview_image | image_url: width: 1445 }}{% else %}{{ media.preview_image | image_url: width: 1445, quality: 90 }}{% endif %} 1445w,{% endif %}
+      {% if media.preview_image.width >= 1680 %}{% if suiji_gallery_source_format == 'png' %}{{ media.preview_image | image_url: width: 1680 }}{% else %}{{ media.preview_image | image_url: width: 1680, quality: 90 }}{% endif %} 1680w,{% endif %}
+      {% if media.preview_image.width >= 2048 %}{% if suiji_gallery_source_format == 'png' %}{{ media.preview_image | image_url: width: 2048 }}{% else %}{{ media.preview_image | image_url: width: 2048, quality: 90 }}{% endif %} 2048w,{% endif %}
+      {% if media.preview_image.width >= 2200 %}{% if suiji_gallery_source_format == 'png' %}{{ media.preview_image | image_url: width: 2200 }}{% else %}{{ media.preview_image | image_url: width: 2200, quality: 90 }}{% endif %} 2200w,{% endif %}
+      {% if media.preview_image.width >= 2890 %}{% if suiji_gallery_source_format == 'png' %}{{ media.preview_image | image_url: width: 2890 }}{% else %}{{ media.preview_image | image_url: width: 2890, quality: 90 }}{% endif %} 2890w,{% endif %}
+      {% if media.preview_image.width >= 4096 %}{% if suiji_gallery_source_format == 'png' %}{{ media.preview_image | image_url: width: 4096 }}{% else %}{{ media.preview_image | image_url: width: 4096, quality: 90 }}{% endif %} 4096w,{% endif %}
+      {% if suiji_gallery_source_format == 'png' %}{{ media.preview_image | image_url: width: media.preview_image.width }}{% else %}{{ media.preview_image | image_url: width: media.preview_image.width, quality: 90 }}{% endif %} {{ media.preview_image.width }}w
     "
     sizes="(min-width: 750px) calc(100vw - 22rem), 1100px"
     src="{%- if suiji_gallery_source_format == 'png' -%}{{ media.preview_image | image_url: width: 1445 }}{%- else -%}{{ media.preview_image | image_url: width: 1445, quality: 90 }}{%- endif -%}"

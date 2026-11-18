@@ -1,14 +1,16 @@
 {
-  "version": "6.3.20",
+  "version": "6.3.21",
   "base_registry": "photo-publication-20261117.json",
   "amendments": [
     "photo-retouch-20261118-r01-gold-rear03.json",
     "photo-retouch-20261118-r01-rear03-five-variants.json",
     "photo-colour-holds-20261118-r01-gold.json",
     "photo-colour-holds-20261118-gold-full.json",
-    "photo-colour-holds-20261118-silver-gemstone8.json"
+    "photo-colour-holds-20261118-silver-gemstone8.json",
+    "photo-colour-holds-20261118-blue-and-pending.json",
+    "photo-colour-original-review-overlay-20261118.json"
   ],
   "effective_source": "Current actual live whitelist with ordered amendments; native file retention does not imply display approval.",
   "effective_registry": "photo-publication-effective.json",
-  "effective_registry_sha256": "fef4a78a82cf9219e314f326ca6ee42b066b9893813eb0342d5d9fea043dc38d"
+  "effective_registry_sha256": "8bce401fba5772ec5f06a069232d96c5bd3b5f57c1f6ded169e059902ac0079f"
 }

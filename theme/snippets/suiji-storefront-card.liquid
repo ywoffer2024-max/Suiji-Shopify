@@ -21,6 +21,10 @@
         endif
       endfor
     endif
+    assign image_under_review = false
+    if cover_variant_id > 0 and cover[1] == blank
+      assign image_under_review = true
+    endif
     assign shows_cover = false
     if cover[1] != blank and offer.id == cover_variant_id
       assign shows_cover = true
@@ -74,7 +78,7 @@
           <h3>{{ name | replace: ' · 54 mm', ' · US 6¾' | replace: ' · 57 mm', ' · US 8' | escape }}</h3>
           {% if fixed_circumference %}<p class="r-caption">{{ 'suiji_sizing.inner_circumference_value' | t: measurement: fixed_circumference }}</p>{% endif %}
           <p class="r-price" data-card-price{% if budget %} data-gift-budget-price{% endif %}>{{ offer.price | money_with_currency }}</p>
-          {%- if colour_hold == 'held' -%}
+          {%- if colour_hold == 'held' or image_under_review -%}
             <p class="r-card__state">{{ 'suiji_pdp.image_review_status' | t }}</p>
           {%- elsif set_quote != blank and shows_cover -%}
             <p class="r-card__state">{% if piece.featured_media.alt contains ' · Set contents' or piece.featured_media.alt contains ' · Full set' %}{% if locale == 'fr' %}Ensemble présenté{% else %}Set shown{% endif %}{% else %}{% if locale == 'fr' %}Composants présentés{% else %}Selected components{% endif %}{% endif %}</p>

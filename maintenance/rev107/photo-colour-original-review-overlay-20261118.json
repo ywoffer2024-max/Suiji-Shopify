@@ -1,0 +1,159 @@
+{
+  "version": "6.3.21",
+  "at": "2026-11-18T13:41:18.150829+00:00",
+  "reports": [
+    {
+      "path": "/Volumes/T7/Suiji/普通蓝20HOLD原尺寸色审更新_20261118T132836Z_bc1672a1/ordinary-blue-exact20-HOLD-source-tile-colour-delta-v1.json",
+      "sha256": "97a934a60fbc0fc35a6b8bb57eb00342666d718b9cdaa2c4eed7a571edcc7645"
+    },
+    {
+      "path": "/Volumes/T7/Suiji/渐变蓝8原尺寸补审_20261118T132626Z_163bedee/gradient8-original-region-colour-review-v1.json",
+      "sha256": "8f6eac16d3c271728e13429267f1f4967d1636da90bbe4a67d88ee8d07978ab2"
+    },
+    {
+      "path": "/Volumes/T7/Suiji/套装15HOLD原件颜色补核_20261118T132929Z_3918832f/sets15-original-colour-followup-v1.json",
+      "sha256": "bb3fff84e7648c2e7b9004d954dffb03c5775cb06a390eb1488616553ee5d9ba"
+    }
+  ],
+  "new_confirmed_rework_currently_visible": [],
+  "already_withheld_exact_matches": [
+    {
+      "media_id": "75248408854868",
+      "cell": "3lMVji!M211",
+      "status": "REWORK_COLOUR"
+    },
+    {
+      "media_id": "75248408887636",
+      "cell": "3lMVji!M228",
+      "status": "REWORK_COLOUR"
+    },
+    {
+      "media_id": "75249398284628",
+      "cell": "3lMVji!M304",
+      "status": "REWORK_COLOUR"
+    },
+    {
+      "media_id": "75249398382932",
+      "cell": "3lMVji!M307",
+      "status": "REWORK_COLOUR"
+    },
+    {
+      "media_id": "75248429334868",
+      "cell": "3lMVji!M350",
+      "status": "HOLD_UNCERTAIN"
+    },
+    {
+      "media_id": "75248426615124",
+      "cell": "3lMVji!M352",
+      "status": "HOLD_UNCERTAIN"
+    },
+    {
+      "media_id": "75249416143188",
+      "cell": "3lMVji!M363",
+      "status": "REWORK_COLOUR"
+    },
+    {
+      "media_id": "75249416241492",
+      "cell": "3lMVji!M366",
+      "status": "REWORK_COLOUR"
+    },
+    {
+      "media_id": "75249399759188",
+      "cell": "3lMVji!M371",
+      "status": "REWORK_COLOUR"
+    },
+    {
+      "media_id": "75249399857492",
+      "cell": "3lMVji!M374",
+      "status": "REWORK_COLOUR"
+    },
+    {
+      "media_id": "75253685289300",
+      "cell": "3lMVji!M532",
+      "status": "PASS_COLOUR"
+    },
+    {
+      "media_id": "75253685322068",
+      "cell": "3lMVji!M533",
+      "status": "REWORK_COLOUR"
+    },
+    {
+      "media_id": "75248389390676",
+      "cell": "Gv3hK!G2",
+      "status": "HOLD_UNCERTAIN"
+    },
+    {
+      "media_id": "75248389423444",
+      "cell": "Gv3hK!G3",
+      "status": "HOLD_UNCERTAIN"
+    },
+    {
+      "media_id": "75248388964692",
+      "cell": "Gv3hK!G4",
+      "status": "HOLD_UNCERTAIN"
+    },
+    {
+      "media_id": "75248388997460",
+      "cell": "Gv3hK!G5",
+      "status": "HOLD_UNCERTAIN"
+    },
+    {
+      "media_id": "75248397091156",
+      "cell": "Gv3hK!G17",
+      "status": "HOLD_UNCERTAIN"
+    },
+    {
+      "media_id": "75248397123924",
+      "cell": "Gv3hK!G19",
+      "status": "HOLD_UNCERTAIN"
+    },
+    {
+      "media_id": "75253692727636",
+      "cell": "Gv3hK!G21",
+      "status": "HOLD_UNCERTAIN"
+    },
+    {
+      "media_id": "75253692760404",
+      "cell": "Gv3hK!G22",
+      "status": "HOLD_UNCERTAIN"
+    },
+    {
+      "media_id": "75253692793172",
+      "cell": "Gv3hK!G23",
+      "status": "HOLD_UNCERTAIN"
+    },
+    {
+      "media_id": "75253711765844",
+      "cell": "Gv3hK!G24",
+      "status": "HOLD_UNCERTAIN"
+    },
+    {
+      "media_id": "75253711798612",
+      "cell": "Gv3hK!G25",
+      "status": "HOLD_UNCERTAIN"
+    },
+    {
+      "media_id": "75253711831380",
+      "cell": "Gv3hK!G26",
+      "status": "HOLD_UNCERTAIN"
+    },
+    {
+      "media_id": "75253722546516",
+      "cell": "Gv3hK!G27",
+      "status": "HOLD_UNCERTAIN"
+    },
+    {
+      "media_id": "75253722579284",
+      "cell": "Gv3hK!G28",
+      "status": "HOLD_UNCERTAIN"
+    },
+    {
+      "media_id": "75253722612052",
+      "cell": "Gv3hK!G29",
+      "status": "HOLD_UNCERTAIN"
+    }
+  ],
+  "admission_changes": false,
+  "pass_never_reopens_other_gates": true,
+  "source_gate": "Latest original-region delta matched by source SHA + declared cell, not slot alone"
+}

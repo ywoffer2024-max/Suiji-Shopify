@@ -38,7 +38,9 @@
           {%- endunless -%}
         {%- endif -%}
         {%- capture cover -%}{% render 'suiji-storefront-cover', handle: partner.handle %}{%- endcapture -%}
-        {%- unless cover contains '|suiji-20261117-' or cover contains '|suiji-20261118-' -%}{%- continue -%}{%- endunless -%}
+        {%- if shows_charm_range == false -%}
+          {%- unless cover contains '|suiji-20261117-' or cover contains '|suiji-20261118-' -%}{%- continue -%}{%- endunless -%}
+        {%- endif -%}
         {%- capture card -%}{% render 'suiji-storefront-card', piece: partner %}{%- endcapture -%}
         {%- assign card = card | strip -%}
         {%- if card != blank -%}
